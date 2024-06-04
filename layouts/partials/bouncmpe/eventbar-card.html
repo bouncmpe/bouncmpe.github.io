@@ -4,6 +4,7 @@
 {{ $event_duration := .Params.duration | time.ParseDuration }}
 {{ $event_end_time := $event_start_time.Add $event_duration }}
 {{ $event_location := .Params.location }}
+{{ $google_title := print .Params.name " " ((i18n .Type) | title | default .Title)}}
 {{ $google_start_time_string := $event_start_time | time.Format "20060102T150405Z" }}
 {{ $google_finish_time_string := $event_end_time | time.Format "20060102T150405Z"}}
 
@@ -16,7 +17,7 @@
                 <small>{{- i18n .Type | upper -}}</small>
             </div>
             <div class="col-1 text-end">
-                <a href="http://www.google.com/calendar/event?action=TEMPLATE&text={{ i18n .Type | title }}: {{ .Params.speaker }}&dates={{ $google_start_time_string }}/{{ $google_finish_time_string }}&details={{$event_title}}&location={{$event_location}}&trp=false&sprop=&sprop=name:"
+                <a href="http://www.google.com/calendar/event?action=TEMPLATE&text={{$google_title}}&dates={{ $google_start_time_string }}/{{ $google_finish_time_string }}&details={{$event_title}}&location={{$event_location}}&trp=false&sprop=&sprop=name:"
                 class="card-link text-end" target="_blank" rel="nofollow">
                     <img src="/icons/calendar-plus-fill.svg" alt="">
                 </a>
