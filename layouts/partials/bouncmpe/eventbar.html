@@ -1,4 +1,5 @@
-{{ $events := where site.RegularPages.ByExpiryDate "Section" "events" }}
+{{ $events := where site.RegularPages "Section" "events" }}
+
 {{ if $events }}
 <section id="eventbar">
     <h1 class="display-6 my-4">{{ i18n "upcoming-events" | title }}</h1>

@@ -1,23 +1,21 @@
 {{ $event_title := .Params.title }}
 {{ $event_description := .Params.description }}
-{{ $event_location := .Params.location | default "Unspecified" }}
+{{ $event_start_time := .Params.time | time.AsTime }}
+{{ $event_duration := .Params.duration | time.ParseDuration }}
+{{ $event_end_time := $event_start_time.Add $event_duration }}
+{{ $event_location := .Params.location }}
+{{ $google_start_time_string := $event_start_time | time.Format "20060102T150405Z" }}
+{{ $google_finish_time_string := $event_end_time | time.Format "20060102T150405Z"}}
 
-{{ $event_start_time_string := printf "%sT%s:00" (.ExpiryDate.Format "2006-01-02") ( .Params.startTime )}}
-{{ $event_start_time := time $event_start_time_string }}
-
-{{ $event_finish_time_string := printf "%sT%s:00" (.ExpiryDate.Format "2006-01-02") ( .Params.finishTime )}}
-{{ $event_finish_time := time $event_finish_time_string }}
-
-{{ $google_start_time_string := $event_start_time.Format "20060102T150405"}}
-{{ $google_finish_time_string := $event_finish_time.Format "20060102T150405"}}
-
-<div class="card rounded-4 border-1 text-start px-0">
+<div class="card rounded-0 border-1 px-0">
     <div class="card-header">
-        <div class="row">
-            <div class="col-9">
+        <div class="row g-0">
+            <div class="col-1">
+            </div>
+            <div class="col-10">
                 <small>{{- i18n .Type | upper -}}</small>
             </div>
-            <div class="col-3 text-end">
+            <div class="col-1 text-end">
                 <a href="http://www.google.com/calendar/event?action=TEMPLATE&text={{ i18n .Type | title }}: {{ .Params.speaker }}&dates={{ $google_start_time_string }}/{{ $google_finish_time_string }}&details={{$event_title}}&location={{$event_location}}&trp=false&sprop=&sprop=name:"
                 class="card-link text-end" target="_blank" rel="nofollow">
                     <img src="/icons/calendar-plus-fill.svg" alt="">
@@ -30,9 +28,10 @@
         See https://getbootstrap.com/docs/5.2/helpers/stretched-link/#identifying-the-containing-block
     */}}   
     <div class="card-body" style="transform: rotate(0);">
-        <a href="{{ .RelPermalink }}" class="stretched-link"></a>
-        <h4 class="card-title my-0">{{- .Params.speaker -}}</h4>
+        {{ if .Content }}<a href="{{ .RelPermalink }}" class="stretched-link"></a>{{ end }}
+        <h4 class="card-title my-0">{{- .Params.name -}}</h4>
         <h6 class="card-subtitle my-2">{{ title .Title }}</h6>
-        {{ .ExpiryDate | time.Format ":date_full" }}
+        <div>{{ $event_start_time | time.Format ":date_full" }} {{ $event_start_time | time.Format ":time_short" }}</div>
+        <div>{{ $event_location }}</div>
     </div>
 </div>
