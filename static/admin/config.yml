@@ -36,8 +36,162 @@ theme:
   mode: dark
 
 collections:
-  - name: "news"
-    label: "Department News"
+  - name: phd-thesis-defense
+    label: PhD Thesis Defenses
+    label_singular: PhD Thesis Defense
+    identifier_field: name
+    folder: content/events
+    slug: "{{fields.time}}-{{name}}"
+    path: "{{slug}}/index"
+    summary: "PhD Thesis Defense by {{name}} on {{fields.time | date('MMMM D, YYYY @HH:mm')}}"
+    create: true
+    i18n: true
+    editor:
+      preview: false
+    sortable_fields: ["fields.time", "name"]
+    filter: { field: "type", value: "phd-thesis-defense" }
+    fields:
+      - label: Type
+        name: type
+        widget: hidden
+        default: phd-thesis-defense
+        i18n: duplicate
+      - label: Title
+        name: title
+        widget: string
+        i18n: true
+      - label: Speaker Name
+        name: name
+        widget: string
+        i18n: duplicate
+      - label: Date
+        name: time
+        widget: datetime
+        date_format: YYYY-MM-DD
+        time_format: HH:mm:00
+        i18n: duplicate
+      - label: Duration
+        name: duration
+        widget: select
+        options:
+        - { label: "30 mins", value: "30m" }
+        - { label: "1 hour", value: "1h" }
+        - { label: "2 hours", value: "2h" }
+        - { label: "3 hours", value: "3h" }
+        - { label: "4 hours", value: "4h" }
+        default: "2h"
+        i18n: duplicate
+      - label: Location
+        name: location
+        widget: string
+        i18n: duplicate
+        default: Ali Vahit Şahiner (AVŞ)
+
+  - name: ms-thesis-defense
+    label: MS Thesis Defenses
+    label_singular: MS Thesis Defense
+    identifier_field: name
+    folder: content/events
+    slug: "{{fields.time}}-{{name}}"
+    path: "{{slug}}/index"
+    summary: "MS Thesis Defense by {{name}} on {{fields.time | date('MMMM D, YYYY @HH:mm')}}"
+    create: true
+    i18n: true
+    editor:
+      preview: false
+    sortable_fields: ["fields.time", "name"]
+    filter: { field: "type", value: "ms-thesis-defense" }
+    fields:
+      - label: Type
+        name: type
+        widget: hidden
+        default: ms-thesis-defense
+        i18n: duplicate
+      - label: Title
+        name: title
+        widget: string
+        i18n: true
+      - label: Speaker Name
+        name: name
+        widget: string
+        i18n: duplicate
+      - label: Date
+        name: time
+        widget: datetime
+        date_format: YYYY-MM-DD
+        time_format: HH:mm:00
+        i18n: duplicate
+      - label: Duration
+        name: duration
+        widget: select
+        options:
+        - { label: "30 mins", value: "30m" }
+        - { label: "1 hour", value: "1h" }
+        - { label: "2 hours", value: "2h" }
+        - { label: "3 hours", value: "3h" }
+        - { label: "4 hours", value: "4h" }
+        default: "1h"
+        i18n: duplicate
+      - label: Location
+        name: location
+        widget: string
+        i18n: duplicate
+        default: Ali Vahit Şahiner (AVŞ)
+
+  - name: seminar
+    label: Seminars
+    label_singular: Seminar
+    identifier_field: name
+    folder: content/events
+    slug: "{{fields.time}}-{{name}}"
+    path: "{{slug}}/index"
+    summary: "Seminar by {{name}} on {{fields.time | date('MMMM D, YYYY @HH:mm')}}"
+    create: true
+    i18n: true
+    editor:
+      preview: false
+    sortable_fields: ["fields.time", "name"]
+    filter: { field: "type", value: "seminar" }
+    fields:
+      - label: Type
+        name: type
+        widget: hidden
+        default: seminar
+        i18n: duplicate
+      - label: Title
+        name: title
+        widget: string
+        i18n: true
+      - label: Speaker Name
+        name: name
+        widget: string
+        i18n: duplicate
+      - label: Date
+        name: time
+        widget: datetime
+        date_format: YYYY-MM-DD
+        time_format: HH:mm:00
+        i18n: duplicate
+      - label: Duration
+        name: duration
+        widget: select
+        options:
+        - { label: "30 mins", value: "30m" }
+        - { label: "1 hour", value: "1h" }
+        - { label: "2 hours", value: "2h" }
+        - { label: "3 hours", value: "3h" }
+        - { label: "4 hours", value: "4h" }
+        default: "1h"
+        i18n: duplicate
+      - label: Location
+        name: location
+        widget: string
+        i18n: duplicate
+        default: Ali Vahit Şahiner (AVŞ)
+
+  - name: Stories
+    label: Stories
+    label_singular: Story
     folder: "content/news"
     identifier_field: title
     slug: "{{year}}-{{month}}-{{day}}-news-{{slug}}"
@@ -91,87 +245,52 @@ collections:
         default: ""
         i18n: true
 
-  - name: event
-    label: Department Events
-    label_singular: Event
+  - name: special
+    label: Special Events
+    label_singular: Special Event
     identifier_field: name
     folder: content/events
-    slug: "{{expiryDate}}-{{type}}-{{name}}"
+    slug: "{{fields.time}}-{{name}}"
     path: "{{slug}}/index"
+    summary: "{{title}} by {{name}} on {{fields.time | date('MMMM D, YYYY @HH:mm')}}"
     create: true
     i18n: true
     editor:
       preview: false
-    sortable_fields: ["expiryDate", "name"]
-    view_filters:
-      - label: PhD
-        field: type
-        pattern: phd-thesis-defense
-      - label: MS
-        field: type
-        pattern: ms-thesis-defense
-      - label: Seminar
-        field: type
-        pattern: seminar
-    view_groups:
-      - label: Month
-        field: expiryDate
-        pattern: \d{4}-\d{2}
+    sortable_fields: ["fields.time", "name"]
+    filter: { field: "type", value: "special-event" }
     fields:
       - label: Type
         name: type
-        widget: select
-        options:
-          - label: MS Thesis Defense
-            value: ms-thesis-defense
-          - label: PhD Thesis Defense
-            value: phd-thesis-defense
-          - label: Seminar
-            value: seminar
-        default: ms-thesis-defense
+        widget: hidden
+        default: special-event
         i18n: duplicate
       - label: Title
         name: title
         widget: string
         i18n: true
-      - label: Name
+      - label: Organizer Name
         name: name
         widget: string
-        i18n: duplicate
-      - label: Event Date
-        name: expiryDate
+        i18n: true
+      - label: Date
+        name: time
         widget: datetime
-        date_format: DD MMMM YYYY
-        time_format: false
-        format: YYYY-MM-DD
+        date_format: YYYY-MM-DD
+        time_format: HH:mm:00
         i18n: duplicate
-      - label: Start Time
-        name: startTime
-        widget: datetime
-        date_format: false
-        time_format: "h:mm A"
-        format: "HH:mm"
-        i18n: duplicate
-      - label: Finish Time
-        name: finishTime
-        widget: datetime
-        date_format: false
-        time_format: "h:mm A"
-        format: "HH:mm"
+      - label: Duration
+        name: duration
+        widget: select
+        options:
+        - { label: "30 mins", value: "30m" }
+        - { label: "1 hour", value: "1h" }
+        - { label: "2 hours", value: "2h" }
+        - { label: "3 hours", value: "3h" }
+        - { label: "4 hours", value: "4h" }
+        default: "2h"
         i18n: duplicate
       - label: Location
         name: location
         widget: string
         i18n: duplicate
-        default: Ali Vahit Şahiner (AVŞ) Seminar Room
-      - label: Meeting Link
-        name: meeting-link
-        widget: string
-        i18n: duplicate
-        required: false
-      - label: Description
-        name: body
-        widget: markdown
-        default: ""
-        i18n: true
-        required: false
