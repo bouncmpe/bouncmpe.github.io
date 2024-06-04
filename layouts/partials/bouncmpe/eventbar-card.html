@@ -5,8 +5,8 @@
 {{ $event_end_time := $event_start_time.Add $event_duration }}
 {{ $event_location := .Params.location }}
 {{ $google_title := print .Params.name " " ((i18n .Type) | title | default .Title)}}
-{{ $google_start_time_string := $event_start_time | time.Format "20060102T150405Z" }}
-{{ $google_finish_time_string := $event_end_time | time.Format "20060102T150405Z"}}
+{{ $google_start_time_string := $event_start_time | time.Format "20060102T150405" }}
+{{ $google_finish_time_string := $event_end_time | time.Format "20060102T150405"}}
 
 <div class="card rounded-0 border-1 px-0">
     <div class="card-header">
