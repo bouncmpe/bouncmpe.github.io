@@ -7,9 +7,34 @@ aliases:
   - undergraduate/courses/cmpe350
 ---
 
+## Course Information
+
+<!-- prettier-ignore-start -->
+{{< table class="table-hover table-sm" >}}
+|||
+| :-- | :-- |
+| Faculty | Faculty of Engineering |
+| Course Code | CMPE350 |
+| Course Title | Formal Languages and Automata Theory |
+| Language of Instruction | English |
+| Course Semester | Spring |
+| Course Hours | Lecture: 3, PS:0, Labs: 0 |
+| Course Credits | 3 |
+| ECTS | 5 |
+| Grading Mode | Letter Grade |
+| Prerequisites | CMPE220 or MATH162 or MATH111 |
+| Corequisites | None |
+
+{{< /table >}}
+<!-- prettier-ignore-end -->
+
 ## Catalog Description
 
+Strings and languages. Classification of grammars. Finite-state automata and regular expressions. Pushdown automata and context-free grammars. Context sensitive grammars and linear bounded automata. Turing machines.
+
 ## Course Learning Outcome
+
+- Learn the basic concepts and tools of the theory of computation
 
 ## Current Instructor
 
