@@ -21,7 +21,7 @@ The Computer Engineering Department is excited to see your contributions. 🎉
 
 ## Code of Conduct
 
-This project and everyone participating in it is governed by the [CONTRIBUTING.md Code of Conduct](blob/master/CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to @doganulus.
+This project and everyone participating in it is governed by the [Boğaziçi University Computer Engineering Code of Conduct](https://github.com/bouncmpe/.github/blob/main/CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to [@doganulus](https://github.com/doganulus).
 
 ## I Have a Question
 
@@ -104,7 +104,7 @@ Please start the commit message with a verb in the present tense. The first line
 
 ## Join The Project Team
 
-We hire student assistants every semester to help with web-related tasks, including triaging contributions for this repository. Contact @doganulus to learn more and apply.
+We hire student assistants each semester to assist with web-related tasks, including triaging and managing contributions for this repository. Contact [@doganulus](https://github.com/doganulus) to learn more and apply.
 
 ## Attribution
 
