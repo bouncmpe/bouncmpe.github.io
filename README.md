@@ -23,4 +23,4 @@ Please see the [Contribution Guidelines](/CONTRIBUTING.md) for more information 
 
 ## Join The Project Team
 
-We hire student assistants every semester to help us with web-related tasks, including triaging contributions for this repository. Contact [@doganulus](https://github.com/doganulus) to learn more and apply.
+We hire student assistants each semester to assist with web-related tasks, including triaging and managing contributions for this repository. Contact [@doganulus](https://github.com/doganulus) to learn more and apply.
