@@ -3,7 +3,6 @@ title: Faculty
 description: Computer Engineering Faculty Members
 metadata: none
 weight: 21
-thumbnail: https://picsum.photos/seed/picsum/1400
 class: rounded-5
 ---
 

@@ -2,7 +2,6 @@
 title: Support Staff
 description: Computer Engineering Support Staff
 metadata: none
-thumbnail: https://picsum.photos/seed/picsum/1400
 weight: 23
 ---
 

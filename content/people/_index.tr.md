@@ -1,5 +1,5 @@
 ---
-title: People
+title: Kişiler
 layout: list
 cascade:
   params:

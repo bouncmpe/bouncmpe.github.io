@@ -3,7 +3,6 @@ title: Öğretim Üyeleri
 description: Bilgisayar Mühendisliği Öğretim Üyeleri
 metadata: none
 weight: 21
-thumbnail: https://picsum.photos/seed/picsum/1400
 class: rounded-5
 ---
 

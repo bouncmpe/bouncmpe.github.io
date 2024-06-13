@@ -4,6 +4,7 @@ description: Boğaziçi University Computer Enginering Curriculum
 metadata: none
 toc: false
 weight: 1
+type: wide
 ---
 
 <!-- prettier-ignore-start -->

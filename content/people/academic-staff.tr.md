@@ -2,7 +2,6 @@
 title: Akademik Personel
 description: Bilgisayar Mühendisliği Asistanları
 metadata: none
-thumbnail: https://picsum.photos/seed/picsum/1400
 weight: 22
 ---
 

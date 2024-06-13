@@ -2,7 +2,6 @@
 title: İdari ve Yardımcı Personel
 description: Bilgisayar Mühendisliği İdari ve Yardımcı Personeli
 metadata: none
-thumbnail: https://picsum.photos/seed/picsum/1400
 weight: 23
 ---
 
