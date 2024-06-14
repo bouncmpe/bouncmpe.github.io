@@ -1,7 +1,6 @@
 ---
 title: Yeni öğrencilerimizi bekliyoruz!
 description: Boğaziçi Üniversitesi Bilgisayar Mühendisliği Bölümü'ne katılmak, Türkiye'nin en prestijli ve saygın akademik ailelerinden birinin parçası olmaktır. Bu bölüm, size sağlam bir teorik temel ve sektörde aranan pratik beceriler kazandırarak, bilgisayar mühendisliği alanında başarılı bir kariyere hazırlar.
-type: single
 metadata: none
 card_links:
   - title: "#neden-bilgisayar"

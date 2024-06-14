@@ -71,6 +71,18 @@ sections:
     fullCover: true
     reverse: false
     nested: false
+  prospective:
+    layout: card
+    sort: weight
+    style: rounded-0 px-4 pb-3 my-0
+    header: none
+    footer: none
+    padding: 2
+    cols: 3
+    orientation: stacked
+    fullCover: true
+    reverse: false
+    nested: false
   people:
     layout: card
     sort: weight
