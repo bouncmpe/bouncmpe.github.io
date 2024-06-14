@@ -11,5 +11,8 @@ goldmark:
   renderer:
     unsafe: true
   parser:
+    attribute:
+      block: false
+      title: true
     autoHeadingID: true
     autoHeadingIDType: github

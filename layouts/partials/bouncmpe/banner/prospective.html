@@ -1,0 +1,19 @@
+<div class="container mb-5">
+<div class="card border-0 rounded-5 d-none d-xl-block">
+    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" class="rounded-5" style="width:100%;">
+        <source src="/videos/south-campus.720.mp4" type="video/mp4">
+    </video>
+    <div class="card-img-overlay px-5 py-4" style="max-width: 36rem;">
+    {{ with .GetPage "/prospective" }}
+        <h2 class="display-4 text-light" style="text-shadow: 2px 2px #000000;">{{ .Title }}</h2>
+        <p class="card-text text-light" style="text-shadow: 1px 1px #000000;">{{ .Description }}</p>
+        <div class="card-body p-0 lh-lg">
+            {{ range .Params.card_links }}
+                <a href="{{ relLangURL .url }}" class="my-5 px-2 py-1 me-2 text-bg-primary">{{ .title }}</a>
+            {{ end }}
+          </div>
+        </div>
+    {{ end }} 
+</div>
+
+</div>

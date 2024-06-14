@@ -1,8 +1,5 @@
 {{ define "main" }}
 
-{{ if site.Params.banner.enabled }}
-{{ partial site.Params.banner.partial . }}
-{{ end }}
 
 <div class="container mt-3">
 <div class="row text-center">
@@ -12,6 +9,13 @@
 </div>  
 </div>
 </div>
+
+{{ if site.Params.banner.enabled }}
+{{ $lang_code := .Language.Lang }}
+{{ if eq site.Params.banner.partial "prospective"}}
+{{ partial "bouncmpe/banner/prospective.html" . }}
+{{ end }}
+{{ end }}
 
 <div class="container">
     <div class="row">

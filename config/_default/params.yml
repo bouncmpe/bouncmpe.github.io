@@ -31,8 +31,8 @@ style:
   themeFontPath: "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400..800;1,400..800&display=swap"
 
 banner:
-  enabled: false
-  partial: "bouncmpe/banner/default"
+  enabled: true
+  partial: prospective
 
 eventbar:
   enabled: true
