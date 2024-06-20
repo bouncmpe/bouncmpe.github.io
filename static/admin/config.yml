@@ -64,8 +64,8 @@ collections:
         name: name
         widget: string
         i18n: duplicate
-      - label: Date
-        name: time
+      - label: Date and Time
+        name: datetime
         widget: datetime
         date_format: YYYY-MM-DD
         time_format: HH:mm:00

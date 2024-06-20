@@ -31,6 +31,9 @@ events:
 upcoming-events:
   other: upcoming events
 
+past-events:
+  other: past events
+
 latest-stories:
   other: latest stories
 

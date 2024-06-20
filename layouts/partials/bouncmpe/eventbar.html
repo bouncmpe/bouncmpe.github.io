@@ -1,13 +1,29 @@
 {{ $events := where site.RegularPages "Section" "events" }}
+{{ $sorted := sort $events "Params.datetime" }}
 
-{{ if $events }}
+{{ $future_events := slice }}
+{{ range $sorted }}
+    {{ if ge (time.AsTime .Params.datetime) now }}
+        {{ $future_events = $future_events | append . }}
+    {{ end }}
+{{ end }}
+
+{{ $past_events := slice }}
+{{ range $sorted }}
+    {{ if lt (time.AsTime .Params.datetime) now }}
+        {{ $past_events = $past_events | append . }}
+    {{ end }}
+{{ end }}
+
 <section id="eventbar">
     <h1 class="display-6 my-4">{{ i18n "upcoming-events" | title }}</h1>
+    {{ if $future_events }}
     <div class="row row-cols-1 g-2 m-1">
-        {{ range (first 6 $events) }}
+        {{ range (first 6 $future_events) }}
             {{ partial "bouncmpe/eventbar-card.html" . }}
         {{end}}
     </div>
+    {{ end }}
     <div class="row p-3">
         <div class="card rounded-4">
             <ul class="list-group list-group-flush">
@@ -19,5 +35,12 @@
             </ul>
         </div>
     </div>
+    {{ if le (len $future_events) 2 }}
+    <h1 class="display-6 my-4">{{ i18n "past-events" | title }}</h1>
+    <div class="row row-cols-1 g-2 m-1">
+        {{ range (first 3 $past_events.Reverse) }}
+            {{ partial "bouncmpe/eventbar-card.html" . }}
+        {{end}}
+    </div>
+    {{ end }}
 </section>
-{{ end }}

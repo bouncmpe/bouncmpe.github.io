@@ -1,6 +1,5 @@
 {{ $event_title := .Params.title }}
-{{ $event_description := .Params.description }}
-{{ $event_start_time := .Params.time | time.AsTime }}
+{{ $event_start_time := .Params.datetime | time.AsTime }}
 {{ $event_duration := .Params.duration | time.ParseDuration }}
 {{ $event_end_time := $event_start_time.Add $event_duration }}
 {{ $event_location := .Params.location }}
@@ -26,7 +25,7 @@
     </div> 
     {{/*
         Strecthed link applies to the card body due to a dummy transform property has set.
-        See https://getbootstrap.com/docs/5.2/helpers/stretched-link/#identifying-the-containing-block
+        See https://getbootstrap.com/docs/5.3/helpers/stretched-link/#identifying-the-containing-block
     */}}   
     <div class="card-body" style="transform: rotate(0);">
         {{ if .Content }}<a href="{{ .RelPermalink }}" class="stretched-link"></a>{{ end }}
