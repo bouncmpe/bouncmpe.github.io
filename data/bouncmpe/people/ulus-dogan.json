@@ -3,5 +3,7 @@
   "name": "Doğan Ulus",
   "position": "assistant-professor",
   "tags": ["faculty", "system", "web", "cmpe344", "cmpe434", "advisor-2"],
+  "github": "doganulus",
+  "linkedin": "doganulus",
   "type": "person"
 }
