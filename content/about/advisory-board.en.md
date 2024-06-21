@@ -1,14 +1,8 @@
 ---
 title: Advisory Board
-description: Department Advisory Board
+description: Advisory Board Members from Industry and Academia
 weight: 6
 metadata: none
 ---
 
-## Current Members
-
-{{< people tag="advisor" >}}
-
-## Former Members
-
-{{< people_alt tag="former-advisor" >}}
+{{< people_alt tag="advisor" >}}

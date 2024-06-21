@@ -5,4 +5,4 @@ metadata: none
 weight: 6
 ---
 
-{{< people tag="advisor" >}}
+{{< people_alt tag="advisor" >}}
