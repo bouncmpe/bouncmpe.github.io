@@ -164,3 +164,6 @@ long_month_11:
   other: kasım
 long_month_12:
   other: aralık
+
+languageSwitcherLabel:
+  other: Dil Seçimi

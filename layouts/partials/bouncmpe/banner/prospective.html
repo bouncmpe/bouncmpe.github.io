@@ -1,6 +1,6 @@
 <div class="container mb-5">
 <div class="card border-0 rounded-5 d-none d-xl-block">
-    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" class="rounded-5" style="width:100%;">
+    <video class="rounded-5" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" style="width:100%;">
         <source src="/videos/south-campus.720.mp4" type="video/mp4">
     </video>
     <div class="card-img-overlay px-5 py-4" style="max-width: 36rem;">
@@ -15,5 +15,17 @@
         </div>
     {{ end }} 
 </div>
-
+<div class="card border-5 rounded-5 d-xl-none text-center">
+    <div class="px-5 py-4">
+    {{ with .GetPage "/prospective" }}
+        <h2 class="display-4">{{ .Title }}</h2>
+        <p class="card-text">{{ .Description }}</p>
+        <div class="card-body p-0 lh-lg">
+            {{ range .Params.card_links }}
+                <a href="{{ relLangURL .url }}" class="my-5 px-2 py-1 me-2 text-bg-primary">{{ .title }}</a>
+            {{ end }}
+          </div>
+        </div>
+    {{ end }} 
+</div>
 </div>
