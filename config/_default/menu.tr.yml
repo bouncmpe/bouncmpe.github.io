@@ -43,11 +43,11 @@ main:
     parent: undergraduate
     identifier: undergraduate-curriculum
     weight: 302
-  - name: Temel Dersler
-    url: /undergraduate/courses
-    parent: undergraduate
-    identifier: undergraduate-courses
-    weight: 303
+  # - name: Temel Dersler
+  #   url: /undergraduate/courses
+  #   parent: undergraduate
+  #   identifier: undergraduate-courses
+  #   weight: 303
   - name: Seçmeli Dersler
     url: /undergraduate/electives
     parent: undergraduate
