@@ -1,8 +1,8 @@
 ---
-title: Program Overview
-description:
+title: Overview
+description: Computer Engineering Undergraduate Program
 metadata: none
-weight: -1
+weight: 0
 ---
 
 The undergraduate program in Computer Engineering is designed so that students
