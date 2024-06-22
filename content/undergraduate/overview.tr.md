@@ -2,7 +2,7 @@
 title: Genel Bakış
 description: Bilgisayar Mühendisliği Lisans Programı
 metadata: none
-weight: 0
+weight: 1
 ---
 
 Bilgisayar Mühendisliği lisans programı, öğrencilere bilgisayar donanımı, yazılımı ve bilgisayar uygulamaları alanlarında dengeli bir altyapı kazandırmak ve profesyonel kariyerlerinde hızla değişen teknolojilere uyum sağlamalarını mümkün kılmak üzere tasarlanmıştır. Alanın mühendislik yönlerine, özellikle hem donanım hem de yazılım sistemlerinin analizi ve tasarımına ağırlık verilmektedir.

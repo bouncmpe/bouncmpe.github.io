@@ -3,7 +3,7 @@ title: Curriculum
 description: Boğaziçi University Computer Enginering Curriculum
 metadata: none
 toc: false
-weight: 1
+weight: 2
 type: wide
 ---
 

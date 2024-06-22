@@ -3,7 +3,7 @@ title: Öğretim Programı
 description: Boğaziçi Üniversitesi Bilgisayar Mühendisliği Öğretim Programı
 metadata: none
 toc: false
-weight: 1
+weight: 2
 type: wide
 ---
 
