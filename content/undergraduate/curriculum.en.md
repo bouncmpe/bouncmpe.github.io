@@ -52,14 +52,14 @@ type: wide
 | [CMPE343](/courses/cmpe343) | Introduction to Probability and Statistics for Computer Engineers | MATH101 | 3 ||
 | [CMPE344](/courses/cmpe344) | Computer Organization | CMPE240 | 4 ||
 | IE310 | Operations Research | MATH201 | 4 ||
-| HTR311 | History of the Turkish Republic II  || 2 ||
+| HTR311 | History of the Turkish Republic I  || 2 ||
 |||| **20** ||
 | <h4>Sixth Semester</h4>|
 | **Code** |**Course Title** | **Prerequisites** | **Credits** | **ECTS** |
 | [CMPE321](/courses/cmpe321) | Introduction to Database Systems | CMPE250 | 4 ||
 | [CMPE350](/courses/cmpe350) | Formal Languages and Automata Theory | CMPE220 | 3 ||
 | [CMPE352](/courses/cmpe352) | Fundamentals of Software Engineering | --- | 2 ||
-| [CMPE362](/courses/cmpe362) | Introduction to Signal Processing | MATH201 | 3 ||
+| [CMPE362](/courses/cmpe362) | Introduction to Signal Processing for Computer Engineers | MATH201 | 3 ||
 | IE306 | Systems Simulation | CMPE343 | 4 ||
 | HTR312 | History of the Turkish Republic II || 2 ||
 |||| **18** ||
