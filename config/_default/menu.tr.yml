@@ -53,12 +53,12 @@ main:
     parent: undergraduate
     identifier: undergraduate-electives
     weight: 304
-  - name: Çift Anadal Programı
+  - name: Çift Anadal Programları
     url: /undergraduate/double-major
     parent: undergraduate
     identifier: undergraduate-double-major
     weight: 305
-  - name: Yandal Programı
+  - name: Yandal Programları
     url: /undergraduate/minor-degree
     parent: undergraduate
     identifier: undergraduate-minor-degree

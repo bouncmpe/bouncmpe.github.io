@@ -53,12 +53,12 @@ main:
     parent: undergraduate
     identifier: undergraduate-electives
     weight: 304
-  - name: Double Major Program
+  - name: Double Major Programs
     url: /undergraduate/double-major
     parent: undergraduate
     identifier: undergraduate-double-major
     weight: 305
-  - name: Minor Degree Program
+  - name: Minor Degree Programs
     url: /undergraduate/minor-degree
     parent: undergraduate
     identifier: undergraduate-minor-degree
