@@ -3,6 +3,7 @@ title: Akademik Danışmanlar
 description: Akademik Danışmanlar
 weight: 5
 metadata: none
+type: wide
 ---
 
 ## Hazırlık
@@ -15,16 +16,16 @@ metadata: none
 
 ## İkinci Sene
 
-{{< people_alt tag="advisor-2" >}}
+{{< people tag="advisor-2" >}}
 
 ## Üçüncü Sene
 
-{{< people_alt tag="advisor-3" >}}
+{{< people tag="advisor-3" >}}
 
 ## Dördüncü Sene
 
-{{< people_alt tag="advisor-4" >}}
+{{< people tag="advisor-4" >}}
 
 ## Beşinci-Altıncı-Yedinci Seneler
 
-{{< people_alt tag="advisor-x" >}}
+{{< people tag="advisor-x" >}}
