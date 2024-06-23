@@ -3,6 +3,7 @@ title: Mezuniyet Törenleri
 description: Boğaziçi Üniversitesi Bilgisayar Mühendisliği Mezunları
 metadata: none
 weight: 20
+type: wide
 ---
 
 ## 156th

@@ -3,6 +3,7 @@ title: Graduation Cerenomies
 description: Boğaziçi University Computer Engineering Graduates
 metadata: none
 weight: 20
+type: wide
 ---
 
 ## 156th

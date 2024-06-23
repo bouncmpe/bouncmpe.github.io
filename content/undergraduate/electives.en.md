@@ -3,6 +3,7 @@ title: Elective Courses
 description:
 metadata: none
 weight: 3
+type: wide
 ---
 
 ## Humanities and Social Sciences (HSS)
