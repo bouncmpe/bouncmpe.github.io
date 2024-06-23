@@ -19,7 +19,6 @@ Today, software systems constitute a very important and critical part of compute
 
 Software Engineering is a new branch of engineering that has existed since 1968 and aims to design, manufacture and operate software systems within the framework of engineering principles. Since computers and software systems are now used intensively and effectively in all areas of daily life, Software Engineering is an engineering field that has interdisciplinary applications and plays a role in all disciplines.
 
-[**The Master of Science Program in Software Engineering**](https://swe.bogazici.edu.tr) aims to contribute to closing the manpower gap in this field in Turkey, is to provide specialist training in software engineering at the graduate level to those who have completed one of the 4-year university/high school undergraduate programs. It is aimed that students specialize in software project management and software development. 
+[**The Master of Science Program in Software Engineering**](https://swe.bogazici.edu.tr) aims to contribute to closing the manpower gap in this field in Turkey, is to provide specialist training in software engineering at the graduate level to those who have completed one of the 4-year university/high school undergraduate programs. It is aimed that students specialize in software project management and software development.
 
 Within the scope of the program, thesis and non-thesis graduate alternatives are offered to the students. If the necessary conditions are met, it is possible to switch between thesis and non-thesis programs.
-
