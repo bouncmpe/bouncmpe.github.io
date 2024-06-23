@@ -89,11 +89,21 @@ main:
     url: /graduate/
     identifier: graduate
     weight: 400
-  - name: Genel Bakış
-    url: /graduate/overview
+  - name: Doktora Programı
+    url: /graduate/phd-program
     parent: graduate
-    identifier: graduate-overview
-    weight: 401
+    identifier: graduate-phd-program
+    weight: 411
+  - name: Yüksek Lisans Programı
+    url: /graduate/ms-program
+    parent: graduate
+    identifier: graduate-ms-program
+    weight: 412
+  - name: Diğer İlişkili Programlar
+    url: /graduate/affiliated-programs
+    parent: graduate
+    identifier: graduate-affiliated
+    weight: 413
 
   - name: Dersler
     url: /courses/

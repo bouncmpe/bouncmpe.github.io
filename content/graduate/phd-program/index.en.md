@@ -15,14 +15,11 @@ stages:
 This stage consists of eight technical elective courses and the PhD seminar
 course. {{< /card >}}
 {{< card title="Qualifying Exam" class="border-0 py-4" icon="fas scroll" >}} The
-Qualifiting Exam consists of written and oral examination components.
+Qualifying Exam consists of written and oral examination components.
 {{< /card >}}
 {{< card title="Thesis Stage" class="border-0 py-4" icon="fas book" >}} Once the
 thesis proposal is accepted, the student starts the PhD Thesis. {{< /card >}}
 {{< /card-group >}}
-
-Rules and regulations regarding the PhD program can be found at
-[our documentation pages](/docs/phd-program).
 
 ## Apply to the PhD Program
 

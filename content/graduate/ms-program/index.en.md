@@ -7,7 +7,7 @@ weight: 421
 
 ## Overview
 
-The PhD program at the Department of Computer Engineering consists of two
+The Master of Science program at the Department of Computer Engineering consists of two
 stages:
 
 {{< card-group padding="3" gutter="3" cols="3" >}}
@@ -17,9 +17,6 @@ course. {{< /card >}}
 {{< card title="Thesis Stage" class="border-0 py-4" icon="fas book" >}} Once the
 thesis proposal is accepted, the student starts the MS Thesis. {{< /card >}}
 {{< /card-group >}}
-
-Rules and regulations regarding the MS program can be found at
-[our documentation pages](/docs/ms-program).
 
 ## Apply to the MS Program
 
