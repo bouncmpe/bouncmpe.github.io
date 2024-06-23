@@ -21,7 +21,7 @@ metadata: none
 
 {{< /table >}}
 
-## Geçmiş Yılların Kayıt Sayıları
+## Yıllara Göre Kayıt Sayıları
 
 {{< table >}}
 
@@ -36,11 +36,11 @@ metadata: none
 
 {{< /table >}}
 
-## Geçmiş Yılların Mezuniyet İstastistikleri
+## Yıllara Göre Mezuniyet Sayıları
 
 {{< table >}}
 
-| Takviö Yılı | Mezun Sayısı |
+| Takvim Yılı | Mezun Sayısı |
 | ----------- | -----------: |
 | 2021        |           80 |
 | 2020        |           96 |
