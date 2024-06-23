@@ -1,13 +1,13 @@
 ---
-title: Summer Training
-description:
+title: Industrial Training
+description: Faculty of Engineering Industrial Training Bylaws
 metadata: none
 weight: 7
 ---
 
 ## Objective
 
-The main objective of In-Service Training is to contribute to the education of
+The main objective of Industrial Training is to contribute to the education of
 the students of the Faculty of Engineering by providing them practical,
 technological, as well as managerial experience and knowledge in nonacademic
 organizations.
@@ -19,8 +19,8 @@ organizations.
 2. Each department determines the areas and minimum durations of training
    according to its own engineering formation and educational program, and
    announces them to the students. The duration of each training cannot be less
-   than 15 working days, and the total requirement should be completed in **at
-   least two different organizations**.
+   than 15 working days, and the total requirement should be completed in
+   **at least two different organizations**.
 3. It is the responsibility of the department’s training coordinator to
    coordinate and guide training activities in conformity with these bylaws.
 4. Students who have successfully completed their undergraduate program, but
@@ -39,7 +39,7 @@ organizations.
 1. **Training Booklet**: This refers to either a specially formatted booklet
    containing several issues related to training and available from the
    University Bookstore and from
-   [the Faculty website](https://www.eng.boun.edu.tr), or to a report the format
+   [the Faculty website](https://www.eng.bogazici.edu.tr), or to a report the format
    of which is determined by the department. This booklet is to be filled in by
    the students in English and it consists mainly of the following three parts:
 
@@ -55,45 +55,10 @@ organizations.
    at the work place evaluates the trainee. This form must be signed by the
    supervisor and handed to the student in a closed and stamped envelope.
 
-## Other Department Rules
+## Training Coordinator
 
-1. Industrial training is made in at least two parts in different firms or
-   institutions, each of them with at least 15 working days of duration.
-1. For each industrial training, the student prepares a training booklet
-   explaining the training that she made. The training booklet is filled
-   according to its format. The student submits the training booklet to the
-   Department at the beginning of the second month of the semester following her
-   training period, at the latest. One day is cut off from the training time for
-   each late day of submission. Training diaries submitted after the beginning
-   of the third month of the semester are not accepted by the Department.
-1. The trainee also has to see to it that the training certificate to be filled
-   by the manager in the training location reaches the Department in a closed
-   envelope. The training is not considered unless the certificate reaches the
-   Department until the beginning of the second month of the following semester,
-   at the latest.
-1. The trainee also submits a letter of evaluation (a few pages) in which she
-   evaluates the training she has made together with the training booklet. If
-   the training booklet and letter of evaluation are submitted on separate
-   dates, the later date is considered to be the submission date.
-1. In the training evaluation (by the Department, ) the main criteria are the
-   format and completeness of the training booklet, the submission dates of the
-   booklet, certificate and letter of evaluation, the adequacy of the training
-   and whether it has been documented well or not.
-1. The training cannot comprise only of the learning of a system or application;
-   it must also contain the development of a system or application. The
-   applications can be on one of the following topics, as well as on other
-   topics which will be found suitable by the Department.
-   - System Analysis and Design
-   - Software Design and Development
-   - Database and Knowledge Base Applications
-   - Microprocessor-Based System Design and Applications
-   - Computer Network Applications
-   - Computer-Aided Design and Manufacturing Applications
-
-## Coordinator
-
-{{< people tag="training" >}}
+{{< people tag="training" cols="1" >}}
 
 ## Training Assistant
 
-{{< people tag="training-assistant" >}}
+{{< people tag="training-assistant" cols="1" >}}

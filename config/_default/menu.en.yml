@@ -68,7 +68,7 @@ main:
     parent: undergraduate
     identifier: undergraduate-exchange
     weight: 307
-  - name: Summer Training
+  - name: Industrial Training
     url: /undergraduate/training
     parent: undergraduate
     identifier: undergraduate-training
