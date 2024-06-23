@@ -58,7 +58,7 @@ main:
     parent: undergraduate
     identifier: undergraduate-double-major
     weight: 305
-  - name: Yandal Programları
+  - name: Yan Dal Programları
     url: /undergraduate/minor-degree
     parent: undergraduate
     identifier: undergraduate-minor-degree

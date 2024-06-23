@@ -11,27 +11,26 @@ A minor program enables Boğaziçi University students to obtain a non-degree
 certificate by completing a limited number of courses in a specific field within
 another undergraduate program at the University.
 
-The Minor Degree Programs Directive at Boğaziçi University encompasses
-provisions regarding student admissions and registration procedures for double
-major programs conducted at Boğaziçi University, as well as regulations
+[**Minor Degree Programs Directive**](https://bogazici.edu.tr/tr-TR/Content/Ogrenciler/Ogrenci_Isleri/Yonetmelik_ve_Ic_Tuzukler/Yandal_Yonergesi) at Boğaziçi University encompasses
+provisions regarding student admissions and registration procedures for minor degree
+programs conducted at Boğaziçi University, as well as regulations
 pertaining to the implementation of minor degree program practices. You can
 check the directive on the University's page.
 
-- [Minor Degree Programs Directive at Boğaziçi University (in Turkish)](https://bogazici.edu.tr/tr-TR/Content/Ogrenciler/Ogrenci_Isleri/Yonetmelik_ve_Ic_Tuzukler/Yandal_Yonergesi)
-
 Specifically, Article 7 of the directive lists the university-wide minimum
-admission requirements.
+admission requirements. It's important to note that departments may impose
+additional, program-specific requirements for minor degree program applicants.
 
 ### For Computer Engineering Students
 
 Computer Engineering students may check other
-[minor degree programs at Boğaziçi University](https://ogrenciler.bogazici.edu.tr/Home/SubPage/yandalprogramlari).
+[**minor degree programs at Boğaziçi University**](https://ogrenciler.bogazici.edu.tr/Home/SubPage/yandalprogramlari).
 
 ### For Other Students
 
 Students of other departments at Boğaziçi University can obtain a minor degree
 certificate after the admission and completing courses in the Computer
-Engineering Minor Degree Program. The minor degree program consists of four
+Engineering Minor Degree Program. The program consists of four
 compulsory courses and two elective courses listed in the following.
 
 <!-- prettier-ignore-start -->
@@ -61,4 +60,4 @@ compulsory courses and two elective courses listed in the following.
 
 ## Coordinator
 
-{{< people tag="minor-degree" >}}
+{{< people tag="minor-degree" cols="1" >}}

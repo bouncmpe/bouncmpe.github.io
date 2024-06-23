@@ -1,6 +1,6 @@
 ---
 title: Çift Ana Dal Programları
-description:
+description: Boğaziçi Üniversitesi Çift Ana Dal Programları
 metadata: none
 weight: 4
 ---
@@ -11,7 +11,7 @@ Boğaziçi Üniversitesi'nde çift ana dal programı, öğrencilere aynı anda i
 
 [**Boğaziçi Üniversitesi Çift Ana Dal Programları Yönergesi**](https://bogazici.edu.tr/tr_TR/Content/Ogrenciler/Ogrenci_Isleri/Yonetmelik_ve_Ic_Tuzukler/Cift_Anadal_Programlari_Yonergesi), üniversitede yürütülen çift ana dal programlarına öğrenci kabul ve kayıt işlemleri ile ilgili hükümleri ve çift ana dal program uygulamalarının yürütülmesine ilişkin düzenlemeleri kapsar. Bu yönerge, çift ana dal programına başvurmayı düşünen öğrencilerin bilmesi gereken tüm detayları içerir. Yönergeyi Üniversitenin web sayfasından inceleyebilirsiniz.
 
-Yönergenin özellikle 7. maddesinde, üniversite genelinde çift ana dal programlarına kabul için gereken asgari koşullar sıralanmaktadır. Bölümler, çift ana dal programı başvuranlarından programa özgü ek koşullar talep edebileceğinin altını çizmek önemlidir.
+Yönergenin özellikle 7. maddesinde, üniversite genelinde çift ana dal programlarına kabul için gereken asgari koşullar sıralanmaktadır. Bölümler, çift ana dal programı başvuranlarından programa özgü ek koşullar talep edebilir.
 
 Üniversite genelinde sunulan çift ana dal programlarının kapsamlı listesine [**buradan**](http://bogazici.edu.tr/tr-TR/Content/Akademik/Cift_Anadal_Programlari) ulaşabilirsiniz.
 
