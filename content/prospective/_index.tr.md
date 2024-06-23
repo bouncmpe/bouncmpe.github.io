@@ -21,6 +21,8 @@ card_links:
     url: https://tanitim.bogazici.edu.tr/basari-burslari
   - title: "#yurtdışı"
     url: https://tanitim.bogazici.edu.tr/uluslararasi-programlar
+  - title: "#mezunlar"
+    url: /prospective/alumni
 ---
 
 Boğaziçi Üniversitesi Bilgisayar Mühendisliği Bölümü'ne katılmak, Türkiye'nin en prestijli ve saygın akademik ailelerinden birinin parçası olmaktır. Bu bölüm, size sağlam bir teorik temel ve sektörde aranan pratik beceriler kazandırarak, bilgisayar mühendisliği alanında başarılı bir kariyere hazırlar.
