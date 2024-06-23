@@ -11,20 +11,18 @@ A double major program enables Boğaziçi University students to concurrently
 obtain two separate undergraduate diplomas for two separate undergraduate
 programs.
 
-The Double Major Programs Directive at Boğaziçi University encompasses
+[**Double Major Programs Directive**](http://bogazici.edu.tr/tr_TR/Content/Ogrenciler/Ogrenci_Isleri/Yonetmelik_ve_Ic_Tuzukler/Cift_Anadal_Programlari_Yonergesi) at Boğaziçi University encompasses
 provisions regarding student admissions and registration procedures for double
 major programs conducted at Boğaziçi University, as well as regulations
 pertaining to the implementation of double major program practices. You can
 check the directive on the University's page.
-
-- [Double Major Programs Directive at Boğaziçi University (in Turkish)](http://bogazici.edu.tr/tr_TR/Content/Ogrenciler/Ogrenci_Isleri/Yonetmelik_ve_Ic_Tuzukler/Cift_Anadal_Programlari_Yonergesi)
 
 Specifically, Article 7 of the directive lists the university-wide minimum
 admission requirements. It's important to note that departments may impose
 additional, program-specific requirements for double major applicants.
 
 The comprehensive list of university-wide double major programs can be found on
-[this page](http://bogazici.edu.tr/tr-TR/Content/Akademik/Cift_Anadal_Programlari).
+[**this page**](http://bogazici.edu.tr/tr-TR/Content/Akademik/Cift_Anadal_Programlari).
 
 ### For Computer Engineering Students
 
@@ -32,9 +30,15 @@ Undergraduate students enrolled in the Department of Computer Engineering have
 the opportunity to apply for double major programs in the following
 undergraduate programs:
 
-- [Mathematics](https://math.bogazici.edu.tr/)
-- [Physics](https://phys.bogazici.edu.tr/)
-- [Industrial Engineering](https://ie.bogazici.edu.tr/)
+{{< card-group padding="3" gutter="3" cols="3" >}}
+{{< card title="Mathematics" class="border-0 py-4" icon="fas infinity">}}
+[Department<br>Website](https://math.bogazici.edu.tr/)
+{{< /card >}}
+{{< card title="Physics" class="border-0 py-4" icon="fas atom" >}} [Department<br>Website](https://phys.bogazici.edu.tr/)
+{{< /card >}}
+{{< card title="Industrial Engineering" class="border-0 py-4" icon="fas industry" >}} [Department Website](https://ie.bogazici.edu.tr/)
+{{< /card >}}
+{{< /card-group >}}
 
 Computer Engineering students enrolled in double major programs of other
 departments must fulfill all requirements of the Computer Engineering program.
@@ -57,4 +61,5 @@ when application process starts.
 
 ## Coordinator
 
-{{< people tag="double-major" >}}
+{{< people tag="double-major" cols="1">}}
+
