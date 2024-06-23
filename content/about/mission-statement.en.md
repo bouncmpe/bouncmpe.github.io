@@ -1,6 +1,6 @@
 ---
 title: Mission Statements
-description: Department Mission Statements
+description: University, Faculty, and Department Mission Statements
 metadata: none
 weight: 1
 ---
@@ -50,9 +50,9 @@ departments therefore comprise core courses in engineering sciences,
 departmental core courses, specialization-option courses, complementary courses,
 as well as courses in humanities and social sciences.
 
-## Department of Computer Engineering
+## Computer Engineering Department
 
-The mission of the Computer Engineering Program is to graduate economically,
+The mission of the Department of Computer Engineering is to graduate economically,
 socially and ethically conscious engineers that are equipped with the necessary
 analytical, mathematical, decision-making, computing, communication, teamwork
 and leadership skills that they can use to creatively design, implement, manage,
