@@ -1,8 +1,9 @@
 ---
 title: Administration
-description: Department Administration
+description: Department Administration and Committees
 weight: 4
 metadata: none
+type: wide
 ---
 
 ## Chair
@@ -21,20 +22,22 @@ metadata: none
 
 {{< people tag="double-major" >}}
 
+## Minor Degree Studies Coordinator
+
+{{< people tag="minor-degree" >}}
+
 ## Exchange Studies Coordinator
 
-{{< people tag="exchange-studies" >}}
+{{< people tag="exchange" >}}
 
-## Committees
-
-### Curriculum Committee
+## Curriculum Committee
 
 {{< people tag="curriculum" >}}
 
-### System Committee
+## System Committee
 
 {{< people tag="system" >}}
 
-### Web Committee
+## Web Committee
 
 {{< people tag="web" >}}
