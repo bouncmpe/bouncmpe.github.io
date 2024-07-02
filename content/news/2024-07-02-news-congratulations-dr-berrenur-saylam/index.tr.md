@@ -4,7 +4,7 @@ title: Tebrikler Dr. Berrenur Saylam!
 description: Berrenur Saylam doktora tezini başarıyla savundu
 featured: true
 date: 2024-07-02
-thumbnail: uploads/berrenursaylam-phd-defence.jpeg
+thumbnail: uploads/berrenur-saylam-phd-defense.png
 ---
 ## İyilik Hali Değerlendirmesi için Makine Öğrenimi: Dijital Biyobelirteçlerin Keşfi
 

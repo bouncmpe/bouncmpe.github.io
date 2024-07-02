@@ -4,7 +4,7 @@ title: Congratulations Dr. Berrenur Saylam!
 description: Berrenur Saylam has successfully defended her PhD thesis
 featured: true
 date: 2024-07-02
-thumbnail: uploads/berrenursaylam-phd-defence.jpeg
+thumbnail: uploads/berrenur-saylam-phd-defense.png
 ---
 ## Machine Learning for Well-being Assessment: Exploring Digital Biomarkers
 
