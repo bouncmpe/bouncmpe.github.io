@@ -6,6 +6,7 @@ thumbnail: https://picsum.photos/seed/cmpe352/1400
 aliases:
   - undergraduate/courses/cmpe352
 ---
+
 ## Course Information
 
 <!-- prettier-ignore-start -->
@@ -46,8 +47,6 @@ There are numerous hands-on assignments to gain software engineering skills usin
 
 {{< people tag="cmpe352" cols="1">}}
 
-<!-- 
-## Previous Instructors
+<!-- ## Previous Instructors
 
-{{< people_alt tag="former-cmpe352" cols="2">}} 
--->
+{{< people_alt tag="former-cmpe352" cols="2">}} -->
