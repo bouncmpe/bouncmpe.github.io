@@ -2,7 +2,7 @@
 type: news
 title: Congratulations Dr. Beytullah Yiğit!
 description: Beytullah Yiğit has successfully defended her PhD thesis
-featured: false
+featured: true
 date: 2024-06-03
 thumbnail: uploads/beytullah-yigit-doktora.jpeg
 ---
