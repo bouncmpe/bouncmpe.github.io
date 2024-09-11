@@ -4,7 +4,7 @@ title: Congratulations Dr. Beytullah Yiğit!
 description: Beytullah Yiğit has successfully defended her PhD thesis
 featured: true
 date: 2024-06-03
-thumbnail: uploads/beytullah-yigit-doktora.jpeg
+thumbnail: uploads/beytullah-yigit-doktora.png
 ---
 # A Securıty Framework for Software-Defined Networks
 

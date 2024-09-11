@@ -4,7 +4,7 @@ title: Tebrikler Dr. Beytullah Yiğit!
 description: Beytullah Yiğit doktora tezini başarıyla savundu
 featured: true
 date: 2024-06-03
-thumbnail: uploads/beytullah-yigit-doktora.jpeg
+thumbnail: uploads/beytullah-yigit-doktora.png
 ---
 # Yazılım Tanımlı Ağlar İçin Bir Güvenlik Çerçevesi
 
