@@ -6,7 +6,7 @@ featured: true
 date: 2024-08-27
 thumbnail: uploads/sumeyye-agac-doktora.png
 ---
-# Enhancing Lightweight Models for Efficient Sensor-based Human
+## Enhancing Lightweight Models for Efficient Sensor-based Human
 Activity Recognition
 
 ## Abstract
