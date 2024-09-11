@@ -6,7 +6,7 @@ featured: true
 date: 2024-06-03
 thumbnail: uploads/beytullah-yigit-doktora.png
 ---
-## A Securıty Framework for Software-Defined Networks
+## A Security Framework for Software-Defined Networks
 
 ## Abstract
 
