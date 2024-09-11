@@ -4,6 +4,7 @@ title: Congratulations Dr. Sümeyye Ağaç!
 description: Sümeyye Ağaç has successfully defended her PhD thesis
 featured: false
 date: 2024-08-27
+thumbnail: uploads/sumeyye-agac-doktora.png
 ---
 # Enhancing Lightweight Models for Efficient Sensor-based Human
 Activity Recognition

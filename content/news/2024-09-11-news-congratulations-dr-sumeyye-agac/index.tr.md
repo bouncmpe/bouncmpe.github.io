@@ -4,6 +4,7 @@ title: Tebrikler Dr. Sümeyye Ağaç!
 description: Sümeyye Ağaç doktora tezini başarıyla savundu
 featured: false
 date: 2024-08-27
+thumbnail: uploads/sumeyye-agac-doktora.png
 ---
 \# Verimli Sensör Tabanlı İnsan Aktivitesi Tanıma için Hafif Modellerin İyileştirilmesi
 
