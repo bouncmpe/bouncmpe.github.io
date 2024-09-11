@@ -6,7 +6,7 @@ featured: true
 date: 2024-06-03
 thumbnail: uploads/beytullah-yigit-doktora.png
 ---
-# Yazılım Tanımlı Ağlar İçin Bir Güvenlik Çerçevesi
+## Yazılım Tanımlı Ağlar İçin Bir Güvenlik Çerçevesi
 
 ## Özet
 
