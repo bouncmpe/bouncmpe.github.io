@@ -55,6 +55,14 @@ Evolution of operating systems. Multiprogramming and time sharing concepts. User
 
 ## Course Learning Outcome
 
+- Learn how the components of a computer system interact and focus specifically on operating systems.
+- Study basic concepts like process management, memory management, storage management.
+- Understand the principles of concurrency and synchronization.
+- Learn how to prevent and handle deadlocks.
+- Understand the principles of file systems and I/O management.
+- Learn how to protect and secure computer systems.
+- Understand the principles of virtualization and cloud computing.
+
 ## Current Instructor
 
 {{< people tag="cmpe322" cols="2">}}

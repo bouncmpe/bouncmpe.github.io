@@ -35,6 +35,13 @@ Logical organization of data: Entity-relationship modeling of data. Hierarchical
 
 ## Course Learning Outcome
 
+- To introduce the basic concepts of database systems.
+- To provide an understanding of the relational model and relational database design.
+- To introduce a query language.
+- To provide an understanding of the database design and normalization process.
+- To provide an understanding of the database security and integrity.
+- To provide an understanding of the database recovery and concurrency control.
+
 ## Current Instructor
 
 {{< people tag="cmpe321" cols="2">}}
