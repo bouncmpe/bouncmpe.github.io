@@ -47,6 +47,6 @@ Yaygın olarak kullanılan araçlar ve yöntemlerle yazılım mühendisliği bec
 
 {{< people tag="cmpe352" cols="1">}}
 
-<!-- ## Dersi Veren Önceki Öğretim Üyeleri
+## Dersi Veren Önceki Öğretim Üyeleri
 
-{{< people_alt tag="former-cmpe352" cols="2">}} -->
+{{< people_alt tag="former-cmpe352" cols="2">}}
