@@ -37,15 +37,11 @@ von Neumann machine. Bus structures. Assembly programming.
 
 ## Course Learning Outcome
 
-- Get familiar with the history of computer design and recent developments in
-  the field
-- Understand the execution of machine instructions via RISC-V assembly
-  programming
+- Get familiar with the history of computer design and recent developments in the field
+- Understand the execution of machine instructions via RISC-V assembly programming
 - Understand the design principles and issues related to modern processors
-- Understand the design principles and issues related to hierarchical memory
-  systems
-- Understand the design criteria for computers like performance, power
-  efficiency, cost, and security
+- Understand the design principles and issues related to hierarchical memory systems
+- Understand the design criteria for computers like performance, power efficiency, cost, and security
 
 ## Current Instructor
 

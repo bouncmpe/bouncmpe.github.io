@@ -34,7 +34,14 @@ Dizeler ve diller. Gramerlerin sınıflandırılması. Sonlu durum otomatları v
 
 ## Dersin Öğrenme Çıktıları
 
-- Hesaplama teorisinin temel kavramlarını ve araçlarını öğrenmek
+
+- Hesaplama teorisinin temel kavramlarını ve araçlarını öğrenmek.
+- Biçimsel diller ve otomata teorisini anlamak.
+- Dilbilgilerinin sınıflandırmasını öğrenmek.
+- Sonlu durum otomataları ve düzenli ifadeleri öğrenmek.
+- Yığıtlı otomataları ve bağlamdan bağımsız dilbilgilerini öğrenmek.
+- Bağlam duyarlı dilbilgileri ve doğrusal sınırlı otomataları öğrenmek.
+- Turing makinelerini öğrenmek.
 
 ## Dersi Veren Öğretim Üyesi
 
