@@ -13,17 +13,17 @@ aliases:
 {{< table class="table-hover table-sm" >}}
 |||
 | :-- | :-- |
-| Faculty | Faculty of Engineering |
-| Course Code | CMPE230 |
-| Course Title | Systems Programming |
-| Language of Instruction | English |
-| Course Semester | Spring |
-| Course Hours | Lecture: 3, PS:2, Labs: 0 |
-| Course Credits | 4 |
-| ECTS | 6 |
-| Grading Mode | Letter Grade |
-| Prerequisites | CMPE160 |
-| Corequisites | None |
+| Fakülte | Mühendislik Fakültesi |
+| Ders Kodu | CMPE230 |
+| Ders Başlığı | Sistem Programlama |
+| Öğretim Dili | İngilizce |
+| Ders Dönemi | Güz |
+| Ders Saatleri | Ders: 3, PS:2, Laboratuvar: 0 |
+| Ders Kredisi | 4 |
+| AKTS | 6 |
+| Notlandırma Sistemi | Harf Notu |
+| Önkoşul dersleri | CMPE160 |
+| Eşkoşul dersleri | Yok |
 
 {{< /table >}}
 <!-- prettier-ignore-end -->
@@ -31,6 +31,8 @@ aliases:
 ## Catalog Description
 
 Overview of compilers, interpreters, assemblers, linkers and loaders. Unix environment and system calls. Shell programming. Signals and exceptions. Localization and Unicode. PERL and CGI programming. Assembly language programming. Introduction to multithreading. Introductory Graphical User Interface (GUI) programming.
+
+Derleyici, yorumlayıcı, birleştirici, bağlayıcı ve yükleyiciler hakkında genel bilgi. Unix ortamı ve sistem çağrıları. Shell programlama. Sinyaller ve istisnalar. Yerelleştirme ve Unicode. PERL ve CGI programlama. Assembly programlama. Çoklu iş parçacığına giriş. Giriş seviyesi Grafiksel Kullanıcı Arayüzü (GUI) programlama.
 
 ## Course Learning Outcome
 
