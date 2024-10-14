@@ -22,7 +22,7 @@ aliases:
 | Course Credits | 3 |
 | ECTS | 6 |
 | Grading Mode | Letter Grade |
-| Prerequisites | Programming Experience in C++ or Python and Familiarity with Linux-based systems |
+| Prerequisites | None |
 | Corequisites | None |
 
 {{< /table >}}

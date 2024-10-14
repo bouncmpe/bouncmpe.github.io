@@ -22,7 +22,7 @@ aliases:
 | Course Credits | 3 |
 | ECTS | 6 |
 | Grading Mode | Letter Grade |
-| Prerequisites | Senior in CMPE |
+| Prerequisites | None |
 | Corequisites | None |
 
 {{< /table >}}

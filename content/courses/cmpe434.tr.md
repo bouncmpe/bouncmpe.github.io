@@ -23,7 +23,7 @@ aliases:
 | Ders Kredisi | 3 |
 | AKTS | 6 |
 | Notlandırma Sistemi | Harf Notu |
-| Önkoşul dersleri | C++ veya Python'da Programlama Deneyimi ve Linux tabanlı sistemlere aşinalık |
+| Önkoşul dersleri | Yok |
 | Eşkoşul dersleri | Yok |
 
 {{< /table >}}

@@ -23,7 +23,7 @@ aliases:
 | Ders Kredisi | 3 |
 | AKTS | 6 |
 | Notlandırma Sistemi | Harf Notu |
-| Önkoşul dersleri | CMPE'de Kıdemli Statüsü |
+| Önkoşul dersleri | Yok |
 | Eşkoşul dersleri | Yok |
 
 {{< /table >}}
