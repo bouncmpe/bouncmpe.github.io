@@ -7,6 +7,7 @@ aliases:
   - undergraduate/courses/cmpe321
 ---
 
+{{< warning >}}
 ## Course Information
 
 <!-- prettier-ignore-start -->
