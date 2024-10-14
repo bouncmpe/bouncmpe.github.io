@@ -13,24 +13,24 @@ aliases:
 {{< table class="table-hover table-sm" >}}
 |||
 | :-- | :-- |
-| Faculty | Faculty of Engineering |
-| Course Code | CMPE250 |
-| Course Title | Data Structures and Algorithms |
-| Language of Instruction | English |
-| Course Semester | Fall |
-| Course Hours | Lecture: 3, PS:2, Labs: 0 |
-| Course Credits | 4 |
-| ECTS | 6 |
-| Grading Mode | Letter Grade |
-| Prerequisites | CMPE160 |
-| Corequisites | None |
+| Fakülte | Mühendislik Fakültesi |
+| Ders Kodu | CMPE250 |
+| Ders Başlığı | Veri Yapıları ve Algoritmalar |
+| Öğretim Dili | İngilizce |
+| Ders Dönemi | Güz |
+| Ders Saatleri | Ders: 3, PS:2, Laboratuvar: 0 |
+| Ders Kredisi | 4 |
+| AKTS | 6 |
+| Notlandırma Sistemi | Harf Notu |
+| Önkoşul dersleri | CMPE160 |
+| Eşkoşul dersleri | Yok |
 
 {{< /table >}}
 <!-- prettier-ignore-end -->
 
 ## Catalog Description
 
-Graphs. Advanced Sorting. Hashing. Heap Structures. Search Structures. Complexity. Parallel algorithms. File organization.
+Grafikler. Gelişmiş Sıralama. Hashing. Yığın Yapıları. Arama Yapıları. Karmaşıklık. Paralel algoritmalar. Dosya organizasyonu.
 
 ## Course Learning Outcome
 
