@@ -7,6 +7,7 @@ aliases:
   - undergraduate/courses/cmpe434
 ---
 
+{{< warning >}}
 ## Course Information
 
 <!-- prettier-ignore-start -->
@@ -31,6 +32,7 @@ aliases:
 ## Catalog Description
 
 Designing, building and programming mobile robots; sensors, effectors, locomotion, basic control theory, control architectures, path planning, localization, mapping, learning. Teamwork; robot contest.
+
 
 
 ## Current Instructor

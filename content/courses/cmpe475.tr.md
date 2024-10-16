@@ -7,7 +7,7 @@ aliases:
   - undergraduate/courses/cmpe475
 ---
 
-
+{{< warning_tr >}}
 ## Ders Bilgileri
 
 <!-- prettier-ignore-start -->

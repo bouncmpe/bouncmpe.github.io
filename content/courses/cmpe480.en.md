@@ -6,7 +6,7 @@ thumbnail: https://picsum.photos/seed/cmpe480/1400
 aliases:
   - undergraduate/courses/cmpe480
 ---
-
+{{< warning >}}
 ## Course Information
 
 <!-- prettier-ignore-start -->
