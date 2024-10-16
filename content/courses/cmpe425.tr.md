@@ -23,7 +23,7 @@ aliases:
 | Ders Kredisi | 3 |
 | AKTS | 6 |
 | Notlandırma Sistemi | Harf Notu |
-| Önkoşul dersleri | CMPE 260 ve Egitmen Kabulu |
+| Önkoşul dersleri | CMPE 260 |
 | Eşkoşul dersleri | Yok |
 
 {{< /table >}}

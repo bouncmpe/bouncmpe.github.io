@@ -23,7 +23,7 @@ aliases:
 | Ders Kredisi | 3 |
 | AKTS | 6 |
 | Notlandırma Sistemi | Harf Notu |
-| Önkoşul dersleri | Egitmen Kabulu |
+| Önkoşul dersleri | Yok |
 | Eşkoşul dersleri | Yok |
 
 {{< /table >}}

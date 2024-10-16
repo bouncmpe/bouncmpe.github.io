@@ -22,7 +22,7 @@ aliases:
 | Course Credits | 3 |
 | ECTS | 6 |
 | Grading Mode | Letter Grade |
-| Prerequisites | CMPE 260 and Consent |
+| Prerequisites | CMPE 260 |
 | Corequisites | None |
 
 {{< /table >}}
