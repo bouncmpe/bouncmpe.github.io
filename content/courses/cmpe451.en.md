@@ -36,11 +36,12 @@ Management and implementation of a large software development as a group. Applic
 ## Course Learning Outcome
 
 - To experience the application of software development techniques and methodologies throughout various stages of the software development lifecycle including planning, requirements gathering, design, implementation, testing, deployment, and delivery.
-- To acquire team-based software development skills such as communication, planning, and time-management.
+- To acquire team-based software development skills such as communication, planning, and
+time management.
 - To gain communication skills required to interact with customers and the project team members.
 - To develop skills in planning and managing software development projects.
 - To gain the ability to use software development tools, techniques, environments, and methodologies for effective and productive software development.
-- To apply various Computer Engineering knowledge and algorithms, as learnt in earlier courses, to software development.
+- To apply various Computer Engineering knowledge and algorithms, as learned in earlier courses, to software development.
 
 ## Current Instructor
 

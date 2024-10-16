@@ -18,7 +18,7 @@ aliases:
 | Ders Kodu | CMPE470 |
 | Ders Başlığı | Bilgisayar Performansı Değerlendirmesi |
 | Öğretim Dili | İngilizce |
-| Ders Dönemi | -- |
+| Ders Dönemi | Şu anda mevcut değil |
 | Ders Saatleri | Ders: 3, PS:0, Laboratuvar:0 |
 | Ders Kredisi | 3 |
 | AKTS | 6 |
@@ -32,15 +32,6 @@ aliases:
 ## Katalog Tanımı
 
 Bilgisayar performans değerlendirmesinin doğası. İş işleme modelleri. Analitik teknikler. Simülasyon. Sistem donanım ve yazılım kaynaklarının yönetimi ve kontrolü. Çok işlemli sistemlerin performansı.
-
-## Dersin Öğrenme Çıktıları
-
-- Bilgisayar sistem performansını değerlendirmeye yönelik temel ilke ve metodolojileri anlamak.
-- Sistem verimliliğini ve iş hacmini değerlendirmek için iş işleme modellerini ve analitik teknikleri uygulamak.
-- Bilgisayar sistemlerinin performans analizi için simülasyon tekniklerinde yeterlilik geliştirmek.
-- Optimum performans için sistem donanım ve yazılım kaynaklarını yönetmek ve kontrol etmek.
-- Çeşitli operasyonel ortamlarda çoklu işlem sistemlerinin performansını analiz etme ve değerlendirme.
-- Karmaşık bilgisayar sistemlerinin performansını modellemek ve tahmin etmek için uygun araç ve teknikleri kullanmak.
 
 ## Dersi Veren Öğretim Üyesi
 

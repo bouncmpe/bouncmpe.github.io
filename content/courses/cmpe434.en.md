@@ -32,15 +32,6 @@ aliases:
 
 Designing, building and programming mobile robots; sensors, effectors, locomotion, basic control theory, control architectures, path planning, localization, mapping, learning. Teamwork; robot contest.
 
-## Course Learning Outcomes
-
-- Understand the fundamental principles of mobile robotics, including control and navigation techniques
-- Gain proficiency in designing, building, and programming mobile robots using sensors, effectors, and locomotion mechanisms
-- Apply basic control theory and control architectures in robotic systems
-- Develop skills in path planning, localization, and mapping for autonomous mobile robots
-- Explore and implement strategies for robot learning and adaptation
-- Collaborate in teams to design and compete in a robot contest
-- Utilize simulation tools to test and evaluate control and navigation strategies for mobile robots
 
 ## Current Instructor
 

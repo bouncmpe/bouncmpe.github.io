@@ -35,11 +35,11 @@ Derleme sürecine genel bakış. Sözcüksel analiz, düzenli ifadeler, sonlu ot
 
 ## Dersin Öğrenme Çıktıları
 
-- Derleme sürecini ve bir derleyicinin bileşenlerini anlamak
-- Üst düzey programlama dilleri ile bunların makine komutları olarak gerçekleştirilmesi arasındaki ilişkiyi kavrayabilme
-- Sözcük analizi ve ayrıştırma ile bunların uygulama stratejileri hakkında bilgi edinme
-- Basit zorunlu diller için derleyici tasarlama ve uygulama becerileri edinme
-- Derleyicilerin oluşturulmasında lex, yacc ve LLVM gibi araçlardan yararlanma
+- Derleme sürecini, derleyicinin bileşenlerini tanıtmak
+- Yüksek seviyeli dilde yazılan program ile bunun makine talimatları dizisi olarak gerçekleştirilmesi arasındaki ilişkinin kurulması
+- Sözcük analizi ve ayrıştırma kavramlarını ve bunların uygulama stratejilerini tanıtmak
+- Öğrencinin basit diller için derleyici tasarlamasını ve uygulamasını sağlamak
+- Öğrencinin lex, yacc ve LLVM derleyici oluşturma araçlarını kullanmasını sağlamak
 
 ## Dersi Veren Öğretim Üyesi
 

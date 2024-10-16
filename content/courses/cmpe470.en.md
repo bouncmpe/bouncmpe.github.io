@@ -17,7 +17,7 @@ aliases:
 | Course Code | CMPE470 |
 | Course Title | Computer Performance Evaluation |
 | Language of Instruction | English |
-| Course Semester | -- |
+| Course Semester | Not Avaliable at the moment |
 | Course Hours | Lecture: 3, PS:0, Labs: 0 |
 | Course Credits | 3 |
 | ECTS | 6 |
@@ -33,14 +33,6 @@ aliases:
 
 Nature of computer performance evaluation. Job processing models. Analytical techniques. Simulation. Management and control of system hardware and software resources. Performance of multiprocessing systems.
 
-## Course Learning Outcomes
-
-- Understand the fundamental principles and methodologies for evaluating computer system performance
-- Apply job processing models and analytical techniques to assess system efficiency and throughput
-- Develop proficiency in simulation techniques for performance analysis of computer systems
-- Manage and control system hardware and software resources for optimal performance
-- Analyze and evaluate the performance of multiprocessing systems in various operational environments
-- Utilize appropriate tools and techniques to model and predict the performance of complex computer systems
 
 ## Current Instructor
 

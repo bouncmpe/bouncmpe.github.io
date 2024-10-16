@@ -34,16 +34,6 @@ aliases:
 Overview of computer networks: Network architecture and the ISO model. Network topology: Connectivity analysis, delay analysis and backbone analysis. Physical layer: Transmission and multiplexing, terminal handling, errors. Data link layer and link protocols. Network layer: Routing and congestion, satellite and packet radio networks, local networks. Transmission and session layer. Presentation layer. Application layer.
 
 
-## Course Learning Outcomes
-
-- Understand the basic concepts and methodologies for evaluating the performance of computer systems
-- Develop skills in job processing models and analytical techniques for system performance analysis
-- Utilize simulation techniques to assess and predict the performance of computing systems
-- Manage and optimize system hardware and software resources for better performance
-- Analyze the performance of multiprocessor systems and their efficiency in various configurations
-- Apply performance evaluation methods to solve real-world problems in computing environments
-
-
 ## Current Instructor
 
 {{< people tag="cmpe475" cols="2">}}

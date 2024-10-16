@@ -35,12 +35,13 @@ Grup olarak büyük bir yazılım geliştirmenin yönetimi ve uygulanması. Yaz�
 
 ## Dersin Öğrenme Çıktıları
 
-- Planlama, gereksinim toplama, tasarım, uygulama, test etme, dağıtım ve teslimat dahil olmak üzere yazılım geliştirme yaşam döngüsünün çeşitli aşamalarında yazılım geliştirme tekniklerinin ve metodolojilerinin uygulanmasını deneyimlemek.
-- İletişim, planlama ve zaman yönetimi gibi ekip tabanlı yazılım geliştirme becerileri edinmek.
+- Yazılım geliştirme tekniklerinin ve metodolojilerinin, planlama, gereksinimler ve yazılım geliştirme yaşam döngüsünün çeşitli aşamalarında uygulanmasını deneyimlemek toplama, tasarım, uygulama, test etme, dağıtım ve teslimat.
+- İletişim, planlama ve koordinasyon gibi takım tabanlı yazılım geliştirme becerilerini edinmek.
+Zaman yönetimi.
 - Müşteriler ve proje ekibi üyeleri ile etkileşim için gerekli iletişim becerilerini kazanmak.
 - Yazılım geliştirme projelerini planlama ve yönetme becerilerini geliştirmek.
 - Etkin ve verimli yazılım geliştirme için yazılım geliştirme araçlarını, tekniklerini, ortamlarını ve metodolojilerini kullanma becerisi kazanmak.
-- Daha önceki derslerde öğrenilen çeşitli Bilgisayar Mühendisliği bilgilerini ve algoritmalarını yazılım geliştirmeye uygulamak.
+- Daha önceki derslerde öğrenilen çeşitli Bilgisayar Mühendisliği bilgilerini ve algoritmalarını uygulamak. kurslar, yazılım geliştirme.
 
 ## Dersi Veren Öğretim Üyesi
 

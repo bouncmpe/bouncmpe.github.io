@@ -34,11 +34,11 @@ Overview of the compilation process. Lexical analysis, regular expressions, fini
 
 ## Course Learning Outcome
 
-- Understand the process of compilation and the components of a compiler
-- Comprehend the relationship between high-level programming languages and their realization as machine instructions
-- Gain knowledge of lexical analysis and parsing, along with their implementation strategies
-- Acquire the skills to design and implement compilers for simple imperative languages
-- Utilize tools such as lex, yacc, and LLVM in the construction of compilers
+- Introduce process of compilation, components of a compiler
+- Establish the relationship between the program written in high level language and its realization as a sequence of machine instructions
+- Introduce the concepts of lexical analysis and parsing and their implementation strategies
+- Enable the student to design and implement compilers for simple languages
+- Enable the student to use compiler construction tools lex, yacc and LLVM
 
 ## Current Instructor
 

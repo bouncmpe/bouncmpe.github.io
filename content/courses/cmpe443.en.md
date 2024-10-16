@@ -34,12 +34,10 @@ Embedded systems design flow. Hardware-software co-design. Real-time software de
 
 ## Course Learning Outcomes
 
-- Understand the fundamental principles and design flow of embedded systems
-- Gain knowledge of hardware-software co-design techniques for embedded systems
-- Develop skills in real-time software design and real-time debugging techniques using relevant tools
-- Design and integrate hardware and software components through interface design for embedded systems
-- Implement and analyze embedded systems in data acquisition and control applications
-- Apply practical knowledge in the laboratory through hands-on experience in embedded system design
+- Differentiate an embedded computing system from a general-purpose computing system.
+- Design an embedded system by using software and hardware components.
+- Apply embedded software design techniques to interact with the sensors, actors, and other devices.
+- Explain and implement timed behavior.
 
 ## Current Instructor
 

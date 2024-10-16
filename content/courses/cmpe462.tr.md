@@ -35,9 +35,9 @@ Yapay öğrenme sistemlerine genel bakış. Denetimli ve denetimsiz öğrenme. �
 
 ## Dersin Öğrenme Çıktıları
 
-- Perceptron, doğrusal regresyon, lojistik regresyon, naive Bayes, karar ağaçları, destek vektör makineleri ve sinir ağları gibi algoritmalar dahil olmak üzere temel makine öğrenimi yöntemleri hakkında bilgi edinmek.
-- Hem denetimli hem de denetimsiz öğrenme tekniklerini kullanarak tahmin yöntemlerini uygulamak.
-- Gerçek dünya veri setlerini analiz etme ve makine öğrenimi modellerini uygulama konusunda pratik deneyim kazanınmı.
+- Temel makine öğrenimi yöntemleri hakkında bilgi
+- Tahmin yöntemlerinin uygulanması
+- Gerçek verilerin analizi konusunda deneyim
 
 ## Dersi Veren Öğretim Üyesi
 

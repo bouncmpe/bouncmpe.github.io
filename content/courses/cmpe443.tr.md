@@ -35,12 +35,10 @@ Gömülü sistem tasarım akışı. Donanım-yazılım ortak tasarımı. Gerçek
 
 ## Dersin Öğrenme Çıktıları
 
-- Gömülü sistemlerin temel prensiplerini ve tasarım akışını anlamak
-- Gömülü sistemler için donanım-yazılım ortak tasarım teknikleri hakkında bilgi edinme
-- İlgili araçları kullanarak gerçek zamanlı yazılım tasarımı ve gerçek zamanlı hata ayıklama teknikleri konusunda beceriler geliştirmek
-- Gömülü sistemler için arayüz tasarımı yoluyla donanım ve yazılım bileşenlerini tasarlama ve entegre etme
-- Veri toplama ve kontrol uygulamalarında gömülü sistemlerin uygulanması ve analizi
-- Gömülü sistem tasarımında uygulamalı deneyim yoluyla laboratuvarda pratik bilgileri uygulama
+- Gömülü bir bilgi işlem sistemini genel amaçlı bir bilgi işlem sisteminden ayırt edebilme.
+- Yazılım ve donanım bileşenlerini kullanarak gömülü bir sistem tasarlayabilecektir.
+- Sensörler, aktörler ve diğer cihazlarla etkileşim için gömülü yazılım tasarım tekniklerini uygulama.
+- Zamanlanmış davranışı açıklamak ve uygulamak.
 
 ## Dersi Veren Öğretim Üyesi
 

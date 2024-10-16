@@ -33,15 +33,6 @@ aliases:
 
 Mobil robotların tasarlanması, inşa edilmesi ve programlanması; sensörler, efektörler, hareket, temel kontrol teorisi, kontrol mimarileri, yol planlama, lokalizasyon, haritalama, öğrenme. Takım çalışması; robot yarışması.
 
-## Dersin Öğrenme Çıktıları
-
-- Kontrol ve navigasyon teknikleri de dahil olmak üzere mobil robotiğin temel ilkelerini anlamak
-- Sensörler, efektörler ve hareket mekanizmaları kullanarak mobil robotlar tasarlama, inşa etme ve programlama konusunda yetkinlik kazanma
-- Temel kontrol teorisini ve kontrol mimarilerini robotik sistemlere uygulayabilme
-- Otonom mobil robotlar için yol planlama, lokalizasyon ve haritalama becerilerinin geliştirilmesi
-- Robot öğrenimi ve adaptasyonu için stratejileri keşfetmek ve uygulamak
-- Bir robot yarışması tasarlamak ve yarışmak için ekipler halinde işbirliği yapmak
-- Mobil robotlar için kontrol ve navigasyon stratejilerini test etmek ve değerlendirmek için simülasyon araçlarını kullanma
 
 ## Dersi Veren Öğretim Üyesi
 

@@ -35,9 +35,9 @@ Overview of artificial learning systems. Supervised and unsupervised learning. S
 
 ## Course Learning Outcomes
 
-- Acquire knowledge of basic machine learning methods, including algorithms like perceptron, linear regression, logistic regression, naive Bayes, decision trees, support vector machines, and neural networks
-- Implement prediction methods using both supervised and unsupervised learning techniques
-- Gain practical experience in analyzing real-world data sets and applying machine learning models
+- Knowledge of basic machine learning methods
+- Implementation of prediction methods
+- Experience with analysis of real data
 
 ## Current Instructor
 

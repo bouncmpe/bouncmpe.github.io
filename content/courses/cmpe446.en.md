@@ -32,15 +32,6 @@ aliases:
 
 Performance limits of Von Neumann architecture. Reduced Instruction Set Computer (RISC) architecture. Pipelined processor design. Instruction pipeline and arithmetic pipelines. Array processors. Dynamic and static interconnection networks. Shared memory multiprocessor systems. Message passing multiprocessor systems.
 
-## Course Learning Outcomes
-
-- Understand the performance limits and challenges of the Von Neumann architecture
-- Gain knowledge of Reduced Instruction Set Computer (RISC) architecture and its design principles
-- Analyze and design pipelined processors, including instruction and arithmetic pipelines
-- Explore array processors and their applications in high-performance computing
-- Comprehend the design and operation of dynamic and static interconnection networks in multiprocessor systems
-- Understand the architecture of shared memory multiprocessor systems and message-passing multiprocessor systems
-- Apply principles of computer architecture in solving performance and design issues for modern processors
 
 
 ## Current Instructor

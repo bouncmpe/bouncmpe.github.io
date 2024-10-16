@@ -33,15 +33,6 @@ aliases:
 
 Bilginin temsili. Arama ve sezgisel programlama. Mantık ve mantık programlama. Yapay zekanın uygulama alanları: problem çözme, oyunlar ve bulmacalar, uzman sistemler, planlama, öğrenme, görme ve doğal dil anlama. Yapay zeka dilinde alıştırmalar.
 
-## Dersin Öğrenme Çıktıları
-
-- Yapay zeka sistemlerinde bilginin temsilini anlamak
-- AI problemlerini çözmek için arama algoritmalarını ve sezgisel programlama tekniklerini uygulayabilme
-- Mantık ve mantık programlama konusunda yeterlilik geliştirmek, bunları yapay zeka uygulamaları için kullanmak
-- Problem çözme, oyunlar, uzman sistemler, planlama, öğrenme, görme ve doğal dil anlama gibi çeşitli yapay zeka uygulama alanlarını keşfetmek
-- Bir yapay zeka programlama dili kullanarak yapay zeka tekniklerini uygulamak
-- Arama stratejileri ve bilgi tabanlı sistemler de dahil olmak üzere yapay zeka metodolojilerini kullanarak gerçek dünya problemlerini analiz etme ve çözme
-
 ## Dersi Veren Öğretim Üyesi
 
 {{< people tag="cmpe480" cols="2">}}
