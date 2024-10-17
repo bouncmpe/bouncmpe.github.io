@@ -37,13 +37,6 @@ There are numerous hands-on assignments to gain software engineering skills usin
 
 ## Course Learning Outcomes
 
-- To understand the fundamental activities associated with software project development lifecycles -- requirements, design, implementation, testing, and deployment.
-- To be able to design various aspects of software systems using UML.
-- To understand the significance of teamwork and its supporting tools for developing software projects.
-- To understand the basics of creating and tracking a software project plan.
-- To understand the importance of and the types of oral and written methods of communication appropriate for team and stakeholder communication.
-- To be able to use software development tools such as code versioning, testing, documentation, and deployment.
-
 ## Current Instructor
 
 {{< people tag="cmpe352" cols="1">}}

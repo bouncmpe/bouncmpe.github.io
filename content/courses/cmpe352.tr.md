@@ -37,13 +37,6 @@ Yaygın olarak kullanılan araçlar ve yöntemlerle yazılım mühendisliği bec
 
 ## Dersin Öğrenme Çıktıları
 
-- Yazılım proje geliştirme yaşam döngüleriyle ilişkili temel faaliyetleri anlamak -- gereksinimler, tasarım, uygulama, test ve dağıtım.
-- UML kullanarak yazılım sistemlerinin çeşitli yönlerini tasarlayabilmek.
-- Yazılım projeleri geliştirmek için ekip çalışmasının ve bunu destekleyen araçların önemini anlamak.
-- Yazılım proje planı oluşturma ve takip etmenin temellerini anlamak.
-- Takım ve paydaş iletişimi için uygun olan sözlü ve yazılı iletişim yöntemlerinin önemini ve türlerini anlamak.
-- Kod sürümleme, test, dokümantasyon ve dağıtım gibi yazılım geliştirme araçlarını kullanabilmek.
-
 ## Dersi Veren Öğretim Üyesi
 
 {{< people tag="cmpe352" cols="1">}}

@@ -35,13 +35,6 @@ Verilerin Mantıksal Organizasyonu: Verilerin varlık-ilişki modellemesi. Hiyer
 
 ## Dersin Öğrenme Çıktıları
 
-- Veritabanı sistemlerinin temel kavramlarını tanıtmak.
-- İlişkisel model ve ilişkisel veritabanı tasarımı hakkında bir anlayış kazandırmak.
-- Bir sorgu dili tanıtmak.
-- Veritabanı tasarımı ve normalizasyon süreci hakkında bir anlayış kazandırmak.
-- Veritabanı güvenliği ve bütünlüğü hakkında bir anlayış kazandırmak.
-- Veritabanı kurtarma ve eşzamanlılık kontrolü hakkında bir anlayış kazandırmak.
-
 ## Dersi Veren Öğretim Üyesi
 
 {{< people tag="cmpe321" cols="2">}}
