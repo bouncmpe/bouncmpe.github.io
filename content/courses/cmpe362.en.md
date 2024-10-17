@@ -35,7 +35,6 @@ Introduction to discrete and continuous time signals and systems with computer e
 
 ## Course Learning Outcome
 
-
 ## Current Instructor
 
 {{< people tag="cmpe362" cols="2">}}

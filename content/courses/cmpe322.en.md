@@ -55,7 +55,6 @@ Evolution of operating systems. Multiprogramming and time sharing concepts. User
 
 ## Course Learning Outcome
 
-
 ## Current Instructor
 
 {{< people tag="cmpe322" cols="2">}}
