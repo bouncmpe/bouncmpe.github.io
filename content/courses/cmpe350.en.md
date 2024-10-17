@@ -35,14 +35,6 @@ Strings and languages. Classification of grammars. Finite-state automata and reg
 
 ## Course Learning Outcome
 
-- Learn the basic concepts and tools of the theory of computation
-- Understand the formal languages and automata theory
-- Learn the classification of grammars
-- Learn the finite-state automata and regular expressions
-- Learn the pushdown automata and context-free grammars
-- Learn the context-sensitive grammars and linear bounded automata
-- Learn the Turing machines
-
 ## Current Instructor
 
 {{< people tag="cmpe350" cols="2">}}

@@ -35,14 +35,6 @@ aliases:
 
 ## Dersin Öğrenme Çıktıları
 
-- Bir bilgisayar sisteminin bileşenlerinin nasıl etkileşimde bulunduğunu öğrenmek ve özellikle işletim sistemlerine odaklanmak.
-- Süreç yönetimi, bellek yönetimi, depolama yönetimi gibi temel kavramları öğrenmek.
-- Eşzamanlılık ve senkronizasyon ilkelerini anlamak.
-- Deadlock (kilitlenme) durumlarını önlemeyi ve bu durumlarla başa çıkmayı öğrenmek.
-- Dosya sistemleri ve G/Ç yönetiminin ilkelerini anlamak.
-- Bilgisayar sistemlerini koruma ve güvenlik altına alma yöntemlerini öğrenmek.
-- Sanallaştırma ve bulut bilişim ilkelerini anlamak.
-
 ## Dersi Veren Öğretim Üyesi
 
 {{< people tag="cmpe322" cols="2">}}

@@ -35,17 +35,6 @@ Introduction to discrete and continuous time signals and systems with computer e
 
 ## Course Learning Outcome
 
-- Grasp basic concepts of signal processing.
-- Understand time-domain signal representations.
-- Learn impulse response of linear time-invariant systems.
-- Understand convolution, Fourier series, and Fourier transform.
-- Explore spectrum representation and digital signals.
-- Learn sampling, reconstruction, and filtering.
-- Understand Z-transform and discrete Fourier transform.
-- Study signal processing algorithms and floating point/quantization errors.
-- Apply signal processing to audio and image processing.
-
-
 ## Current Instructor
 
 {{< people tag="cmpe362" cols="2">}}

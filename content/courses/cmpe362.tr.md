@@ -35,16 +35,6 @@ Bilgisayar mühendisliği uygulamaları ile kesikli ve sürekli zamanlı sinyall
 
 ## Dersin Öğrenme Çıktıları
 
-- Sinyal işleme temel kavramlarını kavrama.
-- Zaman alanı sinyal gösterimlerini anlama.
-- Doğrusal zamanla değişmez sistemlerin dürtü yanıtını öğrenme.
-- Konvolüsyon, Fourier serisi ve Fourier dönüşümünü anlama.
-- Spektrum gösterimi ve dijital sinyalleri keşfetme.
-- Örnekleme, yeniden oluşturma ve filtrelemeyi öğrenme.
-- Z-dönüşüm ve kesikli Fourier dönüşümünü anlama.
-- Sinyal işleme algoritmaları ve kayan nokta/kuantizasyon hatalarını inceleme.
-- Sinyal işleme kavramlarını ses ve görüntü işleme alanlarına uygulama.
-
 ## Dersi Veren Öğretim Üyesi
 
 {{< people tag="cmpe362" cols="2">}}
