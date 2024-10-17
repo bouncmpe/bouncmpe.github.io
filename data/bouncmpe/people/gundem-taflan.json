@@ -2,6 +2,6 @@
   "email": "gundem@bogazici.edu.tr",
   "name": "Taflan Gündem",
   "position": "full-professor",
-  "tags": ["former-faculty"],
+  "tags": ["former-faculty", "former-cmpe321"],
   "type": "person"
 }

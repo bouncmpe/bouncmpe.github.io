@@ -7,7 +7,31 @@ aliases:
   - undergraduate/courses/cmpe321
 ---
 
+{{< warning >}}
+## Course Information
+
+<!-- prettier-ignore-start -->
+{{< table class="table-hover table-sm" >}}
+|||
+| :-- | :-- |
+| Faculty | Faculty of Engineering |
+| Course Code | CMPE321 |
+| Course Title | Introduction to Database Systems |
+| Language of Instruction | English |
+| Course Semester | Spring |
+| Course Hours | Lecture: 3, PS:0, Labs: 2 |
+| Course Credits | 4 |
+| ECTS | 6 |
+| Grading Mode | Letter Grade |
+| Prerequisites | CMPE250 |
+| Corequisites | None |
+
+{{< /table >}}
+<!-- prettier-ignore-end -->
+
 ## Catalog Description
+
+Logical organization of data: Entity-relationship modeling of data. Hierarchical, network and relational models. Data description and query languages. Normal forms and database design. Physical design and access strategies. Security, integrity and reliability. Design and implementation of a simple database management system that includes file security and a simple query language.
 
 ## Course Learning Outcome
 

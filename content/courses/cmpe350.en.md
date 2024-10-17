@@ -7,6 +7,7 @@ aliases:
   - undergraduate/courses/cmpe350
 ---
 
+{{< warning >}}
 ## Course Information
 
 <!-- prettier-ignore-start -->
@@ -33,8 +34,6 @@ aliases:
 Strings and languages. Classification of grammars. Finite-state automata and regular expressions. Pushdown automata and context-free grammars. Context sensitive grammars and linear bounded automata. Turing machines.
 
 ## Course Learning Outcome
-
-- Learn the basic concepts and tools of the theory of computation
 
 ## Current Instructor
 

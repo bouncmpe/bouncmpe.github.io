@@ -7,6 +7,7 @@ aliases:
   - undergraduate/courses/cmpe350
 ---
 
+{{< warning_tr >}}
 ## Ders Bilgileri
 
 <!-- prettier-ignore-start -->
@@ -34,7 +35,6 @@ Dizeler ve diller. Gramerlerin sınıflandırılması. Sonlu durum otomatları v
 
 ## Dersin Öğrenme Çıktıları
 
-- Hesaplama teorisinin temel kavramlarını ve araçlarını öğrenmek
 
 ## Dersi Veren Öğretim Üyesi
 
