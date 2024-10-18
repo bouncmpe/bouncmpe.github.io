@@ -28,6 +28,7 @@ aliases:
 {{< /table >}}
 <!-- prettier-ignore-end -->
 
+{{< warning >}}
 ## Catalog Description
 
 Graphs. Advanced Sorting. Hashing. Heap Structures. Search Structures. Complexity. Parallel algorithms. File organization.

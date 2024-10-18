@@ -7,6 +7,7 @@ aliases:
   - undergraduate/courses/cmpe220
 ---
 
+{{< warning_tr >}}
 ## Course Information
 
 <!-- prettier-ignore-start -->
