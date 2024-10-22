@@ -2,6 +2,7 @@
   "email": "tosuno@bogazici.edu.tr",
   "name": "Oğuz Tosun",
   "position": "full-professor",
-  "tags": ["emeritus", "former-cmpe344", "former-cmpe446", "embeddedsystems", "robotics"],
-  "type": "person"
+  "tags": ["emeritus", "former-cmpe344"],
+  "type": "person",
+  "thumbnail": "images/people/oguz_tosun.jpg"
 }

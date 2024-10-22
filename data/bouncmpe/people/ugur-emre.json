@@ -3,5 +3,6 @@
   "name": "Emre Uğur",
   "position": "assistant-professor",
   "tags": ["faculty", "cmpe150", "former-cmpe140", "former-cmpe343", "former-cmpe462", "artificialintelligence", "roboticscontrol"],
-  "type": "person"
+  "type": "person",
+  "thumbnail": "images/people/ugur_emre.jpg"
 }

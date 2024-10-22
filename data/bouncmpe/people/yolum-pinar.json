@@ -3,5 +3,6 @@
   "name": "Pınar Yolum",
   "position": "full-professor",
   "tags": ["former-faculty", "advisor", "adjunct-faculty","former-cmpe150", "computersociety"],
-  "type": "person"
+  "type": "person",
+  "thumbnail": "images/people/yolum_pinar.jpg"
 }
