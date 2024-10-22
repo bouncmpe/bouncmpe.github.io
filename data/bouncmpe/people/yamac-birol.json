@@ -2,5 +2,6 @@
   "name": "Birol Yamaç",
   "position": "building-staff",
   "tags": ["other-staff"],
-  "type": "person"
+  "type": "person",
+  "thumbnail": "../../images/people/birol_yamac.jpg"
 }

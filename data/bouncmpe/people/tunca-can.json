@@ -3,5 +3,6 @@
   "name": "Can Tunca",
   "position": "doctor",
   "tags": ["parttime-faculty"],
-  "type": "person"
+  "type": "person",
+  "thumbnail": "../../images/people/can_tunca.jpg"
 }

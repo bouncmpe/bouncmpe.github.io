@@ -3,5 +3,6 @@
   "name": "Mehmet Turan",
   "position": "assistant-professor",
   "tags": ["faculty", "former-cmpe150"],
-  "type": "person"
+  "type": "person",
+  "thumbnail": "../../images/people/mehmet_turan.jpg"
 }

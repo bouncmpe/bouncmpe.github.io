@@ -3,5 +3,6 @@
   "name": "Burak Turhan",
   "position": "full-professor",
   "tags": ["advisor"],
-  "type": "person"
+  "type": "person",
+  "thumbnail": "../../images/people/burak_turhan.jpg"
 }
