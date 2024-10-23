@@ -7,7 +7,8 @@ aliases:
   - undergraduate/courses/cmpe460
 ---
 
-{{< warning_tr >}}
+{{< under-construction-warning >}}
+
 ## Ders Bilgileri
 
 <!-- prettier-ignore-start -->

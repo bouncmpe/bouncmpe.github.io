@@ -6,7 +6,9 @@ thumbnail: https://picsum.photos/seed/cmpe475/1400
 aliases:
   - undergraduate/courses/cmpe475
 ---
-{{< warning >}}
+
+{{< under-construction-warning >}}
+
 ## Course Information
 
 <!-- prettier-ignore-start -->

@@ -8,7 +8,9 @@ aliases:
   - /undergraduate/courses/cmpe491
   - undergraduate/courses/cmpe492
 ---
-{{< warning >}}
+
+{{< under-construction-warning >}}
+
 ## Course Information
 
 <!-- prettier-ignore-start -->
