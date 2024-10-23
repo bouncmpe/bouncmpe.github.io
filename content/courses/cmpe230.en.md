@@ -7,7 +7,7 @@ aliases:
   - undergraduate/courses/cmpe230
 ---
 
-{{< warning >}}
+{{< under-construction-warning >}}
 
 ## Course Information
 
