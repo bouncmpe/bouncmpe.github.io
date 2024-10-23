@@ -7,6 +7,8 @@ aliases:
   - undergraduate/courses/cmpe220
 ---
 
+{{< warning >}}
+
 ## Course Information
 
 <!-- prettier-ignore-start -->
@@ -28,7 +30,6 @@ aliases:
 {{< /table >}}
 <!-- prettier-ignore-end -->
 
-{{< warning >}}
 ## Catalog Description
 
 Propositional logic and proofs. Set theory. Functions and relations. Algebraic structures. Groups and semi-groups. Graphs, lattices and Boolean algebra.

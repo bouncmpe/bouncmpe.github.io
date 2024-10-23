@@ -8,6 +8,7 @@ aliases:
 ---
 
 {{< warning >}}
+
 ## Course Information
 
 <!-- prettier-ignore-start -->

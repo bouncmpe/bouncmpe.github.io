@@ -7,6 +7,8 @@ aliases:
   - undergraduate/courses/cmpe230
 ---
 
+{{< warning_tr >}}
+
 ## Course Information
 
 <!-- prettier-ignore-start -->
@@ -28,7 +30,6 @@ aliases:
 {{< /table >}}
 <!-- prettier-ignore-end -->
 
-{{< warning_tr >}}
 ## Catalog Description
 
 Overview of compilers, interpreters, assemblers, linkers and loaders. Unix environment and system calls. Shell programming. Signals and exceptions. Localization and Unicode. PERL and CGI programming. Assembly language programming. Introduction to multithreading. Introductory Graphical User Interface (GUI) programming.
