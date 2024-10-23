@@ -7,8 +7,9 @@ aliases:
   - undergraduate/courses/cmpe160
 ---
 
-## Course Information
+{{< warning >}}
 
+## Course Information
 
 <!-- prettier-ignore-start -->
 {{< table class="table-hover table-sm" >}}

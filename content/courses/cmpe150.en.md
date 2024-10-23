@@ -8,6 +8,8 @@ aliases:
   - undergraduate/courses/cmpe150
 ---
 
+{{< warning >}}
+
 ## Course Information
 
 <!-- prettier-ignore-start -->

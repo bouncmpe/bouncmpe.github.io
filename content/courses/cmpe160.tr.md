@@ -7,6 +7,8 @@ aliases:
   - undergraduate/courses/cmpe160
 ---
 
+{{< warning_tr >}}
+
 ## Ders Bilgileri
 
 <!-- prettier-ignore-start -->
