@@ -118,6 +118,8 @@ technical-staff:
 building-head:
   other: bina amiri
 
+under-construction-warning:
+  other: Bu sayfa yapım aşamasındadır. Sayfadaki bilgilerde hatalar olabilir.
 
 course-description:
   other: ders tanımı
@@ -169,3 +171,4 @@ languageSwitcherLabel:
   other: Dil Seçimi
 toc:
   other: İçindekiler
+

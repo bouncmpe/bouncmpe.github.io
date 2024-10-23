@@ -7,9 +7,34 @@ aliases:
   - undergraduate/courses/cmpe446
 ---
 
+{{< under-construction-warning >}}
+
+## Course Information
+
+<!-- prettier-ignore-start -->
+{{< table class="table-hover table-sm" >}}
+|||
+| :-- | :-- |
+| Faculty | Faculty of Engineering |
+| Course Code | CMPE446 |
+| Course Title | Introduction to Computer Architecture |
+| Language of Instruction | English |
+| Course Semester | Spring |
+| Course Hours | Lecture: 3, PS:0, Labs: 0 |
+| Course Credits | 3 |
+| ECTS | 6 |
+| Grading Mode | Letter Grade |
+| Prerequisites | CMPE344 and CMPE322 |
+| Corequisites | None |
+
+{{< /table >}}
+<!-- prettier-ignore-end -->
+
 ## Catalog Description
 
-## Course Learning Outcome
+Performance limits of Von Neumann architecture. Reduced Instruction Set Computer (RISC) architecture. Pipelined processor design. Instruction pipeline and arithmetic pipelines. Array processors. Dynamic and static interconnection networks. Shared memory multiprocessor systems. Message passing multiprocessor systems.
+
+
 
 ## Current Instructor
 
