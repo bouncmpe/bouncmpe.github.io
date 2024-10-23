@@ -7,7 +7,7 @@ aliases:
   - undergraduate/courses/cmpe160
 ---
 
-{{< warning_tr >}}
+{{< under-construction-warning >}}
 
 ## Ders Bilgileri
 

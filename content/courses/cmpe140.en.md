@@ -8,7 +8,7 @@ aliases:
   - undergraduate/courses/cmpe140
 ---
 
-{{< warning >}}
+{{< under-construction-warning >}}
 
 ## Course Information
 

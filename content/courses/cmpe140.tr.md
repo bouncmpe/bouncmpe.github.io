@@ -7,7 +7,7 @@ aliases:
   - undergraduate/courses/cmpe140
 ---
 
-{{< warning_tr >}}
+{{< under-construction-warning >}}
 
 ## Ders Bilgileri
 
