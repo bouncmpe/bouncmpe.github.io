@@ -3,5 +3,6 @@
   "name": "Murat Zeren",
   "position": "CIO",
   "tags": ["former-faculty", "advisor"],
-  "type": "person"
+  "type": "person",
+  "thumbnail": "../../images/people/murat_zeren.jpg"
 }
