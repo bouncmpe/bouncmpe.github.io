@@ -3,5 +3,6 @@
   "name": "Aziz Can Yücetürk",
   "position": "R&D Manager",
   "tags": ["advisor"],
-  "type": "person"
+  "type": "person",
+  "thumbnail": "../../images/people/azizcan_yuceturk.jpg"
 }
