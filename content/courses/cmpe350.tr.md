@@ -7,7 +7,7 @@ aliases:
   - undergraduate/courses/cmpe350
 ---
 
-{{< warning_tr >}}
+{{< under-construction-warning >}}
 ## Ders Bilgileri
 
 <!-- prettier-ignore-start -->

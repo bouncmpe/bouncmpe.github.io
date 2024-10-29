@@ -7,7 +7,7 @@ aliases:
   - undergraduate/courses/cmpe352
 ---
 
-{{< warning >}}
+{{< under-construction-warning >}}
 ## Course Information
 
 <!-- prettier-ignore-start -->
