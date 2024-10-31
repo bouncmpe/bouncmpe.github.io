@@ -7,9 +7,34 @@ aliases:
   - undergraduate/courses/cmpe434
 ---
 
+{{< under-construction-warning >}}
+
+## Course Information
+
+<!-- prettier-ignore-start -->
+{{< table class="table-hover table-sm" >}}
+|||
+| :-- | :-- |
+| Faculty | Faculty of Engineering |
+| Course Code | CMPE434 |
+| Course Title | Introduction to Robotics |
+| Language of Instruction | English |
+| Course Semester | Spring |
+| Course Hours | Lecture: 3, PS:0, Labs: 0 |
+| Course Credits | 3 |
+| ECTS | 6 |
+| Grading Mode | Letter Grade |
+| Prerequisites | None |
+| Corequisites | None |
+
+{{< /table >}}
+<!-- prettier-ignore-end -->
+
 ## Catalog Description
 
-## Course Learning Outcome
+Designing, building and programming mobile robots; sensors, effectors, locomotion, basic control theory, control architectures, path planning, localization, mapping, learning. Teamwork; robot contest.
+
+
 
 ## Current Instructor
 

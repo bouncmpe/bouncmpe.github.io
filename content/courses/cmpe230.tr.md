@@ -7,6 +7,8 @@ aliases:
   - undergraduate/courses/cmpe230
 ---
 
+{{< under-construction-warning >}}
+
 ## Course Information
 
 <!-- prettier-ignore-start -->
@@ -28,7 +30,6 @@ aliases:
 {{< /table >}}
 <!-- prettier-ignore-end -->
 
-{{< warning_tr >}}
 ## Catalog Description
 
 Derleyici, yorumlayıcı, birleştirici, bağlayıcı ve yükleyiciler hakkında genel bilgi. Unix ortamı ve sistem çağrıları. Shell programlama. Sinyaller ve istisnalar. Yerelleştirme ve Unicode. PERL ve CGI programlama. Assembly programlama. Çoklu iş parçacığına giriş. Giriş seviyesi Grafiksel Kullanıcı Arayüzü (GUI) programlama.
