@@ -32,8 +32,6 @@ aliases:
 
 ## Catalog Description
 
-Overview of compilers, interpreters, assemblers, linkers and loaders. Unix environment and system calls. Shell programming. Signals and exceptions. Localization and Unicode. PERL and CGI programming. Assembly language programming. Introduction to multithreading. Introductory Graphical User Interface (GUI) programming.
-
 Derleyici, yorumlayıcı, birleştirici, bağlayıcı ve yükleyiciler hakkında genel bilgi. Unix ortamı ve sistem çağrıları. Shell programlama. Sinyaller ve istisnalar. Yerelleştirme ve Unicode. PERL ve CGI programlama. Assembly programlama. Çoklu iş parçacığına giriş. Giriş seviyesi Grafiksel Kullanıcı Arayüzü (GUI) programlama.
 
 ## Course Learning Outcome
