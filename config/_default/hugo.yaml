@@ -6,11 +6,15 @@ defaultContentLanguageInSubdir: false
 
 enableRobotsTXT: true
 enableInlineShortcodes: true
-enableGitInfo: false
+enableGitInfo: true
+enableMissingTranslationPlaceholders: true
 
 externalLinks:
   cue: true
   tab: true
 
-paginate: 16
+pagination: 
+  pagerSize: 16
 timeout: 300s
+
+cleanDestinationDir: true

@@ -1,4 +1,4 @@
-FROM ghcr.io/peaceiris/hugo:v0.122.0-full
+FROM ghcr.io/peaceiris/hugo:latest-full
 
 ENV PIP_BREAK_SYSTEM_PACKAGES=1
 
