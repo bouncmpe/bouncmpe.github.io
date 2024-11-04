@@ -8,7 +8,11 @@
     "curriculum",
     "vicechair",
     "cmpe160",
-    "advisor-1"
+    "advisor-1",
+    "biometrics",
+    "computervision",
+    "machinelearning",
+    "deeplearning"
   ],
   "type": "person"
 }
