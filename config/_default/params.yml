@@ -130,14 +130,14 @@ sections:
     reverse: false
     nested: false
   research:
-    layout: list
+    layout: card
     sort: weight
-    style: rounded-5
+    style: rounded-1 card-zoom
     header: none
     footer: none
     padding: 3
     cols: 4
-    orientation: horizontal
+    orientation: stacked
     color: body-tertiary
     reverse: false
     nested: false
