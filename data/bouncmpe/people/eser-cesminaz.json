@@ -2,5 +2,6 @@
   "email": "cesminaz.eser@bogazici.edu.tr",
   "name": "Çeşminaz Eser",
   "tags": ["administrative-staff"],
-  "type": "person"
+  "type": "person",
+  "thumbnail": "../../images/people/eser_cesminaz.jpeg"
 }

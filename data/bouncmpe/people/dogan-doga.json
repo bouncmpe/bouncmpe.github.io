@@ -3,5 +3,6 @@
   "name": "Doğa Doğan",
   "position": "doctor",
   "tags": ["former-parttime-faculty"],
-  "type": "person"
+  "type": "person",
+  "thumbnail": "../../images/people/dogan_doga.jpg"
 }

@@ -3,5 +3,6 @@
   "name": "Utkan Gezer",
   "position": "teaching-assistant",
   "tags": ["teaching-assistant"],
-  "type": "person"
+  "type": "person",
+  "thumbnail": "../../images/people/gezer_utkan.jpeg"
 }

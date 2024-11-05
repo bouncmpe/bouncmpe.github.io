@@ -3,5 +3,6 @@
   "name": "Haluk Bingöl",
   "position": "full-professor",
   "tags": ["former-faculty", "former-cmpe220","former-cmpe160"],
-  "type": "person"
+  "type": "person",
+  "thumbnail": "../../images/people/bingol_haluk.jpeg"
 }

@@ -12,5 +12,6 @@
     "computervisionpatternrecognition",
     "machinelearning"
   ],
-  "type": "person"
+  "type": "person",
+  "thumbnail": "../../images/people/gokberk_berk.jpeg"
 }

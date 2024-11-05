@@ -3,5 +3,6 @@
   "name": "Özlem Durmaz İncel",
   "position": "associate-professor",
   "tags": ["faculty", "former-postdoc", "former-cmpe250"],
-  "type": "person"
+  "type": "person",
+  "thumbnail": "../../images/people/durmaz_ozlem.png"
 }

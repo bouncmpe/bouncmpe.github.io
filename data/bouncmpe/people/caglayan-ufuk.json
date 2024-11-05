@@ -2,5 +2,6 @@
   "name": "Mehmet Ufuk Çağlayan",
   "position": "full-professor",
   "tags": ["former-faculty", "former-cmpe475", "former-cmpe476","former-cmpe322"],
-  "type": "person"
+  "type": "person",
+  "thumbnail": "../../images/people/caglayan_ufuk.jpeg"
 }

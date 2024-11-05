@@ -2,5 +2,6 @@
   "name": "Mahdi Fazeli",
   "position": "associate-professor",
   "tags": ["former-faculty", "former-cmpe344"],
-  "type": "person"
+  "type": "person",
+  "thumbnail": "../../images/people/fazeli_mahdi.jpeg"
 }

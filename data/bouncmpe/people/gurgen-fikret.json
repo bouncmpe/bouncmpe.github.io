@@ -3,5 +3,6 @@
   "name": "Fikret Gürgen",
   "position": "full-professor",
   "tags": ["faculty", "cmpe210", "former-cmpe150", "former-cmpe451"],
-  "type": "person"
+  "type": "person",
+  "thumbnail": "../../images/people/gurgen_fikret.jpg"
 }

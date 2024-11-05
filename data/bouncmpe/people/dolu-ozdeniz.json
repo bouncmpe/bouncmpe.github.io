@@ -3,5 +3,6 @@
   "name": "Özdeniz Dolu",
   "position": "teaching-assistant",
   "tags": ["teaching-assistant"],
-  "type": "person"
+  "type": "person",
+  "thumbnail": "../../images/people/dolu_ozdeniz.jpg"
 }

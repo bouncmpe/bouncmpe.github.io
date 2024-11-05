@@ -3,5 +3,6 @@
   "name": "Taflan Gündem",
   "position": "full-professor",
   "tags": ["former-faculty","former-cmpe150","former-cmpe321"],
-  "type": "person"
+  "type": "person",
+  "thumbnail": "../../images/people/gundem_taflan.jpg"
 }
