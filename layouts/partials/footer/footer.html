@@ -26,4 +26,7 @@
             {{ end }}
         </ul>
     </div>
+    {{ if .Params.hasMermaid }}
+        {{ partial "footer/optional-scripts.html" . }}
+    {{ end }}
 </footer>
