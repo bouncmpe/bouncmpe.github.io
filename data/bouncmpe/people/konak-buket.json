@@ -2,5 +2,6 @@
   "email": "buket.konak@bogazici.edu.tr",
   "name": "Buket Konak",
   "tags": ["administrative-staff"],
-  "type": "person"
+  "type": "person",
+  "thumbnail": "../../images/people/buketkonak.jpg"
 }

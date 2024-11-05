@@ -3,5 +3,6 @@
   "name": "Egemen İşgüder",
   "position": "teaching-assistant",
   "tags": ["teaching-assistant"],
-  "type": "person"
+  "type": "person",
+  "thumbnail": "../../images/people/egemenisguder.jpg"
 }

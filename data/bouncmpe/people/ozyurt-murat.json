@@ -3,5 +3,6 @@
   "name": "Murat Özyurt",
   "position": "doctor",
   "tags": ["instructor", "system-admin", "cmpe140", "former-cmpe150","former-cmpe140"],
-  "type": "person"
+  "type": "person",
+  "thumbnail": "../../images/people/muratozyurt.jpeg"
 }
