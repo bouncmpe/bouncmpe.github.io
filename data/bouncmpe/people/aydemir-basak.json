@@ -3,5 +3,6 @@
   "name": "Başak Aydemir",
   "position": "assistant-professor",
   "tags": ["former-faculty", "former-cmpe260", "advisor-3"],
-  "type": "person"
+  "type": "person",
+  "thumbnail": "../../images/people/aydemir_basak.jpg"
 }

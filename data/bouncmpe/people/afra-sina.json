@@ -3,5 +3,6 @@
   "name": "Sina Afra",
   "position": "CEO & Founder",
   "tags": ["advisor"],
-  "type": "person"
+  "type": "person",
+  "thumbnail": "../../images/people/afra_sina.jpeg"
 }
