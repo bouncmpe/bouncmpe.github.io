@@ -1,12 +1,12 @@
 ---
-title: Derin Öğrenme
+title: Computer and Society
 description: " "
 metadata: none
 thumbnail: 
-    url: https://picsum.photos/seed/deeplearning/1400
+    url: https://picsum.photos/seed/computersociety/1400
 ---
 
 {{< under-construction-warning >}}
 
 Derin Öğrenme alanında çalışan araştırmacılarımız:
-{{< people tag="deeplearning" >}}
+{{< people tag="computersociety" >}}

@@ -1,12 +1,12 @@
 ---
-title: Nesnelerin İnterneti
+title: Yazılım Mühendisliği
 description: " "
 metadata: none
 thumbnail: 
-    url: https://picsum.photos/seed/iot/1400
+    url: https://picsum.photos/seed/softwareengineering/1400
 ---
 
 {{< under-construction-warning >}}
 
 Nesnelerin İnterneti alanında çalışan araştırmacılarımız:
-{{< people tag="iot" >}}
+{{< people tag="softwareengineering" >}}
