@@ -86,7 +86,6 @@ hasMermaid: true
 
 ## Course Prerequisites Graph
 
-```mermaid "caption=prerequisites"
 {{< svg-graph >}}
 flowchart TD
 
@@ -234,7 +233,7 @@ click CC6 href "/undergraduate/electives" "Undergraduate Electives"
 click HSS1 href "/undergraduate/electives" "Undergraduate Electives"
 click HSS2 href "/undergraduate/electives" "Undergraduate Electives"
 {{< /svg-graph >}}
-```
+
 
 ## Committee
 

@@ -1,14 +1,14 @@
 <!-- layouts/shortcodes/svg-graph.html -->
 <div id="graphDiv"></div>
 <style type="text/css">
-    #mySvgId {
+    #courseSvg {
       width: 100%;
       height: 80vh; /* This sets the height relative to the viewport height */
     }
   
     /* Media query for mobile devices */
     @media (max-width: 768px) {
-      #mySvgId {
+      #courseSvg {
         height: 300px; /* Utilize full viewport height on smaller screens */
         width: 100%;
       }
@@ -16,7 +16,7 @@
   
     /* Optional: Additional styles for tablets */
     @media (min-width: 769px) and (max-width: 1024px) {
-      #mySvgId {
+      #courseSvg {
         height: 85vh;
         width: 100%;
       }
@@ -24,7 +24,7 @@
   
     /* Desktop-specific styling */
     @media (min-width: 1025px) {
-      #mySvgId {
+      #courseSvg {
         height: 600px;
         width: 100%;
       }
@@ -33,18 +33,17 @@
   
 <script src="https://bumbu.me/svg-pan-zoom/dist/svg-pan-zoom.min.js"></script>
 <script type="module">
-  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
   mermaid.initialize({ startOnLoad: false });
 
   const drawDiagram = async function () {
     const element = document.querySelector('#graphDiv');
     const graphDefinition = `{{ .Inner | safeJS }}`; // Captures content between shortcode tags
-    console.log(graphDefinition);
-    const { svg } = await mermaid.render('mySvgId', graphDefinition);
+    const { svg } = await mermaid.render('courseSvg', graphDefinition);
     element.innerHTML = svg.replace(/( )*max-width:( 0-9\.)*px;/i, '');
 
 
-    let panZoom = svgPanZoom('#mySvgId', {
+    let panZoom = svgPanZoom('#courseSvg', {
       zoomEnabled: true,
       controlIconsEnabled: true,
       center: true,
