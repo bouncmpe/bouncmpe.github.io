@@ -3,5 +3,6 @@
   "name": "Didem Gündoğdu",
   "position": "doctor",
   "tags": ["parttime-faculty", "computersociety"],
-  "type": "person"
+  "type": "person",
+  "thumbnail": "images/people/gundogdu_didem.jpg"
 }

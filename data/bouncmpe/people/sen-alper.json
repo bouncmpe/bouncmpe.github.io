@@ -3,5 +3,6 @@
   "name": "Alper Şen",
   "position": "full-professor",
   "tags": ["faculty", "cmpe240", "advisor-x", "computersystems", "paralleldistributedcloud", "theoryalgorithms"],
-  "type": "person"
+  "type": "person",
+  "thumbnail": "images/people/sen_alper.jpg"
 }

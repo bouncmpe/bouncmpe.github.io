@@ -3,5 +3,6 @@
   "name": "Onur Güngör",
   "position": "doctor",
   "tags": ["parttime-faculty", "computationlanguage"],
-  "type": "person"
+  "type": "person",
+  "thumbnail": "images/people/gungor_onur.jpg"
 }

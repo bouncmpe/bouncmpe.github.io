@@ -3,5 +3,6 @@
   "name": "Ayşe Başar",
   "position": "full-professor",
   "tags": ["former-faculty", "parttime-faculty", "former-cmpe352", "softwareengineering"],
-  "type": "person"
+  "type": "person",
+  "thumbnail": "images/people/basar_ayse.jpg"
 }
