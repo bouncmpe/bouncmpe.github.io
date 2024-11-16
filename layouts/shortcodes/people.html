@@ -12,52 +12,102 @@
 {{ end }}
 {{ $members := $ctx.Get "members" }}
 
-<div class="row row-cols-1 row-cols-xl-{{ $columns }} g-2 my-4">
-{{ range $members }}
-<div class="col">
-    {{ $thumbnail := .thumbnail | default "images/person.png" }}
-    {{ $image_settings := site.Params.people.image_settings | default "500x500 webp q90 smart" }}
-
-    {{ $image_resource := resources.Get $thumbnail }}
-
-    {{ if $image_resource }}
-    {{ $retouched := $image_resource.Fill $image_settings }}
-    {{ $thumbnail = $retouched.RelPermalink }}
-    {{ end }}
-    <div class="card mb-3 border-0 h-100" style="max-width: 540px;">
-        <div class="row g-0">
-          <div class="col-4 mb-0 d d-none d-xl-block">
-            <img src="{{ $thumbnail }}" alt="{{ .name | anchorize }}-thumbnail" class="img-fluid rounded-5 shadow">
-          </div>
-          <div class="col-8 align-middle" style="overflow-x: scroll; white-space: nowrap;">
-            <div class="card-body align-middle">
-              <h5 class="my-2">{{ .name | title }}</h5>
-              {{ with .position }}
-              <p class="mb-1">
-                {{ . | i18n | title }}
-              </p>
-              {{ end }}        
-              <p class="d-block">
-              {{ with .email }}
-                <a href="mailto:{{ . }}" class="text-muted">
-                  <img src="/icons/envelope-fill.svg" alt="" width="24" height="24">
-                </a>
-              {{ end }}
-              {{ with .homepage }}
-              <a href="{{ . }}" class="text-muted">
-                <img src="/icons/github.svg" alt="" width="24" height="24">
-              </a>
-              {{ end }}
-              {{ with .github }}
-              <a href="https://github.com/{{ . }}" class="text-muted">
-                <img src="/icons/github.svg" alt="" width="24" height="24">
-              </a>
-              {{ end }}
-              </p>
-            </div>
-          </div>
-        </div>
+<div class="cards-container">
+  {{ range $members }}
+  <div class="side-profile-card">
+    <div class="side-image">
+      {{ $thumbnail := .thumbnail | default "images/person.png" }}
+      {{ $image_settings := site.Params.people.image_settings | default "500x500 webp q90 smart" }}
+      {{ $image_resource := resources.Get $thumbnail }}
+      {{ if $image_resource }}
+      {{ $retouched := $image_resource.Fill $image_settings }}
+      {{ $thumbnail = $retouched.RelPermalink }}
+      {{ end }}
+      <img src="{{ $thumbnail }}" alt="{{ .name | anchorize }}-thumbnail">
+    </div>
+    <div class="side-content">
+      <h5 class="name">{{ .name | title }}</h5>
+      {{ with .position }}
+      <p class="position">{{ . | i18n | title }}</p>
+      {{ end }}
+      <div class="icons">
+        {{ with .email }}
+        <a href="mailto:{{ . }}"><img src="/icons/envelope-fill.svg" alt="Email"></a>
+        {{ end }}
+        {{ with .linkedin }}
+        <a href="{{ . }}" target="_blank"><img src="/icons/linkedin.svg" alt="LinkedIn"></a>
+        {{ end }}
+        {{ with .github }}
+        <a href="https://github.com/{{ . }}" target="_blank"><img src="/icons/github.svg" alt="GitHub"></a>
+        {{ end }}
       </div>
+    </div>
+  </div>
+  {{ end }}
 </div>
-{{ end }}
-</div>
+
+<style>
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.side-profile-card {
+  display: flex;
+  width: 400px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.side-profile-card:hover {
+  transform: scale(1.05);
+}
+
+.side-image {
+  width: 120px;
+  height: 120px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.side-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.side-content {
+  padding: 15px;
+  flex-grow: 1;
+}
+
+.name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.position {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.icons a img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  opacity: 0.8;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.icons a img:hover {
+  transform: scale(1.2);
+  opacity: 1;
+}
+</style>
