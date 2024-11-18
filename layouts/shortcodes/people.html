@@ -12,52 +12,114 @@
 {{ end }}
 {{ $members := $ctx.Get "members" }}
 
-<div class="row row-cols-1 row-cols-xl-{{ $columns }} g-2 my-4">
-{{ range $members }}
-<div class="col">
-    {{ $thumbnail := .thumbnail | default "images/person.png" }}
-    {{ $image_settings := site.Params.people.image_settings | default "500x500 webp q90 smart" }}
-
-    {{ $image_resource := resources.Get $thumbnail }}
-
-    {{ if $image_resource }}
-    {{ $retouched := $image_resource.Fill $image_settings }}
-    {{ $thumbnail = $retouched.RelPermalink }}
+<div class="cards-container">
+  {{ range $members }}
+  <div class="vertical-card">
+    <div class="header"></div>
+    <div class="profile-img">
+      {{ $thumbnail := .thumbnail | default "images/person.png" }}
+      {{ $image_settings := site.Params.people.image_settings | default "500x500 webp q90 smart" }}
+      {{ $image_resource := resources.Get $thumbnail }}
+      {{ if $image_resource }}
+      {{ $retouched := $image_resource.Fill $image_settings }}
+      {{ $thumbnail = $retouched.RelPermalink }}
+      {{ end }}
+      <img src="{{ $thumbnail }}" alt="{{ .name | anchorize }}-thumbnail">
+    </div>
+    <h5 class="name">{{ .name | title }}</h5>
+    {{ with .position }}
+    <p class="position">{{ . | i18n | title }}</p>
     {{ end }}
-    <div class="card mb-3 border-0 h-100" style="max-width: 540px;">
-        <div class="row g-0">
-          <div class="col-4 mb-0 d d-none d-xl-block">
-            <img src="{{ $thumbnail }}" alt="{{ .name | anchorize }}-thumbnail" class="img-fluid rounded-5 shadow">
-          </div>
-          <div class="col-8 align-middle" style="overflow-x: scroll; white-space: nowrap;">
-            <div class="card-body align-middle">
-              <h5 class="my-2">{{ .name | title }}</h5>
-              {{ with .position }}
-              <p class="mb-1">
-                {{ . | i18n | title }}
-              </p>
-              {{ end }}        
-              <p class="d-block">
-              {{ with .email }}
-                <a href="mailto:{{ . }}" class="text-muted">
-                  <img src="/icons/envelope-fill.svg" alt="" width="24" height="24">
-                </a>
-              {{ end }}
-              {{ with .homepage }}
-              <a href="{{ . }}" class="text-muted">
-                <img src="/icons/github.svg" alt="" width="24" height="24">
-              </a>
-              {{ end }}
-              {{ with .github }}
-              <a href="https://github.com/{{ . }}" class="text-muted">
-                <img src="/icons/github.svg" alt="" width="24" height="24">
-              </a>
-              {{ end }}
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+    {{ with .research_interests }}
+    <p class="interests">{{ . }}</p>
+    {{ end }}
+    <div class="icons">
+      {{ with .email }}
+      <a href="mailto:{{ . }}"><img src="/icons/envelope-fill.svg" alt="Email"></a>
+      {{ end }}
+      {{ with .linkedin }}
+      <a href="https://linkedin.com/in/{{ . }}" target="_blank"><img src="/icons/linkedin.svg" alt="LinkedIn"></a>
+      {{ end }}
+      {{ with .github }}
+      <a href="https://github.com/{{ . }}" target="_blank"><img src="/icons/github.svg" alt="GitHub"></a>
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
 </div>
-{{ end }}
-</div>
+
+<style>
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px; 
+  justify-content: center;
+}
+
+.vertical-card {
+  width: calc(50% - 25px);
+  max-width: 300px; 
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  margin-bottom: 20px; 
+  padding-bottom: 10px;
+  transition: transform 0.3s;
+}
+
+.vertical-card:hover {
+  transform: scale(1.05);
+}
+
+.vertical-card .header {
+  height: 50px;
+  background: linear-gradient(135deg, #003D7A, #0099D4);
+}
+
+.vertical-card .profile-img img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin-top: -50px;
+  object-fit: cover;
+  border: 4px solid #fff;
+}
+
+.vertical-card .name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.vertical-card .position {
+  font-size: 1rem;
+  color: #6c757d;
+  margin-bottom: 10px;
+}
+
+.vertical-card .interests {
+  font-size: 0.9rem;
+  color: #495057;
+  margin-bottom: 15px;
+}
+
+.vertical-card .icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.vertical-card .icons a img {
+  width: 24px;
+  height: 24px;
+  opacity: 0.7;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.vertical-card .icons a img:hover {
+  opacity: 1;
+  transform: scale(1.2);
+}
+</style>
