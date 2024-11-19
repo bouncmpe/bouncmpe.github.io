@@ -2,7 +2,7 @@
   "email": "alper.sen@bogazici.edu.tr",
   "name": "Alper Şen",
   "position": "full-professor",
-  "tags": ["faculty", "cmpe240", "advisor-x", "computersystems", "paralleldistributedcloud", "theoryalgorithms"],
+  "tags": ["faculty", "cmpe240", "computersystems", "paralleldistributedcloud", "theoryalgorithms"],
   "type": "person",
   "thumbnail": "images/people/sen_alper.jpg"
 }
