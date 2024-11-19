@@ -1,0 +1,141 @@
+{{ $ctx := newScratch }}
+
+{{ $tag := .Get "tag" }}
+{{ $columns := .Get "cols" | default "2" }}
+
+{{ $ctx.Set "tag" $tag }}
+{{ $ctx.Set "members" slice }}
+{{ range $key, $value := site.Data.bouncmpe.people }}
+{{if intersect $value.tags (slice $tag) }}
+{{ $ctx.Set "members" ($ctx.Get "members" | append $value) }}
+{{ end }}
+{{ end }}
+{{ $members := $ctx.Get "members" }}
+
+<div class="cards-container">
+  {{ range $members }}
+  <div class="side-profile-card">
+    <div class="side-image">
+      {{ $thumbnail := .thumbnail | default "images/person.png" }}
+      {{ $image_settings := site.Params.people.image_settings | default "500x500 webp q90 smart" }}
+      {{ $image_resource := resources.Get $thumbnail }}
+      {{ if $image_resource }}
+      {{ $retouched := $image_resource.Fill $image_settings }}
+      {{ $thumbnail = $retouched.RelPermalink }}
+      {{ end }}
+      <img src="{{ $thumbnail }}" alt="{{ .name | anchorize }}-thumbnail">
+    </div>
+    <div class="side-content">
+      <h5 class="name">{{ .name | title }}</h5>
+      {{ with .position }}
+      <p class="position">{{ . | i18n | title }}</p>
+      {{ end }}
+      {{ with .research_areas }}
+        <div class="research-areas">
+          {{ $lastIndex := sub (len .) 1 }}
+          {{ range $index, $area := . }}
+            <span>{{ $area | title }}</span>{{ if ne $index $lastIndex }}, {{ end }}
+          {{ end }}
+        </div>
+      {{ end }}
+
+
+      <div class="icons">
+        {{ with .email }}
+        <a href="mailto:{{ . }}"><img src="/icons/envelope-fill.svg" alt="Email"></a>
+        {{ end }}
+        {{ with .linkedin }}
+        <a href="https://linkedin.com/in/{{ . }}" target="_blank"><img src="/icons/linkedin.svg" alt="LinkedIn"></a>
+        {{ end }}
+        {{ with .github }}
+        <a href="https://github.com/{{ . }}" target="_blank"><img src="/icons/github.svg" alt="GitHub"></a>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+  {{ end }}
+<style>
+ .cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: flex-start;
+  padding: 20px;
+}
+
+.side-profile-card {
+  display: flex;
+  align-items: center;
+  width: 650px;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.side-profile-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.side-image {
+  width: 150px;
+  height: 150px;
+  flex-shrink: 0;
+  border-radius: 12px 0 0 12px;
+  overflow: hidden;
+  background: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.side-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.side-content {
+  padding: 20px 30px;
+  flex-grow: 1;
+}
+
+.name {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 5px;
+}
+
+.position {
+  font-size: 1.2rem;
+  color: #666666;
+  margin-bottom: 15px;
+}
+
+.research-areas {
+  font-size: 1rem;
+  color: #888888;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.icons {
+  display: flex;
+  gap: 15px;
+}
+
+.icons a img {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0.7;
+}
+
+.icons a img:hover {
+  transform: scale(1.2);
+  opacity: 1;
+}
+</style>
