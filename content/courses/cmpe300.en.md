@@ -34,7 +34,7 @@ aliases:
 - Analysis of computer science algorithms: Sorting, searching, paging and parallelism.
 - Analysis of mathematical algorithms: games and puzzles, network algorithms, and probabilistic algorithms.
 
-## Course Learning Outcome
+## Course Learning Outcomes
 
 This course is intended to introduce the student to the main paradigms of algorithm analysis, methods and
 mathematical tools used for analyzing the performance of algorithms, the theory of parallel algorithms, as well as

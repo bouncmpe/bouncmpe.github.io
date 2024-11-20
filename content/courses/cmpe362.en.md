@@ -33,7 +33,7 @@ aliases:
 
 Introduction to discrete and continuous time signals and systems with computer engineering applications. Time-domain signal representations, impulse response of linear time-invariant systems; convolution. Fourier series. Spectrum representation of signals. Fourier transform. Digital signals and sampling. Reconstruction, Filtering, Z-transform representation, discrete Fourier transform. Algorithms for signal processing. Floating point and quantization errors. Exercises with applications in audio and image processing.
 
-## Course Learning Outcome
+## Course Learning Outcomes
 
 ## Current Instructor
 

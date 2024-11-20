@@ -34,6 +34,7 @@ aliases:
 
 Transport layer services and protocols. Internet protocols TCP and UDP. ATM Adaptation Layer protocols. Client-server and peer-to-peer programming models. Network programming. Remote procedure call. Application layer issues and protocols. Network security. Domain name system. Network management. Electronic mail and news services. Overview of distributed systems and structures. Distributed file and directory systems. Distributed coordination, concurrency control, deadlock detection and election algorithms.
 
+## Course Learning Outcomes
 
 ## Current Instructor
 

@@ -35,7 +35,7 @@ aliases:
 
 Management and implementation of a large software development as a group. Application of software engineering principles in a project setting.
 
-## Course Learning Outcome
+## Course Learning Outcomes
 
 - To experience the application of software development techniques and methodologies throughout various stages of the software development lifecycle including planning, requirements gathering, design, implementation, testing, deployment, and delivery.
 - To acquire team-based software development skills such as communication, planning, and

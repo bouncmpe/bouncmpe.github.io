@@ -54,7 +54,7 @@ Students who have taken, must take or planning to take the following courses in 
 CMPE 140
 PHYS 290
 
-## Course Learning Outcome
+## Course Learning Outcomes
 
 
 ## Current Instructor

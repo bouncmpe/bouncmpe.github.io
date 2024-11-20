@@ -35,6 +35,7 @@ aliases:
 
 Overview of computer networks: Network architecture and the ISO model. Network topology: Connectivity analysis, delay analysis and backbone analysis. Physical layer: Transmission and multiplexing, terminal handling, errors. Data link layer and link protocols. Network layer: Routing and congestion, satellite and packet radio networks, local networks. Transmission and session layer. Presentation layer. Application layer.
 
+## Course Learning Outcomes
 
 ## Current Instructor
 

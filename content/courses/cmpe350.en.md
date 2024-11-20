@@ -33,7 +33,7 @@ aliases:
 
 Strings and languages. Classification of grammars. Finite-state automata and regular expressions. Pushdown automata and context-free grammars. Context sensitive grammars and linear bounded automata. Turing machines.
 
-## Course Learning Outcome
+## Course Learning Outcomes
 
 ## Current Instructor
 

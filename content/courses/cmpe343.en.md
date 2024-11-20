@@ -33,7 +33,7 @@ aliases:
 
 Introduction to probability theory. Random variables, expectation, variance and moment generating functions. Distributions: Bernoulli, binomial, uniform, Gaussian, exponential, Poisson, gamma. Introduction to statistical concepts. Sampling and sample statistics. Point and interval estimation. Hypothesis testing. Regression. Numerical and computational aspects of random variable generation, sampling, and estimation.
 
-## Course Learning Outcome
+## Course Learning Outcomes
 
 The objective of this course is to provide the
 foundations of probability theory and statistics. Upon successful completion of this

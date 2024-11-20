@@ -34,7 +34,7 @@ aliases:
 
 Designing, building and programming mobile robots; sensors, effectors, locomotion, basic control theory, control architectures, path planning, localization, mapping, learning. Teamwork; robot contest.
 
-
+## Course Learning Outcomes
 
 ## Current Instructor
 

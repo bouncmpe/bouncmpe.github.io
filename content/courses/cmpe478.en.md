@@ -34,7 +34,7 @@ aliases:
 
 Parallel machine and performance models: PRAM, speedup, work efficiency, scalability, Brent's theorem. Parallel programming with message passing and multi-threading libraries. Parallel algorithms: Prefix computation, pointer jumping, list ranking, Euler tours on trees, sorting. Parallel architectures: Multiprocessors, multicomputers and Flynn's taxonomy, SIMD, MIMD, SPMD, interconnection topologies. Load balancing and graph partitioning methods.
 
-## Course Learning Outcome
+## Course Learning Outcomes
 
 - Explain high-performance computing terminology and concepts
 - Design scalable parallel algorithms

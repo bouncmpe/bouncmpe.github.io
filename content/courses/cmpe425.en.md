@@ -34,7 +34,7 @@ aliases:
 
 Overview of the compilation process. Lexical analysis, regular expressions, finite automata and lexical analyzer generators. Symbol tables. Grammars. Top-down and bottom-up syntax analysis. Recursive-descent. SLR, canonical LR, LALR and operator precedence parsing techniques. Parser generators. Semantic analysis and attribute grammers. Abstract machines ad intermediate code. Syntax directed translation schemes. Implementation of a compiler for a simple imperative language.
 
-## Course Learning Outcome
+## Course Learning Outcomes
 
 - Introduce process of compilation, components of a compiler
 - Establish the relationship between the program written in high level language and its realization as a sequence of machine instructions

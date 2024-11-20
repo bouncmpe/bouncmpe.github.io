@@ -36,7 +36,7 @@ their implementation. Addressing techniques. ALU, hardwired and microprogrammed
 controllers. Memory unit. I/0 structures and interrupt handling. Improvements on
 von Neumann machine. Bus structures. Assembly programming.
 
-## Course Learning Outcome
+## Course Learning Outcomes
 
 - Get familiar with the history of computer design and recent developments in the field
 - Understand the execution of machine instructions via RISC-V assembly programming
