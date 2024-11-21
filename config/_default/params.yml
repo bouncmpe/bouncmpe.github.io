@@ -50,7 +50,7 @@ social:
     url: "https://twitter.com/bogazici_cmpe"
     weight: 30
   - name: "GitHub"
-    icon: "git"
+    icon: "github"
     url: "https://github.com/bouncmpe"
     weight: 20
 
