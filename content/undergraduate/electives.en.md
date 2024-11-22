@@ -10,8 +10,7 @@ type: wide
 
 ## Complementary Courses (CC)
 
-## Complementary Courses (CC)
-
+## Complementary
 
 ## Elective Courses Committee
 
