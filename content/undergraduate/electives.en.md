@@ -53,9 +53,19 @@ type: wide
 |[PHIL 331](https://phil.bogazici.edu.tr/en/undergraduate-courses)| Advanced Logic I|4|8|
 |[PHIL 522](https://phil.bogazici.edu.tr/en/graduate-courses)| Mathematical Logic|4|8|
 | <h4>Department of Physics (PHYS)</h4>|
-||
+
+|[PHYS 311](https://phys.bogazici.edu.tr/en/all-physics-courses)|Modern Physics I|3|5|
+|[PHYS 312](https://phys.bogazici.edu.tr/en/all-physics-courses)|Modern Physics II|3|5|
+|[PHYS 325](https://phys.bogazici.edu.tr/en/all-physics-courses)|Mathematical Methods of Physics I|3|5|
+|[PHYS 411](https://phys.bogazici.edu.tr/en/all-physics-courses)|Quantum Mech. I|3|6|
+|[PHYS 412](https://phys.bogazici.edu.tr/en/all-physics-courses)|Quantum Mech. II|3|6|
+|[PHYS 497](https://phys.bogazici.edu.tr/en/all-physics-courses)|Information and Entropy |3|6|
+|[PHYS](https://phys.bogazici.edu.tr/en/all-physics-courses)|Any Quantum Computation elective|||
+|[PHYS 48B](https://phys.bogazici.edu.tr/en/all-physics-courses)| SEL. TOP.: Wavelets|3|6|
+|[PHYS 494](https://phys.bogazici.edu.tr/en/all-physics-courses)| SP. TOP. : Applied Fourier Analysis|||
+
 | <h4>Department of Physics (STS)</h4>|
-||
+|STS 205|The Climate|3|6|
 | <h4>Department of Psychology (PSY)</h4>|
 ||
 | <h4>Department of Western Language and Literature (LIT)</h4>|
