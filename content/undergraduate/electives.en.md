@@ -59,6 +59,7 @@ type: wide
 ||
 {{< /table >}}
 <!-- prettier-ignore-end -->
+### Department of Fun
 
 ## Elective Courses Committee
 
