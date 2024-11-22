@@ -13,21 +13,11 @@ type: wide
 
 ## Complementary Courses (CC)
 
-
-
 <!-- prettier-ignore-start -->
 {{< table class="table-hover table-sm" >}}
 ||
-|:-- |-----------: |:-:|:---:|
-| <h4>First Semester</h4>|
-| **Code** |**Course Title** | **Prerequisites** | **Credits** | **ECTS** |
-| MATH101 | Calculus I | --- | 4 ||
-| PHYS121 | Introductory Mechanics & Thermodynamics | --- | 4 ||
-| CHEM105 | Fundamentals of Chemistry | --- | 4||
-| [CMPE150](/courses/cmpe150) | Introducution to Computing | --- | 3||
-| EC101 | Principles of Microeconomics | --- | 3||
-|||| **18** ||
-| <h4>Cognitive Science Program (COGS)</h4>|
+|:-- |:----- |:--:|:--:|
+|| <h4>Cognitive Science Program (COGS)</h4>|
 |[COGS 500](https://cogsci.bogazici.edu.tr/courses)|Introduction to Cognitive Science|3|6|
 | <h4>Department of Civil Engineering (CE)</h4>|
 |[CE 245](http://www.ce.bogazici.edu.tr/?q=course-list-undergraduate)|Mechanics|3|6|
