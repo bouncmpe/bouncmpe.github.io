@@ -1,8 +1,19 @@
 {
   "email": "emre.ugur@bogazici.edu.tr",
+  "homepage": "/u/emre.ugur",
   "name": "Emre Uğur",
   "position": "assistant-professor",
-  "tags": ["faculty", "curriculum", "cmpe150", "former-cmpe140", "former-cmpe343", "former-cmpe462", "artificialintelligence", "roboticscontrol", "advisor-4"],
+  "tags": [
+    "faculty",
+    "curriculum",
+    "cmpe150",
+    "former-cmpe140",
+    "former-cmpe343",
+    "former-cmpe462",
+    "artificialintelligence",
+    "roboticscontrol",
+    "advisor-4"
+  ],
   "type": "person",
   "thumbnail": "images/people/ugur_emre.jpg"
 }
