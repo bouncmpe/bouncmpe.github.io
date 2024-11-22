@@ -13,6 +13,8 @@ type: wide
 
 ## Complementary Courses (CC)
 
+### Department of Fun1
+
 <!-- prettier-ignore-start -->
 {{< table class="table-hover table-sm" >}}
 ||
