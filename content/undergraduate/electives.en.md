@@ -18,7 +18,7 @@ type: wide
 <!-- prettier-ignore-start -->
 {{< table class="table-hover table-sm" >}}
 ||
-|:-- |:----------- |:-:|:---:|
+|:-- |-----------: |:-:|:---:|
 | <h4>First Semester</h4>|
 | **Code** |**Course Title** | **Prerequisites** | **Credits** | **ECTS** |
 | MATH101 | Calculus I | --- | 4 ||
