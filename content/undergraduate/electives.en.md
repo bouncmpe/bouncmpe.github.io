@@ -13,37 +13,7 @@ type: wide
 
 ## Complementary Courses (CC)
 
-### Cognitive Science Program (COGS)
 
-### Department of Civil Engineering (CE)
-
-### Department of Economics (EC)
-
-### Department of Electrical Engineering (EE)
-
-### Department of Industrial Engineering (IE)
-
-### Department of Mathematics (MATH)
-
-### Department of Molecular Biology and Genetics (BIO)
-
-### Department of Philosophy (PHIL)
-
-### Department of Physics (PHYS)
-
-### Department of Physics (STS)
-
-### Department of Psychology (PSY)
-
-### Department of Western Language and Literature (LIT)
-
-### Institute of Biomedical Engineering (BM)
-
-### Linguistics Program (LING)
-
-### Sociology(SOC)
-
-### Department of Management (AD), Department of Economics (EC), Engineering (ENG)
 
 <!-- prettier-ignore-start -->
 {{< table class="table-hover table-sm" >}}
@@ -57,6 +27,38 @@ type: wide
 | [CMPE150](/courses/cmpe150) | Introducution to Computing | --- | 3||
 | EC101 | Principles of Microeconomics | --- | 3||
 |||| **18** ||
+| <h4>Cognitive Science Program (COGS)</h4>|
+|[COGS500](https://cogsci.bogazici.edu.tr/courses)|Introduction to Cognitive Science|3|6|
+| <h4>Department of Civil Engineering (CE)</h4>|
+||
+| <h4>Department of Economics (EC)</h4>|
+||
+| <h4>Department of Electrical Engineering (EE)</h4>|
+||
+| <h4>Department of Industrial Engineering (IE)</h4>|
+||
+| <h4>Department of Mathematics (MATH)</h4>|
+||
+| <h4>Department of Molecular Biology and Genetics (BIO)</h4>|
+||
+| <h4>Department of Philosophy (PHIL)</h4>|
+||
+| <h4>Department of Physics (PHYS)</h4>|
+||
+| <h4>Department of Physics (STS)</h4>|
+||
+| <h4>Department of Psychology (PSY)</h4>|
+||
+| <h4>Department of Western Language and Literature (LIT)</h4>|
+||
+| <h4>Institute of Biomedical Engineering (BM)</h4>|
+||
+| <h4>Linguistics Program (LING)</h4>|
+||
+| <h4>Sociology(SOC)</h4>|
+||
+| <h4>Department of Management (AD), Department of Economics (EC), Engineering (ENG)</h4>|
+||
 {{< /table >}}
 <!-- prettier-ignore-end -->
 
