@@ -9,7 +9,7 @@ aliases:
 
 {{< under-construction-warning >}}
 
-## Course Information
+## Ders Bilgileri
 
 <!-- prettier-ignore-start -->
 {{< table class="table-hover table-sm" >}}
@@ -30,16 +30,16 @@ aliases:
 {{< /table >}}
 <!-- prettier-ignore-end -->
 
-## Catalog Description
+## Katalog Tanımı
 
 Sayı sistemleri. Boolean cebiri, mantık ağları ve basitleştirilmesi. Kapılarla mantık tasarımı. MSI ve LSI teknolojileri. Kombinasyonel devreler ve ardışık devreler. Sayıcılar, kaydırıcılar, bilgisayar organizasyonu, aritmetik mantık, bellek ve kontrol üniteleri, mini ve mikro bilgisayar sistemleri. Dijital mantık tasarımının laboratuvar deneyleri ve uygulamaları.
 
-## Course Learning Outcome
+## Dersin Öğrenme Çıktıları
 
-## Current Instructor
+## Dersi Veren Öğretim Üyesi
 
 {{< people tag="cmpe240" cols="2">}}
 
-## Previous Instructors
+## Dersi Veren Önceki Öğretim Üyeleri
 
 {{< people_alt tag="former-cmpe240" cols="3">}}

@@ -9,7 +9,7 @@ aliases:
 
 {{< under-construction-warning >}}
 
-## Course Information
+## Ders Bilgileri
 
 <!-- prettier-ignore-start -->
 {{< table class="table-hover table-sm" >}}

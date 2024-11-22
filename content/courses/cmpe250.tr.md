@@ -9,7 +9,7 @@ aliases:
 
 {{< under-construction-warning >}}
 
-## Course Information
+## Ders Bilgileri
 
 <!-- prettier-ignore-start -->
 {{< table class="table-hover table-sm" >}}
@@ -30,16 +30,16 @@ aliases:
 {{< /table >}}
 <!-- prettier-ignore-end -->
 
-## Catalog Description
+## Katalog Tanımı
 
 Grafikler. Gelişmiş Sıralama. Hashing. Yığın Yapıları. Arama Yapıları. Karmaşıklık. Paralel algoritmalar. Dosya organizasyonu.
 
-## Course Learning Outcome
+## Dersin Öğrenme Çıktıları
 
-## Current Instructor
+## Dersi Veren Öğretim Üyesi
 
 {{< people tag="cmpe250" cols="2">}}
 
-## Previous Instructors
+## Dersi Veren Önceki Öğretim Üyeleri
 
 {{< people_alt tag="former-cmpe250" cols="3">}}
