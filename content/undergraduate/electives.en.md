@@ -9,8 +9,6 @@ type: wide
 
 {{< under-construction-warning >}}
 
-## Humanities and Social Sciences (HSS)
-
 ## Complementary Courses (CC)
 
 <!-- prettier-ignore-start -->
@@ -36,9 +34,9 @@ type: wide
 |[IE 4xx](https://ie.bogazici.edu.tr/undergraduate-courses)||||
 |[IE 5xx](https://ie.bogazici.edu.tr/graduate-courses)|Except EE 588|||
 || <h4>Department of Mathematics (MATH)</h4>|
-|[MATH 3xx](https://math.bogazici.edu.tr/en/undergraduate-courses#:~:text=Math%20323)|Except MATH 310, 336, 344|||
-|[MATH 4xx](https://math.bogazici.edu.tr/en/undergraduate-courses#:~:text=Math%20401)||||
-|[MATH 5xx](https://math.bogazici.edu.tr/en/graduate-courses)||||
+|[MATH3xx](https://math.bogazici.edu.tr/en/undergraduate-courses#:~:text=Math%20323)|Except MATH 310, 336, 344|||
+|[MATH4xx](https://math.bogazici.edu.tr/en/undergraduate-courses#:~:text=Math%20401)||||
+|[MATH5xx](https://math.bogazici.edu.tr/en/graduate-courses)||||
 || <h4>Department of Molecular Biology and Genetics (BIO)</h4>|
 |[BIO 101](https://mbg.bogazici.edu.tr/en/undergraduate-courses#:~:text=BIO%20101)|Cellular and Molecular Biology I|3|5|
 |[BIO 121](https://mbg.bogazici.edu.tr/en/undergraduate-courses#:~:text=BIO%20121) |Introduction to Cell Biology|3|5|
@@ -53,15 +51,15 @@ type: wide
 |[PHIL 331](https://phil.bogazici.edu.tr/en/undergraduate-courses)| Advanced Logic I|4|8|
 |[PHIL 522](https://phil.bogazici.edu.tr/en/past-ma-course-catalogue#~:text=PHIL%20522)| Mathematical Logic|4|8|
 || <h4>Department of Physics (PHYS)</h4>|
-|[PHYS 311](https://phys.bogazici.edu.tr/en/all-physics-courses#:~:text=PHYS%20311)|Modern Physics I|3|5|
-|[PHYS 312](https://phys.bogazici.edu.tr/en/all-physics-courses#:~:text=PHYS%20312)|Modern Physics II|3|5|
-|[PHYS 325](https://phys.bogazici.edu.tr/en/all-physics-courses#:~:text=PHYS%20325)|Mathematical Methods of Physics I|3|5|
-|[PHYS 411](https://phys.bogazici.edu.tr/en/all-physics-courses#:~:text=PHYS%20411)|Quantum Mech. I|3|6|
-|[PHYS 412](https://phys.bogazici.edu.tr/en/all-physics-courses#:~:text=PHYS%20412)|Quantum Mech. II|3|6|
-|[PHYS 497](https://phys.bogazici.edu.tr/en/all-physics-courses)|Information and Entropy |3|6|
+|[PHYS311](https://phys.bogazici.edu.tr/en/all-physics-courses#:~:text=PHYS%20311)|Modern Physics I|3|5|
+|[PHYS312](https://phys.bogazici.edu.tr/en/all-physics-courses#:~:text=PHYS%20312)|Modern Physics II|3|5|
+|[PHYS325](https://phys.bogazici.edu.tr/en/all-physics-courses#:~:text=PHYS%20325)|Mathematical Methods of Physics I|3|5|
+|[PHYS411](https://phys.bogazici.edu.tr/en/all-physics-courses#:~:text=PHYS%20411)|Quantum Mech. I|3|6|
+|[PHYS412](https://phys.bogazici.edu.tr/en/all-physics-courses#:~:text=PHYS%20412)|Quantum Mech. II|3|6|
+|[PHYS497](https://phys.bogazici.edu.tr/en/all-physics-courses)|Information and Entropy |3|6|
 |[PHYS](https://phys.bogazici.edu.tr/en/all-physics-courses)|Any Quantum Computation elective|||
-|[PHYS 48B](https://phys.bogazici.edu.tr/en/all-physics-courses)| SEL. TOP.: Wavelets|3|6|
-|[PHYS 494](https://phys.bogazici.edu.tr/en/all-physics-courses)| SP. TOP. : Applied Fourier Analysis|||
+|[PHYS48B](https://phys.bogazici.edu.tr/en/all-physics-courses)| SEL. TOP.: Wavelets|3|6|
+|[PHYS494](https://phys.bogazici.edu.tr/en/all-physics-courses)| SP. TOP. : Applied Fourier Analysis|||
 || <h4>Department of Physics (STS)</h4>|
 |STS 205|The Climate|3|6|
 || <h4>Department of Psychology (PSY)</h4>|
@@ -84,7 +82,7 @@ type: wide
 |[LING 202](https://linguistics.bogazici.edu.tr/undergraduate-courses#:~:text=LING%20202)|Morphology|||
 |[LING 203](https://linguistics.bogazici.edu.tr/undergraduate-courses#:~:text=LING%20203)|Syntax|||
 |[LING 488](https://linguistics.bogazici.edu.tr/undergraduate-courses#:~:text=LING%2048) |Special Topics in Linguistics|||
-|[LING 48N](https://linguistics.bogazici.edu.tr/undergraduate-courses#:~:text=LING%2048)|Sp. Tp. Language and Cognition|||
+|[LING48N](https://linguistics.bogazici.edu.tr/undergraduate-courses#:~:text=LING%2048)|Sp. Tp. Language and Cognition|||
 |[LING 580](https://linguistics.bogazici.edu.tr/ma-course-lists#:~:text=LING%2058) |Topics in Linguistic Theory|||
 || <h4>Sociology(SOC)</h4>|
 |[SOC 490](https://sociology.bogazici.edu.tr/undergraduate-courses) |Introduction to Digital Humanities|||
@@ -107,6 +105,8 @@ type: wide
 |ENG 493|Technology Entrepreneurship|||
 {{< /table >}}
 <!-- prettier-ignore-end -->
+
+## Humanities and Social Sciences (HSS)
 
 ## Elective Courses Committee
 
