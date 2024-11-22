@@ -58,8 +58,6 @@ type: wide
 |<h4>Department of Management (AD), Department of Economics (EC), Engineering (ENG)</h4>|
 ||
 {{< /table >}}
-
-
 <!-- prettier-ignore-end -->
 
 ## Elective Courses Committee
