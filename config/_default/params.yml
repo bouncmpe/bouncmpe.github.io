@@ -71,6 +71,18 @@ sections:
     fullCover: true
     reverse: false
     nested: false
+  g:
+    layout: card
+    header: none
+    footer: none
+    cols: 4
+    padding: 0
+  u:
+    layout: card
+    header: none
+    footer: none
+    cols: 4
+    padding: 0
   prospective:
     layout: card
     sort: weight
