@@ -27,18 +27,31 @@ type: wide
 | <h4>Department of Economics (EC)</h4>|
 |EC 48T|Financial Modelling & Its Applications Using R|3|6|
 | <h4>Department of Electrical Engineering (EE)</h4>|
-|[EE 3xx](https://ee.bogazici.edu.tr/ungraduate-courses)|Except EE 301, 310, 311, 312|||
-|[EE 4xx](https://ee.bogazici.edu.tr/undegraduate-courses)|Except EE 411, 412, 444, 486|||
-|[EE 5xx](https://ee.bogazici.edu.tr/graduate-courses)|Except EE 588|||
+|[EE 3xx](https://ee.bogazici.edu.tr/ungraduate-courses)|Except EE 301, 310, 320, 341|||
+|[EE 4xx](https://ee.bogazici.edu.tr/undegraduate-courses)||||
+|[EE 5xx](https://ee.bogazici.edu.tr/graduate-courses)|Except EE 504|||
 |EE 484|**\* Exception: EE 484 is counted in the AD group; please check AD group rules.**|||
 | <h4>Department of Industrial Engineering (IE)</h4>|
-||
+|[IE 3xx](https://ie.bogazici.edu.tr/undergraduate-courses)|Except IE 306, 310, 311, 312|||
+|[IE 4xx](https://ie.bogazici.edu.tr/undergraduate-courses)||||
+|[IE 5xx](https://ie.bogazici.edu.tr/graduate-courses)|Except EE 588|||
 | <h4>Department of Mathematics (MATH)</h4>|
-||
+|[MATH 3xx](https://math.bogazici.edu.tr/en/undergraduate-courses)|Except MATH 310, 336, 344|||
+|[MATH 4xx](https://math.bogazici.edu.tr/en/undergraduate-courses)||||
+|[MATH 5xx](https://math.bogazici.edu.tr/en/graduate-courses)||||
 | <h4>Department of Molecular Biology and Genetics (BIO)</h4>|
-||
+|[BIO 101](https://mbg.bogazici.edu.tr/en/undergraduate-courses)|Cellular and Molecular Biology I|3|5|
+|[BIO 121](https://mbg.bogazici.edu.tr/en/undergraduate-courses) Introduction to Cell Biology|3|5|
+|[BIO 152](https://mbg.bogazici.edu.tr/en/undergraduate-courses) Introduction to Modern Biology|3|5|
+|[BIO 252](https://mbg.bogazici.edu.tr/en/undergraduate-courses) |Genetics|3|6|
+|[BIO 430](https://mbg.bogazici.edu.tr/en/undergraduate-courses) |Neuroscience|3|6|
+|[BIO 48B](https://mbg.bogazici.edu.tr/en/undergraduate-courses) |Bionformatics for Biologists|3|6|
 | <h4>Department of Philosophy (PHIL)</h4>|
-||
+|[PHIL 105](https://phil.bogazici.edu.tr/en/undergraduate-courses)| Informal Logic|4|8|
+|[PHIL 131](https://phil.bogazici.edu.tr/en/undergraduate-courses)| Logic I|4|8|
+|[PHIL 132](https://phil.bogazici.edu.tr/en/undergraduate-courses)| Logic II|4|8|
+|[PHIL 331](https://phil.bogazici.edu.tr/en/undergraduate-courses)| Advanced Logic I|4|8|
+|[PHIL 522](https://phil.bogazici.edu.tr/en/graduate-courses)| Mathematical Logic|4|8|
 | <h4>Department of Physics (PHYS)</h4>|
 ||
 | <h4>Department of Physics (STS)</h4>|
