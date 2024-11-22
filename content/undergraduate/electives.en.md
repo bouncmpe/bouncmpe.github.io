@@ -6,6 +6,9 @@ weight: 3
 type: wide
 ---
 
+
+{{< under-construction-warning >}}
+
 ## Humanities and Social Sciences (HSS)
 
 ## Complementary Courses (CC)
