@@ -13,18 +13,26 @@
         </div>
         {{ end }}
     </div>
-    <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top ">
-        <p>{{ replace site.Copyright "{year}" now.Year }}</p>
-        <ul class="list-unstyled d-flex">
-            {{range site.Params.social }}
-            <li class="ms-3">
-                <a href="{{- .url -}}">
-                    <img src="/icons/{{ .icon }}.svg" alt="{{- .identifier -}}" width="24"
-                        height="24">
-                </a>
-            </li>
-            {{ end }}
-        </ul>
+    <div class="d-flex flex-column py-4 my-4 border-top">
+        <div class="row mb-3">
+            <a href="https://github.com/bouncmpe/bouncmpe.github.io/issues" class=".link-primary text-start">
+                {{ i18n "issue-page" }}
+            </a>
+        </div>
+        <div class="row">
+            <div class="col d-flex flex-column flex-sm-row justify-content-between align-items-center">
+                <p class="mb-0">{{ replace site.Copyright "{year}" now.Year }}</p>
+                <ul class="list-unstyled d-flex mb-0">
+                    {{ range site.Params.social }}
+                    <li class="ms-3">
+                        <a href="{{- .url -}}">
+                            <img src="/icons/{{ .icon }}.svg" alt="{{- .identifier -}}" width="24" height="24">
+                        </a>
+                    </li>
+                    {{ end }}
+                </ul>
+            </div>
+        </div>
     </div>
     {{ if .Params.hasMermaid }}
         {{ partial "footer/optional-scripts.html" . }}

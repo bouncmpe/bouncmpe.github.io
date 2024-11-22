@@ -172,3 +172,8 @@ languageSwitcherLabel:
 toc:
   other: İçindekiler
 
+edit-page-link:
+  other: Bu sayfadaki içeriği düzenlemek için buraya tıklayın.
+
+issue-page:
+  other: Herhangi bir fikriniz, sorununuz veya tavsiyeniz varsa, lütfen GitHub sayfamızda bir issue açın.
