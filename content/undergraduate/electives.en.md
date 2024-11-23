@@ -88,20 +88,20 @@ type: wide
 |[SOC 490](https://sociology.bogazici.edu.tr/undergraduate-courses) |Introduction to Digital Humanities|||
 || <h4>Department of Management (AD), Department of Economics (EC), Engineering (ENG)</h4>|
 ||* Students can take at most one of the following non-technical courses from AD, EC, or ENG as a complementary course.|
-|(AD 403)[https://mgmt.bogazici.edu.tr/course-descriptions] |Managerial Economics|3||
-|(AD 407)[https://mgmt.bogazici.edu.tr/course-descriptions] |Decision Processes|3||
-|(AD 432)[https://mgmt.bogazici.edu.tr/course-descriptions] |Entrepreneurship|3||
-|(AD 440)[https://mgmt.bogazici.edu.tr/course-descriptions] |Digital Marketing|3||
-|(AD 452)[https://mgmt.bogazici.edu.tr/course-descriptions] |Information Systems Management|3||
-|(AD 462)[https://mgmt.bogazici.edu.tr/course-descriptions] |Legal Aspects of Intellectual Property (IP) Management|3||
-|(AD 482)[https://mgmt.bogazici.edu.tr/course-descriptions] |Special Topics in Information Systems|3||
-|(AD 49B)[https://mgmt.bogazici.edu.tr/course-descriptions] |SP.TP.FINANCE-FINTECH|3||
-|(AD 574)[https://mgmt.bogazici.edu.tr/ma/course-descriptions] |Management Information and Control Systems|3||
-|(EC 203](https://econ.bogazici.edu.tr/node/2471/undergraduate/undergraduate-courses)|Microeconomics I|3|6|
-|(EC 205](https://econ.bogazici.edu.tr/node/2471/undergraduate/undergraduate-courses) |Macroeconomics I|3|6|
-|(EC 206](https://econ.bogazici.edu.tr/node/2471/undergraduate/undergraduate-courses) |Microeconomics II|3|6|
-|(EC 331](https://econ.bogazici.edu.tr/node/2471/undergraduate/undergraduate-courses) |Econometrics|3|6|
-|(EE 484](https://econ.bogazici.edu.tr/node/2471/undergraduate/undergraduate-courses)|Sp. Tp. Management for Engineers|||
+|[AD 403](https://mgmt.bogazici.edu.tr/course-descriptions)|Managerial Economics|3||
+|[AD 407](https://mgmt.bogazici.edu.tr/course-descriptions)|Decision Processes|3||
+|[AD 432](https://mgmt.bogazici.edu.tr/course-descriptions)|Entrepreneurship|3||
+|[AD 440](https://mgmt.bogazici.edu.tr/course-descriptions)|Digital Marketing|3||
+|[AD 452](https://mgmt.bogazici.edu.tr/course-descriptions)|Information Systems Management|3||
+|[AD 462](https://mgmt.bogazici.edu.tr/course-descriptions)|Legal Aspects of Intellectual Property ,(IP) Management|3||
+|[AD 482](https://mgmt.bogazici.edu.tr/course-descriptions)|Special Topics in Information Systems|3||
+|[AD 49B](https://mgmt.bogazici.edu.tr/course-descriptions)|SP.TP.FINANCE-FINTECH|3||
+|[AD 574](https://mgmt.bogazici.edu.tr/ma/course-descriptions)|Management Information and Control Systems|3||
+|[EC 203](https://econ.bogazici.edu.tr/node/2471/undergraduate/undergraduate-courses)|Microeconomics I|3|6|
+|[EC 205](https://econ.bogazici.edu.tr/node/2471/undergraduate/undergraduate-courses) |Macroeconomics I|3|6|
+|[EC 206](https://econ.bogazici.edu.tr/node/2471/undergraduate/undergraduate-courses) |Microeconomics II|3|6|
+|[EC 331](https://econ.bogazici.edu.tr/node/2471/undergraduate/undergraduate-courses) |Econometrics|3|6|
+|[EE 484](https://econ.bogazici.edu.tr/node/2471/undergraduate/undergraduate-courses)|Sp. Tp. Management for Engineers|||
 |ENG 493|Technology Entrepreneurship|||
 {{< /table >}}
 <!-- prettier-ignore-end -->
