@@ -70,11 +70,11 @@ type: wide
 |[PSY 328](https://bogazici.edu.tr/tr-TR/Content/Akademik/Lisans_Katalogu/FenEdebiyat_Fakultesi/Psikoloji_Bolumu#:~:text=PSY%20328)| Psychology of Language|3|6|
 |[PSY 484](https://bogazici.edu.tr/tr-TR/Content/Akademik/Lisans_Katalogu/FenEdebiyat_Fakultesi/Psikoloji_Bolumu#:~:text=PSY%20484)| Selected Topics in Cognitive Psychology|3|6|
 || <h4>Institute of Biomedical Engineering (BM)</h4>|
-|[BM 402](https://bme.bogazici.edu.tr/en/course-descriptions)|Engineering in Medicine|||
-|[BM 519](https://bme.bogazici.edu.tr/en/course-descriptions)|Biosensors|||
-|[BM 554](https://bme.bogazici.edu.tr/en/course-descriptions)|Modeling of Biological Systems|||
-|[BM 586](https://bme.bogazici.edu.tr/en/course-descriptions)|Sp. Tp. Stud. Artificial Intelligence in Healthcare|||
-|[BM 595](https://bme.bogazici.edu.tr/en/course-descriptions)|Selected Top.(Simulator Applications In Human Performance Assignment)|||
+|[BM 402](https://bme.bogazici.edu.tr/en/course-descriptions)|Engineering in Medicine|3|5|
+|[BM 519](https://bme.bogazici.edu.tr/en/course-descriptions)|Biosensors|3|8|
+|[BM 554](https://bme.bogazici.edu.tr/en/course-descriptions)|Modeling of Biological Systems|3|8|
+|[BM 586](https://bme.bogazici.edu.tr/en/course-descriptions)|Sp. Tp. Stud. Artificial Intelligence in Healthcare|3|8|
+|[BM 595](https://bme.bogazici.edu.tr/en/course-descriptions)|Selected Top.(Simulator Applications In Human Performance Assignment)|3|8|
 || <h4>Linguistics Program (LING)</h4>|
 |[LING 101](https://linguistics.bogazici.edu.tr/undergraduate-courses#:~:text=LING%20101)|Introduction to Language & Linguistics I|||
 |[LING 102](https://linguistics.bogazici.edu.tr/undergraduate-courses#:~:text=LING%20102)|Introduction to Language & Linguistics II|||
@@ -88,20 +88,20 @@ type: wide
 |[SOC 490](https://sociology.bogazici.edu.tr/undergraduate-courses) |Introduction to Digital Humanities|||
 || <h4>Department of Management (AD), Department of Economics (EC), Engineering (ENG)</h4>|
 ||* Students can take at most one of the following non-technical courses from AD, EC, or ENG as a complementary course.|
-|AD 403 |Managerial Economics|||
-|AD 407 |Decision Processes|||
-|AD 432 |Entrepreneurship|||
-|AD 440 |Digital Marketing|||
-|AD 452 |Information Systems Management|||
-|AD 462 |Legal Aspects of Intellectual Property (IP) Management|||
-|AD 482 |Special Topics in Information Systems|||
-|AD 49B |SP.TP.FINANCE-FINTECH|||
-|AD 574 |Management Information and Control Systems|||
-|EC 203 |Microeconomics I|||
-|EC 205 |Macroeconomics I|||
-|EC 206 |Microeconomics II|||
-|EC 331 |Econometrics|||
-|EE 484|Sp. Tp. Management for Engineers|||
+|(AD 403)[https://mgmt.bogazici.edu.tr/course-descriptions] |Managerial Economics|3||
+|(AD 407)[https://mgmt.bogazici.edu.tr/course-descriptions] |Decision Processes|3||
+|(AD 432)[https://mgmt.bogazici.edu.tr/course-descriptions] |Entrepreneurship|3||
+|(AD 440)[https://mgmt.bogazici.edu.tr/course-descriptions] |Digital Marketing|3||
+|(AD 452)[https://mgmt.bogazici.edu.tr/course-descriptions] |Information Systems Management|3||
+|(AD 462)[https://mgmt.bogazici.edu.tr/course-descriptions] |Legal Aspects of Intellectual Property (IP) Management|3||
+|(AD 482)[https://mgmt.bogazici.edu.tr/course-descriptions] |Special Topics in Information Systems|3||
+|(AD 49B)[https://mgmt.bogazici.edu.tr/course-descriptions] |SP.TP.FINANCE-FINTECH|3||
+|(AD 574)[https://mgmt.bogazici.edu.tr/ma/course-descriptions] |Management Information and Control Systems|3||
+|(EC 203](https://econ.bogazici.edu.tr/node/2471/undergraduate/undergraduate-courses)|Microeconomics I|3|6|
+|(EC 205](https://econ.bogazici.edu.tr/node/2471/undergraduate/undergraduate-courses) |Macroeconomics I|3|6|
+|(EC 206](https://econ.bogazici.edu.tr/node/2471/undergraduate/undergraduate-courses) |Microeconomics II|3|6|
+|(EC 331](https://econ.bogazici.edu.tr/node/2471/undergraduate/undergraduate-courses) |Econometrics|3|6|
+|(EE 484](https://econ.bogazici.edu.tr/node/2471/undergraduate/undergraduate-courses)|Sp. Tp. Management for Engineers|||
 |ENG 493|Technology Entrepreneurship|||
 {{< /table >}}
 <!-- prettier-ignore-end -->
