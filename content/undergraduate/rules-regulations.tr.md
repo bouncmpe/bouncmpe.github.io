@@ -63,42 +63,43 @@ Yönetim Kurulu onayı: Öğrencinin kaydıyla ilgili bir konuda Mühendislik Fa
         </ol>
 </li>
         <ol type="a">
-                <ol type="i">
-                </ol>
         </ol>
 
+## Fazla Ders Alma
 
-Fazla Ders Alma:
-Öğrenci, normal olarak, bulunduğu dönemdeki ders sayısı kadar veya ortalama dönem kredisi kadar ders almalıdır. Bu ders sayısının veya dönem kredisinin aşılması, fazla ders kapsamına girer.
-GNO>=3.00 olan öğrencilerin bir fazla ders alması ve GNO>=2.00 olan son sınıf öğrencilerinin mezun olabilmek için son iki dönemde birer fazla ders alması danışmanın onayına bağlıdır. ÇAP öğrencileri ve GNO>=3.00 olan yan dal öğrencileri danışmanın ve Bölüm Kurulu’nun onayı ile iki fazla ders alabilirler.
-2.50<=GNO<3.00 olan öğrencilerin bir fazla ders alması Bölüm Kurulu'nun onayına bağlıdır.
-2.00<=GNO<2.50 olan öğrencilerin bir fazla ders alması veya GNO>=2.00 olan son sınıf öğrencilerinin mezun olabilmek için iki fazla ders alması Yönetim Kurulu'nun onayına bağlıdır.
-Hangi dönem veya statüde olunursa olunsun, fazla ders sayısı en fazla 2 ders veya ortalama dönem kredisinin 8 fazlası olabilir; kesinlikle bunu aşamaz.
-Üniversite dışından yatay geçiş yapan öğrenciler ilk dönemlerinde fazla ders alamazlar.
-Öğrenci ilk döneminde fazla ders alamaz.
-İkinci dönem öğrencilerinden bütün derslerini tamamlamış ve GNO>=3.00 olan öğrencilerin bir fazla ders alması danışman onayına ve Yönetim Kurulu'nun onayına bağlıdır.
+<ol type="a">
+    <li>Öğrenci, normal olarak, bulunduğu dönemdeki ders sayısı kadar veya ortalama dönem kredisi kadar ders almalıdır. Bu ders sayısının veya dönem kredisinin aşılması, fazla ders kapsamına girer.</li>
+    <li>GNO>=3.00 olan öğrencilerin bir fazla ders alması ve GNO>=2.00 olan son sınıf öğrencilerinin mezun olabilmek için son iki dönemde birer fazla ders alması danışmanın onayına bağlıdır. ÇAP öğrencileri ve GNO>=3.00 olan yan dal öğrencileri danışmanın ve Bölüm Kurulu’nun onayı ile iki fazla ders alabilirler.</li>
+    <li>2.50<=GNO<3.00 olan öğrencilerin bir fazla ders alması Bölüm Kurulu'nun onayına bağlıdır.</li>
+    <li>2.00<=GNO<2.50 olan öğrencilerin bir fazla ders alması veya GNO>=2.00 olan son sınıf öğrencilerinin mezun olabilmek için iki fazla ders alması Yönetim Kurulu'nun onayına bağlıdır.</li>
+    <li>Hangi dönem veya statüde olunursa olunsun, fazla ders sayısı en fazla 2 ders veya ortalama dönem kredisinin 8 fazlası olabilir; kesinlikle bunu aşamaz.</li>
+    <li>Üniversite dışından yatay geçiş yapan öğrenciler ilk dönemlerinde fazla ders alamazlar.</li>
+    <li>Öğrenci ilk döneminde fazla ders alamaz.</li>
+    <li>İkinci dönem öğrencilerinden bütün derslerini tamamlamış ve GNO>=3.00 olan öğrencilerin bir fazla ders alması danışman onayına ve Yönetim Kurulu'nun onayına bağlıdır.
+</ol>
+
+## Az Ders Alma
+
+    ​Öğrenci, normal olarak, bulunduğu dönemdeki ders sayısı kadar veya ortalama dönem kredisi kadar ders almalıdır. Bu ders sayısından veya dönem kredisinden daha az ders alınması, az ders kapsamına girer.
+    Öğrencinin ders yükünü 15 krediye kadar düşürebilmesi danışmanın onayına bağlıdır. Bu durumda, danışmanla konuşarak az ders alınmak istenmesinin sebebi açıklanmalı ve onay alınmalıdır. Öğrenci çok özel durumlarda danışman onayıyla ders yükünü 13 krediye kadar düşürebilir.
+    Öğrencinin ders yükünü 11 krediye kadar düşürebilmesi Yönetim Kurulu'nun onayına bağlıdır (4.d ve 4.e'deki istisnalar dışında). Buna izin verilebilmesi için, önemli bir kişisel hastalık durumunun olması gerekir. Öğrenci çok özel durumlarda Yönetim Kurulu onayıyla ders yükünü 9 krediye kadar düşürebilir.
+    Son sınıf statüsünde bulunan öğrenciler için en az kredi yükü (15 kredi) kuralı uygulanmaz. Öğrenci ders yükünü danışman onayı ile 11 krediye kadar, Yönetim Kurulu onayı ile 11 kredinin altına düşürebilir.
+    Başarısız durumda olan öğrenciler kısıtlı ders alabileceklerinden dolayı, bu durumda olan öğrenciler ders yükünü danışmanın onayıyla 11 krediye kadar düşürebilirler; Yönetim Kurulu'nun onayı gerekmez.
+    Dersten çekilme döneminde, öğrenci danışmanın onayıyla, bir dersten çekilerek ders yükünü 12 krediye (3 kredilik 4 ders şeklinde; TK / HTR dersleri hariç) veya 13 krediye düşürebilir. Son sınıf öğrencileri ve başarısız durumda olan öğrenciler bu kurala tabii değildir; bu öğrencilere 4.d ve 4.e maddeleri uygulanır.
+    Son sınıf statüsünde bulunan öğrenciler hariç, kesinlikle 11 krediden az ders alınamaz.
 
 
-Az Ders Alma:
-​Öğrenci, normal olarak, bulunduğu dönemdeki ders sayısı kadar veya ortalama dönem kredisi kadar ders almalıdır. Bu ders sayısından veya dönem kredisinden daha az ders alınması, az ders kapsamına girer.
-Öğrencinin ders yükünü 15 krediye kadar düşürebilmesi danışmanın onayına bağlıdır. Bu durumda, danışmanla konuşarak az ders alınmak istenmesinin sebebi açıklanmalı ve onay alınmalıdır. Öğrenci çok özel durumlarda danışman onayıyla ders yükünü 13 krediye kadar düşürebilir.
-Öğrencinin ders yükünü 11 krediye kadar düşürebilmesi Yönetim Kurulu'nun onayına bağlıdır (4.d ve 4.e'deki istisnalar dışında). Buna izin verilebilmesi için, önemli bir kişisel hastalık durumunun olması gerekir. Öğrenci çok özel durumlarda Yönetim Kurulu onayıyla ders yükünü 9 krediye kadar düşürebilir.
-Son sınıf statüsünde bulunan öğrenciler için en az kredi yükü (15 kredi) kuralı uygulanmaz. Öğrenci ders yükünü danışman onayı ile 11 krediye kadar, Yönetim Kurulu onayı ile 11 kredinin altına düşürebilir.
-Başarısız durumda olan öğrenciler kısıtlı ders alabileceklerinden dolayı, bu durumda olan öğrenciler ders yükünü danışmanın onayıyla 11 krediye kadar düşürebilirler; Yönetim Kurulu'nun onayı gerekmez.
-Dersten çekilme döneminde, öğrenci danışmanın onayıyla, bir dersten çekilerek ders yükünü 12 krediye (3 kredilik 4 ders şeklinde; TK / HTR dersleri hariç) veya 13 krediye düşürebilir. Son sınıf öğrencileri ve başarısız durumda olan öğrenciler bu kurala tabii değildir; bu öğrencilere 4.d ve 4.e maddeleri uygulanır.
-Son sınıf statüsünde bulunan öğrenciler hariç, kesinlikle 11 krediden az ders alınamaz.
-
-
-Başarısız Öğrenciler:
-​Başarısız (repeating) statüsünde olan öğrenciler, ortalama dönem kredisinden fazla kredi alamazlar. F tekrarının yanı sıra, ortalama dönem kredisini aşmayacak şekilde DD ve DC derslerini tekrarlayabilirler ve/veya en çok iki yeni ders alabilirler. Yaz döneminde ise, F, DD ve DC tekrarının yanı sıra, toplam 10 krediyi veya 3 dersi aşmayacak şekilde en çok iki yeni ders alabilirler.
+## Başarısız Öğrenciler:
+​
+Başarısız (repeating) statüsünde olan öğrenciler, ortalama dönem kredisinden fazla kredi alamazlar. F tekrarının yanı sıra, ortalama dönem kredisini aşmayacak şekilde DD ve DC derslerini tekrarlayabilirler ve/veya en çok iki yeni ders alabilirler. Yaz döneminde ise, F, DD ve DC tekrarının yanı sıra, toplam 10 krediyi veya 3 dersi aşmayacak şekilde en çok iki yeni ders alabilirler.
 Toplam mezuniyet kredisinin 3/4'ünü tamamlamış veya yasal azami süresinin son iki döneminde olan başarısız statüdeki öğrenciler, 5.a'da belirtilen sınırlamaya tabi değildir. Bu öğrenciler, ortalama dönem kredisini (yaz dönemi ise, 10 krediyi) aşabilirler veya ikiden fazla yeni ders alabilirler.
 Başarısız statüde iken başka bir üniversiteden özel öğrenci statüsü ile alınmış olan dersler, kredili olarak sayılamaz.
 
-Sınamalı Öğrenciler:
+## Sınamalı Öğrenciler:
 ​Sınamalı statüde olan öğrenciler fazla ders alamazlar.
 Toplam mezuniyet kredisinin 3/4'ünü tamamlamış veya yasal azami süresinin son iki döneminde olan sınamalı statüdeki öğrenciler, 6.a'da belirtilen sınırlamaya tabi değildir. Bu öğrenciler fazla ders alabilirler.
 
-CC Dersleri:
+## CC Dersleri:
 ​CC dersleri (Complementary Elective - Tamamlayıcı Seçmeli), Bilgisayar Mühendisliği konularına doğrudan dâhil olmayan, fakat Bilgisayar Mühendisliği disiplininin çeşitli konularıyla ilgili olan tamamlayıcı teknik derslerdir.
 Alınabilecek CC dersleri, bölüm içi CC dersleri ve bölüm dışı CC derslerinden oluşur. Bölüm içi CC dersleri, ders programındaki CmpE4xx kodlu derslerdir (CmpE443, CmpE451, CmpE491, CmpE492 hariç). Bölüm dışı CC dersleri listesine ise CmpE CC Dersleri sayfasından (veya bölümün ana sayfasından "Undergraduate" ve "Complementary Courses" bağlantılarını izleyerek) ulaşılabilinir.
 Öğrenci CC dersi olarak 7.b'de belirtilen derslerden birini almalıdır. Bölüm dışı bir CC dersi almak istediğinde, bölüm dışı CC dersleri listesinde olmayan fakat CC dersi niteliğini taşıdığını düşündüğü bir dersi almak isterse, danışmanıyla görüşmelidir. Danışman da dersin CC dersi olabileceği kanısına varırsa, e-posta yoluyla HSS/CC Komisyonu’na soracaktır. Bu komisyondan olumlu görüş çıkması durumunda, sonuç öğrenciye bildirilerek dersi kaydına eklemesi sağlanacak ve ders CC dersleri listesine eklenecektir.
@@ -107,11 +108,11 @@ Dördüncü sınıfta alınması gereken altı tane CC dersinden en az üç tane
 5xx kodlu dersleri sadece son sınıf olan ve GNO>=2.50 olan öğrenciler alabilir.
 
 
-HSS Dersleri:
+## HSS Dersleri:
 ​HSS dersleri (Humanities and Social Sciences - Sosyal Seçmeli), öğrencilerin Bilgisayar Mühendisliği’nin teknik konularının yanı sıra sosyal konularla da temas kurmalarına yönelik olan sosyal içerikli derslerdir.
 Alınabilecek HSS derslerini bu listeden seçebilirsiniz.
 
-Başka Bölümlerden Ders Alma:
+## Başka Bölümlerden Ders Alma:
 ​Uygulamalı Bilimler Yüksekokulu'nca verilen dersler kredili olarak alınamaz.
 
 Mezuniyet:
