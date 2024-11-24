@@ -26,7 +26,7 @@ Kısaltmalar ve Tanımlar:
     <li>Yönetim Kurulu onayı: Öğrencinin kaydıyla ilgili bir konuda Mühendislik Fakültesi Yönetim Kurulu'nun (Yönetim Kurulu'nda görev yapan öğretim elemanlarının) onayının alınması. Bu tür bir durumda, öğrenci isteğinin gerekçesini açıklayarak OBİKAS sistemi üzerinden dilekçe (e-petition) doldurmalıdır. Dilekçe danışman ve bölüm başkanı tarafından değerlendirildikten sonra, Mühendislik Fakültesi’ne gidecektir. İzleyen ilk Yönetim Kurulu toplantısında dilekçe karara bağlanır.</li>
 </ul>
 
-## Kaydın Tamamlanması
+## 1. Kaydın Tamamlanması
 
 <ol type="a">
     <li>Yeni bir döneme kayıt zamanında, ders ekleme/bırakma (add/drop) süresinde veya dersten çekilme (withdrawal) süresinde, ders programı bilgisayar üzerinde hazırlandıktan sonra, mutlaka danışman onayına gönderilmelidir ve danışmandan onay gelmeden kaydın tamamlanmadığı unutulmamalıdır. (Örneğin, öğrenci kaydını onaya gönderdikten sonra kaydın tamamlandığını düşünürse ve bilgisayar üzerinden takip etmezse, danışmanın kaydı reddetmesi ve öğrenciye düzeltmesi için geri göndermesi durumunda, kayıt yarım kalacaktır.) Danışman, ders programında bir takım eksiklikler veya hatalar görebilir ve düzeltilmesi amacıyla programı reddederek öğrenciye geri gönderebilir. Öğrencinin programı düzeltip tekrar danışman onayına göndermesi, danışmanın tekrar inceleyerek onaylaması veya reddetmesi, vs. zaman alabilir. Bu nedenle, kayıtların son gününe kalmadan ders programının tamamlanarak danışman onayına gönderilmesi tavsiye edilir. Aksi halde, kayıt tarihi geçtikten sonra program hala onaylanmamışsa, öğrenci geç kayda kalacaktır ve fazladan kayıt parası yatırması gerekecektir.</li>
@@ -37,7 +37,7 @@ Kısaltmalar ve Tanımlar:
         </ol>
 </ol>
 
-## Genel Kurallar
+## 2. Genel Kurallar
 
 <ol type="a">
     <li>Öğrenci ders programını hazırlarken, ders saatleri arasında çakışma olmamasına dikkat etmelidir. Gerekli hallerde, öğrenimini etkilemeyecek şekilde az sayıda çakışmaya izin verilebilir. Bu durumda, öğrenci ders programını danışmanın onayına gönderirken gerekli açıklamayı da yapmalıdır. İçinde çakışmaların olduğu bir program herhangi bir açıklama olmadan onaya gönderilmemelidir; bu tür bir program reddedilecektir.</li>
@@ -52,7 +52,7 @@ Kısaltmalar ve Tanımlar:
     <li>Seçmeli bir dersten (HSS veya CC) F alındığında, ayni ders tekrarlanabilir veya bu dersin yerine aynı seçmeli grubuna giren başka bir ders R (tekrar) işareti ile alınabilir.</li>
     <li>Öğrenci DD ve DC aldığı derslerin öğrenim süresi boyunca en çok altı tanesini bir defaya mahsus olmak üzere tekrarlayabilir. Bir dönemde en çok bir tane DD ve DC dersi tekrarlanabilir. Bu tür bir ders, dersin alınışından sonraki dört dönem içinde tekrarlanmalıdır.</li>
     <li>F, DD veya DC dolayısıyla tekrarlanan bir derste, alınan son not geçerlidir. Önceki not geçerliliğini yitirir, fakat transkriptte gözükür.</li><li>
-    Öğrenci E notu aldığı bir dersin E sınavına girer. Dersin harf notu, sınavda başarılı olursa DD, başarısız olursa F olur. E sınavında başarılı olan öğrencilere DD’den yüksek not verilemez.</li>
+    <li>Öğrenci E notu aldığı bir dersin E sınavına girer. Dersin harf notu, sınavda başarılı olursa DD, başarısız olursa F olur. E sınavında başarılı olan öğrencilere DD’den yüksek not verilemez.</li>
     <li>Lisans öğrencileri 6xx kodlu dersleri kesinlikle alamazlar.</li>
     <li>5xx kodlu dersleri sadece son sınıf olan ve GNO>=2.50 olan öğrenciler alabilir.</li>
     <li>Bölüm programındaki zorunlu dersler, öğrenci değişim programı (Exchange) kapsamı haricinde,  ilk alınışlarında Boğaziçi Üniversitesi dışından alınamaz.</li>
@@ -66,10 +66,7 @@ Kısaltmalar ve Tanımlar:
     <li>Başka bir Yükseköğretim kurumunda aldıkları derslerle ilgili ders saydırma/değişiklik işlemlerinin tamamlanmasına ilişkin azami süre, öğrencinin programa yerleştirildiği yarıyılı izleyen yarıyılın kayıt dönemi sonuna kadardır.</li>
 </ol>
 
-    <ol type="a">
-    </ol>
-
-## Fazla Ders Alma
+## 3. Fazla Ders Alma
 
 <ol type="a">
     <li>Öğrenci, normal olarak, bulunduğu dönemdeki ders sayısı kadar veya ortalama dönem kredisi kadar ders almalıdır. Bu ders sayısının veya dönem kredisinin aşılması, fazla ders kapsamına girer.</li>
@@ -82,10 +79,10 @@ Kısaltmalar ve Tanımlar:
     <li>İkinci dönem öğrencilerinden bütün derslerini tamamlamış ve GNO>=3.00 olan öğrencilerin bir fazla ders alması danışman onayına ve Yönetim Kurulu'nun onayına bağlıdır.
 </ol>
 
-## Az Ders Alma
+## 4. Az Ders Alma
 
 <ol type="a">
-    <li></li>​Öğrenci, normal olarak, bulunduğu dönemdeki ders sayısı kadar veya ortalama dönem kredisi kadar ders almalıdır. Bu ders sayısından veya dönem kredisinden daha az ders alınması, az ders kapsamına girer.</li>
+    <li>​Öğrenci, normal olarak, bulunduğu dönemdeki ders sayısı kadar veya ortalama dönem kredisi kadar ders almalıdır. Bu ders sayısından veya dönem kredisinden daha az ders alınması, az ders kapsamına girer.</li>
     <li>Öğrencinin ders yükünü 15 krediye kadar düşürebilmesi danışmanın onayına bağlıdır. Bu durumda, danışmanla konuşarak az ders alınmak istenmesinin sebebi açıklanmalı ve onay alınmalıdır. Öğrenci çok özel durumlarda danışman onayıyla ders yükünü 13 krediye kadar düşürebilir.</li>
     <li>Öğrencinin ders yükünü 11 krediye kadar düşürebilmesi Yönetim Kurulu'nun onayına bağlıdır (4.d ve 4.e'deki istisnalar dışında). Buna izin verilebilmesi için, önemli bir kişisel hastalık durumunun olması gerekir. Öğrenci çok özel durumlarda Yönetim Kurulu onayıyla ders yükünü 9 krediye kadar düşürebilir.</li>
     <li>Son sınıf statüsünde bulunan öğrenciler için en az kredi yükü (15 kredi) kuralı uygulanmaz. Öğrenci ders yükünü danışman onayı ile 11 krediye kadar, Yönetim Kurulu onayı ile 11 kredinin altına düşürebilir.</li>
@@ -94,7 +91,7 @@ Kısaltmalar ve Tanımlar:
     <li>Son sınıf statüsünde bulunan öğrenciler hariç, kesinlikle 11 krediden az ders alınamaz.
 </ol>
 
-## Başarısız Öğrenciler:
+## 5. Başarısız Öğrenciler
 
 <ol type="a">
     <li>Başarısız (repeating) statüsünde olan öğrenciler, ortalama dönem kredisinden fazla kredi alamazlar. F tekrarının yanı sıra, ortalama dönem kredisini aşmayacak şekilde DD ve DC derslerini tekrarlayabilirler ve/veya en çok iki yeni ders alabilirler. Yaz döneminde ise, F, DD ve DC tekrarının yanı sıra, toplam 10 krediyi veya 3 dersi aşmayacak şekilde en çok iki yeni ders alabilirler.</li>
@@ -102,14 +99,14 @@ Kısaltmalar ve Tanımlar:
     <li>Başarısız statüde iken başka bir üniversiteden özel öğrenci statüsü ile alınmış olan dersler, kredili olarak sayılamaz.</li>
 </ol>
 
-##  Sınamalı Öğrenciler:
+## 6. Sınamalı Öğrenciler
 
 <ol type="a">
     <li>​Sınamalı statüde olan öğrenciler fazla ders alamazlar.</li>
     <li>Toplam mezuniyet kredisinin 3/4'ünü tamamlamış veya yasal azami süresinin son iki döneminde olan sınamalı statüdeki öğrenciler, 6.a'da belirtilen sınırlamaya tabi değildir. Bu öğrenciler fazla ders alabilirler.</li>
 </ol>
 
-## CC Dersleri:
+## 7. CC Dersleri
 
 <ol type="a">
     <li> ​CC dersleri (Complementary Elective - Tamamlayıcı Seçmeli), Bilgisayar Mühendisliği konularına doğrudan dâhil olmayan, fakat Bilgisayar Mühendisliği disiplininin çeşitli konularıyla ilgili olan tamamlayıcı teknik derslerdir.</li>
@@ -120,20 +117,20 @@ Kısaltmalar ve Tanımlar:
     <li>5xx kodlu dersleri sadece son sınıf olan ve GNO>=2.50 olan öğrenciler alabilir.</li>  
 </ol>
 
-## HSS Dersleri
+## 8. HSS Dersleri
 
 <ol type="a">
     <li>​HSS dersleri (Humanities and Social Sciences - Sosyal Seçmeli), öğrencilerin Bilgisayar Mühendisliği’nin teknik konularının yanı sıra sosyal konularla da temas kurmalarına yönelik olan sosyal içerikli derslerdir.</li>
     <li>Alınabilecek HSS derslerini bu listeden seçebilirsiniz.</li>
 </ol>
 
-##  Başka Bölümlerden Ders Alma
+## 9. Başka Bölümlerden Ders Alma
 
 <ol type="a">
     <li>​Uygulamalı Bilimler Yüksekokulu'nca verilen dersler kredili olarak alınamaz.
 </ol>
 
-## Mezuniyet
+## 10. Mezuniyet
 
 <ol type="a">
     <li>Bölümden mezun olabilmek için en az 145 kredinin doldurulması gerekir.</li>
@@ -142,13 +139,13 @@ Kısaltmalar ve Tanımlar:
     <li>GNO>2.00 olan ve mezuniyet koşullarını yalnızca bir dersten F almış oldukları için yerine getiremeyen öğrencilere, ilgili öğretim elemanının görüşü alınarak bir sınava girme veya bunun yerini tutacak bir akademik çalışma yapma imkanı tanınabilir. Bu sınavdan en çok DD notu verilir. Başarısızlık halinde ders tekrarlanır.
 </ol>
 
-## Değişim Programı
+## 11. Değişim Programı
 <ol type="a">
     <li>“Exchange ve Erasmus”a giden Fakültemiz öğrencileri “DD” ve “DC” olan derslerini tekrar edemezler. Sadece ‘F’ derslerini dersin öğretim üyesi, danışman ve bölümün onayı olmak koşulu ile tekrar edebilirler.</li>
     <li>Değişim programlarına katılan öğrencilerin diğer kurumda aldıkları derslerin transfer işlemleri, en geç değişim programından döndükleri yarıyılı takip eden yarıyılın ders ekleme/bırakma dönemi sonuna kadar yapılabilir.</li>
 </ol>
 
-## Çift Anadal Programı
+## 12. Çift Anadal Programı
 
 <ol type="a">
     <li>GNO>3.00 ve  tüm derslerini başarıyla tamamlamış olmak koşuluyla,  ÇAP'a girmek isteyen öğrenciler en erken 3. en geç 5.yarıyıl başında Fakülte Yönetim Kuruluna başvurmak zorundadırlar. Çift Anadal programının  diğer hususları ÇAP yönetmeliğinde belirlenmiştir.</li>
@@ -156,12 +153,15 @@ Kısaltmalar ve Tanımlar:
     <li>İki dönem üst üste çift anadal programı dersi almayan öğrenci çift anadal programına devam hakkını kaybeder.</li>
 </ol>
 
-## Yandal Programı
+## 13. Yandal Programı
 
 <ol type="a">
     <li>Anadal lisans programının en erken üçüncü, en geç altıncı yarıyılı başında bulunan, başvurduğu yarıyıla kadar aldığı tüm kredili dersleri başarıyla tamamlamış ve genel not ortalaması (GN0) en az 2.75 olan öğrenciler, Akademik Takvimde ilan edilen tarihlerde Yandal programını açan birime başvuru yapabilir.</li>
     <li>İki dönem üst üste yandal programı dersi almayan öğrenci yandal programına devam hakkını kaybeder.</li>
     <li>Yandal öğrencisi yandal ve anadal programları gereklerini en geç toplam 9 yarıyılda tamamlamak zorundadır. Bu süre içinde hem anadal hem yandal gereklerini tamamlayamayan öğrenciler yandal programından çıkarılır. Değişim programlarında geçirilen en fazla bir yarıyıl bu süreye sayılmaz. Yandal programının diğer hususları Yandal yönergesinde belirtilmiştir.</li>
 </ol>
+
+
+
 
 Not: Bu dokümanda yer almayan bilgilere veya daha detaylı açıklamalara, Boğaziçi Üniversitesi Lisans Eğitim ve Öğretim Yönetmeliği’nden ulaşılabilir.
