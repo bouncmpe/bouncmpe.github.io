@@ -1,0 +1,7 @@
+<div class="alert alert-warning alert-dismissible fade show text-center" role="alert">
+    {{ $baseURL := "https://github.com/bouncmpe/bouncmpe.github.io/edit/main/content/" }}
+    {{ $filePath := $.Page.File.Path | replaceRE "\\\\" "/" }}
+    {{ $fullURL := printf "%s%s" $baseURL $filePath}}
+    <a href="{{ $fullURL }}"><small>{{ i18n "edit-page-link" }}</small></a>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
