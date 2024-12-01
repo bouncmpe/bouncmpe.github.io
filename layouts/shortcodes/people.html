@@ -12,52 +12,46 @@
 {{ end }}
 {{ $members := $ctx.Get "members" }}
 
-<div class="row row-cols-1 row-cols-xl-{{ $columns }} g-2 my-4">
-{{ range $members }}
-<div class="col">
-    {{ $thumbnail := .thumbnail | default "images/person.png" }}
-    {{ $image_settings := site.Params.people.image_settings | default "500x500 webp q90 smart" }}
-
-    {{ $image_resource := resources.Get $thumbnail }}
-
-    {{ if $image_resource }}
-    {{ $retouched := $image_resource.Fill $image_settings }}
-    {{ $thumbnail = $retouched.RelPermalink }}
-    {{ end }}
-    <div class="card mb-3 border-0 h-100" style="max-width: 540px;">
+<div class="container">
+  <div class="row gy-4">
+    {{ range $members }}
+    <div class="col-lg-{{ printf "%.0f" (div 12 (int $columns)) }} col-md-6">
+      <div class="card h-100 shadow-sm">
         <div class="row g-0">
-          <div class="col-4 mb-0 d d-none d-xl-block">
-            <img src="{{ $thumbnail }}" alt="{{ .name | anchorize }}-thumbnail" class="img-fluid rounded-5 shadow" style="width: 100%; max-height: 145px; object-fit: cover; object-position: center;">
+          <div class="col-4">
+            {{ $thumbnail := .thumbnail | default "images/person.png" }}
+            {{ $image_settings := site.Params.people.image_settings | default "500x500 webp q90 smart" }}
+            {{ $image_resource := resources.Get $thumbnail }}
+            {{ if $image_resource }}
+            {{ $retouched := $image_resource.Fill $image_settings }}
+            {{ $thumbnail = $retouched.RelPermalink }}
+            {{ end }}
+            <img src="{{ $thumbnail }}" class="img-fluid rounded-start" alt="{{ .name | anchorize }}-thumbnail">
           </div>
-          <div class="col-8 align-middle" style="overflow-x: scroll; white-space: nowrap;">
-            <div class="card-body align-middle">
-              <h5 class="my-2">{{ .name | title }}</h5>
+          <div class="col-8">
+            <div class="card-body">
+              <h5 class="card-title">{{ .name | title }}</h5>
               {{ with .position }}
-              <p class="mb-1">
-                {{ . | i18n | title }}
-              </p>
-              {{ end }}        
-              <p class="d-block">
-              {{ with .email }}
-                <a href="mailto:{{ . }}" class="text-muted">
-                  <img src="/icons/envelope-fill.svg" alt="" width="24" height="24">
-                </a>
+              <p class="card-text text-muted">{{ . | i18n | title }}</p>
               {{ end }}
-              {{ with .homepage }}
-              <a href="{{ . }}" class="text-muted">
-                <img src="/icons/github.svg" alt="" width="24" height="24">
-              </a>
-              {{ end }}
-              {{ with .github }}
-              <a href="https://github.com/{{ . }}" class="text-muted">
-                <img src="/icons/github.svg" alt="" width="24" height="24">
-              </a>
-              {{ end }}
-              </p>
+              <div>
+                {{ with .email }}
+                <a href="mailto:{{ . }}" class="btn btn-sm btn-outline-secondary me-2"><i class="bi bi-envelope-fill"></i></a>
+                {{ end }}
+                {{ with .linkedin }}
+                <a href="https://linkedin.com/in/{{ . }}" class="btn btn-sm btn-outline-secondary me-2" target="_blank"><i class="bi bi-linkedin"></i></a>
+                {{ end }}
+                {{ with .github }}
+                <a href="https://github.com/{{ . }}" class="btn btn-sm btn-outline-secondary" target="_blank"><i class="bi bi-github"></i></a>
+                {{ end }}
+              </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
+    {{ end }}
+  </div>
 </div>
-{{ end }}
-</div>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
