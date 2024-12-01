@@ -1,0 +1,69 @@
+{{ $ctx := newScratch }}
+
+{{ $tag := .Get "tag" }}
+{{ $columns := .Get "cols" | default "2" }}
+
+{{ $ctx.Set "tag" $tag }}
+{{ $ctx.Set "members" slice }}
+{{ range $key, $value := site.Data.bouncmpe.people }}
+  {{ if intersect $value.tags (slice $tag) }}
+    {{ $ctx.Set "members" ($ctx.Get "members" | append $value) }}
+  {{ end }}
+{{ end }}
+{{ $members := $ctx.Get "members" }}
+
+<div class="row row-cols-1 row-cols-xl-{{ $columns }} g-2 my-4">
+  {{ range $members }}
+  <div class="col">
+    {{ $thumbnail := .thumbnail | default "images/person.png" }}
+    {{ $image_settings := site.Params.people.image_settings | default "500x500 webp q90 smart" }}
+    {{ $image_resource := resources.Get $thumbnail }}
+
+    {{ if $image_resource }}
+      {{ $retouched := $image_resource.Fill $image_settings }}
+      {{ $thumbnail = $retouched.RelPermalink }}
+    {{ end }}
+
+    <div class="card mb-3 border-0 h-100" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-4 d-none d-xl-block">
+          <img src="{{ $thumbnail }}" alt="{{ .name | anchorize }}-thumbnail" class="img-fluid rounded-5 shadow" style="width: 100%; max-height: 145px; object-fit: cover; object-position: center;">
+        </div>
+        <div class="col-8">
+          <div class="card-body">
+            <h5 class="my-2">{{ .name | title }}</h5>
+            {{ with .position }}
+            <p class="mb-1">{{ . | i18n | title }}</p>
+            {{ end }}
+            {{ with .research_areas }}
+            <div class="mb-2">
+              {{ $lastIndex := sub (len .) 1 }}
+              {{ range $index, $area := . }}
+              <span class="text-muted">{{ $area | title }}</span>{{ if ne $index $lastIndex }}, {{ end }}
+              {{ end }}
+            </div>
+            {{ end }}
+            <p>
+              {{ with .email }}
+              <a href="mailto:{{ . }}" class="text-muted me-2">
+                <img src="/icons/envelope-fill.svg" alt="Email" width="24" height="24">
+              </a>
+              {{ end }}
+              {{ with .homepage }}
+              <a href="{{ . }}" class="text-muted me-2">
+                <img src="/icons/globe2.svg" alt="Homepage" width="24" height="24">
+              </a>
+              {{ end }}
+              {{ with .github }}
+              <a href="https://github.com/{{ . }}" class="text-muted">
+                <img src="/icons/github.svg" alt="GitHub" width="24" height="24">
+              </a>
+              {{ end }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{ end }}
+</div>
