@@ -108,6 +108,18 @@ type: wide
 
 ## Humanities and Social Sciences (HSS)
 
+Please check ÖBİKAS for the current list of offered courses.
+
+<!-- prettier-ignore-start -->
+{{< table class="table-hover table-sm" >}}
+|All courses offered by the Faculty of Arts and Sciences under the codes AL, CL, DRA, EL, FA, HIST (except HIST 202), SOC (except SOC 204 and SOC 304), PHIL, PSY (except PSY 202, PSY 206, and PSY 207), STS, the following courses from Translation and Interpreting Studies, Fine Arts, Western Languages and Literatures: TR 364, TR 412, TR 414, PA 393, AS 250, HUM 101, HUM 102, LIT 211 and LIT 212.|
+|All courses offered by Ataturk Institute for Modern Turkish History under the code of ATA.|
+|All sophomore or higher-level courses offered by the Faculty of Arts and Sciences under the code TKL.|
+|The following senior-level courses offered by the School of Foreign Languages: FR 421, FR 422, GER 413, GER 414, GER 421, and GER 422.|
+|The following courses offered by the Faculty of Economics and Administrative Sciences: EC 203, EC 205, EC210, EC 211, EC 310, EC 311, EC 312, EC 315, EC 411, EC 412, EC 471, EC 474, EC 482, All courses under the code POLS (except for POLS 206 and POLS 481).|
+{{< /table >}}
+<!-- prettier-ignore-end -->
+
 ## Elective Courses Committee
 
 {{< people tag="elective" >}}
