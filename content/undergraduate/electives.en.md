@@ -111,12 +111,12 @@ type: wide
 Please check ÖBİKAS for the current list of offered courses.
 
 <ul>
-    <li>All courses offered by the Faculty of Arts and Sciences under the codes AL, CL, DRA, EL, FA, HIST <em>(except HIST 202)</em>, *SOC* <em>(except SOC 204 and SOC 304)</em>, PHIL, PSY <em>(except PSY 202, PSY 206, and PSY 207)</em> and STS.</li>
+    <li>All courses offered by the Faculty of Arts and Sciences under the codes AL, CL, DRA, EL, FA, HIST <em>(except HIST 202)</em>, SOC <em>(except SOC 204 and SOC 304)</em>, PHIL, PSY <em>(except PSY 202, PSY 206, and PSY 207)</em> and STS.</li>
     <li>The following courses from Translation and Interpreting Studies, Fine Arts, Western Languages and Literatures: TR 364, TR 412, TR 414, PA 393, AS 250, HUM 101, HUM 102, LIT 211 and LIT 212.</li>
     <li>All courses offered by Ataturk Institute for Modern Turkish History under the code of ATA.</li>
     <li>All sophomore or higher-level courses offered by the Faculty of Arts and Sciences under the code TKL.</li>
     <li>The following senior-level courses offered by the School of Foreign Languages: FR 421, FR 422, GER 413, GER 414, GER 421, and GER 422.</li>
-    <li>The following courses offered by the Faculty of Economics and Administrative Sciences: EC 203, EC 205, EC210, EC 211, EC 310, EC 311, EC 312, EC 315, EC 411, EC 412, EC 471, EC 474, EC 482, All courses under the code POLS (except for POLS 206 and POLS 481).</li>
+    <li>The following courses offered by the Faculty of Economics and Administrative Sciences: EC 203, EC 205, EC210, EC 211, EC 310, EC 311, EC 312, EC 315, EC 411, EC 412, EC 471, EC 474, EC 482, All courses under the code POLS <em>(except for POLS 206 and POLS 481)</em>.</li>
 </ul>
 
 ## Elective Courses Committee
