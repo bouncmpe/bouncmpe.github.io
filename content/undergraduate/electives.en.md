@@ -25,8 +25,8 @@ type: wide
 ||<h4>Department of Economics (EC)</h4>|
 |EC 48T|Financial Modelling & Its Applications Using R|3|6|
 || <h4>Department of Electrical Engineering (EE)</h4>|
-|[EE 3xx](https://ee.bogazici.edu.tr/ungraduate-courses)|Except EE 301, 310, 320, 341|||
-|[EE 4xx](https://ee.bogazici.edu.tr/undegraduate-courses)||||
+|[EE 3xx](https://ee.bogazici.edu.tr/undergraduate-courses)|Except EE 301, 310, 320, 341|||
+|[EE 4xx](https://ee.bogazici.edu.tr/undergraduate-courses)||||
 |[EE 5xx](https://ee.bogazici.edu.tr/graduate-courses)|Except EE 504|||
 |EE 484|**\* Exception: EE 484 is counted in the AD group; please check AD group rules.**|||
 || <h4>Department of Industrial Engineering (IE)</h4>|
@@ -83,7 +83,7 @@ type: wide
 |[LING 203](https://linguistics.bogazici.edu.tr/undergraduate-courses#:~:text=LING%20203)|Syntax|||
 |[LING 488](https://linguistics.bogazici.edu.tr/undergraduate-courses#:~:text=LING%2048) |Special Topics in Linguistics|||
 |[LING48N](https://linguistics.bogazici.edu.tr/undergraduate-courses#:~:text=LING%2048)|Sp. Tp. Language and Cognition|||
-|[LING 580](https://linguistics.bogazici.edu.tr/ma-course-lists#:~:text=LING%2058) |Topics in Linguistic Theory|||
+|[LING 580](https://linguistics.bogazici.edu.tr/ma-course-list#:~:text=LING%2058) |Topics in Linguistic Theory|||
 || <h4>Sociology(SOC)</h4>|
 |[SOC 490](https://sociology.bogazici.edu.tr/undergraduate-courses) |Introduction to Digital Humanities|||
 || <h4>Department of Management (AD), Department of Economics (EC), Engineering (ENG)</h4>|
@@ -108,7 +108,7 @@ type: wide
 
 ## Humanities and Social Sciences (HSS)
 
-Please check ÖBİKAS for the current list of offered courses.
+Please check ÖBİKAS for the current line-up of offered courses.
 
 <ul>
     <li>All courses offered by the Faculty of Arts and Sciences under the codes AL, CL, DRA, EL, FA, HIST <em>(except HIST 202)</em>, SOC <em>(except SOC 204 and SOC 304)</em>, PHIL, PSY <em>(except PSY 202, PSY 206, and PSY 207)</em> and STS.</li>
