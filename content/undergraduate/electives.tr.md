@@ -15,15 +15,15 @@ type: wide
 ||
 |:---- |:----- |:---|---:|
 || <h4>Bilişsel Bilim Programı(COGS)</h4>|
-|[COGS 500](https://cogsci.bogazici.edu.tr/tr/courses)|IBilişsel Bilime Giriş|3|6|
+|[COGS 500](https://cogsci.bogazici.edu.tr/tr/courses)|Bilişsel Bilime Giriş|3|6|
 || <h4>İnşaat Mühendisliği Bölümü (CE)</h4>|
 |[CE 245](http://www.ce.bogazici.edu.tr/?q=course-list-undergraduate)|Mekanik|3|6|
-|[CE 371](http://www.ce.bogazici.edu.tr/?q=course-list-undergraduate)|Insaat Muhendisliginde Numerik Yontemler|3|6|
-|[CE 381](http://www.ce.bogazici.edu.tr/?q=course-list-undergraduate)|Bilgisayar Destekli Tasarim|3|6|
-|ENGG 110|Mühendis Grafiği|3|6|
+|[CE 371](http://www.ce.bogazici.edu.tr/?q=course-list-undergraduate)|İnşaa Mühendisliğinde Numerik Yöntemler|3|6|
+|[CE 381](http://www.ce.bogazici.edu.tr/?q=course-list-undergraduate)|Bilgisayar Destekli Tasarım|3|6|
+|ENGG 110|Mühendislik Grafiği|3|6|
 ||<h4>Ekonomi Bölümü(EC)</h4>|
 |EC 48T|Finans Modelleme & R|3|6|
-|| <h4>Elektrik Mühendsiliği BÖlümü (EE)</h4>|
+|| <h4>Elektrik Mühendsiliği Bölümü (EE)</h4>|
 |[EE 3xx](https://ee.bogazici.edu.tr/tr/undergraduate-courses)|EE 301, 310, 320, 341 hariç|||
 |[EE 4xx](https://ee.bogazici.edu.tr/tr/undergraduate-courses)||||
 |[EE 5xx](https://ee.bogazici.edu.tr/tr/graduate-courses)|EE 504 hariç|||
@@ -33,13 +33,13 @@ type: wide
 |[IE 4xx](https://ie.bogazici.edu.tr/tr/undergraduate-courses)||||
 |[IE 5xx](https://ie.bogazici.edu.tr/tr/graduate-courses)|EE 588 hariç|||
 || <h4>Matematik Bölümü (MATH)</h4>|
-|[MATH3xx](https://math.bogazici.edu.tr/tr/undergraduate-courses#:~:text=Math%20323)|Except MATH 310, 336, 344|||
+|[MATH3xx](https://math.bogazici.edu.tr/tr/undergraduate-courses#:~:text=Math%20323)|MATH 310, 336, 344 hariç|||
 |[MATH4xx](https://math.bogazici.edu.tr/tr/undergraduate-courses#:~:text=Math%20401)||||
 |[MATH5xx](https://math.bogazici.edu.tr/tr/graduate-courses)||||
 || <h4>Moleküler Biyoloji ve Genetik Bölümü(BIO)</h4>|
 |[BIO 101](https://mbg.bogazici.edu.tr/tr/undergraduate-courses#:~:text=BIO%20101)|Hücresel ve Moleküler Biyoloji I|3|5|
-|[BIO 121](https://mbg.bogazici.edu.tr/tr/undergraduate-courses#:~:text=BIO%20121) |Introduction to Cell Biology|3|5|
-|[BIO 152](https://mbg.bogazici.edu.tr/tr/undergraduate-courses#:~:text=BIO%20152) |Hücre Biyolojisine Giriş|3|5|
+|[BIO 121](https://mbg.bogazici.edu.tr/tr/undergraduate-courses#:~:text=BIO%20121) |Hücre Biyolojisine Giriş|3|5|
+|[BIO 152](https://mbg.bogazici.edu.tr/tr/undergraduate-courses#:~:text=BIO%20152) |Modern Biyolojiye Giriş|3|5|
 |[BIO 252](https://mbg.bogazici.edu.tr/tr/undergraduate-courses#:~:text=BIO%20252) |Genetik|3|6|
 |[BIO 430](https://mbg.bogazici.edu.tr/tr/undergraduate-courses#:~:text=BIO%20430) |Nörobilim|3|6|
 |[BIO 48B](https://mbg.bogazici.edu.tr/tr/undergraduate-courses) |Biyoinformatik|3|6|
@@ -47,7 +47,7 @@ type: wide
 |[PHIL 105](https://phil.bogazici.edu.tr/tr/undergraduate-courses#:~:text=PHIL%20105)| İnformel Mantık|4|8|
 |[PHIL 131](https://phil.bogazici.edu.tr/tr/undergraduate-courses#:~:text=PHIL%20131)| Mantık I|4|8|
 |[PHIL 132](https://phil.bogazici.edu.tr/tr/undergraduate-courses#:~:text=PHIL%20132)| Mantık II|4|8|
-|[PHIL 331](https://phil.bogazici.edu.tr/tr/undergraduate-courses)| İleri Logic I|4|8|
+|[PHIL 331](https://phil.bogazici.edu.tr/tr/undergraduate-courses)| İleri Mantık I|4|8|
 |[PHIL 522](https://phil.bogazici.edu.tr/tr/past-ma-course-catalogue#~:text=PHIL%20522)| Matematiksel Mantık|4|8|
 || <h4>Fizik Bölümü (PHYS)</h4>|
 |[PHYS311](https://phys.bogazici.edu.tr/tr/all-physics-courses#:~:text=PHYS%20311)|Modern Fizik I|3|5|
@@ -62,7 +62,7 @@ type: wide
 || <h4>Fizik Bölümü (STS)</h4>|
 |STS 205|İklim|3|6|
 || <h4>Psikoloji Bölümü (PSY)</h4>|
-|[PSY 222](https://bogazici.edu.tr/tr-TR/Content/Akademik/Lisans_Katalogu/FenEdebiyat_Fakultesi/Psikoloji_Bolumu#:~:text=PSY%20222%20Learning)|Çğrenme Psikolojisi|3|6|
+|[PSY 222](https://bogazici.edu.tr/tr-TR/Content/Akademik/Lisans_Katalogu/FenEdebiyat_Fakultesi/Psikoloji_Bolumu#:~:text=PSY%20222%20Learning)|Öğrenme Psikolojisi|3|6|
 |[PSY 271](https://bogazici.edu.tr/tr-TR/Content/Akademik/Lisans_Katalogu/FenEdebiyat_Fakultesi/Psikoloji_Bolumu#:~:text=PSY%20271)| Sinirbilimine Giriş: Beyin ve Davranış|3|6|
 |[PSY 326](https://bogazici.edu.tr/tr-TR/Content/Akademik/Lisans_Katalogu/FenEdebiyat_Fakultesi/Psikoloji_Bolumu#:~:text=PSY%20326)| Bellek|3|6|
 |[PSY 327](https://bogazici.edu.tr/tr-TR/Content/Akademik/Lisans_Katalogu/FenEdebiyat_Fakultesi/Psikoloji_Bolumu#:~:text=PSY%20327)|Duyu ve Algılama|3|6|
