@@ -76,7 +76,7 @@ Kısaltmalar ve Tanımlar:
     <li>Hangi dönem veya statüde olunursa olunsun, fazla ders sayısı en fazla 2 ders veya ortalama dönem kredisinin 8 fazlası olabilir; kesinlikle bunu aşamaz.</li>
     <li>Üniversite dışından yatay geçiş yapan öğrenciler ilk dönemlerinde fazla ders alamazlar.</li>
     <li>Öğrenci ilk döneminde fazla ders alamaz.</li>
-    <li>İkinci dönem öğrencilerinden bütün derslerini tamamlamış ve GNO>=3.00 olan öğrencilerin bir fazla ders alması danışman onayına ve Yönetim Kurulu'nun onayına bağlıdır.
+    <li>İkinci dönem öğrencilerinden bütün derslerini tamamlamış ve GNO>=3.00 olan öğrencilerin bir fazla ders alması danışman onayına ve Yönetim Kurulu'nun onayına bağlıdır.</li>
 </ol>
 
 ## 4. Az Ders Alma
