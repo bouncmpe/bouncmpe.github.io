@@ -15,5 +15,10 @@
     "paralleldistributedcloud"
   ],
   "type": "person",
-  "thumbnail": "images/people/ozgovde_atay.jpg"
+  "thumbnail": "images/people/ozgovde_atay.jpg",
+  "research_areas": [
+    "Networking",
+    "Internet Architecture",
+    "Parallel Distributed Cloud"
+  ]
 }

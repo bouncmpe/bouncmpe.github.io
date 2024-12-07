@@ -14,5 +14,6 @@
     "computationlanguage"
   ],
   "type": "person",
-  "thumbnail": "images/people/ozgur_arzucan.jpg"
+  "thumbnail": "images/people/ozgur_arzucan.jpg",
+  "research_areas": ["Bioinformatics", "Computation Language"]
 }

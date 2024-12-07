@@ -17,5 +17,10 @@
     "paralleldistributedcloud"
   ],
   "type": "person",
-  "thumbnail": "images/people/tugcu_tuna.jpg"
+  "thumbnail": "images/people/tugcu_tuna.jpg",
+  "research_areas": [
+    "Networking",
+    "Internet Architecture",
+    "Parallel Distributed Cloud"
+  ]
 }

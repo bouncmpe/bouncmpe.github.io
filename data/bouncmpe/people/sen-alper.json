@@ -5,5 +5,6 @@
   "position": "full-professor",
   "tags": ["faculty", "cmpe240", "computersystems", "paralleldistributedcloud", "theoryalgorithms"],
   "type": "person",
-  "thumbnail": "images/people/sen_alper.jpg"
+  "thumbnail": "images/people/sen_alper.jpg",
+  "research_areas": ["Computer Systems", "Parallel Distributed Cloud", "Theory Algorithms"]
 }

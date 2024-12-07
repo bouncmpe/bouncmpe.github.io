@@ -5,5 +5,6 @@
   "position": "full-professor",
   "tags": ["faculty", "cmpe460","former-cmpe322", "former-cmpe344", "advisor-3","former-cmpe362", "computervisionpatternrecognition"],
   "type": "person",
-  "thumbnail": "images/people/akarun_lale.jpg"
+  "thumbnail": "images/people/akarun_lale.jpg",
+  "research_areas": ["Computer Vision", "Pattern Recognition"]
 }

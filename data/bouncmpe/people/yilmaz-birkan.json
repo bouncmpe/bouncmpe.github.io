@@ -16,5 +16,6 @@
     "networkinginternetarchitecture"
   ],
   "type": "person",
-  "thumbnail": "images/people/yilmaz_birkan.jpg"
+  "thumbnail": "images/people/yilmaz_birkan.jpg",
+  "research_areas": ["Networking", "Internet Architecture"]
 }
