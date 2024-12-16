@@ -1,4 +1,4 @@
-<footer class="container footer text-center p-4">
+<footer class="container footer text-center text-md-start p-4">
     <div class="row">
         {{ range site.Menus.footer }}
         <div class="col-12 col-md-3 mb-3 d-none d-lg-block">
@@ -13,20 +13,64 @@
         </div>
         {{ end }}
     </div>
-    <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top ">
-        <p>{{ replace site.Copyright "{year}" now.Year }}</p>
-        <ul class="list-unstyled d-flex">
-            {{range site.Params.social }}
-            <li class="ms-3">
-                <a href="{{- .url -}}">
-                    <img src="/icons/{{ .icon }}.svg" alt="{{- .identifier -}}" width="24"
-                        height="24">
+
+    <!-- GitHub Issue Link -->
+    <div class="d-flex flex-column py-1">
+        <div class="row mt-3 small">
+            <div class="col d-flex flex-column flex-sm-row justify-content-between">
+                <a href="https://github.com/bouncmpe/bouncmpe.github.io/issues" class="nav-link link">
+                    {{ i18n "issue-page" }}
                 </a>
-            </li>
-            {{ end }}
-        </ul>
+                
+                <div>
+                    <ul class="list-unstyled ms-auto">
+                        <li><a href="https://bogazici.edu.tr/" class="nav-link p-0 link">{{ i18n "boun-page" }}</a></li>
+                        <li><a href="https://library.bogazici.edu.tr/" class="nav-link p-0 link">{{ i18n "library-page" }}</a></li>
+                        <li><a href="https://arastirma.bogazici.edu.tr/" class="nav-link p-0 link">{{ i18n "research-page" }}</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
+    <hr>
+
+    <!-- Footer Bottom Section -->
+    <div class="d-flex flex-column py-2">
+        <div class="row">
+            <div class="col d-flex flex-column flex-sm-row justify-content-between align-items-center">
+                <!-- Copyright -->
+                <p class="mb-0 text-muted small">
+                    {{ replace site.Copyright "{year}" now.Year }}
+                </p>
+
+                <!-- Social Links -->
+                <ul class="list-unstyled d-flex mb-0">
+                    {{ range site.Params.social }}
+                    <li class="ms-3">
+                        <a href="{{- .url -}}" target="_blank" aria-label="{{- .identifier -}}">
+                            <img src="/icons/{{ .icon }}.svg" alt="{{- .identifier -}}" width="24" height="24" class="opacity-75 hover-opacity-100">
+                        </a>
+                    </li>
+                    {{ end }}
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- Optional Mermaid Integration -->
     {{ if .Params.hasMermaid }}
         {{ partial "footer/optional-scripts.html" . }}
     {{ end }}
 </footer>
+
+<style>
+    .link {
+        color: rgba(0, 0, 0, 0.72);
+        text-decoration: none;
+    }
+    .link:hover {
+        color: rgba(0, 0, 0, 0.72);
+        text-decoration: underline;
+    }
+</style>

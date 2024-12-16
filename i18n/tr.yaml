@@ -172,3 +172,17 @@ languageSwitcherLabel:
 toc:
   other: İçindekiler
 
+edit-page-link:
+  other: Bu sayfadaki içeriği düzenlemek için buraya tıklayın.
+
+issue-page:
+  other: Herhangi bir fikriniz, sorununuz veya tavsiyeniz varsa, lütfen GitHub sayfamızda bir issue açın.
+
+boun-page:
+  other: Boğaziçi Üniversitesi
+
+library-page:
+  other: Boğaziçi Üniversitesi Kütüphane
+
+research-page:
+  other: Boğaziçi Üniversitesi Araştırma

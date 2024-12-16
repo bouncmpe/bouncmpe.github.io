@@ -144,3 +144,18 @@ building-head:
 
 under-construction-warning:
   other: The information on this page is under construction.
+
+edit-page-link:
+  other: Click here to edit this page on GitHub.
+
+issue-page:
+  other: If you have any ideas, issues, or recommendations, please open an issue on GitHub.
+
+boun-page:
+  other: Boğaziçi University
+
+library-page:
+  other: Boğaziçi University Library
+
+research-page:
+  other: Boğaziçi University Research Portal
