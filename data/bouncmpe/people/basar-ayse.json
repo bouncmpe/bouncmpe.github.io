@@ -4,5 +4,6 @@
   "position": "full-professor",
   "tags": ["former-faculty", "adjunct-faculty", "former-cmpe352", "softwareengineering"],
   "type": "person",
-  "thumbnail": "images/people/basar_ayse.jpg"
+  "thumbnail": "images/people/basar_ayse.jpg",
+  "research_areas": ["Software Engineering"]
 }
