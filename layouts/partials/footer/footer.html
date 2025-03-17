@@ -1,26 +1,77 @@
-<footer class="container footer text-center p-4">
-    <div class="row">
+<footer class="container footer text-center p-4 text-primary">
+    <div class="row justify-content-start">
         {{ range site.Menus.footer }}
         <div class="col-12 col-md-3 mb-3 d-none d-lg-block">
-            <h5 class="mb-4">{{- .Name -}}</h5>
-            <ul class="nav flex-column">
+            <h5 class="mb-4 text-start fs-6">{{- .Name -}}</h5>
+            <ul class="nav flex-column text-start">
                 {{ range .Children }}
                 <li class="nav-item mb-2">
-                    <a href="{{ .URL }}" class="nav-link p-0 link-light text-muted">{{- .Name -}}</a>
+                    <a href="{{ .URL }}" class="nav-link p-0 link-light text-muted fs-6">{{- .Name -}}</a>
                 </li>
                 {{ end }}
             </ul>
         </div>
         {{ end }}
+        <!-- New Columns -->
+
+        <div class="col-12 col-md-3 mb-3 mt-5">
+            <p class="mb-2 text-start fs-6 text-dark fw-bolder">Undergraduate</p>
+            <ul class="list-unstyled text-start fs-6 text-dark">
+                <li class="mb-2"><a href="#">Double Major</a></li>
+                <li class="mb-2"><a href="#">Elective Courses</a></li>
+                <li class="mb-2"><a href="#">Curriculum</a></li>
+            </ul>
+
+            <p class="mb-2 mt-4 text-start fs-6 text-dark fw-bolder">Graduate</p>
+            <ul class="list-unstyled text-start fs-6 text-dark">
+                <li class="mb-2"><a href="#">PHD Program</a></li>
+                <li class="mb-2"><a href="#">MS Program</a></li>
+                <li class="mb-2"><a href="#">Other Programs</a></li>
+            </ul>
+        </div>
+        <div class="col-12 col-md-3 mb-3 mt-5">
+            <p class="mb-2 text-start fs-6 text-dark fw-bolder">University</p>
+            <ul class="list-unstyled text-start fs-6 text-dark">
+                <li class="mb-2"><a href="#">Library</a></li>
+                <li class="mb-2"><a href="#">Registration</a></li>
+                <li class="mb-2"><a href="#">Moodle</a></li>
+                <li class="mb-2"><a href="#">School of Foreign Languages</a></li>
+            </ul>
+        </div>
+        <div class="col-12 col-md-3 mb-3 mt-5">
+            <p class="mb-2 text-start fs-6 text-dark fw-bolder">Courses</p>
+            <ul class="list-unstyled text-start fs-6 text-dark">
+                <li class="mb-2"><a href="#">CMPE 250</a></li>
+                <li class="mb-2"><a href="#">CMPE 150</a></li>
+                <li class="mb-2"><a href="#">CMPE 160</a></li>
+                <li class="mb-2"><a href="#">CMPE 230</a></li>
+                <li class="mb-2"><a href="#">CMPE 240</a></li>
+                <li class="mb-2"><a href="#">CMPE 260</a></li>
+                <li class="mb-2"><a href="#">CMPE 300</a></li>
+                <li class="mb-2"><a href="#">CMPE 322</a></li>
+                <li class="mb-2"><a href="#">CMPE 343</a></li>
+                <li class="mb-2"><a href="#">CMPE 351</a></li>
+                <li class="mb-2"><a href="#">CMPE 352</a></li>
+                <li class="mb-2"><a href="#">CMPE 443</a></li>
+                <li class="mb-2"><a href="#">CMPE 340</a></li>
+            </ul>
+        </div>
+        <div class="col-12 col-md-3 mb-3 mt-5">
+            <p class="mb-2 text-start fs-6 text-dark fw-bolder">Staff</p>
+            <ul class="list-unstyled text-start fs-6 text-dark">
+                <li class="mb-2"><a href="#">Faculty</a></li>
+                <li class="mb-2"><a href="#">Academic Staff</a></li>
+                <li class="mb-2"><a href="#">Support Staff</a></li>
+            </ul>
+        </div>
     </div>
-    <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top ">
-        <p>{{ replace site.Copyright "{year}" now.Year }}</p>
+    <div class="d-flex flex-column flex-sm-row justify-content-between text-dark py-4 my-4">
+        <p class="fs-6">{{ replace site.Copyright "{year}" now.Year }}</p>
         <ul class="list-unstyled d-flex">
             {{range site.Params.social }}
             <li class="ms-3">
                 <a href="{{- .url -}}">
-                    <img src="/icons/{{ .icon }}.svg" alt="{{- .identifier -}}" width="24"
-                        height="24">
+                    <img src="/icons/{{ .icon }}.svg" alt="{{- .identifier -}}" width="24" height="24">
                 </a>
             </li>
             {{ end }}
@@ -29,4 +80,5 @@
     {{ if .Params.hasMermaid }}
         {{ partial "footer/optional-scripts.html" . }}
     {{ end }}
+
 </footer>

@@ -12,7 +12,7 @@ navigation:
   search: true
   searchModal: true
   size: xl
-  #color: primary
+  # color: primary
   # horizontal: true
   toc: true
   sidebar: false
@@ -26,6 +26,7 @@ sharing:
 # Boğaziçi Light Blue: "#8cc8ea"
 style:
   primary: "#1e4a8b"
+  secondary: "#8cc8ea"
   fontSizeBase: "1.1rem"
   themeFont: "Open Sans"
   themeFontPath: "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400..800;1,400..800&display=swap"
