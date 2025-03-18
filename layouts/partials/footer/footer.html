@@ -1,4 +1,15 @@
-<footer class="container footer text-center p-4 text-primary">
+<footer class="container footer text-center p-4 text-primary border-top mt-5">
+    <style>
+        .footer_link a {
+            color: #31373d;
+            opacity: 0.6;
+        }
+
+        .footer_link a:hover {
+            color: #31373d;
+            opacity: 1;
+        }
+    </style>
     <div class="row justify-content-start">
         {{ range site.Menus.footer }}
         <div class="col-12 col-md-3 mb-3 d-none d-lg-block">
@@ -14,7 +25,7 @@
         {{ end }}
         <!-- New Columns -->
 
-        <div class="col-12 col-md-3 mb-3 mt-5">
+        <div class="col-12 col-md-3 mb-3 mt-5 footer_link">
             <p class="mb-2 text-start fs-6 text-dark fw-bolder">Undergraduate</p>
             <ul class="list-unstyled text-start fs-6 text-dark">
                 <li class="mb-2"><a href="#">Double Major</a></li>
@@ -29,7 +40,7 @@
                 <li class="mb-2"><a href="#">Other Programs</a></li>
             </ul>
         </div>
-        <div class="col-12 col-md-3 mb-3 mt-5">
+        <div class="col-12 col-md-3 mb-3 mt-5 footer_link">
             <p class="mb-2 text-start fs-6 text-dark fw-bolder">University</p>
             <ul class="list-unstyled text-start fs-6 text-dark">
                 <li class="mb-2"><a href="#">Library</a></li>
@@ -37,8 +48,14 @@
                 <li class="mb-2"><a href="#">Moodle</a></li>
                 <li class="mb-2"><a href="#">School of Foreign Languages</a></li>
             </ul>
+            <p class="mb-2 text-start fs-6 text-dark fw-bolder mt-4">CMPE Intern</p>
+            <ul class="list-unstyled text-start fs-6 text-dark">
+                <li class="mb-2"><a href="#">In-Service Training</a></li>
+                <li class="mb-2"><a href="#">Training Positions</a></li>
+                <li class="mb-2"><a href="#">FAQ</a></li>
+            </ul>
         </div>
-        <div class="col-12 col-md-3 mb-3 mt-5">
+        <div class="col-12 col-md-3 mb-3 mt-5 footer_link">
             <p class="mb-2 text-start fs-6 text-dark fw-bolder">Courses</p>
             <ul class="list-unstyled text-start fs-6 text-dark">
                 <li class="mb-2"><a href="#">CMPE 250</a></li>
@@ -56,17 +73,26 @@
                 <li class="mb-2"><a href="#">CMPE 340</a></li>
             </ul>
         </div>
-        <div class="col-12 col-md-3 mb-3 mt-5">
+        <div class="col-12 col-md-3 mb-3 mt-5 footer_link">
             <p class="mb-2 text-start fs-6 text-dark fw-bolder">Staff</p>
             <ul class="list-unstyled text-start fs-6 text-dark">
                 <li class="mb-2"><a href="#">Faculty</a></li>
                 <li class="mb-2"><a href="#">Academic Staff</a></li>
                 <li class="mb-2"><a href="#">Support Staff</a></li>
             </ul>
+            <p class="mb-2 text-start fs-6 text-dark fw-bolder mt-4">Complementary Courses</p>
+            <ul class="list-unstyled text-start fs-6 text-dark">
+                <li class="mb-2"><a href="#">Industrial Engineering</a></li>
+                <li class="mb-2"><a href="#">Civil Engineering</a></li>
+                <li class="mb-2"><a href="#">Electrical Engineering</a></li>
+                <li class="mb-2"><a href="#">Machine Engineering</a></li>
+                <li class="mb-2"><a href="#">Biology</a></li>
+                <li class="mb-2"><a href="#">Philosophy</a></li>
+            </ul>
         </div>
     </div>
-    <div class="d-flex flex-column flex-sm-row justify-content-between text-dark py-4 my-4">
-        <p class="fs-6">{{ replace site.Copyright "{year}" now.Year }}</p>
+    <div class="d-flex flex-column flex-sm-row justify-content-between text-dark py-4 my-4 border-top">
+        <p class="fs-6 opacity-75">{{ replace site.Copyright "{year}" now.Year }}</p>
         <ul class="list-unstyled d-flex">
             {{range site.Params.social }}
             <li class="ms-3">
