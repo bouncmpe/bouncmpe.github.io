@@ -24,12 +24,17 @@
     {{ $retouched := $image_resource.Fill $image_settings }}
     {{ $thumbnail = $retouched.RelPermalink }}
     {{ end }}
-    <div class="card mb-3 border-0 h-100" style="max-width: 540px;">
+    <div class="card mb-4 h-100 shadow-sm" 
+    style="max-width: 540px; border-radius: 20px; background: linear-gradient(145deg, #f1f3f6, #ffffff); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05), inset 0 1px 1px rgba(255,255,255,0.6); transition: transform 0.3s ease, box-shadow 0.3s ease;"
+    onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 8px 24px rgba(0,0,0,0.1)'"
+    onmouseout="this.style.transform='none'; this.style.boxShadow='0 4px 12px rgba(0, 0, 0, 0.05), inset 0 1px 1px rgba(255,255,255,0.6)'">
         <div class="row g-0">
-          <div class="col-4 mb-0 d d-none d-xl-block">
-            <img src="{{ $thumbnail }}" alt="{{ .name | anchorize }}-thumbnail" class="img-fluid rounded-5 shadow" style="width: 100%; max-height: 145px; object-fit: cover; object-position: center;">
+          <div class="col-4 mb-0">
+            <img src="{{ $thumbnail }}" alt="{{ .name | anchorize }}-thumbnail" 
+            class="img-fluid shadow" 
+            style="width: 100%; aspect-ratio: 1/1; border-radius: 18px; object-fit: cover; object-position: center;">
           </div>
-          <div class="col-8 align-middle" style="overflow-x: scroll; white-space: nowrap;">
+          <div class="col-8 align-middle" style="overflow-x: hidden;">
             <div class="card-body align-middle">
               <h5 class="my-2">{{ .name | title }}</h5>
               {{ with .position }}

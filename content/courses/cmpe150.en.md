@@ -14,6 +14,7 @@ aliases:
 
 <!-- prettier-ignore-start -->
 {{< table class="table-hover table-sm" >}}
+
 |||
 | :-- | :-- |
 | Faculty | Faculty of Engineering |
