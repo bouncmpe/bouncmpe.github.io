@@ -1,25 +1,4 @@
 <footer class="container footer text-center p-4 text-primary border-top mt-5">
-    <style>
-        .footer-logo {
-            height: 1em;
-            margin-right: 0.5em; 
-        }
-        .footer-link a {
-            color: #31373d;
-            opacity: 0.6;
-        }
-
-        .footer-link a:hover {
-            color: #31373d;
-            opacity: 1;
-        }
-
-        .footer-title {
-            display: flex;
-            align-items: center
-        }
-
-    </style>
     <div class="row justify-content-start">
         {{ range site.Menus.footer }}
         <div class="col-12 col-md-3 mb-3 d-none d-lg-block">
@@ -34,81 +13,45 @@
         </div>
         {{ end }}
         <!-- New Columns -->
-        <div class="footer-title mt-3 fs-6">
-            <img src="https://bouncmpe.pages.dev/images/logo.svg" href="https://www.boun.edu.tr/" class="footer-logo" alt="Bogazici University Computer Engineering Logo"> 
-            <p id="title">
-                > <a href="https://www.eng.boun.edu.tr/" class="link-dark">Faculty of Engineering</a> > 
-                <a href="#" class="link-dark"> Department of Computer Engineering</a>
-            </p>
+        <div class="col-12 col-md-3 mb-3 mt-3 footer-link">
+            <p class="mb-2 text-start fs-6 text-dark fw-bolder">University</p>
+            <ul class="list-unstyled text-start fs-6 text-dark">
+                <li class="mb-2"><a href="https://www.boun.edu.tr/" class="link-opacity-50 link-opacity-100-hover">Boğaziçi University</a></li>
+                <li class="mb-2"><a href="https://academiccalendar.boun.edu.tr/" class="link-opacity-50 link-opacity-100-hover">Academic Calendar</a></li>
+                <li class="mb-2"><a href="https://library.bogazici.edu.tr/" class="link-opacity-50 link-opacity-100-hover">Library</a></li>
+                <li class="mb-2"><a href="https://registration.boun.edu.tr/" class="link-opacity-50 link-opacity-100-hover">Registration</a></li>
+                <li class="mb-2"><a href="https://moodle.bogazici.edu.tr/" class="link-opacity-50 link-opacity-100-hover">Moodle</a></li>
+                <li class="mb-2"><a href="https://yadyok.bogazici.edu.tr/" class="link-opacity-50 link-opacity-100-hover">School of Foreign Languages</a></li>
+                <li class="mb-2"><a href="https://yemekhane.bogazici.edu.tr/" class="link-opacity-50 link-opacity-100-hover">Dining Hall</a></li>
+            </ul>
         </div>
         <div class="col-12 col-md-3 mb-3 mt-3 footer-link">
             <p class="mb-2 text-start fs-6 text-dark fw-bolder">Undergraduate</p>
             <ul class="list-unstyled text-start fs-6 text-dark">
-                <li class="mb-2"><a href="/undergraduate/double-major">Double Major</a></li>
-                <li class="mb-2"><a href="/undergraduate/electives">Elective Courses</a></li>
-                <li class="mb-2"><a href="/undergraduate/curriculum">Curriculum</a></li>
-                <li class="mb-2"><a href="/undergraduate/training">Industrial Training</a></li>
-                <li class="mb-2"><a href="/undergraduate/senior-projects">Senior Projects</a></li>
-                <li class="mb-2"><a href="/undergraduate/graduation">Graduation</a></li>
-                <li class="mb-2"><a href="/undergraduate/exchange">Exchange Programs</a></li>
-                <li class="mb-2"><a href="/undergraduate/minor-degree">Minor Degree Programs</a></li>
-            </ul>
-
-            <p class="mb-2 mt-4 text-start fs-6 text-dark fw-bolder">Graduate</p>
-            <ul class="list-unstyled text-start fs-6 text-dark">
-                <li class="mb-2"><a href="/graduate/phd-program">PHD Program</a></li>
-                <li class="mb-2"><a href="/graduate/ms-program">MS Program</a></li>
-                <li class="mb-2"><a href="/graduate/affiliated-programs">Other Programs</a></li>
+                <li class="mb-2"><a href="/undergraduate/double-major" class="link-opacity-50 link-opacity-100-hover">Double Major</a></li>
+                <li class="mb-2"><a href="/undergraduate/electives" class="link-opacity-50 link-opacity-100-hover">Elective Courses</a></li>
+                <li class="mb-2"><a href="/undergraduate/curriculum" class="link-opacity-50 link-opacity-100-hover">Curriculum</a></li>
+                <li class="mb-2"><a href="/undergraduate/training" class="link-opacity-50 link-opacity-100-hover">Industrial Training</a></li>
+                <li class="mb-2"><a href="/undergraduate/senior-projects" class="link-opacity-50 link-opacity-100-hover">Senior Projects</a></li>
+                <li class="mb-2"><a href="/undergraduate/graduation" class="link-opacity-50 link-opacity-100-hover">Graduation</a></li>
+                <li class="mb-2"><a href="/undergraduate/exchange" class="link-opacity-50 link-opacity-100-hover">Exchange Programs</a></li>
+                <li class="mb-2"><a href="/undergraduate/minor-degree" class="link-opacity-50 link-opacity-100-hover">Minor Degree Programs</a></li>
             </ul>
         </div>
         <div class="col-12 col-md-3 mb-3 mt-3 footer-link">
-            <p class="mb-2 text-start fs-6 text-dark fw-bolder">University</p>
+            <p class="mb-2 text-start fs-6 text-dark fw-bolder">Graduate</p>
             <ul class="list-unstyled text-start fs-6 text-dark">
-                <li class="mb-2"><a href="https://www.boun.edu.tr/">Boğaziçi University</a></li>
-                <li class="mb-2"><a href="https://academiccalendar.boun.edu.tr/">Academic Calendar</a></li>
-                <li class="mb-2"><a href="https://library.bogazici.edu.tr/">Library</a></li>
-                <li class="mb-2"><a href="https://registration.boun.edu.tr/">Registration</a></li>
-                <li class="mb-2"><a href="https://moodle.bogazici.edu.tr/">Moodle</a></li>
-                <li class="mb-2"><a href="https://yadyok.bogazici.edu.tr/">School of Foreign Languages</a></li>
-                <li class="mb-2"><a href="https://yemekhane.bogazici.edu.tr/">Dining Hall</a></li>
-            </ul>
-        </div>
-        <div class="col-12 col-md-3 mb-3 mt-3 footer-link">
-            <p class="mb-2 text-start fs-6 text-dark fw-bolder">Courses</p>
-            <ul class="list-unstyled text-start fs-6 text-dark">
-                <li class="mb-2"><a href="/courses/cmpe150">CMPE 150</a></li>
-                <li class="mb-2"><a href="/courses/cmpe160">CMPE 160</a></li>
-                <li class="mb-2"><a href="/courses/cmpe210">CMPE 210</a></li>
-                <li class="mb-2"><a href="/courses/cmpe220">CMPE 220</a></li>
-                <li class="mb-2"><a href="/courses/cmpe230">CMPE 230</a></li>
-                <li class="mb-2"><a href="/courses/cmpe240">CMPE 240</a></li>
-                <li class="mb-2"><a href="/courses/cmpe250">CMPE 250</a></li>
-                <li class="mb-2"><a href="/courses/cmpe260">CMPE 260</a></li>
-                <li class="mb-2"><a href="/courses/cmpe300">CMPE 300</a></li>
-                <li class="mb-2"><a href="/courses/cmpe321">CMPE 321</a></li>
-                <li class="mb-2"><a href="/courses/cmpe322">CMPE 322</a></li>
-                <li class="mb-2"><a href="/courses/cmpe343">CMPE 343</a></li>
-                <li class="mb-2"><a href="/courses/cmpe344">CMPE 344</a></li>
-                <li class="mb-2"><a href="/courses/cmpe350">CMPE 350</a></li>
-                <li class="mb-2"><a href="/courses/cmpe352">CMPE 352</a></li>
-                <li class="mb-2"><a href="/courses/cmpe443">CMPE 443</a></li>
+                <li class="mb-2"><a href="/graduate/phd-program" class="link-opacity-50 link-opacity-100-hover">PHD Program</a></li>
+                <li class="mb-2"><a href="/graduate/ms-program" class="link-opacity-50 link-opacity-100-hover">MS Program</a></li>
+                <li class="mb-2"><a href="/graduate/affiliated-programs" class="link-opacity-50 link-opacity-100-hover">Other Programs</a></li>
             </ul>
         </div>
         <div class="col-12 col-md-3 mb-3 mt-3 footer-link">
             <p class="mb-2 text-start fs-6 text-dark fw-bolder">Staff</p>
             <ul class="list-unstyled text-start fs-6 text-dark">
-                <li class="mb-2"><a href="/people/faculty">Faculty</a></li>
-                <li class="mb-2"><a href="/people/academic-staff">Academic Staff</a></li>
-                <li class="mb-2"><a href="/people/support-staff">Support Staff</a></li>
-            </ul>
-            <p class="mb-2 text-start fs-6 text-dark fw-bolder mt-4">Complementary Courses</p>
-            <ul class="list-unstyled text-start fs-6 text-dark">
-                <li class="mb-2"><a href="https://ie.bogazici.edu.tr/">Industrial Engineering</a></li>
-                <li class="mb-2"><a href="http://ce.boun.edu.tr/">Civil Engineering</a></li>
-                <li class="mb-2"><a href="https://ee.bogazici.edu.tr/">Electrical Engineering</a></li>
-                <li class="mb-2"><a href="https://me.bogazici.edu.tr/">Machine Engineering</a></li>
-                <li class="mb-2"><a href="https://phil.bogazici.edu.tr/">Philosophy</a></li>
-                <li class="mb-2"><a href="https://phys.bogazici.edu.tr/">Physics</a></li>
+                <li class="mb-2"><a href="/people/faculty" class="link-opacity-50 link-opacity-100-hover">Faculty</a></li>
+                <li class="mb-2"><a href="/people/academic-staff" class="link-opacity-50 link-opacity-100-hover">Academic Staff</a></li>
+                <li class="mb-2"><a href="/people/support-staff" class="link-opacity-50 link-opacity-100-hover">Support Staff</a></li>
             </ul>
         </div>
     </div>
