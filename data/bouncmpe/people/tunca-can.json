@@ -4,5 +4,6 @@
   "position": "doctor",
   "tags": ["parttime-faculty", "networkinginternetarchitecture"],
   "type": "person",
-  "thumbnail": "images/people/tunca_can.jpg"
+  "thumbnail": "images/people/tunca_can.jpg",
+  "research_areas": ["Networking", "Internet Architecture"]
 }
