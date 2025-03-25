@@ -1,91 +1,34 @@
 <footer class="container footer text-center p-4 text-primary border-top mt-5">
-      
-    {{ $university := where .Site.Menus.footer "Weight" "lt" 200 }}
-    {{ $undergrad   := where .Site.Menus.footer "Weight" "ge" 200 | where "Weight" "lt" 300 }}
-    {{ $graduate    := where .Site.Menus.footer "Weight" "ge" 300 | where "Weight" "lt" 400 }}  
-    {{ $staff       := where .Site.Menus.footer "Weight" "ge" 400 }}
-
-    
     <div class="row justify-content-start">
-        {{/* University Column */}}
-        {{ if gt (len $university) 0 }}
+      {{ range .Site.Menus.footer }}
         <div class="col-12 col-md-3 mb-3 mt-3">
-            <p class="mb-2 text-start fs-6 text-dark fw-bolder">{{ (index $university 0).Name }}</p>
+          <p class="mb-2 text-start fs-6 text-dark fw-bolder">{{ .Name }}</p>
+          {{ if .HasChildren }}
             <ul class="list-unstyled text-start fs-6 text-dark">
-                {{ range $i, $item := $university }}
-                    {{ if gt $i 0 }}
-                        <li class="mb-2">
-                            <a href="{{ $item.URL }}" class="link-opacity-50 link-opacity-100-hover">{{ $item.Name }}</a>
-                        </li>
-                    {{ end }}
-                {{ end }}
+              {{ range .Children }}
+                <li class="mb-2">
+                  <a href="{{ .URL }}" class="link-opacity-75 link-opacity-100-hover">{{ .Name }}</a>
+                </li>
+              {{ end }}
             </ul>
+          {{ end }}
         </div>
-        {{ end }}
-
-        {{/* Undergraduate Column */}}
-        {{ if gt (len $undergrad) 0 }}
-        <div class="col-12 col-md-3 mb-3 mt-3">
-            <p class="mb-2 text-start fs-6 text-dark fw-bolder">{{ (index $undergrad 0).Name }}</p>
-            <ul class="list-unstyled text-start fs-6 text-dark">
-                {{ range $i, $item := $undergrad }}
-                    {{ if gt $i 0 }}
-                        <li class="mb-2">
-                            <a href="{{ $item.URL }}" class="link-opacity-50 link-opacity-100-hover">{{ $item.Name }}</a>
-                        </li>
-                    {{ end }}
-                {{ end }}
-            </ul>
-        </div>
-        {{ end }}
-
-        {{/* Graduate Column */}}
-        {{ if gt (len $graduate) 0 }}
-        <div class="col-12 col-md-3 mb-3 mt-3">
-            <p class="mb-2 text-start fs-6 text-dark fw-bolder">{{ (index $graduate 0).Name }}</p>
-            <ul class="list-unstyled text-start fs-6 text-dark">
-                {{ range $i, $item := $graduate }}
-                    {{ if gt $i 0 }}
-                        <li class="mb-2">
-                            <a href="{{ $item.URL }}" class="link-opacity-50 link-opacity-100-hover">{{ $item.Name }}</a>
-                        </li>
-                    {{ end }}
-                {{ end }}
-            </ul>
-        </div>
-        {{ end }}
-
-        {{/* Staff Column */}}
-        {{ if gt (len $staff) 0 }}
-        <div class="col-12 col-md-3 mb-3 mt-3">
-            <p class="mb-2 text-start fs-6 text-dark fw-bolder">{{ (index $staff 0).Name }}</p>
-            <ul class="list-unstyled text-start fs-6 text-dark">
-                {{ range $i, $item := $staff }}
-                    {{ if gt $i 0 }}
-                        <li class="mb-2">
-                            <a href="{{ $item.URL }}" class="link-opacity-50 link-opacity-100-hover">{{ $item.Name }}</a>
-                        </li>
-                    {{ end }}
-                {{ end }}
-            </ul>
-        </div>
-        {{ end }}
+      {{ end }}
     </div>
-
+  
     <div class="d-flex flex-column flex-sm-row justify-content-between text-dark py-4 my-4 border-top">
-        <p class="fs-6 opacity-75">{{ replace site.Copyright "{year}" now.Year }}</p>
-        <ul class="list-unstyled d-flex">
-            {{ range site.Params.social }}
-            <li class="ms-3">
-                <a href="{{ .url }}">
-                    <img src="/icons/{{ .icon }}.svg" alt="{{ .identifier }}" width="24" height="24">
-                </a>
-            </li>
-            {{ end }}
-        </ul>
+      <p class="fs-6 opacity-75">{{ replace site.Copyright "{year}" now.Year }}</p>
+      <ul class="list-unstyled d-flex">
+        {{ range site.Params.social }}
+          <li class="ms-3">
+            <a href="{{ .url }}">
+              <img src="/icons/{{ .icon }}.svg" alt="{{ .identifier }}" width="24" height="24">
+            </a>
+          </li>
+        {{ end }}
+      </ul>
     </div>
-
     {{ if .Params.hasMermaid }}
-        {{ partial "footer/optional-scripts.html" . }}
+      {{ partial "footer/optional-scripts.html" . }}
     {{ end }}
-</footer>
+  </footer>
