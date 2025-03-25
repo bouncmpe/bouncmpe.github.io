@@ -1,0 +1,127 @@
+menu:
+  footer:
+    - name: University
+      url: /about/
+      identifier: university
+      weight: 100
+    - name: Bogazici University
+      url: https://www.boun.edu.tr/
+      identifier: bogazici-university
+      parent: university
+      weight: 101
+    - name: Academic Calendar
+      url: https://academiccalendar.boun.edu.tr/
+      identifier: academic-calendar
+      parent: university
+      weight: 102
+    - name: Library
+      url: https://library.bogazici.edu.tr/
+      identifier: library
+      parent: university
+      weight: 103
+    - name: Registration
+      url: https://registration.boun.edu.tr/
+      identifier: registration
+      parent: university
+      weight: 104
+    - name: Moodle
+      url: https://moodle.bogazici.edu.tr/
+      identifier: moodle
+      parent: university
+      weight: 105
+    - name: School of Foreign Languages
+      url: https://yadyok.bogazici.edu.tr/
+      identifier: school-of-foreign-languages
+      parent: university
+      weight: 106
+    - name: Dining Hall
+      url: https://yemekhane.bogazici.edu.tr/
+      identifier: dining-hall
+      parent: university
+      weight: 107
+
+    - name: Undergraduate
+      url: /undergraduate/
+      identifier: undergraduate-footer
+      weight: 200
+    - name: Double Major
+      url: /undergraduate/double-major
+      identifier: undergraduate-double-major-footer
+      parent: undergraduate-footer
+      weight: 201
+    - name: Elective Courses
+      url: /undergraduate/electives
+      identifier: undergraduate-elective-courses-footer
+      parent: undergraduate-footer
+      weight: 202
+    - name: Curriculum
+      url: /undergraduate/curriculum
+      identifier: undergraduate-curriculum-footer
+      parent: undergraduate-footer
+      weight: 203
+    - name: Industrial Training
+      url: /undergraduate/industrial-training
+      identifier: undergraduate-training-footer
+      parent: undergraduate-footer
+      weight: 204
+    - name: Senior Projects
+      url: /undergraduate/senior-projects
+      identifier: undergraduate-senior-projects-footer
+      parent: undergraduate-footer
+      weight: 205
+    - name: Graduation
+      url: /undergraduate/graduation
+      identifier: undergraduate-graduation-footer
+      parent: undergraduate-footer
+      weight: 206
+    - name: Exchange Programs
+      url: /undergraduate/exchange-programs
+      identifier: undergraduate-exchange-footer
+      parent: undergraduate-footer
+      weight: 207
+    - name: Minor Degree Programs
+      url: /undergraduate/minor-degree-programs
+      identifier: undergraduate-minor-degree-footer
+      parent: undergraduate-footer
+      weight: 208
+
+    - name: Graduate
+      url: /graduate/
+      identifier: graduate-footer
+      weight: 300
+    - name: PhD Program Overview
+      url: /graduate/phd-program
+      identifier: graduate-phd-program-footer
+      parent: graduate-footer
+      weight: 301
+    - name: MS Program Overview
+      url: /graduate/ms-program
+      identifier: graduate-ms-program-footer
+      parent: graduate-footer
+      weight: 302
+    - name: Other Affiliated Programs
+      url: /graduate/other-programs
+      identifier: graduate-affiliated-footer
+      parent: graduate-footer
+      weight: 303
+    
+    - name: Staff
+      url: /staff/
+      identifier: staff-footer
+      weight: 400
+    - name: Faculty
+      url: /people/faculty/
+      identifier: faculty-footer
+      parent: staff-footer
+      weight: 401
+    - name: Academic Staff
+      url: /people/academic-staff/
+      identifier: academic-staff-footer
+      parent: staff-footer
+      weight: 402
+    - name: Support Staff
+      url: /people/support-staff/
+      identifier: support-staff-footer
+      parent: staff-footer
+      weight: 403
+    

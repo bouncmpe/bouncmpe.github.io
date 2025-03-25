@@ -1,0 +1,127 @@
+menu:
+  footer:
+    - name: Üniversite
+      url: /about/
+      identifier: university
+      weight: 100
+    - name: Boğaziçi Üniversitesi
+      url: https://www.boun.edu.tr/
+      identifier: bogazici-university
+      parent: university
+      weight: 101
+    - name: Akademik Takvim
+      url: https://academiccalendar.boun.edu.tr/
+      identifier: academic-calendar
+      parent: university
+      weight: 102
+    - name: Kütüphane
+      url: https://library.bogazici.edu.tr/
+      identifier: library
+      parent: university
+      weight: 103
+    - name: Kayıt İşleri
+      url: https://registration.boun.edu.tr/
+      identifier: registration
+      parent: university
+      weight: 104
+    - name: Moodle
+      url: https://moodle.bogazici.edu.tr/
+      identifier: moodle
+      parent: university
+      weight: 105
+    - name: Yabancı Diller Yüksekokulu
+      url: https://yadyok.bogazici.edu.tr/
+      identifier: school-of-foreign-languages
+      parent: university
+      weight: 106
+    - name: Yemekhane
+      url: https://yemekhane.bogazici.edu.tr/
+      identifier: dining-hall
+      parent: university
+      weight: 107
+
+    - name: Lisans
+      url: /undergraduate/
+      identifier: undergraduate-footer
+      weight: 200
+    - name: Çift Ana Dal Programları
+      url: /undergraduate/double-major
+      identifier: undergraduate-double-major-footer
+      parent: undergraduate-footer
+      weight: 201
+    - name: Seçmeli Dersler
+      url: /undergraduate/electives
+      identifier: undergraduate-elective-courses-footer
+      parent: undergraduate-footer
+      weight: 202
+    - name: Öğretim Programı
+      url: /undergraduate/curriculum
+      identifier: undergraduate-curriculum-footer
+      parent: undergraduate-footer
+      weight: 203
+    - name: Endüstri Stajı
+      url: /undergraduate/industrial-training
+      identifier: undergraduate-training-footer
+      parent: undergraduate-footer
+      weight: 204
+    - name: Bitirme Projeleri
+      url: /undergraduate/senior-projects
+      identifier: undergraduate-senior-projects-footer
+      parent: undergraduate-footer
+      weight: 205
+    - name: Mezuniyet
+      url: /undergraduate/graduation
+      identifier: undergraduate-graduation-footer
+      parent: undergraduate-footer
+      weight: 206
+    - name: Değişim Programları
+      url: /undergraduate/exchange-programs
+      identifier: undergraduate-exchange-footer
+      parent: undergraduate-footer
+      weight: 207
+    - name: Yan Dal Programları
+      url: /undergraduate/minor-degree-programs
+      identifier: undergraduate-minor-degree-footer
+      parent: undergraduate-footer
+      weight: 208
+
+    - name: Lisansüstü
+      url: /graduate/
+      identifier: graduate-footer
+      weight: 300
+    - name: Doktora Programı
+      url: /graduate/phd-program
+      identifier: graduate-phd-program-footer
+      parent: graduate-footer
+      weight: 301
+    - name: Yüksek Lisans Programı
+      url: /graduate/ms-program
+      identifier: graduate-ms-program-footer
+      parent: graduate-footer
+      weight: 302
+    - name: Diğer İlişkili Programlar
+      url: /graduate/other-programs
+      identifier: graduate-affiliated-footer
+      parent: graduate-footer
+      weight: 303
+    
+    - name: Kadro
+      url: /staff/
+      identifier: staff-footer
+      weight: 400
+    - name: Öğretim Üyeleri
+      url: /people/faculty/
+      identifier: faculty-footer
+      parent: staff-footer
+      weight: 401
+    - name: Akademik Personel
+      url: /people/academic-staff/
+      identifier: academic-staff-footer
+      parent: staff-footer
+      weight: 402
+    - name: İdari ve Yardımcı Personel
+      url: /people/support-staff/
+      identifier: support-staff-footer
+      parent: staff-footer
+      weight: 403
+    
