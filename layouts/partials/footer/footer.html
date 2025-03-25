@@ -1,121 +1,91 @@
 <footer class="container footer text-center p-4 text-primary border-top mt-5">
-<<<<<<< HEAD
-=======
-    <!-- <style>
-        .footer-link a {
-            color: #31373d;
-            opacity: 0.6;
-        }
+      
+    {{ $university := where .Site.Menus.footer "Weight" "lt" 200 }}
+    {{ $undergrad   := where .Site.Menus.footer "Weight" "ge" 200 | where "Weight" "lt" 300 }}
+    {{ $graduate    := where .Site.Menus.footer "Weight" "ge" 300 | where "Weight" "lt" 400 }}  
+    {{ $staff       := where .Site.Menus.footer "Weight" "ge" 400 }}
 
-        .footer-link a:hover {
-            color: #31373d;
-            opacity: 1;
-        }
-    </style> -->
->>>>>>> 5f8c9f8 (minimze footer)
+    
     <div class="row justify-content-start">
-        {{ range site.Menus.footer }}
-        <div class="col-12 col-md-3 mb-3 d-none d-lg-block">
-            <h5 class="mb-4 text-start fs-6">{{- .Name -}}</h5>
-            <ul class="nav flex-column text-start">
-                {{ range .Children }}
-                <li class="nav-item mb-2">
-                    <a href="{{ .URL }}" class="nav-link p-0 link-light text-muted fs-6">{{- .Name -}}</a>
-                </li>
+        {{/* University Column */}}
+        {{ if gt (len $university) 0 }}
+        <div class="col-12 col-md-3 mb-3 mt-3">
+            <p class="mb-2 text-start fs-6 text-dark fw-bolder">{{ (index $university 0).Name }}</p>
+            <ul class="list-unstyled text-start fs-6 text-dark">
+                {{ range $i, $item := $university }}
+                    {{ if gt $i 0 }}
+                        <li class="mb-2">
+                            <a href="{{ $item.URL }}" class="link-opacity-50 link-opacity-100-hover">{{ $item.Name }}</a>
+                        </li>
+                    {{ end }}
                 {{ end }}
             </ul>
         </div>
         {{ end }}
-        <!-- New Columns -->
-        <div class="col-12 col-md-3 mb-3 mt-3 footer-link">
-            <p class="mb-2 text-start fs-6 text-dark fw-bolder">University</p>
+
+        {{/* Undergraduate Column */}}
+        {{ if gt (len $undergrad) 0 }}
+        <div class="col-12 col-md-3 mb-3 mt-3">
+            <p class="mb-2 text-start fs-6 text-dark fw-bolder">{{ (index $undergrad 0).Name }}</p>
             <ul class="list-unstyled text-start fs-6 text-dark">
-<<<<<<< HEAD
-                <li class="mb-2"><a href="https://www.boun.edu.tr/" class="link-opacity-50 link-opacity-100-hover">Boğaziçi University</a></li>
-                <li class="mb-2"><a href="https://academiccalendar.boun.edu.tr/" class="link-opacity-50 link-opacity-100-hover">Academic Calendar</a></li>
-                <li class="mb-2"><a href="https://library.bogazici.edu.tr/" class="link-opacity-50 link-opacity-100-hover">Library</a></li>
-                <li class="mb-2"><a href="https://registration.boun.edu.tr/" class="link-opacity-50 link-opacity-100-hover">Registration</a></li>
-                <li class="mb-2"><a href="https://moodle.bogazici.edu.tr/" class="link-opacity-50 link-opacity-100-hover">Moodle</a></li>
-                <li class="mb-2"><a href="https://yadyok.bogazici.edu.tr/" class="link-opacity-50 link-opacity-100-hover">School of Foreign Languages</a></li>
-                <li class="mb-2"><a href="https://yemekhane.bogazici.edu.tr/" class="link-opacity-50 link-opacity-100-hover">Dining Hall</a></li>
-=======
-                <li class="mb-2 link-opacity-60 link-opacity-100-hover"><a href="https://www.boun.edu.tr/">Boğaziçi University</a></li>
-                <li class="mb-2 link-opacity-60 link-opacity-100-hover"><a href="https://academiccalendar.boun.edu.tr/">Academic Calendar</a></li>
-                <li class="mb-2 link-opacity-60 link-opacity-100-hover"><a href="https://library.bogazici.edu.tr/">Library</a></li>
-                <li class="mb-2 link-opacity-60 link-opacity-100-hover"><a href="https://registration.boun.edu.tr/">Registration</a></li>
-                <li class="mb-2 link-opacity-60 link-opacity-100-hover"><a href="https://moodle.bogazici.edu.tr/">Moodle</a></li>
-                <li class="mb-2 link-opacity-60 link-opacity-100-hover"><a href="https://yadyok.bogazici.edu.tr/">School of Foreign Languages</a></li>
-                <li class="mb-2 link-opacity-60 link-opacity-100-hover"><a href="https://yemekhane.bogazici.edu.tr/">Dining Hall</a></li>
->>>>>>> 5f8c9f8 (minimze footer)
+                {{ range $i, $item := $undergrad }}
+                    {{ if gt $i 0 }}
+                        <li class="mb-2">
+                            <a href="{{ $item.URL }}" class="link-opacity-50 link-opacity-100-hover">{{ $item.Name }}</a>
+                        </li>
+                    {{ end }}
+                {{ end }}
             </ul>
         </div>
-        <div class="col-12 col-md-3 mb-3 mt-3 footer-link">
-            <p class="mb-2 text-start fs-6 text-dark fw-bolder">Undergraduate</p>
+        {{ end }}
+
+        {{/* Graduate Column */}}
+        {{ if gt (len $graduate) 0 }}
+        <div class="col-12 col-md-3 mb-3 mt-3">
+            <p class="mb-2 text-start fs-6 text-dark fw-bolder">{{ (index $graduate 0).Name }}</p>
             <ul class="list-unstyled text-start fs-6 text-dark">
-<<<<<<< HEAD
-                <li class="mb-2"><a href="/undergraduate/double-major" class="link-opacity-50 link-opacity-100-hover">Double Major</a></li>
-                <li class="mb-2"><a href="/undergraduate/electives" class="link-opacity-50 link-opacity-100-hover">Elective Courses</a></li>
-                <li class="mb-2"><a href="/undergraduate/curriculum" class="link-opacity-50 link-opacity-100-hover">Curriculum</a></li>
-                <li class="mb-2"><a href="/undergraduate/training" class="link-opacity-50 link-opacity-100-hover">Industrial Training</a></li>
-                <li class="mb-2"><a href="/undergraduate/senior-projects" class="link-opacity-50 link-opacity-100-hover">Senior Projects</a></li>
-                <li class="mb-2"><a href="/undergraduate/graduation" class="link-opacity-50 link-opacity-100-hover">Graduation</a></li>
-                <li class="mb-2"><a href="/undergraduate/exchange" class="link-opacity-50 link-opacity-100-hover">Exchange Programs</a></li>
-                <li class="mb-2"><a href="/undergraduate/minor-degree" class="link-opacity-50 link-opacity-100-hover">Minor Degree Programs</a></li>
-=======
-                <li class="mb-2 link-opacity-60 link-opacity-100-hover"><a href="/undergraduate/double-major">Double Major</a></li>
-                <li class="mb-2 link-opacity-60 link-opacity-100-hover"><a href="/undergraduate/electives">Elective Courses</a></li>
-                <li class="mb-2 link-opacity-60 link-opacity-100-hover"><a href="/undergraduate/curriculum">Curriculum</a></li>
-                <li class="mb-2 link-opacity-60 link-opacity-100-hover"><a href="/undergraduate/training">Industrial Training</a></li>
-                <li class="mb-2 link-opacity-60 link-opacity-100-hover"><a href="/undergraduate/senior-projects">Senior Projects</a></li>
-                <li class="mb-2 link-opacity-60 link-opacity-100-hover"><a href="/undergraduate/graduation">Graduation</a></li>
-                <li class="mb-2 link-opacity-60 link-opacity-100-hover"><a href="/undergraduate/exchange">Exchange Programs</a></li>
-                <li class="mb-2 link-opacity-60 link-opacity-100-hover"><a href="/undergraduate/minor-degree">Minor Degree Programs</a></li>
->>>>>>> 5f8c9f8 (minimze footer)
+                {{ range $i, $item := $graduate }}
+                    {{ if gt $i 0 }}
+                        <li class="mb-2">
+                            <a href="{{ $item.URL }}" class="link-opacity-50 link-opacity-100-hover">{{ $item.Name }}</a>
+                        </li>
+                    {{ end }}
+                {{ end }}
             </ul>
         </div>
-        <div class="col-12 col-md-3 mb-3 mt-3 footer-link">
-            <p class="mb-2 text-start fs-6 text-dark fw-bolder">Graduate</p>
+        {{ end }}
+
+        {{/* Staff Column */}}
+        {{ if gt (len $staff) 0 }}
+        <div class="col-12 col-md-3 mb-3 mt-3">
+            <p class="mb-2 text-start fs-6 text-dark fw-bolder">{{ (index $staff 0).Name }}</p>
             <ul class="list-unstyled text-start fs-6 text-dark">
-<<<<<<< HEAD
-                <li class="mb-2"><a href="/graduate/phd-program" class="link-opacity-50 link-opacity-100-hover">PHD Program</a></li>
-                <li class="mb-2"><a href="/graduate/ms-program" class="link-opacity-50 link-opacity-100-hover">MS Program</a></li>
-                <li class="mb-2"><a href="/graduate/affiliated-programs" class="link-opacity-50 link-opacity-100-hover">Other Programs</a></li>
-=======
-                <li class="mb-2 link-opacity-60 link-opacity-100-hover"><a href="/graduate/phd-program">PHD Program</a></li>
-                <li class="mb-2 link-opacity-60 link-opacity-100-hover"><a href="/graduate/ms-program">MS Program</a></li>
-                <li class="mb-2 link-opacity-60 link-opacity-100-hover"><a href="/graduate/affiliated-programs">Other Programs</a></li>
->>>>>>> 5f8c9f8 (minimze footer)
+                {{ range $i, $item := $staff }}
+                    {{ if gt $i 0 }}
+                        <li class="mb-2">
+                            <a href="{{ $item.URL }}" class="link-opacity-50 link-opacity-100-hover">{{ $item.Name }}</a>
+                        </li>
+                    {{ end }}
+                {{ end }}
             </ul>
         </div>
-        <div class="col-12 col-md-3 mb-3 mt-3 footer-link">
-            <p class="mb-2 text-start fs-6 text-dark fw-bolder">Staff</p>
-            <ul class="list-unstyled text-start fs-6 text-dark">
-<<<<<<< HEAD
-                <li class="mb-2"><a href="/people/faculty" class="link-opacity-50 link-opacity-100-hover">Faculty</a></li>
-                <li class="mb-2"><a href="/people/academic-staff" class="link-opacity-50 link-opacity-100-hover">Academic Staff</a></li>
-                <li class="mb-2"><a href="/people/support-staff" class="link-opacity-50 link-opacity-100-hover">Support Staff</a></li>
-=======
-                <li class="mb-2 link-opacity-60 link-opacity-100-hover"><a href="/people/faculty">Faculty</a></li>
-                <li class="mb-2 link-opacity-60 link-opacity-100-hover"><a href="/people/academic-staff">Academic Staff</a></li>
-                <li class="mb-2 link-opacity-60 link-opacity-100-hover"><a href="/people/support-staff">Support Staff</a></li>
->>>>>>> 5f8c9f8 (minimze footer)
-            </ul>
-        </div>
+        {{ end }}
     </div>
+
     <div class="d-flex flex-column flex-sm-row justify-content-between text-dark py-4 my-4 border-top">
         <p class="fs-6 opacity-75">{{ replace site.Copyright "{year}" now.Year }}</p>
         <ul class="list-unstyled d-flex">
-            {{range site.Params.social }}
+            {{ range site.Params.social }}
             <li class="ms-3">
-                <a href="{{- .url -}}">
-                    <img src="/icons/{{ .icon }}.svg" alt="{{- .identifier -}}" width="24" height="24">
+                <a href="{{ .url }}">
+                    <img src="/icons/{{ .icon }}.svg" alt="{{ .identifier }}" width="24" height="24">
                 </a>
             </li>
             {{ end }}
         </ul>
     </div>
+
     {{ if .Params.hasMermaid }}
         {{ partial "footer/optional-scripts.html" . }}
     {{ end }}
-
 </footer>
