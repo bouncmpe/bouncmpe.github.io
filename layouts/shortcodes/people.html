@@ -24,10 +24,8 @@
     {{ $retouched := $image_resource.Fill $image_settings }}
     {{ $thumbnail = $retouched.RelPermalink }}
     {{ end }}
-    <div class="card mb-4 h-100 shadow-sm" 
-    style="max-width: 540px; border-radius: 20px; background: linear-gradient(145deg, #f1f3f6, #ffffff); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05), inset 0 1px 1px rgba(255,255,255,0.6); transition: transform 0.3s ease, box-shadow 0.3s ease;"
-    onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 8px 24px rgba(0,0,0,0.1)'"
-    onmouseout="this.style.transform='none'; this.style.boxShadow='0 4px 12px rgba(0, 0, 0, 0.05), inset 0 1px 1px rgba(255,255,255,0.6)'">
+    <div class="card mb-4 h-100" 
+    style="background: transparent; box-shadow: none; border: none; transition: none;">
         <div class="row g-0">
           <div class="col-4 mb-0">
             <img src="{{ $thumbnail }}" alt="{{ .name | anchorize }}-thumbnail" 
@@ -42,23 +40,42 @@
                 {{ . | i18n | title }}
               </p>
               {{ end }}        
-              <p class="d-block">
-              {{ with .email }}
-                <a href="mailto:{{ . }}" class="text-muted">
-                  <img src="/icons/envelope-fill.svg" alt="" width="24" height="24">
-                </a>
+              <div class="d-flex flex-column">
+                <!-- Icons Row -->
+                <div class="d-flex flex-row mb-1">
+                  {{ with .email }}
+                    <a href="mailto:{{ . }}" class="text-muted me-2">
+                      <img src="/icons/envelope-fill.svg" alt="" width="23" height="23">
+                    </a>
+                  {{ end }}
+                  {{ with .homepage }}
+                    <a href="{{ . }}" class="text-muted me-2">
+                      <img src="/icons/globe2.svg" alt="" width="23" height="23">
+                    </a>
+                  {{ end }}
+                  {{ with .github }}
+                    <a href="https://github.com/{{ . }}" class="text-muted me-2">
+                      <img src="/icons/github.svg" alt="" width="23" height="23">
+                    </a>
+                  {{ end }}
+                </div>
+              
+                <!-- Hashtags Row (inline) -->
+                {{ with .research_areas }}
+                <div class="d-flex flex-wrap align-items-center" style="gap: 8px; margin-top: 4px;">
+                  <span style="font-size: 0.85em; font-weight: normal; color: #212529;">Research:</span>
+                  {{ range $key, $value := . }}
+                    <a href="/research/{{ $value | urlize }}" 
+                      style="font-size: 0.85em; font-weight: bold; color: #212529; text-decoration: none;">
+                      #{{ $key }}
+                    </a>
+                  {{ end }}
+                </div>
               {{ end }}
-              {{ with .homepage }}
-              <a href="{{ . }}" class="text-muted">
-                <img src="/icons/globe2.svg" alt="" width="24" height="24">
-              </a>
-              {{ end }}
-              {{ with .github }}
-              <a href="https://github.com/{{ . }}" class="text-muted">
-                <img src="/icons/github.svg" alt="" width="24" height="24">
-              </a>
-              {{ end }}
-              </p>
+
+              </div>
+              
+              
             </div>
           </div>
         </div>
