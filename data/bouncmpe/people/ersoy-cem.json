@@ -16,5 +16,9 @@
     "paralleldistributedcloud"
   ],
   "type": "person",
-  "thumbnail": "images/people/ersoy_cem.jpg"
+  "thumbnail": "images/people/ersoy_cem.jpg",
+  "research_areas": {
+    "NIA": "networking-internet-architecture",
+    "PDCC": "parallel-distributed-cloud"
+  }
 }

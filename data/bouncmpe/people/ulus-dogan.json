@@ -7,5 +7,11 @@
   "linkedin": "doganulus",
   "homepage": "/u/dogan.ulus",
   "type": "person",
-  "thumbnail": "images/people/ulus_dogan.jpg"
+  "thumbnail": "images/people/ulus_dogan.jpg",
+  "research_areas": {
+    "SE": "software-engineering",
+    "CSys": "computer-systems",
+    "RC": "robotics-control",
+    "TA": "theory-algorithms"
+  }
 }

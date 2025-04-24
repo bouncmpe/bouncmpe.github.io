@@ -6,58 +6,79 @@
 {{ $ctx.Set "tag" $tag }}
 {{ $ctx.Set "members" slice }}
 {{ range $key, $value := site.Data.bouncmpe.people }}
-{{if intersect $value.tags (slice $tag) }}
-{{ $ctx.Set "members" ($ctx.Get "members" | append $value) }}
-{{ end }}
+  {{ if intersect $value.tags (slice $tag) }}
+    {{ $ctx.Set "members" ($ctx.Get "members" | append $value) }}
+  {{ end }}
 {{ end }}
 {{ $members := $ctx.Get "members" }}
 
 <div class="row row-cols-1 row-cols-xl-{{ $columns }} g-2 my-4">
-{{ range $members }}
-<div class="col">
+  {{ range $members }}
+  <div class="col">
     {{ $thumbnail := .thumbnail | default "images/person.png" }}
     {{ $image_settings := site.Params.people.image_settings | default "500x500 webp q90 smart" }}
 
     {{ $image_resource := resources.Get $thumbnail }}
-
     {{ if $image_resource }}
-    {{ $retouched := $image_resource.Fill $image_settings }}
-    {{ $thumbnail = $retouched.RelPermalink }}
+      {{ $retouched := $image_resource.Fill $image_settings }}
+      {{ $thumbnail = $retouched.RelPermalink }}
     {{ end }}
-    <div class="card mb-3 border-0 h-100" style="max-width: 540px;">
-        <div class="row g-0">
-          <div class="col-4 mb-0 d d-none d-xl-block">
-            <img src="{{ $thumbnail }}" alt="{{ .name | anchorize }}-thumbnail" class="img-fluid rounded-5 shadow" style="width: 100%; max-height: 145px; object-fit: cover; object-position: center;">
-          </div>
-          <div class="col-8 align-middle" style="overflow-x: scroll; white-space: nowrap;">
-            <div class="card-body align-middle">
-              <h5 class="my-2">{{ .name | title }}</h5>
-              {{ with .position }}
+
+    <div class="card mb-4 h-100" 
+         style="background: transparent; box-shadow: none; border: none; transition: none;">
+      <div class="row g-0">
+        <div class="col-4 mb-0">
+          <img src="{{ $thumbnail }}" alt="{{ .name | anchorize }}-thumbnail" 
+               class="img-fluid shadow" 
+               style="width: 100%; aspect-ratio: 1/1; border-radius: 18px; object-fit: cover; object-position: center;">
+        </div>
+
+        <div class="col-8 align-middle" style="overflow-x: hidden;">
+          <div class="card-body align-middle">
+            <h5 class="my-2">{{ .name | title }}</h5>
+
+            {{ with .position }}
               <p class="mb-1">
                 {{ . | i18n | title }}
               </p>
-              {{ end }}        
-              <p class="d-block">
+            {{ end }}
+
+            <!-- Icons Row -->
+            <div class="d-flex flex-row mb-1">
               {{ with .email }}
-                <a href="mailto:{{ . }}" class="text-muted">
-                  <img src="/icons/envelope-fill.svg" alt="" width="24" height="24">
+                <a href="mailto:{{ . }}" class="text-muted me-2">
+                  <img src="/icons/envelope-fill.svg" alt="" width="23" height="23">
                 </a>
               {{ end }}
               {{ with .homepage }}
-              <a href="{{ . }}" class="text-muted">
-                <img src="/icons/globe2.svg" alt="" width="24" height="24">
-              </a>
+                <a href="{{ . }}" class="text-muted me-2">
+                  <img src="/icons/globe2.svg" alt="" width="23" height="23">
+                </a>
               {{ end }}
               {{ with .github }}
-              <a href="https://github.com/{{ . }}" class="text-muted">
-                <img src="/icons/github.svg" alt="" width="24" height="24">
-              </a>
+                <a href="https://github.com/{{ . }}" class="text-muted me-2">
+                  <img src="/icons/github.svg" alt="" width="23" height="23">
+                </a>
               {{ end }}
-              </p>
             </div>
+
+            <!-- Hashtag Row -->
+            {{ with .research_areas }}
+              <div class="d-flex flex-wrap align-items-center" style="gap: 8px; margin-top: 4px;">
+                <span style="font-size: 0.85em; font-weight: bold; color: #212529;">Research:</span>
+                {{ range $key, $value := . }}
+                  <a href="/research/{{ $value | urlize }}" 
+                     style="font-size: 0.85em; font-weight: normal; color: #212529; text-decoration: none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">
+                    #{{ $key }}
+                  </a>
+                {{ end }}
+              </div>
+            {{ end }}
+
           </div>
         </div>
       </div>
-</div>
-{{ end }}
+    </div>
+  </div>
+  {{ end }}
 </div>
