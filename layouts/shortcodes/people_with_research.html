@@ -15,11 +15,11 @@
 <div class="container">
   <div class="row g-3">
     {{ range $members }}
-    <div class="col-md-6">
-      <div class="card d-flex flex-row align-items-center shadow-sm bg-white" 
-           style="max-width: 350px; margin: auto; border: 1px solid rgba(0, 0, 0, 0.1); border-radius: 12px;">
+    <div class="col-12">
+      <div class="card d-flex flex-row align-items-center bg-white" 
+           style="max-width: 100%; margin: auto; border: none; border-radius: 0; box-shadow: none;">
         <div class="flex-shrink-0 d-flex align-items-center justify-content-center" 
-             style="width: 120px; height: 120px; overflow: hidden; padding-left: 10px;">
+             style="width: 150px; height: 150px; overflow: hidden; padding-left: 15px;">
           {{ $thumbnail := .thumbnail | default "images/person.png" }}
           {{ $image_settings := site.Params.people.image_settings | default "500x500 webp q90 smart" }}
           {{ $image_resource := resources.Get $thumbnail }}
@@ -30,9 +30,17 @@
           <img src="{{ $thumbnail }}" alt="{{ .name | anchorize }}-thumbnail" class="img-fluid" 
                style="border-radius: 10%; object-fit: cover; object-position: center;">
         </div>
-        <div class="card-body">
-          <h5 class="fw-bold mb-1">{{ .name | title }}</h5>
-          <p class="text-muted mb-2">{{ .position | i18n | title }}</p>
+        <div class="card-body" style="padding: 20px 25px;">
+          <h5 class="fw-bold mb-1" style="font-size: 1.4rem; color: #333333;">{{ .name | title }}</h5>
+          <p class="mb-2" style="font-size: 1.1rem; color: #666666;">{{ .position | i18n | title }}</p>
+          {{ with .research_areas }}
+          <div class="research-areas mb-3" style="color: #555555; font-size: 0.95rem; line-height: 1.6;">
+            {{ $lastIndex := sub (len .) 1 }}
+            {{ range $index, $area := . }}
+              <span>{{ $area | title }}</span>{{ if ne $index $lastIndex }}, {{ end }}
+            {{ end }}
+          </div>
+          {{ end }}
           <div>
             {{ with .email }}
             <a href="mailto:{{ . }}" class="me-2">
