@@ -14,5 +14,6 @@
     "theoryalgorithms"
   ],
   "type": "person",
-  "thumbnail": "images/people/say_cem.jpg"
+  "thumbnail": "images/people/say_cem.jpg",
+  "research_areas": ["Artificial Intelligence", "Theory Algorithms"]
 }
