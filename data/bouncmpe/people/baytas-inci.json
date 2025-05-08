@@ -5,5 +5,9 @@
   "position": "assistant-professor",
   "tags": ["faculty", "vicechair", "cmpe343", "cmpe462", "advisor-4", "bioinformatics", "machinelearning"],
   "type": "person",
-  "thumbnail": "images/people/baytas_inci.jpg"
+  "thumbnail": "images/people/baytas_inci.jpg",
+  "research_areas": {
+    "BIO": "bioinformatics",
+    "ML": "machine-learning"
+  }
 }

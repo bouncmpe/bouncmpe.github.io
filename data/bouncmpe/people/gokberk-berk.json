@@ -13,5 +13,9 @@
     "machinelearning"
   ],
   "type": "person",
-  "thumbnail": "images/people/gokberk_berk.jpg"
+  "thumbnail": "images/people/gokberk_berk.jpg",
+  "research_areas": {
+    "ML": "machine-learning",
+    "CVPR": "computer-vision-pattern-recognition"
+  }
 }
