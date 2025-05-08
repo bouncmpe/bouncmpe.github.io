@@ -1,7 +1,7 @@
 ---
 type: news
-title: Tebrikler Dr. Goshgar Can İsmayilov!
-description: Goshgar Can İsmayilov doktora tezini başarıyla savundu.
+title: Tebrikler Dr. Goshgar Can Ismayilov!
+description: Goshgar Can Ismayilov doktora tezini başarıyla savundu.
 featured: false
 date: 2025-05-02
 thumbnail: uploads/ismayilov-phd-defense.png

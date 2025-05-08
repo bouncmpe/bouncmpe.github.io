@@ -1,7 +1,7 @@
 ---
 type: news
-title: Congratulations Dr. Goshgar Can İsmayilov!
-description: Goshgar Can İsmayilov has successfully defended his PhD thesis.
+title: Congratulations Dr. Goshgar Can Ismayilov!
+description: Goshgar Can Ismayilov has successfully defended his PhD thesis.
 featured: false
 date: 2025-05-02
 thumbnail: uploads/ismayilov-phd-defense.png
