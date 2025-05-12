@@ -2,7 +2,7 @@
   "email": "onurgu@bogazici.edu.tr",
   "name": "Onur Güngör",
   "position": "doctor",
-  "tags": ["parttime-faculty", "computationlanguage"],
+  "tags": ["parttime-faculty", "computation-language"],
   "type": "person",
   "thumbnail": "images/people/gungor_onur.jpg"
 }
