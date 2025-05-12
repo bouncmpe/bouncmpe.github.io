@@ -2,16 +2,10 @@
   "email": "dogan.ulus@bogazici.edu.tr",
   "name": "Doğan Ulus",
   "position": "assistant-professor",
-  "tags": ["faculty", "system", "web", "cmpe344", "cmpe434", "advisor-3", "computersystems", "softwareengineering", "roboticscontrol", "theoryalgorithms"],
+  "tags": ["faculty", "system", "web", "cmpe344", "cmpe434", "advisor-3", "computer-systems", "software-engineering", "robotics-control", "theory-algorithms"],
   "github": "doganulus",
   "linkedin": "doganulus",
   "homepage": "/u/dogan.ulus",
   "type": "person",
-  "thumbnail": "images/people/ulus_dogan.jpg",
-  "research_areas": {
-    "SE": "software-engineering",
-    "CSys": "computer-systems",
-    "RC": "robotics-control",
-    "TA": "theory-algorithms"
-  }
+  "thumbnail": "images/people/ulus_dogan.jpg"
 }

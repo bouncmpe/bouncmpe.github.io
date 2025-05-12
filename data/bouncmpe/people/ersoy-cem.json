@@ -12,13 +12,9 @@
     "cmpe475",
     "former-cmpe150",
     "advisor-1",
-    "networkinginternetarchitecture",
-    "paralleldistributedcloud"
+    "networking-internet-architecture",
+    "parallel-distributed-cloud"
   ],
   "type": "person",
-  "thumbnail": "images/people/ersoy_cem.jpg",
-  "research_areas": {
-    "NIA": "networking-internet-architecture",
-    "PDCC": "parallel-distributed-cloud"
-  }
+  "thumbnail": "images/people/ersoy_cem.jpg"
 }
