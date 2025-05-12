@@ -63,17 +63,53 @@
             </div>
 
             <!-- Hashtag Row -->
-            {{ with .research_areas }}
-              <div class="d-flex flex-wrap align-items-center" style="gap: 8px; margin-top: 4px;">
-                <span style="font-size: 0.85em; font-weight: bold; color: #212529;">Research:</span>
-                {{ range $key, $value := . }}
-                  <a href="/research/{{ $value | urlize }}" 
-                     style="font-size: 0.85em; font-weight: normal; color: #212529; text-decoration: none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">
-                    #{{ $key }}
-                  </a>
+            {{ $researchMap := dict
+              "softwareengineering" (dict "abbr" "SWE" "slug" "software-engineering")
+              "computersystems" (dict "abbr" "CS" "slug" "computer-systems")
+              "roboticscontrol" (dict "abbr" "RC" "slug" "robotics-control")
+              "theoryalgorithms" (dict "abbr" "TA" "slug" "theory-algorithms")
+              "artificialintelligence" (dict "abbr" "AI" "slug" "artificial-intelligence")
+              "machinelearning" (dict "abbr" "ML" "slug" "machine-learning")
+              "computervisionpatternrecognition" (dict "abbr" "CVPR" "slug" "computer-vision-pattern-recognition")
+              "networkinginternetarchitecture" (dict "abbr" "Net" "slug" "networking-internet-architecture")
+              "paralleldistributedcloud" (dict "abbr" "PDC" "slug" "parallel-distributed-cloud")
+              "bioinformatics" (dict "abbr" "Bio" "slug" "bioinformatics")
+            }}
+
+            {{ $tagCount := len .tags }}
+            {{ if ge $tagCount 1 }}
+              {{ $lastTags := slice }}
+              {{ range $i, $tag := .tags }}
+                {{ if ge $i (sub $tagCount 3) }}
+                  {{ $lastTags = $lastTags | append $tag }}
                 {{ end }}
-              </div>
+              {{ end }}
+
+              {{ $researchTags := slice }}
+              {{ range $lastTags }}
+                {{ if $entry := index $researchMap . }}
+                  {{ $researchTags = $researchTags | append (dict "key" . "abbr" ($entry.abbr) "slug" ($entry.slug)) }}
+                {{ end }}
+              {{ end }}
+
+              {{ if gt (len $researchTags) 0 }}
+                <div class="d-flex flex-wrap align-items-center" style="gap: 8px; margin-top: 4px;">
+                  <!-- <span style="font-size: 0.85em; font-weight: bold; color: #212529;">Research:</span> -->
+                  {{ range $researchTags }}
+                    <a href="https://cmpe.bogazici.edu.tr/research/{{ .slug }}/" 
+                      title="{{ .key }}" 
+                      style="font-size: 0.85em; font-weight: normal; color: #212529; text-decoration: none;" 
+                      onmouseover="this.style.textDecoration='underline'" 
+                      onmouseout="this.style.textDecoration='none'">
+                      #{{ .abbr }}
+                    </a>
+                  {{ end }}
+                </div>
+              {{ end }}
             {{ end }}
+
+
+            
 
           </div>
         </div>
