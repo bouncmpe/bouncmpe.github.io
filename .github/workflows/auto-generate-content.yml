@@ -1,23 +1,35 @@
 name: Auto Generate Content from Issues
 
 on:
-  issues:
-    types: [opened]
+  workflow_dispatch:
+    inputs:
+      issue_number:
+        description: 'GitHub Issue Number'
+        required: true
+        type: string
 
 jobs:
   check-and-log:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check issue labels
-        if: contains(github.event.issue.labels.*.name, 'automation')
-        run: |
-          echo "Automation issue detected"
-          echo "Issue title: ${{ github.event.issue.title }}"
-          echo "Issue body: ${{ github.event.issue.body }}"
-          echo "Labels: ${{ toJson(github.event.issue.labels) }}"
+      - name: Fetch Issue Data
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const issue_number = parseInt(core.getInput("issue_number"));
+            const issue = await github.rest.issues.get({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issue_number
+            });
 
-      - name: Skip non-automation issues
-        if: "!contains(github.event.issue.labels.*.name, 'automation')"
-        run: |
-          echo "This issue is not labeled for automation. Skipping."
+            const labels = issue.data.labels.map(l => l.name);
+            if (!labels.includes("automation")) {
+              core.setFailed("Issue does not have 'automation' label.");
+              return;
+            }
+
+            console.log("Title:", issue.data.title);
+            console.log("Body:", issue.data.body);
+            console.log("Labels:", labels);
