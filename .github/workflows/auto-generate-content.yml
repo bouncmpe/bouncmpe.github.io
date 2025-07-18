@@ -30,6 +30,7 @@ jobs:
               return;
             }
 
+            console.log("✅ Automation issue detected");
             console.log("Title:", issue.data.title);
             console.log("Body:", issue.data.body);
             console.log("Labels:", labels);
