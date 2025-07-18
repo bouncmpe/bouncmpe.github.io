@@ -1,6 +1,6 @@
 name: Submit News
 description: Submit a news item to be published on the CMPE website.
-labels: [news]
+labels: [news, automation]
 body:
   - type: input
     id: title
