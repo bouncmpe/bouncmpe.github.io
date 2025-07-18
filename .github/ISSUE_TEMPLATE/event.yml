@@ -1,6 +1,6 @@
 name: Submit Event
 description: Submit an event to be published on the CMPE website.
-labels: [event]
+labels: [event, automation]
 body:
   - type: input
     id: title
