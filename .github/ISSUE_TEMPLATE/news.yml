@@ -1,0 +1,39 @@
+name: Submit News
+description: Submit a news item to be published on the CMPE website.
+labels: [news]
+body:
+  - type: input
+    id: title
+    attributes:
+      label: Title
+      description: Short title for the news
+      placeholder: e.g. Turna Turkish Language Model
+    validations:
+      required: true
+
+  - type: input
+    id: date
+    attributes:
+      label: Date
+      description: Date in YYYY-MM-DD format
+      placeholder: e.g. 2025-07-18
+    validations:
+      required: true
+
+  - type: textarea
+    id: thumbnail
+    attributes:
+      label: Thumbnail Image
+      description: Upload an image or paste a direct URL. If you upload using GitHub UI, copy its Markdown URL.
+      placeholder: e.g. ![image](https://user-images.githubusercontent.com/123456/your-image.png)
+    validations:
+      required: false
+
+  - type: textarea
+    id: content
+    attributes:
+      label: Description (EN)
+      description: Detailed English content of the news (markdown allowed)
+      placeholder: Write your content here...
+    validations:
+      required: false
