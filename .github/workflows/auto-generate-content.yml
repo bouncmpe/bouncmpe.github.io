@@ -16,7 +16,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: 3.10
+          python-version: "3.10"  # Fixed to specific supported version
 
       - name: Generate content
         env:
@@ -29,7 +29,7 @@ jobs:
           import os
           import json
           from datetime import datetime
-          from urllib.parse import urlparse
+          import sys
 
           # Helper functions
           def extract_field(body, label):
@@ -41,8 +41,12 @@ jobs:
               return re.sub(r'[^a-z0-9]+', '-', text.lower()).strip('-')
 
           def extract_image_url(markdown):
+              # Match either markdown or plain URL
               match = re.search(r'!\[.*?\]\((.*?)\)', markdown)
-              return match.group(1) if match else markdown
+              if match:
+                  return match.group(1)
+              # If no markdown found, return as-is (might be direct URL)
+              return markdown.strip()
 
           # Load issue data
           body = os.environ['ISSUE_BODY']
@@ -55,18 +59,22 @@ jobs:
 
           if 'event' in label_names:
               # Event fields
-              event_type = "event"
               name = extract_field(body, "Event Name")
               datetime_str = extract_field(body, "Start Date and Time")
               duration = extract_field(body, "Duration")
               location = extract_field(body, "Location")
               image = extract_field(body, "Poster or Cover Image")
               content_en = extract_field(body, "Description (EN)")
-              content_tr = extract_field(body, "Description (TR)")
+              content_tr = extract_field(body, "Description (TR)") or ""
 
-              # Format folder name (2025-07-04t19-00-00-event-title)
-              dt = datetime.fromisoformat(datetime_str.replace('Z', '+00:00'))
-              folder_name = dt.strftime("%Y-%m-%dt%H-%M-%S") + f"-{slug}"
+              # Format folder name (2025-01-10t15-00-00-yigit-yildirim)
+              try:
+                  dt = datetime.fromisoformat(datetime_str.replace('Z', '+00:00'))
+                  folder_name = dt.strftime("%Y-%m-%dt%H-%M-%S") + f"-{slug}"
+              except:
+                  print(f"Error parsing datetime: {datetime_str}")
+                  folder_name = f"event-{datetime.now().strftime('%Y%m%d%H%M%S')}-{slug}"
+              
               dir_path = f"content/events/{folder_name}"
 
               # Create EN file
@@ -74,7 +82,8 @@ jobs:
               with open(f"{dir_path}/index.en.md", "w", encoding="utf-8") as f:
                   f.write(f"---\ntype: event\ntitle: \"{title}\"\nname: \"{name}\"\n")
                   f.write(f"datetime: {datetime_str}\n")
-                  if duration: f.write(f"duration: {duration}\n")
+                  if duration: 
+                      f.write(f"duration: {duration}\n")
                   f.write(f"location: \"{location}\"\n---\n\n")
                   if image: 
                       img_url = extract_image_url(image)
@@ -85,7 +94,8 @@ jobs:
               with open(f"{dir_path}/index.tr.md", "w", encoding="utf-8") as f:
                   f.write(f"---\ntype: event\ntitle: \"{title}\"\nname: \"{name}\"\n")
                   f.write(f"datetime: {datetime_str}\n")
-                  if duration: f.write(f"duration: {duration}\n")
+                  if duration: 
+                      f.write(f"duration: {duration}\n")
                   f.write(f"location: \"{location}\"\n---\n\n")
                   if image: 
                       img_url = extract_image_url(image)
@@ -97,9 +107,9 @@ jobs:
               date = extract_field(body, "Date")
               thumbnail = extract_field(body, "Thumbnail Image")
               content_en = extract_field(body, "Description (EN)")
-              content_tr = extract_field(body, "Description (TR)")
+              content_tr = extract_field(body, "Description (TR)") or ""
 
-              # Create folder (2025-07-18-news-title)
+              # Create folder (2024-01-31-news-alper-ahmetoglu-phd-defense)
               dir_path = f"content/news/{date}-{slug}"
               
               # Create EN file
@@ -107,22 +117,20 @@ jobs:
               with open(f"{dir_path}/index.en.md", "w", encoding="utf-8") as f:
                   f.write("---\ntype: news\n")
                   f.write(f"title: \"{title}\"\n")
-                  f.write(f"date: {date}\n")
                   if thumbnail:
                       thumb_url = extract_image_url(thumbnail)
                       f.write(f"thumbnail: {thumb_url}\n")
-                  f.write("---\n\n")
+                  f.write(f"date: {date}\n---\n\n")
                   f.write(content_en)
 
               # Create TR file
               with open(f"{dir_path}/index.tr.md", "w", encoding="utf-8") as f:
                   f.write("---\ntype: news\n")
                   f.write(f"title: \"{title}\"\n")
-                  f.write(f"date: {date}\n")
                   if thumbnail:
                       thumb_url = extract_image_url(thumbnail)
                       f.write(f"thumbnail: {thumb_url}\n")
-                  f.write("---\n\n")
+                  f.write(f"date: {date}\n---\n\n")
                   f.write(content_tr)
 
           EOF
