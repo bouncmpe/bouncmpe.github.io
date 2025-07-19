@@ -1,20 +1,20 @@
 import os, re, unicodedata
 
-# 1. Inputs from GitHub Actions
+# 1) Inputs
+type_labels = os.getenv("ISSUE_LABELS", "").lower()
 body = os.getenv("ISSUE_BODY", "").strip()
-labels = os.getenv("ISSUE_LABELS", "").lower()
 
-# 2. Content type
-content_type = "event"
+# 2) Determine type
+content_type = "news" if "news" in type_labels else "event"
 
-# 3. Slugify helper
+# 3) Slugify helper
 def slugify(text):
     t = unicodedata.normalize("NFKD", text)
-    t = t.encode("ascii", "ignore").decode("ascii")
-    t = re.sub(r"[^\w\s-]", "", t.lower())
-    return re.sub(r"[-\s]+", "-", t).strip("-_ ")
+    t = t.encode("ascii","ignore").decode("ascii")
+    t = re.sub(r"[^\w\s-]","", t.lower())
+    return re.sub(r"[-\s]+","-", t).strip("-_")
 
-# 4. Parse issue body into {Heading: Value}
+# 4) Parse issue body
 def parse_issue_body(md):
     fields = {}
     blocks = re.split(r"^#{1,6}\s+", md, flags=re.MULTILINE)[1:]
@@ -27,53 +27,62 @@ def parse_issue_body(md):
 
 parsed = parse_issue_body(body)
 
-# 5. Map form IDs to labels
-def get_field(id_label):
-    mapping = {
-        'title_en': 'Event Title (EN)',
-        'title_tr': 'Event Title (TR)',
-        'name': 'Speaker/Presenter Name',
-        'datetime': 'Date and Time (ISO format)',
-        'duration': 'Duration',
-        'location_en': 'Location (EN)',
-        'location_tr': 'Location (TR)',
-        'description_en': 'Description (EN)',
-        'description_tr': 'Description (TR)',
-    }
-    return parsed.get(mapping[id_label], "").strip()
+# 5) Mapping IDs to labels
+mapping = {
+    # Event
+    'title_en': 'Event Title (EN)', 'title_tr': 'Event Title (TR)',
+    'name': 'Speaker/Presenter Name', 'datetime': 'Date and Time (ISO format)',
+    'duration': 'Duration', 'location_en': 'Location (EN)', 'location_tr': 'Location (TR)',
+    'description_en': 'Description (EN)', 'description_tr': 'Description (TR)',
+    # News
+    'news_title_en': 'News Title (EN)', 'news_title_tr': 'News Title (TR)',
+    'date': 'Date (YYYY-MM-DD)', 'thumbnail': 'Image path (optional)',
+    'short_en': 'Short Description (EN)', 'short_tr': 'Short Description (TR)',
+    'content_en': 'Full Content (EN)', 'content_tr': 'Full Content (TR)',
+}
 
-# 6. Extract core values
-raw_dt = get_field('datetime')
-date = raw_dt.split('T')[0]
-title_en = get_field('title_en')
-title_tr = get_field('title_tr')
-slug = slugify(title_en)
-folder = f"content/events/{date}-event-{slug}"
-os.makedirs(folder, exist_ok=True)
+def get_field(fid):
+    label = mapping.get(fid)
+    return parsed.get(label, "").strip()
 
-# 7. Common frontmatter lines
-def make_frontmatter(title):
-    return [
-        "---",
-        "type: phd-thesis-defense",
-        f"title: {title}",
-        f"name: {get_field('name')}",
-        f"datetime: {raw_dt}",
-        f"duration: {get_field('duration')}",
-        f"location: {get_field(f'location_{'en' if title==title_en else 'tr'}')}",
-        "---\n"
-    ]
+# 6) Common extraction
+raw_date = get_field('date') if content_type=='news' else get_field('datetime')
+_date = raw_date.split('T')[0] if 'T' in raw_date else raw_date
+slug = slugify(get_field('news_title_en') if content_type=='news' else get_field('title_en'))
+base_folder = f"content/{content_type}s/{_date}-{content_type}-{slug}"
+os.makedirs(base_folder, exist_ok=True)
 
-# 8. Write both language files
-for lang, title_val, loc_id, desc_id in [
-    ('en', title_en, 'location_en', 'description_en'),
-    ('tr', title_tr, 'location_tr', 'description_tr')
-]:
-    fm = make_frontmatter(title_val)
-    body_text = get_field(desc_id)
-    out = f"{folder}/index.{lang}.md"
-    with open(out, 'w', encoding='utf-8') as f:
+# 7) Frontmatter templates
+def make_frontmatter(lang):
+    if content_type=='news':
+        return [
+            '---',
+            f"type: news",
+            f"title: {get_field('news_title_' + lang)}",
+            f"description: {get_field('short_' + lang)}",
+            f"date: {_date}",
+            f"thumbnail: {get_field('thumbnail')}",
+            'featured: false',
+            '---\n'
+        ]
+    else:
+        return [
+            '---',
+            'type: phd-thesis-defense',
+            f"title: {get_field('title_' + lang)}",
+            f"name: {get_field('name')}",
+            f"datetime: {raw_date}",
+            f"duration: {get_field('duration')}",
+            f"location: {get_field('location_' + lang)}",
+            '---\n'
+        ]
+
+# 8) Write files for each language
+for lang in ['en','tr']:
+    fm = make_frontmatter(lang)
+    body_text = get_field('content_' + lang)
+    out_file = f"{base_folder}/index.{lang}.md"
+    with open(out_file,'w',encoding='utf-8') as f:
         f.write("\n".join(fm))
         f.write(body_text)
-    print(f" Created: {out}")
-
+    print(f" Created: {out_file}")
