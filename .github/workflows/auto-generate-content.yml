@@ -1,28 +1,27 @@
-name: Convert News/Event Issue to Markdown
+name: Auto Generate Content
 
 on:
   issues:
     types: [opened]
 
-jobs:
-  generate-post:
-    if: contains(join(github.event.issue.labels.*.name, ','), 'automation')
-    runs-on: ubuntu-latest
+permissions:
+  contents: write
+  pull-requests: write
 
+jobs:
+  generate-content:
+    runs-on: ubuntu-latest
     steps:
-      - name: Check out repository
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: 3.x
-
-      - name: Extract issue data and generate markdown
+      - name: Extract issue body to file
         run: |
           mkdir -p temp-posts
           echo "${{ github.event.issue.body }}" > issue-body.md
 
+      - name: Generate content from issue
+        run: |
           python3 <<EOF
           import re
           import os
@@ -41,12 +40,11 @@ jobs:
               text = unicodedata.normalize('NFKD', text).encode('ascii', 'ignore').decode('ascii')
               return re.sub(r'[^a-z0-9]+', '-', text.lower()).strip('-')
 
-          # Load label names from GitHub Action context
-          labels_raw = """${{ toJson(github.event.issue.labels) }}"""
-          label_names = [label["name"].lower() for label in json.loads(labels_raw)]
+          # Get issue labels from GitHub context
+          labels = [label["name"].lower() for label in ${{ toJson(github.event.issue.labels) }}]
 
-          is_event = 'event' in label_names
-          is_news = 'news' in label_names
+          is_event = 'event' in labels
+          is_news = 'news' in labels
 
           if is_event:
               title = extract_field("Title")
@@ -59,7 +57,7 @@ jobs:
               image = extract_field("Poster or Cover Image")
 
               slug = slugify(name or title)
-              folder = f"content/events/{dt_raw.lower().replace(':', '-')}-{slug}"
+              folder = f"temp-posts/{dt_raw.lower().replace(':', '-')}-{slug}"
               os.makedirs(folder, exist_ok=True)
               filename = f"{folder}/index.en.md"
 
@@ -83,7 +81,7 @@ jobs:
               image = extract_field("Thumbnail Image")
 
               slug = slugify(title)
-              folder = f"content/news/{date}-news-{slug}"
+              folder = f"temp-posts/{date}-news-{slug}"
               os.makedirs(folder, exist_ok=True)
               filename = f"{folder}/index.en.md"
 
@@ -102,16 +100,23 @@ jobs:
                   f.write("---\n\n")
                   f.write(content.strip() + "\n")
           else:
-              print("Could not detect type from labels.")
+              print("❌ Could not detect type from labels.")
               exit(1)
 
           print("✅ File created:", filename)
           EOF
 
-      - name: Commit and create pull request
-        uses: peter-evans/create-pull-request@v5
+      - name: Move content into repo structure
+        run: |
+          mkdir -p content/events content/news
+          cp -r temp-posts/* content/events/ || true
+          cp -r temp-posts/* content/news/ || true
+
+      - name: Commit and create Pull Request
+        uses: peter-evans/create-pull-request@v6
         with:
-          commit-message: "Add post from issue #${{ github.event.issue.number }}"
-          branch: "auto/post-${{ github.event.issue.number }}"
-          title: "Auto post from issue #${{ github.event.issue.number }}"
+          commit-message: "📝 Auto-generated content from issue #${{ github.event.issue.number }}"
+          title: "Auto-generated content from issue #${{ github.event.issue.number }}"
+          body: "This pull request was automatically generated from the issue."
+          branch: "auto/issue-${{ github.event.issue.number }}"
 
