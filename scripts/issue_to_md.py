@@ -2,50 +2,50 @@ import os
 import re
 import unicodedata
 
-# Environment input from GitHub Actions
+# GitHub Actions environment variables
 title = os.getenv("ISSUE_TITLE", "").strip()
 body = os.getenv("ISSUE_BODY", "").strip()
 labels = os.getenv("ISSUE_LABELS", "").lower()
 
-# Determine type
+# Determine content type
 content_type = "news" if "news" in labels else "event"
 
-# Convert title into slug
+# Slugify title for folder name
 def slugify(text):
     text = unicodedata.normalize("NFKD", text)
     text = text.encode("ascii", "ignore").decode("ascii")
     text = re.sub(r"[^\w\s-]", "", text.lower())
     return re.sub(r"[-\s]+", "-", text).strip("-_")
 
-# Parse issue body
+# Parse issue body safely (supports multiline content)
 def parse_issue_body(body):
-    parts = re.split(r"###\s+", body)[1:]  # Skip initial text
-    data = {}
-    for part in parts:
-        lines = part.strip().split("\n", 1)
-        key = lines[0].strip()
-        value = lines[1].strip() if len(lines) > 1 else ""
-        data[key] = value
-    return data
+    fields = {}
+    blocks = re.split(r"###\s+", body)[1:]
+    for block in blocks:
+        lines = block.strip().splitlines()
+        if len(lines) > 1:
+            label = lines[0].strip()
+            value = "\n".join(lines[1:]).strip()
+            fields[label] = value
+    return fields
 
 parsed = parse_issue_body(body)
 
-# Helper: Case-insensitive field matching
+# Helper to get fields case-insensitively
 def get_field(key_contains):
     for k, v in parsed.items():
         if key_contains.lower() in k.lower():
             return v.strip()
     return ""
 
-# Get date
+# Get datetime + slugify title
 raw_date = get_field("date and time") or get_field("date")
 date = raw_date.split("T")[0]
 slug = slugify(title)
-folder_name = f"{date}-{content_type}-{slug}"
-folder_path = f"content/{content_type}s/{folder_name}"
+folder_path = f"content/{content_type}s/{date}-{content_type}-{slug}"
 os.makedirs(folder_path, exist_ok=True)
 
-# Determine language
+# Detect language (tr or en)
 lang_suffix = "tr" if re.search(r"[çğıöşü]", title.lower()) else "en"
 filepath = f"{folder_path}/index.{lang_suffix}.md"
 
@@ -56,11 +56,11 @@ if content_type == "news":
     frontmatter += f"title: {title}\n"
     frontmatter += f"description: {get_field('description')}\n"
     frontmatter += f"date: {date}\n"
-    thumb = get_field("image path")
-    if thumb:
-        frontmatter += f"thumbnail: {thumb}\n"
+    thumbnail = get_field("image path")
+    if thumbnail:
+        frontmatter += f"thumbnail: {thumbnail}\n"
     frontmatter += f"featured: false\n"
-else:
+else:  # Event
     frontmatter += f"type: phd-thesis-defense\n"
     frontmatter += f"title: {title}\n"
     frontmatter += f"name: {get_field('speaker')}\n"
@@ -69,12 +69,12 @@ else:
     frontmatter += f"location: {get_field('location')}\n"
 frontmatter += "---\n\n"
 
-#  Get content from any relevant field
-body_content = get_field("full content") or get_field("extra information") or get_field("abstract")
+# Append full content
+markdown_content = frontmatter + (get_field("content") or get_field("extra") or get_field("abstract"))
 
-# Write
-markdown_content = frontmatter + body_content
+# Write to file
 with open(filepath, "w", encoding="utf-8") as f:
     f.write(markdown_content)
 
 print(f" Created: {filepath}")
+
