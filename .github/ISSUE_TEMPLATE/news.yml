@@ -27,11 +27,14 @@ body:
     validations:
       required: true
 
-  - type: input
-    id: thumbnail
+  - type: textarea
+    id: image_markdown
     attributes:
-      label: "Image path (optional)"
-      placeholder: "uploads/example.png"
+      label: "Image (drag & drop here)"
+      description: "Please drag & drop your image. GitHub will generate a markdown link."
+      placeholder: "![alt text](https://user-images.githubusercontent.com/…/your-image.png)"
+    validations:
+      required: true
 
   - type: textarea
     id: description_en
