@@ -1,4 +1,4 @@
-name: News Submission
+name: 📰 News Submission
 description: Submit a news item for the department website (TR or EN)
 title: "[NEWS] <Insert title here>"
 labels: ["news"]
@@ -6,44 +6,43 @@ body:
   - type: input
     id: title
     attributes:
-      label: Title (TR or EN)
-      description: Enter the full title of the news
-      placeholder: Lale Akarun'a Araştırmada Üstün Başarı Ödülü
+      label: "Title (TR or EN)"
+      description: "Enter the full title of the news"
+      placeholder: "Lale Akarun'a Araştırmada Üstün Başarı Ödülü"
     validations:
       required: true
 
   - type: input
     id: date
     attributes:
-      label: Date (YYYY-MM-DD)
-      description: Enter the date of the news
-      placeholder: 2024-07-19
+      label: "Date (YYYY-MM-DD)"
+      description: "Enter the date of the news"
+      placeholder: "2024-07-19"
     validations:
       required: true
 
   - type: input
     id: thumbnail
     attributes:
-      label: Image path (optional)
-      description: For example: uploads/lale-akarun-1.png
-      placeholder: uploads/example.png
+      label: "Image path (optional)"
+      description: "For example: uploads/lale-akarun-1.png"
+      placeholder: "uploads/example.png"
 
   - type: textarea
     id: description
     attributes:
-      label: Short Description
-      description: One-paragraph summary to appear under the title
-      placeholder: Boğaziçi Üniversitesi Vakfı ödülü verdi.
+      label: "Short Description"
+      description: "One-paragraph summary to appear under the title"
+      placeholder: "Boğaziçi Üniversitesi Vakfı ödülü verdi."
     validations:
       required: true
 
   - type: textarea
     id: content
     attributes:
-      label: Full Content (Markdown allowed)
-      description: Use plain text or Markdown; Turkish characters supported
-      placeholder: >
-        Boğaziçi Üniversitesi Vakfı (BÜVAK) her sene araştırma faaliyetleriyle fark yaratan bilim insanlarını ödüllendiriyor...
+      label: "Full Content (Markdown allowed)"
+      description: "Use plain text or Markdown; Turkish characters supported"
+      placeholder: "Boğaziçi Üniversitesi Vakfı (BÜVAK) her sene araştırma faaliyetleriyle fark yaratan bilim insanlarını ödüllendiriyor..."
     validations:
       required: true
 
