@@ -18,7 +18,10 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name:  Create markdown file from issue
+      - name:  Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: 🔧 Create markdown file from issue
         run: python scripts/issue_to_md.py
         env:
           ISSUE_TITLE: "${{ github.event.issue.title }}"
