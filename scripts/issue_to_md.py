@@ -1,7 +1,6 @@
 import os
 import re
 import unicodedata
-import os
 
 # Environment input from GitHub Actions
 title = os.getenv("ISSUE_TITLE", "").strip()
@@ -24,20 +23,23 @@ def parse_issue_body(body):
     data = {}
     for part in parts:
         lines = part.strip().split("\n", 1)
-        key = lines[0].strip().lower()
+        key = lines[0].strip()
         value = lines[1].strip() if len(lines) > 1 else ""
         data[key] = value
     return data
 
 parsed = parse_issue_body(body)
 
-# Get values
-raw_date = ""
-for key in parsed:
-    if "date and time" in key.lower() or "date" in key.lower():
-        raw_date = parsed[key]
-        break
-date = raw_date.split("t")[0]
+# Helper: Case-insensitive field matching
+def get_field(key_contains):
+    for k, v in parsed.items():
+        if key_contains.lower() in k.lower():
+            return v.strip()
+    return ""
+
+# Get date
+raw_date = get_field("date and time") or get_field("date")
+date = raw_date.split("T")[0]
 slug = slugify(title)
 folder_name = f"{date}-{content_type}-{slug}"
 folder_path = f"content/{content_type}s/{folder_name}"
@@ -52,25 +54,26 @@ frontmatter = "---\n"
 if content_type == "news":
     frontmatter += f"type: news\n"
     frontmatter += f"title: {title}\n"
-    frontmatter += f"description: {parsed.get('short description', '')}\n"
+    frontmatter += f"description: {get_field('description')}\n"
     frontmatter += f"date: {date}\n"
-    thumb = parsed.get("image path (optional)", "").strip()
+    thumb = get_field("image path")
     if thumb:
         frontmatter += f"thumbnail: {thumb}\n"
     frontmatter += f"featured: false\n"
 else:
     frontmatter += f"type: phd-thesis-defense\n"
     frontmatter += f"title: {title}\n"
-    frontmatter += f"name: {parsed.get('speaker/presenter name', '')}\n"
+    frontmatter += f"name: {get_field('speaker')}\n"
     frontmatter += f"datetime: {raw_date}\n"
-    frontmatter += f"duration: {parsed.get('duration', '')}\n"
-    frontmatter += f"location: {parsed.get('location', '')}\n"
+    frontmatter += f"duration: {get_field('duration')}\n"
+    frontmatter += f"location: {get_field('location')}\n"
 frontmatter += "---\n\n"
 
-# Final content
-markdown_content = frontmatter + parsed.get("full content (markdown allowed)", parsed.get("extra information or abstract (optional)", ""))
+#  Get content from any relevant field
+body_content = get_field("full content") or get_field("extra information") or get_field("abstract")
 
 # Write
+markdown_content = frontmatter + body_content
 with open(filepath, "w", encoding="utf-8") as f:
     f.write(markdown_content)
 
