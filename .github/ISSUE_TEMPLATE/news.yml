@@ -37,3 +37,12 @@ body:
       placeholder: Write your content here...
     validations:
       required: false
+
+  - type: textarea:
+    id: content
+    attributes:
+      label: label: Description (TR)
+      description: description: Detailed Turkish content
+      placeholder: placeholder: Write in Turkish...
+    validations:
+      required: false
