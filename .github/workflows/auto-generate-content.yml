@@ -26,7 +26,8 @@ jobs:
           python3 <<EOF
           import re
           import os
-          import sys
+          import unicodedata
+          from datetime import datetime
 
           with open("issue-body.md", encoding="utf-8") as f:
               body = f.read()
@@ -35,22 +36,75 @@ jobs:
               match = re.search(rf"### {label}\\s+(.+?)(?=(\\n###|$))", body, re.DOTALL)
               return match.group(1).strip() if match else ""
 
-          title = extract_field("Title")
-          content = extract_field("Content") or extract_field("Description")
-          date = extract_field("Date") or extract_field("Event Date")
-          image = extract_field("Optional image markdown")
-          kind = "news" if 'news' in "${{ github.event.issue.labels.*.name }}" else "events"
-          
-          slug = "-".join(title.lower().split())
-          filename = f"content/{kind}/{date}-{slug}.md"
+          def slugify(text):
+              text = unicodedata.normalize('NFKD', text).encode('ascii', 'ignore').decode('ascii')
+              return re.sub(r'[^a-z0-9]+', '-', text.lower()).strip('-')
 
-          os.makedirs(os.path.dirname(filename), exist_ok=True)
+          labels = "${{ github.event.issue.labels.*.name }}".lower()
 
-          with open(filename, "w", encoding="utf-8") as f:
-              f.write(f"---\\ntitle: \\"{title}\\"\\ndate: {date}\\n---\\n\\n")
-              if image:
-                  f.write(image + "\\n\\n")
-              f.write(content.strip())
+          is_event = 'event' in labels
+          is_news = 'news' in labels
+
+          if is_event:
+              kind = "events"
+              title = extract_field("Title")
+              name = extract_field("Event Name")
+              dt_raw = extract_field("Start Date and Time")
+              dt = datetime.fromisoformat(dt_raw).isoformat()
+              duration = extract_field("Duration")
+              location = extract_field("Location")
+              content = extract_field("Description (EN)")
+              image = extract_field("Poster or Cover Image")
+
+              slug = slugify(name or title)
+              folder = f"content/events/{dt_raw.lower().replace(':', '-')}-{slug}"
+              os.makedirs(folder, exist_ok=True)
+              filename = f"{folder}/index.en.md"
+
+              with open(filename, "w", encoding="utf-8") as f:
+                  f.write("---\n")
+                  f.write(f'type: phd-thesis-defense\n')
+                  f.write(f'title: "{title}"\n')
+                  f.write(f'name: {name}\n')
+                  f.write(f'datetime: {dt}\n')
+                  f.write(f'duration: {duration}\n')
+                  f.write(f'location: {location}\n')
+                  f.write("---\n\n")
+                  if image:
+                      f.write(image + "\n\n")
+                  f.write(content + "\n")
+
+          elif is_news:
+              kind = "news"
+              title = extract_field("Title")
+              date = extract_field("Date")
+              image = extract_field("Thumbnail Image")
+              content = extract_field("Description (EN)")
+
+              slug = slugify(title)
+              folder = f"content/news/{date}-news-{slug}"
+              os.makedirs(folder, exist_ok=True)
+              filename = f"{folder}/index.en.md"
+
+              with open(filename, "w", encoding="utf-8") as f:
+                  f.write("---\n")
+                  f.write(f"type: news\n")
+                  f.write(f'title: "{title}"\n')
+                  f.write(f'description: {title}\n')
+                  f.write(f"featured: false\n")
+                  f.write(f"date: {date}\n")
+                  if image:
+                      image_line = re.search(r'!\[.*?\]\((.*?)\)', image)
+                      if image_line:
+                          image_path = image_line.group(1)
+                          f.write(f"thumbnail: {image_path}\n")
+                  f.write("---\n\n")
+                  f.write(content.strip() + "\n")
+
+          else:
+              print("Could not detect type from labels.")
+
+          print("File created:", filename)
           EOF
 
       - name: Commit and create pull request
@@ -59,3 +113,4 @@ jobs:
           commit-message: "Add post from issue #${{ github.event.issue.number }}"
           branch: "auto/post-${{ github.event.issue.number }}"
           title: "Auto post from issue #${{ github.event.issue.number }}"
+
