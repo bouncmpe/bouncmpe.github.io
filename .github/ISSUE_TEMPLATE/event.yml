@@ -1,5 +1,5 @@
-name: Bilingual Event Submission
-description: Submit an event for the website. Provide both English and Turkish entries.
+name: 📅 Bilingual Event Submission
+description: Submit an event for the website. Provide both English and Turkish entries. Image optional.
 title: "[EVENT] <Insert event title>"
 labels: ["event"]
 body:
@@ -60,11 +60,17 @@ body:
       required: true
 
   - type: textarea
+    id: image_markdown
+    attributes:
+      label: "Image (optional, drag & drop)"
+      description: "Drag & drop an image to include a poster/cover."
+      placeholder: "![alt text](https://user-images.githubusercontent.com/.../your-image.png)"
+
+  - type: textarea
     id: description_en
     attributes:
       label: "Description (EN)"
-      description: "Event description in English"
-      placeholder: "This thesis defense will cover conditional computation techniques..."
+      placeholder: "This thesis defense will cover conditional computation techniques."
     validations:
       required: true
 
@@ -72,7 +78,6 @@ body:
     id: description_tr
     attributes:
       label: "Description (TR)"
-      description: "Etkinlik açıklaması Türkçe"
-      placeholder: "Bu savunmada koşullu hesaplama teknikleri ele alınacaktır..."
+      placeholder: "Bu savunmada koşullu hesaplama teknikleri ele alınacaktır."
     validations:
       required: true
