@@ -38,7 +38,7 @@ body:
     validations:
       required: false
 
-  - type: textarea:
+  - type: textarea
     id: content
     attributes:
       label: label: Description (TR)
