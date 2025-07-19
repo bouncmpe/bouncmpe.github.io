@@ -1,91 +1,79 @@
 import os, re, unicodedata
 
-# 1) Inputs
-title  = os.getenv("ISSUE_TITLE","").strip()
-body   = os.getenv("ISSUE_BODY","").strip()
-labels = os.getenv("ISSUE_LABELS","").lower()
+# 1. Inputs from GitHub Actions
+body = os.getenv("ISSUE_BODY", "").strip()
+labels = os.getenv("ISSUE_LABELS", "").lower()
 
-# 2) news vs event
-content_type = "news" if "news" in labels else "event"
+# 2. Content type
+content_type = "event"
 
-# 3) Slugify helper
-def slugify(t):
-    t = unicodedata.normalize("NFKD", t)
-    t = t.encode("ascii","ignore").decode("ascii")
-    t = re.sub(r"[^\w\s-]","", t.lower())
-    return re.sub(r"[-\s]+","-", t).strip("-_")
+# 3. Slugify helper
+def slugify(text):
+    t = unicodedata.normalize("NFKD", text)
+    t = t.encode("ascii", "ignore").decode("ascii")
+    t = re.sub(r"[^\w\s-]", "", t.lower())
+    return re.sub(r"[-\s]+", "-", t).strip("-_ ")
 
-# 4) Parse headings and values
+# 4. Parse issue body into {Heading: Value}
 def parse_issue_body(md):
     fields = {}
-    # split on any heading ####
     blocks = re.split(r"^#{1,6}\s+", md, flags=re.MULTILINE)[1:]
     for blk in blocks:
         lines = blk.splitlines()
         label = lines[0].strip()
-        val   = "\n".join(lines[1:]).strip()
+        val = "\n".join(lines[1:]).strip()
         fields[label] = val
     return fields
 
 parsed = parse_issue_body(body)
 
-# DEBUG: show parsed keys
-print(" Parsed fields:")
-for k,v in parsed.items():
-    print(f"  • {repr(k)} -> {repr(v[:40]+'…' if len(v)>40 else v)}")
+# 5. Map form IDs to labels
+def get_field(id_label):
+    mapping = {
+        'title_en': 'Event Title (EN)',
+        'title_tr': 'Event Title (TR)',
+        'name': 'Speaker/Presenter Name',
+        'datetime': 'Date and Time (ISO format)',
+        'duration': 'Duration',
+        'location_en': 'Location (EN)',
+        'location_tr': 'Location (TR)',
+        'description_en': 'Description (EN)',
+        'description_tr': 'Description (TR)',
+    }
+    return parsed.get(mapping[id_label], "").strip()
 
-# 5) Case‑insensitive find
-def get_field(frag):
-    for k,v in parsed.items():
-        if frag.lower() in k.lower():
-            return v.strip()
-    return ""
-
-# 6) Build folder & filename
-raw_date = get_field("start date and time") or get_field("date and time") or get_field("date")
-date     = raw_date.split("T")[0] if raw_date else "unknown-date"
-slug     = slugify(title)
-folder   = f"content/{content_type}s/{date}-{content_type}-{slug}"
+# 6. Extract core values
+raw_dt = get_field('datetime')
+date = raw_dt.split('T')[0]
+title_en = get_field('title_en')
+title_tr = get_field('title_tr')
+slug = slugify(title_en)
+folder = f"content/events/{date}-event-{slug}"
 os.makedirs(folder, exist_ok=True)
-lang     = "tr" if re.search(r"[çğıöşüÇĞİÖŞÜ]", title) else "en"
-out_md   = f"{folder}/index.{lang}.md"
 
-# 7) Build frontmatter
-fm = ["---"]
-if content_type == "news":
-    fm += [
-        "type: news",
-        f"title: {title}",
-        f"date: {date}",
-        f"thumbnail: {get_field('poster or cover image') or ''}",
-        "featured: false"
-    ]
-else:
-    fm += [
+# 7. Common frontmatter lines
+def make_frontmatter(title):
+    return [
+        "---",
         "type: phd-thesis-defense",
         f"title: {title}",
-        f"name: {get_field('event name')}",
-        f"datetime: {raw_date}",
+        f"name: {get_field('name')}",
+        f"datetime: {raw_dt}",
         f"duration: {get_field('duration')}",
-        f"location: {get_field('location')}"
+        f"location: {get_field(f'location_{'en' if title==title_en else 'tr'}')}",
+        "---\n"
     ]
-fm.append("---\n")
 
-# 8) Extract body text for events from Description fields
-body_text = ""
-if content_type == "news":
-    # news currently has no body beyond frontmatter
-    body_text = ""
-else:
-    if lang == "en":
-        body_text = parsed.get("Description (EN)", "")
-    else:
-        body_text = parsed.get("Description (TR)", "")
-
-# 9) Write file
-with open(out_md, "w", encoding="utf-8") as f:
-    f.write("\n".join(fm))
-    f.write(body_text)
-
-print(f" Created markdown at: {out_md}")
+# 8. Write both language files
+for lang, title_val, loc_id, desc_id in [
+    ('en', title_en, 'location_en', 'description_en'),
+    ('tr', title_tr, 'location_tr', 'description_tr')
+]:
+    fm = make_frontmatter(title_val)
+    body_text = get_field(desc_id)
+    out = f"{folder}/index.{lang}.md"
+    with open(out, 'w', encoding='utf-8') as f:
+        f.write("\n".join(fm))
+        f.write(body_text)
+    print(f" Created: {out}")
 
