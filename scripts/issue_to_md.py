@@ -80,7 +80,11 @@ def make_frontmatter(lang):
 # 8) Write files for each language
 for lang in ['en','tr']:
     fm = make_frontmatter(lang)
-    body_text = get_field('content_' + lang)
+    # Fix: use description for events, content for news
+    if content_type=='news':
+        body_text = get_field('content_' + lang)
+    else:
+        body_text = get_field('description_' + lang)
     out_file = f"{base_folder}/index.{lang}.md"
     with open(out_file,'w',encoding='utf-8') as f:
         f.write("\n".join(fm))
