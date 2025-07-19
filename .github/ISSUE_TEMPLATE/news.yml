@@ -1,48 +1,52 @@
-name: 📰 News Submission
-description: Submit a news item for the department website (TR or EN)
-title: "[NEWS] <Insert title here>"
-labels: ["news"]
+name:  Event Submission
+description: Submit an event (seminar, thesis defense, etc.) for the department website
+title: "[EVENT] <Insert event title>"
+labels: ["event"]
 body:
   - type: input
     id: title
     attributes:
-      label: "Title (TR or EN)"
-      description: "Enter the full title of the news"
-      placeholder: "Lale Akarun'a Araştırmada Üstün Başarı Ödülü"
+      label: "Event Title (TR or EN)"
+      description: "Title of the event"
+      placeholder: "Conditional Computation Techniques in DNNs"
     validations:
       required: true
 
   - type: input
-    id: date
+    id: name
     attributes:
-      label: "Date (YYYY-MM-DD)"
-      description: "Enter the date of the news"
-      placeholder: "2024-07-19"
+      label: "Speaker/Presenter Name"
+      description: "Full name of the speaker or student"
+      placeholder: "Ufuk Can Biçici"
     validations:
       required: true
 
   - type: input
-    id: thumbnail
+    id: datetime
     attributes:
-      label: "Image path (optional)"
-      description: "For example: uploads/lale-akarun-1.png"
-      placeholder: "uploads/example.png"
-
-  - type: textarea
-    id: description
-    attributes:
-      label: "Short Description"
-      description: "One-paragraph summary to appear under the title"
-      placeholder: "Boğaziçi Üniversitesi Vakfı ödülü verdi."
+      label: "Date and Time (ISO format)"
+      description: "Format like 2024-06-05T13:30:00"
+      placeholder: "2024-06-05T13:30:00"
     validations:
       required: true
+
+  - type: input
+    id: duration
+    attributes:
+      label: "Duration"
+      placeholder: "2h"
+
+  - type: input
+    id: location
+    attributes:
+      label: "Location"
+      placeholder: "Ali Vahit Şahiner (AVŞ)"
 
   - type: textarea
     id: content
     attributes:
-      label: "Full Content (Markdown allowed)"
-      description: "Use plain text or Markdown; Turkish characters supported"
-      placeholder: "Boğaziçi Üniversitesi Vakfı (BÜVAK) her sene araştırma faaliyetleriyle fark yaratan bilim insanlarını ödüllendiriyor..."
-    validations:
-      required: true
+      label: "Extra Information or Abstract (optional)"
+      description: "You can write extra context or content"
+      placeholder: "Abstract, language, topic, etc."
+
 
