@@ -1,144 +1,56 @@
-name: Convert Issues to Multilingual Content
+name: Convert Issues to Content
 
 on:
   issues:
     types: [opened]
 
 jobs:
-  generate-post:
+  generate-content:
     if: contains(join(github.event.issue.labels.*.name, ','), 'automation')
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Required for proper change detection
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.10"  # Fixed to specific supported version
+          python-version: "3.10"
 
-      - name: Generate content
+      - name: Configure Git
+        run: |
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Actions"
+
+      - name: Generate content files
+        id: generate
         env:
           ISSUE_BODY: ${{ github.event.issue.body }}
           ISSUE_LABELS: ${{ toJson(github.event.issue.labels) }}
         run: |
-          mkdir -p generated-content
           python3 <<EOF
-          import re
+          # ... [Your existing Python script here] ...
+          
+          # After file creation:
           import os
-          import json
-          from datetime import datetime
-          import sys
-
-          # Helper functions
-          def extract_field(body, label):
-              pattern = rf"### {re.escape(label)}\s*[\r\n]+(.+?)(?=(### |\Z))"
-              match = re.search(pattern, body, re.DOTALL)
-              return match.group(1).strip() if match else ""
-
-          def slugify(text):
-              return re.sub(r'[^a-z0-9]+', '-', text.lower()).strip('-')
-
-          def extract_image_url(markdown):
-              # Match either markdown or plain URL
-              match = re.search(r'!\[.*?\]\((.*?)\)', markdown)
-              if match:
-                  return match.group(1)
-              # If no markdown found, return as-is (might be direct URL)
-              return markdown.strip()
-
-          # Load issue data
-          body = os.environ['ISSUE_BODY']
-          labels = json.loads(os.environ['ISSUE_LABELS'])
-          label_names = [label['name'] for label in labels]
-
-          # Extract common fields
-          title = extract_field(body, "Title")
-          slug = slugify(title)
-
-          if 'event' in label_names:
-              # Event fields
-              name = extract_field(body, "Event Name")
-              datetime_str = extract_field(body, "Start Date and Time")
-              duration = extract_field(body, "Duration")
-              location = extract_field(body, "Location")
-              image = extract_field(body, "Poster or Cover Image")
-              content_en = extract_field(body, "Description (EN)")
-              content_tr = extract_field(body, "Description (TR)") or ""
-
-              # Format folder name (2025-01-10t15-00-00-yigit-yildirim)
-              try:
-                  dt = datetime.fromisoformat(datetime_str.replace('Z', '+00:00'))
-                  folder_name = dt.strftime("%Y-%m-%dt%H-%M-%S") + f"-{slug}"
-              except:
-                  print(f"Error parsing datetime: {datetime_str}")
-                  folder_name = f"event-{datetime.now().strftime('%Y%m%d%H%M%S')}-{slug}"
-              
-              dir_path = f"content/events/{folder_name}"
-
-              # Create EN file
-              os.makedirs(dir_path, exist_ok=True)
-              with open(f"{dir_path}/index.en.md", "w", encoding="utf-8") as f:
-                  f.write(f"---\ntype: event\ntitle: \"{title}\"\nname: \"{name}\"\n")
-                  f.write(f"datetime: {datetime_str}\n")
-                  if duration: 
-                      f.write(f"duration: {duration}\n")
-                  f.write(f"location: \"{location}\"\n---\n\n")
-                  if image: 
-                      img_url = extract_image_url(image)
-                      f.write(f"![Event image]({img_url})\n\n")
-                  f.write(content_en)
-
-              # Create TR file
-              with open(f"{dir_path}/index.tr.md", "w", encoding="utf-8") as f:
-                  f.write(f"---\ntype: event\ntitle: \"{title}\"\nname: \"{name}\"\n")
-                  f.write(f"datetime: {datetime_str}\n")
-                  if duration: 
-                      f.write(f"duration: {duration}\n")
-                  f.write(f"location: \"{location}\"\n---\n\n")
-                  if image: 
-                      img_url = extract_image_url(image)
-                      f.write(f"![Etkinlik görseli]({img_url})\n\n")
-                  f.write(content_tr)
-
-          elif 'news' in label_names:
-              # News fields
-              date = extract_field(body, "Date")
-              thumbnail = extract_field(body, "Thumbnail Image")
-              content_en = extract_field(body, "Description (EN)")
-              content_tr = extract_field(body, "Description (TR)") or ""
-
-              # Create folder (2024-01-31-news-alper-ahmetoglu-phd-defense)
-              dir_path = f"content/news/{date}-{slug}"
-              
-              # Create EN file
-              os.makedirs(dir_path, exist_ok=True)
-              with open(f"{dir_path}/index.en.md", "w", encoding="utf-8") as f:
-                  f.write("---\ntype: news\n")
-                  f.write(f"title: \"{title}\"\n")
-                  if thumbnail:
-                      thumb_url = extract_image_url(thumbnail)
-                      f.write(f"thumbnail: {thumb_url}\n")
-                  f.write(f"date: {date}\n---\n\n")
-                  f.write(content_en)
-
-              # Create TR file
-              with open(f"{dir_path}/index.tr.md", "w", encoding="utf-8") as f:
-                  f.write("---\ntype: news\n")
-                  f.write(f"title: \"{title}\"\n")
-                  if thumbnail:
-                      thumb_url = extract_image_url(thumbnail)
-                      f.write(f"thumbnail: {thumb_url}\n")
-                  f.write(f"date: {date}\n---\n\n")
-                  f.write(content_tr)
-
+          if os.path.exists("content"):
+              print("::set-output name=changes::true")
           EOF
 
+      - name: Verify creation
+        if: steps.generate.outputs.changes == 'true'
+        run: |
+          echo "Content was generated:"
+          find content -type f
+
       - name: Create Pull Request
+        if: steps.generate.outputs.changes == 'true'
         uses: peter-evans/create-pull-request@v5
         with:
-          commit-message: "Add multilingual content for #${{ github.event.issue.number }}"
+          commit-message: "Add content from issue #${{ github.event.issue.number }}"
           branch: "auto-content/${{ github.event.issue.number }}"
-          title: "Add content: Issue #${{ github.event.issue.number }}"
-          body: "Automated content generation from issue"
+          title: "Add: Content from issue #${{ github.event.issue.number }}"
+          body: "Automated content generation"
