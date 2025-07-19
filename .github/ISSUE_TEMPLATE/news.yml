@@ -42,7 +42,7 @@ body:
     id: content
     attributes:
       label: Description (TR)
-      description: description: Detailed Turkish content
-      placeholder: placeholder: Write in Turkish...
+      description:  Detailed Turkish content
+      placeholder:  Write in Turkish...
     validations:
       required: false
