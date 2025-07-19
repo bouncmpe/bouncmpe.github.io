@@ -1,48 +1,46 @@
-name: Submit News
-description: Submit a news item to be published on the CMPE website.
-labels: [news, automation]
+name: News Submission
+description: Submit a news item to appear on the department website
+title: "[NEWS] <insert title here>"
+labels: ["news"]
 body:
   - type: input
     id: title
     attributes:
-      label: Title
-      description: Short title for the news
-      placeholder: e.g. Turna Turkish Language Model
+      label: Title (TR or EN)
+      description: Enter the title of the news item
+      placeholder: e.g., Lale Akarun'a Araştırmada Üstün Başarı Ödülü
     validations:
       required: true
 
   - type: input
     id: date
     attributes:
-      label: Date
-      description: Date in YYYY-MM-DD format
-      placeholder: e.g. 2025-07-18
+      label: Date (YYYY-MM-DD)
+      placeholder: 2024-07-19
+    validations:
+      required: true
+
+  - type: input
+    id: thumbnail
+    attributes:
+      label: Image file path (optional)
+      placeholder: uploads/example.png
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Short description
+      description: Used in the frontmatter
+      placeholder: e.g., Boğaziçi Üniversitesi Vakfı ödülü verdi.
     validations:
       required: true
 
   - type: textarea
-    id: thumbnail
-    attributes:
-      label: Thumbnail Image
-      description: Upload an image or paste a direct URL. If you upload using GitHub UI, copy its Markdown URL.
-      placeholder: e.g. ![image](https://user-images.githubusercontent.com/123456/your-image.png)
-    validations:
-      required: false
-
-  - type: textarea
     id: content
     attributes:
-      label: Description (EN)
-      description: Detailed English content of the news (markdown allowed)
-      placeholder: Write your content here...
+      label: Full Content (TR or EN)
+      description: Markdown is supported
+      placeholder: >
+        Boğaziçi Üniversitesi her yıl araştırmada üstün başarı gösteren bilim insanlarını ödüllendiriyor...
     validations:
-      required: false
-
-  - type: textarea
-    id: content_tr
-    attributes:
-      label: Description (TR)
-      description:  Detailed Turkish content
-      placeholder:  Write in Turkish...
-    validations:
-      required: false
+      required: true
