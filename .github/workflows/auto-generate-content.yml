@@ -20,108 +20,110 @@ jobs:
 
       - name: Extract issue data and generate markdown
         run: |
-          # Write issue body and labels to files
+          # Write issue body to file
           echo "${{ github.event.issue.body }}" > issue-body.md
-          echo "${{ join(github.event.issue.labels.*.name, ' ') }}" > issue-labels.txt
 
-          python3 <<'EOF'
-import re, os, sys, requests
-from urllib.parse import urlparse
-from datetime import datetime
+          # Extract labels into a space-separated string
+          LABELS="${{ github.event.issue.labels.*.name }}"
 
-# Read raw issue body and labels
-essue_body = open('issue-body.md', encoding='utf-8').read()
-labels = open('issue-labels.txt', encoding='utf-8').read().split()
+          # Run extraction script
+          python3 << 'EOF'
+            import re
+            import os
+            import requests
+            from urllib.parse import urlparse
+            from datetime import datetime
 
-# Utility to extract a section by its heading
-def extract_field(label):
-    m = re.search(rf"### {re.escape(label)}\s+(.+?)(?=(\n###|$))", issue_body, re.DOTALL)
-    return m.group(1).strip() if m else ''
+            # Read raw issue body and labels
+            issue_body = open('issue-body.md', encoding='utf-8').read()
+            labels = LABELS.split()
 
-is_news = 'news' in labels
-kind = 'news' if is_news else 'events'
+            # Utility to extract a section by its heading
+            def extract_field(label):
+                m = re.search(rf"### {re.escape(label)}\s+(.+?)(?=(\n###|$))", issue_body, re.DOTALL)
+                return m.group(1).strip() if m else ''
 
-# Common fields
-title = extract_field('Title')
-content = extract_field('Content') or extract_field('Description (EN)')
+            is_news = 'news' in labels
+            kind = 'news' if is_news else 'events'
 
-# Date handling
-if is_news:
-    date = extract_field('Date')
-    # validate date
-    datetime.fromisoformat(date)
-    folder = f"content/news/{date}-{'-'.join(title.lower().split())}"
-else:
-    dt = extract_field('Start Date and Time')
-    # validate datetime
-    dt_obj = datetime.fromisoformat(dt)
-    dt_str = dt_obj.isoformat().replace(':', '-')
-    folder = f"content/events/{dt_str}-{'-'.join(title.lower().split())}"
+            # Common fields
+            title = extract_field('Title')
+            content = extract_field('Content') or extract_field('Description (EN)')
 
-# Image handling
-image_field = extract_field('Poster or Cover Image') or extract_field('Thumbnail Image')
-image_path = ''
-if image_field:
-    m = re.search(r'!\[.*?\]\((https://user-images\.githubusercontent\.com/.*?)\)', image_field)
-    if m:
-        url = m.group(1)
-        fn = os.path.basename(urlparse(url).path)
-        os.makedirs('static/uploads', exist_ok=True)
-        r = requests.get(url)
-        open(f'static/uploads/{fn}', 'wb').write(r.content)
-        image_path = f"uploads/{fn}"
+            # Determine folder and validate dates
+            if is_news:
+                date = extract_field('Date')
+                # Validate date format
+                datetime.fromisoformat(date)
+                slug = '-'.join(title.lower().split())
+                folder = f"content/news/{date}-{slug}"
+            else:
+                dt = extract_field('Start Date and Time')
+                # Validate datetime format
+                dt_obj = datetime.fromisoformat(dt)
+                dt_str = dt_obj.isoformat().replace(':', '-')
+                slug = '-'.join(title.lower().split())
+                folder = f"content/events/{dt_str}-{slug}"
 
-# Create output folder and files
-os.makedirs(folder, exist_ok=True)
+            # Handle image upload
+            image_field = extract_field('Poster or Cover Image') or extract_field('Thumbnail Image')
+            image_path = ''
+            if image_field:
+                img_match = re.search(r'!\[.*?\]\((https://user-images\.githubusercontent\.com/.*?)\)', image_field)
+                if img_match:
+                    url = img_match.group(1)
+                    filename = os.path.basename(urlparse(url).path)
+                    os.makedirs('static/uploads', exist_ok=True)
+                    r = requests.get(url)
+                    with open(f'static/uploads/{filename}', 'wb') as out:
+                        out.write(r.content)
+                    image_path = f"uploads/{filename}"
 
-# Write English markdown
-en_file = os.path.join(folder, 'index.en.md')
-with open(en_file, 'w', encoding='utf-8') as f:
-    f.write('---\n')
-    if is_news:
-        f.write(f"type: news\n")
-        f.write(f"title: \"{title}\"\n")
-        f.write(f"date: {date}\n")
-        if image_path:
-            f.write(f"thumbnail: {image_path}\n")
-    else:
-        f.write(f"type: event\n")
-        f.write(f"title: \"{title}\"\n")
-        f.write(f"datetime: {dt}\n")
-        duration = extract_field('Duration')
-        if duration:
-            f.write(f"duration: {duration}\n")
-        location = extract_field('Location')
-        f.write(f"location: \"{location}\"\n")
-    f.write('---\n\n')
-    if image_path and is_news:
-        f.write(f"![{title}]({image_path})\n\n")
-    f.write(content)
+            # Create folder for post
+            os.makedirs(folder, exist_ok=True)
 
-# Write Turkish stub
-tr_file = os.path.join(folder, 'index.tr.md')
-with open(tr_file, 'w', encoding='utf-8') as f:
-    f.write('---\n')
-    if is_news:
-        f.write(f"type: news\n")
-        f.write(f"title: \"{title}\"\n")
-        f.write(f"date: {date}\n")
-        if image_path:
-            f.write(f"thumbnail: {image_path}\n")
-    else:
-        f.write(f"type: event\n")
-        f.write(f"title: \"{title}\"\n")
-        f.write(f"datetime: {dt}\n")
-        if duration:
-            f.write(f"duration: {duration}\n")
-        f.write(f"location: \"{location}\"\n")
-    f.write('---\n')
-EOF
+            # Write English markdown
+            en_path = os.path.join(folder, 'index.en.md')
+            with open(en_path, 'w', encoding='utf-8') as f:
+                f.write('---\n')
+                if is_news:
+                    f.write('type: news\n')
+                    f.write(f"title: \"{title}\"\n")
+                    f.write(f"date: {date}\n")
+                    if image_path:
+                        f.write(f"thumbnail: {image_path}\n")
+                else:
+                    f.write('type: event\n')
+                    f.write(f"title: \"{title}\"\n")
+                    f.write(f"datetime: {dt}\n")
+                    duration = extract_field('Duration')
+                    if duration:
+                        f.write(f"duration: {duration}\n")
+                    location = extract_field('Location')
+                    f.write(f"location: \"{location}\"\n")
+                f.write('---\n\n')
+                if image_path and is_news:
+                    f.write(f"![{title}]({image_path})\n\n")
+                f.write(content)
 
-      - name: Commit and create pull request
-        uses: peter-evans/create-pull-request@v5
-        with:
-          commit-message: "Add post from issue #${{ github.event.issue.number }}"
-          branch: "auto/post-${{ github.event.issue.number }}"
-          title: "Auto post from issue #${{ github.event.issue.number }}"
-
+            # Write Turkish stub
+            tr_path = os.path.join(folder, 'index.tr.md')
+            with open(tr_path, 'w', encoding='utf-8') as f:
+                f.write('---\n')
+                if is_news:
+                    f.write('type: news\n')
+                    f.write(f"title: \"{title}\"\n")
+                    f.write(f"date: {date}\n")
+                    if image_path:
+                        f.write(f"thumbnail: {image_path}\n")
+                else:
+                    f.write('type: event\n')
+                    f.write(f"title: \"{title}\"\n")
+                    f.write(f"datetime: {dt}\n")
+                    duration = extract_field('Duration')
+                    if duration:
+                        f.write(f"duration: {duration}\n")
+                    location = extract_field('Location')
+                    f.write(f"location: \"{location}\"\n")
+                f.write('---\n')
+          EOF
