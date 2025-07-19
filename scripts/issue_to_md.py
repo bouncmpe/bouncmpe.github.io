@@ -2,79 +2,95 @@ import os
 import re
 import unicodedata
 
-# GitHub Actions environment variables
-title = os.getenv("ISSUE_TITLE", "").strip()
-body = os.getenv("ISSUE_BODY", "").strip()
+# ── 1) Read environment variables set by GitHub Actions
+title  = os.getenv("ISSUE_TITLE", "").strip()
+body   = os.getenv("ISSUE_BODY",  "").strip()
 labels = os.getenv("ISSUE_LABELS", "").lower()
 
-# Determine content type
+# ── 2) Determine whether this is a news or an event
 content_type = "news" if "news" in labels else "event"
 
-# Slugify title for folder name
+# ── 3) Slugify the title for use in folder names
 def slugify(text):
     text = unicodedata.normalize("NFKD", text)
     text = text.encode("ascii", "ignore").decode("ascii")
     text = re.sub(r"[^\w\s-]", "", text.lower())
     return re.sub(r"[-\s]+", "-", text).strip("-_")
 
-# Parse issue body safely (supports multiline content)
-def parse_issue_body(body):
+# ── 4) Parse the issue body into a dict of “Heading → Value”
+def parse_issue_body(md):
     fields = {}
-    blocks = re.split(r"###\s+", body)[1:]
+    # Split on “### ” markers
+    blocks = re.split(r"^###\s+", md, flags=re.MULTILINE)[1:]
     for block in blocks:
-        lines = block.strip().splitlines()
-        if len(lines) > 1:
-            label = lines[0].strip()
-            value = "\n".join(lines[1:]).strip()
-            fields[label] = value
+        lines = block.splitlines()
+        if not lines: 
+            continue
+        label = lines[0].strip()
+        value = "\n".join(lines[1:]).strip()
+        fields[label] = value
     return fields
 
 parsed = parse_issue_body(body)
 
-# Helper to get fields case-insensitively
-def get_field(key_contains):
-    for k, v in parsed.items():
-        if key_contains.lower() in k.lower():
-            return v.strip()
+# ── 5) DEBUG: print out exactly what headings GitHub gave us
+print(" Parsed fields and sample values:")
+for k, v in parsed.items():
+    sample = v[:30] + ("…" if len(v) > 30 else "")
+    print(f"  • {repr(k)} → {repr(sample)}")
+
+# ── 6) Helper to find a field by partial, case-insensitive match
+def get_field(key_fragment):
+    for label, val in parsed.items():
+        if key_fragment.lower() in label.lower():
+            return val.strip()
     return ""
 
-# Get datetime + slugify title
+# ── 7) Extract core values
 raw_date = get_field("date and time") or get_field("date")
-date = raw_date.split("T")[0]
-slug = slugify(title)
-folder_path = f"content/{content_type}s/{date}-{content_type}-{slug}"
-os.makedirs(folder_path, exist_ok=True)
+date     = raw_date.split("T")[0] if raw_date else ""
+slug     = slugify(title)
+folder   = f"content/{content_type}s/{date}-{content_type}-{slug}"
+os.makedirs(folder, exist_ok=True)
 
-# Detect language (tr or en)
-lang_suffix = "tr" if re.search(r"[çğıöşü]", title.lower()) else "en"
-filepath = f"{folder_path}/index.{lang_suffix}.md"
+# Pick language suffix by detecting Turkish chars in title
+lang = "tr" if re.search(r"[çğıöşüÇĞİÖŞÜ]", title) else "en"
+out_file = f"{folder}/index.{lang}.md"
 
-# Build frontmatter
-frontmatter = "---\n"
+# ── 8) Build YAML frontmatter
+fm = ["---"]
 if content_type == "news":
-    frontmatter += f"type: news\n"
-    frontmatter += f"title: {title}\n"
-    frontmatter += f"description: {get_field('description')}\n"
-    frontmatter += f"date: {date}\n"
-    thumbnail = get_field("image path")
-    if thumbnail:
-        frontmatter += f"thumbnail: {thumbnail}\n"
-    frontmatter += f"featured: false\n"
-else:  # Event
-    frontmatter += f"type: phd-thesis-defense\n"
-    frontmatter += f"title: {title}\n"
-    frontmatter += f"name: {get_field('speaker')}\n"
-    frontmatter += f"datetime: {raw_date}\n"
-    frontmatter += f"duration: {get_field('duration')}\n"
-    frontmatter += f"location: {get_field('location')}\n"
-frontmatter += "---\n\n"
+    fm.append(f"type: news")
+    fm.append(f"title: {title}")
+    fm.append(f"description: {get_field('description')}")
+    fm.append(f"date: {date}")
+    thumb = get_field("image")
+    if thumb:
+        fm.append(f"thumbnail: {thumb}")
+    fm.append("featured: false")
+else:
+    fm.append(f"type: phd-thesis-defense")
+    fm.append(f"title: {title}")
+    # match any speaker/presenter/name field
+    speaker = get_field("speaker") or get_field("name")
+    fm.append(f"name: {speaker}")
+    fm.append(f"datetime: {raw_date}")
+    fm.append(f"duration: {get_field('duration')}")
+    fm.append(f"location: {get_field('location')}")
+fm.append("---\n")
 
-# Append full content
-markdown_content = frontmatter + (get_field("content") or get_field("extra") or get_field("abstract"))
+# ── 9) Determine body content (supports multiline)
+body_content = (
+    get_field("full content")
+    or get_field("extra information")
+    or get_field("abstract")
+    or ""
+)
 
-# Write to file
-with open(filepath, "w", encoding="utf-8") as f:
-    f.write(markdown_content)
+# ── 10) Write the file as UTF‑8
+with open(out_file, "w", encoding="utf-8") as f:
+    f.write("\n".join(fm))
+    f.write(body_content)
 
-print(f" Created: {filepath}")
+print(f" Created markdown at: {out_file}")
 
