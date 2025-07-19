@@ -18,91 +18,92 @@ jobs:
 
       - name: Extract issue body to file
         run: |
-          mkdir -p temp-posts
           echo "${{ github.event.issue.body }}" > issue-body.md
 
-      - name: Generate content from issue
+      - name: Generate markdown from issue
         run: |
-          python3 <<EOF
+          python3 <<'EOF'
           import re, os, unicodedata, json
           from datetime import datetime
 
+          # Read the issue body
           with open("issue-body.md", encoding="utf-8") as f:
               body = f.read()
 
-          def extract_field(label):
-              m = re.search(rf"### {re.escape(label)}\\s+(.+?)(?=(\\n###|$))", body, re.DOTALL)
+          def extract(label):
+              m = re.search(rf"### {re.escape(label)}\s+(.+?)(?=(\n###|$))", body, re.DOTALL)
               return m.group(1).strip() if m else ""
 
-          def slugify(text):
-              t = unicodedata.normalize('NFKD', text).encode('ascii','ignore').decode('ascii')
-              return re.sub(r'[^a-z0-9]+', '-', t.lower()).strip('-')
+          def slugify(t):
+              s = unicodedata.normalize('NFKD', t).encode('ascii','ignore').decode('ascii')
+              return re.sub(r'[^a-z0-9]+', '-', s.lower()).strip('-')
 
-          # get label names
+          # Get labels applied to this issue
           labels = [l['name'].lower() for l in json.loads(r'''${{ toJson(github.event.issue.labels) }}''')]
 
           is_event = 'event' in labels
           is_news  = 'news'  in labels
 
+          # Decide which type, then write to content/…
           if is_event:
-              title     = extract_field("Title")
-              name      = extract_field("Event Name")
-              dt_raw    = extract_field("Start Date and Time")
-              dt_iso    = datetime.fromisoformat(dt_raw).isoformat()
-              duration  = extract_field("Duration")
-              location  = extract_field("Location")
-              content   = extract_field("Description (EN)")
-              image_md  = extract_field("Poster or Cover Image")
+              title = extract("Title")
+              name  = extract("Event Name")
+              dt    = extract("Start Date and Time")
+              dt_iso = datetime.fromisoformat(dt).isoformat()
+              dur   = extract("Duration")
+              loc   = extract("Location")
+              desc  = extract("Description (EN)")
+              img   = extract("Poster or Cover Image")
 
               slug   = slugify(name or title)
-              folder = f"content/events/{dt_raw.replace(':','-')}-{slug}"
+              folder = f"content/events/{dt.replace(':','-')}-{slug}"
               os.makedirs(folder, exist_ok=True)
-              fn     = f"{folder}/index.en.md"
+              path   = f"{folder}/index.en.md"
 
-              with open(fn, "w", encoding="utf-8") as f:
+              with open(path, "w", encoding="utf-8") as f:
                   f.write("---\n")
                   f.write("type: phd-thesis-defense\n")
                   f.write(f'title: "{title}"\n')
                   f.write(f"name: {name}\n")
                   f.write(f"datetime: {dt_iso}\n")
-                  if duration: f.write(f"duration: {duration}\n")
-                  f.write(f"location: {location}\n")
+                  if dur: f.write(f"duration: {dur}\n")
+                  f.write(f"location: {loc}\n")
                   f.write("---\n\n")
-                  if image_md: f.write(image_md+"\n\n")
-                  f.write(content+"\n")
+                  if img: f.write(img + "\n\n")
+                  f.write(desc + "\n")
 
           elif is_news:
-              title   = extract_field("Title")
-              date    = extract_field("Date")
-              content = extract_field("Description (EN)")
-              thumb   = extract_field("Thumbnail Image")
+              title = extract("Title")
+              date  = extract("Date")
+              desc  = extract("Description (EN)")
+              img   = extract("Thumbnail Image")
 
               slug   = slugify(title)
               folder = f"content/news/{date}-news-{slug}"
               os.makedirs(folder, exist_ok=True)
-              fn     = f"{folder}/index.en.md"
+              path   = f"{folder}/index.en.md"
 
-              with open(fn, "w", encoding="utf-8") as f:
+              with open(path, "w", encoding="utf-8") as f:
                   f.write("---\n")
                   f.write("type: news\n")
                   f.write(f'title: "{title}"\n')
                   f.write(f"description: {title}\n")
                   f.write("featured: false\n")
                   f.write(f"date: {date}\n")
-                  if thumb:
-                      m = re.search(r'!\[.*?\]\((.*?)\)', thumb)
+                  if img:
+                      m = re.search(r'!\[.*?\]\((.*?)\)', img)
                       if m: f.write(f"thumbnail: {m.group(1)}\n")
                   f.write("---\n\n")
-                  f.write(content+"\n")
+                  f.write(desc + "\n")
 
           else:
-              print("⚠️ No `news` or `event` label found.")
+              print("No `news` or `event` label found.")
               exit(1)
 
-          print("✅ Generated:", fn)
+          print(" Generated:", path)
           EOF
 
-      - name: Commit & open PR
+      - name: Create Pull Request
         uses: peter-evans/create-pull-request@v6
         with:
           commit-message: "Add post from issue #${{ github.event.issue.number }}"
