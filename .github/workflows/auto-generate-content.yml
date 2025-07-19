@@ -1,112 +1,164 @@
-name: Auto Generate Content
+name: Submit Event
+description: Submit an event to be published on the CMPE website.
+labels: [event, automation]
+body:
+  - type: input
+    id: title
+    attributes:
+      label: Title
+      description: Short title for the event
+      placeholder: e.g. Graduation Ceremony 2025
+    validations:
+      required: true
+
+  - type: input
+    id: name
+    attributes:
+      label: Event Name
+      description: The formal name of the event
+      placeholder: e.g. Software Engineering
+    validations:
+      required: true
+
+  - type: input
+    id: datetime
+    attributes:
+      label: Start Date and Time
+      description: Use format YYYY-MM-DDTHH:MM:SS
+      placeholder: e.g. 2025-07-04T19:00:00
+    validations:
+      required: true
+
+  - type: input
+    id: duration
+    attributes:
+      label: Duration
+      description: Duration in hours (e.g. 2h)
+      placeholder: e.g. 2h
+    validations:
+      required: false
+
+  - type: input
+    id: location
+    attributes:
+      label: Location
+      description: Where will the event take place?
+      placeholder: e.g. Albert Long Hall
+    validations:
+      required: true
+
+  - type: textarea
+    id: image
+    attributes:
+      label: Poster or Cover Image
+      description: Upload or paste the image URL. Drag-and-drop works in GitHub.
+      placeholder: ![poster](https://user-images.githubusercontent.com/your-image.png)
+    validations:
+      required: false
+
+  - type: textarea
+    id: content
+    attributes:
+      label: Description (EN)
+      description: Detailed English description of the event
+      placeholder: You may use Markdown.
+    validations:
+      required: false, and .github/ISSUE_TEMPLATE/news.yml : name: Submit News
+description: Submit a news item to be published on the CMPE website.
+labels: [news, automation]
+body:
+  - type: input
+    id: title
+    attributes:
+      label: Title
+      description: Short title for the news
+      placeholder: e.g. Turna Turkish Language Model
+    validations:
+      required: true
+
+  - type: input
+    id: date
+    attributes:
+      label: Date
+      description: Date in YYYY-MM-DD format
+      placeholder: e.g. 2025-07-18
+    validations:
+      required: true
+
+  - type: textarea
+    id: thumbnail
+    attributes:
+      label: Thumbnail Image
+      description: Upload an image or paste a direct URL. If you upload using GitHub UI, copy its Markdown URL.
+      placeholder: e.g. ![image](https://user-images.githubusercontent.com/123456/your-image.png)
+    validations:
+      required: false
+
+  - type: textarea
+    id: content
+    attributes:
+      label: Description (EN)
+      description: Detailed English content of the news (markdown allowed)
+      placeholder: Write your content here...
+    validations:
+      required: false and I also created .github/workflows/auto-generate-content.yml : name: Convert News/Event Issue to Markdown
 
 on:
   issues:
     types: [opened]
 
-permissions:
-  contents: write
-  pull-requests: write
-
 jobs:
-  generate-content:
+  generate-post:
+    if: contains(join(github.event.issue.labels.*.name, ','), 'automation')
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Check out repository
         uses: actions/checkout@v4
 
-      - name: Extract issue body to file
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.x
+
+      - name: Extract issue data and generate markdown
         run: |
+          mkdir -p temp-posts
           echo "${{ github.event.issue.body }}" > issue-body.md
 
-      - name: Generate markdown from issue
-        run: |
-          python3 <<'EOF'
-          import re, os, unicodedata, json
-          from datetime import datetime
+          python3 <<EOF
+          import re
+          import os
+          import sys
 
-          # Read the issue body
           with open("issue-body.md", encoding="utf-8") as f:
               body = f.read()
 
-          def extract(label):
-              m = re.search(rf"### {re.escape(label)}\s+(.+?)(?=(\n###|$))", body, re.DOTALL)
-              return m.group(1).strip() if m else ""
+          def extract_field(label):
+              match = re.search(rf"### {label}\\s+(.+?)(?=(\\n###|$))", body, re.DOTALL)
+              return match.group(1).strip() if match else ""
 
-          def slugify(t):
-              s = unicodedata.normalize('NFKD', t).encode('ascii','ignore').decode('ascii')
-              return re.sub(r'[^a-z0-9]+', '-', s.lower()).strip('-')
+          title = extract_field("Title")
+          content = extract_field("Content") or extract_field("Description")
+          date = extract_field("Date") or extract_field("Event Date")
+          image = extract_field("Optional image markdown")
+          kind = "news" if 'news' in "${{ github.event.issue.labels.*.name }}" else "events"
+          
+          slug = "-".join(title.lower().split())
+          filename = f"content/{kind}/{date}-{slug}.md"
 
-          # Get labels applied to this issue
-          labels = [l['name'].lower() for l in json.loads(r'''${{ toJson(github.event.issue.labels) }}''')]
+          os.makedirs(os.path.dirname(filename), exist_ok=True)
 
-          is_event = 'event' in labels
-          is_news  = 'news'  in labels
-
-          # Decide which type, then write to content/…
-          if is_event:
-              title = extract("Title")
-              name  = extract("Event Name")
-              dt    = extract("Start Date and Time")
-              dt_iso = datetime.fromisoformat(dt).isoformat()
-              dur   = extract("Duration")
-              loc   = extract("Location")
-              desc  = extract("Description (EN)")
-              img   = extract("Poster or Cover Image")
-
-              slug   = slugify(name or title)
-              folder = f"content/events/{dt.replace(':','-')}-{slug}"
-              os.makedirs(folder, exist_ok=True)
-              path   = f"{folder}/index.en.md"
-
-              with open(path, "w", encoding="utf-8") as f:
-                  f.write("---\n")
-                  f.write("type: phd-thesis-defense\n")
-                  f.write(f'title: "{title}"\n')
-                  f.write(f"name: {name}\n")
-                  f.write(f"datetime: {dt_iso}\n")
-                  if dur: f.write(f"duration: {dur}\n")
-                  f.write(f"location: {loc}\n")
-                  f.write("---\n\n")
-                  if img: f.write(img + "\n\n")
-                  f.write(desc + "\n")
-
-          elif is_news:
-              title = extract("Title")
-              date  = extract("Date")
-              desc  = extract("Description (EN)")
-              img   = extract("Thumbnail Image")
-
-              slug   = slugify(title)
-              folder = f"content/news/{date}-news-{slug}"
-              os.makedirs(folder, exist_ok=True)
-              path   = f"{folder}/index.en.md"
-
-              with open(path, "w", encoding="utf-8") as f:
-                  f.write("---\n")
-                  f.write("type: news\n")
-                  f.write(f'title: "{title}"\n')
-                  f.write(f"description: {title}\n")
-                  f.write("featured: false\n")
-                  f.write(f"date: {date}\n")
-                  if img:
-                      m = re.search(r'!\[.*?\]\((.*?)\)', img)
-                      if m: f.write(f"thumbnail: {m.group(1)}\n")
-                  f.write("---\n\n")
-                  f.write(desc + "\n")
-
-          else:
-              print("No `news` or `event` label found.")
-              exit(1)
-
-          print(" Generated:", path)
+          with open(filename, "w", encoding="utf-8") as f:
+              f.write(f"---\\ntitle: \\"{title}\\"\\ndate: {date}\\n---\\n\\n")
+              if image:
+                  f.write(image + "\\n\\n")
+              f.write(content.strip())
           EOF
 
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v6
+      - name: Commit and create pull request
+        uses: peter-evans/create-pull-request@v5
         with:
           commit-message: "Add post from issue #${{ github.event.issue.number }}"
-          branch: "auto/issue-${{ github.event.issue.number }}"
-          title: "Auto post from issue #${{ github.event.issue.number }}"
-
+          branch: "auto/post-${{ github.event.issue.number }}"
+          title: "Auto post from issue #${{ github.event.issue.number }}". 
