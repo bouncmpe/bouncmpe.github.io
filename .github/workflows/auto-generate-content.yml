@@ -2,11 +2,11 @@ name: Convert News/Event Issue to Markdown
 
 on:
   issues:
-    types: [opened, automation]
+    types: [opened]
 
 jobs:
   generate-post:
-    if: github.event.issue.labels.*.name contains 'automation'
+    if: contains(join(github.event.issue.labels.*.name, ','), 'automation')
     runs-on: ubuntu-latest
 
     steps:
@@ -27,20 +27,19 @@ jobs:
           import re
           import os
           import sys
-          from datetime import datetime
 
           with open("issue-body.md", encoding="utf-8") as f:
               body = f.read()
 
           def extract_field(label):
-              match = re.search(rf"### {label}\\s+(.+?)\\n(?=###|$)", body, re.DOTALL)
+              match = re.search(rf"### {label}\\s+(.+?)(?=(\\n###|$))", body, re.DOTALL)
               return match.group(1).strip() if match else ""
 
           title = extract_field("Title")
-          content = extract_field("Content|Description")
-          date = extract_field("Date|Event Date")
+          content = extract_field("Content") or extract_field("Description")
+          date = extract_field("Date") or extract_field("Event Date")
           image = extract_field("Optional image markdown")
-          kind = "news" if "news" in os.environ["GITHUB_ISSUE_LABELS"] else "events"
+          kind = "news" if 'news' in "${{ github.event.issue.labels.*.name }}" else "events"
           
           slug = "-".join(title.lower().split())
           filename = f"content/{kind}/{date}-{slug}.md"
@@ -52,7 +51,6 @@ jobs:
               if image:
                   f.write(image + "\\n\\n")
               f.write(content.strip())
-
           EOF
 
       - name: Commit and create pull request
