@@ -1,4 +1,4 @@
-name:  Convert Issue to Markdown and PR
+name: 🛠️ Convert Issue to Markdown and PR
 
 on:
   issues:
@@ -6,30 +6,30 @@ on:
 
 jobs:
   convert-and-pr:
-    if: |
-      github.event.issue.labels.*.name contains 'news' || 
-      github.event.issue.labels.*.name contains 'event'
+    if: contains(join(github.event.issue.labels.*.name, ','), 'news') || contains(join(github.event.issue.labels.*.name, ','), 'event')
     runs-on: ubuntu-latest
 
     steps:
-      - name:  Checkout repo
+      - name: 📥 Checkout repo
         uses: actions/checkout@v4
 
-      - name:  Set up Python
+      - name: 🐍 Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.x'
 
-      - name:  Create markdown from issue
+      - name: 🔧 Create markdown file from issue
         run: python scripts/issue_to_md.py
         env:
           ISSUE_TITLE: "${{ github.event.issue.title }}"
           ISSUE_BODY: "${{ github.event.issue.body }}"
           ISSUE_LABELS: "${{ toJson(github.event.issue.labels) }}"
 
-      - name:  Create Pull Request
+      - name: 📤 Create Pull Request
         uses: peter-evans/create-pull-request@v6
         with:
           commit-message: "Auto add: ${{ github.event.issue.title }}"
           title: "Automated PR: ${{ github.event.issue.title }}"
-          body: "This PR was generated from a GitHub issue."
+          body: "This PR was automatically generated from a GitHub Issue."
+          branch: "auto/add-${{ github.event.issue.number }}"
+
