@@ -27,6 +27,7 @@ jobs:
           import re
           import os
           import unicodedata
+          import json
           from datetime import datetime
 
           with open("issue-body.md", encoding="utf-8") as f:
@@ -40,13 +41,14 @@ jobs:
               text = unicodedata.normalize('NFKD', text).encode('ascii', 'ignore').decode('ascii')
               return re.sub(r'[^a-z0-9]+', '-', text.lower()).strip('-')
 
-          labels = "${{ github.event.issue.labels.*.name }}".lower()
+          # Load label names from GitHub Action context
+          labels_raw = """${{ toJson(github.event.issue.labels) }}"""
+          label_names = [label["name"].lower() for label in json.loads(labels_raw)]
 
-          is_event = 'event' in labels
-          is_news = 'news' in labels
+          is_event = 'event' in label_names
+          is_news = 'news' in label_names
 
           if is_event:
-              kind = "events"
               title = extract_field("Title")
               name = extract_field("Event Name")
               dt_raw = extract_field("Start Date and Time")
@@ -63,7 +65,7 @@ jobs:
 
               with open(filename, "w", encoding="utf-8") as f:
                   f.write("---\n")
-                  f.write(f'type: phd-thesis-defense\n')
+                  f.write(f"type: phd-thesis-defense\n")
                   f.write(f'title: "{title}"\n')
                   f.write(f'name: {name}\n')
                   f.write(f'datetime: {dt}\n')
@@ -72,14 +74,13 @@ jobs:
                   f.write("---\n\n")
                   if image:
                       f.write(image + "\n\n")
-                  f.write(content + "\n")
+                  f.write(content.strip() + "\n")
 
           elif is_news:
-              kind = "news"
               title = extract_field("Title")
               date = extract_field("Date")
-              image = extract_field("Thumbnail Image")
               content = extract_field("Description (EN)")
+              image = extract_field("Thumbnail Image")
 
               slug = slugify(title)
               folder = f"content/news/{date}-news-{slug}"
@@ -100,11 +101,11 @@ jobs:
                           f.write(f"thumbnail: {image_path}\n")
                   f.write("---\n\n")
                   f.write(content.strip() + "\n")
-
           else:
               print("Could not detect type from labels.")
+              exit(1)
 
-          print("File created:", filename)
+          print("✅ File created:", filename)
           EOF
 
       - name: Commit and create pull request
