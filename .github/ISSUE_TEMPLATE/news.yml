@@ -39,7 +39,7 @@ body:
       required: false
 
   - type: textarea
-    id: content
+    id: content_tr
     attributes:
       label: Description (TR)
       description:  Detailed Turkish content
