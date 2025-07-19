@@ -1,13 +1,20 @@
-name:  News Submission
-description: Submit a news item for the department website (TR or EN)
-title: "[NEWS] <Insert title here>"
+name:  Bilingual News Submission
+description: Submit a news item for the website. Provide both English and Turkish entries.
+title: "[NEWS] <Insert news title>"
 labels: ["news"]
 body:
   - type: input
-    id: title
+    id: title_en
     attributes:
-      label: "Title (TR or EN)"
-      description: "Enter the full title of the news"
+      label: "News Title (EN)"
+      placeholder: "Lale Akarun received the Excellence in Research Award"
+    validations:
+      required: true
+
+  - type: input
+    id: title_tr
+    attributes:
+      label: "News Title (TR)"
       placeholder: "Lale Akarun'a Araştırmada Üstün Başarı Ödülü"
     validations:
       required: true
@@ -16,7 +23,6 @@ body:
     id: date
     attributes:
       label: "Date (YYYY-MM-DD)"
-      description: "Enter the date of the news"
       placeholder: "2024-07-19"
     validations:
       required: true
@@ -25,24 +31,38 @@ body:
     id: thumbnail
     attributes:
       label: "Image path (optional)"
-      description: "For example: uploads/lale-akarun-1.png"
       placeholder: "uploads/example.png"
 
   - type: textarea
-    id: description
+    id: description_en
     attributes:
-      label: "Short Description"
-      description: "One-paragraph summary to appear under the title"
-      placeholder: "Boğaziçi Üniversitesi Vakfı ödülü verdi."
+      label: "Short Description (EN)"
+      placeholder: "Boğaziçi University Foundation awarded scientists..."
     validations:
       required: true
 
   - type: textarea
-    id: content
+    id: description_tr
     attributes:
-      label: "Full Content (Markdown allowed)"
-      description: "Use plain text or Markdown; Turkish characters supported"
-      placeholder: "Boğaziçi Üniversitesi Vakfı (BÜVAK) her sene araştırma faaliyetleriyle fark yaratan bilim insanlarını ödüllendiriyor..."
+      label: "Short Description (TR)"
+      placeholder: "Boğaziçi Üniversitesi Vakfı bilim insanlarını ödüllendirdi..."
     validations:
       required: true
 
+  - type: textarea
+    id: content_en
+    attributes:
+      label: "Full Content (EN)"
+      description: "Detailed news content in English"
+      placeholder: "Boğaziçi University Foundation (BÜVAK) every year..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: content_tr
+    attributes:
+      label: "Full Content (TR)"
+      description: "Detaylı haber içeriği Türkçe"
+      placeholder: "Boğaziçi Üniversitesi Vakfı (BÜVAK) her yıl..."
+    validations:
+      required: true
