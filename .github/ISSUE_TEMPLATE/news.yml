@@ -41,7 +41,7 @@ body:
   - type: textarea
     id: content
     attributes:
-      label: label: Description (TR)
+      label: Description (TR)
       description: description: Detailed Turkish content
       placeholder: placeholder: Write in Turkish...
     validations:
