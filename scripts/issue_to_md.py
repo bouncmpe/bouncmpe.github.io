@@ -39,19 +39,27 @@ def get_field(label):
 
 # 6) Download image if present (returns local path or empty)
 def download_image(md_link):
-    m = re.search(r"\((https?://[^)]+\.(?:png|jpe?g|gif))\)", md_link)
+    print(f"🔍 Attempting to extract image URL from: {md_link}")
+    m = re.search(r"!\[[^\]]*\]\((https?://[^)]+\.(?:png|jpe?g|gif))\)", md_link)
     if not m:
+        print("❌ No image URL found.")
         return ""
     url = m.group(1)
+    print(f"📥 Downloading image from: {url}")
     filename = os.path.basename(urlparse(url).path)
     save_dir = "uploads"
     os.makedirs(save_dir, exist_ok=True)
     save_path = os.path.join(save_dir, filename)
-    r = requests.get(url)
-    r.raise_for_status()
-    with open(save_path, "wb") as f:
-        f.write(r.content)
-    return save_path
+    try:
+        r = requests.get(url)
+        r.raise_for_status()
+        with open(save_path, "wb") as f:
+            f.write(r.content)
+        print(f"✅ Saved image to: {save_path}")
+        return save_path
+    except Exception as e:
+        print(f"❌ Failed to download image: {e}")
+        return ""
 
 # 7) Determine folder & date
 if is_news:
@@ -68,6 +76,7 @@ os.makedirs(base, exist_ok=True)
 
 # 8) Process image
 img_md = get_field("Image (drag & drop here)") if is_news else get_field("Image (optional, drag & drop)")
+print(f"📎 Raw image markdown: {img_md}")
 th_thumb = download_image(img_md) if img_md else ""
 
 # 9) Write files for en & tr
