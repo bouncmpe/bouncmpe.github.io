@@ -23,7 +23,8 @@ def parse_issue_body(md):
     blocks = re.split(r"^###\s+", md, flags=re.MULTILINE)[1:]
     for blk in blocks:
         lines = blk.splitlines()
-        if not lines: continue
+        if not lines: 
+            continue
         label = lines[0].strip()
         val   = "\n".join(lines[1:]).strip()
         fields[label] = val
@@ -31,19 +32,19 @@ def parse_issue_body(md):
 
 parsed = parse_issue_body(body)
 
-# ── 5) Debug (remove/comment out once you confirm fields)
+# ── 5) DEBUG: print parsed fields (remove/comment out later)
 print("🔍 Parsed fields:")
 for k,v in parsed.items():
     print(f" • {repr(k)} → {repr(v[:30] + ('…' if len(v)>30 else ''))}")
 
-# ── 6) Case‑insensitive lookup
+# ── 6) Case‑insensitive lookup helper
 def get_field(fragment):
     for k,v in parsed.items():
         if fragment.lower() in k.lower():
             return v.strip()
     return ""
 
-# ── 7) Build folder & filenames
+# ── 7) Build folder & filename
 raw_date = get_field("date and time") or get_field("date")
 date     = raw_date.split("T")[0] if raw_date else "unknown-date"
 slug     = slugify(title)
@@ -52,7 +53,7 @@ os.makedirs(folder, exist_ok=True)
 lang     = "tr" if re.search(r"[çğıöşüÇĞİÖŞÜ]", title) else "en"
 out_md   = f"{folder}/index.{lang}.md"
 
-# ── 8) Frontmatter assembly
+# ── 8) Build YAML frontmatter
 fm = ["---"]
 if content_type == "news":
     fm += [
@@ -65,40 +66,39 @@ if content_type == "news":
     if thumb: fm.append(f"thumbnail: {thumb}")
     fm.append("featured: false")
 else:
+    speaker = get_field("speaker") or get_field("name")
     fm += [
         "type: phd-thesis-defense",
         f"title: {title}",
-        f"name: {get_field('speaker') or get_field('name')}",
+        f"name: {speaker}",
         f"datetime: {raw_date}",
         f"duration: {get_field('duration')}",
         f"location: {get_field('location')}"
     ]
 fm.append("---\n")
 
-# ── 9) Body content: first try known fields, else fallback
+# ── 9) Pull in your real body text
+#    First try explicit fields:
 body_content = (
     get_field("content")
     or get_field("extra information")
     or get_field("abstract")
 )
+
+# ── 10) If still empty, fallback on *all* fields except these keys
 if not body_content:
-    # fallback: take every parsed value not used in frontmatter
-    used_keys = {
-        # for news
-        "description","date","image","thumbnail",
-        # for event
-        "speaker","name","datetime","duration","location"
-    }
+    exclude = {"title","description","date","image","thumbnail",
+               "speaker","name","datetime","duration","location","featured"}
     parts = []
     for label,val in parsed.items():
-        if not any(u in label.lower() for u in used_keys):
+        if all(e not in label.lower() for e in exclude):
             parts.append(val)
     body_content = "\n\n".join(parts)
 
-# ── 10) Write the file
+# ── 11) Write out the markdown file
 with open(out_md, "w", encoding="utf-8") as f:
     f.write("\n".join(fm))
     f.write(body_content)
 
-print(f"✅ Created markdown at: {out_md}")
+print(f" Created markdown at: {out_md}")
 
