@@ -64,3 +64,11 @@ body:
       placeholder: You may use Markdown.
     validations:
       required: false
+  - type : textarea
+    id: content_tr
+    attributes:
+      label: Description (TR)
+      description: Detailed Turkish description
+      placeholder: You may use Markdown.
+    validations:
+      required: false
