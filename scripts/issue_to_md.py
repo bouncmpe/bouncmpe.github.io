@@ -1,92 +1,89 @@
 import os, re, unicodedata
 
 # 1) Inputs
-type_labels = os.getenv("ISSUE_LABELS", "").lower()
+labels = os.getenv("ISSUE_LABELS", "").lower()
 body = os.getenv("ISSUE_BODY", "").strip()
 
-# 2) Determine type
-content_type = "news" if "news" in type_labels else "event"
+# 2) Determine content type
+type_is_news = "news" in labels
 
 # 3) Slugify helper
 def slugify(text):
     t = unicodedata.normalize("NFKD", text)
-    t = t.encode("ascii","ignore").decode("ascii")
-    t = re.sub(r"[^\w\s-]","", t.lower())
-    return re.sub(r"[-\s]+","-", t).strip("-_")
+    t = t.encode("ascii", "ignore").decode("ascii")
+    t = re.sub(r"[^\w\s-]", "", t.lower())
+    return re.sub(r"[-\s]+", "-", t).strip("-_")
 
-# 4) Parse issue body
+# 4) Parse issue body into {Heading: Value}
 def parse_issue_body(md):
     fields = {}
     blocks = re.split(r"^#{1,6}\s+", md, flags=re.MULTILINE)[1:]
     for blk in blocks:
         lines = blk.splitlines()
+        if not lines:
+            continue
         label = lines[0].strip()
-        val = "\n".join(lines[1:]).strip()
-        fields[label] = val
+        value = "\n".join(lines[1:]).strip()
+        fields[label] = value
     return fields
 
 parsed = parse_issue_body(body)
 
-# 5) Mapping IDs to labels
-mapping = {
-    # Event
-    'title_en': 'Event Title (EN)', 'title_tr': 'Event Title (TR)',
-    'name': 'Speaker/Presenter Name', 'datetime': 'Date and Time (ISO format)',
-    'duration': 'Duration', 'location_en': 'Location (EN)', 'location_tr': 'Location (TR)',
-    'description_en': 'Description (EN)', 'description_tr': 'Description (TR)',
-    # News
-    'news_title_en': 'News Title (EN)', 'news_title_tr': 'News Title (TR)',
-    'date': 'Date (YYYY-MM-DD)', 'thumbnail': 'Image path (optional)',
-    'short_en': 'Short Description (EN)', 'short_tr': 'Short Description (TR)',
-    'content_en': 'Full Content (EN)', 'content_tr': 'Full Content (TR)',
-}
+# 5) Helper to fetch by label
+def get_label_field(*labels_to_try):
+    for lab in labels_to_try:
+        for k, v in parsed.items():
+            if k.lower() == lab.lower():
+                return v
+    return ""
 
-def get_field(fid):
-    label = mapping.get(fid)
-    return parsed.get(label, "").strip()
+# 6) Common date and slug
+if type_is_news:
+    date = get_label_field("Date (YYYY-MM-DD)")
+    slug = slugify(get_label_field("News Title (EN)"))
+    folder = f"content/news/{date}-news-{slug}"
+else:
+    raw_dt = get_label_field("Date and Time (ISO format)")
+    date = raw_dt.split("T")[0]
+    slug = slugify(get_label_field("Event Title (EN)"))
+    folder = f"content/events/{date}-event-{slug}"
 
-# 6) Common extraction
-raw_date = get_field('date') if content_type=='news' else get_field('datetime')
-_date = raw_date.split('T')[0] if 'T' in raw_date else raw_date
-slug = slugify(get_field('news_title_en') if content_type=='news' else get_field('title_en'))
-base_folder = f"content/{content_type}s/{_date}-{content_type}-{slug}"
-os.makedirs(base_folder, exist_ok=True)
+os.makedirs(folder, exist_ok=True)
 
-# 7) Frontmatter templates
-def make_frontmatter(lang):
-    if content_type=='news':
-        return [
-            '---',
-            f"type: news",
-            f"title: {get_field('news_title_' + lang)}",
-            f"description: {get_field('short_' + lang)}",
-            f"date: {_date}",
-            f"thumbnail: {get_field('thumbnail')}",
-            'featured: false',
-            '---\n'
+# 7) Build and write files
+def write_md(lang):
+    if type_is_news:
+        fm = [
+            "---",
+            "type: news",
+            f"title: {get_label_field('News Title (' + lang.upper() + ')')}",
+            f"description: {get_label_field('Short Description (' + lang.upper() + ')')}",
+            f"date: {date}",
         ]
+        thumb = get_label_field("Image path (optional)")
+        if thumb:
+            fm.append(f"thumbnail: {thumb}")
+        fm.append("featured: false")
+        fm.append("---\n")
+        content = get_label_field('Full Content (' + lang.upper() + ')')
     else:
-        return [
-            '---',
-            'type: phd-thesis-defense',
-            f"title: {get_field('title_' + lang)}",
-            f"name: {get_field('name')}",
-            f"datetime: {raw_date}",
-            f"duration: {get_field('duration')}",
-            f"location: {get_field('location_' + lang)}",
-            '---\n'
+        fm = [
+            "---",
+            "type: phd-thesis-defense",
+            f"title: {get_label_field('Event Title (' + lang.upper() + ')')}",
+            f"name: {get_label_field('Speaker/Presenter Name')}",
+            f"datetime: {raw_dt}",
+            f"duration: {get_label_field('Duration')}",
+            f"location: {get_label_field('Location (' + lang.upper() + ')')}",
+            "---\n"
         ]
+        content = get_label_field('Description (' + lang.upper() + ')')
 
-# 8) Write files for each language
-for lang in ['en','tr']:
-    fm = make_frontmatter(lang)
-    # Fix: use description for events, content for news
-    if content_type=='news':
-        body_text = get_field('content_' + lang)
-    else:
-        body_text = get_field('description_' + lang)
-    out_file = f"{base_folder}/index.{lang}.md"
-    with open(out_file,'w',encoding='utf-8') as f:
+    path = f"{folder}/index.{lang.lower()}.md"
+    with open(path, "w", encoding="utf-8") as f:
         f.write("\n".join(fm))
-        f.write(body_text)
-    print(f" Created: {out_file}")
+        f.write(content)
+    print(f"✅ Created: {path}")
+
+for l in ['en', 'tr']:
+    write_md(l)
