@@ -1,5 +1,5 @@
 name:  Bilingual News Submission
-description: Submit a news item for the website. Provide both English and Turkish entries.
+description: Submit a news item for the website. Provide both English and Turkish entries, including an image (required).
 title: "[NEWS] <Insert news title>"
 labels: ["news"]
 body:
@@ -31,8 +31,8 @@ body:
     id: image_markdown
     attributes:
       label: "Image (drag & drop here)"
-      description: "Please drag & drop your image. GitHub will generate a markdown link."
-      placeholder: "![alt text](https://user-images.githubusercontent.com/…/your-image.png)"
+      description: "Drag & drop your image; GitHub will upload it and provide a markdown link."
+      placeholder: "![alt text](https://user-images.githubusercontent.com/.../your-image.png)"
     validations:
       required: true
 
