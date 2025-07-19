@@ -13,44 +13,47 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # Required for proper change detection
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.10"
 
-      - name: Configure Git
-        run: |
-          git config user.email "actions@github.com"
-          git config user.name "GitHub Actions"
-
-      - name: Generate content files
+      - name: Generate content
         id: generate
         env:
           ISSUE_BODY: ${{ github.event.issue.body }}
           ISSUE_LABELS: ${{ toJson(github.event.issue.labels) }}
         run: |
           python3 <<EOF
-          # ... [Your existing Python script here] ...
+          # Your existing Python script here
           
-          # After file creation:
+          # At the end:
           import os
-          if os.path.exists("content"):
-              print("::set-output name=changes::true")
+          changes = os.path.exists("content/events") or os.path.exists("content/news")
+          print(f"::set-output name=changes::{str(changes).lower()}")
           EOF
 
-      - name: Verify creation
+      - name: Debug - Show created files
+        run: |
+          find content -type f || echo "No files found"
+          git status
+
+      - name: Add and commit files
         if: steps.generate.outputs.changes == 'true'
         run: |
-          echo "Content was generated:"
-          find content -type f
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Actions"
+          git add content/
+          git commit -m "Add content from issue #${{ github.event.issue.number }}"
+          git status
 
       - name: Create Pull Request
         if: steps.generate.outputs.changes == 'true'
         uses: peter-evans/create-pull-request@v5
         with:
-          commit-message: "Add content from issue #${{ github.event.issue.number }}"
           branch: "auto-content/${{ github.event.issue.number }}"
-          title: "Add: Content from issue #${{ github.event.issue.number }}"
-          body: "Automated content generation"
+          title: "Add content from issue #${{ github.event.issue.number }}"
+          body: "Automatically generated from issue"
+          commit-message: "Add content from issue #${{ github.event.issue.number }}"
