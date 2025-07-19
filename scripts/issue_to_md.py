@@ -32,7 +32,11 @@ def parse_issue_body(body):
 parsed = parse_issue_body(body)
 
 # Get values
-raw_date = parsed.get("date (yyyy-mm-dd)", "") or parsed.get("date and time (iso format)", "")
+raw_date = ""
+for key in parsed:
+    if "date and time" in key.lower() or "date" in key.lower():
+        raw_date = parsed[key]
+        break
 date = raw_date.split("t")[0]
 slug = slugify(title)
 folder_name = f"{date}-{content_type}-{slug}"
