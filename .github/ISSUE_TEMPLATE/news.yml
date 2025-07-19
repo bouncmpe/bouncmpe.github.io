@@ -1,4 +1,4 @@
-name: 📰 News Submission
+name:  News Submission
 description: Submit a news item for the department website (TR or EN)
 title: "[NEWS] <Insert title here>"
 labels: ["news"]
@@ -45,3 +45,4 @@ body:
       placeholder: "Boğaziçi Üniversitesi Vakfı (BÜVAK) her sene araştırma faaliyetleriyle fark yaratan bilim insanlarını ödüllendiriyor..."
     validations:
       required: true
+
