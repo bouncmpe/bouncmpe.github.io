@@ -4,21 +4,101 @@ on:
   issues:
     types: [opened, labeled]
 
+permissions:
+  contents: write   # needed to create branches & files
+  pull-requests: write
+
 jobs:
-  parse-and-log:
+  generate-content:
     runs-on: ubuntu-latest
 
     steps:
+      # 1) Only proceed if 'automation' label is present
       - name: Check for automation label
-        if: |
-          !contains(github.event.issue.labels.*.name, 'automation')
+        if: "! contains(github.event.issue.labels.*.name, 'automation')"
         run: |
-          echo "Not an automation issue, skipping."
+          echo " No 'automation' label – skipping."
           exit 0
 
-      - name: Log issue details
+      # 2) Parse the issue body into JS variables
+      - name: Parse issue form fields
+        id: parse
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const body = context.payload.issue.body
+            // crude Markdown parsing: look for lines like "**Field:** value"
+            const lines = body.split("\n");
+            const data = {};
+            for (const line of lines) {
+              const m = line.match(/^\s*\*\*(.+?):\*\*\s*(.+)$/);
+              if (m) data[m[1].trim().toLowerCase()] = m[2].trim();
+            }
+
+            // determine type from labels
+            const type = context.payload.issue.labels
+              .map(l => l.name)
+              .find(n => n === "news" || n === "event");
+            if (!type) throw new Error("No 'news' or 'event' label found");
+
+            // make a sluged folder name
+            const dt = (data.datetime || data.date)
+              .replace(/[:]/g, "-")
+              .toLowerCase();
+            const name = (data.name || data.title)
+              .toLowerCase().replace(/\s+/g, "-");
+            const folder = `content/${type}s/${dt}-${name}`;
+
+            return { data, type, folder };
+
+      # 3) Check out the repo at main
+      - uses: actions/checkout@v3
+        with:
+          ref: main
+
+      # 4) Create the new folder and files
+      - name: Generate markdown files
         run: |
-          echo "✅ Automation issue detected!"
-          echo "Title: ${{ github.event.issue.title }}"
-          echo "Body:  ${{ github.event.issue.body }}"
-          echo "Labels: ${{ toJson(github.event.issue.labels.*.name) }}"
+          TYPE=${{ steps.parse.outputs.type }}
+          FOLDER=${{ steps.parse.outputs.folder }}
+          mkdir -p "$FOLDER"
+          
+          # English file
+          cat > "$FOLDER/index.en.md" <<EOF
+          ---
+          type: $TYPE${{ TYPE == 'special-event' && '\nname: '${{ steps.parse.outputs.data.name }} || '' }}
+          title: "${{ steps.parse.outputs.data.title }}"
+          $([[ "$TYPE" == "event" ]] && echo "datetime: ${{ steps.parse.outputs.data.datetime }}" || echo "date: ${{ steps.parse.outputs.data.date }}" )
+          $([[ -n "${{ steps.parse.outputs.data.duration }}}" ]] && echo "duration: ${{ steps.parse.outputs.data.duration }}" )
+          $([[ -n "${{ steps.parse.outputs.data.location }}}" ]] && echo "location: ${{ steps.parse.outputs.data.location }}" )
+          $([[ -n "${{ steps.parse.outputs.data.featured }}}" ]] && echo "featured: ${{ steps.parse.outputs.data.featured }}" )
+          $([[ -n "${{ steps.parse.outputs.data.thumbnail }}}" ]] && echo "thumbnail: ${{ steps.parse.outputs.data.thumbnail }}" )
+          ---
+          
+          ${{ steps.parse.outputs.data.content || '' }}
+          EOF
+
+          # Turkish stub
+          cat > "$FOLDER/index.tr.md" <<EOF
+          ---
+          # same front‑matter as EN
+          ---
+          
+          (TR translation here)
+          EOF
+
+      # 5) Commit & open a PR
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "feat: add ${{ steps.parse.outputs.type }} from issue #${{ github.event.issue.number }}"
+          committer: GitHub <noreply@github.com>
+          author: ${{ github.event.issue.user.login }} <${{ github.event.issue.user.login }}@users.noreply.github.com>
+          branch: "auto/${{ github.event.issue.number }}"
+          title: "Add ${{ steps.parse.outputs.type }} from issue #${{ github.event.issue.number }}"
+          body: |
+            This PR was automatically generated from issue #${{ github.event.issue.number }}.
+            Please review the generated content.
+
