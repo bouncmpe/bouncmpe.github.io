@@ -11,14 +11,14 @@ body = os.getenv("ISSUE_BODY", "").strip()
 # 2) Determine type
 is_news = "news" in labels
 
-# 3) Slugify
+# 3) Slugify helper
 def slugify(text):
-    text = unicodedata.normalize("NFKD", text)
-    text = text.encode("ascii", "ignore").decode("ascii")
-    text = re.sub(r"[^\w\s-]", "", text.lower())
-    return re.sub(r"[-\s]+", "-", text).strip("-_")
+    t = unicodedata.normalize("NFKD", text)
+    t = t.encode("ascii", "ignore").decode("ascii")
+    t = re.sub(r"[^\w\s-]", "", t.lower())
+    return re.sub(r"[-\s]+", "-", t).strip("-_")
 
-# 4) Parse issue body
+# 4) Parse issue body into {Heading: Value}
 def parse_issue_body(md):
     fields = {}
     blocks = re.split(r"^#{1,6}\s+", md, flags=re.MULTILINE)[1:]
@@ -27,25 +27,36 @@ def parse_issue_body(md):
         if not lines:
             continue
         label = lines[0].strip()
-        value = "\n".join(lines[1:]).strip()
-        fields[label] = value
+        val = "\n".join(lines[1:]).strip()
+        fields[label] = val
     return fields
 
 parsed = parse_issue_body(body)
 
-# 5) Helper to fetch field
+# 5) Simple getter
+
 def get_field(label):
     return parsed.get(label, "").strip()
 
-# 6) Download image if present (returns local path or empty)
+# 6) Download image from markdown or HTML tag
+
 def download_image(md_link):
-    print(f"🔍 Attempting to extract image URL from: {md_link}")
+    print(f" Raw image input: {md_link}")
+    url = ""
+    # Try markdown syntax
     m = re.search(r"!\[[^\]]*\]\((https?://[^)]+\.(?:png|jpe?g|gif))\)", md_link)
-    if not m:
-        print("❌ No image URL found.")
+    if m:
+        url = m.group(1)
+    else:
+        # Try HTML <img> tag
+        m2 = re.search(r"src=\"(https?://[^\"]+\.(?:png|jpe?g|gif))\"", md_link)
+        if m2:
+            url = m2.group(1)
+    if not url:
+        print(" No valid image URL found in input.")
         return ""
-    url = m.group(1)
-    print(f"📥 Downloading image from: {url}")
+    print(f" Downloading image from: {url}")
+    # derive filename
     filename = os.path.basename(urlparse(url).path)
     save_dir = "uploads"
     os.makedirs(save_dir, exist_ok=True)
@@ -55,10 +66,10 @@ def download_image(md_link):
         r.raise_for_status()
         with open(save_path, "wb") as f:
             f.write(r.content)
-        print(f"✅ Saved image to: {save_path}")
+        print(f" Saved image to: {save_path}")
         return save_path
     except Exception as e:
-        print(f"❌ Failed to download image: {e}")
+        print(f" Failed to download: {e}")
         return ""
 
 # 7) Determine folder & date
@@ -74,12 +85,14 @@ else:
 
 os.makedirs(base, exist_ok=True)
 
-# 8) Process image
-img_md = get_field("Image (drag & drop here)") if is_news else get_field("Image (optional, drag & drop)")
-print(f"📎 Raw image markdown: {img_md}")
+# 8) Process image field
+img_label = "Image (drag & drop here)" if is_news else "Image (optional, drag & drop)"
+img_md = get_field(img_label)
+print(f"📎 Image field content: {img_md}")
 th_thumb = download_image(img_md) if img_md else ""
 
-# 9) Write files for en & tr
+# 9) Generate .en.md and .tr.md
+
 for lang in ["en", "tr"]:
     fm = ["---"]
     if is_news:
@@ -106,8 +119,8 @@ for lang in ["en", "tr"]:
     content_label = "Full Content" if is_news else "Description"
     content = get_field(f'{content_label} ({lang.upper()})')
 
-    path = f"{base}/index.{lang}.md"
-    with open(path, 'w', encoding='utf-8') as f:
+    out = f"{base}/index.{lang}.md"
+    with open(out, "w", encoding="utf-8") as f:
         f.write("\n".join(fm))
         f.write(content)
-    print(f"✅ Created: {path}")
+    print(f" Created: {out}")
