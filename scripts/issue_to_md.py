@@ -38,7 +38,7 @@ def get_field(label):
 # 5) Download image if present: save under assets/uploads to match site structure
 #    Returns frontmatter path 'uploads/<filename>'.
 def download_image(md_input):
-    print(f"🔍 Raw image input: {md_input}")
+    print(f" Raw image input: {md_input}")
     url = None
     # Try Markdown syntax
     m = re.search(r"!\[[^\]]*\]\((https?://[^)]+)\)", md_input)
@@ -50,15 +50,15 @@ def download_image(md_input):
         if m2:
             url = m2.group(1)
     if not url:
-        print("❌ No valid image URL found.")
+        print(" No valid image URL found.")
         return ""
 
-    print(f"🌐 Downloading image from: {url}")
+    print(f" Downloading image from: {url}")
     try:
         resp = requests.get(url, timeout=15)
         resp.raise_for_status()
     except Exception as e:
-        print(f"❌ Failed to fetch image: {e}")
+        print(f" Failed to fetch image: {e}")
         return ""
 
     # Infer extension from Content-Type
@@ -85,11 +85,11 @@ def download_image(md_input):
     try:
         with open(save_path, 'wb') as f:
             f.write(resp.content)
-        print(f"✅ Saved image to: {save_path}")
+        print(f" Saved image to: {save_path}")
         # Return frontmatter path
         return f"uploads/{name}"
     except Exception as e:
-        print(f"❌ Error saving image: {e}")
+        print(f" Error saving image: {e}")
         return ""
 
 # 6) Determine base folder and date
@@ -139,5 +139,5 @@ for lang in ['en', 'tr']:
     with open(out_file, 'w', encoding='utf-8') as f:
         f.write("\n".join(fm))
         f.write(content)
-    print(f"✅ Created: {out_file}")
+    print(f" Created: {out_file}")
 
