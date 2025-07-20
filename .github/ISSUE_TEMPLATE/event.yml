@@ -1,4 +1,4 @@
-name: 📅 Bilingual Event Submission
+name: Bilingual Event Submission
 description: Submit an event for the website. Provide both English and Turkish entries. Image optional.
 title: "[EVENT] <Insert event title>"
 labels: ["event"]
