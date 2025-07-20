@@ -4,21 +4,19 @@ import unicodedata
 import requests
 from urllib.parse import urlparse
 
-# 1) Inputs
+# 1) Read inputs
 labels = os.getenv("ISSUE_LABELS", "").lower()
 body = os.getenv("ISSUE_BODY", "").strip()
-
-# 2) Determine type
 is_news = "news" in labels
 
-# 3) Slugify
+# 2) Slugify helper
 def slugify(text):
     text = unicodedata.normalize("NFKD", text)
     text = text.encode("ascii", "ignore").decode("ascii")
     text = re.sub(r"[^\w\s-]", "", text.lower())
-    return re.sub(r"[-\s]+", "-", text).strip("-_")
+    return re.sub(r"[-\s]+", "-", text).strip("-_ ")
 
-# 4) Parse issue body
+# 3) Parse issue body into a dict of fields
 def parse_issue_body(md):
     fields = {}
     blocks = re.split(r"^#{1,6}\s+", md, flags=re.MULTILINE)[1:]
@@ -33,98 +31,113 @@ def parse_issue_body(md):
 
 parsed = parse_issue_body(body)
 
-# 5) Helper to fetch field
+# 4) Simple getter
 def get_field(label):
     return parsed.get(label, "").strip()
 
-# 6) Download image if present (returns local path or empty)
-def download_image(md_link):
-    print("🔍 Image field:", md_link)
-    # Match Markdown ![](url) or HTML <img src="url">
-    md_match = re.search(r"\((https?://[^)]+)\)", md_link)
-    html_match = re.search(r'src="([^"]+)"', md_link)
-    url = md_match.group(1) if md_match else html_match.group(1) if html_match else None
-
+# 5) Download image if present: save under assets/uploads to match site structure
+#    Returns frontmatter path 'uploads/<filename>'.
+def download_image(md_input):
+    print(f"🔍 Raw image input: {md_input}")
+    url = None
+    # Try Markdown syntax
+    m = re.search(r"!\[[^\]]*\]\((https?://[^)]+)\)", md_input)
+    if m:
+        url = m.group(1)
+    else:
+        # Try HTML <img src="..."
+        m2 = re.search(r'src=\"(https?://[^\"]+)\"', md_input)
+        if m2:
+            url = m2.group(1)
     if not url:
         print("❌ No valid image URL found.")
         return ""
 
+    print(f"🌐 Downloading image from: {url}")
     try:
-        r = requests.get(url)
-        r.raise_for_status()
-
-        content_type = r.headers.get("Content-Type", "")
-        ext = {
-            "image/png": ".png",
-            "image/jpeg": ".jpg",
-            "image/jpg": ".jpg",
-            "image/gif": ".gif"
-        }.get(content_type, "")
-
-        filename = os.path.basename(urlparse(url).path)
-        if not os.path.splitext(filename)[1] and ext:
-            filename += ext  # Add extension if missing
-
-        save_dir = "uploads"
-        os.makedirs(save_dir, exist_ok=True)
-        save_path = os.path.join(save_dir, filename)
-
-        with open(save_path, "wb") as f:
-            f.write(r.content)
-
-        print(f"✅ Saved image to: {save_path}")
-        return save_path
+        resp = requests.get(url, timeout=15)
+        resp.raise_for_status()
     except Exception as e:
-        print(f"❌ Failed to download image: {e}")
+        print(f"❌ Failed to fetch image: {e}")
         return ""
 
-# 7) Determine folder & date
+    # Infer extension from Content-Type
+    ct = resp.headers.get("Content-Type", "")
+    ext = ''
+    if 'png' in ct:
+        ext = '.png'
+    elif 'jpeg' in ct or 'jpg' in ct:
+        ext = '.jpg'
+    elif 'gif' in ct:
+        ext = '.gif'
+
+    # Build filename
+    path_part = urlparse(url).path
+    name = os.path.basename(path_part) or 'image'
+    if not os.path.splitext(name)[1] and ext:
+        name += ext
+
+    # Save under assets/uploads
+    save_dir = os.path.join('assets', 'uploads')
+    os.makedirs(save_dir, exist_ok=True)
+    save_path = os.path.join(save_dir, name)
+
+    try:
+        with open(save_path, 'wb') as f:
+            f.write(resp.content)
+        print(f"✅ Saved image to: {save_path}")
+        # Return frontmatter path
+        return f"uploads/{name}"
+    except Exception as e:
+        print(f"❌ Error saving image: {e}")
+        return ""
+
+# 6) Determine base folder and date
 if is_news:
-    date = get_field("Date (YYYY-MM-DD)")
-    slug = slugify(get_field("News Title (EN)"))
+    date = get_field('Date (YYYY-MM-DD)')
+    slug = slugify(get_field('News Title (EN)'))
     base = f"content/news/{date}-news-{slug}"
 else:
-    raw_dt = get_field("Date and Time (ISO format)")
-    date = raw_dt.split("T")[0]
-    slug = slugify(get_field("Event Title (EN)"))
+    raw_dt = get_field('Date and Time (ISO format)')
+    date = raw_dt.split('T')[0]
+    slug = slugify(get_field('Event Title (EN)'))
     base = f"content/events/{date}-event-{slug}"
 
 os.makedirs(base, exist_ok=True)
 
-# 8) Process image
-img_md = get_field("Image (drag & drop here)") if is_news else get_field("Image (optional, drag & drop)")
-th_thumb = download_image(img_md) if img_md else ""
+# 7) Process image field
+img_label = 'Image (drag & drop here)' if is_news else 'Image (optional, drag & drop)'
+img_md = get_field(img_label)
+thumbnail_path = download_image(img_md) if img_md else ''
 
-# 9) Write files for en & tr
-for lang in ["en", "tr"]:
-    fm = ["---"]
+# 8) Write bilingual markdown files
+for lang in ['en', 'tr']:
+    fm = ['---']
     if is_news:
         fm += [
-            "type: news",
+            'type: news',
             f"title: {get_field(f'News Title ({lang.upper()})')}",
             f"description: {get_field(f'Short Description ({lang.upper()})')}",
             f"date: {date}"
         ]
-        if th_thumb:
-            fm.append(f"thumbnail: {th_thumb}")
-        fm.append("featured: false")
+        if thumbnail_path:
+            fm.append(f"thumbnail: {thumbnail_path}")
+        fm.append('featured: false')
     else:
         fm += [
-            "type: phd-thesis-defense",
+            'type: phd-thesis-defense',
             f"title: {get_field(f'Event Title ({lang.upper()})')}",
             f"name: {get_field('Speaker/Presenter Name')}",
             f"datetime: {raw_dt}",
             f"duration: {get_field('Duration')}",
             f"location: {get_field(f'Location ({lang.upper()})')}"
         ]
-    fm.append("---\n")
-
-    content_label = "Full Content" if is_news else "Description"
+    fm.append('---\n')
+    content_label = 'Full Content' if is_news else 'Description'
     content = get_field(f'{content_label} ({lang.upper()})')
-
-    path = f"{base}/index.{lang}.md"
-    with open(path, 'w', encoding='utf-8') as f:
+    out_file = f"{base}/index.{lang}.md"
+    with open(out_file, 'w', encoding='utf-8') as f:
         f.write("\n".join(fm))
         f.write(content)
-    print(f"✅ Created: {path}")
+    print(f"✅ Created: {out_file}")
 
