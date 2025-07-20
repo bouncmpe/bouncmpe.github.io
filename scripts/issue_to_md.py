@@ -39,31 +39,41 @@ def get_field(label):
     return parsed.get(label, "").strip()
 
 # 6) Download image from markdown or HTML tag
-
 def download_image(md_link):
     print(f" Raw image input: {md_link}")
     url = ""
     # Try markdown syntax
-    m = re.search(r"!\[[^\]]*\]\((https?://[^)]+\.(?:png|jpe?g|gif))\)", md_link)
+    m = re.search(r"!\[[^\]]*\]\((https?://[^)]+)\)", md_link)
     if m:
         url = m.group(1)
     else:
-        # Try HTML <img> tag
-        m2 = re.search(r"src=\"(https?://[^\"]+\.(?:png|jpe?g|gif))\"", md_link)
+        # Try any src attribute (for GitHub attachments)
+        m2 = re.search(r"src=\"(https?://[^\"]+)\"", md_link)
         if m2:
             url = m2.group(1)
     if not url:
         print(" No valid image URL found in input.")
         return ""
-    print(f" Downloading image from: {url}")
-    # derive filename
-    filename = os.path.basename(urlparse(url).path)
+    print(f"📥 Downloading image from: {url}")
+    # derive filename and extension from response headers
     save_dir = "uploads"
     os.makedirs(save_dir, exist_ok=True)
-    save_path = os.path.join(save_dir, filename)
     try:
         r = requests.get(url)
         r.raise_for_status()
+        # determine extension
+        content_type = r.headers.get('Content-Type', '')
+        ext = ''
+        if 'png' in content_type:
+            ext = '.png'
+        elif 'jpeg' in content_type:
+            ext = '.jpg'
+        elif 'gif' in content_type:
+            ext = '.gif'
+        # base name from last path segment
+        base = os.path.basename(urlparse(url).path)
+        filename = base + ext
+        save_path = os.path.join(save_dir, filename)
         with open(save_path, "wb") as f:
             f.write(r.content)
         print(f" Saved image to: {save_path}")
@@ -72,7 +82,7 @@ def download_image(md_link):
         print(f" Failed to download: {e}")
         return ""
 
-# 7) Determine folder & date
+# 7) Determine folder & date) Determine folder & date
 if is_news:
     date = get_field("Date (YYYY-MM-DD)")
     slug = slugify(get_field("News Title (EN)"))
@@ -124,3 +134,5 @@ for lang in ["en", "tr"]:
         f.write("\n".join(fm))
         f.write(content)
     print(f" Created: {out}")
+```
+
