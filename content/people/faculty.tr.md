@@ -3,7 +3,6 @@ title: Öğretim Üyeleri
 description: Bilgisayar Mühendisliği Öğretim Üyeleri
 metadata: none
 weight: 21
-class: rounded-5
 ---
 
 ## Tam-Zamanlı Öğretim Üyeleri

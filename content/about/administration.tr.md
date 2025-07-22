@@ -3,7 +3,6 @@ title: Yönetim
 description: Bölüm Yönetimi ve Komisyonları
 weight: 4
 metadata: none
-type: wide
 ---
 
 ## Bölüm Başkanı

@@ -4,7 +4,6 @@ description: Boğaziçi University Computer Enginering Curriculum
 metadata: none
 toc: false
 weight: 2
-type: wide
 hasMermaid: true
 ---
 

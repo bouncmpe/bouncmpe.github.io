@@ -4,7 +4,6 @@ description: Boğaziçi Üniversitesi Bilgisayar Mühendisliği Öğretim Progra
 metadata: none
 toc: false
 weight: 2
-type: wide
 ---
 
 <!-- prettier-ignore-start -->

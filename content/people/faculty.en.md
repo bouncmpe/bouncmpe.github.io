@@ -3,7 +3,6 @@ title: Faculty
 description: Computer Engineering Faculty Members
 metadata: none
 weight: 21
-class: rounded-5
 ---
 
 ## Full-time Members

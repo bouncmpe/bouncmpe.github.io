@@ -3,7 +3,6 @@ title: Administration
 description: Department Administration and Committees
 weight: 4
 metadata: none
-type: wide
 ---
 
 ## Chair

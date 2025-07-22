@@ -3,7 +3,6 @@ title: Academic Advisors
 description: Academic Advisors at Computer Engineering
 weight: 5
 metadata: none
-type: wide
 ---
 
 All students enrolled in the Computer Engineering program are assigned an
