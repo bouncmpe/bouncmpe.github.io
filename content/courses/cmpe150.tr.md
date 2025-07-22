@@ -51,8 +51,6 @@ Aşağıdaki dersleri almış, almakta olan veya gelecekte almayı planlayan ö�
 CMPE 140  
 PHYS 290
 
-## Dersin Öğrenme Çıktıları
-
 ## Dersi Veren Öğretim Üyesi
 
 {{< people tag="cmpe150" cols="2">}}

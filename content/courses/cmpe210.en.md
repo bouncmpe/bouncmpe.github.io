@@ -32,8 +32,6 @@ aliases:
 
 Review of scalar and structured data types. Object oriented programming concepts: classes and abstract data types, inheritence, polymorphisms, operator overloading. Classical and object oriented program specification, design, coding and testing. Linear (stacks, queues, linear lists) and nonlinear data structures (trees, sets). Sequential and random access files. Implementation of data structures: Linked lists, multidimensional arrays, records, character strings, stacks, queues, trees and sets. Recursion.
 
-## Course Learning Outcomes
-
 ## Current Instructor
 
 {{< people tag="cmpe210" cols="2">}}

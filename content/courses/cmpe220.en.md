@@ -32,8 +32,6 @@ aliases:
 
 Propositional logic and proofs. Set theory. Functions and relations. Algebraic structures. Groups and semi-groups. Graphs, lattices and Boolean algebra.
 
-## Course Learning Outcomes
-
 ## Current Instructor
 
 {{< people tag="cmpe220" cols="2">}}

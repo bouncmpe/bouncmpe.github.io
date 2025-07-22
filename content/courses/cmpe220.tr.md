@@ -34,8 +34,6 @@ Propositional logic and proofs. Set theory. Functions and relations. Algebraic s
 
 Önerme mantığı ve kanıtları. Küme teorisi. Fonksiyonlar ve ilişkiler. Cebirsel yapılar. Gruplar ve yarı gruplar. Grafikler, kafesler ve Boole cebiri.
 
-## Dersin Öğrenme Çıktıları
-
 ## Dersi Veren Öğretim Üyesi
 
 {{< people tag="cmpe344" cols="2">}}

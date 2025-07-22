@@ -32,8 +32,6 @@ aliases:
 
 Bilgisayar mühendisliği uygulamaları ile kesikli ve sürekli zamanlı sinyallere ve sistemlere giriş. Zaman alanı sinyal gösterimleri, doğrusal zamanla değişmez sistemlerin dürtü yanıtı; konvolüsyon. Fourier serisi. Sinyallerin spektrum gösterimi. Fourier dönüşümü. Dijital sinyaller ve örnekleme. Yeniden oluşturma, filtreleme, Z-dönüşümü gösterimi, kesikli Fourier dönüşümü. Sinyal işleme algoritmaları. Kayan nokta ve kuantizasyon hataları. Ses ve görüntü işleme uygulamalarıyla egzersizler.
 
-## Dersin Öğrenme Çıktıları
-
 ## Dersi Veren Öğretim Üyesi
 
 {{< people tag="cmpe362" cols="2">}}

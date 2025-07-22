@@ -36,7 +36,7 @@ CMPE 140 introduces basic concepts of exploratory data analysis and programming 
 
 Course topics include an introduction into basic data structures (vector, matrix, lists, data frames, etc.), program control statements (conditional execution, for and while loops, etc.), data visualization and input/output.
 
-## Course Learning Outcomes## Current Instructor
+## Current Instructor
 
 {{< people tag="cmpe140" cols="2">}}
 

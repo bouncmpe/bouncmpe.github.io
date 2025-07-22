@@ -34,8 +34,6 @@ Introductory concepts in software engineering. The software life cycle and the p
 
 There are numerous hands-on assignments to gain software engineering skills using commonly used tools and methods.
 
-## Course Learning Outcomes
-
 ## Current Instructor
 
 {{< people tag="cmpe352" cols="1">}}

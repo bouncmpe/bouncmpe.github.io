@@ -29,8 +29,6 @@ aliases:
 
 Nature of computer performance evaluation. Job processing models. Analytical techniques. Simulation. Management and control of system hardware and software resources. Performance of multiprocessing systems.
 
-## Course Learning Outcomes
-
 ## Current Instructor
 
 {{< people tag="cmpe470" cols="2">}}

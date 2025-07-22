@@ -32,8 +32,6 @@ aliases:
 
 İşletim sistemlerinin evrimi. Çok programlılık ve zaman paylaşımı kavramları. Kullanıcı ve program arayüzleri. Eşzamanlı süreçler, CPU zamanlama, süreç senkronizasyonu, kritik bölüm problemi. Deadlock (kilitlenme) önleme, kaçınma, tespit ve kurtarma. Bellek yönetimi, swap (değiştirme), çoklu bölümlendirme. Sayfalama, segmentasyon, sanal bellek, sayfa değiştirme algoritmaları. Dosya sistemi yapıları, tahsis yöntemleri, dizin uygulamaları. G/Ç arayüzleri, ikincil depolama yapısı. Koruma ve güvenlik: Erişim matrisi ve haklar, yetenekler, güvenlik sorunları. LINUX vaka çalışmaları.
 
-## Dersin Öğrenme Çıktıları
-
 ## Dersi Veren Öğretim Üyesi
 
 {{< people tag="cmpe322" cols="2">}}

@@ -32,8 +32,6 @@ aliases:
 
 Verilerin Mantıksal Organizasyonu: Verilerin varlık-ilişki modellemesi. Hiyerarşik, ağ ve ilişkisel modeller. Veri tanımlama ve sorgu dilleri. Normal formlar ve veritabanı tasarımı. Fiziksel tasarım ve erişim stratejileri. Güvenlik, bütünlük ve güvenilirlik. Dosya güvenliği ve basit bir sorgu dilini içeren basit bir veritabanı yönetim sisteminin tasarımı ve uygulanması.
 
-## Dersin Öğrenme Çıktıları
-
 ## Dersi Veren Öğretim Üyesi
 
 {{< people tag="cmpe321" cols="2">}}

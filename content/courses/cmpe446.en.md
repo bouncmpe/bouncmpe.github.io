@@ -32,8 +32,6 @@ aliases:
 
 Performance limits of Von Neumann architecture. Reduced Instruction Set Computer (RISC) architecture. Pipelined processor design. Instruction pipeline and arithmetic pipelines. Array processors. Dynamic and static interconnection networks. Shared memory multiprocessor systems. Message passing multiprocessor systems.
 
-## Course Learning Outcomes
-
 ## Current Instructor
 
 {{< people tag="cmpe446" cols="2">}}

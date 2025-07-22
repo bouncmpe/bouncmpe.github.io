@@ -32,8 +32,6 @@ aliases:
 
 Logical organization of data: Entity-relationship modeling of data. Hierarchical, network and relational models. Data description and query languages. Normal forms and database design. Physical design and access strategies. Security, integrity and reliability. Design and implementation of a simple database management system that includes file security and a simple query language.
 
-## Course Learning Outcomes
-
 ## Current Instructor
 
 {{< people tag="cmpe321" cols="2">}}

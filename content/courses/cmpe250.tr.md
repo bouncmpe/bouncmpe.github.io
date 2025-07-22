@@ -32,8 +32,6 @@ aliases:
 
 Grafikler. Gelişmiş Sıralama. Hashing. Yığın Yapıları. Arama Yapıları. Karmaşıklık. Paralel algoritmalar. Dosya organizasyonu.
 
-## Course Learning Outcome
-
 ## Current Instructor
 
 {{< people tag="cmpe250" cols="2">}}

@@ -34,8 +34,6 @@ Yazılım mühendisliğinde giriş kavramları. Yazılım yaşam döngüsü ve y
 
 Yaygın olarak kullanılan araçlar ve yöntemlerle yazılım mühendisliği becerileri kazanmak için çok sayıda uygulamalı ödev.
 
-## Dersin Öğrenme Çıktıları
-
 ## Dersi Veren Öğretim Üyesi
 
 {{< people tag="cmpe352" cols="1">}}

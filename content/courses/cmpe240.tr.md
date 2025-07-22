@@ -32,8 +32,6 @@ aliases:
 
 Sayı sistemleri. Boolean cebiri, mantık ağları ve basitleştirilmesi. Kapılarla mantık tasarımı. MSI ve LSI teknolojileri. Kombinasyonel devreler ve ardışık devreler. Sayıcılar, kaydırıcılar, bilgisayar organizasyonu, aritmetik mantık, bellek ve kontrol üniteleri, mini ve mikro bilgisayar sistemleri. Dijital mantık tasarımının laboratuvar deneyleri ve uygulamaları.
 
-## Course Learning Outcome
-
 ## Current Instructor
 
 {{< people tag="cmpe240" cols="2">}}

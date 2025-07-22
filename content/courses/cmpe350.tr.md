@@ -33,8 +33,6 @@ aliases:
 
 Dizeler ve diller. Gramerlerin sınıflandırılması. Sonlu durum otomatları ve düzenli ifadeler. İtişli otomatlar ve bağlam bağımlı gramatikler. Bağlam duyarlı gramatikler ve lineer sınırlı otomatlar. Turing makineleri.
 
-## Dersin Öğrenme Çıktıları
-
 ## Dersi Veren Öğretim Üyesi
 
 {{< people tag="cmpe350" cols="2">}}

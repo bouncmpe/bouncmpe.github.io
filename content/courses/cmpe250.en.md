@@ -32,8 +32,6 @@ aliases:
 
 Graphs. Advanced Sorting. Hashing. Heap Structures. Search Structures. Complexity. Parallel algorithms. File organization.
 
-## Course Learning Outcomes
-
 ## Current Instructor
 
 {{< people tag="cmpe250" cols="2">}}

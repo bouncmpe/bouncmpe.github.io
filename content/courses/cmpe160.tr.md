@@ -34,8 +34,6 @@ Programlama metodolojisi: spesifikasyon, tasarım, kodlama, program doğruluğu.
 
 Veri yapılarının uygulanması: Bağlı liste uygulaması, çok boyutlu dizi uygulaması, kayıt uygulaması, karakter dizisi, yığın, kuyruk, ağaç ve küme uygulamaları. Rekürsiyon.
 
-## Dersin Öğrenme Çıktıları
-
 ## Dersi Veren Öğretim Üyesi
 
 {{< people tag="cmpe160" cols="2">}}
