@@ -2,13 +2,10 @@
 title: CMPE160
 description: Introduction to Object Oriented Programming
 metadata: none
-thumbnail: https://picsum.photos/seed/cmpe160/1400
+# thumbnail: https://picsum.photos/seed/cmpe160/1400
 aliases:
   - undergraduate/courses/cmpe160
 ---
-
-{{< under-construction-warning >}}
-
 ## Course Information
 
 <!-- prettier-ignore-start -->
@@ -30,14 +27,12 @@ aliases:
 {{< /table >}}
 <!-- prettier-ignore-end -->
 
-
 ## Catalog Description
 
 Programming methodology: specification, design, coding, program correctness. Review of data types: scalar types, structured types. Data Structures: linear structures (stacks, queues, linear lists), nonlinear structures (trees, sets), files (sequential, random access). 
 Implementation of data structures: linked list implementation, multidimensional array implementation, record implementation, character string, stack, queue, tree and set implementations. Recursion.
 
 ## Course Learning Outcomes
-
 
 ## Current Instructor
 

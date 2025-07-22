@@ -2,12 +2,10 @@
 title: CMPE140
 description: Ekonomi ve İşletme için Bilgi İşleme Giriş
 metadata: none
-thumbnail: https://picsum.photos/seed/cmpe140/1400
+# thumbnail: https://picsum.photos/seed/cmpe140/1400
 aliases:
   - undergraduate/courses/cmpe140
 ---
-
-{{< under-construction-warning >}}
 
 ## Ders Bilgileri
 
@@ -34,13 +32,7 @@ aliases:
 
 CMPE 140, R programlama dili ve istatistiksel hesaplama ile grafikler için ortam kullanarak keşifsel veri analizinin ve programlamanın temel kavramlarını tanıtmaktadır.
 
-Ders konuları, temel veri yapıları (vektör, matris, listeler, veri çerçeveleri vb.), program kontrol ifadeleri (koşullu yürütme, for ve while döngüleri vb.), veri görselleştirme ve girdi/çıktı işlemlerine bir girişi içermektedir.
-
-
-## Dersin Öğrenme Çıktıları
-
-
-## Dersi Veren Öğretim Üyesi
+Ders konuları, temel veri yapıları (vektör, matris, listeler, veri çerçeveleri vb.), program kontrol ifadeleri (koşullu yürütme, for ve while döngüleri vb.), veri görselleştirme ve girdi/çıktı işlemlerine bir girişi içermektedir.## Dersin Öğrenme Çıktıları## Dersi Veren Öğretim Üyesi
 
 {{< people tag="cmpe140" cols="2">}}
 

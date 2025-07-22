@@ -2,12 +2,11 @@
 title: CMPE350
 description: Formal Languages and Automata Theory
 metadata: none
-thumbnail: https://picsum.photos/seed/cmpe350/1400
+# thumbnail: https://picsum.photos/seed/cmpe350/1400
 aliases:
   - undergraduate/courses/cmpe350
 ---
 
-{{< under-construction-warning >}}
 ## Course Information
 
 <!-- prettier-ignore-start -->

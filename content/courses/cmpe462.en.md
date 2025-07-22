@@ -2,13 +2,10 @@
 title: CMPE462
 description: Machine Learning
 metadata: none
-thumbnail: https://picsum.photos/seed/cmpe462/1400
+# thumbnail: https://picsum.photos/seed/cmpe462/1400
 aliases:
   - undergraduate/courses/cmpe462
 ---
-
-{{< under-construction-warning >}}
-
 ## Course Information
 
 <!-- prettier-ignore-start -->
@@ -28,10 +25,7 @@ aliases:
 | Corequisites | None |
 
 {{< /table >}}
-<!-- prettier-ignore-end -->
-
-
-## Catalog Description
+<!-- prettier-ignore-end -->## Catalog Description
 
 Overview of artificial learning systems. Supervised and unsupervised learning. Statistical models. Decision trees. Clustering. Feature extraction. Artificial neural networks. Reinforcement learning. Applications to pattern recognition Overview of artificial learning systems. Supervised and unsupervised learning. Statistical models. Decision trees. Clustering. Feature extraction. Artificial neural networks. Reinforcement learning. Applications to pattern recognition and data mining.
 

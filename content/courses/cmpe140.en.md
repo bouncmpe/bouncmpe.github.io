@@ -2,13 +2,12 @@
 title: CMPE140
 description: Introduction to Computing for Economics and Management
 metadata: none
-thumbnail:
-  url: https://picsum.photos/seed/cmpe140/1400
+# thumbnail:
+#   url: https://picsum.photos/seed/cmpe140/1400
 aliases:
   - undergraduate/courses/cmpe140
----
 
-{{< under-construction-warning >}}
+---
 
 ## Course Information
 
@@ -37,10 +36,7 @@ CMPE 140 introduces basic concepts of exploratory data analysis and programming 
 
 Course topics include an introduction into basic data structures (vector, matrix, lists, data frames, etc.), program control statements (conditional execution, for and while loops, etc.), data visualization and input/output.
 
-## Course Learning Outcomes
-
-
-## Current Instructor
+## Course Learning Outcomes## Current Instructor
 
 {{< people tag="cmpe140" cols="2">}}
 

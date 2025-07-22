@@ -2,12 +2,10 @@
 title: CMPE434
 description: Robotbilime Giriş
 metadata: none
-thumbnail: https://picsum.photos/seed/cmpe434/1400
+# thumbnail: https://picsum.photos/seed/cmpe434/1400
 aliases:
   - undergraduate/courses/cmpe434
 ---
-
-{{< under-construction-warning >}}
 
 ## Ders Bilgileri
 
@@ -32,10 +30,7 @@ aliases:
 
 ## Katalog Tanımı
 
-Mobil robotların tasarlanması, inşa edilmesi ve programlanması; sensörler, efektörler, hareket, temel kontrol teorisi, kontrol mimarileri, yol planlama, lokalizasyon, haritalama, öğrenme. Takım çalışması; robot yarışması.
-
-
-## Dersi Veren Öğretim Üyesi
+Mobil robotların tasarlanması, inşa edilmesi ve programlanması; sensörler, efektörler, hareket, temel kontrol teorisi, kontrol mimarileri, yol planlama, lokalizasyon, haritalama, öğrenme. Takım çalışması; robot yarışması.## Dersi Veren Öğretim Üyesi
 
 {{< people tag="cmpe434" cols="2">}}
 

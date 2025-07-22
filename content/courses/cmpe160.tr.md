@@ -2,12 +2,10 @@
 title: CMPE160
 description: Nesne Tabanlı Programlamaya Giriş
 metadata: none
-thumbnail: https://picsum.photos/seed/cmpe160/1400
+# thumbnail: https://picsum.photos/seed/cmpe160/1400
 aliases:
   - undergraduate/courses/cmpe160
 ---
-
-{{< under-construction-warning >}}
 
 ## Ders Bilgileri
 
@@ -34,10 +32,9 @@ aliases:
 
 Programlama metodolojisi: spesifikasyon, tasarım, kodlama, program doğruluğu. Veri türlerinin gözden geçirilmesi: skalar türler, yapılandırılmış türler. Veri Yapıları: lineer yapılar (yığınlar, kuyruklar, lineer listeler), doğrusal olmayan yapılar (ağaçlar, kümeler), dosyalar (sıralı, rastgele erişim).
 
-Veri yapılarının uygulanması: bağlı liste uygulaması, çok boyutlu dizi uygulaması, kayıt uygulaması, karakter dizisi, yığın, kuyruk, ağaç ve küme uygulamaları. Rekürsiyon.
+Veri yapılarının uygulanması: Bağlı liste uygulaması, çok boyutlu dizi uygulaması, kayıt uygulaması, karakter dizisi, yığın, kuyruk, ağaç ve küme uygulamaları. Rekürsiyon.
 
 ## Dersin Öğrenme Çıktıları
-
 
 ## Dersi Veren Öğretim Üyesi
 

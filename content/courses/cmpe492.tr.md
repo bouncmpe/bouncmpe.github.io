@@ -2,13 +2,10 @@
 title: CMPE491-492
 description: Proje
 metadata: none
-thumbnail: https://picsum.photos/seed/cmpe492/1400
+# thumbnail: https://picsum.photos/seed/cmpe492/1400
 aliases:
   - undergraduate/courses/cmpe492
 ---
-
-{{< under-construction-warning >}}
-
 ## Ders Bilgileri
 
 <!-- prettier-ignore-start -->
@@ -30,19 +27,11 @@ aliases:
 {{< /table >}}
 <!-- prettier-ignore-end -->
 
-## Katalog Tanımı
+## Katalog Tanımı491/492 Proje Seçimi ve Kaydı için Talimatlar
 
-
-491/492 Proje Seçimi ve Kaydı için Talimatlar
-
-1.    CmpE proje danışmanları tarafından yayınlanan proje açıklamalarını okuyun, ilgilendiğiniz projeleri proje danışmanlarıyla tartışın ve bir projeye karar verin.
-
-2.    Bir 491 projesine kaydolmak için genel not ortalamanızın 2.00'ın üzerinde olması gerektiğini unutmayın.    
-
-3.    [Projeye Kayıt formunu](https://www.cmpe.boun.edu.tr/sites/default/files/cmpe-491-492-registrationform.doc) doldurun ve proje danışmanınızın onayını alın.    
-
-4.    Proje danışmanınız tarafından onaylanan kayıt formunu, kayıt dönemi sona ermeden önce CmpE 491/492 koordinatörüne iade edin.
-
-5.    Kayıt sistemi üzerinden CmpE 491/492'ye kaydolun.    
-
-6.    Proje seçiminizde bir değişiklik yapmak isterseniz yukarıdaki adımları tekrarlayın
+1. CmpE proje danışmanları tarafından yayınlanan proje açıklamalarını okuyun, ilgilendiğiniz projeleri proje danışmanlarıyla tartışın ve bir projeye karar verin.
+2. Bir 491 projesine kaydolmak için genel not ortalamanızın 2.00'ın üzerinde olması gerektiğini unutmayın.
+3. [Projeye Kayıt formunu](https://www.cmpe.boun.edu.tr/sites/default/files/cmpe-491-492-registrationform.doc) doldurun ve proje danışmanınızın onayını alın.
+4. Proje danışmanınız tarafından onaylanan kayıt formunu, kayıt dönemi sona ermeden önce CmpE 491/492 koordinatörüne iade edin.
+5. Kayıt sistemi üzerinden CmpE 491/492'ye kaydolun.
+6. Proje seçiminizde bir değişiklik yapmak isterseniz yukarıdaki adımları tekrarlayın.

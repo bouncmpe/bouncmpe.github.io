@@ -2,12 +2,10 @@
 title: CMPE451
 description: Yazılım Mühendisliği'nde Proje Tasarımı
 metadata: none
-thumbnail: https://picsum.photos/seed/cmpe451/1400
+# thumbnail: https://picsum.photos/seed/cmpe451/1400
 aliases:
   - undergraduate/courses/cmpe451
 ---
-
-{{< under-construction-warning >}}
 
 ## Ders Bilgileri
 

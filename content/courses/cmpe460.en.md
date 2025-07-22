@@ -2,13 +2,10 @@
 title: CMPE460
 description: Introduction to Computer Graphics
 metadata: none
-thumbnail: https://picsum.photos/seed/cmpe460/1400
+# thumbnail: https://picsum.photos/seed/cmpe460/1400
 aliases:
   - undergraduate/courses/cmpe460
 ---
-
-{{< under-construction-warning >}}
-
 ## Course Information
 
 <!-- prettier-ignore-start -->
@@ -28,10 +25,7 @@ aliases:
 | Corequisites | None |
 
 {{< /table >}}
-<!-- prettier-ignore-end -->
-
-
-## Catalog Description
+<!-- prettier-ignore-end -->## Catalog Description
 
 Computer Graphics deals with the synthesis of images from geometric models and textures; which may be acquired form the real world or may be synthetically generated as well. The course will focus on modeling; which is the geometric description of 3D scenes; and rendering, which creates realistic images from such models.  An important component of the course is the use of mathematics. The course uses linear algebra, and other areas of math. We will review mathematical basics used in the course. Programming experience in C++ and a basic knowledge of calculus and linear algebra is assumed. Apart from the lecture topics listed below, some OpenGL programming will also be covered.
 

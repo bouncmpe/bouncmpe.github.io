@@ -2,13 +2,10 @@
 title: CMPE470
 description: Computer Performance Evaluation
 metadata: none
-thumbnail: https://picsum.photos/seed/cmpe470/1400
+# thumbnail: https://picsum.photos/seed/cmpe470/1400
 aliases:
   - undergraduate/courses/cmpe470
 ---
-
-{{< under-construction-warning >}}
-
 ## Course Information
 
 <!-- prettier-ignore-start -->
@@ -28,10 +25,7 @@ aliases:
 | Corequisites | None |
 
 {{< /table >}}
-<!-- prettier-ignore-end -->
-
-
-## Catalog Description
+<!-- prettier-ignore-end -->## Catalog Description
 
 Nature of computer performance evaluation. Job processing models. Analytical techniques. Simulation. Management and control of system hardware and software resources. Performance of multiprocessing systems.
 

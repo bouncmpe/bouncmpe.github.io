@@ -2,13 +2,10 @@
 title: CMPE475
 description: Bilgisayar Ağları
 metadata: none
-thumbnail: https://picsum.photos/seed/cmpe475/1400
+# thumbnail: https://picsum.photos/seed/cmpe475/1400
 aliases:
   - undergraduate/courses/cmpe475
 ---
-
-{{< under-construction-warning >}}
-
 ## Ders Bilgileri
 
 <!-- prettier-ignore-start -->

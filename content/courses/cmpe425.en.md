@@ -2,12 +2,10 @@
 title: CMPE425
 description: Compiler Design
 metadata: none
-thumbnail: https://picsum.photos/seed/cmpe425/1400
+# thumbnail: https://picsum.photos/seed/cmpe425/1400
 aliases:
   - undergraduate/courses/cmpe425
 ---
-
-{{< under-construction-warning >}}
 
 ## Course Information
 

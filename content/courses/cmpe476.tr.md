@@ -2,13 +2,10 @@
 title: CMPE476
 description: Dağıtık Sistemler
 metadata: none
-thumbnail: https://picsum.photos/seed/cmpe476/1400
+# thumbnail: https://picsum.photos/seed/cmpe476/1400
 aliases:
   - undergraduate/courses/cmpe476
 ---
-
-{{< under-construction-warning >}}
-
 ## Ders Bilgileri
 
 <!-- prettier-ignore-start -->
@@ -32,10 +29,7 @@ aliases:
 
 ## Katalog Tanımı
 
-Taşıma katmanı hizmetleri ve protokolleri. İnternet protokolleri TCP ve UDP. ATM Adaptasyon Katmanı protokolleri. İstemci-sunucu ve eşler arası programlama modelleri. Ağ programlama. Uzaktan yordam çağrısı. Uygulama katmanı sorunları ve protokolleri. Ağ güvenliği. Alan adı sistemi. Ağ yönetimi. Elektronik posta ve haber servisleri. Dağıtık sistemlere ve yapılara genel bakış. Dağıtık dosya ve dizin sistemleri. Dağıtık koordinasyon, eşzamanlılık kontrolü, kilitlenme tespiti ve seçim algoritmaları.
-
-
-## Dersi Veren Öğretim Üyesi
+Taşıma katmanı hizmetleri ve protokolleri. İnternet protokolleri TCP ve UDP. ATM Adaptasyon Katmanı protokolleri. İstemci-sunucu ve eşler arası programlama modelleri. Ağ programlama. Uzaktan yordam çağrısı. Uygulama katmanı sorunları ve protokolleri. Ağ güvenliği. Alan adı sistemi. Ağ yönetimi. Elektronik posta ve haber servisleri. Dağıtık sistemlere ve yapılara genel bakış. Dağıtık dosya ve dizin sistemleri. Dağıtık koordinasyon, eşzamanlılık kontrolü, kilitlenme tespiti ve seçim algoritmaları.## Dersi Veren Öğretim Üyesi
 
 {{< people tag="cmpe476" cols="2">}}
 

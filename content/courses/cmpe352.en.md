@@ -2,12 +2,11 @@
 title: CMPE352
 description: Fundamentals of Software Engineering
 metadata: none
-thumbnail: https://picsum.photos/seed/cmpe352/1400
+# thumbnail: https://picsum.photos/seed/cmpe352/1400
 aliases:
   - undergraduate/courses/cmpe352
 ---
 
-{{< under-construction-warning >}}
 ## Course Information
 
 <!-- prettier-ignore-start -->

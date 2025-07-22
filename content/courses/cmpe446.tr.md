@@ -2,12 +2,10 @@
 title: CMPE446
 description: Bilgisayar Mimarisine Giriş
 metadata: none
-thumbnail: https://picsum.photos/seed/cmpe446/1400
+# thumbnail: https://picsum.photos/seed/cmpe446/1400
 aliases:
   - undergraduate/courses/cmpe446
 ---
-
-{{< under-construction-warning >}}
 
 ## Ders Bilgileri
 

@@ -2,13 +2,10 @@
 title: CMPE478
 description: Paralel İşlem Görme
 metadata: none
-thumbnail: https://picsum.photos/seed/cmpe478/1400
+# thumbnail: https://picsum.photos/seed/cmpe478/1400
 aliases:
   - undergraduate/courses/cmpe478
 ---
-
-{{< under-construction-warning >}}
-
 ## Ders Bilgileri
 
 <!-- prettier-ignore-start -->
@@ -39,10 +36,7 @@ Paralel makine ve performans modelleri: PRAM, hızlanma, iş verimliliği, ölç
 - Yüksek performanslı hesaplama terminolojisini ve kavramlarını açıklayabilme
 - Ölçeklenebilir paralel algoritmalar tasarlama
 - MPI kullanarak dağıtık bellek sistemleri için ve OpenMP/Pthreads kullanarak paylaşımlı bellek sistemleri için paralel programlar geliştirebilme
-- GPU'lar için paralel programlar geliştirme
-
-
-## Dersi Veren Öğretim Üyesi
+- GPU'lar için paralel programlar geliştirme## Dersi Veren Öğretim Üyesi
 
 {{< people tag="cmpe478" cols="2">}}
 

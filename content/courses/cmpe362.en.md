@@ -2,12 +2,11 @@
 title: CMPE362
 description: Introduction to Signal Processing for Computer Engineers
 metadata: none
-thumbnail: https://picsum.photos/seed/cmpe362/1400
+# thumbnail: https://picsum.photos/seed/cmpe362/1400
 aliases:
   - undergraduate/courses/cmpe362
 ---
 
-{{< under-construction-warning >}}
 ## Course Information
 
 <!-- prettier-ignore-start -->

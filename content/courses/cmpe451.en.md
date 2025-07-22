@@ -2,12 +2,10 @@
 title: CMPE451
 description: Project Development in Software Engineering
 metadata: none
-thumbnail: https://picsum.photos/seed/cmpe451/1400
+# thumbnail: https://picsum.photos/seed/cmpe451/1400
 aliases:
   - undergraduate/courses/cmpe451
 ---
-
-{{< under-construction-warning >}}
 
 ## Course Information
 
@@ -28,10 +26,7 @@ aliases:
 | Corequisites | None |
 
 {{< /table >}}
-<!-- prettier-ignore-end -->
-
-
-## Catalog Description
+<!-- prettier-ignore-end -->## Catalog Description
 
 Management and implementation of a large software development as a group. Application of software engineering principles in a project setting.
 

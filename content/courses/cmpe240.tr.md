@@ -2,12 +2,10 @@
 title: CMPE240
 description: Digital Systems
 metadata: none
-thumbnail: https://picsum.photos/seed/cmpe240/1400
+# thumbnail: https://picsum.photos/seed/cmpe240/1400
 aliases:
   - undergraduate/courses/cmpe240
 ---
-
-{{< under-construction-warning >}}
 
 ## Course Information
 

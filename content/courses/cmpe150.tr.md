@@ -2,12 +2,10 @@
 title: CMPE150
 description: Bilgi İşleme Giriş
 metadata: none
-thumbnail: https://picsum.photos/seed/cmpe150/1400
+# thumbnail: https://picsum.photos/seed/cmpe150/1400
 aliases:
   - undergraduate/courses/cmpe150
 ---
-
-{{< under-construction-warning >}}
 
 ## Ders Bilgileri
 
@@ -54,7 +52,6 @@ CMPE 140
 PHYS 290
 
 ## Dersin Öğrenme Çıktıları
-
 
 ## Dersi Veren Öğretim Üyesi
 

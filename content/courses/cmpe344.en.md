@@ -2,12 +2,11 @@
 title: CMPE344
 description: Computer Organization
 metadata: none
-thumbnail: https://picsum.photos/seed/cmpe344/1400
+# thumbnail: https://picsum.photos/seed/cmpe344/1400
 aliases:
   - undergraduate/courses/cmpe344
 ---
 
-{{< under-construction-warning >}}
 ## Course Information
 
 <!-- prettier-ignore-start -->

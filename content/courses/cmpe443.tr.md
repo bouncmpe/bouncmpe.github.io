@@ -2,12 +2,10 @@
 title: CMPE443
 description: Gömülü Sistem Tasarım Temelleri
 metadata: none
-thumbnail: https://picsum.photos/seed/cmpe443/1400
+# thumbnail: https://picsum.photos/seed/cmpe443/1400
 aliases:
   - undergraduate/courses/cmpe443
 ---
-
-{{< under-construction-warning >}}
 
 ## Ders Bilgileri
 

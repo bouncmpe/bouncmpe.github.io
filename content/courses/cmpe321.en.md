@@ -2,12 +2,11 @@
 title: CMPE321
 description: Introduction to Database Systems
 metadata: none
-thumbnail: https://picsum.photos/seed/cmpe321/1400
+# thumbnail: https://picsum.photos/seed/cmpe321/1400
 aliases:
   - undergraduate/courses/cmpe321
 ---
 
-{{< under-construction-warning >}}
 ## Course Information
 
 <!-- prettier-ignore-start -->

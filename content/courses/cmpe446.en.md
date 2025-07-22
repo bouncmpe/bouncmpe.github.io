@@ -2,12 +2,10 @@
 title: CMPE446
 description: Introduction to Computer Architecture
 metadata: none
-thumbnail: https://picsum.photos/seed/cmpe446/1400
+# thumbnail: https://picsum.photos/seed/cmpe446/1400
 aliases:
   - undergraduate/courses/cmpe446
 ---
-
-{{< under-construction-warning >}}
 
 ## Course Information
 

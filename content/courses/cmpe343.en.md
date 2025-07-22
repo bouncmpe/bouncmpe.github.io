@@ -2,12 +2,11 @@
 title: CMPE343
 description: Introduction to Probability and Statistics for Computer Engineers
 metadata: none
-thumbnail: https://picsum.photos/seed/cmpe343/1400
+# thumbnail: https://picsum.photos/seed/cmpe343/1400
 aliases:
   - undergraduate/courses/cmpe343
 ---
 
-{{< under-construction-warning >}}
 ## Course Information
 
 <!-- prettier-ignore-start -->
@@ -38,14 +37,15 @@ Introduction to probability theory. Random variables, expectation, variance and 
 The objective of this course is to provide the
 foundations of probability theory and statistics. Upon successful completion of this
 course, students will have gained the necessary understanding on:
-- laws of probability theory and its applications
-- use of Bayes’ theorem
-- concept of random variables
-- probability distributions and their properties
-- concept of sampling
-- concept of hypothesis testing
-- concept of regression
-- practical implementation of some of the probability and statistics concepts
+
+- Laws of probability theory and its applications
+- Use of Bayes’ theorem
+- Concept of random variables
+- Probability distributions and their properties
+- Concept of sampling
+- Concept of hypothesis testing
+- Concept of regression
+- Practical implementation of some of the probability and statistics concepts
 
 ## Current Instructor
 

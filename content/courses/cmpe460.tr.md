@@ -2,13 +2,10 @@
 title: CMPE460
 description: Bilgisayar Grafiğine Giriş
 metadata: none
-thumbnail: https://picsum.photos/seed/cmpe460/1400
+# thumbnail: https://picsum.photos/seed/cmpe460/1400
 aliases:
   - undergraduate/courses/cmpe460
 ---
-
-{{< under-construction-warning >}}
-
 ## Ders Bilgileri
 
 <!-- prettier-ignore-start -->
