@@ -1,14 +1,6 @@
 {{ define "main" }}
 
-
 <div class="container mt-3">
-<div class="row text-center">
-<div class="alert alert-warning alert-dismissible fade show" role="alert">
-<small>We are updating our website! The previous website is still available at <a href="https://legacy.cmpe.bogazici.edu.tr"><strong>https://legacy.cmpe.bogazici.edu.tr</strong></a></small>
-<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-</div>  
-</div>
-</div>
 
 {{ if site.Params.banner.enabled }}
 {{ $lang_code := .Language.Lang }}

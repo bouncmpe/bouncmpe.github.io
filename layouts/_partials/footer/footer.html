@@ -2,7 +2,7 @@
 <div class="row justify-content-start">
     {{ range .Site.Menus.footer }}
     <div class="col-12 col-md-3 mb-3 mt-3">
-        <p class="mb-2 text-start fs-6 text-dark fw-bolder">{{ .Name }}</p>
+        <p class="mb-2 text-start fs-6 text-dark fw-bold">{{ .Name }}</p>
         {{ if .HasChildren }}
         <ul class="list-unstyled text-start fs-6 text-dark">
             {{ range .Children }}

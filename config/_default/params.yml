@@ -3,19 +3,20 @@ main:
   footerBelowFold: true
   enableDarkMode: false
   modes: ["light"]
+  breakpoint: "md"
 
 favicon:
   logo: /images/logo.png
 
 navigation:
-  logo: /images/logo.svg
+  logo: ""
   search: true
   searchModal: true
   size: xl
   #color: primary
   # horizontal: true
   toc: true
-  sidebar: false
+  sidebar: true
   breadcrumb: false
 
 sharing:
@@ -57,101 +58,101 @@ social:
 mermaid:
   align: center
 
-sections:
-  about:
-    title:
-    layout: card
-    sort: weight
-    style: rounded-1 px-4 pb-3 my-0
-    header: none
-    footer: none
-    padding: 2
-    cols: 3
-    orientation: stacked
-    fullCover: true
-    reverse: false
-    nested: false
-  g:
-    layout: card
-    header: none
-    footer: none
-    cols: 4
-    padding: 0
-  u:
-    layout: card
-    header: none
-    footer: none
-    cols: 4
-    padding: 0
-  prospective:
-    layout: card
-    sort: weight
-    style: rounded-0 px-4 pb-3 my-0
-    header: none
-    footer: none
-    padding: 2
-    cols: 3
-    orientation: stacked
-    fullCover: true
-    reverse: false
-    nested: false
-  people:
-    layout: card
-    sort: weight
-    style: border-0 px-4 pb-3 my-0 card-zoom
-    header: none
-    footer: none
-    padding: 2
-    cols: 2
-    orientation: stacked
-    fullCover: true
-    reverse: false
-    nested: false
-  courses:
-    sort: weight
-    style: rounded-1 card-zoom
-    header: none
-    footer: none
-    padding: 3
-    cols: 4
-    orientation: stacked
-    color: body-tertiary
-    reverse: false
-    nested: false
-    fullCover: true
-  undergraduate:
-    sort: weight
-    style: rounded-1 card-zoom
-    header: none
-    footer: none
-    padding: 3
-    cols: 4
-    orientation: stacked
-    color: body-tertiary
-    reverse: false
-    nested: false
-  graduate:
-    sort: weight
-    style: rounded-1 card-zoom
-    header: none
-    footer: none
-    padding: 3
-    cols: 3
-    orientation: stacked
-    color: body-tertiary
-    reverse: false
-    nested: false
-  research:
-    layout: card
-    sort: weight
-    style: rounded-1 card-zoom
-    header: none
-    footer: none
-    padding: 3
-    cols: 4
-    orientation: stacked
-    color: body-tertiary
-    reverse: false
-    nested: false
-  docs:
-    layout: card
+# sections:
+#   about:
+#     title:
+#     layout: card
+#     sort: weight
+#     style: rounded-1 px-4 pb-3 my-0
+#     header: none
+#     footer: none
+#     padding: 2
+#     cols: 3
+#     orientation: stacked
+#     fullCover: true
+#     reverse: false
+#     nested: false
+#   g:
+#     layout: card
+#     header: none
+#     footer: none
+#     cols: 4
+#     padding: 0
+#   u:
+#     layout: card
+#     header: none
+#     footer: none
+#     cols: 4
+#     padding: 0
+#   prospective:
+#     layout: card
+#     sort: weight
+#     style: rounded-0 px-4 pb-3 my-0
+#     header: none
+#     footer: none
+#     padding: 2
+#     cols: 3
+#     orientation: stacked
+#     fullCover: true
+#     reverse: false
+#     nested: false
+#   people:
+#     layout: card
+#     sort: weight
+#     style: border-0 px-4 pb-3 my-0 card-zoom
+#     header: none
+#     footer: none
+#     padding: 2
+#     cols: 2
+#     orientation: stacked
+#     fullCover: true
+#     reverse: false
+#     nested: false
+#   courses:
+#     sort: weight
+#     style: rounded-1 card-zoom
+#     header: none
+#     footer: none
+#     padding: 3
+#     cols: 4
+#     orientation: stacked
+#     color: body-tertiary
+#     reverse: false
+#     nested: false
+#     fullCover: true
+#   undergraduate:
+#     sort: weight
+#     style: rounded-1 card-zoom
+#     header: none
+#     footer: none
+#     padding: 3
+#     cols: 4
+#     orientation: stacked
+#     color: body-tertiary
+#     reverse: false
+#     nested: false
+#   graduate:
+#     sort: weight
+#     style: rounded-1 card-zoom
+#     header: none
+#     footer: none
+#     padding: 3
+#     cols: 3
+#     orientation: stacked
+#     color: body-tertiary
+#     reverse: false
+#     nested: false
+#   research:
+#     layout: card
+#     sort: weight
+#     style: rounded-1 card-zoom
+#     header: none
+#     footer: none
+#     padding: 3
+#     cols: 4
+#     orientation: stacked
+#     color: body-tertiary
+#     reverse: false
+#     nested: false
+#   docs:
+#     layout: card
