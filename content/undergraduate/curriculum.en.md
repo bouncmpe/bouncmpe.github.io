@@ -83,7 +83,7 @@ hasMermaid: true
 {{< /table >}}
 <!-- prettier-ignore-end -->
 
-## Course Prerequisites Graph
+## Prerequisites Graph
 
 ```mermaid "caption=prerequisites"
 %%{ init: { 'flowchart': { 'curve': 'linear' } } }%%

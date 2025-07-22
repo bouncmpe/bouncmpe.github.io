@@ -4,6 +4,7 @@ description: Boğaziçi Üniversitesi Bilgisayar Mühendisliği Öğretim Progra
 metadata: none
 toc: false
 weight: 2
+hasMermaid: true
 ---
 
 <!-- prettier-ignore-start -->
@@ -82,7 +83,7 @@ weight: 2
 {{< /table >}}
 <!-- prettier-ignore-end -->
 
-## Ders Önkoşul Çizgesi
+## Önkoşul Çizgesi
 
 ```mermaid "caption=prerequisites"
 %%{ init: { 'flowchart': { 'curve': 'linear' } } }%%
