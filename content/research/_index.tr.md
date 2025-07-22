@@ -19,7 +19,7 @@ content_blocks:
     cols: 3
     padding: 3
     limit: 9
-    paginate: false
+    paginate: true
     cover: false
     header-style: none
     class: border-dark border-2 rounded-0
