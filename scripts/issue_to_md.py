@@ -2,11 +2,21 @@ import os
 import re
 import unicodedata
 import requests
+from github import Github
 from urllib.parse import urlparse
 
 # 1) Read inputs
-labels = os.getenv("ISSUE_LABELS", "").lower()
-body = os.getenv("ISSUE_BODY", "").strip()
+issue_number = int(os.getenv("ISSUE_NUMBER"))
+token = os.getenv("GITHUB_TOKEN")
+repo_name = os.getenv("REPO_NAME")
+
+g = Github(token)
+repo = g.get_repo(repo_name)
+issue = repo.get_issue(number=issue_number)
+
+labels = ",".join([label.name.lower() for label in issue.labels])
+body = issue.body.strip()
+
 is_news = "news" in labels
 
 # 2) Slugify helper
