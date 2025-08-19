@@ -100,7 +100,7 @@ menu:
       parent: graduate-footer
       weight: 302
     - name: Diğer İlişkili Programlar
-      url: /graduate/other-programs
+      url: /graduate/affiliated-programs
       identifier: graduate-affiliated-footer
       parent: graduate-footer
       weight: 303

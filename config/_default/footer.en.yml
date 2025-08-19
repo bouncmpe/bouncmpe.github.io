@@ -100,7 +100,7 @@ menu:
       parent: graduate-footer
       weight: 302
     - name: Other Affiliated Programs
-      url: /graduate/other-programs
+      url: /graduate/affiliated-programs
       identifier: graduate-affiliated-footer
       parent: graduate-footer
       weight: 303
