@@ -1,0 +1,68 @@
+name: Issue → PR Automation
+
+on:
+  issues:
+    types: [opened, edited, closed, deleted]
+
+jobs:
+  # ───────────── Sync on Opened/Edited ─────────────────
+  sync:
+    if: ${{ github.event.action != 'closed' && github.event.action != 'deleted' }}
+    runs-on: ubuntu-latest
+    env:
+      ISSUE_NUMBER: ${{ github.event.issue.number }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Generate Markdown from Issue
+        run: python scripts/issue_to_md.py
+
+      - name: Create or Update Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: "auto/add-${{ env.ISSUE_NUMBER }}"
+          commit-message: "Auto add: ${{ github.event.issue.title }}"
+          title: "Automated PR: ${{ github.event.issue.title }}"
+          body: |
+            This PR was automatically generated from
+            issue #${{ env.ISSUE_NUMBER }}.
+          labels: ${{ join(github.event.issue.labels.*.name, ',') }},auto-generated
+
+  # ───────────── Close on Issue Closed or Deleted ─────────────────
+  close-pr:
+    if: ${{ github.event.action == 'closed' || github.event.action == 'deleted' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Close related pull requests
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const issueNumber = context.payload.issue.number;
+            const branchName = `auto/add-${issueNumber}`;
+            // List open PRs whose head branch is owner:branchName
+            const { data: pulls } = await github.rest.pulls.list({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              head: `${context.repo.owner}:${branchName}`,
+              state: 'open'
+            });
+            for (const pr of pulls) {
+              await github.rest.pulls.update({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: pr.number,
+                state: 'closed'
+              });
+              console.log(`Closed PR #${pr.number} on branch ${branchName}`);
+            }

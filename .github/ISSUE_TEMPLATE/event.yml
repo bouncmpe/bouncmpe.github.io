@@ -1,0 +1,113 @@
+name: Bilingual Event Submission
+description: Submit an event for the website. Provide both English and Turkish entries.
+title: "[EVENT] <Insert event title>"
+labels: ["event"]
+body:
+  - type: dropdown
+    id: event_type
+    attributes:
+      label: "Event Type"
+      options:
+        - phd-thesis-defense
+        - ms-thesis-defense
+        - seminar
+        - special-event
+      description: "Choose the type of the event"
+    validations:
+      required: true
+
+  - type: input
+    id: title_en
+    attributes:
+      label: "Event Title (EN)"
+      placeholder: "Enter event title here"
+    validations:
+      required: true
+
+  - type: input
+    id: title_tr
+    attributes:
+      label: "Event Title (TR)"
+      placeholder: "Enter event title here"
+    validations:
+      required: true
+
+  - type: input
+    id: name
+    attributes:
+      label: "Speaker/Presenter Name"
+      placeholder: "Enter presenter name here"
+    validations:
+      required: true
+
+  - type: input
+    id: date
+    attributes:
+      label: "Date (YYYY-MM-DD)"
+      placeholder: "YYYY-MM-DD"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: time
+    attributes:
+      label: "Time"
+      description: "Choose a time slot"
+      options:
+        - "09:00"
+        - "09:30"
+        - "10:00"
+        - "10:30"
+        - "11:00"
+        - "11:30"
+        - "12:00"
+        - "12:30"
+        - "13:00"
+        - "13:30"
+        - "14:00"
+        - "14:30"
+        - "15:00"
+        - "15:30"
+        - "16:00"
+        - "16:30"
+        - "17:00"
+        - "17:30"
+        - "18:00"
+        - "18:30"
+        - "19:00"
+        - "19:30"
+        - "20:00"
+        - "20:30"
+        - "21:00"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: duration
+    attributes:
+      label: "Duration"
+      options:
+        - 1h
+        - 1.5h
+        - 2h
+        - 2.5h
+        - 3h
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: location_en
+    attributes:
+      label: "Location (EN)"
+      placeholder: "Enter location here"
+    validations:
+      required: true
+
+  - type: input
+    id: location_tr
+    attributes:
+      label: "Location (TR)"
+      placeholder: "Enter location here"
+    validations:
+      required: true
