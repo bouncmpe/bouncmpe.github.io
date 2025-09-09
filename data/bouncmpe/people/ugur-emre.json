@@ -2,7 +2,7 @@
   "email": "emre.ugur@bogazici.edu.tr",
   "homepage": "/u/emre.ugur",
   "name": "Emre Uğur",
-  "position": "assistant-professor",
+  "position": "associate-professor",
   "tags": [
     "faculty",
     "curriculum",
@@ -12,8 +12,7 @@
     "former-cmpe462",
     "artificialintelligence",
     "roboticscontrol",
-    "advisor-4",
-    "senior-projects-coordinator"
+    "advisor-x"
   ],
   "type": "person",
   "thumbnail": "images/people/ugur_emre.jpg"
