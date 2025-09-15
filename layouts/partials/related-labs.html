@@ -1,0 +1,10 @@
+{{ with .Params.related_labs }}
+<div class="related-box" style="background:#f5f8fc; padding:1rem; border-radius:8px; margin-top:2rem;">
+  <h3>Related labs in the Computer Engineering Department:</h3>
+  <ul>
+    {{ range . }}
+      <li><a href="{{ .url }}">{{ .name }}</a></li>
+    {{ end }}
+  </ul>
+</div>
+{{ end }}
