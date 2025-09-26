@@ -11,6 +11,12 @@ from jinja2 import Environment, FileSystemLoader
 from pathlib import Path
 
 def project_root() -> Path:
+    """
+    Return the project root directory.
+
+    If the PROJECT_ROOT environment variable is set, its value is used.
+    Otherwise, fall back to the parent of the parent directory of the feature directory (.github/issue-to-md), which is the working directory in the associated workflow file, as the feature files are located there now.
+    """
     env_root = os.getenv("PROJECT_ROOT")
     return Path(env_root).resolve() if env_root else Path(__file__).resolve().parents[2]
 
