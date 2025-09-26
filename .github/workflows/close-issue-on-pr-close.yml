@@ -1,0 +1,39 @@
+# .github/workflows/close-issues-on-pr-close.yml
+name: Close linked issues on PR close
+
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  close-linked-issues:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Close referenced issues
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const pr = context.payload.pull_request;
+            // Only act when a PR is closed (merged or manually)
+            if (pr.state === 'closed') {
+              // Look for patterns like "issue #123" or "#123" in the PR body
+              const body = pr.body || "";
+              const issueNumbers = new Set();
+              const regex = /#(\d+)/g;
+              let match;
+              while ((match = regex.exec(body)) !== null) {
+                issueNumbers.add(parseInt(match[1], 10));
+              }
+              
+              for (const issueNumber of issueNumbers) {
+                // Close each referenced issue
+                await github.rest.issues.update({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: issueNumber,
+                  state: 'closed'
+                });
+                console.log(`Closed issue #${issueNumber}`);
+              }
+            }

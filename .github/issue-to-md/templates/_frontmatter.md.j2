@@ -1,0 +1,9 @@
+---
+type: {{ type }}
+title: {{ title }}
+date: {{ date }}
+{% block extra_fields %}{% endblock %}
+thumbnail: {{ thumbnail | default('') }}
+description: {{ description | default('') }}
+featured: false
+---

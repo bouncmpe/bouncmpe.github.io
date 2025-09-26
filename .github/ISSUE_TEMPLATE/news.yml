@@ -1,0 +1,71 @@
+name: Bilingual News Submission
+description: Submit a news item for the website. Provide both English and Turkish entries, including an image (required).
+title: "[NEWS] <Insert news title>"
+labels: ["news"]
+body:
+  - type: input
+    id: title_en
+    attributes:
+      label: "News Title (EN)"
+      placeholder: "Enter news title here"
+    validations:
+      required: true
+
+  - type: input
+    id: title_tr
+    attributes:
+      label: "News Title (TR)"
+      placeholder: "Enter news title here"
+    validations:
+      required: true
+
+  - type: input
+    id: date
+    attributes:
+      label: "Date (YYYY-MM-DD)"
+      placeholder: "YYYY-MM-DD"
+    validations:
+      required: true
+
+  - type: textarea
+    id: image_markdown
+    attributes:
+      label: "Image (drag & drop here)"
+      description: "Drag & drop your image; GitHub will upload it and provide a markdown link."
+      placeholder: "![alt text](https://user-images.githubusercontent.com/.../your-image.png)"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description_en
+    attributes:
+      label: "Short Description (EN)"
+      placeholder: "Enter short description here"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description_tr
+    attributes:
+      label: "Short Description (TR)"
+      placeholder: "Enter short description here"
+    validations:
+      required: true
+
+  - type: textarea
+    id: content_en
+    attributes:
+      label: "Full Content (EN)"
+      description: "Detailed news content in English"
+      placeholder: "Enter full content here"
+    validations:
+      required: true
+
+  - type: textarea
+    id: content_tr
+    attributes:
+      label: "Full Content (TR)"
+      description: "Detaylı haber içeriği Türkçe"
+      placeholder: "Enter full content here"
+    validations:
+      required: true
