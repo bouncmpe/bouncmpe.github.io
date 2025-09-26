@@ -16,6 +16,8 @@ jobs:
     env:
       ISSUE_NUMBER: ${{ github.event.issue.number }}
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      PROJECT_ROOT: ${{ github.workspace }}   
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
