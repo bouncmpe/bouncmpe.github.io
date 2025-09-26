@@ -13,8 +13,8 @@ from jinja2 import Environment, FileSystemLoader
 GITHUB_REPOSITORY = os.getenv("GITHUB_REPOSITORY")
 ISSUE_NUMBER      = int(os.getenv("ISSUE_NUMBER", "0"))
 GITHUB_TOKEN      = os.getenv("GITHUB_TOKEN")
-UPLOADS_DIR       = Path("assets/uploads")
-CONTENT_DIR       = Path("content")
+UPLOADS_DIR       = Path("../../assets/uploads")
+CONTENT_DIR       = Path("../../content")
 DEBUG             = True
 
 if not GITHUB_REPOSITORY or not GITHUB_TOKEN or ISSUE_NUMBER == 0:
