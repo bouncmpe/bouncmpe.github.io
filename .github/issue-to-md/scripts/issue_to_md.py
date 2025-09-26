@@ -8,16 +8,29 @@ from uuid import uuid4
 from pathlib import Path
 from github import Github
 from jinja2 import Environment, FileSystemLoader
+from pathlib import Path
+
+def project_root() -> Path:
+    """
+    Return the project root directory.
+
+    If the PROJECT_ROOT environment variable is set, its value is used.
+    Otherwise, fall back to the parent of the parent directory of the feature directory (.github/issue-to-md), which is the working directory in the associated workflow file, as the feature files are located there now.
+    """
+    env_root = os.getenv("PROJECT_ROOT")
+    return Path(env_root).resolve() if env_root else Path(__file__).resolve().parents[2]
 
 # ─── CONFIGURATION ─────────────────────────────────────────────────────────────
 GITHUB_REPOSITORY = os.getenv("GITHUB_REPOSITORY")
 ISSUE_NUMBER      = int(os.getenv("ISSUE_NUMBER", "0"))
 GITHUB_TOKEN      = os.getenv("GITHUB_TOKEN")
-UPLOADS_DIR       = Path("assets/uploads")
-CONTENT_DIR       = Path("content")
+
+ROOT = project_root()
+UPLOADS_DIR = ROOT / "assets" / "uploads"
+CONTENT_DIR = ROOT / "content"
 DEBUG             = True
 
-if not GITHUB_REPOSITORY or not GITHUB_TOKEN or ISSUE_NUMBER == 0:
+if not GITHUB_REPOSITORY or not GITHUB_TOKEN or not ROOT or ISSUE_NUMBER == 0:
     missing = [n for n in ["GITHUB_REPOSITORY","GITHUB_TOKEN","ISSUE_NUMBER"] if not os.getenv(n)]
     raise RuntimeError(f"Missing required env vars: {', '.join(missing)}")
 
