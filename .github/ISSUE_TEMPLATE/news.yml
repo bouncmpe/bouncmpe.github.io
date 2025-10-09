@@ -1,7 +1,7 @@
 name: Bilingual News Submission
 description: Submit a news item for the website. Provide both English and Turkish entries, including an image (required).
 title: "[NEWS] <Insert news title>"
-labels: ["news"]
+labels: ["auto-md", "news"]
 body:
   - type: input
     id: title_en
