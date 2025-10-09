@@ -2,7 +2,7 @@ name: Issue → PR Automation
 
 on:
   issues:
-    types: [opened, edited, closed, deleted]
+    types: [opened, edited, labeled, closed, deleted]
 
 defaults:
   run:
@@ -11,7 +11,7 @@ defaults:
 jobs:
   # ───────────── Sync on Opened/Edited ─────────────────
   sync:
-    if: ${{ github.event.action != 'closed' && github.event.action != 'deleted' }}
+    if: ${{ github.event.action != 'closed' && github.event.action != 'deleted' && contains(github.event.issue.labels.*.name, 'auto-md')}}
     runs-on: ubuntu-latest
     env:
       ISSUE_NUMBER: ${{ github.event.issue.number }}
