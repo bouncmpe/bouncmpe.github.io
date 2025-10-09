@@ -95,20 +95,6 @@ def normalize_key_from_label(label: str) -> str:
     We match on label text, not placeholder values.
     """
     key = re.sub(r"[^a-z0-9]+", "_", (label or "").lower()).strip("_")
-    if "date" in key:
-        return "date"
-    if "time" in key:
-        return "time"
-    if "speaker" in key or "presenter" in key:
-        return "presenter"
-    if key.endswith("_title_en") or "title_en" in key:
-        return "title_en"
-    if key.endswith("_title_tr") or "title_tr" in key:
-        return "title_tr"
-    if "event_type" in key or "content_kind" in key:
-        return "content_kind"
-    if "image" in key and "markdown" in key:
-        return "image_markdown"
     return key
 
 def parse_fields(body: str) -> Dict[str, str]:
