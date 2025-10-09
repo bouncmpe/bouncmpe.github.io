@@ -2,7 +2,7 @@ name: Issue → PR Automation
 
 on:
   issues:
-    types: [opened, edited, labeled, closed, deleted]
+    types: [edited, labeled, closed, deleted]
 
 defaults:
   run:
