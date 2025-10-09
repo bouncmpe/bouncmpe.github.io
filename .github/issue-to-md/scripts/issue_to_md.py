@@ -328,7 +328,6 @@ def build_news_dir(base: Path, date_val: str, title_en: str) -> Path:
 def main() -> int:
     issue = load_issue()
     fields = parse_fields(issue.body)
-
     # Kind → event or news
     content_kind = get_field(fields, ["content_kind", "event_type"], "news").strip().lower()
     is_event = (content_kind in EVENT_KINDS)
@@ -345,7 +344,7 @@ def main() -> int:
     time_val = normalize_time(raw_time)
 
     # Event-only fields
-    presenter = get_field(fields, "name", "")
+    presenter = get_field(fields, "speaker_presenter_name", "")
     duration  = get_field(fields, "duration", "")
     location_en = get_field(fields, "location_en", "")
     location_tr = get_field(fields, "location_tr", location_en)
