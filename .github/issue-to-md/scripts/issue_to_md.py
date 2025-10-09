@@ -1,195 +1,407 @@
-#!/usr/bin/env python3
 import os
 import re
-import unicodedata
+import sys
 import mimetypes
+import unicodedata
+from dataclasses import dataclass
+from pathlib import Path
+from typing import Any, Dict, Iterable, Optional
+
 import requests
-from uuid import uuid4
-from pathlib import Path
 from github import Github
-from jinja2 import Environment, FileSystemLoader
-from pathlib import Path
+from jinja2 import Environment, FileSystemLoader, TemplateNotFound
+
+from datetime import datetime
+import zoneinfo
+
+# ────────────────────────────────────────────────────────────────────────────────
+# Configuration & Globals
+# ────────────────────────────────────────────────────────────────────────────────
+
+IST_TZ = zoneinfo.ZoneInfo("Europe/Istanbul")
+
+DEBUG = os.getenv("DEBUG", "1") != "0"
+
+def dprint(*args, **kwargs):
+    if DEBUG:
+        print("[DEBUG]", *args, **kwargs)
 
 def project_root() -> Path:
     """
-    Return the project root directory.
-
-    If the PROJECT_ROOT environment variable is set, its value is used.
-    Otherwise, fall back to the parent of the parent directory of the feature directory (.github/issue-to-md), which is the working directory in the associated workflow file, as the feature files are located there now.
+    Determine repository root:
+    - If PROJECT_ROOT is set (workflow passes it), use it.
+    - Else use parent-of-parent of this script (since working dir is .github/issue-to-md/).
     """
     env_root = os.getenv("PROJECT_ROOT")
     return Path(env_root).resolve() if env_root else Path(__file__).resolve().parents[2]
 
-# ─── CONFIGURATION ─────────────────────────────────────────────────────────────
+# Required env vars from workflow
 GITHUB_REPOSITORY = os.getenv("GITHUB_REPOSITORY")
-ISSUE_NUMBER      = int(os.getenv("ISSUE_NUMBER", "0"))
 GITHUB_TOKEN      = os.getenv("GITHUB_TOKEN")
+ISSUE_NUMBER_STR  = os.getenv("ISSUE_NUMBER", "0")
 
-ROOT = project_root()
-UPLOADS_DIR = ROOT / "assets" / "uploads"
-CONTENT_DIR = ROOT / "content"
-DEBUG             = True
-
-if not GITHUB_REPOSITORY or not GITHUB_TOKEN or not ROOT or ISSUE_NUMBER == 0:
-    missing = [n for n in ["GITHUB_REPOSITORY","GITHUB_TOKEN","ISSUE_NUMBER"] if not os.getenv(n)]
+if not GITHUB_REPOSITORY or not GITHUB_TOKEN or ISSUE_NUMBER_STR == "0":
+    missing = [n for n in ["GITHUB_REPOSITORY", "GITHUB_TOKEN", "ISSUE_NUMBER"] if not os.getenv(n)]
     raise RuntimeError(f"Missing required env vars: {', '.join(missing)}")
 
-# ─── GITHUB INITIALIZATION ─────────────────────────────────────────────────────
-gh    = Github(GITHUB_TOKEN)
-repo  = gh.get_repo(GITHUB_REPOSITORY)
-issue = repo.get_issue(number=ISSUE_NUMBER)
-if DEBUG:
-    print(f"[DEBUG] Loaded Issue #{ISSUE_NUMBER}: {issue.title!r}")
+ISSUE_NUMBER = int(ISSUE_NUMBER_STR)
 
-# ─── PARSING UTILITIES ──────────────────────────────────────────────────────────
-def parse_fields(body: str) -> dict:
+ROOT        = project_root()
+ASSETS_DIR  = ROOT / "assets"
+UPLOADS_DIR = ASSETS_DIR / "uploads"
+CONTENT_DIR = ROOT / "content"
+TEMPLATES_DIR = Path(".") / "templates"  # relative to working dir (.github/issue-to-md/)
+
+# Content kinds that are considered "events"
+EVENT_KINDS = {
+    "phd-thesis-defense",
+    "ms-thesis-defense",
+    "seminar", "special-event",
+}
+
+# ────────────────────────────────────────────────────────────────────────────────
+# Helpers
+# ────────────────────────────────────────────────────────────────────────────────
+
+def slugify(text: str) -> str:
+    text = (text or "").strip()
+    if not text:
+        return ""
+    text = unicodedata.normalize("NFKD", text).encode("ascii", "ignore").decode().lower()
+    text = re.sub(r"[^\w\s-]", "", text)
+    text = re.sub(r"[-\s]+", "-", text).strip("-")
+    return text
+
+def read_template(env: Environment, path: str) -> Optional[Any]:
+    try:
+        return env.get_template(path)
+    except TemplateNotFound:
+        return None
+
+def ensure_dirs(path: Path) -> None:
+    path.mkdir(parents=True, exist_ok=True)
+
+def write_text(path: Path, text: str) -> None:
+    path.write_text(text, encoding="utf-8")
+    dprint("Wrote file:", path)
+
+# ────────────────────────────────────────────────────────────────────────────────
+# Parsing
+# ────────────────────────────────────────────────────────────────────────────────
+
+def normalize_key_from_label(label: str) -> str:
+    """
+    Normalize GitHub issue-form labels to stable keys.
+    We match on label text, not placeholder values.
+    """
+    key = re.sub(r"[^a-z0-9]+", "_", (label or "").lower()).strip("_")
+    if "date" in key:
+        return "date"
+    if "time" in key:
+        return "time"
+    if "speaker" in key or "presenter" in key:
+        return "presenter"
+    if key.endswith("_title_en") or "title_en" in key:
+        return "title_en"
+    if key.endswith("_title_tr") or "title_tr" in key:
+        return "title_tr"
+    if "event_type" in key or "content_kind" in key:
+        return "content_kind"
+    if "image" in key and "markdown" in key:
+        return "image_markdown"
+    return key
+
+def parse_fields(body: str) -> Dict[str, str]:
+    """
+    Parse issue body like:
+        ### Label
+        value...
+    into {normalized_key: value}.
+    """
     parts = re.split(r"^###\s+", body or "", flags=re.MULTILINE)[1:]
-    parsed = {}
+    parsed: Dict[str, str] = {}
     for part in parts:
         lines = part.splitlines()
+        if not lines:
+            continue
         label = lines[0].strip()
-        key = re.sub(r"[^a-z0-9]+", "_", label.lower()).strip("_")
         value = "\n".join(lines[1:]).strip()
-        if "date" in key and "yyyy" in value.lower():
-            key = "date"
+        key = normalize_key_from_label(label)
         parsed[key] = value
-        if DEBUG:
-            print(f"[DEBUG] Parsed field '{label}' → '{key}': {value!r}")
+        dprint(f"Parsed field '{label}' → '{key}': {value!r}")
     return parsed
 
-fields = parse_fields(issue.body)
-
-def get_field(keys, default=""):
+def get_field(fields: Dict[str, str], keys: Iterable[str] | str, default: Optional[str] = "") -> str:
     if isinstance(keys, str):
         keys = [keys]
     for k in keys:
-        if k in fields and fields[k]:
-            if DEBUG:
-                print(f"[DEBUG] get_field '{k}': {fields[k]!r}")
-            return fields[k]
-    if DEBUG:
-        print(f"[DEBUG] get_field default for {keys}: {default!r}")
-    return default
+        v = fields.get(k)
+        if v:
+            dprint(f"get_field '{k}': {v!r}")
+            return v
+    dprint(f"get_field default for {list(keys)}: {default!r}")
+    return default or ""
 
-# ─── DETERMINE CONTENT KIND ─────────────────────────────────────────────────────
-content_kind = get_field(['content_kind','event_type'], 'news')
-is_event = (
-    content_kind.startswith('phd') or 
-    content_kind.startswith('ms') or 
-    content_kind == 'seminar' or 
-    content_kind == 'special-event'
-)
+# ────────────────────────────────────────────────────────────────────────────────
+# Date/Time normalization
+# ────────────────────────────────────────────────────────────────────────────────
 
-# ─── COMMON FIELDS & NORMALIZATION ──────────────────────────────────────────────
-title_en = get_field(['event_title_en','news_title_en','title_en'], issue.title)
-title_tr = get_field(['event_title_tr','news_title_tr','title_tr'], '')
-date_val = get_field('date', issue.created_at.date().isoformat()).strip()
-raw_time = get_field('time', '').strip()
-time_val = raw_time + ":00" if re.match(r"^\d{2}:\d{2}$", raw_time) else raw_time
-if DEBUG:
-    print(f"[DEBUG] date_val={date_val!r}, time_val={time_val!r}")
+def normalize_date(date_str: Optional[str], issue_created_at_utc: datetime) -> str:
+    """
+    Accepts YYYY-MM-DD from the issue form; otherwise fallback to issue.created_at in Istanbul.
+    """
+    if date_str and re.fullmatch(r"\d{4}-\d{2}-\d{2}", date_str.strip()):
+        return date_str.strip()
+    # fallback — convert created_at (UTC) to Istanbul date
+    ist_dt = issue_created_at_utc.astimezone(IST_TZ)
+    return ist_dt.date().isoformat()
 
-# ─── IMAGE HANDLING ─────────────────────────────────────────────────────────────
-def download_image(md: str) -> str:
-    m = re.search(r"!\[[^\]]*\]\((https?://[^\)]+)\)", md) or \
-        re.search(r"src=\"(https?://[^\"]+)\"", md)
+def normalize_time(time_str: Optional[str]) -> str:
+    """
+    Accepts HH:MM or HH:MM:SS; defaults to 00:00:00 if empty/invalid.
+    """
+    if not time_str:
+        return "00:00:00"
+    s = time_str.strip()
+    if re.fullmatch(r"\d{2}:\d{2}", s):
+        return f"{s}:00"
+    if re.fullmatch(r"\d{2}:\d{2}:\d{2}", s):
+        return s
+    return "00:00:00"
+
+# ────────────────────────────────────────────────────────────────────────────────
+# GitHub I/O
+# ────────────────────────────────────────────────────────────────────────────────
+
+@dataclass
+class IssueData:
+    number: int
+    title: str
+    body: str
+    created_at: datetime  
+
+def load_issue() -> IssueData:
+    gh = Github(GITHUB_TOKEN)
+    repo = gh.get_repo(GITHUB_REPOSITORY)
+    issue = repo.get_issue(number=ISSUE_NUMBER)
+    dprint(f"Loaded Issue #{ISSUE_NUMBER}: {issue.title!r}")
+    return IssueData(
+        number=issue.number,
+        title=issue.title,
+        body=issue.body or "",
+        created_at=issue.created_at, 
+    )
+
+# ────────────────────────────────────────────────────────────────────────────────
+# Media handling
+# ────────────────────────────────────────────────────────────────────────────────
+
+IMG_MD_RE = re.compile(r"!\[[^\]]*\]\((https?://[^\)]+)\)")
+IMG_SRC_RE = re.compile(r'src="(https?://[^"]+)"')
+
+def download_image_if_present(markdown_or_html: str) -> str:
+    """
+    Looks for an image URL in markdown or HTML; downloads to assets/uploads/.
+    Returns relative path like 'uploads/<filename>' or "" if none.
+    """
+    if not markdown_or_html:
+        return ""
+    m = IMG_MD_RE.search(markdown_or_html) or IMG_SRC_RE.search(markdown_or_html)
     if not m:
         return ""
     url = m.group(1)
-    if DEBUG:
-        print(f"[DEBUG] Downloading image: {url}")
-    resp = requests.get(url, timeout=15)
+    dprint("Downloading image:", url)
+    resp = requests.get(url, timeout=20)
     resp.raise_for_status()
-    ext = mimetypes.guess_extension(resp.headers.get('Content-Type','').split(';')[0]) \
-          or Path(url).suffix or '.png'
-    fname = f"{ISSUE_NUMBER}_{uuid4().hex[:8]}{ext}"
-    UPLOADS_DIR.mkdir(parents=True, exist_ok=True)
+    ctype = (resp.headers.get("Content-Type") or "").split(";")[0]
+    ext = mimetypes.guess_extension(ctype) or Path(url).suffix or ".png"
+    fname = f"{ISSUE_NUMBER}_{datetime.now().strftime('%Y%m%d%H%M%S')}{ext}"
+    ensure_dirs(UPLOADS_DIR)
     path = UPLOADS_DIR / fname
     path.write_bytes(resp.content)
-    local = f"uploads/{fname}"
-    if DEBUG:
-        print(f"[DEBUG] Saved image to {path} → '{local}'")
-    return local
+    rel = f"uploads/{fname}"
+    dprint("Saved image to", path, "→", rel)
+    return rel
 
-# ─── SLUG & OUTPUT DIRECTORY ────────────────────────────────────────────────────
-def make_slug(text: str) -> str:
-    slug = unicodedata.normalize('NFKD', text).encode('ascii','ignore').decode().lower()
-    slug = re.sub(r"[^\w\s-]", '', slug)
-    slug = re.sub(r"[-\s]+", '-', slug).strip('-')
-    return f"{slug}-{ISSUE_NUMBER}"
+# ────────────────────────────────────────────────────────────────────────────────
+# Renderers
+# ────────────────────────────────────────────────────────────────────────────────
 
-slug = make_slug(title_en)
-subdir = 'events' if is_event else 'news'
-out_dir = CONTENT_DIR / subdir / f"{date_val}-{slug}"
-out_dir.mkdir(parents=True, exist_ok=True)
-if DEBUG:
-    print(f"[DEBUG] out_dir={out_dir}")
+@dataclass
+class RenderContext:
+    is_event: bool
+    content_kind: str
+    fields: Dict[str, str]
+    date_val: str
+    time_val: str
+    title_en: str
+    title_tr: str
+    presenter: str
+    location_en: str
+    location_tr: str
+    duration: str
+    image_md: str
+    out_dir: Path
 
-# ─── PROCESSORS ─────────────────────────────────────────────────────────────────
-class BaseProcessor:
-    def write(self, path: Path, text: str):
-        path.write_text(text, encoding='utf-8')
-        if DEBUG:
-            print(f"[DEBUG] Wrote file: {path}")
+class BaseRenderer:
+    def __init__(self, ctx: RenderContext):
+        self.ctx = ctx
 
-class NewsProcessor(BaseProcessor):
-    def render(self):
-        image_field_md = get_field(['image_markdown', 'image_drag_drop_here'], '')
-        image_md = download_image(image_field_md)
-        for lang in ('en','tr'):
+    def write(self, path: Path, text: str) -> None:
+        write_text(path, text)
+
+class NewsRenderer(BaseRenderer):
+    def render(self) -> None:
+        # Build front-matter per language
+        for lang in ("en", "tr"):
+            title = self.ctx.title_en if lang == "en" else self.ctx.title_tr
             desc_key = f"short_description_{lang}"
-            content_key = f"full_content_{lang}"
-            desc = get_field(desc_key, '').strip()
-            front = [
-                '---',
-                'type: news',
-                f"title: {title_en if lang=='en' else title_tr}",
-                f"date: {date_val}",
-                f"thumbnail: {image_md}",
+            body_key = f"full_content_{lang}"
+            desc = get_field(self.ctx.fields, desc_key, "")
+            body = get_field(self.ctx.fields, body_key, "")
+
+            fm: list[str] = [
+                "---",
+                "type: news",
+                f"title: {title}",
+                f"date: {self.ctx.date_val}",
+                f"thumbnail: {self.ctx.image_md}",
             ]
-            if '\n' in desc:
-                front.append('description: |')
-                for line in desc.splitlines():
-                    front.append(f"  {line}")
+            if "\n" in desc:
+                fm.append("description: |")
+                fm.extend([f"  {line}" for line in desc.splitlines()])
             else:
-                front.append(f"description: {desc}")
-            front.extend(['featured: false', '---', ''])
-            body = get_field(content_key)
-            out_file = out_dir / f"index.{lang}.md"
-            self.write(out_file, "\n".join(front + [body]))
+                fm.append(f"description: {desc}")
+            fm.extend(["featured: false", "---", ""])
 
-class EventProcessor(BaseProcessor):
-    def render(self):
-        print(f"[DEBUG] EventProcessor: kind={content_kind}, template=events/{content_kind}.md.j2")
-        env = Environment(loader=FileSystemLoader('templates'), autoescape=False)
-        tmpl = env.get_template(f"events/{content_kind}.md.j2")
-        for lang in ('en','tr'):
-            ctx = {
-                'type': content_kind,
-                'title': title_en if lang=='en' else title_tr,
-                'datetime': f"{date_val}T{time_val}" if time_val else '',
-                'name': get_field(['speaker_presenter_name','speaker','presenter'], ''),
-                'duration': get_field('duration',''),
-                'location': get_field([f'location_{lang}','location'], '')
+            out_md = "\n".join(fm + [body])
+            self.write(self.ctx.out_dir / f"index.{lang}.md", out_md)
+
+class EventRenderer(BaseRenderer):
+    def render(self) -> None:
+        # Try template: templates/events/<content_kind>.md.j2
+        env = Environment(loader=FileSystemLoader(str(TEMPLATES_DIR)), autoescape=False)
+        tmpl = read_template(env, f"events/{self.ctx.content_kind}.md.j2")
+
+        for lang in ("en", "tr"):
+            title = self.ctx.title_en if lang == "en" else self.ctx.title_tr
+            location = self.ctx.location_en if lang == "en" else self.ctx.location_tr
+
+            context = {
+                "type": self.ctx.content_kind,
+                "title": title,
+                "datetime": f"{self.ctx.date_val}T{self.ctx.time_val}",
+                "name": self.ctx.presenter,
+                "duration": self.ctx.duration,
+                "location": location,
+                # Add more fields as needed…
             }
-            print(f"[DEBUG] Context for {lang}: {ctx}")
-            rendered = tmpl.render(**ctx)
-            # compact filtering: no empty lines and drop unwanted keys
-            out_md = "\n".join(
-                line for line in rendered.splitlines()
-                if line.strip() and not (
-                    line.startswith(('thumbnail:','description:','featured:','date:'))
-                    and not line.startswith('datetime:')
+            dprint(f"Event context [{lang}]:", context)
+
+            if tmpl:
+                rendered = tmpl.render(**context)
+                # Keep it compact: strip blank lines; avoid duplicate front-matter keys
+                out_md = "\n".join(
+                    line for line in rendered.splitlines()
+                    if line.strip()
                 )
-            )
-            out_file = out_dir / f"index.{lang}.md"
-            self.write(out_file, out_md)
+            else:
+                # Minimal fallback front-matter if no template
+                fm = [
+                    "---",
+                    f"type: {self.ctx.content_kind}",
+                    f"title: {title}",
+                    f"datetime: {context['datetime']}",
+                    f"name: {self.ctx.presenter}",
+                    f"location: {location}",
+                    f"duration: {self.ctx.duration}",
+                    f"thumbnail: {self.ctx.image_md}",
+                    "---",
+                    "",
+                ]
+                out_md = "\n".join(fm)
 
-# Dispatch
-processor = EventProcessor() if is_event else NewsProcessor()
-processor.render()
-print("[DEBUG] Processing complete.")
+            self.write(self.ctx.out_dir / f"index.{lang}.md", out_md)
 
+# ────────────────────────────────────────────────────────────────────────────────
+# Directory naming rules
+# ────────────────────────────────────────────────────────────────────────────────
 
+def build_event_dir(base: Path, date_val: str, time_val: str, presenter: str, fallback_title: str, issue_number: int) -> Path:
+    hhmmss = time_val.replace(":", "-")
+    who = slugify(presenter) or slugify(fallback_title) or f"issue-{issue_number}"
+    return base / "events" / f"{date_val}t{hhmmss}-{who}"
 
+def build_news_dir(base: Path, date_val: str, title_en: str) -> Path:
+    return base / "news" / f"{date_val}-news-{slugify(title_en)}"
 
+# ────────────────────────────────────────────────────────────────────────────────
+# Main
+# ────────────────────────────────────────────────────────────────────────────────
+
+def main() -> int:
+    issue = load_issue()
+    fields = parse_fields(issue.body)
+
+    # Kind → event or news
+    content_kind = get_field(fields, ["content_kind", "event_type"], "news").strip().lower()
+    is_event = (content_kind in EVENT_KINDS)
+
+    # Titles (fallback to issue title if EN missing)
+    title_en = get_field(fields, ["event_title_en", "news_title_en", "title_en"], issue.title)
+    title_tr = get_field(fields, ["event_title_tr", "news_title_tr", "title_tr"], "")
+
+    # Prefer issue body for events; legacy key also accepted
+    raw_date = get_field(fields, ["date", "date_yyyy_mm_dd"], None if is_event else "")
+    raw_time = get_field(fields, "time", None if is_event else "")
+
+    date_val = normalize_date(raw_date, issue.created_at)
+    time_val = normalize_time(raw_time)
+
+    # Event-only fields
+    presenter = get_field(fields, "name", "")
+    duration  = get_field(fields, "duration", "")
+    location_en = get_field(fields, "location_en", "")
+    location_tr = get_field(fields, "location_tr", location_en)
+
+    # Image extraction 
+    image_md = download_image_if_present(get_field(fields, ["image_markdown", "image_drag_drop_here"], ""))
+
+    # Out directory by type
+    if is_event:
+        out_dir = build_event_dir(CONTENT_DIR, date_val, time_val, presenter, title_en, issue.number)
+    else:
+        out_dir = build_news_dir(CONTENT_DIR, date_val, title_en)
+    ensure_dirs(out_dir)
+    dprint("out_dir =", out_dir)
+
+    ctx = RenderContext(
+        is_event=is_event,
+        content_kind=content_kind if is_event else "news",
+        fields=fields,
+        date_val=date_val,
+        time_val=time_val,
+        title_en=title_en,
+        title_tr=title_tr,
+        presenter=presenter,
+        location_en=location_en,
+        location_tr=location_tr,
+        duration=duration,
+        image_md=image_md,
+        out_dir=out_dir,
+    )
+
+    renderer = EventRenderer(ctx) if is_event else NewsRenderer(ctx)
+    renderer.render()
+
+    print("Processing complete.")
+    return 0
+
+if __name__ == "__main__":
+    try:
+        sys.exit(main())
+    except Exception as e:
+        print(f"[ERROR] {e}", file=sys.stderr)
+        if DEBUG:
+            raise
+        sys.exit(1)
