@@ -1,7 +1,7 @@
 name: Bilingual Event Submission
 description: Submit an event for the website. Provide both English and Turkish entries.
 title: "[EVENT] <Insert event title>"
-labels: ["event"]
+labels: ["auto-md", "event"]
 body:
   - type: dropdown
     id: event_type
