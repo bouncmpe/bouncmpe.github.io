@@ -38,21 +38,26 @@ main:
     parent: undergraduate
     identifier: undergraduate-overview
     weight: 301
-  - name: Curriculum
+  - name: New Curriculum
+    url: /undergraduate/curriculum-new
+    parent: undergraduate
+    identifier: undergraduate-curriculum-new
+    weight: 302
+  - name: Previous Curriculum
     url: /undergraduate/curriculum
     parent: undergraduate
     identifier: undergraduate-curriculum
-    weight: 302
+    weight: 303
   # - name: Course List
   #   url: /undergraduate/courses
   #   parent: undergraduate
   #   identifier: undergraduate-courses
-  #   weight: 303
+  #   weight: 304
   - name: Elective Courses
     url: /undergraduate/electives
     parent: undergraduate
     identifier: undergraduate-electives
-    weight: 304
+    weight: 305
   - name: Double Major Programs
     url: /undergraduate/double-major
     parent: undergraduate
