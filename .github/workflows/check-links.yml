@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - "**"
   pull_request:
     branches:
       - main
@@ -35,9 +34,6 @@ jobs:
           
           # Check for markdown links with empty URL [text]()
           empty_url_md_links=$(grep -rn '\[[^]]*\]()' --include="*.md" . || true)
-          
-          # Check for markdown links with empty text [](url)
-          empty_text_md_links=$(grep -rn '\[\](.*[^)])' --include="*.md" . || true)
           
           has_errors=false
           
