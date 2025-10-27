@@ -1,0 +1,80 @@
+name: Check Links
+
+on:
+  push:
+    branches:
+      - main
+      - "**"
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  check-links:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check for empty links
+        run: |
+          echo "Checking for empty links in HTML and Markdown files..."
+          
+          # Check for empty href attributes in HTML files
+          empty_href_html=$(grep -rn 'href=""' --include="*.html" . || true)
+          
+          # Check for empty href attributes with single quotes in HTML files
+          empty_href_html_single=$(grep -rn "href=''" --include="*.html" . || true)
+          
+          # Check for placeholder links in HTML files
+          placeholder_href_html=$(grep -rn 'href="#"' --include="*.html" . || true)
+          
+          # Check for empty markdown links []()
+          empty_md_links=$(grep -rn '\[\]\(\)' --include="*.md" . || true)
+          
+          # Check for markdown links with empty URL [text]()
+          empty_url_md_links=$(grep -rn '\[[^]]*\]()' --include="*.md" . || true)
+          
+          # Check for markdown links with empty text [](url)
+          empty_text_md_links=$(grep -rn '\[\](.*[^)])' --include="*.md" . || true)
+          
+          has_errors=false
+          
+          if [ -n "$empty_href_html" ]; then
+            echo "❌ Found empty href=\"\" attributes in HTML files:"
+            echo "$empty_href_html"
+            has_errors=true
+          fi
+          
+          if [ -n "$empty_href_html_single" ]; then
+            echo "❌ Found empty href='' attributes in HTML files:"
+            echo "$empty_href_html_single"
+            has_errors=true
+          fi
+          
+          if [ -n "$placeholder_href_html" ]; then
+            echo "⚠️  Found placeholder href=\"#\" attributes in HTML files:"
+            echo "$placeholder_href_html"
+            # Not failing on placeholder links, just warning
+          fi
+          
+          if [ -n "$empty_md_links" ]; then
+            echo "❌ Found empty markdown links []() in files:"
+            echo "$empty_md_links"
+            has_errors=true
+          fi
+          
+          if [ -n "$empty_url_md_links" ]; then
+            echo "❌ Found markdown links with empty URLs [text]() in files:"
+            echo "$empty_url_md_links"
+            has_errors=true
+          fi
+          
+          if [ "$has_errors" = true ]; then
+            echo ""
+            echo "❌ Empty links detected! Please fix the above issues."
+            exit 1
+          else
+            echo "✅ No empty links found!"
+          fi
