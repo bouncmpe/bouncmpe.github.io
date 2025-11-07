@@ -1,0 +1,16 @@
+{{ define "main" }}
+<div class="container mt-3">
+  <article>
+    <h1>{{ .Title }}</h1>
+    <div class="content">
+      {{ .Content }}
+    </div>
+
+    <!-- ✅ Related Labs only on research pages -->
+    {{ if eq .Section "research" }}
+      {{ partial "related-labs.html" . }}
+    {{ end }}
+
+  </article>
+</div>
+{{ end }}

@@ -4,6 +4,11 @@ description: " "
 metadata: none
 thumbnail: 
     url: https://picsum.photos/seed/artificialintelligence/1400
+related_labs:
+  - name: Cognitive Learning and Robotics (COLORS) LAB
+    url: https://colors.cmpe.boun.edu.tr
+  - name: Artificial Intelligence Lab
+    url: http://ailab.cmpe.boun.edu.tr
 ---
 
 {{< under-construction-warning >}}
