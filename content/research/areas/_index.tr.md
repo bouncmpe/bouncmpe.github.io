@@ -1,17 +1,17 @@
 ---
-title: Research Areas
+title: Araştırma Alanları
 metadata: none
 content_blocks:
   - _bookshop_name: hero
     heading:
-      title: Research
+      title: Araştırma Alanları
       align: start
       width: 8
 
   - _bookshop_name: articles
     hide-empty: false
     input:
-      section: research
+      section: research/areas
       reverse: true
       sort: date
     more:

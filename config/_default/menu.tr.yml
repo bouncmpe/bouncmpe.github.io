@@ -84,7 +84,6 @@ main:
     identifier: undergraduate-graduation
     weight: 310
 
-
   - name: Lisansüstü
     url: /graduate/
     identifier: graduate
@@ -114,9 +113,18 @@ main:
     url: /research/
     identifier: research
     weight: 600
+  - name: Araştırma Alanları
+    url: /research/areas
+    parent: research
+    identifier: research-areas
+    weight: 601
+  - name: Araştırma Labları
+    url: /research/labs
+    parent: research
+    identifier: research-labs
+    weight: 602
 
   - name: Docs
     url: /docs/
     identifier: docs
     weight: 700
-
