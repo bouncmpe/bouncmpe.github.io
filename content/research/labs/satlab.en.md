@@ -2,11 +2,11 @@
 title: Satellite Networks Research Laboratory (SATLAB)
 description: " "
 metadata: none
-thumbnail:
-  url: https://picsum.photos/seed/satlab/1400
 ---
 
 {{< under-construction-warning >}}
+
+## Description
 
 ## Research Interests
 
@@ -16,7 +16,8 @@ thumbnail:
 - Voice over IP over satellite (VoIPoS)
 - Digital audio broadcasting (DAB)
 - MPEG2-coded three-dimensional television (3DTV)
-- Satellite and HAP based energy generation and transmission (Solar Power Satellite/HAP - SPSH)
+- Satellite and HAP based energy generation and transmission (Solar Power
+  Satellite/HAP - SPSH)
 
 ### Communication Aspects
 
@@ -43,3 +44,5 @@ thumbnail:
 - Definition of performance-cost tradeoff criteria for the satisfaction of QoS
   requirements
 - Disaster recovery of a system
+
+## Members

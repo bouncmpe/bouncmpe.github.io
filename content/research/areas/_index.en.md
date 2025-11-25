@@ -16,9 +16,9 @@ content_blocks:
       sort: date
     more:
       title: More Posts
-    cols: 3
-    padding: 3
-    limit: 15
+    cols: 4
+    padding: 4
+    limit: 16
     paginate: true
     cover: false
     header-style: none

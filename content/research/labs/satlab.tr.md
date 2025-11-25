@@ -2,13 +2,13 @@
 title: Uydu Ağları Araştırma Laboratuvarı (SATLAB)
 description: " "
 metadata: none
-thumbnail:
-  url: https://picsum.photos/seed/satlab/1400
 ---
 
 {{< under-construction-warning >}}
 
-## Araştırma İlgi Alanları
+## Açıklama
+
+## Araştırma Alanları
 
 ### Uygulamalar
 
@@ -43,3 +43,5 @@ thumbnail:
 - QoS gereksinimlerinin karşılanması için performans-maliyet değiş tokuş
   kriterlerinin tanımlanması
 - Sistemin felaket kurtarma
+
+## Üyeler

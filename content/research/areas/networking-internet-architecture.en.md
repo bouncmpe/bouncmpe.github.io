@@ -2,8 +2,6 @@
 title: Networking and Internet Architecture
 description: " "
 metadata: none
-thumbnail: 
-    url: https://picsum.photos/seed/networkinginternetarchitecture/1400
 ---
 
 {{< under-construction-warning >}}
