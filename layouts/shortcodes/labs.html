@@ -1,0 +1,44 @@
+{{ $ctx := newScratch }}
+
+{{ $tag := .Get "tag" }}
+{{ $columns := .Get "cols" | default "3" }}
+
+{{ $ctx.Set "tag" $tag }}
+{{ $ctx.Set "labs" slice }}
+{{ range $key, $value := index site.Data.bouncmpe "labs" }}
+{{ if $value.tags }}
+{{ if intersect $value.tags (slice $tag) }}
+{{ $ctx.Set "labs" ($ctx.Get "labs" | append $value) }}
+{{ end }}
+{{ end }}
+{{ end }}
+{{ $labs := $ctx.Get "labs" }}
+
+<div class="row row-cols-1 row-cols-md-{{ $columns }} g-4 my-4">
+{{ range $labs }}
+<div class="col">
+    {{ $thumbnail := .thumbnail | default "images/lab-placeholder.png" }}
+    {{ $image_settings := site.Params.labs.image_settings | default "800x600 webp q90 smart" }}
+
+    {{ $image_resource := resources.Get $thumbnail }}
+
+    {{ if $image_resource }}
+    {{ $retouched := $image_resource.Fill $image_settings }}
+    {{ $thumbnail = $retouched.RelPermalink }}
+    {{ end }}
+    
+    <div class="card h-100 shadow-sm">
+        <img src="{{ $thumbnail }}" alt="{{ .name }}" class="card-img-top" style="height: 250px; object-fit: cover;">
+        <div class="card-body">
+            <h5 class="card-title">{{ .name | title }}</h5>
+            {{ with .description }}
+            <p class="card-text">{{ . }}</p>
+            {{ end }}
+            {{ with .url }}
+            <a href="{{ . }}" class="btn btn-primary btn-sm">Learn More</a>
+            {{ end }}
+        </div>
+    </div>
+</div>
+{{ end }}
+</div>
