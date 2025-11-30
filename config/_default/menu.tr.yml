@@ -38,15 +38,15 @@ main:
     parent: undergraduate
     identifier: undergraduate-overview
     weight: 301
-  - name: Yeni Öğretim Programı
-    url: /undergraduate/curriculum-new
-    parent: undergraduate
-    identifier: undergraduate-curriculum-new
-    weight: 302
-  - name: Önceki Öğretim Programı
+  - name: Öğretim Programı (2025)
     url: /undergraduate/curriculum
     parent: undergraduate
     identifier: undergraduate-curriculum
+    weight: 302
+  - name: Öğretim Programı (2025 Öncesi)
+    url: /undergraduate/curriculum-pre-2025
+    parent: undergraduate
+    identifier: undergraduate-curriculum-pre-2025 
     weight: 303
   # - name: Temel Dersler
   #   url: /undergraduate/courses
