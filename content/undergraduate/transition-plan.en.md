@@ -5,7 +5,7 @@ metadata: none
 weight: 10
 ---
 
-# ## **Transition Plan for the New Undergraduate Curriculum (Fall 2025–Spring 2029)**
+# Transition Plan for the New Undergraduate Curriculum (Fall 2025–Spring 2029)
 
 This page summarizes the semester-by-semester course offerings during the transition from the **current curriculum** to the **new curriculum**.
 Old course codes, new course codes, and temporary dual-course offerings are shown in parallel.
@@ -21,7 +21,7 @@ Color coding from the official table is preserved as labels:
 
 ---
 
-# ## **Fall 2025**
+# **Fall 2025**
 
 | Fourth Year| Third Year| Second Year| First Year   |
 | -------- | -------- | -------- | ----------- |
@@ -34,7 +34,7 @@ Color coding from the official table is preserved as labels:
 
 ---
 
-# ## **Spring 2026**
+# **Spring 2026**
 
 | Fourth Year| Third Year   | Second Year   | First Year                  |
 | -------- | ----------- | ----------- | -------------------------- |
@@ -48,7 +48,7 @@ Color coding from the official table is preserved as labels:
 
 ---
 
-# ## **Fall 2026**
+# **Fall 2026**
 
 | Fourth Year             | Third Year| Second Year| First Year   |
 | --------------------- | -------- | -------- | ----------- |
@@ -61,7 +61,7 @@ Color coding from the official table is preserved as labels:
 
 ---
 
-# ## **Spring 2027**
+# **Spring 2027**
 
 | Fourth Year| Third Year| Second Year                  | First Year|
 | -------- | -------- | -------------------------- | -------- |
@@ -75,7 +75,7 @@ Color coding from the official table is preserved as labels:
 
 ---
 
-# ## **Fall 2027**
+# **Fall 2027**
 
 | Fourth Year          | Third Year   | Second Year| First Year|
 | ------------------ | ----------- | -------- | -------- |
@@ -88,7 +88,7 @@ Color coding from the official table is preserved as labels:
 
 ---
 
-# ## **Spring 2028**
+# **Spring 2028**
 
 | Fourth Year| Third Year   | Second Year                  | First Year|
 | -------- | ----------- | -------------------------- | -------- |
@@ -101,7 +101,7 @@ Color coding from the official table is preserved as labels:
 
 ---
 
-# ## **Fall 2028**
+# **Fall 2028**
 
 | Fourth Year          | Third Year| Second Year| First Year|
 | ------------------ | -------- | -------- | -------- |
@@ -114,7 +114,7 @@ Color coding from the official table is preserved as labels:
 
 ---
 
-# ## **Spring 2029**
+# **Spring 2029**
 
 | Fourth Year     | Third Year| Second Year                  | First Year|
 | ------------- | -------- | -------------------------- | -------- |

@@ -5,7 +5,7 @@ metadata: none
 weight: 10
 ---
 
-# ## **Yeni Lisans Programı için Geçiş Planı (Güz 2025 – Bahar 2029)**
+# Yeni Lisans Programı için Geçiş Planı (Güz 2025 – Bahar 2029)
 
 Bu sayfa, **mevcut müfredattan** **yeni müfredata** geçiş sürecindeki dönemlik ders açılışlarını özetlemektedir.  
 Eski ders kodları, yeni ders kodları ve geçici olarak çift kodla açılan dersler yan yana gösterilmiştir.
@@ -21,7 +21,7 @@ Resmî tablodaki renk kodlaması, etiketler şeklinde korunmuştur:
 
 ---
 
-# ## **Güz 2025**
+# **Güz 2025**
 
 | 4. Sınıf | 3. Sınıf | 2. Sınıf | 1. Sınıf    |
 | -------- | -------- | -------- | ----------- |
@@ -34,7 +34,7 @@ Resmî tablodaki renk kodlaması, etiketler şeklinde korunmuştur:
 
 ---
 
-# ## **Bahar 2026**
+# **Bahar 2026**
 
 | 4. Sınıf | 3. Sınıf    | 2. Sınıf    | 1. Sınıf                   |
 | -------- | ----------- | ----------- | -------------------------- |
@@ -48,7 +48,7 @@ Resmî tablodaki renk kodlaması, etiketler şeklinde korunmuştur:
 
 ---
 
-# ## **Güz 2026**
+# **Güz 2026**
 
 | 4. Sınıf              | 3. Sınıf | 2. Sınıf | 1. Sınıf    |
 | --------------------- | -------- | -------- | ----------- |
@@ -61,7 +61,7 @@ Resmî tablodaki renk kodlaması, etiketler şeklinde korunmuştur:
 
 ---
 
-# ## **Bahar 2027 **
+# **Bahar 2027 **
 
 | 4. Sınıf | 3. Sınıf | 2. Sınıf                   | 1. Sınıf |
 | -------- | -------- | -------------------------- | -------- |
@@ -75,7 +75,7 @@ Resmî tablodaki renk kodlaması, etiketler şeklinde korunmuştur:
 
 ---
 
-# ## **Güz 2027**
+# **Güz 2027**
 
 | 4. Sınıf           | 3. Sınıf    | 2. Sınıf | 1. Sınıf |
 | ------------------ | ----------- | -------- | -------- |
@@ -88,7 +88,7 @@ Resmî tablodaki renk kodlaması, etiketler şeklinde korunmuştur:
 
 ---
 
-# ## **Bahar 2028**
+# **Bahar 2028**
 
 | 4. Sınıf | 3. Sınıf    | 2. Sınıf                   | 1. Sınıf |
 | -------- | ----------- | -------------------------- | -------- |
@@ -101,7 +101,7 @@ Resmî tablodaki renk kodlaması, etiketler şeklinde korunmuştur:
 
 ---
 
-# ## **Güz 2028 **
+# **Güz 2028 **
 
 | 4. Sınıf           | 3. Sınıf | 2. Sınıf | 1. Sınıf |
 | ------------------ | -------- | -------- | -------- |
@@ -114,7 +114,7 @@ Resmî tablodaki renk kodlaması, etiketler şeklinde korunmuştur:
 
 ---
 
-# ## **Bahar 2029**
+# **Bahar 2029**
 
 | 4. Sınıf      | 3. Sınıf | 2. Sınıf                   | 1. Sınıf |
 | ------------- | -------- | -------------------------- | -------- |
