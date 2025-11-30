@@ -1,11 +1,10 @@
 ---
 title: Transition Plan
-description: Transition Plan for the New Undergraduate Curriculum 
+description: Transition Plan for the New Undergraduate Curriculum (Fall 2025–Spring 2029)
+
 metadata: none
 weight: 10
 ---
-
-# Transition Plan for the New Undergraduate Curriculum (Fall 2025–Spring 2029)
 
 This page summarizes the semester-by-semester course offerings during the transition from the **current curriculum** to the **new curriculum**.
 Old course codes, new course codes, and temporary dual-course offerings are shown in parallel.

@@ -1,11 +1,9 @@
 ---
 title: Geçiş Planı
-description: Yeni Lisans Programı için Geçiş Planı
+description: Yeni Lisans Programı için Geçiş Planı (Güz 2025 – Bahar 2029)
 metadata: none
 weight: 10
 ---
-
-# Yeni Lisans Programı için Geçiş Planı (Güz 2025 – Bahar 2029)
 
 Bu sayfa, **mevcut müfredattan** **yeni müfredata** geçiş sürecindeki dönemlik ders açılışlarını özetlemektedir.  
 Eski ders kodları, yeni ders kodları ve geçici olarak çift kodla açılan dersler yan yana gösterilmiştir.
