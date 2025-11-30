@@ -1,0 +1,23 @@
+{{- $type := .Get "type" | default "primary" -}}
+{{- $title := .Get "title" -}}
+{{- $icon := .Get "icon" -}}
+
+{{- if not $icon -}}
+  {{- if eq $type "warning" -}}{{- $icon = "bi-exclamation-triangle-fill" -}}
+  {{- else if eq $type "danger" -}}{{- $icon = "bi-exclamation-octagon-fill" -}}
+  {{- else if eq $type "success" -}}{{- $icon = "bi-check-circle-fill" -}}
+  {{- else -}}{{- $icon = "bi-info-circle-fill" -}}
+  {{- end -}}
+{{- end -}}
+
+<div class="card border-0 shadow-sm p-4 mb-4 border-start border-4 border-{{ $type }} rounded-3">
+  {{ if $title }}
+  <div class="d-flex align-items-center mb-2">
+    <i class="bi {{ $icon }} text-{{ $type }} fs-5 me-2"></i>
+    <h5 class="fw-bold mb-0 text-{{ $type }}">{{ $title }}</h5>
+  </div>
+  {{ end }}
+  <div class="card-text text-secondary">
+    {{ .Inner | markdownify }}
+  </div>
+</div>

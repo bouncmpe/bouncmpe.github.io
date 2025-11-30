@@ -1,6 +1,6 @@
 ---
-title: Yeni Öğretim Programı
-description: Boğaziçi Üniversitesi Bilgisayar Mühendisliği Yeni Öğretim Programı
+title: Öğretim Programı (2025)
+description: Boğaziçi Üniversitesi Bilgisayar Mühendisliği Öğretim Programı (2025)
 metadata: none
 toc: false
 weight: 2
@@ -84,30 +84,16 @@ hasMermaid: true
 {{< /table >}}
 <!-- prettier-ignore-end -->
 
-{{< alert type="info" >}}
-**Notlar**
-
-<p id="note-sci">
-1. <strong>Bilim Seçmeli Dersi</strong> Fizik, Kimya, Biyoloji veya Matematik (hesaplamalı olmayan) alanlarında temel bir bilim dersidir.
-</p>
-
-<p id="note-hum">
-2. <strong>HUM101–HUM102–HSS</strong> dersleri birbirlerinin yerine alınabilir ve birbirleriyle tekrarlanabilir.
-</p>
-
-<p id="note-spec">
-3. <strong>Belirlenmiş Seçmeli</strong> CmpE Bölümü tarafından sınırlandırılmış serbest bir seçmelidir; diğer listelerle örtüşebilir.
-</p>
-
-<p id="note-cc">
-4. <strong>Tamamlayıcı Dersler</strong> Bölüm Seçmeli listesi içinden seçilebilir.
-</p>
-
-<p>
+{{< callout title="Curriculum Notes" type="primary" >}}
+<ol class="ps-3 mb-0 small">
+  <li id="note-sci" class="mb-2"><strong>Bilim Seçmeli Dersi</strong> Fizik, Kimya, Biyoloji veya Matematik (hesaplamalı olmayan) alanlarında temel bir bilim dersidir.</li>
+  <li id="note-hum" class="mb-2"><strong>HUM101–HUM102–HSS</strong> dersleri birbirlerinin yerine alınabilir ve birbirleriyle tekrarlanabilir.</li>
+  <li id="note-spec" class="mb-2"><strong>Belirlenmiş Seçmeli</strong> CmpE Bölümü tarafından sınırlandırılmış serbest bir seçmelidir; diğer listelerle örtüşebilir.</li>
+  <li id="note-cc" class="mb-2"> <strong>Tamamlayıcı Dersler</strong> Bölüm Seçmeli listesi içinden seçilebilir.</li>
+</ol>
+<hr class="border-secondary border-opacity-10 my-3">
 Detaylar için <a href="/undergraduate/electives/">seçmeli dersler sayfasına</a> bakabilirsiniz.
-</p>
-{{< /alert >}}
-
+{{< /callout >}}
 
 ## Önkoşul Çizgesi
 

@@ -1,6 +1,6 @@
 ---
-title: New Curriculum
-description: Boğaziçi University Computer Engineering New Curriculum
+title: Curriculum (2025)
+description: Boğaziçi University Computer Engineering Curriculum (2025)
 metadata: none
 toc: false
 weight: 2
@@ -83,30 +83,16 @@ hasMermaid: true
 | | | **Total** | **16** | **41** |
 {{< /table >}}
 <!-- prettier-ignore-end -->
-
-{{< alert type="info" >}}
-**Notes**
-
-<p id="note-sci">
-1. <strong>Science Elective</strong> is a basic science course in Physics, Chemistry, Biology or Mathematics (non-computational).
-</p>
-
-<p id="note-hum">
-2. <strong>HUM101–HUM102–HSS</strong> can be taken interchangeably and repeated with each other.
-</p>
-
-<p id="note-spec">
-3. <strong>Specified Elective</strong> is a free elective restricted by the CmpE Department; it may overlap with other lists.
-</p>
-
-<p id="note-cc">
-4. <strong>Complementary Courses</strong> can be selected from the Departmental Elective list.
-</p>
-
-<p>
-For details, please refer to <a href="/undergraduate/electives/">the elective courses page</a>.
-</p>
-{{< /alert >}}
+{{< callout title="Curriculum Notes" type="primary" >}}
+<ol class="ps-3 mb-0 small">
+  <li id="note-sci" class="mb-2"><strong>Science Elective</strong> is a basic science course in Physics, Chemistry, Biology or Mathematics (non-computational).</li>
+  <li id="note-hum" class="mb-2"><strong>HUM101</strong> can be taken interchangeably and repeated with each other.</li>
+  <li id="note-spec" class="mb-2"><strong>Specified Elective</strong> is a free elective restricted by the CmpE Department; it may overlap with other lists.</li>
+  <li id="note-cc" class="mb-2"><strong>Complementary Courses</strong> can be selected from the Departmental Elective list.</li>
+</ol>
+<hr class="border-secondary border-opacity-10 my-3">
+For details, see <a href="/undergraduate/electives/">the elective courses page</a>.
+{{< /callout >}}
 
 ## Prerequisites Graph
 
