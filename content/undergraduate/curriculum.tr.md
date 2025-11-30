@@ -1,6 +1,6 @@
 ---
-title: Öğretim Programı (Önceki)
-description: Boğaziçi Üniversitesi Bilgisayar Mühendisliği Önceki Öğretim Programı
+title: Öğretim Programı (2025 Öncesi)
+description: Boğaziçi Üniversitesi Bilgisayar Mühendisliği Öğretim Programı (2025 Öncesi)
 metadata: none
 toc: false
 weight: 2

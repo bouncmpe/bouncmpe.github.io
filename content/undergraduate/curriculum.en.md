@@ -1,6 +1,6 @@
 ---
-title: Curriculum (Previous)
-description: Boğaziçi University Computer Engineering Previous Curriculum
+title: Curriculum (Pre-2025)
+description: Boğaziçi University Computer Engineering Curriculum (Pre-2025)
 metadata: none
 toc: false
 weight: 2
