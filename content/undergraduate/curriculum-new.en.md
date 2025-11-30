@@ -86,7 +86,7 @@ For detailed semester-by-semester information, see the **[Transition Plan (Fall 
 | CC xxx | Complementary Course (****) | see course | 3 | 6 |
 | CC xxx | Complementary Course (****) | see course | 3 | 6 |
 | HUM102 / HSS | Cultural Encounters II / HSS (**) | --- | 3 | 5 |
-| [CMPE400](/courses/cmpe400) | Engineering Internship | departmental rules | 0 | 10 |
+| CMPE400| Engineering Internship | departmental rules | 0 | 10 |
 | | | **Total** | **16** | **41** |
 {{< /table >}}
 <!-- prettier-ignore-end -->

@@ -86,7 +86,7 @@ Ayrıntılı dönem bazlı bilgiler için: **[Geçiş Planı (Güz 2025 – Baha
 | CC xxx | Tamamlayıcı Ders (****) | ilgili ders | 3 | 6 |
 | CC xxx | Tamamlayıcı Ders (****) | ilgili ders | 3 | 6 |
 | HUM102 / HSS | Kültürel Karşılaşmalar II / HSS (**) | --- | 3 | 5 |
-| [CMPE400](/tr/courses/cmpe400) | Mühendislik Stajı | bölüm kuralları | 0 | 10 |
+| CMPE400 | Mühendislik Stajı | bölüm kuralları | 0 | 10 |
 | | | **Toplam** | **16** | **41** |
 {{< /table >}}
 <!-- prettier-ignore-end -->
