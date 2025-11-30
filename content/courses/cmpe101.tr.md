@@ -15,7 +15,7 @@ aliases:
 |:--|:--|
 | Fakülte | Mühendislik Fakültesi |
 | Ders Kodu | CMPE101 |
-| Ders Başlığı | Bilgi İşleme Giriş |
+| Ders Başlığı | Bilgisayar Mühendisliğine Giriş |
 | Öğretim Dili | İngilizce |
 | Ders Dönemi | Güz |
 | Ders Saatleri | Ders:1, PS:2, Laboratuvar: 2 |

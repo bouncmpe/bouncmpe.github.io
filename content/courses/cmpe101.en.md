@@ -16,7 +16,7 @@ aliases:
 | :-- | :-- |
 | Faculty | Faculty of Engineering |
 | Course Code | CMPE101 |
-| Course Title | Introduction to Computing |
+| Course Title | Introduction to Computer Engineering |
 | Language of Instruction | English |
 | Course Semester | Fall |
 | Course Hours | Lecture: 1, PS:2, Labs: 2 |
