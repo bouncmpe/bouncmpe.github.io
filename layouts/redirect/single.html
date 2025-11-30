@@ -1,1 +1,164 @@
-{{- template "alias.html" (dict "Permalink" .Params.target) -}}
+<!-- {{- template "alias.html" (dict "Permalink" .Params.target) -}} -->
+ {{ define "main" }}
+
+{{/* For pages under content/u/, try to render a person profile */}}
+{{ if eq .Section "u" }}
+
+  {{ $page := . }}
+  {{ $slug := .File.BaseFileName }}          {{/* e.g. "yurdakul" or "dogan.ulus" */}}
+  {{ $needle1 := printf "/u/%s" $slug }}
+  {{ $needle2 := printf "/u/%s/" $slug }}
+
+  {{/* Find matching person in data by homepage */}}
+  {{ $person := dict }}
+  {{ range $k, $v := site.Data.bouncmpe.people }}
+    {{ if or (eq $v.homepage $needle1) (eq $v.homepage $needle2) }}
+      {{ $person = $v }}
+    {{ end }}
+  {{ end }}
+
+  {{ if not $person }}
+    {{/* Fallback: behave like old redirect */}}
+    <meta http-equiv="refresh" content="0; url={{ .Params.target }}">
+    <div class="container my-5">
+      <p>If you are not redirected automatically, <a href="{{ .Params.target }}">click here</a>.</p>
+    </div>
+  {{ else }}
+
+    {{ with $person }}
+
+      {{/* Image handling similar to your list partial */}}
+      {{ $thumbnail := .thumbnail | default "images/person.png" }}
+      {{ $image_settings := site.Params.people.image_settings | default "500x500 webp q90 smart" }}
+      {{ with resources.Get $thumbnail }}
+        {{ $retouched := .Fill $image_settings }}
+        {{ $thumbnail = $retouched.RelPermalink }}
+      {{ end }}
+
+      {{ $scholar := or .scholar .google_scholar }}
+
+      <div class="container my-5">
+
+        <!-- Top section: photo + profile info -->
+        <div class="row g-4 align-items-stretch">
+          <!-- Photo card -->
+          <div class="col-12 col-md-4">
+            <div class="card border-0 shadow-sm h-100">
+              <div class="card-body d-flex flex-column align-items-center text-center">
+                <img src="{{ $thumbnail }}"
+                     alt="{{ .name }} profile photo"
+                     class="img-fluid rounded-4 mb-3"
+                     style="max-width: 260px; object-fit: cover; object-position: center;">
+
+                <h1 class="h4 mb-1">{{ .name }}</h1>
+
+                {{ with .position }}
+                  <p class="text-muted mb-2">{{ . | i18n | title }}</p>
+                {{ end }}
+
+                {{ with .affiliation }}
+                  <p class="small text-secondary mb-3">{{ . }}</p>
+                {{ end }}
+
+                <!-- Contact icons -->
+                <div class="d-flex gap-3 justify-content-center mt-2">
+                  {{ with .email }}
+                    <a href="mailto:{{ . }}" class="text-muted" title="Email">
+                      <img src="/icons/envelope-fill.svg" alt="Email" width="24" height="24">
+                    </a>
+                  {{ end }}
+                  {{ with .homepage }}
+                    <a href="{{ . }}" class="text-muted" title="Personal website">
+                      <img src="/icons/globe2.svg" alt="Website" width="24" height="24">
+                    </a>
+                  {{ end }}
+                  {{ with $scholar }}
+                    <a href="{{ . }}" class="text-muted" title="Google Scholar">
+                      <img src="/icons/mortarboard.svg" alt="Google Scholar" width="24" height="24">
+                    </a>
+                  {{ end }}
+                  {{ with .github }}
+                    <a href="https://github.com/{{ . }}" class="text-muted" title="GitHub">
+                      <img src="/icons/github.svg" alt="GitHub" width="24" height="24">
+                    </a>
+                  {{ end }}
+                  {{ with .linkedin }}
+                    <a href="https://www.linkedin.com/in/{{ . }}" class="text-muted" title="LinkedIn">
+                      <img src="/icons/linkedin.svg" alt="LinkedIn" width="24" height="24">
+                    </a>
+                  {{ end }}
+                </div>
+
+                {{ with $page.Params.target }}
+                  <a href="{{ . }}" class="btn btn-outline-primary btn-sm mt-3" target="_blank" rel="noopener">
+                    Legacy personal page
+                  </a>
+                {{ end }}
+              </div>
+            </div>
+          </div>
+
+          <!-- Details card -->
+          <div class="col-12 col-md-8">
+            <div class="card border-0 shadow-sm h-100">
+              <div class="card-body">
+                <h2 class="h5 text-uppercase text-muted mb-3" style="letter-spacing: .08em;">
+                  Profile
+                </h2>
+
+                {{ if $page.Content }}
+                  <div class="mb-4">
+                    {{ $page.Content }}
+                  </div>
+                {{ end }}
+
+                <div class="row gy-3">
+                  {{ with .office }}
+                    <div class="col-12 col-md-6">
+                      <span class="fw-semibold">Office</span><br>
+                      <span class="text-muted">{{ . }}</span>
+                    </div>
+                  {{ end }}
+                  {{ with .email }}
+                    <div class="col-12 col-md-6">
+                      <span class="fw-semibold">Email</span><br>
+                      <a href="mailto:{{ . }}" class="text-muted">{{ . }}</a>
+                    </div>
+                  {{ end }}
+                  {{ with .phone }}
+                    <div class="col-12 col-md-6">
+                      <span class="fw-semibold">Phone Number</span><br>
+                      <span class="text-muted">{{ . }}</span>
+                    </div>
+                  {{ end }}
+                  {{ with .homepage }}
+                    <div class="col-12 col-md-6">
+                      <span class="fw-semibold">Personal Website</span><br>
+                      <a href="{{ . }}" class="text-muted">{{ . }}</a>
+                    </div>
+                  {{ end }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lower section (optional research/publications if you add to data) -->
+
+      </div> <!-- /container -->
+
+    {{ end }}  {{/* with $person */}}
+
+  {{ end }}    {{/* if person found */}}
+
+{{ else }}
+
+  {{/* Non-u redirect pages: keep old behaviour */}}
+  <meta http-equiv="refresh" content="0; url={{ .Params.target }}">
+  <div class="container my-5">
+    <p>If you are not redirected automatically, <a href="{{ .Params.target }}">click here</a>.</p>
+  </div>
+
+{{ end }}
+
+{{ end }}  <!-- define "main" -->

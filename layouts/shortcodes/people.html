@@ -14,6 +14,7 @@
 
 <div class="row row-cols-1 row-cols-xl-{{ $columns }} g-2 my-4">
 {{ range $members }}
+{{ $personURL := (printf "/people/%s" (.name | urlize)) | relURL }}
 <div class="col">
     {{ $thumbnail := .thumbnail | default "images/person.png" }}
     {{ $image_settings := site.Params.people.image_settings | default "500x500 webp q90 smart" }}
@@ -24,7 +25,7 @@
     {{ $retouched := $image_resource.Fill $image_settings }}
     {{ $thumbnail = $retouched.RelPermalink }}
     {{ end }}
-    <div class="card mb-3 border-0 h-100" style="max-width: 540px;">
+    <div class="card mb-3 border-0 h-100 position-relative" style="max-width: 540px;">
         <div class="row g-0">
           <div class="col-4 mb-0 d d-none d-xl-block">
             <img src="{{ $thumbnail }}" alt="{{ .name | anchorize }}-thumbnail" class="img-fluid rounded-5 shadow" style="width: 100%; object-fit: cover; object-position: center;">
@@ -57,6 +58,7 @@
             </div>
           </div>
         </div>
+        <a href="{{ $personURL }}" class="stretched-link"></a>
       </div>
 </div>
 {{ end }}
