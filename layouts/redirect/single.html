@@ -1,151 +1,250 @@
 {{ define "main" }}
 
-{{ $page := . }}
-
 {{ if eq .Section "u" }}
 
-  {{/* Match person by slugified name vs slugified page title */}}
-  {{ $titleSlug := .Title | urlize }}
-
+  {{/* find person by slugified title */}}
+  {{ $slug := .Title | urlize }}
   {{ $person := dict }}
   {{ range $k, $v := site.Data.bouncmpe.people }}
-    {{ if eq (urlize $v.name) $titleSlug }}
+    {{ if eq (urlize $v.name) $slug }}
       {{ $person = $v }}
     {{ end }}
   {{ end }}
 
   {{ if not $person.name }}
-    {{/* No matching person in data → keep old redirect behaviour */}}
+    <!-- fallback: old redirect -->
     <meta http-equiv="refresh" content="0; url={{ .Params.target }}">
     <div class="container my-5">
       <p>If you are not redirected automatically, <a href="{{ .Params.target }}">click here</a>.</p>
     </div>
   {{ else }}
 
+    {{ $legacy := or .Params.target $person.legacy_url }}
     {{ with $person }}
 
+      {{/* thumbnail */}}
       {{ $thumbnail := .thumbnail | default "images/person.png" }}
-      {{ $image_settings := site.Params.people.image_settings | default "500x500 webp q90 smart" }}
       {{ with resources.Get $thumbnail }}
-        {{ $retouched := .Fill $image_settings }}
-        {{ $thumbnail = $retouched.RelPermalink }}
+        {{ $thumbnail = (.Fill "350x350 webp q90 smart").RelPermalink }}
       {{ end }}
 
-      {{ $scholar := or .scholar .google_scholar }}
+      {{ $scholar := or .google_scholar .scholar }}
 
       <div class="container my-5">
-        <div class="row g-4 align-items-stretch">
 
-          <!-- Left: photo card -->
-          <div class="col-12 col-md-4">
-            <div class="card border-0 shadow-sm h-100">
-              <div class="card-body d-flex flex-column align-items-center text-center">
-                <img src="{{ $thumbnail }}"
-                     alt="{{ .name }} profile photo"
-                     class="img-fluid rounded-4 mb-3"
-                     style="max-width: 260px; object-fit: cover; object-position: center;">
+        <!-- TOP PROFILE CARD -->
+        <div class="card border-0 shadow-sm p-4 mb-5">
+          <div class="row g-4 align-items-center">
 
-                <h1 class="h4 mb-1">{{ .name }}</h1>
-
-                {{ with .position }}
-                  <p class="text-muted mb-2">{{ . | i18n | title }}</p>
-                {{ end }}
-
-                {{ with .affiliation }}
-                  <p class="small text-secondary mb-3">{{ . }}</p>
-                {{ end }}
-
-                <div class="d-flex gap-3 justify-content-center mt-2">
-                  {{ with .email }}
-                    <a href="mailto:{{ . }}" class="text-muted" title="Email">
-                      <img src="/icons/envelope-fill.svg" alt="Email" width="24" height="24">
-                    </a>
-                  {{ end }}
-                  {{ with .homepage }}
-                    <a href="{{ . }}" class="text-muted" title="Personal website">
-                      <img src="/icons/globe2.svg" alt="Website" width="24" height="24">
-                    </a>
-                  {{ end }}
-                  {{ with $scholar }}
-                    <a href="{{ . }}" class="text-muted" title="Google Scholar">
-                      <img src="/icons/mortarboard.svg" alt="Google Scholar" width="24" height="24">
-                    </a>
-                  {{ end }}
-                  {{ with .github }}
-                    <a href="https://github.com/{{ . }}" class="text-muted" title="GitHub">
-                      <img src="/icons/github.svg" alt="GitHub" width="24" height="24">
-                    </a>
-                  {{ end }}
-                  {{ with .linkedin }}
-                    <a href="https://www.linkedin.com/in/{{ . }}" class="text-muted" title="LinkedIn">
-                      <img src="/icons/linkedin.svg" alt="LinkedIn" width="24" height="24">
-                    </a>
-                  {{ end }}
-                </div>
-
-                {{ with $page.Params.target }}
-                  <a href="{{ . }}" class="btn btn-outline-primary btn-sm mt-3" target="_blank" rel="noopener">
-                    Legacy personal page
-                  </a>
-                {{ end }}
-              </div>
+            <!-- PHOTO -->
+            <div class="col-12 col-md-4 text-center">
+              <img src="{{ $thumbnail }}"
+                   class="img-fluid rounded-4 shadow-sm"
+                   style="max-width: 260px; object-fit: cover;">
             </div>
-          </div>
 
-          <!-- Right: details card -->
-          <div class="col-12 col-md-8">
-            <div class="card border-0 shadow-sm h-100">
-              <div class="card-body">
-                <h2 class="h5 text-uppercase text-muted mb-3" style="letter-spacing:.08em;">
-                  Profile
-                </h2>
+            <!-- NAME + CONTACT -->
+            <div class="col-12 col-md-8">
+              <h1 class="display-5 fw-bold mb-1">{{ .name }}</h1>
 
-                {{ if $page.Content }}
-                  <div class="mb-4">
-                    {{ $page.Content }}
+              {{ with .position }}
+                <p class="lead text-muted mb-4">{{ . | i18n | title }}</p>
+              {{ end }}
+
+              <div class="row gy-2 small">
+                {{ with .email }}
+                  <div class="col-12 col-sm-6">
+                    <span class="fw-semibold d-block">Email</span>
+                    <a href="mailto:{{ . }}">{{ . }}</a>
                   </div>
                 {{ end }}
 
-                <div class="row gy-3">
-                  {{ with .office }}
-                    <div class="col-12 col-md-6">
-                      <span class="fw-semibold">Office</span><br>
-                      <span class="text-muted">{{ . }}</span>
-                    </div>
-                  {{ end }}
-                  {{ with .email }}
-                    <div class="col-12 col-md-6">
-                      <span class="fw-semibold">Email</span><br>
-                      <a href="mailto:{{ . }}" class="text-muted">{{ . }}</a>
-                    </div>
-                  {{ end }}
-                  {{ with .phone }}
-                    <div class="col-12 col-md-6">
-                      <span class="fw-semibold">Phone Number</span><br>
-                      <span class="text-muted">{{ . }}</span>
-                    </div>
-                  {{ end }}
-                  {{ with .homepage }}
-                    <div class="col-12 col-md-6">
-                      <span class="fw-semibold">Personal Website</span><br>
-                      <a href="{{ . }}" class="text-muted">{{ . }}</a>
-                    </div>
-                  {{ end }}
-                </div>
+                {{ with .homepage }}
+                  <div class="col-12 col-sm-6">
+                    <span class="fw-semibold d-block">Website</span>
+                    <a href="{{ . }}">{{ . }}</a>
+                  </div>
+                {{ end }}
+
+                {{ with .office }}
+                  <div class="col-12 col-sm-6">
+                    <span class="fw-semibold d-block">Office</span>
+                    <span>{{ . }}</span>
+                  </div>
+                {{ end }}
+
+                {{ with .phone }}
+                  <div class="col-12 col-sm-6">
+                    <span class="fw-semibold d-block">Phone</span>
+                    <span>{{ . }}</span>
+                  </div>
+                {{ end }}
+
+                {{ with .github }}
+                  <div class="col-12 col-sm-6">
+                    <span class="fw-semibold d-block">GitHub</span>
+                    <a href="https://github.com/{{ . }}">github.com/{{ . }}</a>
+                  </div>
+                {{ end }}
+
+                {{ with .linkedin }}
+                  <div class="col-12 col-sm-6">
+                    <span class="fw-semibold d-block">LinkedIn</span>
+                    <a href="https://linkedin.com/in/{{ . }}">linkedin.com/in/{{ . }}</a>
+                  </div>
+                {{ end }}
               </div>
+
+              {{ with $legacy }}
+                <a href="{{ . }}" class="btn btn-outline-primary btn-sm mt-4" target="_blank" rel="noopener">
+                  Legacy personal page
+                </a>
+              {{ end }}
             </div>
           </div>
+        </div>
 
+        <!-- LOWER CONTENT: 2 COLUMNS -->
+        <div class="row g-4">
+
+          <!-- MAIN COLUMN -->
+          <div class="col-12 col-lg-8">
+
+            {{ with .short_bio }}
+              <section class="mb-4">
+                <h2 class="h4 mb-2">About</h2>
+                <p>{{ . }}</p>
+              </section>
+            {{ end }}
+
+            {{ with .research_areas }}
+              <section class="mb-4">
+                <h2 class="h4 mb-2">Research Areas</h2>
+                <ul>
+                  {{ range . }}
+                    <li>{{ . }}</li>
+                  {{ end }}
+                </ul>
+              </section>
+            {{ end }}
+
+            {{ with .long_bio }}
+              <section class="mb-4">
+                <h2 class="h4 mb-2">Biography</h2>
+                <p>{{ . }}</p>
+              </section>
+            {{ end }}
+
+            {{ if or .publications $scholar }}
+              <section class="mb-4">
+                <h2 class="h4 mb-2">Publications</h2>
+
+                {{ with $scholar }}
+                  <p><a href="{{ . }}">Google Scholar Profile</a></p>
+                {{ end }}
+
+                {{ with .publications }}
+                  {{ if (reflect.IsSlice .) }}
+                    <ul class="small">
+                      {{ range . }}
+                        <li>{{ . | safeHTML }}</li>
+                      {{ end }}
+                    </ul>
+                  {{ else }}
+                    <p class="small">{{ . | safeHTML }}</p>
+                  {{ end }}
+                {{ end }}
+              </section>
+            {{ end }}
+
+          </div>
+
+          <!-- SIDEBAR COLUMN -->
+          <aside class="col-12 col-lg-4">
+
+            {{ with .education }}
+              <section class="mb-4">
+                <h2 class="h5 mb-2">Education</h2>
+                <ul class="list-unstyled small mb-0">
+                  {{ range . }}
+                    <li class="mb-1">
+                      <strong>{{ .degree }}</strong><br>
+                      {{ .institution }}{{ with .year }}, {{ . }}{{ end }}
+                    </li>
+                  {{ end }}
+                </ul>
+              </section>
+            {{ end }}
+
+            {{ with .awards }}
+              <section class="mb-4">
+                <h2 class="h5 mb-2">Awards &amp; Honors</h2>
+                <ul class="small mb-0">
+                  {{ range . }}
+                    <li>{{ . }}</li>
+                  {{ end }}
+                </ul>
+              </section>
+            {{ end }}
+
+            {{ with .courses }}
+              <section class="mb-4">
+                <h2 class="h5 mb-2">Courses</h2>
+                <ul class="small mb-0">
+                  {{ range . }}
+                    <li>{{ . }}</li>
+                  {{ end }}
+                </ul>
+              </section>
+            {{ end }}
+
+            {{ with .labs }}
+              <section class="mb-4">
+                <h2 class="h5 mb-2">Research Labs</h2>
+                <ul class="small mb-0">
+                  {{ range $i, $lab := . }}
+                    <li>
+                      {{ if (reflect.IsMap $lab) }}
+                        {{ with $lab.url }}
+                          <a href="{{ . }}">{{ $lab.name }}</a>
+                        {{ else }}
+                          {{ $lab.name }}
+                        {{ end }}
+                      {{ else }}
+                        {{ $lab }}
+                      {{ end }}
+                    </li>
+                  {{ end }}
+                </ul>
+              </section>
+            {{ end }}
+
+            {{ with .roles }}
+              <section class="mb-4">
+                <h2 class="h5 mb-2">Roles &amp; Memberships</h2>
+                {{ if (reflect.IsSlice .) }}
+                  <ul class="small mb-0">
+                    {{ range . }}
+                      <li>{{ . }}</li>
+                    {{ end }}
+                  </ul>
+                {{ else }}
+                  <p class="small mb-0">{{ . }}</p>
+                {{ end }}
+              </section>
+            {{ end }}
+
+          </aside>
         </div>
       </div>
 
-    {{ end }} {{/* with $person */}}
+    {{ end }} <!-- with $person -->
 
-  {{ end }} {{/* person found */}}
+  {{ end }} <!-- person found -->
 
 {{ else }}
 
-  {{/* Non-u redirect pages → keep simple redirect */}}
+  <!-- non-u redirect fallback -->
   <meta http-equiv="refresh" content="0; url={{ .Params.target }}">
   <div class="container my-5">
     <p>If you are not redirected automatically, <a href="{{ .Params.target }}">click here</a>.</p>
