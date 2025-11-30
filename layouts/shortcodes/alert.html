@@ -1,0 +1,6 @@
+<div class="alert alert-{{ .Get "type" | default "info" }}">
+  <strong>{{ .Get "title" | default "Duyuru" }}</strong>
+  <div>
+    {{ .Inner | markdownify }}
+  </div>
+</div>

@@ -38,21 +38,26 @@ main:
     parent: undergraduate
     identifier: undergraduate-overview
     weight: 301
-  - name: Öğretim Programı
+  - name: Yeni Öğretim Programı
+    url: /undergraduate/curriculum-new
+    parent: undergraduate
+    identifier: undergraduate-curriculum-new
+    weight: 302
+  - name: Önceki Öğretim Programı
     url: /undergraduate/curriculum
     parent: undergraduate
     identifier: undergraduate-curriculum
-    weight: 302
+    weight: 303
   # - name: Temel Dersler
   #   url: /undergraduate/courses
   #   parent: undergraduate
   #   identifier: undergraduate-courses
-  #   weight: 303
+  #   weight: 304
   - name: Seçmeli Dersler
     url: /undergraduate/electives
     parent: undergraduate
     identifier: undergraduate-electives
-    weight: 304
+    weight: 305
   - name: Çift Ana Dal Programları
     url: /undergraduate/double-major
     parent: undergraduate

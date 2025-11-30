@@ -1,11 +1,19 @@
 ---
-title: Öğretim Programı
-description: Boğaziçi Üniversitesi Bilgisayar Mühendisliği Öğretim Programı
+title: Öğretim Programı (Önceki)
+description: Boğaziçi Üniversitesi Bilgisayar Mühendisliği Önceki Öğretim Programı
 metadata: none
 toc: false
 weight: 2
 hasMermaid: true
 ---
+
+{{< alert type="warning" title="Önemli Duyuru" >}}
+Bu sayfa, **[Geçiş Planı](/undergraduate/transition-plan/)** kapsamında geçerli olan müfredatlardan biridir.  
+Öğrenciler, bölüme **Güz 2025 öncesinde** kayıt olmuşlarsa [Eski Müfredat](/undergraduate/curriculum), **Güz 2025 ve sonrasında** kayıt olmuşlarsa [Yeni Müfredat](/undergraduate/curriculum-new) kapsamındaki dersleri takip etmelidir.
+
+Ayrıntılı dönem bazlı bilgiler için: **[Geçiş Planı (Güz 2025 – Bahar 2029)](/undergraduate/transition-plan/)**.
+{{< /alert >}}
+
 
 <!-- prettier-ignore-start -->
 {{< table class="table-hover table-sm" >}}
