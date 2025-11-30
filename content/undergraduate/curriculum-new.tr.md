@@ -7,13 +7,6 @@ weight: 2
 hasMermaid: true
 ---
 
-{{< alert type="warning" title="Önemli Duyuru" >}}
-Bu sayfa, **[Geçiş Planı](/undergraduate/transition-plan/)** kapsamında geçerli olan müfredatlardan biridir.  
-Öğrenciler, bölüme **Güz 2025 öncesinde** kayıt olmuşlarsa [Eski Müfredat](/undergraduate/curriculum), **Güz 2025 ve sonrasında** kayıt olmuşlarsa [Yeni Müfredat](/undergraduate/curriculum-new) kapsamındaki dersleri takip etmelidir.
-
-Ayrıntılı dönem bazlı bilgiler için: **[Geçiş Planı (Güz 2025 – Bahar 2029)](/undergraduate/transition-plan/)**.
-{{< /alert >}}
-
 
 <!-- prettier-ignore-start -->
 {{< table class="table-hover table-sm" >}}
@@ -49,7 +42,7 @@ Ayrıntılı dönem bazlı bilgiler için: **[Geçiş Planı (Güz 2025 – Baha
 | [CMPE222](/tr/courses/cmpe222) | Veri Tabanı Sistemlerine Giriş | CMPE250 | 3 | 6 |
 | [CMPE244](/tr/courses/cmpe244) | Bilgisayar Organizasyonu | CMPE142 | 4 | 5 |
 | MATH202 | Türevsel Denklemler | MATH201 | 4 | 7 |
-| PHYS202 / Bilim Seçmeli | Fizik IV / Bilim Seçmeli (*) | PHYS201 (PHYS202 için) | 3 | 6 |
+| PHYS202 / Bilim Seçmeli | Fizik IV / Bilim Seçmeli <sup><a href="#note-sci">(1)</a></sup> | PHYS201 (PHYS202 için) | 3 | 6 |
 | EE212 | Elektronik Mühendisliğine Giriş | EE210 | 3 | 4 |
 | TK222 | Türkçe II | --- | 2 | 3 |
 | | | **Toplam** | **19** | **31** |
@@ -73,33 +66,47 @@ Ayrıntılı dönem bazlı bilgiler için: **[Geçiş Planı (Güz 2025 – Baha
 | | | **Toplam** | **19** | **30** |
 | <h4>Yedinci Dönem</h4>|
 | **Ders Kodu** |**Ders Başlığı** | **Önkoşullar** | **Kredi** | **AKTS** |
-| Belirtilmiş Serbest Seçmeli (***) | Bölüm-Kısıtlı Serbest Seçmeli | --- | 3 | 5 |
-| HUM101 / HSS | Kültürel Karşılaşmalar I / HSS (**) | --- | 4 | 6 |
+| Belirtilmiş Serbest Seçmeli <sup><a href="#note-spec">(3)</a></sup>  | Bölüm-Kısıtlı Serbest Seçmeli | --- | 3 | 5 |
+| HUM101 / HSS <sup><a href="#note-hss">(2)</a></sup>  | Kültürel Karşılaşmalar I / HSS | --- | 4 | 6 |
 | CMPE xxx | Bölüm Seçmeli | ilgili ders | 3 | 6 |
 | CMPE xxx | Bölüm Seçmeli | ilgili ders | 3 | 6 |
-| CC| Tamamlayıcı Ders (Seçmeli) | ilgili ders | 3 | 6 |
+| CC  <sup><a href="#note-cc">(4)</a></sup> | Tamamlayıcı Ders (Seçmeli) | ilgili ders | 3 | 6 |
 | | | **Toplam** | **16** | **29** |
 | <h4>Sekizinci Dönem</h4>|
 | **Ders Kodu** |**Ders Başlığı** | **Önkoşullar** | **Kredi** | **AKTS** |
 | [CMPE492](/tr/courses/cmpe492) | Bilgisayar Mühendisliği Tasarım Projesi | SENIOR | 4 | 8 |
 | CMPE xxx | Bölüm Seçmeli | ilgili ders | 3 | 6 |
-| CC | Tamamlayıcı Ders (Seçmeli) | ilgili ders | 3 | 6 |
-| CC | Tamamlayıcı Ders (Seçmeli) | ilgili ders | 3 | 6 |
-| HUM102 / HSS | Kültürel Karşılaşmalar II / HSS (**) | --- | 3 | 5 |
+| CC <sup><a href="#note-cc">(4)</a></sup>  | Tamamlayıcı Ders (Seçmeli) | ilgili ders | 3 | 6 |
+| CC <sup><a href="#note-cc">(4)</a></sup>  | Tamamlayıcı Ders (Seçmeli) | ilgili ders | 3 | 6 |
+| HUM102 / HSS <sup><a href="#note-hss">(2)</a></sup>  | Kültürel Karşılaşmalar II / HSS | --- | 3 | 5 |
 | CMPE400 | Mühendislik Stajı | bölüm kuralları | 0 | 10 |
 | | | **Toplam** | **16** | **41** |
 {{< /table >}}
 <!-- prettier-ignore-end -->
 
+{{< alert type="info" >}}
+**Notlar**
 
+<p id="note-sci">
+1. <strong>Bilim Seçmeli Dersi</strong> Fizik, Kimya, Biyoloji veya Matematik (hesaplamalı olmayan) alanlarında temel bir bilim dersidir.
+</p>
 
-(\*)  **Bilim Seçmeli Dersi**, Fizik, Kimya, Biyoloji veya Matematik (hesaplamalı olmayan) alanlarında temel bir bilim dersidir.
+<p id="note-hum">
+2. <strong>HUM101–HUM102–HSS</strong> dersleri birbirlerinin yerine alınabilir ve birbirleriyle tekrarlanabilir.
+</p>
 
-(\**) HUM101–HUM102–HSS dersleri birbirlerinin yerine alınabilir ve birbirleriyle tekrarlanabilir.
+<p id="note-spec">
+3. <strong>Belirlenmiş Seçmeli</strong> CmpE Bölümü tarafından sınırlandırılmış serbest bir seçmelidir; diğer listelerle örtüşebilir.
+</p>
 
-(\***)  **Belirlenmiş Seçmeli**, CmpE Bölümü tarafından sınırlandırılmış serbest bir seçmelidir; diğer listelerle örtüşebilir.
+<p id="note-cc">
+4. <strong>Tamamlayıcı Dersler</strong> Bölüm Seçmeli listesi içinden seçilebilir.
+</p>
 
-(\****)  **Tamamlayıcı Dersler**, Bölüm Seçmeli listesi içinden seçilebilir.
+<p>
+Detaylar için <a href="/undergraduate/electives/">seçmeli dersler sayfasına</a> bakabilirsiniz.
+</p>
+{{< /alert >}}
 
 
 ## Önkoşul Çizgesi

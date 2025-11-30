@@ -7,13 +7,6 @@ weight: 2
 hasMermaid: true
 ---
 
-{{< alert type="warning" title="Important Notice" >}}
-This page is part of the **[Transition Plan](/undergraduate/transition-plan/)** for the curriculum change.  
-Students who enrolled in the department **before Fall 2025** should follow [the Old Curriculum](/undergraduate/curriculum), while those who enrolled in **Fall 2025 or later** should follow [the New Curriculum](/undergraduate/curriculum-new).
-
-For detailed semester-by-semester information, see the **[Transition Plan (Fall 2025–Spring 2029)](/undergraduate/transition-plan/)**.
-{{< /alert >}}
-
 
 <!-- prettier-ignore-start -->
 {{< table class="table-hover table-sm" >}}
@@ -49,7 +42,7 @@ For detailed semester-by-semester information, see the **[Transition Plan (Fall 
 | [CMPE222](/courses/cmpe222) | Introduction to Database Systems | CMPE250 | 3 | 6 |
 | [CMPE244](/courses/cmpe244) | Computer Organization | CMPE142 | 4 | 5 |
 | MATH202 | Differential Equations | MATH201 | 4 | 7 |
-| PHYS202 / Sci. El. | Physics IV / Science Elective (*) | PHYS201 (for PHYS202) | 3 | 6 |
+| PHYS202 / Sci. El.  <sup><a href="#note-sci">(1)</a></sup> | Physics IV / Science Elective  | PHYS201 (for PHYS202) | 3 | 6 |
 | EE212 | Introduction to Electronic Engineering | EE210 | 3 | 4 |
 | TK222 | Turkish Language and Literature II | --- | 2 | 3 |
 | | | **Total** | **19** | **31** |
@@ -73,31 +66,47 @@ For detailed semester-by-semester information, see the **[Transition Plan (Fall 
 | | | **Total** | **19** | **30** |
 | <h4>Seventh Semester</h4>|
 | **Code** | **Course Title** | **Prerequisites** | **Credits** | **ECTS** |
-| Specified Elective (***) | Free Elective (Department-Restricted) | --- | 3 | 5 |
-| HUM101 / HSS | Cultural Encounters I / HSS (**) | --- | 4 | 6 |
+| Specified Elective  <sup><a href="#note-spec">(3)</a></sup>  | Free Elective (Department-Restricted) | --- | 3 | 5 |
+| HUM101 / HSS <sup><a href="#note-hss">(2)</a></sup>  | Cultural Encounters I / HSS   | --- | 4 | 6 |
 | CMPE xxx | Departmental Elective | see course | 3 | 6 |
 | CMPE xxx | Departmental Elective | see course | 3 | 6 |
-| CC | Complementary Course (Elective) | see course | 3 | 6 |
+| CC  <sup><a href="#note-cc">(4)</a></sup> | Complementary Course (Elective)| see course | 3 | 6 |
 | | | **Total** | **16** | **29** |
 | <h4>Eighth Semester</h4>|
 | **Code** | **Course Title** | **Prerequisites** | **Credits** | **ECTS** |
 | [CMPE492](/courses/cmpe492) | Computer Engineering Design Project | SENIOR | 4 | 8 |
 | CMPE xxx | Departmental Elective | see course | 3 | 6 |
-| CC | Complementary Course (Elective) | see course | 3 | 6 |
-| CC  | Complementary Course (Elective)| see course | 3 | 6 |
-| HUM102 / HSS | Cultural Encounters II / HSS (**) | --- | 3 | 5 |
+| CC  <sup><a href="#note-cc">(4)</a></sup> | Complementary Course (Elective) | see course | 3 | 6 |
+| CC  <sup><a href="#note-cc">(4)</a></sup>  | Complementary Course (Elective) | see course | 3 | 6 |
+| HUM102 / HSS  <sup><a href="#note-hss">(2)</a></sup>  | Cultural Encounters II / HSS  | --- | 3 | 5 |
 | CMPE400| Engineering Internship | departmental rules | 0 | 10 |
 | | | **Total** | **16** | **41** |
 {{< /table >}}
 <!-- prettier-ignore-end -->
 
-(\*) **Science Elective** is a basic science course in Physics, Chemistry, Biology or Mathematics (non-computational).  
+{{< alert type="info" >}}
+**Notes**
 
-(\**) **HUM101–HUM102–HSS** can be taken interchangeably and repeated with each other.  
+<p id="note-sci">
+1. <strong>Science Elective</strong> is a basic science course in Physics, Chemistry, Biology or Mathematics (non-computational).
+</p>
 
-(\***) **Specified Elective** is a free elective restricted by the CmpE Department; it may overlap with other lists.  
+<p id="note-hum">
+2. <strong>HUM101–HUM102–HSS</strong> can be taken interchangeably and repeated with each other.
+</p>
 
-\(****) **Complementary Courses** can be selected from the Departmental Elective list.
+<p id="note-spec">
+3. <strong>Specified Elective</strong> is a free elective restricted by the CmpE Department; it may overlap with other lists.
+</p>
+
+<p id="note-cc">
+4. <strong>Complementary Courses</strong> can be selected from the Departmental Elective list.
+</p>
+
+<p>
+For details, please refer to <a href="/undergraduate/electives/">the elective courses page</a>.
+</p>
+{{< /alert >}}
 
 ## Prerequisites Graph
 
