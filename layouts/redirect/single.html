@@ -1,24 +1,21 @@
-<!-- {{- template "alias.html" (dict "Permalink" .Params.target) -}} -->
- {{ define "main" }}
+{{ define "main" }}
 
-{{/* For pages under content/u/, try to render a person profile */}}
+{{ $page := . }}
+
 {{ if eq .Section "u" }}
 
-  {{ $page := . }}
-  {{ $slug := .File.BaseFileName }}          {{/* e.g. "yurdakul" or "dogan.ulus" */}}
-  {{ $needle1 := printf "/u/%s" $slug }}
-  {{ $needle2 := printf "/u/%s/" $slug }}
+  {{/* Match person by slugified name vs slugified page title */}}
+  {{ $titleSlug := .Title | urlize }}
 
-  {{/* Find matching person in data by homepage */}}
   {{ $person := dict }}
   {{ range $k, $v := site.Data.bouncmpe.people }}
-    {{ if or (eq $v.homepage $needle1) (eq $v.homepage $needle2) }}
+    {{ if eq (urlize $v.name) $titleSlug }}
       {{ $person = $v }}
     {{ end }}
   {{ end }}
 
-  {{ if not $person }}
-    {{/* Fallback: behave like old redirect */}}
+  {{ if not $person.name }}
+    {{/* No matching person in data → keep old redirect behaviour */}}
     <meta http-equiv="refresh" content="0; url={{ .Params.target }}">
     <div class="container my-5">
       <p>If you are not redirected automatically, <a href="{{ .Params.target }}">click here</a>.</p>
@@ -27,7 +24,6 @@
 
     {{ with $person }}
 
-      {{/* Image handling similar to your list partial */}}
       {{ $thumbnail := .thumbnail | default "images/person.png" }}
       {{ $image_settings := site.Params.people.image_settings | default "500x500 webp q90 smart" }}
       {{ with resources.Get $thumbnail }}
@@ -38,10 +34,9 @@
       {{ $scholar := or .scholar .google_scholar }}
 
       <div class="container my-5">
-
-        <!-- Top section: photo + profile info -->
         <div class="row g-4 align-items-stretch">
-          <!-- Photo card -->
+
+          <!-- Left: photo card -->
           <div class="col-12 col-md-4">
             <div class="card border-0 shadow-sm h-100">
               <div class="card-body d-flex flex-column align-items-center text-center">
@@ -60,7 +55,6 @@
                   <p class="small text-secondary mb-3">{{ . }}</p>
                 {{ end }}
 
-                <!-- Contact icons -->
                 <div class="d-flex gap-3 justify-content-center mt-2">
                   {{ with .email }}
                     <a href="mailto:{{ . }}" class="text-muted" title="Email">
@@ -98,11 +92,11 @@
             </div>
           </div>
 
-          <!-- Details card -->
+          <!-- Right: details card -->
           <div class="col-12 col-md-8">
             <div class="card border-0 shadow-sm h-100">
               <div class="card-body">
-                <h2 class="h5 text-uppercase text-muted mb-3" style="letter-spacing: .08em;">
+                <h2 class="h5 text-uppercase text-muted mb-3" style="letter-spacing:.08em;">
                   Profile
                 </h2>
 
@@ -141,19 +135,17 @@
               </div>
             </div>
           </div>
+
         </div>
+      </div>
 
-        <!-- Lower section (optional research/publications if you add to data) -->
+    {{ end }} {{/* with $person */}}
 
-      </div> <!-- /container -->
-
-    {{ end }}  {{/* with $person */}}
-
-  {{ end }}    {{/* if person found */}}
+  {{ end }} {{/* person found */}}
 
 {{ else }}
 
-  {{/* Non-u redirect pages: keep old behaviour */}}
+  {{/* Non-u redirect pages → keep simple redirect */}}
   <meta http-equiv="refresh" content="0; url={{ .Params.target }}">
   <div class="container my-5">
     <p>If you are not redirected automatically, <a href="{{ .Params.target }}">click here</a>.</p>
@@ -161,4 +153,4 @@
 
 {{ end }}
 
-{{ end }}  <!-- define "main" -->
+{{ end }}
