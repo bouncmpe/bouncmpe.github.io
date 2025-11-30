@@ -9,7 +9,7 @@ hasMermaid: true
 
 {{< alert type="warning" title="Önemli Duyuru" >}}
 Bu sayfa, **[Geçiş Planı](/undergraduate/transition-plan/)** kapsamında geçerli olan müfredatlardan biridir.  
-Öğrenciler, **Güz 2025 ve sonrasında** bölüme kayıt olmuşlarsa *Yeni Müfredat* kapsamındaki dersleri takip etmelidir.
+Öğrenciler, bölüme **Güz 2025 öncesinde** kayıt olmuşlarsa [Eski Müfredat](/undergraduate/curriculum), **Güz 2025 ve sonrasında** kayıt olmuşlarsa [Yeni Müfredat](/undergraduate/curriculum-new) kapsamındaki dersleri takip etmelidir.
 
 Ayrıntılı dönem bazlı bilgiler için: **[Geçiş Planı (Güz 2025 – Bahar 2029)](/undergraduate/transition-plan/)**.
 {{< /alert >}}
@@ -77,14 +77,14 @@ Ayrıntılı dönem bazlı bilgiler için: **[Geçiş Planı (Güz 2025 – Baha
 | HUM101 / HSS | Kültürel Karşılaşmalar I / HSS (**) | --- | 4 | 6 |
 | CMPE xxx | Bölüm Seçmeli | ilgili ders | 3 | 6 |
 | CMPE xxx | Bölüm Seçmeli | ilgili ders | 3 | 6 |
-| CC xxx | Tamamlayıcı Ders (****) | ilgili ders | 3 | 6 |
+| CC| Tamamlayıcı Ders (Seçmeli) | ilgili ders | 3 | 6 |
 | | | **Toplam** | **16** | **29** |
 | <h4>Sekizinci Dönem</h4>|
 | **Ders Kodu** |**Ders Başlığı** | **Önkoşullar** | **Kredi** | **AKTS** |
 | [CMPE492](/tr/courses/cmpe492) | Bilgisayar Mühendisliği Tasarım Projesi | SENIOR | 4 | 8 |
 | CMPE xxx | Bölüm Seçmeli | ilgili ders | 3 | 6 |
-| CC xxx | Tamamlayıcı Ders (****) | ilgili ders | 3 | 6 |
-| CC xxx | Tamamlayıcı Ders (****) | ilgili ders | 3 | 6 |
+| CC | Tamamlayıcı Ders (Seçmeli) | ilgili ders | 3 | 6 |
+| CC | Tamamlayıcı Ders (Seçmeli) | ilgili ders | 3 | 6 |
 | HUM102 / HSS | Kültürel Karşılaşmalar II / HSS (**) | --- | 3 | 5 |
 | CMPE400 | Mühendislik Stajı | bölüm kuralları | 0 | 10 |
 | | | **Toplam** | **16** | **41** |
@@ -92,16 +92,15 @@ Ayrıntılı dönem bazlı bilgiler için: **[Geçiş Planı (Güz 2025 – Baha
 <!-- prettier-ignore-end -->
 
 
-Total Credits: **145**  
-Total ECTS: **255**
 
-\* **Bilim Seçmeli Dersi**, Fizik, Kimya, Biyoloji veya Matematik (hesaplamalı olmayan) alanlarında temel bir bilim dersidir.
-\** HUM101–HUM102–HSS dersleri birbirlerinin yerine alınabilir ve birbirleriyle tekrarlanabilir.
-\*** **Belirlenmiş Seçmeli**, CmpE Bölümü tarafından sınırlandırılmış serbest bir seçmelidir; diğer listelerle örtüşebilir.
-\**** **Tamamlayıcı Dersler**, Bölüm Seçmeli listesi içinden seçilebilir.
+(\*)  **Bilim Seçmeli Dersi**, Fizik, Kimya, Biyoloji veya Matematik (hesaplamalı olmayan) alanlarında temel bir bilim dersidir.
 
-Toplam Kredi: **145**
-Toplam AKTS: **255**
+(\**) HUM101–HUM102–HSS dersleri birbirlerinin yerine alınabilir ve birbirleriyle tekrarlanabilir.
+
+(\***)  **Belirlenmiş Seçmeli**, CmpE Bölümü tarafından sınırlandırılmış serbest bir seçmelidir; diğer listelerle örtüşebilir.
+
+(\****)  **Tamamlayıcı Dersler**, Bölüm Seçmeli listesi içinden seçilebilir.
+
 
 ## Önkoşul Çizgesi
 

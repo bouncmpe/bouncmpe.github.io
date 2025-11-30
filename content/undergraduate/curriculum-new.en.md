@@ -9,7 +9,7 @@ hasMermaid: true
 
 {{< alert type="warning" title="Important Notice" >}}
 This page is part of the **[Transition Plan](/undergraduate/transition-plan/)** for the curriculum change.  
-Students who were admitted **in Fall 2025 or later** must follow the *New Curriculum*.
+Students who enrolled in the department **before Fall 2025** should follow [the Old Curriculum](/undergraduate/curriculum), while those who enrolled in **Fall 2025 or later** should follow [the New Curriculum](/undergraduate/curriculum-new).
 
 For detailed semester-by-semester information, see the **[Transition Plan (Fall 2025–Spring 2029)](/undergraduate/transition-plan/)**.
 {{< /alert >}}
@@ -77,27 +77,27 @@ For detailed semester-by-semester information, see the **[Transition Plan (Fall 
 | HUM101 / HSS | Cultural Encounters I / HSS (**) | --- | 4 | 6 |
 | CMPE xxx | Departmental Elective | see course | 3 | 6 |
 | CMPE xxx | Departmental Elective | see course | 3 | 6 |
-| CC xxx | Complementary Course (****) | see course | 3 | 6 |
+| CC | Complementary Course (Elective) | see course | 3 | 6 |
 | | | **Total** | **16** | **29** |
 | <h4>Eighth Semester</h4>|
 | **Code** | **Course Title** | **Prerequisites** | **Credits** | **ECTS** |
 | [CMPE492](/courses/cmpe492) | Computer Engineering Design Project | SENIOR | 4 | 8 |
 | CMPE xxx | Departmental Elective | see course | 3 | 6 |
-| CC xxx | Complementary Course (****) | see course | 3 | 6 |
-| CC xxx | Complementary Course (****) | see course | 3 | 6 |
+| CC | Complementary Course (Elective) | see course | 3 | 6 |
+| CC  | Complementary Course (Elective)| see course | 3 | 6 |
 | HUM102 / HSS | Cultural Encounters II / HSS (**) | --- | 3 | 5 |
 | CMPE400| Engineering Internship | departmental rules | 0 | 10 |
 | | | **Total** | **16** | **41** |
 {{< /table >}}
 <!-- prettier-ignore-end -->
 
-\* **Science Elective** is a basic science course in Physics, Chemistry, Biology or Mathematics (non-computational).  
-\** HUM101–HUM102–HSS can be taken interchangeably and repeated with each other.  
-\*** **Specified Elective** is a free elective restricted by the CmpE Department; it may overlap with other lists.  
-\**** **Complementary Courses** can be selected from the Departmental Elective list.
+(\*) **Science Elective** is a basic science course in Physics, Chemistry, Biology or Mathematics (non-computational).  
 
-Total Credits: **145**  
-Total ECTS: **255**
+(\**) **HUM101–HUM102–HSS** can be taken interchangeably and repeated with each other.  
+
+(\***) **Specified Elective** is a free elective restricted by the CmpE Department; it may overlap with other lists.  
+
+\(****) **Complementary Courses** can be selected from the Departmental Elective list.
 
 ## Prerequisites Graph
 
