@@ -67,8 +67,8 @@ hasMermaid: true
 | | | **Toplam** | **19** | **30** |
 | <h4>Yedinci Dönem</h4>|
 | **Ders Kodu** |**Ders Başlığı** | **Önkoşullar** | **Kredi** | **AKTS** |
-| Belirtilmiş Serbest Seçmeli <sup><a href="#note-spec">(3)</a></sup>  | Bölüm-Kısıtlı Serbest Seçmeli | --- | 3 | 5 |
-| HUM101 / HSS <sup><a href="#note-hss">(2)</a></sup>  | Kültürel Karşılaşmalar I / HSS | --- | 4 | 6 |
+| Belirtilmiş Serbest Seçmeli <sup><a href="#note-spec">(3)</a></sup>  | Bölüm-Kısıtlı Serbest Seçmeli |  | 3 | 5 |
+| HUM101 / HSS <sup><a href="#note-hss">(2)</a></sup>  | Beşeri ve Sosyal Bilimler Dersi (Seçmeli) |  | 4 | 6 |
 | CC <sup><a href="#note-cc">(4)| Tamamlayıcı Teknik Ders (Seçmeli)|  | 3 | 6 |
 | CC <sup><a href="#note-cc">(4)| Tamamlayıcı Teknik Ders (Seçmeli)|  | 3 | 6 |
 | CC  <sup><a href="#note-cc">(4)</a></sup> | Tamamlayıcı Teknik Ders  (Seçmeli) | | 3 | 6 |
@@ -80,7 +80,6 @@ hasMermaid: true
 | CC | Tamamlayıcı Teknik Ders (Seçmeli) | | 3 | 6 |
 | CC <sup><a href="#note-cc">(4)</a></sup>  | Tamamlayıcı Teknik Ders  (Seçmeli) | | 3 | 6 |
 | CC <sup><a href="#note-cc">(4)</a></sup>  | Tamamlayıcı Teknik Ders  (Seçmeli) |  | 3 | 6 |
-
 | CMPE400 | Mühendislik Stajı | bölüm kuralları | 0 | 10 |
 | | | **Toplam** | **16** | **41** |
 {{< /table >}}
