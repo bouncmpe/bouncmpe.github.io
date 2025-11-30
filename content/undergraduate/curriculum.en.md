@@ -8,13 +8,7 @@ hasMermaid: true
 ---
 
 
-{{< alert type="warning" title="Important Notice" >}}
-This page is part of the **[Transition Plan](/undergraduate/transition-plan/)** for the curriculum change.  
-Students who enrolled in the department **before Fall 2025** should follow [the Old Curriculum](/undergraduate/curriculum), while those who enrolled in **Fall 2025 or later** should follow [the New Curriculum](/undergraduate/curriculum-new).
 
-
-For detailed semester-by-semester information, see the **[Transition Plan (Fall 2025–Spring 2029)](/undergraduate/transition-plan/)**.
-{{< /alert >}}
 
 
 
