@@ -2,7 +2,7 @@
 
 {{ if eq .Section "u" }}
 
-  {{/* find person by slugified title */}}
+  {{/* Find person in data by slugified title */}}
   {{ $slug := .Title | urlize }}
   {{ $person := dict }}
   {{ range $k, $v := site.Data.bouncmpe.people }}
@@ -12,239 +12,30 @@
   {{ end }}
 
   {{ if not $person.name }}
-    <!-- fallback: old redirect -->
     <meta http-equiv="refresh" content="0; url={{ .Params.target }}">
     <div class="container my-5">
       <p>If you are not redirected automatically, <a href="{{ .Params.target }}">click here</a>.</p>
     </div>
   {{ else }}
 
-    {{ $legacy := or .Params.target $person.legacy_url }}
-    {{ with $person }}
+    <!-- One centered column for header + card -->
+    <div class="container mt-5 pt-3 mb-0" style="max-width: 960px;">
 
-      {{/* thumbnail */}}
-      {{ $thumbnail := .thumbnail | default "images/person.png" }}
-      {{ with resources.Get $thumbnail }}
-        {{ $thumbnail = (.Fill "350x350 webp q90 smart").RelPermalink }}
+      <!-- PAGE HEADER (outside card, but same width / center) -->
+      <h1 class="mb-1">{{ $person.name }}</h1>
+      {{ with $person.position }}
+        <p class="text-muted mb-4">{{ . | title }}</p>
       {{ end }}
 
-      {{ $scholar := or .google_scholar .scholar }}
+      {{ $variant := or .Params.person_layout "minimal" }}
+      {{ partial (printf "people/person-%s.html" $variant) (dict "Page" . "Person" $person) }}
 
-      <div class="container my-5">
+    </div>
 
-        <!-- TOP PROFILE CARD -->
-        <div class="card border-0 shadow-sm p-4 mb-5">
-          <div class="row g-4 align-items-center">
-
-            <!-- PHOTO -->
-            <div class="col-12 col-md-4 text-center">
-              <img src="{{ $thumbnail }}"
-                   class="img-fluid rounded-4 shadow-sm"
-                   style="max-width: 260px; object-fit: cover;">
-            </div>
-
-            <!-- NAME + CONTACT -->
-            <div class="col-12 col-md-8">
-              <h1 class="display-5 fw-bold mb-1">{{ .name }}</h1>
-
-              {{ with .position }}
-                <p class="lead text-muted mb-4">{{ . | i18n | title }}</p>
-              {{ end }}
-
-              <div class="row gy-2 small">
-                {{ with .email }}
-                  <div class="col-12 col-sm-6">
-                    <span class="fw-semibold d-block">Email</span>
-                    <a href="mailto:{{ . }}">{{ . }}</a>
-                  </div>
-                {{ end }}
-
-                {{ with .homepage }}
-                  <div class="col-12 col-sm-6">
-                    <span class="fw-semibold d-block">Website</span>
-                    <a href="{{ . }}">{{ . }}</a>
-                  </div>
-                {{ end }}
-
-                {{ with .office }}
-                  <div class="col-12 col-sm-6">
-                    <span class="fw-semibold d-block">Office</span>
-                    <span>{{ . }}</span>
-                  </div>
-                {{ end }}
-
-                {{ with .phone }}
-                  <div class="col-12 col-sm-6">
-                    <span class="fw-semibold d-block">Phone</span>
-                    <span>{{ . }}</span>
-                  </div>
-                {{ end }}
-
-                {{ with .github }}
-                  <div class="col-12 col-sm-6">
-                    <span class="fw-semibold d-block">GitHub</span>
-                    <a href="https://github.com/{{ . }}">github.com/{{ . }}</a>
-                  </div>
-                {{ end }}
-
-                {{ with .linkedin }}
-                  <div class="col-12 col-sm-6">
-                    <span class="fw-semibold d-block">LinkedIn</span>
-                    <a href="https://linkedin.com/in/{{ . }}">linkedin.com/in/{{ . }}</a>
-                  </div>
-                {{ end }}
-              </div>
-
-              {{ with $legacy }}
-                <a href="{{ . }}" class="btn btn-outline-primary btn-sm mt-4" target="_blank" rel="noopener">
-                  Legacy personal page
-                </a>
-              {{ end }}
-            </div>
-          </div>
-        </div>
-
-        <!-- LOWER CONTENT: 2 COLUMNS -->
-        <div class="row g-4">
-
-          <!-- MAIN COLUMN -->
-          <div class="col-12 col-lg-8">
-
-            {{ with .short_bio }}
-              <section class="mb-4">
-                <h2 class="h4 mb-2">About</h2>
-                <p>{{ . }}</p>
-              </section>
-            {{ end }}
-
-            {{ with .research_areas }}
-              <section class="mb-4">
-                <h2 class="h4 mb-2">Research Areas</h2>
-                <ul>
-                  {{ range . }}
-                    <li>{{ . }}</li>
-                  {{ end }}
-                </ul>
-              </section>
-            {{ end }}
-
-            {{ with .long_bio }}
-              <section class="mb-4">
-                <h2 class="h4 mb-2">Biography</h2>
-                <p>{{ . }}</p>
-              </section>
-            {{ end }}
-
-            {{ if or .publications $scholar }}
-              <section class="mb-4">
-                <h2 class="h4 mb-2">Publications</h2>
-
-                {{ with $scholar }}
-                  <p><a href="{{ . }}">Google Scholar Profile</a></p>
-                {{ end }}
-
-                {{ with .publications }}
-                  {{ if (reflect.IsSlice .) }}
-                    <ul class="small">
-                      {{ range . }}
-                        <li>{{ . | safeHTML }}</li>
-                      {{ end }}
-                    </ul>
-                  {{ else }}
-                    <p class="small">{{ . | safeHTML }}</p>
-                  {{ end }}
-                {{ end }}
-              </section>
-            {{ end }}
-
-          </div>
-
-          <!-- SIDEBAR COLUMN -->
-          <aside class="col-12 col-lg-4">
-
-            {{ with .education }}
-              <section class="mb-4">
-                <h2 class="h5 mb-2">Education</h2>
-                <ul class="list-unstyled small mb-0">
-                  {{ range . }}
-                    <li class="mb-1">
-                      <strong>{{ .degree }}</strong><br>
-                      {{ .institution }}{{ with .year }}, {{ . }}{{ end }}
-                    </li>
-                  {{ end }}
-                </ul>
-              </section>
-            {{ end }}
-
-            {{ with .awards }}
-              <section class="mb-4">
-                <h2 class="h5 mb-2">Awards &amp; Honors</h2>
-                <ul class="small mb-0">
-                  {{ range . }}
-                    <li>{{ . }}</li>
-                  {{ end }}
-                </ul>
-              </section>
-            {{ end }}
-
-            {{ with .courses }}
-              <section class="mb-4">
-                <h2 class="h5 mb-2">Courses</h2>
-                <ul class="small mb-0">
-                  {{ range . }}
-                    <li>{{ . }}</li>
-                  {{ end }}
-                </ul>
-              </section>
-            {{ end }}
-
-            {{ with .labs }}
-              <section class="mb-4">
-                <h2 class="h5 mb-2">Research Labs</h2>
-                <ul class="small mb-0">
-                  {{ range $i, $lab := . }}
-                    <li>
-                      {{ if (reflect.IsMap $lab) }}
-                        {{ with $lab.url }}
-                          <a href="{{ . }}">{{ $lab.name }}</a>
-                        {{ else }}
-                          {{ $lab.name }}
-                        {{ end }}
-                      {{ else }}
-                        {{ $lab }}
-                      {{ end }}
-                    </li>
-                  {{ end }}
-                </ul>
-              </section>
-            {{ end }}
-
-            {{ with .roles }}
-              <section class="mb-4">
-                <h2 class="h5 mb-2">Roles &amp; Memberships</h2>
-                {{ if (reflect.IsSlice .) }}
-                  <ul class="small mb-0">
-                    {{ range . }}
-                      <li>{{ . }}</li>
-                    {{ end }}
-                  </ul>
-                {{ else }}
-                  <p class="small mb-0">{{ . }}</p>
-                {{ end }}
-              </section>
-            {{ end }}
-
-          </aside>
-        </div>
-      </div>
-
-    {{ end }} <!-- with $person -->
-
-  {{ end }} <!-- person found -->
+  {{ end }}
 
 {{ else }}
 
-  <!-- non-u redirect fallback -->
   <meta http-equiv="refresh" content="0; url={{ .Params.target }}">
   <div class="container my-5">
     <p>If you are not redirected automatically, <a href="{{ .Params.target }}">click here</a>.</p>
