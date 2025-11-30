@@ -7,6 +7,14 @@ weight: 2
 hasMermaid: true
 ---
 
+{{< alert type="warning" title="Important Notice" >}}
+This page is part of the **[Transition Plan](/undergraduate/transition-plan/)** for the curriculum change.  
+Students who were admitted **in Fall 2025 or later** must follow the *New Curriculum*.
+
+For detailed semester-by-semester information, see the **[Transition Plan (Fall 2025–Spring 2029)](/undergraduate/transition-plan/)**.
+{{< /alert >}}
+
+
 <!-- prettier-ignore-start -->
 {{< table class="table-hover table-sm" >}}
 ||

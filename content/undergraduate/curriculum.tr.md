@@ -7,6 +7,14 @@ weight: 2
 hasMermaid: true
 ---
 
+{{< alert type="warning" title="Önemli Duyuru" >}}
+Bu sayfa, **[Geçiş Planı](/undergraduate/transition-plan/)** kapsamında geçerli olan müfredatlardan biridir.  
+Öğrenciler, **Güz 2025 öncesinde** bölüme kayıt olmuşlarsa *Eski Müfredat* kapsamındaki dersleri takip etmelidir.
+
+Ayrıntılı dönem bazlı bilgiler için: **[Geçiş Planı (Güz 2025 – Bahar 2029)](/undergraduate/transition-plan/)**.
+{{< /alert >}}
+
+
 <!-- prettier-ignore-start -->
 {{< table class="table-hover table-sm" >}}
 ||
