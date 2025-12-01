@@ -85,7 +85,7 @@ hasMermaid: true
 {{< /table >}}
 <!-- prettier-ignore-end -->
 
-{{< callout title="Curriculum Notes" type="primary" >}}
+<!-- {{< callout title="Curriculum Notes" type="primary" >}}
 <ol class="ps-3 mb-0 small">
   <li id="note-sci" class="mb-2"><strong>Bilim Seçmeli Dersi</strong> Fizik, Kimya, Biyoloji veya Matematik (hesaplamalı olmayan) alanlarında temel bir bilim dersidir.</li>
   <li id="note-hum" class="mb-2"><strong>HUM101–HUM102–HSS</strong> dersleri birbirlerinin yerine alınabilir ve birbirleriyle tekrarlanabilir.</li>
@@ -94,7 +94,7 @@ hasMermaid: true
 </ol>
 <hr class="border-secondary border-opacity-10 my-3">
 Detaylar için <a href="/undergraduate/electives/">seçmeli dersler sayfasına</a> bakabilirsiniz.
-{{< /callout >}}
+{{< /callout >}} -->
 
 ## Önkoşul Çizgesi
 

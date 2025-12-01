@@ -83,16 +83,16 @@ hasMermaid: true
 | | | **Total** | **16** | **41** |
 {{< /table >}}
 <!-- prettier-ignore-end -->
-{{< callout title="Curriculum Notes" type="primary" >}}
+<!-- {{< callout title="Curriculum Notes" type="primary" >}}
 <ol class="ps-3 mb-0 small">
   <li id="note-sci" class="mb-2"><strong>Science Elective</strong> is a basic science course in Physics, Chemistry, Biology or Mathematics (non-computational).</li>
   <li id="note-hum" class="mb-2"><strong>HUM101</strong> can be taken interchangeably and repeated with each other.</li>
-  <li id="note-spec" class="mb-2"><strong>Specified Elective</strong> is a free elective restricted by the CmpE Department; it may overlap with other lists.</li>
+  <li id="note-spec" class="mb-2"><strong>Specified Elective</strong> is a free elective restricted by the CMPE Department; it may overlap with other lists.</li>
   <li id="note-cc" class="mb-2"><strong>Complementary Courses</strong> can be selected from the Departmental Elective list.</li>
 </ol>
 <hr class="border-secondary border-opacity-10 my-3">
 For details, see <a href="/undergraduate/electives/">the elective courses page</a>.
-{{< /callout >}}
+{{< /callout >}} -->
 
 ## Prerequisites Graph
 
