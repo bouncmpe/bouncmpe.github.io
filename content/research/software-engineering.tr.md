@@ -3,7 +3,7 @@ title: Yazılım Mühendisliği
 description: " "
 metadata: none
 thumbnail: 
-    url: https://picsum.photos/seed/softwareengineering/1400
+    url: images/research/software-engineering2.jpg
 ---
 
 {{< under-construction-warning >}}

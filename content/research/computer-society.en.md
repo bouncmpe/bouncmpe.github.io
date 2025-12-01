@@ -3,7 +3,7 @@ title: Computer and Society
 description: " "
 metadata: none
 thumbnail: 
-    url: https://picsum.photos/seed/computersociety/1400
+    url: images/research/computer-society.png
 ---
 
 {{< under-construction-warning >}}
