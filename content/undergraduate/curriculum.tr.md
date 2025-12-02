@@ -11,7 +11,7 @@ hasMermaid: true
 <!-- prettier-ignore-start -->
 {{< table class="table-hover table-sm" >}}
 ||
-|:-- |:----------- |:-:|:---:|
+|:-- |:----------- |:-:|:---:|:----:|
 | <h4>Birinci Dönem</h4>|
 | **Ders Kodu** |**Ders Başlığı** | **Önkoşullar** | **Kredi** | **AKTS** |
 | MATH101 | Analiz I | --- | 4 | 6 |

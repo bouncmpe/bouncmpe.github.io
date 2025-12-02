@@ -15,76 +15,75 @@ hasMermaid: true
 <!-- prettier-ignore-start -->
 {{< table class="table-hover table-sm" >}}
 ||
-|:-- |:----------- |:-:|:---:|
+|:-- |:----------- |:-:|:----:|:------:|
 | <h4>First Semester</h4>|
 | **Code** |**Course Title** | **Prerequisites** | **Credits** | **ECTS** |
-| MATH101 | Calculus I | --- | 4 ||
-| PHYS121 | Introductory Mechanics & Thermodynamics | --- | 4 ||
-| CHEM105 | Fundamentals of Chemistry | --- | 4||
-| [CMPE150](/courses/cmpe150) | Introducution to Computing | --- | 3||
-| EC101 | Principles of Microeconomics | --- | 3||
-|||| **18** ||
+| MATH101 | Calculus I | --- | 4 | 6 |
+| PHYS121 | Introductory Mechanics & Thermodynamics | --- | 4 | 6|
+| CHEM105 | Fundamentals of Chemistry | --- | 4| 6 |
+| [CMPE150](/courses/cmpe150) | Introducution to Computing | --- | 3| 5|
+| EC101 | Principles of Microeconomics | --- | 3| 6 |
+|||| **18** | **31**|
 | <h4>Second Semester</h4>|
 | **Code** |**Course Title** | **Prerequisites** | **Credits** | **ECTS** |
-| MATH102 | Calculus II | MATH101 | 4 ||
-| PHYS201 | Physics III | PHYS121 | 4 ||
-| HSS | Humanities and Social Sciences (Elective)| --- |  3-4 ||
-| [CMPE160](/courses/cmpe160) | Introduction to Object Oriented Programming | CMPE150 | 4 ||
-| EC102 | Principles of Macroeconomics | EC101 |  3 ||
-||||  **18-19** ||
+| MATH102 | Calculus II | MATH101 | 4 | 6|
+| PHYS201 | Physics III | PHYS121 | 4 | 6|
+| HSS | Humanities and Social Sciences (Elective)| --- |  3-4 |5-6|
+| [CMPE160](/courses/cmpe160) | Introduction to Object Oriented Programming | CMPE150 | 4 | 8 |
+| EC102 | Principles of Macroeconomics | EC101 |  3 | 6 |
+||||  **18-19** |  **31-32**|
 | <h4>Third Semester</h4>|
 | **Code** |**Course Title** | **Prerequisites** | **Credits** | **ECTS** |
-| MATH201 | Matrix Theory | --- | 4 ||
-| PHYS202 | Physics IV | PHYS201 | 4 ||
-| EE210 | Introduction to Electrical Engineering | --- | 3||
-| [CMPE220](/courses/cmpe220) | Discrete Computational Structures | --- | 3||
-| [CMPE250](/courses/cmpe250) | Data Structures and Algorithms | CMPE160 | 4||
-| TK221 | Turkish for Native Speakers I | --- | 2 ||
-|||| **20** ||
+| MATH201 | Matrix Theory | --- | 4 | 5|
+| PHYS202 | Physics IV | PHYS201 | 4 | 6 |
+| EE210 | Introduction to Electrical Engineering | --- | 3| 6|
+| [CMPE220](/courses/cmpe220) | Discrete Computational Structures | --- | 3| 5|
+| [CMPE250](/courses/cmpe250) | Data Structures and Algorithms | CMPE160 | 4| 6|
+| TK221 | Turkish for Native Speakers I | --- | 2 | 3 |
+|||| **20** |**32**|
 | <h4>Fourth Semester</h4>|
 | **Code** |**Course Title** | **Prerequisites** | **Credits** | **ECTS** |
-| MATH202 | Differential Equations | MATH201 | 4 ||
-| EE212 | Introduction to Electronic Engineering | EE210 | 3 ||
-| [CMPE230](/courses/cmpe230) | Systems Programming | CMPE160 | 4 ||
-| [CMPE240](/courses/cmpe240) | Digital Systems | --- | 4 ||
-| [CMPE260](/courses/cmpe260) | Principles of Programming Languages | CMPE250 | 3 ||
-| TK222 | Turkish for Native Speakers II || 2 ||
-|||| **20** ||
+| MATH202 | Differential Equations | MATH201 | 4 | 7 |
+| EE212 | Introduction to Electronic Engineering | EE210 | 3 | 4|
+| [CMPE230](/courses/cmpe230) | Systems Programming | CMPE160 | 4 | 6|
+| [CMPE240](/courses/cmpe240) | Digital Systems | --- | 4 |6 |
+| [CMPE260](/courses/cmpe260) | Principles of Programming Languages | CMPE250 | 3 | 5|
+| TK222 | Turkish for Native Speakers II || 2 |3|
+|||| **20** |**32**|
 | <h4>Fifth Semester</h4>|
 | **Code** |**Course Title** | **Prerequisites** | **Credits** | **ECTS** |
-| [CMPE300](/courses/cmpe300) | Analysis of Algorithms | CMPE250 | 3 ||
-| [CMPE322](/courses/cmpe322) | Operating Systems | CMPE250 | 4 ||
-| [CMPE343](/courses/cmpe343) | Introduction to Probability and Statistics for Computer Engineers | MATH101 | 3 ||
-| [CMPE344](/courses/cmpe344) | Computer Organization | CMPE240 | 4 ||
-| IE310 | Operations Research | MATH201 | 4 ||
-| HTR311 | History of the Turkish Republic I  || 2 ||
-|||| **20** ||
+| [CMPE300](/courses/cmpe300) | Analysis of Algorithms | CMPE250 | 3 |5|
+| [CMPE322](/courses/cmpe322) | Operating Systems | CMPE250 | 4 | 6|
+| [CMPE343](/courses/cmpe343) | Introduction to Probability and Statistics for Computer Engineers | MATH101 | 3 | 6|
+| [CMPE344](/courses/cmpe344) | Computer Organization | CMPE240 | 4 | 6|
+| IE310 | Operations Research | MATH201 | 4 |5|
+| HTR311 | History of the Turkish Republic I  || 2 |3|
+|||| **20** |**32**|
 | <h4>Sixth Semester</h4>|
 | **Code** |**Course Title** | **Prerequisites** | **Credits** | **ECTS** |
-| [CMPE321](/courses/cmpe321) | Introduction to Database Systems | CMPE250 | 4 ||
-| [CMPE350](/courses/cmpe350) | Formal Languages and Automata Theory | CMPE220 | 3 ||
-| [CMPE352](/courses/cmpe352) | Fundamentals of Software Engineering | --- | 2 ||
-| [CMPE362](/courses/cmpe362) | Introduction to Signal Processing for Computer Engineers | MATH202 | 3 ||
-| IE306 | Systems Simulation | CMPE343 | 4 ||
-| HTR312 | History of the Turkish Republic II || 2 ||
-|||| **18** ||
+| [CMPE321](/courses/cmpe321) | Introduction to Database Systems | CMPE250 | 4 |6 |
+| [CMPE350](/courses/cmpe350) | Formal Languages and Automata Theory | CMPE220 | 3 |5|
+| [CMPE352](/courses/cmpe352) | Fundamentals of Software Engineering | --- | 2 |4|
+| [CMPE362](/courses/cmpe362) | Introduction to Signal Processing for Computer Engineers | MATH202 | 3 |6|
+| IE306 | Systems Simulation | CMPE343 | 4 |7|
+| HTR312 | History of the Turkish Republic II || 2 |3|
+|||| **18** |**29**|
 | <h4>Seventh Semester</h4>|
 | **Code** |**Course Title** | **Prerequisites** | **Credits** | **ECTS** |
-| [CMPE443](/courses/cmpe443) | Principles of Embedded Systems Design | CMPE240 | 4 ||
-| [CMPE451](/courses/cmpe451) | Project Development in Software Engineering | CMPE321, CMPE352 | 2 ||
-| CC | Complemetary Course (Elective) || 3-4 ||
-| CC | Complemetary Course (Elective) || 3-4 ||
-| CC | Complemetary Course (Elective) || 3-4 ||
-|||| **15-18** ||
+| [CMPE443](/courses/cmpe443) | Principles of Embedded Systems Design | CMPE240 | 4 | 6|
+| [CMPE451](/courses/cmpe451) | Project Development in Software Engineering | CMPE321, CMPE352 | 2 | 5|
+| CC | Complemetary Course (Elective) || 3-4 |6|
+| CC | Complemetary Course (Elective) || 3-4 |6|
+| CC | Complemetary Course (Elective) || 3-4 |6|
+|||| **15-18** |**29**|
 | <h4>Eighth Semester</h4>|
 | **Code** |**Course Title** | **Prerequisites** | **Credits** | **ECTS** |
-| CMPE492 | Computer Engineering Design Project | SENIOR | 4 ||
-| HSS | Humanities and Social Sciences (Elective) || 3 ||
-| CC | Complemetary Course (Elective) || 3-4 ||
-| CC | Complemetary Course (Elective) || 3-4 ||
-| CC | Complemetary Course (Elective) || 3-4 ||
-|||| **16-19** ||
-
+| CMPE492 | Computer Engineering Design Project | SENIOR | 4 | 8|
+| HSS | Humanities and Social Sciences (Elective) || 3 | 6|
+| CC | Complemetary Course (Elective) || 3-4 |6|
+| CC | Complemetary Course (Elective) || 3-4 |6|
+| CC | Complemetary Course (Elective) || 3-4 |6|
+|||| **16-19** |**32**|
 {{< /table >}}
 <!-- prettier-ignore-end -->
 
