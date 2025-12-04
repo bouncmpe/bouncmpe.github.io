@@ -7,7 +7,9 @@
     "faculty",
     "cmpe150",
     "networkinginternetarchitecture",
-    "paralleldistributedcloud"
+    "paralleldistributedcloud",
+    "softwareengineering",
+    "artificialintelligence",
   ],
   "type": "person",
   "thumbnail": "images/people/golec_muhammed.jpg"
