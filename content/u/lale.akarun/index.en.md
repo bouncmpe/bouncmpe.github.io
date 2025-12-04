@@ -1,5 +1,5 @@
 ---
 title: Lale Akarun
 type: redirect
-target: https://www.cmpe.boun.edu.tr/~akarun/doku.php
+target: https://sites.google.com/view/laleakarun
 ---
