@@ -3,7 +3,7 @@ title: Bioinformatics
 description: " "
 metadata: none
 thumbnail: 
-    url: https://picsum.photos/seed/bioinformatics/1400
+    url: images/research/bioinformatics.png
 ---
 
 {{< under-construction-warning >}}

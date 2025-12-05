@@ -3,7 +3,7 @@ title: Yapay Zekâ
 description: " "
 metadata: none
 thumbnail: 
-    url: https://picsum.photos/seed/artificialintelligence/1400
+    url: images/research/artificial-intelligence.png
 ---
 
 {{< under-construction-warning >}}

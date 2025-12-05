@@ -3,7 +3,7 @@ title: Paralel, Dağıtık ve Bulut Hesaplama
 description: " "
 metadata: none
 thumbnail: 
-    url: https://picsum.photos/seed/paralleldistributedcloud/1400
+    url: images/research/distributed-computing.jpg
 ---
 
 {{< under-construction-warning >}}

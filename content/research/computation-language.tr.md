@@ -3,7 +3,7 @@ title: Hesaplama ve Dil
 description: " "
 metadata: none
 thumbnail: 
-    url: https://picsum.photos/seed/computationlanguage/1400
+    url: images/research/computation-language.png
 ---
 
 {{< under-construction-warning >}}

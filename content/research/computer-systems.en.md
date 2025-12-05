@@ -3,7 +3,7 @@ title: Computer Systems
 description: " "
 metadata: none
 thumbnail: 
-    url: https://picsum.photos/seed/computersystems/1400
+    url: images/research/computer-systems.png
 ---
 
 {{< under-construction-warning >}}
