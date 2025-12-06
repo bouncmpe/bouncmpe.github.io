@@ -38,7 +38,7 @@ main:
     parent: undergraduate
     identifier: undergraduate-overview
     weight: 301
-  - name: Curriculum (2025)
+  - name: Curriculum 2025
     url: /undergraduate/curriculum
     parent: undergraduate
     identifier: undergraduate-curriculum

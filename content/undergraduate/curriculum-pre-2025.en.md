@@ -237,7 +237,3 @@ click CC6 href "/undergraduate/electives" "Undergraduate Electives"
 click HSS1 href "/undergraduate/electives" "Undergraduate Electives"
 click HSS2 href "/undergraduate/electives" "Undergraduate Electives"
 ```
-
-## Committee
-
-{{< people tag="curriculum" >}}

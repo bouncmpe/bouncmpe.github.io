@@ -232,6 +232,3 @@ click HSS1 href "/tr/undergraduate/electives" "Lisans Seçmelileri"
 click HSS2 href "/tr/undergraduate/electives" "Lisans Seçmelileri"
 ```
 
-## Komisyon Üyeleri
-
-{{< people tag="curriculum" >}}
