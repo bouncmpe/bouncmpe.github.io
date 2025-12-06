@@ -6,11 +6,6 @@
 {{ $file := .File }}
 {{ $kind := .Kind }}
 
-/* Only proceed if:
-   - There is an associated file
-   - Kind is "page" or "section"
-   - File extension is markdown
-*/
 {{ if and $file
          (or (eq $kind "page") (eq $kind "section"))
          (or (eq $file.Ext "md") (eq $file.Ext "markdown")) }}
@@ -29,7 +24,7 @@
        class="edit-page-btn"
        title="Edit this page on GitHub"
        target="_blank" rel="noopener">
-      <img src="/icons/github.svg" alt="Edit icon" width="16" height="16">
+      <img src="/icons/edit.svg" alt="Edit icon" width="16" height="16">
     </a>
   {{ end }}
 
