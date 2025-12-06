@@ -1,6 +1,7 @@
 {{ $events := where site.RegularPages "Section" "events" }}
 {{ $sorted := sort $events "Params.datetime" }}
 
+
 {{ $future_events := slice }}
 {{ range $sorted }}
     {{ if ge (time.AsTime .Params.datetime) now }}
@@ -15,9 +16,19 @@
     {{ end }}
 {{ end }}
 
+{{/* Build edit URL for THIS page (the events list page) */}}
+{{ $repo   := .Site.Params.github.repo }}
+{{ $branch := .Site.Params.github.branch | default "main" }}
+{{ $editURL := "" }}
+{{ with .File }}
+  {{ $editURL = printf "%s/issues/new?template=event.yml" $repo }}
+{{ end }}
+
 <section id="eventbar">
     <h1 class="display-6 my-4">{{ i18n "upcoming-events" | title }}</h1>
+
     {{ if $future_events }}
+ 
     <div class="row row-cols-1 g-2 m-1">
         {{ range (first 6 $future_events) }}
             {{ partial "bouncmpe/eventbar-card.html" . }}
@@ -28,7 +39,8 @@
         <div class="card rounded-4">
             <ul class="list-group list-group-flush">
               <li class="list-group-item">
-                <a href="/admin" class="stretched-link">
+                <a href="{{ if $editURL }}{{ $editURL }}{{ else }}/admin{{ end }}" 
+                    class="stretched-link" target="_blank" rel="noopener">
                     <img src="/icons/plus-circle.svg" alt="">
                 </a>
               </li>
