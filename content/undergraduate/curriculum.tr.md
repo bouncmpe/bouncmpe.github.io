@@ -23,7 +23,7 @@ hasMermaid: true
 | **Ders Kodu** |**Ders Başlığı** | **Önkoşullar** | **Kredi** | **AKTS** |
 | MATH102 | Analiz II | MATH101 | 4 | 6 |
 | PHYS201 | Fizik III | PHYS121 | 4 | 6 |
-| [CMPE142](/tr/courses/cmpe142) | Dijital Sistemler | --- | 4 | 6 |
+| [CMPE142](/tr/courses/cmpe142) | Sayısal Sistemler | --- | 4 | 6 |
 | [CMPE160](/tr/courses/cmpe160) | Nesne Tabanlı Programlamaya Giriş | CMPE101 | 4 | 8 |
 | EC102 | Makroekonominin İlkeleri | EC101 | 3 | 6 |
 | | | **Toplam** | **19** | **32** |
