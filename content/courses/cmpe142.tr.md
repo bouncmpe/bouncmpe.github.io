@@ -1,10 +1,10 @@
 ---
-title: CMPE240
+title: CMPE142
 description: Sayısal Sistemler
 metadata: none
-# thumbnail: https://picsum.photos/seed/cmpe240/1400
+# thumbnail: https://picsum.photos/seed/cmpe142/1400
 aliases:
-  - undergraduate/courses/cmpe240
+  - undergraduate/courses/cmpe142
 ---
 
 ## Course Information
@@ -14,7 +14,7 @@ aliases:
 |||
 | :-- | :-- |
 | Fakülte | Mühendislik Fakültesi |
-| Ders Kodu | CMPE240 |
+| Ders Kodu | CMPE142 |
 | Ders Başlığı | Dijital Sistemler |
 | Öğretim Dili | İngilizce |
 | Ders Dönemi | Bahar |
@@ -34,8 +34,8 @@ Sayı sistemleri. Boolean cebiri, mantık ağları ve basitleştirilmesi. Kapıl
 
 ## Current Instructor
 
-{{< people tag="cmpe240" cols="2">}}
+{{< people tag="cmpe142" cols="2">}}
 
 ## Previous Instructors
 
-{{< people_alt tag="former-cmpe240" cols="3">}}
+{{< people_alt tag="former-cmpe142" cols="3">}}
