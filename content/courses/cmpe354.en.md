@@ -18,9 +18,9 @@ aliases:
 | Course Title | Software Engineering |
 | Language of Instruction | English |
 | Course Semester | Spring |
-| Course Hours | Lecture: 2, PS:0, Labs: 2 |
+| Course Hours | Lecture: 3, PS:1, Labs: 2 |
 | Course Credits | 4 |
-| ECTS | 4 |
+| ECTS | 7 |
 | Grading Mode | Letter Grade |
 | Prerequisites | CMPE222 |
 | Corequisites | None |
