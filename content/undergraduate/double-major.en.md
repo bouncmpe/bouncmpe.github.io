@@ -11,7 +11,8 @@ A double major program enables Boğaziçi University students to concurrently
 obtain two separate undergraduate diplomas for two separate undergraduate
 programs.
 
-[**Double Major Programs Directive**](http://bogazici.edu.tr/tr_TR/Content/Ogrenciler/Ogrenci_Isleri/Yonetmelik_ve_Ic_Tuzukler/Cift_Anadal_Programlari_Yonergesi) at Boğaziçi University encompasses
+[**Double Major Programs Directive**](https://bogazici.edu.tr/tr/pages/
+bogazici-universitesi-cift-ana-dal-programlar/661) at Boğaziçi University encompasses
 provisions regarding student admissions and registration procedures for double
 major programs conducted at Boğaziçi University, as well as regulations
 pertaining to the implementation of double major program practices. You can

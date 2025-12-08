@@ -9,7 +9,8 @@ weight: 4
 
 Boğaziçi Üniversitesi'nde çift ana dal programı, öğrencilere aynı anda iki ayrı lisans programı için iki ayrı lisans diploması alma imkanı sunarak akademik ufuklarını genişletmelerine ve farklı disiplinlerde bilgi ve beceri edinmelerine olanak tanır. Bu program, farklı alanlarda ilgi ve yetenekleri olan, entelektüel merakı yüksek ve bilgi birikimini derinleştirmek isteyen öğrenciler için ideal bir fırsattır.
 
-[**Boğaziçi Üniversitesi Çift Ana Dal Programları Yönergesi**](https://bogazici.edu.tr/tr_TR/Content/Ogrenciler/Ogrenci_Isleri/Yonetmelik_ve_Ic_Tuzukler/Cift_Anadal_Programlari_Yonergesi), üniversitede yürütülen çift ana dal programlarına öğrenci kabul ve kayıt işlemleri ile ilgili hükümleri ve çift ana dal program uygulamalarının yürütülmesine ilişkin düzenlemeleri kapsar. Bu yönerge, çift ana dal programına başvurmayı düşünen öğrencilerin bilmesi gereken tüm detayları içerir. Yönergeyi Üniversitenin web sayfasından inceleyebilirsiniz.
+[**Boğaziçi Üniversitesi Çift Ana Dal Programları Yönergesi**](https://bogazici.edu.tr/tr/pages/
+bogazici-universitesi-cift-ana-dal-programlar/661)), üniversitede yürütülen çift ana dal programlarına öğrenci kabul ve kayıt işlemleri ile ilgili hükümleri ve çift ana dal program uygulamalarının yürütülmesine ilişkin düzenlemeleri kapsar. Bu yönerge, çift ana dal programına başvurmayı düşünen öğrencilerin bilmesi gereken tüm detayları içerir. Yönergeyi Üniversitenin web sayfasından inceleyebilirsiniz.
 
 Yönergenin özellikle 7. maddesinde, üniversite genelinde çift ana dal programlarına kabul için gereken asgari koşullar sıralanmaktadır. Bölümler, çift ana dal programı başvuranlarından programa özgü ek koşullar talep edebilir.
 

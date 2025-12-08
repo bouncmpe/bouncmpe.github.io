@@ -11,7 +11,8 @@ A minor program enables Boğaziçi University students to obtain a non-degree
 certificate by completing a limited number of courses in a specific field within
 another undergraduate program at the University.
 
-[**Minor Degree Programs Directive**](https://bogazici.edu.tr/tr-TR/Content/Ogrenciler/Ogrenci_Isleri/Yonetmelik_ve_Ic_Tuzukler/Yandal_Yonergesi) at Boğaziçi University encompasses
+[**Minor Degree Programs Directive**](https://bogazici.edu.tr/tr/pages/
+bogazici-universitesi-degisim-programlari-yon/668) at Boğaziçi University encompasses
 provisions regarding student admissions and registration procedures for minor degree
 programs conducted at Boğaziçi University, as well as regulations
 pertaining to the implementation of minor degree program practices. You can

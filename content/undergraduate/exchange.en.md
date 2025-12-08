@@ -24,7 +24,7 @@ for the most recent information about applications and procedures.
 {{< /card >}}
 {{< card title="Outgoing Students" class="border-0 py-4" icon="fas plane-departure" >}} [Read more](https://intl.bogazici.edu.tr/?q=outgoing-students)
 {{< /card >}}
-{{< card title="Exchange Partners" class="border-0 py-4" icon="fas handshake-simple" >}} [Read more](https://intl.bogazici.edu.tr/?q=global-exchange-partners-detailed)
+{{< card title="Exchange Partners" class="border-0 py-4" icon="fas handshake-simple" >}} [Read more](https://intl.bogazici.edu.tr/global-exchange-partners-detailed-list)
 {{< /card >}}
 {{< /card-group >}}
 

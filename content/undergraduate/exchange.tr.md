@@ -21,7 +21,7 @@ Boğaziçi Üniversitesi'nde uluslararası ilişkilerden sorumlu birim olan [**U
 {{< /card >}}
 {{< card title="Giden Öğrenciler" class="border-0 py-4" icon="fas plane-departure" >}} [Daha fazla bilgi](https://intl.bogazici.edu.tr/?q=outgoing-students)
 {{< /card >}}
-{{< card title="Değişim Ortakları" class="border-0 py-4" icon="fas handshake-simple" >}} [Daha fazla bilgi](https://intl.bogazici.edu.tr/?q=global-exchange-partners-detailed)
+{{< card title="Değişim Ortakları" class="border-0 py-4" icon="fas handshake-simple" >}} [Daha fazla bilgi](https://intl.bogazici.edu.tr/global-exchange-partners-detailed-list)
 {{< /card >}}
 {{< /card-group >}}
 
