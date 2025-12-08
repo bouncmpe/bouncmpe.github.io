@@ -9,8 +9,7 @@ weight: 5
 
 Boğaziçi Üniversitesi'nde yan dal programları, öğrencilere üniversitedeki başka bir lisans programında belirli bir alanda sınırlı sayıda ders tamamlayarak diploma sayılmayan bir sertifika alma imkanı sunar. Bu programlar, öğrencilerin ana dalları dışındaki alanlarda bilgi ve becerilerini geliştirmelerine olanak tanır.
 
-[**Boğaziçi Üniversitesi Yan Dal Programları Yönergesi**](https://bogazici.edu.tr/tr/pages/
-bogazici-universitesi-degisim-programlari-yon/668), üniversitede yürütülen yan dal programlarına öğrenci kabul ve kayıt işlemleri ile ilgili hükümleri ve yan dal program uygulamalarının yürütülmesine ilişkin düzenlemeleri kapsar. Yönergeyi Üniversitenin web sayfasından inceleyebilirsiniz.
+[**Boğaziçi Üniversitesi Yan Dal Programları Yönergesi**](https://bogazici.edu.tr/tr/pages/bogazici-universitesi-degisim-programlari-yon/668), üniversitede yürütülen yan dal programlarına öğrenci kabul ve kayıt işlemleri ile ilgili hükümleri ve yan dal program uygulamalarının yürütülmesine ilişkin düzenlemeleri kapsar. Yönergeyi Üniversitenin web sayfasından inceleyebilirsiniz.
 
 Yönergenin özellikle 7. maddesinde, üniversite genelinde yan dal programlarına kabul için gereken asgari koşullar sıralanmaktadır. Bölümler, yan dal programı başvuranlarından programa özgü ek koşullar talep edebilir.
 
