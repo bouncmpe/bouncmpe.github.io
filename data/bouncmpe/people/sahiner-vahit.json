@@ -1,6 +1,10 @@
 {
   "name": "Ali Vahit Şahiner",
-  "tags": ["former-faculty","former-cmpe150"],
+  "tags": [
+    "former-faculty",
+    "former-cmpe150",
+    "former-medialab-member"
+  ],
   "type": "person",
   "thumbnail": "images/people/sahiner_vahit.jpg"
 }

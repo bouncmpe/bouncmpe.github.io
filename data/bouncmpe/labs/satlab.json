@@ -1,0 +1,9 @@
+{
+    "name": "SATLAB",
+    "type": "lab",
+    "thumbnail": "images/lablogo/satlab.jpg",
+    "description": "Satellite Communications Laboratory",
+    "tags": [
+        "laboratory"
+    ]
+}
