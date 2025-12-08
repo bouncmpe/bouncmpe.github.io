@@ -1,6 +1,14 @@
 {{ $news := where site.RegularPages.ByDate.Reverse "Section" "news" }}
 {{ $featured := where $news "Params.featured" "eq" true }}
 
+{{/* GitHub issue link for creating a new story */}}
+{{ $repo := .Site.Params.github.repo }}
+{{ $storyIssueURL := "" }}
+{{ with $repo }}
+  {{/* change `news.yml` to your actual template file name */}}
+  {{ $storyIssueURL = printf "%s/issues/new?template=news.yml" . }}
+{{ end }}
+
 {{ if $news }}
     <section id="newsroom">
         <h1 class="display-6 my-4">{{ i18n "latest-stories" | title }}</h1>
@@ -81,7 +89,8 @@
             <div class="card rounded-4">
                 <ul class="list-group list-group-flush">
                   <li class="list-group-item">
-                    <a href="/admin" class="stretched-link">
+                    <a href="{{ if $storyIssueURL }}{{ $storyIssueURL }}{{ else }}/admin{{ end }}" 
+                    class="stretched-link" target="_blank" rel="noopener">
                         <img src="/icons/plus-circle.svg" alt="">
                     </a>                  
                   </li>

@@ -58,6 +58,10 @@ social:
 mermaid:
   align: center
 
+github:
+  repo: "https://github.com/bouncmpe/bouncmpe.github.io"
+  branch: "main"
+
 # sections:
 #   about:
 #     title:

@@ -1,6 +1,6 @@
 ---
 title: CMPE230
-description: Systems Programming
+description: Sistem Programlama
 metadata: none
 # thumbnail: https://picsum.photos/seed/cmpe230/1400
 aliases:
