@@ -58,7 +58,7 @@ hasMermaid: true
 | **Ders Kodu** |**Ders Başlığı** | **Önkoşullar** | **Kredi** | **AKTS** |
 | [CMPE320](/tr/courses/cmpe320) | Programlama Dillerinin Prensipleri | CMPE250 | 3 | 5 |
 | [CMPE350](/tr/courses/cmpe350) | Biçimsel Diller ve Makineler Kuramı | CMPE220 | 3 | 5 |
-| [CMPE354](/tr/courses/cmpe354) | Yazılım Mühendisliği | CMPE222 | 4 | 4 |
+| [CMPE354](/tr/courses/cmpe354) | Yazılım Mühendisliği | CMPE222 | 4 | 7 |
 | [CMPE362](/tr/courses/cmpe362) | Bilgisayar Mühendisleri için Sinyal İşlemeye Giriş | MATH202 | 3 | 6 |
 | IE306 | Sistem Benzetimi | CMPE343 | 4 | 7 |
 | HTR312 | Türkiye Cumhuriyeti Tarihi II | | 2 | 3 |
