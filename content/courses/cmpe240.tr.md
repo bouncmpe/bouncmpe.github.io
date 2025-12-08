@@ -1,6 +1,6 @@
 ---
 title: CMPE240
-description: Digital Systems
+description: Dijital Sistemler
 metadata: none
 # thumbnail: https://picsum.photos/seed/cmpe240/1400
 aliases:
