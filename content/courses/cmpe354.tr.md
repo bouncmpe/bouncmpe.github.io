@@ -18,9 +18,9 @@ aliases:
 | Ders Başlığı | Yazılım Mühendisliği |
 | Öğretim Dili | İngilizce |
 | Ders Dönemi | Güz |
-| Ders Saatleri | Ders: 2, PS:0, Laboratuvar:2 |
+| Ders Saatleri | Ders: 3, PS:1, Laboratuvar:2 |
 | Ders Kredisi | 4 |
-| AKTS | 4 |
+| AKTS | 7 |
 | Notlandırma Sistemi | Harf Notu |
 | Önkoşul dersleri | CMPE222  |
 | Eşkoşul dersleri | Yok |
