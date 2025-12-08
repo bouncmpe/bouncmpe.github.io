@@ -1,5 +1,6 @@
 ---
-title: SATLAB
+title: Uydu Ağları Araştırma Laboratuvarı
+description: SATLAB
 type: redirect
-target: https://cmpe.bogazici.edu.tr/g-satlab
+target: https://satlab.cmpe.bogazici.edu.tr
 ---

@@ -1,5 +1,6 @@
 ---
-title: Netlab
+title: Bilgisayar Ağları Araştırma Laboratuvarı
+description: NETLAB
 type: redirect
-target: https://cmpe.bogazici.edu.tr/g-netlab
+target: https://netlab.cmpe.bogazici.edu.tr
 ---
