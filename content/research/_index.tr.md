@@ -7,7 +7,7 @@ content_blocks:
     heading:
       title: Araştırma
       content: >-
-        Bilgisayar Mühendisliği Bölümü’ndeki araştırma laboratuvarları ve projeleri; yapay zekâ, biyoinformatik, bilgisayar ağları, gömülü sistem tasarımı ve robotikten paralel, dağıtık ve her yerde hazır bulunan hesaplamaya, ayrıca biçimsel yöntemler ile bilgisayar biliminin matematiksel temellerine uzanan geniş ve disiplinler arası bir yelpazeyi kapsamaktadır. Bu çalışmalar; siber güvenlik, multimedya sistemleri, yazılım mühendisliği, insan–bilgisayar etkileşimi ve yeni nesil hesaplama mimarileri gibi kritik alanları da içermekte olup, bölümün hem kuramsal araştırmaları hem de uygulamaya yönelik yenilikleri ilerletmeye yönelik kapsamlı yaklaşımını yansıtmaktadır.
+        Bilgisayar Mühendisliği Bölümü’ndeki araştırma laboratuvarları ve projeleri; yapay zeka, biyoinformatik, bilgisayar ağları, gömülü sistem tasarımı ve robotikten paralel, dağıtık ve her yerde hazır bulunan hesaplamaya, ayrıca biçimsel yöntemler ile bilgisayar biliminin matematiksel temellerine uzanan geniş ve disiplinler arası bir yelpazeyi kapsamaktadır. Bu çalışmalar; otonom sistemler, yazılım mühendisliği, insan–bilgisayar etkileşimi ve yeni nesil hesaplama mimarileri gibi kritik alanları da içermekte olup, bölümün hem kuramsal araştırmaları hem de uygulamaya yönelik yenilikleri ilerletmeye yönelik kapsamlı yaklaşımını yansıtmaktadır.
       align: start
       width: 8
   - _bookshop_name: articles
@@ -15,7 +15,7 @@ content_blocks:
       title: Araştırma Labları ve Grupları
       align: start
       width: 8
-    hide-empty: false
+    hide-empty: true
     input:
       section: g
       reverse: false

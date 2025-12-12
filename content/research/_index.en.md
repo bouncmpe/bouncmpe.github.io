@@ -7,7 +7,7 @@ content_blocks:
     heading:
       title: Research
       content: >-
-        The research laboratories and projects within the Department of Computer Engineering encompass a broad and interdisciplinary spectrum, extending from artificial intelligence, bioinformatics, computer networks, embedded system design, and robotics to parallel, distributed, and ubiquitous computing, as well as formal methods and the mathematical foundations of computer science. These activities further incorporate critical areas such as cybersecurity, multimedia systems, software engineering, human–computer interaction, and next-generation computational architectures, reflecting the department’s comprehensive commitment to advancing both theoretical inquiry and practical innovation across the computing discipline.
+        The research laboratories and projects within the Department of Computer Engineering encompass a broad and interdisciplinary spectrum, extending from artificial intelligence, bioinformatics, computer networks, embedded system design, and robotics to parallel, distributed, and ubiquitous computing, as well as formal methods and the mathematical foundations of computer science. These activities further incorporate critical areas such as autonomous systems, software engineering, human–computer interaction, and next-generation computational architectures, reflecting the department’s comprehensive commitment to advancing both theoretical inquiry and practical innovation across the computing discipline.
       align: start
       width: 8
   - _bookshop_name: articles
@@ -15,7 +15,7 @@ content_blocks:
       title: Research Labs and Groups
       align: start
       width: 8
-    hide-empty: false
+    hide-empty: true
     input:
       section: g
       reverse: false
