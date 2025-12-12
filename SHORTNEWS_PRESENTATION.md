@@ -339,8 +339,8 @@ shortnews:
 📚 **SHORTNEWS_EXAMPLES.md** - Code samples and templates
 🚀 **SHORTNEWS_QUICKSTART.md** - Step-by-step implementation
 
-**Total**: 2,516 lines, ~73 pages, ~25,000 words
-**Reading time**: 30 min (quick path) to 2 hours (complete)
+**Total**: 2,967 lines, ~80 pages, ~28,000 words
+**Reading time**: 30 min (quick path) to 2.5 hours (complete)
 
 ---
 
