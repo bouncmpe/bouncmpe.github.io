@@ -19,28 +19,28 @@ This matrix helps compare the three proposed layout options for displaying short
 | Criteria | Option 1: Sidebar | Option 2: Section | Option 3: Timeline | Weight |
 |----------|-------------------|-------------------|-------------------|--------|
 | **User Experience** |
-| Visibility | ⭐⭐⭐ Always visible | ⭐⭐⭐⭐ High prominence | ⭐⭐ May be overlooked | High |
-| Accessibility | ⭐⭐⭐⭐ Easy to scan | ⭐⭐⭐⭐ Very clear | ⭐⭐⭐ Requires scrolling | High |
-| Mobile Experience | ⭐⭐⭐⭐ Stacks naturally | ⭐⭐⭐ Good | ⭐⭐ Challenging | High |
-| Content Density | ⭐⭐⭐ Moderate (10 items) | ⭐⭐⭐⭐ High (15+ items) | ⭐⭐⭐ Good (12 items) | Medium |
+| Visibility | 3/4 - Always visible | 4/4 - High prominence | 2/4 - May be overlooked | High |
+| Accessibility | 4/4 - Easy to scan | 4/4 - Very clear | 3/4 - Requires scrolling | High |
+| Mobile Experience | 4/4 - Stacks naturally | 3/4 - Good | 2/4 - Challenging | High |
+| Content Density | 3/4 - Moderate (10 items) | 4/4 - High (15+ items) | 3/4 - Good (12 items) | Medium |
 | **Design & Layout** |
-| Integration | ⭐⭐⭐⭐ Seamless | ⭐⭐⭐ Adds new section | ⭐⭐ Unconventional | High |
-| Visual Balance | ⭐⭐⭐⭐ Balanced | ⭐⭐⭐ May feel crowded | ⭐⭐⭐ Asymmetric | Medium |
-| Responsive Design | ⭐⭐⭐⭐ Easy | ⭐⭐⭐ Moderate | ⭐⭐ Complex | High |
+| Integration | 4/4 - Seamless | 3/4 - Adds new section | 2/4 - Unconventional | High |
+| Visual Balance | 4/4 - Balanced | 3/4 - May feel crowded | 3/4 - Asymmetric | Medium |
+| Responsive Design | 4/4 - Easy | 3/4 - Moderate | 2/4 - Complex | High |
 | **Implementation** |
-| Development Time | ⭐⭐⭐⭐ Quick (3-4 days) | ⭐⭐⭐ Medium (5-7 days) | ⭐⭐ Longer (8-10 days) | Medium |
-| Complexity | ⭐⭐⭐⭐ Simple | ⭐⭐⭐ Moderate | ⭐⭐ Complex | Medium |
-| Maintenance | ⭐⭐⭐⭐ Easy | ⭐⭐⭐ Easy | ⭐⭐⭐ Moderate | Medium |
+| Development Time | 4/4 - Quick (3-4 days) | 3/4 - Medium (5-7 days) | 2/4 - Longer (8-10 days) | Medium |
+| Complexity | 4/4 - Simple | 3/4 - Moderate | 2/4 - Complex | Medium |
+| Maintenance | 4/4 - Easy | 3/4 - Easy | 3/4 - Moderate | Medium |
 | **Content Management** |
-| Scalability | ⭐⭐⭐ Limited by height | ⭐⭐⭐⭐ More flexible | ⭐⭐⭐ Good | Medium |
-| Update Frequency | ⭐⭐⭐⭐ Supports frequent | ⭐⭐⭐⭐ Supports frequent | ⭐⭐⭐⭐ Supports frequent | Low |
-| **Total Score** | **37/44** ⭐⭐⭐⭐ | **35/44** ⭐⭐⭐⭐ | **27/44** ⭐⭐⭐ | |
+| Scalability | 3/4 - Limited by height | 4/4 - More flexible | 3/4 - Good | Medium |
+| Update Frequency | 4/4 - Supports frequent | 4/4 - Supports frequent | 4/4 - Supports frequent | Low |
+| **Total Score** | **37/44 (84%)** - Excellent | **35/44 (80%)** - Excellent | **27/44 (61%)** - Good | |
 
 ---
 
 ## Pros and Cons Summary
 
-### Option 1: Sidebar Widget ⭐⭐⭐⭐ (Recommended)
+### Option 1: Sidebar Widget (Score: 37/44, 84% - Recommended)
 
 #### Pros ✅
 - **Familiar pattern**: Matches existing eventbar on the right
@@ -64,7 +64,7 @@ This matrix helps compare the three proposed layout options for displaying short
 
 ---
 
-### Option 2: Full-Width Section ⭐⭐⭐⭐
+### Option 2: Full-Width Section (Score: 35/44, 80%)
 
 #### Pros ✅
 - **High visibility**: Dedicated, prominent section
@@ -89,7 +89,7 @@ This matrix helps compare the three proposed layout options for displaying short
 
 ---
 
-### Option 3: Timeline Layout ⭐⭐⭐
+### Option 3: Timeline Layout (Score: 27/44, 61%)
 
 #### Pros ✅
 - **Chronologically clear**: Timeline metaphor is intuitive
@@ -134,7 +134,7 @@ This matrix helps compare the three proposed layout options for displaying short
 │ Recent Stories   │
 └──────────────────┘
 ```
-**Result**: Natural stacking, clear sections ⭐⭐⭐⭐
+**Result**: Natural stacking, clear sections (Rating: 4/4 - Excellent)
 
 #### Option 2: Section
 ```
@@ -151,7 +151,7 @@ This matrix helps compare the three proposed layout options for displaying short
 │ Recent Stories   │
 └──────────────────┘
 ```
-**Result**: Very long scrolling required ⭐⭐⭐
+**Result**: Very long scrolling required (Rating: 3/4 - Good)
 
 #### Option 3: Timeline
 ```
@@ -166,7 +166,7 @@ This matrix helps compare the three proposed layout options for displaying short
 │ Recent Stories   │
 └──────────────────┘
 ```
-**Result**: Cramped, difficult to read ⭐⭐
+**Result**: Cramped, difficult to read (Rating: 2/4 - Fair)
 
 ---
 

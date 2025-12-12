@@ -69,7 +69,7 @@ Expected: _____ items per month
 ### How to Provide Feedback
 
 **Option A**: Comment on the GitHub issue
-- Go to the issue: [Add Short News](https://github.com/bouncmpe/bouncmpe.github.io/issues/XXX)
+- Go to the issue (check the original issue that requested this feature)
 - Add your feedback as a comment
 - Tag relevant people: @gokceuludogan @Cydonia01 @uskudarli
 

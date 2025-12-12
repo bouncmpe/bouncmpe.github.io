@@ -261,8 +261,8 @@ shortnews:
 ## Contact
 
 For questions or feedback on these requirements, please comment on the GitHub issue or contact:
-- @doganulus (Project lead)
-- @gokceuludogan @Cydonia01 @uskudarli (Stakeholders)
+- `@doganulus` (Project lead)
+- `@gokceuludogan` `@Cydonia01` `@uskudarli` (Stakeholders)
 
 ---
 

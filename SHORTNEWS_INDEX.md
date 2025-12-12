@@ -318,8 +318,8 @@ Once approved, can begin immediately with step-by-step guide.
 
 ## Related Issues
 
-- Original issue: [Add Short News](https://github.com/bouncmpe/bouncmpe.github.io/issues/XXX)
-- Implementation tracking: TBD (after approval)
+- Original issue: Check the GitHub issue that requested this requirements brainstorming
+- Implementation tracking: TBD (will be created after approval)
 
 ---
 
