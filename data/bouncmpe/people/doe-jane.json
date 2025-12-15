@@ -1,0 +1,70 @@
+{
+  "name": "Jane Doe",
+  "position": "Postdoctoral Researcher",
+  "type": "person",
+
+  "thumbnail": "images/person.png",
+  "email": "jane.doe@university.edu",
+  "office": "Building C, Room 404",
+  "phone": "+1 (555) 123-4567",
+  "homepage": "/u/jane.doe",
+  "legacy_url": "https://janedoe.github.io/old-site",
+
+  "github": "janedoe",
+  "linkedin": "janedoe",
+  "google_scholar": "https://scholar.google.com/",
+  "orcid": "0000-0000-0000-0000",
+  "researchgate": "jane-doe",
+
+  "short_bio": "Postdoctoral Researcher specializing in Human-Computer Interaction and Generative AI at the University of Technology.",
+
+  "long_bio": "I am a Postdoctoral Researcher within the Computer Science department. My research focuses on bridging the gap between large language models and human cognitive processes. I am currently leading the 'Safe AI' initiative within the department.",
+
+  "research_areas": [
+    "Human-Computer Interaction",
+    "Generative AI",
+    "Cognitive Science",
+    "Data Visualization"
+  ],
+
+  "courses": ["#cs101", "#cs305", "#ai400", "#data501"],
+
+  "education": [
+    {
+      "degree": "PhD in Computer Science",
+      "institution": "University of Technology",
+      "year": "2020–2024"
+    },
+    {
+      "degree": "MSc in Data Science",
+      "institution": "State University",
+      "year": "2018–2020"
+    },
+    {
+      "degree": "BSc in Mathematics",
+      "institution": "State University",
+      "year": "2014–2018"
+    }
+  ],
+
+  "labs": [
+    { "name": "HCI Lab", "url": "https://hci.example.edu" },
+    "AI Safety Group"
+  ],
+
+  "roles": [
+    "Postdoctoral Researcher",
+    "Graduate Mentor",
+    "Ethics Committee Member"
+  ],
+
+  "awards": [
+    "Best Paper Award - CHI 2023",
+    "Excellence in Teaching Fellowship 2022"
+  ],
+
+  "publications": [
+    "<b>Doe, J.</b>, Smith, A. (2024). <i>Interaction Patterns in LLMs.</i> Journal of Computing.",
+    "Brown, B., <b>Doe, J.</b> (2023). <i>Visualizing Neural Networks.</i> IEEE Proceedings."
+  ]
+}

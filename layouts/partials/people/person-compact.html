@@ -1,0 +1,131 @@
+{{- $p := .Person -}}
+{{- $page := .Page -}}
+
+{{- $thumb := $p.thumbnail | default "images/person.png" -}}
+{{- with resources.Get $thumb -}}
+  {{- $thumb = (.Fill "260x260 webp q90 smart").RelPermalink -}}
+{{- end -}}
+
+{{- $scholar := or $p.google_scholar $p.scholar -}}
+{{- $legacy := or $page.Params.target $p.legacy_url -}}
+
+<div class="container my-5">
+  <div class="card border-0 shadow-sm p-4">
+
+    <div class="row g-4 align-items-center">
+
+      <div class="col-12 col-md-3 text-center align-self-start">
+        <img src="{{ $thumb }}"
+             class="rounded-3 shadow-sm img-fluid"
+             style="max-width: 260px; width: 100%; height: auto; object-fit:cover; display:block; margin: 0 auto;">      
+      </div>
+
+      <div class="col-12 col-md-9">
+        {{ with $p.short_bio }}
+          <p class="mb-3"><span class="fw-semibold">Short Bio:</span> {{ . }}</p>
+        {{ end }}
+
+        <div class="row mt-3 small">
+          
+          <div class="col-12 col-md-8">
+            <div class="links">
+              {{ with $p.email }}
+                <div class="mb-1">
+                  <span class="fw-semibold d-inline-block text-secondary" style="width: 70px;">Email:</span> 
+                  <a href="mailto:{{ . }}">{{ . }}</a>
+                </div>
+              {{ end }}
+              
+              {{ with $p.office }}
+                <div class="mb-1">
+                  <span class="fw-semibold d-inline-block text-secondary" style="width: 70px;">Office:</span> 
+                  {{ . }}
+                </div>
+              {{ end }}
+              
+              {{ with $p.phone }}
+                <div class="mb-1">
+                  <span class="fw-semibold d-inline-block text-secondary" style="width: 70px;">Phone:</span> 
+                  {{ . }}
+                </div>
+              {{ end }}
+              
+              {{ with $p.homepage }}
+                <div class="mb-1">
+                  <span class="fw-semibold d-inline-block text-secondary" style="width: 70px;">Website:</span> 
+                  <a href="{{ . }}">{{ . }}</a>
+                </div>
+              {{ end }}
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4 text-md-end mt-3 mt-md-0">
+             {{ with $p.github }}<a href="https://github.com/{{ . }}" class="me-2">GitHub</a>{{ end }}
+             {{ with $p.linkedin }}<a href="https://www.linkedin.com/in/{{ . }}" class="me-2">LinkedIn</a>{{ end }}
+             {{ with $scholar }}<a href="{{ . }}" class="me-2">Google Scholar</a>{{ end }}
+             {{ with $p.orcid }}<a href="https://orcid.org/{{ . }}" class="me-2">ORCID</a>{{ end }}
+        
+             {{ with $legacy }}
+              <div class="mt-2">
+                <a href="{{ . }}" class="btn btn-outline-primary btn-sm">Legacy personal page</a>
+              </div>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="my-4">
+
+    <div class="row g-4 small align-items-start">
+      <div class="col-12 col-md-6">
+        {{ with $p.research_areas }}
+          <h2 class="h6 text-uppercase text-muted">Research Areas</h2>
+          <ul class="mb-3">
+            {{ range . }}<li>{{ . }}</li>{{ end }}
+          </ul>
+        {{ end }}
+
+        {{ with $p.courses }}
+          <h2 class="h6 text-uppercase text-muted">Courses</h2>
+          <ul class="mb-3">
+            {{ range . }}<li>{{ . }}</li>{{ end }}
+          </ul>
+        {{ end }}
+      </div>
+
+      <div class="col-12 col-md-6">
+        {{ with $p.labs }}
+          <h2 class="h6 text-uppercase text-muted">Labs</h2>
+          <ul class="mb-3">
+            {{ range $i, $lab := . }}
+              <li>
+                {{ if (reflect.IsMap $lab) }}
+                  {{ with $lab.url }}
+                    <a href="{{ . }}">{{ $lab.name }}</a>
+                  {{ else }}
+                    {{ $lab.name }}
+                  {{ end }}
+                {{ else }}
+                  {{ $lab }}
+                {{ end }}
+              </li>
+            {{ end }}
+          </ul>
+        {{ end }}
+        {{ with $p.education }}
+          <h2 class="h6 text-uppercase text-muted">Education</h2>
+          <ul class="mb-3 list-unstyled">
+            {{ range . }}
+              <li class="mb-1">
+                <strong>{{ .degree }}</strong><br>
+                {{ .institution }}{{ with .year }}, {{ . }}{{ end }}
+              </li>
+            {{ end }}
+          </ul>
+        {{ end }}
+      </div>
+    </div>
+
+  </div>
+</div>
