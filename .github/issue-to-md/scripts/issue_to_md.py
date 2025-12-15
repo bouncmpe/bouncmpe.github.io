@@ -199,6 +199,16 @@ IMG_SRC_RE = re.compile(r'src="(https?://[^"]+)"')
 # Allowed image formats
 ALLOWED_IMAGE_FORMATS = {".jpg", ".jpeg", ".png", ".gif", ".webp", ".svg"}
 
+# Content-Type to extension mapping for common image types
+CONTENT_TYPE_TO_EXT = {
+    "image/jpeg": ".jpg",
+    "image/jpg": ".jpg",
+    "image/png": ".png",
+    "image/gif": ".gif",
+    "image/webp": ".webp",
+    "image/svg+xml": ".svg",
+}
+
 def validate_image_format(url: str) -> tuple[bool, str]:
     """
     Validate if the image URL has an allowed format.
@@ -207,6 +217,11 @@ def validate_image_format(url: str) -> tuple[bool, str]:
     # Extract file extension from URL
     path = Path(url.split("?")[0])  # Remove query params
     ext = path.suffix.lower()
+    
+    # If no extension in URL, we'll validate during download via Content-Type
+    # So return True here and let download_image_if_present handle it
+    if not ext:
+        return True, ""
     
     if ext not in ALLOWED_IMAGE_FORMATS:
         return False, f"Invalid image format '{ext}'. Allowed formats: {', '.join(sorted(ALLOWED_IMAGE_FORMATS))}"
@@ -228,58 +243,62 @@ def find_all_images(text: str) -> list[str]:
         urls.append(match.group(1))
     return urls
 
-def download_image_if_present(markdown_or_html: str, validate_only: bool = False) -> tuple[str, list[str]]:
+def find_uploaded_files(text: str) -> list[str]:
     """
-    Looks for an image URL in markdown or HTML; downloads to assets/uploads/.
-    
-    Args:
-        markdown_or_html: Text containing image references
-        validate_only: If True, only validate without downloading
-    
-    Returns:
-        Tuple of (relative_path, list_of_errors)
-        - relative_path: 'uploads/<filename>' or "" if none/error
-        - list_of_errors: List of validation error messages
+    Find all GitHub file upload URLs in text (images or other files).
+    Returns list of URLs.
     """
-    if not markdown_or_html:
-        return "", []
-    
-    m = IMG_MD_RE.search(markdown_or_html) or IMG_SRC_RE.search(markdown_or_html)
-    if not m:
-        return "", []
-    
-    url = m.group(1)
+    if not text:
+        return []
+    # GitHub upload URLs pattern
+    file_url_pattern = re.compile(r'https?://(?:github\.com/[^/]+/[^/]+/files/\d+/[^)\s]+|github\.com/user-attachments/[^)\s]+)')
+    return file_url_pattern.findall(text)
+
+def _validate_file_uploads(markdown_text: str) -> list[str]:
+    """Validate file uploads in text and return errors."""
     errors = []
+    file_matches = find_uploaded_files(markdown_text)
     
-    # Validate format
-    is_valid, error_msg = validate_image_format(url)
-    if not is_valid:
-        errors.append(error_msg)
-        dprint(f"Image validation failed: {error_msg}")
-        if validate_only:
-            return "", errors
-        # Even with invalid format, we might want to stop here
-        return "", errors
-    
-    if validate_only:
-        return "", []
-    
-    # Download the image
+    for file_url in file_matches:
+        dprint(f"Found file upload URL: {file_url}")
+        path = Path(file_url.split("?")[0])
+        ext = path.suffix.lower()
+        if ext and ext not in ALLOWED_IMAGE_FORMATS:
+            errors.append(
+                f"Invalid file type '{ext}' uploaded to image field. "
+                f"Only image files are allowed: {', '.join(sorted(ALLOWED_IMAGE_FORMATS))}"
+            )
+            dprint(f"Rejected non-image file: {ext}")
+    return errors
+
+def _extract_image_url(markdown_or_html: str) -> Optional[str]:
+    """Extract image URL from markdown or HTML."""
+    m = IMG_MD_RE.search(markdown_or_html) or IMG_SRC_RE.search(markdown_or_html)
+    return m.group(1) if m else None
+
+def _download_and_save_image(url: str, issue_number: int) -> tuple[str, list[str]]:
+    """Download image and save to uploads directory."""
+    errors = []
     try:
         dprint("Downloading image:", url)
         resp = requests.get(url, timeout=20)
         resp.raise_for_status()
-        ctype = (resp.headers.get("Content-Type") or "").split(";")[0]
-        ext = mimetypes.guess_extension(ctype) or Path(url).suffix or ".png"
+        ctype = (resp.headers.get("Content-Type") or "").split(";")[0].strip()
+        dprint(f"Content-Type: {ctype}")
         
-        # Double-check the extension from content-type
+        ext = CONTENT_TYPE_TO_EXT.get(ctype) or mimetypes.guess_extension(ctype) or Path(url).suffix or ".png"
+        dprint(f"Determined extension: {ext}")
+        
         if ext.lower() not in ALLOWED_IMAGE_FORMATS:
-            error_msg = f"Server returned invalid content type '{ctype}' with extension '{ext}'"
+            error_msg = (
+                f"Invalid image type. Server returned content type '{ctype}' "
+                f"(extension: '{ext}'). Allowed formats: {', '.join(sorted(ALLOWED_IMAGE_FORMATS))}"
+            )
             errors.append(error_msg)
             dprint(error_msg)
             return "", errors
         
-        fname = f"{ISSUE_NUMBER}_{datetime.now().strftime('%Y%m%d%H%M%S')}{ext}"
+        fname = f"{issue_number}_{datetime.now().strftime('%Y%m%d%H%M%S')}{ext}"
         ensure_dirs(UPLOADS_DIR)
         path = UPLOADS_DIR / fname
         path.write_bytes(resp.content)
@@ -291,6 +310,49 @@ def download_image_if_present(markdown_or_html: str, validate_only: bool = False
         errors.append(error_msg)
         dprint(error_msg)
         return "", errors
+
+def download_image_if_present(markdown_or_html: str, validate_only: bool = False) -> tuple[str, list[str]]:
+    """
+    Looks for an image URL in markdown or HTML; downloads to assets/uploads/.
+    
+    Args:
+        markdown_or_html: Text containing image references
+        validate_only: If True, only validate without downloading
+    
+    Returns:
+        Tuple of (relative_path, list_of_errors)
+    """
+    if not markdown_or_html:
+        return "", []
+    
+    # Validate any file uploads first
+    errors = _validate_file_uploads(markdown_or_html)
+    if errors:
+        return "", errors
+    
+    # Extract image URL
+    url = _extract_image_url(markdown_or_html)
+    if not url:
+        file_matches = find_uploaded_files(markdown_or_html)
+        if file_matches:
+            errors.append(
+                "File uploaded but not in proper image markdown format. "
+                "Please use image files (JPG, PNG, GIF, WebP, SVG) and ensure they display as images in the preview."
+            )
+        return "", errors
+    
+    # Validate format
+    is_valid, error_msg = validate_image_format(url)
+    if not is_valid:
+        errors.append(error_msg)
+        dprint(f"Image validation failed: {error_msg}")
+        return "", errors
+    
+    if validate_only:
+        return "", []
+    
+    # Download the image
+    return _download_and_save_image(url, ISSUE_NUMBER)
 
 # ────────────────────────────────────────────────────────────────────────────────
 # Renderers
@@ -404,117 +466,140 @@ def build_event_dir(base: Path, date_val: str, time_val: str, presenter: str, fa
 def build_news_dir(base: Path, date_val: str, title_en: str) -> Path:
     return base / "news" / f"{date_val}-news-{slugify(title_en)}"
 
-# ────────────────────────────────────────────────────────────────────────────────
-# Main
-# ────────────────────────────────────────────────────────────────────────────────
+def _extract_basic_fields(fields: Dict[str, str], issue_title: str, issue_created_at: datetime) -> Dict[str, Any]:
+    """Extract and normalize basic fields from issue."""
+    content_kind = get_field(fields, ["content_kind", "event_type"], "news").strip().lower()
+    is_event = content_kind in EVENT_KINDS
+    
+    title_en = get_field(fields, ["event_title_en", "news_title_en", "title_en"], issue_title)
+    title_tr = get_field(fields, ["event_title_tr", "news_title_tr", "title_tr"], "")
+    
+    raw_date = get_field(fields, ["date", "date_yyyy_mm_dd"], None if is_event else "")
+    raw_time = get_field(fields, "time", None if is_event else "")
+    
+    return {
+        "content_kind": content_kind,
+        "is_event": is_event,
+        "title_en": title_en,
+        "title_tr": title_tr,
+        "date_val": normalize_date(raw_date, issue_created_at),
+        "time_val": normalize_time(raw_time),
+        "presenter": get_field(fields, "speaker_presenter_name", ""),
+        "duration": get_field(fields, "duration", ""),
+        "location_en": get_field(fields, "location_en", ""),
+        "location_tr": get_field(fields, "location_tr", get_field(fields, "location_en", "")),
+    }
 
+def _validate_dedicated_image_field(fields: Dict[str, str]) -> tuple[str, list[str]]:
+    """Validate dedicated image field and download if present."""
+    image_field = get_field(fields, ["image_markdown", "image_drag_drop_here"], "")
+    if image_field:
+        dprint("Validating dedicated image field...")
+        return download_image_if_present(image_field, validate_only=False)
+    return "", []
+
+def _validate_content_fields(fields: Dict[str, str], is_event: bool) -> list[str]:
+    """Validate content fields for invalid file uploads."""
+    if is_event:
+        return []
+    
+    validation_errors = []
+    content_fields = [
+        ("short_description_en", get_field(fields, "short_description_en", "")),
+        ("short_description_tr", get_field(fields, "short_description_tr", "")),
+        ("full_content_en", get_field(fields, "full_content_en", "")),
+        ("full_content_tr", get_field(fields, "full_content_tr", "")),
+    ]
+    
+    for field_name, field_value in content_fields:
+        if not field_value:
+            dprint(f"Field '{field_name}' is empty")
+            continue
+            
+        dprint(f"Checking field '{field_name}', content length: {len(field_value)}")
+        all_files = find_uploaded_files(field_value)
+        dprint(f"Found {len(all_files)} file(s) in {field_name}: {all_files}")
+        
+        for file_url in all_files:
+            is_valid, error_msg = validate_image_format(file_url)
+            dprint(f"File: {file_url}, Valid: {is_valid}, Error: {error_msg}")
+            if not is_valid:
+                validation_errors.append(f"**{field_name}**: {error_msg} (URL: {file_url})")
+                dprint(f"Added validation error for {field_name}")
+    
+    return validation_errors
+
+def _post_validation_error(issue_obj: Any, validation_errors: list[str]) -> None:
+    """Post validation error comment to issue."""
+    error_message = "## ⚠️ File Validation Failed\n\n"
+    error_message += "The following issues were found with files in your submission:\n\n"
+    for i, error in enumerate(validation_errors, 1):
+        error_message += f"{i}. {error}\n"
+    error_message += "\n### Required Actions:\n"
+    error_message += "- **All fields**: Only image files are allowed (JPG, JPEG, PNG, GIF, WebP, SVG)\n"
+    error_message += "- **Text files and documents**: Remove .txt, .pdf, .doc, and other non-image files\n"
+    error_message += "- **Images in content**: You CAN include images in description/content fields, just make sure they're valid image formats\n"
+    error_message += "\n### Allowed Image Formats:\n"
+    error_message += "✅ " + ", ".join(sorted(ALLOWED_IMAGE_FORMATS)) + "\n"
+    error_message += "\nPlease update your issue to fix these issues. The automation will run again when you edit the issue."
+    
+    post_issue_comment(issue_obj, error_message)
+    print("❌ Validation failed. Comment posted to issue.", file=sys.stderr)
+    print(f"Found {len(validation_errors)} validation error(s):", file=sys.stderr)
+    for error in validation_errors:
+        print(f"  - {error}", file=sys.stderr)
+
+# Main
 def main() -> int:
     issue = load_issue()
     fields = parse_fields(issue.body)
     
-    # Collect all validation errors
-    validation_errors = []
+    # Extract basic fields
+    basic = _extract_basic_fields(fields, issue.title, issue.created_at)
     
-    # Kind → event or news
-    content_kind = get_field(fields, ["content_kind", "event_type"], "news").strip().lower()
-    is_event = (content_kind in EVENT_KINDS)
-
-    # Titles (fallback to issue title if EN missing)
-    title_en = get_field(fields, ["event_title_en", "news_title_en", "title_en"], issue.title)
-    title_tr = get_field(fields, ["event_title_tr", "news_title_tr", "title_tr"], "")
-
-    # Prefer issue body for events; legacy key also accepted
-    raw_date = get_field(fields, ["date", "date_yyyy_mm_dd"], None if is_event else "")
-    raw_time = get_field(fields, "time", None if is_event else "")
-
-    date_val = normalize_date(raw_date, issue.created_at)
-    time_val = normalize_time(raw_time)
-
-    # Event-only fields
-    presenter = get_field(fields, "speaker_presenter_name", "")
-    duration  = get_field(fields, "duration", "")
-    location_en = get_field(fields, "location_en", "")
-    location_tr = get_field(fields, "location_tr", location_en)
-
-    # ── Image Validation ──
-    # 1. Check dedicated image field
-    image_field = get_field(fields, ["image_markdown", "image_drag_drop_here"], "")
-    if image_field:
-        dprint("Validating dedicated image field...")
-        image_md, img_errors = download_image_if_present(image_field, validate_only=False)
-        validation_errors.extend(img_errors)
-    else:
-        image_md = ""
+    # Validate dedicated image field
+    image_md, img_errors = _validate_dedicated_image_field(fields)
+    validation_errors = img_errors.copy()
     
-    # 2. Check for images in content fields (description & full content)
-    content_fields_to_check = []
-    if is_event:
-        # Events might not have these fields, but check if they exist
-        content_fields_to_check = []
-    else:
-        # News has description and content fields
-        content_fields_to_check = [
-            ("description_en", get_field(fields, "description_en", "")),
-            ("description_tr", get_field(fields, "description_tr", "")),
-            ("content_en", get_field(fields, "content_en", "")),
-            ("content_tr", get_field(fields, "content_tr", "")),
-        ]
+    # Validate content fields
+    content_errors = _validate_content_fields(fields, basic["is_event"])
+    validation_errors.extend(content_errors)
     
-    for field_name, field_value in content_fields_to_check:
-        if field_value:
-            images_in_content = find_all_images(field_value)
-            if images_in_content:
-                dprint(f"Found {len(images_in_content)} image(s) in {field_name}")
-                for img_url in images_in_content:
-                    is_valid, error_msg = validate_image_format(img_url)
-                    if not is_valid:
-                        validation_errors.append(f"**{field_name}**: {error_msg} (URL: {img_url})")
-                    else:
-                        validation_errors.append(
-                            f"**{field_name}**: Images should not be included in content fields. "
-                            f"Please use the dedicated image field instead. (URL: {img_url})"
-                        )
-    
-    # If there are validation errors, post a comment and exit
+    # Handle validation errors
     if validation_errors:
-        error_message = "## Image Validation Failed\n\n"
-        error_message += "The following issues were found with images in your submission:\n\n"
-        for i, error in enumerate(validation_errors, 1):
-            error_message += f"{i}. {error}\n"
-        error_message += "\n### Required Actions:\n"
-        error_message += "- **Dedicated image field**: Only use supported formats (JPG, PNG, GIF, WebP, SVG)\n"
-        error_message += "- **Content fields**: Do not include images in description or content fields. Use the dedicated image upload field instead.\n"
-        error_message += "\nPlease update your issue and close/reopen it to trigger the automation again."
-        
-        post_issue_comment(issue.issue_obj, error_message)
-        print("Validation failed. Comment posted to issue.")
+        _post_validation_error(issue.issue_obj, validation_errors)
         return 1
 
-    # Out directory by type
-    if is_event:
-        out_dir = build_event_dir(CONTENT_DIR, date_val, time_val, presenter, title_en, issue.number)
+    # Determine output directory
+    if basic["is_event"]:
+        out_dir = build_event_dir(
+            CONTENT_DIR, basic["date_val"], basic["time_val"],
+            basic["presenter"], basic["title_en"], issue.number
+        )
     else:
-        out_dir = build_news_dir(CONTENT_DIR, date_val, title_en)
+        out_dir = build_news_dir(CONTENT_DIR, basic["date_val"], basic["title_en"])
     ensure_dirs(out_dir)
     dprint("out_dir =", out_dir)
 
+    # Create render context
     ctx = RenderContext(
-        is_event=is_event,
-        content_kind=content_kind if is_event else "news",
+        is_event=basic["is_event"],
+        content_kind=basic["content_kind"] if basic["is_event"] else "news",
         fields=fields,
-        date_val=date_val,
-        time_val=time_val,
-        title_en=title_en,
-        title_tr=title_tr,
-        presenter=presenter,
-        location_en=location_en,
-        location_tr=location_tr,
-        duration=duration,
+        date_val=basic["date_val"],
+        time_val=basic["time_val"],
+        title_en=basic["title_en"],
+        title_tr=basic["title_tr"],
+        presenter=basic["presenter"],
+        location_en=basic["location_en"],
+        location_tr=basic["location_tr"],
+        duration=basic["duration"],
         image_md=image_md,
         out_dir=out_dir,
     )
 
-    renderer = EventRenderer(ctx) if is_event else NewsRenderer(ctx)
+    # Render output
+    renderer = EventRenderer(ctx) if basic["is_event"] else NewsRenderer(ctx)
     renderer.render()
 
     print("Processing complete.")
