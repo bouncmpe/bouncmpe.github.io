@@ -17,7 +17,7 @@
             <div class="carousel-inner">
             {{ range $index, $page := first 5 $featured }}
                 {{- $thumbnail := "" -}}
-                {{- $image_settings := site.Params.news.image_settings | default "1400x700 webp q90 Smart" -}}
+                {{- $image_settings := site.Params.newsroom.image_settings.hero | default "1400x700 webp q90 Smart" -}}
 
                 {{- if reflect.IsMap $page.Params.thumbnail -}}
                     {{ $thumbnail = $page.Params.thumbnail.url }}
