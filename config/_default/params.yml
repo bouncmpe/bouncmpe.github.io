@@ -44,6 +44,9 @@ newsroom:
   enabled: true
   limit: 3
   layout: card
+  image_settings:
+    hero: "1400x700 webp q90 Smart"
+    quality: 90
 
 social:
   - name: "Twitter"
@@ -61,7 +64,6 @@ mermaid:
 github:
   repo: "https://github.com/bouncmpe/bouncmpe.github.io"
   branch: "main"
-
 # sections:
 #   about:
 #     title:

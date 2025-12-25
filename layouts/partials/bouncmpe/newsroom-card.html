@@ -1,5 +1,6 @@
 {{- $thumbnail := "" -}}
-{{- $image_settings := site.Params.news.image_settings | default "1400x700 webp q90 Smart" -}}
+
+{{- $image_settings := site.Params.newsroom.image_settings.hero -}}
 
 {{- if reflect.IsMap .Params.thumbnail -}}
     {{ $thumbnail = .Params.thumbnail.url }}
@@ -23,7 +24,7 @@
   {{ $thumbnail = $retouched.RelPermalink }}
 {{ end }}
 
-<div class="card border-1 h-100 rounded-5">
+<div class="card border-1 h-100 rounded-5" style="border-radius: 2rem; overflow: hidden;">
   <a href="{{ .RelPermalink }}" class="stretched-link">
   <img src="{{ $thumbnail }}" class="card-img-top rounded-top-5 py-0" alt="...">
   </a>

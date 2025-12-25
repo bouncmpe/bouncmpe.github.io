@@ -1,5 +1,7 @@
 name: Bilingual News Submission
-description: Submit a news item for the website. Provide both English and Turkish entries, including an image (required).
+description:
+  Submit a news item for the website. Provide both English and Turkish entries,
+  including an image (required).
 title: "[NEWS] <Insert news title>"
 labels: ["auto-md", "news"]
 body:
@@ -31,8 +33,20 @@ body:
     id: image_markdown
     attributes:
       label: "Image (drag & drop here)"
-      description: "Drag & drop your image; GitHub will upload it and provide a markdown link."
-      placeholder: "![alt text](https://user-images.githubusercontent.com/.../your-image.png)"
+      description: |
+        **⚠️ Image Requirements (Important)**  
+        - Images are displayed in **two different layouts** on the website:
+          - **Hero / featured view:** ~**2.1:1** aspect ratio  
+          - **News card view:** ~**4:3** aspect ratio  
+        - Please choose an image that:
+          - Has the **main subject centered**
+          - Can be **safely cropped** in both wide and standard ratios
+        - Avoid images with important content near the edges.
+        - Supported formats: JPG, PNG, GIF, WebP, SVG
+
+        Drag & drop your image here; GitHub will upload it and provide a markdown link.
+      placeholder:
+        "![alt text](https://user-images.githubusercontent.com/.../your-image.png)"
     validations:
       required: true
 
