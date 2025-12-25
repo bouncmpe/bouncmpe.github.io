@@ -50,7 +50,7 @@ hasMermaid: true
 | [CMPE300](/tr/courses/cmpe300) | Algoritma Analizi | CMPE250 | 3 | 5 |
 | [CMPE322](/tr/courses/cmpe322) | İşletim Sistemleri | CMPE250 | 3 | 6 |
 | [CMPE343](/tr/courses/cmpe343) | Bilgisayar Mühendisleri için Olasılık ve İstatistiğe Giriş | MATH101 | 3 | 6 |
-| [CMPE346](/tr/courses/cmpe346) | Gömülü Sistem Tasarım Temelleri | CMPE142 | 4 | 6 |
+| [CMPE346](/tr/courses/cmpe346) | Gömülü Sistem Tasarım Temelleri | CMPE244 | 4 | 6 |
 | IE310 | Yöneylem Araştırması | MATH201 | 4 | 5 |
 | HTR311 | Türkiye Cumhuriyeti Tarihi I |  | 2 | 3 |
 | | | **Toplam** | **19** | **31** |

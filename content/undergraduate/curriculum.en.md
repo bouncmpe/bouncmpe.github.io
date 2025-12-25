@@ -51,7 +51,7 @@ hasMermaid: true
 | [CMPE300](/courses/cmpe300) | Analysis of Algorithms | CMPE250 | 3 | 5 |
 | [CMPE322](/courses/cmpe322) | Operating Systems | CMPE250 | 3 | 6 |
 | [CMPE343](/courses/cmpe343) | Introduction to Probability and Statistics for Computer Engineers | MATH101 | 3 | 6 |
-| [CMPE346](/courses/cmpe346) | Principles of Embedded Systems Design | CMPE142 | 4 | 6 |
+| [CMPE346](/courses/cmpe346) | Principles of Embedded Systems Design | CMPE244 | 4 | 6 |
 | IE310 | Operations Research | MATH201 | 4 | 5 |
 | HTR311 | History of Turkish Republic I | | 2 | 3 |
 | | | **Total** | **19** | **31** |

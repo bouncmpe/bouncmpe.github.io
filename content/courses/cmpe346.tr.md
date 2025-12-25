@@ -22,7 +22,7 @@ aliases:
 | Ders Kredisi | 4 |
 | AKTS | 6 |
 | Notlandırma Sistemi | Harf Notu |
-| Önkoşul dersleri | CMPE142 |
+| Önkoşul dersleri | CMPE244 |
 | Eşkoşul dersleri | Yok |
 
 {{< /table >}}

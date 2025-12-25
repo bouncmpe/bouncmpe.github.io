@@ -22,7 +22,7 @@ aliases:
 | Course Credits | 4 |
 | ECTS | 6 |
 | Grading Mode | Letter Grade |
-| Prerequisites | CMPE142 |
+| Prerequisites | CMPE244 |
 | Corequisites | None |
 
 {{< /table >}}
