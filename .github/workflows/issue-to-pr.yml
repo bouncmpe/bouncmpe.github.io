@@ -11,12 +11,14 @@ defaults:
 jobs:
   # ───────────── Sync on Opened/Edited ─────────────────
   sync:
-    if: ${{ github.event.action != 'closed' && github.event.action != 'deleted' && contains(github.event.issue.labels.*.name, 'auto-md')}}
+    if:
+      ${{ github.event.action != 'closed' && github.event.action != 'deleted' &&
+      contains(github.event.issue.labels.*.name, 'auto-md')}}
     runs-on: ubuntu-latest
     env:
       ISSUE_NUMBER: ${{ github.event.issue.number }}
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      PROJECT_ROOT: ${{ github.workspace }}   
+      PROJECT_ROOT: ${{ github.workspace }}
 
     steps:
       - name: Checkout repository
@@ -25,15 +27,24 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.x'
+          python-version: "3.x"
 
       - name: Install dependencies
         run: pip install -r requirements.txt
 
       - name: Generate Markdown from Issue
+        id: generate_md
         run: python scripts/issue_to_md.py
+        continue-on-error: true
+
+      - name: Check if generation succeeded
+        if: steps.generate_md.outcome == 'failure'
+        run: |
+          echo "Markdown generation failed due to validation errors. Check issue comments for details."
+          exit 1
 
       - name: Create or Update Pull Request
+        if: steps.generate_md.outcome == 'success'
         uses: peter-evans/create-pull-request@v6
         with:
           branch: "auto/add-${{ env.ISSUE_NUMBER }}"
@@ -42,11 +53,13 @@ jobs:
           body: |
             This PR was automatically generated from
             issue #${{ env.ISSUE_NUMBER }}.
-          labels: ${{ join(github.event.issue.labels.*.name, ',') }},auto-generated
+          labels:
+            ${{ join(github.event.issue.labels.*.name, ',') }},auto-generated
 
   # ───────────── Close on Issue Closed or Deleted ─────────────────
   close-pr:
-    if: ${{ github.event.action == 'closed' || github.event.action == 'deleted' }}
+    if:
+      ${{ github.event.action == 'closed' || github.event.action == 'deleted' }}
     runs-on: ubuntu-latest
     steps:
       - name: Close related pull requests
