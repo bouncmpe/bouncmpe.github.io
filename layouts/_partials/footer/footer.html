@@ -16,17 +16,36 @@
     {{ end }}
 </div>
 
+<div class="row justify-content-between text-dark py-4 my-4 border-top">
+    {{- with site.Params.contact }}
+    <div class="col-12 col-md-6 mb-3 text-start">
+        <p class="mb-2 fs-6 fw-bold text-uppercase">{{ i18n "contact-us" }}</p>
+        <p class="fs-6 opacity-75 mb-2">
+            {{- if eq site.Language.Lang "tr" }}{{ .address.tr }}{{ else }}{{ .address.en }}{{ end -}}
+        </p>
+        <ul class="list-unstyled fs-6 opacity-75">
+            <li class="mb-1"><strong>{{ i18n "phone" }}:</strong> {{ .phone }}</li>
+            <li class="mb-1"><strong>{{ i18n "fax" }}:</strong> {{ .fax }}</li>
+        </ul>
+    </div>
+    {{ end -}}
+    <div class="col-12 col-md-6 mb-3 text-start text-md-end">
+        <p class="mb-2 fs-6 fw-bold text-uppercase">{{ i18n "connect-with-us" }}</p>
+        <p class="fs-6 opacity-75 mb-3">{{ i18n "social-networks-text" }}</p>
+        <ul class="list-unstyled d-flex justify-content-start justify-content-md-end">
+        {{ range site.Params.social }}
+            <li class="me-3">
+            <a href="{{ .url }}">
+                <img src="/icons/{{ .icon }}.svg" alt="{{ .name }}" width="24" height="24">
+            </a>
+            </li>
+        {{ end }}
+        </ul>
+    </div>
+</div>
+
 <div class="d-flex flex-column flex-sm-row justify-content-between text-dark py-4 my-4 border-top">
     <p class="fs-6 opacity-75">{{ replace site.Copyright "{year}" now.Year }}</p>
-    <ul class="list-unstyled d-flex">
-    {{ range site.Params.social }}
-        <li class="ms-3">
-        <a href="{{ .url }}">
-            <img src="/icons/{{ .icon }}.svg" alt="{{ .identifier }}" width="24" height="24">
-        </a>
-        </li>
-    {{ end }}
-    </ul>
 </div>
 {{ if .Params.hasMermaid }}
     {{ partial "footer/optional-scripts.html" . }}
