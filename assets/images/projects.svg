@@ -1,0 +1,57 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 400 400"
+  role="img"
+  aria-label="Senior Projects Board Icon"
+>
+  <!-- Background -->
+  <rect width="400" height="400" rx="32" fill="#0d6efd"/>
+
+  <!-- Board -->
+  <rect x="40" y="64" width="320" height="272" rx="20" fill="#ffffff"/>
+
+  <!-- Column separators -->
+  <line x1="146" y1="64" x2="146" y2="336" stroke="#e5e7eb" stroke-width="2"/>
+  <line x1="253" y1="64" x2="253" y2="336" stroke="#e5e7eb" stroke-width="2"/>
+
+  <!-- Column icons -->
+  <!-- Lightbulb (Ideas) -->
+  <g transform="translate(93 96)">
+    <circle cx="0" cy="0" r="14" fill="#fde68a"/>
+    <rect x="-6" y="14" width="12" height="10" rx="3" fill="#facc15"/>
+  </g>
+
+  <!-- Gear (Active) -->
+  <g transform="translate(200 96)">
+    <circle cx="0" cy="0" r="12" fill="#bfdbfe"/>
+    <circle cx="0" cy="0" r="4" fill="#3b82f6"/>
+    <g stroke="#3b82f6" stroke-width="3">
+      <line x1="-18" y1="0" x2="-10" y2="0"/>
+      <line x1="18" y1="0" x2="10" y2="0"/>
+      <line x1="0" y1="-18" x2="0" y2="-10"/>
+      <line x1="0" y1="18" x2="0" y2="10"/>
+    </g>
+  </g>
+
+  <!-- Checkmark (Completed) -->
+  <g transform="translate(306 96)">
+    <circle cx="0" cy="0" r="14" fill="#bbf7d0"/>
+    <path d="M -6 0 l 4 4 l 8 -8"
+          fill="none"
+          stroke="#166534"
+          stroke-width="3"
+          stroke-linecap="round"
+          stroke-linejoin="round"/>
+  </g>
+
+  <!-- Cards: Ideas -->
+  <rect x="62" y="136" width="62" height="28" rx="6" fill="#fde68a"/>
+  <rect x="62" y="178" width="62" height="28" rx="6" fill="#fde68a"/>
+
+  <!-- Cards: Active -->
+  <rect x="169" y="152" width="62" height="28" rx="6" fill="#bfdbfe"/>
+  <rect x="169" y="194" width="62" height="28" rx="6" fill="#bfdbfe"/>
+
+  <!-- Cards: Completed -->
+  <rect x="276" y="168" width="62" height="28" rx="6" fill="#bbf7d0"/>
+</svg>
