@@ -26,18 +26,27 @@ Single-semester projects (CMPE492) are ideal for a focused goal with well-define
 - **Incorporate** a significant design element.
 - **Provide** opportunities for students to demonstrate skills in leadership, project management, technical writing, ethical decision-making, safety, and time management.
 
-**Senior students are encouraged to engage in discussions early with faculty members and project advisors** regarding project topics of interest. They may check [**faculty members**](../people/faculty)' personal websites, bulletin boards in the department, and [**our experimental project board**](https://github.com/orgs/bouncmpe/projects/16) for this semester's offerings but they are not limited with the listed options. Once the project topic is decided, students must proceed to complete the project registration process as announced in the beginning of each semester.
+**Senior students are encouraged to engage in discussions early with faculty members and project advisors** regarding project topics of interest. They may check [**faculty members**](../people/faculty)' personal websites, bulletin boards in the department, and our project board to explore project offers for this semester.
 
-Faculty members may use [**project offer templates**](https://github.com/bouncmpe/capstone/issues/new/choose) here to add new project offers to our semester offers board.
+Once the project topic is decided, students must proceed to complete the project registration process as announced in the beginning of each semester.
+
+## Project Offers
+
+Below is a curated collection of project offers proposed by faculty members and industry partners for the current semester. The topics listed here are intended as reference points and conversation starters rather than an exhaustive or exclusive list. Students are encouraged to explore additional ideas and discuss them with potential advisors.
+
+{{< persona thumbnail="images/projects.svg" href="https://github.com/orgs/bouncmpe/projects/16" title="Senior Projects Board" color="primary" >}}
+
+- Explore current offers from faculty members and industry partners here.
+- Contact potential advisors early to discuss alignment and expectations.
+
+{{< /persona >}}
+
+Faculty members may use the [**project offer templates**](https://github.com/bouncmpe/capstone/issues/new/choose) to propose new topics and contribute to the semester project offers board.
 
 ## Project Execution
 
 Senior students work on their project topic during the semester closely with their advisors. An midterm report is required and serves a milestone for the project. The final evaluation process considers both following best practices and striving for high-quality work. We expect students to demonstrate dedication and professionalism in every aspect of their project execution, reflecting the high standards they'll carry into their future careers.
 
-## Project Demonstration
+## Project Presentation
 
 At the end of every semester, senior students will showcase their work in a Poster Session, open to fellow students, department faculty, and interested parties. Depending on student participation, this session may span multiple days, requiring prior reservation of time slots. Each student is responsible for preparing a poster encapsulating their project, detailing techniques employed, experiments conducted, and resultant conclusions. During their allocated slot, CMPE seniors are expected to deliver presentations accompanied by real-time demonstrations where applicable. A panel comprised of faculty, teaching assistants, and industrial participants will attend all presentations, ultimately selecting the top three projects.
-
-## Coordinator
-
-{{< people tag="senior-projects-coordinator" cols="1" >}}

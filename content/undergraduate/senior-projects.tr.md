@@ -26,18 +26,27 @@ Bir proje konusu seçmek, son sınıf öğrencileri için önemli bir sorumluluk
 - Kayda değer bir tasarım bileşeni içermelidir.
 - Öğrencilerin liderlik, proje ve zaman yönetimi, teknik yazım, etik karar verme gibi becerilerini sergileyebilecekleri fırsatlar sunmalıdır.
 
-Son sınıf öğrencilerinin, olası proje konuları hakkında mevcut öğretim üyeleri ve proje danışmanlarıyla erkenden görüşme yapmaları tavsiye edilir. Öğrenciler, fakülte üyelerinin kişisel web sitelerini, bölümdeki ilan panolarını ve [**deneysel çevrimiçi proje panosunu**](https://github.com/orgs/bouncmpe/projects/16) bu dönemki proje önerileri incelemek için kullanabilirler; ancak sadece listelenen seçeneklerle sınırlı değillerdir. Proje konusu belirlendikten sonra, öğrenciler her dönemin başında duyurulan proje kayıt sürecini tamamlamalıdır.
+Son sınıf öğrencilerinin, olası proje konuları hakkında mevcut öğretim üyeleri ve proje danışmanlarıyla erkenden görüşme yapmaları tavsiye edilir. Öğrenciler, fakülte üyelerinin kişisel web sitelerini, bölümdeki ilan panolarını ve proje tablomuzu bu dönemki proje önerilerini incelemek için kullanabilirler.
 
-Öğretim üyeleri ise, çevrimiçi proje panomuza yeni proje önerileri eklemek için [**proje öneri şablonlarını**](https://github.com/bouncmpe/capstone/issues/new/choose) kullanabilirler.
+Proje konusu belirlendikten sonra, öğrenciler her dönemin başında duyurulan proje kayıt sürecini tamamlamalıdır.
 
-## Proje Yürütülmesi
+## Proje Önerileri
+
+Aşağıda, mevcut yarıyıl için öğretim üyeleri ve endüstri partnerleri tarafından önerilen projelerden oluşan bir liste yer almaktadır. Burada listelenen konular, kapsamlı ya da bağlayıcı bir liste olmaktan ziyade, birer referans ve başlangıç noktası olarak sunulmaktadır. Öğrencilerin ek fikirler geliştirmeleri ve bunları olası danışmanlarla görüşmeleri teşvik edilmektedir.
+
+{{< persona thumbnail="images/projects.svg" href="https://github.com/orgs/bouncmpe/projects/16" title="Bitirme Projesi Önerileri" color="primary" >}}
+
+- Öğretim üyeleri ve sanayi paydaşları tarafından sunulan güncel proje önerilerini buradan inceleyin.
+- Potansiyel danışmanlarınızla erkenden iletişime geçerek geçip görüş alışverişinde bulunabilirsiniz.
+
+{{< /persona >}}
+
+Öğretim üyeleri, yeni proje konuları önermek ve dönem proje önerileri panosuna katkıda bulunmak için [proje öneri şablonlarını](https://github.com/bouncmpe/capstone/issues/new/choose) kullanabilirler.
+
+## Projelerin Yürütülmesi
 
 Dönem boyunca son sınıf öğrencileri, proje danışmanları ile yakın işbirliği içinde kendi proje konuları üzerinde çalışırlar. Dönemin ortasında bir ilerleme raporu hazırlanması zorunludur. Son değerlendirme sürecinde, tavsiye edilen pratiklere uyulması ve yüksek kaliteli çalışma hedeflenmesi gibi kriterler dikkate alınır. Öğrencilerin, projenin her aşamasında özveri ve profesyonellik göstermeleri, onların gelecekteki kariyerlerinde hedefleyecekleri en yüksek standartları yansıtması açısından önemlidir.
 
 ## Proje Sunumları
 
 Dönem sonunda, son sınıf öğrencileri çalışmalarını diğer öğrencilere, bölüm öğretim üyelerine ve konuya ilgi duyan herkese açık bir Poster Sunumu etkinliğinde sergileyecektir. Katılan öğrenci sayısına bağlı olarak, bu etkinlik birden fazla güne yayılabilir ve önceden rezervasyon gerekebilir. Her öğrenci, projesini özetleyen, kullanılan teknikleri, yapılan deneyleri ve elde edilen sonuçları detaylandıran bir poster hazırlamaktan sorumludur. Kendilerine ayrılan zaman diliminde, Bilgisayar Mühendisliği son sınıf öğrencilerinin sunum yapması ve mümkünse gerçek zamanlı gösterimlerle sunumlarını desteklemeleri beklenmektedir. Öğretim üyeleri, öğretim asistanları ve sektör temsilcilerinden oluşan bir jüri tüm sunumlara katılacak ve dönemin en iyi üç projesini seçecektir.
-
-## Koordinatör
-
-{{< people tag="senior-projects-coordinator" cols="1">}}
