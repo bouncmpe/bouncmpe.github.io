@@ -35,7 +35,10 @@ Once the project topic is decided, students must proceed to complete the project
 Below is a curated collection of project offers proposed by faculty members and industry partners for the current semester. The topics listed here are intended as reference points and conversation starters rather than an exhaustive or exclusive list. Students are encouraged to explore additional ideas and discuss them with potential advisors.
 
 {{< persona thumbnail="images/projects.svg" href="https://github.com/orgs/bouncmpe/projects/16" title="Senior Projects Board" color="primary" >}}
-This is a curated collection of project offers proposed by faculty members and industry partners for the current semester.
+
+- Explore current offers from faculty members and industry partners here.
+- Contact potential advisors early to discuss alignment and expectations.
+
 {{< /persona >}}
 
 Faculty members may use the [**project offer templates**](https://github.com/bouncmpe/capstone/issues/new/choose) to propose new topics and contribute to the semester project offers board.

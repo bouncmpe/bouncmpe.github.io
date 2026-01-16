@@ -35,7 +35,10 @@ Proje konusu belirlendikten sonra, öğrenciler her dönemin başında duyurulan
 Aşağıda, mevcut yarıyıl için öğretim üyeleri ve endüstri partnerleri tarafından önerilen projelerden oluşan bir liste yer almaktadır. Burada listelenen konular, kapsamlı ya da bağlayıcı bir liste olmaktan ziyade, birer referans ve başlangıç noktası olarak sunulmaktadır. Öğrencilerin ek fikirler geliştirmeleri ve bunları olası danışmanlarla görüşmeleri teşvik edilmektedir.
 
 {{< persona thumbnail="images/projects.svg" href="https://github.com/orgs/bouncmpe/projects/16" title="Bitirme Projesi Önerileri" color="primary" >}}
-Bu dönem için öğretim üyeleri ve endüstri partnerleri tarafından önerilen proje konularını içerir.
+
+- Öğretim üyeleri ve sanayi paydaşları tarafından sunulan güncel proje önerilerini buradan inceleyin.
+- Potansiyel danışmanlarınızla erkenden iletişime geçerek geçip görüş alışverişinde bulunabilirsiniz.
+
 {{< /persona >}}
 
 Öğretim üyeleri, yeni proje konuları önermek ve dönem proje önerileri panosuna katkıda bulunmak için [proje öneri şablonlarını](https://github.com/bouncmpe/capstone/issues/new/choose) kullanabilirler.
