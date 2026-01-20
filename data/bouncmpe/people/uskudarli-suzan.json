@@ -17,5 +17,6 @@
     "softwareengineering"
   ],
   "type": "person",
-  "thumbnail": "images/people/uskudarli_suzan.jpg"
+  "thumbnail": "images/people/uskudarli_suzan.jpg",
+  "research_areas": ["Computer Society", "Computation Language", "Software Engineering"]
 }
