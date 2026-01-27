@@ -81,6 +81,7 @@ hasMermaid: true
 | CMPE400 | Mühendislik Stajı | | 0 | 10 |
 | | | **Toplam** | **16** | **41** |
 {{< /table >}}
+<!-- prettier-ignore-end -->
 
 ### Notlar
 
@@ -99,7 +100,7 @@ hasMermaid: true
 </div>
 
 <div id="note-hss">
-  <sup>[d]</sup> Beşeri ve Sosyal Bilimler (HSS) seçmeli dersleri, üniversite tarafından her dönem ilan edilen listeden seçilmelidir.
+  <sup>[d]</sup> Beşeri ve Sosyal Bilimler (HSS) dersleri, üniversite tarafından her dönem ilan edilen listeden seçilmelidir.
 </div>
 
 <div id="note-xspx">
@@ -114,7 +115,6 @@ hasMermaid: true
   <sup>[f2]</sup> Yabancı uyruklu öğrenciler, HTR311/HTR312 dersleri yerine HTR405/HTR406 derslerini almak zorundadır.
 </div>
 
-<!-- prettier-ignore-end -->
 
 <!-- {{< callout title="Curriculum Notes" type="primary" >}}
 <ol class="ps-3 mb-0 small">

@@ -81,6 +81,7 @@ hasMermaid: true
 | CMPE400| Engineering Internship |  | 0 | 10 |
 | | | **Total** | **16** | **41** |
 {{< /table >}}
+<!-- prettier-ignore-end -->
 
 ### Curriculum Notes
 
@@ -89,15 +90,15 @@ hasMermaid: true
 </div>
 
 <div id="note-cc">
-  <sup>[b]</sup> Complementary courses must be selected from the <a href="https://cmpe.bogazici.edu.tr/docs/undergraduate/cc-electives/">List of Complementary Courses (CC)</a>.
+  <sup>[b]</sup> Complementary Courses (CC) must be selected from the <a href="https://cmpe.bogazici.edu.tr/docs/undergraduate/cc-electives/">List of Complementary Courses</a>.
 </div>
 
 <div id="note-scie">
-  <sup>[c]</sup> Science Elective courses must be selected from the <a href="https://cmpe.bogazici.edu.tr/docs/undergraduate/science-electives/">List of Science Elective (SCIE) Courses </a>.
+  <sup>[c]</sup> Science Elective (SCIE) courses must be selected from the <a href="https://cmpe.bogazici.edu.tr/docs/undergraduate/science-electives/">List of Science Elective Courses</a>.
 </div>
 
 <div id="note-hss">
-  <sup>[d]</sup> Humanities and Social Sciences (HSS) elective courses must be selected from the list announced by the university each semester.
+  <sup>[d]</sup> Humanities and Social Sciences (HSS) courses must be selected from the list announced by the university each semester.
 </div>
 
 <div id="note-xspx">
@@ -112,7 +113,6 @@ hasMermaid: true
   <sup>[f2]</sup> Foreign students must take HTR405/HTR406 in place of HTR311/HTR312.
 </div>
 
-<!-- prettier-ignore-end -->
 <!-- {{< callout title="Curriculum Notes" type="primary" >}}
 <ol class="ps-3 mb-0 small">
   <li id="note-sci" class="mb-2"><strong>Science Elective</strong> is a basic science course in Physics, Chemistry, Biology or Mathematics (non-computational).</li>
