@@ -4,7 +4,6 @@ description: Bilgisayar Mühendisliği Bölümü’nün 2025 yılında uygulamay
 metadata: none
 toc: false
 weight: 2
-hasMermaid: true
 ---
 
 <!-- prettier-ignore-start -->
@@ -34,7 +33,7 @@ hasMermaid: true
 | [CMPE220](/tr/courses/cmpe220) | Kesikli Hesaplama Yapıları | --- | 3 | 5 |
 | [CMPE230](/tr/courses/cmpe230) | Sistem Programlama | CMPE160 | 3 | 6 |
 | [CMPE250](/tr/courses/cmpe250) | Veri Yapıları ve Yordamlar | CMPE160 | 3 | 6 |
-| TK221<sup>[[f1]](#note-foreign-1)</sup> | Türkçe I |  | 2 | 3 |
+| TK221<sup>[[f1]](#notlar)</sup> | Türkçe I |  | 2 | 3 |
 | | | **Toplam** | **18** | **31** |
 | <h4>Dördüncü Dönem</h4>|
 | **Ders Kodu** |**Ders Başlığı** | **Önkoşullar** | **Kredi** | **AKTS** |
@@ -42,8 +41,8 @@ hasMermaid: true
 | EE212 | Elektronik Mühendisliğine Giriş | EE210 | 3 | 4 |
 | [CMPE222](/tr/courses/cmpe222) | Veri Tabanı Sistemlerine Giriş | CMPE250 | 3 | 6 |
 | [CMPE244](/tr/courses/cmpe244) | Bilgisayar Organizasyonu | CMPE142 | 4 | 5 |
-| | Bilim Seçmeli<sup>[[c]](#note-scie)</sup> | | 3 | 6 |
-| TK222<sup>[[f1]](#note-foreign-1)</sup> | Türkçe II | | 2 | 3 |
+| | Bilim Seçmeli<sup>[[c]](#notlar)</sup> | | 3 | 6 |
+| TK222<sup>[[f1]](#notlar)</sup> | Türkçe II | | 2 | 3 |
 | | | **Toplam** | **19** | **31** |
 | <h4>Beşinci Dönem</h4>|
 | **Ders Kodu** |**Ders Başlığı** | **Önkoşullar** | **Kredi** | **AKTS** |
@@ -52,7 +51,7 @@ hasMermaid: true
 | [CMPE343](/tr/courses/cmpe343) | Bilgisayar Mühendisleri için Olasılık ve İstatistiğe Giriş | MATH101 | 3 | 6 |
 | [CMPE346](/tr/courses/cmpe346) | Gömülü Sistem Tasarım Temelleri | CMPE244 | 4 | 6 |
 | IE310 | Yöneylem Araştırması | MATH201 | 4 | 5 |
-| HTR311<sup>[[f2]](#note-foreign-2)</sup> | Türkiye Cumhuriyeti Tarihi I |  | 2 | 3 |
+| HTR311<sup>[[f2]](#notlar)</sup> | Türkiye Cumhuriyeti Tarihi I |  | 2 | 3 |
 | | | **Toplam** | **19** | **31** |
 | <h4>Altıncı Dönem</h4>|
 | **Ders Kodu** |**Ders Başlığı** | **Önkoşullar** | **Kredi** | **AKTS** |
@@ -61,23 +60,23 @@ hasMermaid: true
 | [CMPE354](/tr/courses/cmpe354) | Yazılım Mühendisliği | CMPE222 | 4 | 7 |
 | [CMPE362](/tr/courses/cmpe362) | Bilgisayar Mühendisleri için Sinyal İşlemeye Giriş | MATH202 | 3 | 6 |
 | IE306 | Sistem Benzetimi | CMPE343 | 4 | 7 |
-| HTR312<sup>[[f2]](#note-foreign-2)</sup> | Türkiye Cumhuriyeti Tarihi II | | 2 | 3 |
+| HTR312<sup>[[f2]](#notlar)</sup> | Türkiye Cumhuriyeti Tarihi II | | 2 | 3 |
 | | | **Toplam** | **19** | **30** |
 | <h4>Yedinci Dönem</h4>|
 | **Ders Kodu** |**Ders Başlığı** | **Önkoşullar** | **Kredi** | **AKTS** |
-| CMPE | Bölüm Seçmeli<sup>[[a]](#note-cmpe)</sup> |  | 3 | 6 |
-| CMPE | Bölüm Seçmeli<sup>[[a]](#note-cmpe)</sup> |  | 3 | 6 |
-| CC | Tamamlayıcı Seçmeli<sup>[[b]](#note-cc)</sup> | | 3 | 6 |
-| HSS | Beşeri ve Sosyal Bilimler Seçmeli Dersi<sup>[[d]](#note-hss)</sup> | | 4 | 6 |
-| | Tanımlanmış Seçmeli<sup>[[e]](#note-xspx)</sup> |  | 3 | 5 |
+| CMPE | Bölüm Seçmeli<sup>[[a]](#notlar)</sup> |  | 3 | 6 |
+| CMPE | Bölüm Seçmeli<sup>[[a]](#notlar)</sup> |  | 3 | 6 |
+| CC | Tamamlayıcı Seçmeli<sup>[[b]](#notlar)</sup> | | 3 | 6 |
+| HSS | Beşeri ve Sosyal Bilimler Seçmeli Dersi<sup>[[d]](#notlar)</sup> | | 4 | 6 |
+| | Tanımlanmış Seçmeli<sup>[[e]](#notlar)</sup> |  | 3 | 5 |
 | | | **Toplam** | **16** | **29** |
 | <h4>Sekizinci Dönem</h4>|
 | **Ders Kodu** |**Ders Başlığı** | **Önkoşullar** | **Kredi** | **AKTS** |
 | [CMPE492](/tr/courses/cmpe492) | Bilgisayar Mühendisliği Tasarım Projesi | SENIOR | 4 | 8 |
-| CMPE | Bölüm Seçmeli<sup>[[a]](#note-cmpe)</sup> | | 3 | 6 |
-| CC | Tamamlayıcı Seçmeli<sup>[[b]](#note-cc)</sup> | | 3 | 6 |
-| CC | Tamamlayıcı Seçmeli<sup>[[b]](#note-cc)</sup> | | 3 | 6 |
-| HSS | Beşeri ve Sosyal Bilimler Seçmeli<sup>[[d]](#note-hss)</sup> | | 3 | 5 |
+| CMPE | Bölüm Seçmeli<sup>[[a]](#notlar)</sup> | | 3 | 6 |
+| CC | Tamamlayıcı Seçmeli<sup>[[b]](#notlar)</sup> | | 3 | 6 |
+| CC | Tamamlayıcı Seçmeli<sup>[[b]](#notlar)</sup> | | 3 | 6 |
+| HSS | Beşeri ve Sosyal Bilimler Seçmeli<sup>[[d]](#notlar)</sup> | | 3 | 5 |
 | CMPE400 | Mühendislik Stajı | | 0 | 10 |
 | | | **Toplam** | **16** | **41** |
 {{< /table >}}
@@ -90,12 +89,12 @@ hasMermaid: true
 </div>
 
 <div id="note-cc">
-  <sup>[b]</sup> Tamamlayıcı Seçmeli (CC) dersler, <a href="https://cmpe.bogazici.edu.tr/docs/undergraduate/cc-electives/">Tamamlayıcı Seçmeli Dersler (CC) Listesi</a>
+  <sup>[b]</sup> Tamamlayıcı Dersler (CC), <a href="https://cmpe.bogazici.edu.tr/docs/undergraduate/cc-electives/">Tamamlayıcı Dersler Listesi</a>
   arasından seçilmelidir.
 </div>
 
 <div id="note-scie">
-  <sup>[c]</sup> Bilim Seçmeli (SCIE) dersleri, <a href="https://cmpe.bogazici.edu.tr/docs/undergraduate/science-electives/">Bilim Seçmeli (SCIE) Dersleri Listesi</a>
+  <sup>[c]</sup> Bilim Seçmeli (SCIE) dersleri, <a href="https://cmpe.bogazici.edu.tr/docs/undergraduate/science-electives/">Bilim Seçmeli Dersleri Listesi</a>
   arasından seçilmelidir.
 </div>
 
@@ -114,15 +113,3 @@ hasMermaid: true
 <div id="note-foreign-2">
   <sup>[f2]</sup> Yabancı uyruklu öğrenciler, HTR311/HTR312 dersleri yerine HTR405/HTR406 derslerini almak zorundadır.
 </div>
-
-
-<!-- {{< callout title="Curriculum Notes" type="primary" >}}
-<ol class="ps-3 mb-0 small">
-  <li id="note-sci" class="mb-2"><strong>Bilim Seçmeli Dersi</strong> Fizik, Kimya, Biyoloji veya Matematik (hesaplamalı olmayan) alanlarında temel bir bilim dersidir.</li>
-  <li id="note-hum" class="mb-2"><strong>HUM101–HUM102–HSS</strong> dersleri birbirlerinin yerine alınabilir ve birbirleriyle tekrarlanabilir.</li>
-  <li id="note-spec" class="mb-2"><strong>Belirlenmiş Seçmeli</strong> CmpE Bölümü tarafından sınırlandırılmış serbest bir seçmelidir; diğer listelerle örtüşebilir.</li>
-  <li id="note-cc" class="mb-2"> <strong>Tamamlayıcı Dersler</strong> Bölüm Seçmeli listesi içinden seçilebilir.</li>
-</ol>
-<hr class="border-secondary border-opacity-10 my-3">
-Detaylar için <a href="/undergraduate/electives/">seçmeli dersler sayfasına</a> bakabilirsiniz.
-{{< /callout >}} -->
