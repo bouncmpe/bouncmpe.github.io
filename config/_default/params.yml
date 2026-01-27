@@ -52,11 +52,22 @@ social:
   - name: "Twitter"
     icon: "twitter"
     url: "https://twitter.com/bogazici_cmpe"
-    weight: 30
+    weight: 10
   - name: "GitHub"
     icon: "git"
     url: "https://github.com/bouncmpe"
     weight: 20
+  - name: "YouTube"
+    icon: "youtube"
+    url: "https://www.youtube.com/@bogazici_cmpe"
+    weight: 30
+
+contact:
+  address:
+    en: "Department of Computer Engineering, Boğaziçi University, 34342 Bebek, Istanbul, Turkey"
+    tr: "Bilgisayar Mühendisliği Bölümü, Boğaziçi Üniversitesi, 34342 Bebek, İstanbul, Türkiye"
+  phone: "+90 212 359 45 23/24"
+  fax: "+90 212 287 24 61"
 
 mermaid:
   align: center
