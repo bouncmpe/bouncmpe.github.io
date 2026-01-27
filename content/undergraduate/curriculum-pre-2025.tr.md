@@ -1,6 +1,6 @@
 ---
 title: Öğretim Programı (2025 Öncesi)
-description: Boğaziçi Üniversitesi Bilgisayar Mühendisliği Öğretim Programı (2025 Öncesi)
+description: Güz 2025 dönemi öncesinde programa başlamış öğrenciler için geçerlidir.
 metadata: none
 toc: false
 weight: 2
