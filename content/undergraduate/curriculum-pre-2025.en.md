@@ -15,7 +15,7 @@ weight: 2
 | MATH101 | Calculus I | --- | 4 | 6 |
 | PHYS121 | Introductory Mechanics & Thermodynamics | --- | 4 | 6|
 | CHEM105 | Fundamentals of Chemistry | --- | 4| 6 |
-| [CMPE150](/courses/cmpe150)<sup>[[a]](#notes)</sup> | Introducution to Computing | --- | 3| 5|
+| [CMPE150](/courses/cmpe150)<sup>[[a]](#notes)</sup> | Introduction to Computing | --- | 3| 5|
 | EC101 | Principles of Microeconomics | --- | 3| 6 |
 |||| **18** | **31**|
 | <h4>Second Semester</h4>|
@@ -81,52 +81,30 @@ weight: 2
 {{< /table >}}
 <!-- prettier-ignore-end -->
 
-### Notes
+## Curriculum Notes {#notes}
 
-<div id="note-101">
+<div>
   <sup>[a]</sup> The course CMPE101 will replace CMPE150 starting from the Autumn 2026 semester.
-</div>
-
-<div id="note-142">
+  <br/>
   <sup>[b]</sup> The course CMPE142 will replace CMPE240 starting from the Spring 2027 semester.
-</div>
-
-<div id="note-222">
+  <br/>
   <sup>[c]</sup> The course CMPE222 will replace CMPE321 starting from the Spring 2028 semester.
-</div>
-
-<div id="note-244">
+  <br/>
   <sup>[d]</sup> The course CMPE244 will replace CMPE344 starting from the Spring 2027 semester.
-</div>
-
-<div id="note-320">
+  <br/>
   <sup>[e]</sup> The course CMPE320 will replace CMPE260 starting from the Spring 2027 semester.
-</div>
-
-<div id="note-346">
+  <br/>
   <sup>[f]</sup> The course CMPE346 will replace CMPE443 starting from the Autumn 2028 semester.
-</div>
-
-<div id="note-354">
+  <br/>
   <sup>[g]</sup> The course CMPE354 will replace CMPE352 and CMPE451 starting from the Spring 2026 semester.
-</div>
-
-<div id="note-scie">
-  <sup>[h]</sup> Science Elective (SCIE) courses will replace PHYS202 starting from the Spring 2026 semester. These courses must be selected from the <a href="https://cmpe.bogazici.edu.tr/docs/undergraduate/science-electives/">List of Science Elective Courses</a>.
-</div>
-
-<div id="note-cc">
-  <sup>[i]</sup> Complementary Courses (CC) must be selected from the <a href="https://cmpe.bogazici.edu.tr/docs/undergraduate/cc-electives/">List of Complementary Courses</a>. At least three CC courses must be from the CMPE department.
-</div>
-
-<div id="note-hss">
-  <sup>[j]</sup> Humanities and Social Sciences (HSS) courses must be selected from the List announced by the university each semester.
-</div>
-
-<div id="note-foreign-1">
+  <br/>
+  <sup>[h]</sup> Science Elective courses will replace PHYS202 starting from the Spring 2026 semester. These courses must be selected from the <a href="https://cmpe.bogazici.edu.tr/docs/undergraduate/science-electives/">List of Science Elective Courses</a>.
+  <br/>
+  <sup>[i]</sup> Complementary Courses must be selected from the <a href="https://cmpe.bogazici.edu.tr/docs/undergraduate/cc-electives/">List of Complementary Courses</a>. At least three complementary courses must be from the CMPE department.
+  <br/>
+  <sup>[j]</sup> Humanities and Social Sciences courses must be selected from the List announced by the university each semester.
+  <br/>
   <sup>[k1]</sup> Foreign students must take <a href="https://turkishliterature.bogazici.edu.tr/en/yabancilara-turkce">TKF courses</a> in place of TK221/TK222.
-</div>
-
-<div id="note-foreign-2">
+  <br/>
   <sup>[k2]</sup> Foreign students must take HTR405/HTR406 in place of HTR311/HTR312.
 </div>

@@ -41,7 +41,7 @@ weight: 2
 | EE212 | Introduction to Electronic Engineering | EE210 | 3 | 4 |
 | [CMPE222](/courses/cmpe222) | Introduction to Database Systems | CMPE250 | 3 | 6 |
 | [CMPE244](/courses/cmpe244) | Computer Organization | CMPE142 | 4 | 5 |
-| | Science Elective<sup>[[c]](#notes)</sup> |  | 3 | 6 |
+| XSCI<sup>[[c]](#notes)</sup> | Science Elective |  | 3 | 6 |
 | TK222<sup>[[f1]](#notes)</sup> | Turkish Language and Literature II || 2 | 3 |
 | | | **Total** | **19** | **31** |
 | <h4>Fifth Semester</h4>|
@@ -64,50 +64,38 @@ weight: 2
 | | | **Total** | **19** | **30** |
 | <h4>Seventh Semester</h4>|
 | **Code** | **Course Title** | **Prerequisites** | **Credits** | **ECTS** |
-| CMPE | Departmental Elective<sup>[[a]](#notes)</sup>  |  | 3 | 6 |
-| CMPE | Departmental Elective<sup>[[a]](#notes)</sup> |  | 3 | 6 |
-| CC | Complementary Course<sup>[[b]](#notes)</sup> |  | 3 | 6 |
-| HSS | Humanities and Social Sciences Elective<sup>[[d]](#notes)</sup>  |  | 4 | 6 |
-| | Specified Elective<sup>[[e]](#notes)</sup> |  | 3 | 5 |
+| CMPE<sup>[[a]](#notes)</sup> | Departmental Elective  |  | 3 | 6 |
+| CMPE<sup>[[a]](#notes)</sup> | Departmental Elective |  | 3 | 6 |
+| CC<sup>[[b]](#notes)</sup> | Complementary Course |  | 3 | 6 |
+| HSS<sup>[[d]](#notes)</sup> | Humanities and Social Sciences Elective  |  | 4 | 6 |
+| XPSX<sup>[[e]](#notes)</sup> | Specified Elective |  | 3 | 5 |
 | | | **Total** | **16** | **29** |
 | <h4>Eighth Semester</h4>|
 | **Code** | **Course Title** | **Prerequisites** | **Credits** | **ECTS** |
 | [CMPE492](/courses/cmpe492) | Computer Engineering Design Project | SENIOR | 4 | 8 |
-| CMPE | Departmental Elective<sup>[[a]](#notes)</sup> | | 3 | 6 |
-| CC | Complementary Course<sup>[[b]](#notes)</sup> |  | 3 | 6 |
-| CC | Complementary Course<sup>[[b]](#notes)</sup> |   | 3 | 6 |
-| HSS | Humanities and Social Sciences Elective<sup>[[d]](#notes)</sup> |  | 3 | 5 |
+| CMPE<sup>[[a]](#notes)</sup> | Departmental Elective | | 3 | 6 |
+| CC<sup>[[b]](#notes)</sup> | Complementary Course |  | 3 | 6 |
+| CC<sup>[[b]](#notes)</sup> | Complementary Course |   | 3 | 6 |
+| HSS<sup>[[d]](#notes)</sup> | Humanities and Social Sciences Elective |  | 3 | 5 |
 | CMPE400| Engineering Internship |  | 0 | 10 |
 | | | **Total** | **16** | **41** |
 {{< /table >}}
 <!-- prettier-ignore-end -->
 
-### Notes 
+## Curriculum Notes {#notes}
 
-<div id="note-cmpe">
+<div>
   <sup>[a]</sup> Departmental elective courses must be selected from courses with codes CMPE4XX or CMPE5XX. Eligibility conditions for CMPE5XX courses apply.
-</div>
-
-<div id="note-cc">
-  <sup>[b]</sup> Complementary Courses (CC) must be selected from the <a href="https://cmpe.bogazici.edu.tr/docs/undergraduate/cc-electives/">List of Complementary Courses</a>.
-</div>
-
-<div id="note-scie">
-  <sup>[c]</sup> Science Elective (SCIE) courses must be selected from the <a href="https://cmpe.bogazici.edu.tr/docs/undergraduate/science-electives/">List of Science Elective Courses</a>.
-</div>
-
-<div id="note-hss">
-  <sup>[d]</sup> Humanities and Social Sciences (HSS) courses must be selected from the list announced by the university each semester.
-</div>
-
-<div id="note-xspx">
-  <sup>[e]</sup> Any course listed under Complementary (CC), Science (SCIE), or Humanities and Social Sciences (HSS) electives is eligible to be counted as a Specified Elective.
-</div>
-
-<div id="note-foreign-1">
+  <br/>
+  <sup>[b]</sup> Complementary Courses must be selected from the <a href="https://cmpe.bogazici.edu.tr/docs/undergraduate/cc-electives/">List of Complementary Courses</a>.
+  <br/>
+  <sup>[c]</sup> Science Elective courses must be selected from the <a href="https://cmpe.bogazici.edu.tr/docs/undergraduate/science-electives/">List of Science Elective Courses</a>.
+  <br/>
+  <sup>[d]</sup> Humanities and Social Sciences courses must be selected from the list announced by the university each semester.
+  <br/>
+  <sup>[e]</sup> Any course listed under Complementary Courses, Science Electives, or Humanities and Social Sciences electives is eligible to be counted as a Specified Elective (XSPX).
+  <br/>
   <sup>[f1]</sup> Foreign students must take <a href="https://turkishliterature.bogazici.edu.tr/en/yabancilara-turkce">TKF courses</a> in place of TK221/TK222.
-</div>
-
-<div id="note-foreign-2">
+  <br/>
   <sup>[f2]</sup> Foreign students must take HTR405/HTR406 in place of HTR311/HTR312.
 </div>
