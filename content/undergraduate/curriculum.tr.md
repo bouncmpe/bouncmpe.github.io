@@ -85,7 +85,7 @@ weight: 2
 ## Program Notları {#notes}
 
 <div>
-  <sup>[a]</sup> Bölüm seçmeli dersleri, CMPE4XX veya CMPE5XX kodlu dersler arasından seçilmelidir. CMPE5XX dersleri için belirlenen uygunluk koşulları geçerlidir.
+  <sup>[a]</sup> Bölüm Seçmeli dersleri, CMPE4XX veya CMPE5XX kodlu dersler arasından seçilmelidir. CMPE5XX dersleri için belirlenen uygunluk koşulları geçerlidir.
   <br/>
   <sup>[b]</sup> Tamamlayıcı Seçmeli dersler, <a href="https://cmpe.bogazici.edu.tr/docs/undergraduate/cc-electives/">Tamamlayıcı Seçmeli Dersler Listesi</a>
   arasından seçilmelidir.

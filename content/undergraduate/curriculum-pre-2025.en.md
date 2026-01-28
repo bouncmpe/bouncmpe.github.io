@@ -100,7 +100,7 @@ weight: 2
   <br/>
   <sup>[h]</sup> Science Elective courses will replace PHYS202 starting from the Spring 2026 semester. These courses must be selected from the <a href="https://cmpe.bogazici.edu.tr/docs/undergraduate/science-electives/">List of Science Elective Courses</a>.
   <br/>
-  <sup>[i]</sup> Complementary Course Electives must be selected from the <a href="https://cmpe.bogazici.edu.tr/docs/undergraduate/cc-electives/">List of Complementary Courses</a>. At least three complementary courses must be from the CMPE department.
+  <sup>[i]</sup> Complementary Course Elective courses must be selected from the <a href="https://cmpe.bogazici.edu.tr/docs/undergraduate/cc-electives/">List of Complementary Courses</a>. At least three Complementary Course Elective courses must be from the CMPE department.
   <br/>
   <sup>[j]</sup> Humanities and Social Sciences Elective courses must be selected from the List announced by the university each semester.
   <br/>

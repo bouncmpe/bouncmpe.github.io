@@ -85,15 +85,15 @@ weight: 2
 ## Curriculum Notes {#notes}
 
 <div>
-  <sup>[a]</sup> Departmental elective courses must be selected from courses with codes CMPE4XX or CMPE5XX. Eligibility conditions for CMPE5XX courses apply.
+  <sup>[a]</sup> Departmental Elective courses must be selected from courses with codes CMPE4XX or CMPE5XX. Eligibility conditions for CMPE5XX courses apply.
   <br/>
-  <sup>[b]</sup> Complementary Course Electives must be selected from the <a href="https://cmpe.bogazici.edu.tr/docs/undergraduate/cc-electives/">List of Complementary Courses</a>.
+  <sup>[b]</sup> Complementary Course Elective courses must be selected from the <a href="https://cmpe.bogazici.edu.tr/docs/undergraduate/cc-electives/">List of Complementary Courses</a>.
   <br/>
   <sup>[c]</sup> Science Elective courses must be selected from the <a href="https://cmpe.bogazici.edu.tr/docs/undergraduate/science-electives/">List of Science Elective Courses</a>.
   <br/>
-  <sup>[d]</sup> Humanities and Social Sciences courses must be selected from the list announced by the university each semester.
+  <sup>[d]</sup> Humanities and Social Sciences Elective courses must be selected from the list announced by the university each semester.
   <br/>
-  <sup>[e]</sup> Any course listed under Complementary Course Electives, Science Electives, or Humanities and Social Sciences Elective is eligible to be counted as a Specified Elective.
+  <sup>[e]</sup> Any course listed under Complementary Course Elective, Science Elective, or Humanities and Social Sciences Elective courses is eligible to be counted as a Specified Elective course.
   <br/>
   <sup>[f1]</sup> Foreign students must take <a href="https://turkishliterature.bogazici.edu.tr/en/yabancilara-turkce">TKF courses</a> in place of TK221/TK222.
   <br/>

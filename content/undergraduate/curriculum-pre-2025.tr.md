@@ -22,7 +22,7 @@ weight: 2
 | **Ders Kodu** | **Ders Başlığı** | **Önkoşullar** | **Kredi** | **AKTS** |
 | MATH102 | Analiz II | MATH101 | 4 | 6 |
 | PHYS201 | Fizik III | PHYS121 | 4 | 6 |
-| HSS<sup>[[j]](#notes)</sup> | Beşeri ve Sosyal Bilimler Dersi (Seçmeli)| --- | 3-4 | 5-6 |
+| HSS<sup>[[j]](#notes)</sup> | Beşeri ve Sosyal Bilimler Seçmeli | --- | 3-4 | 5-6 |
 | [CMPE160](/courses/cmpe160) | Nesne Tabanlı Programlamaya Giriş | CMPE150 | 4 | 8 |
 | EC102 | Makroekonominin İlkeleri | EC101 | 3 | 6 |
 |||| **18-19** | **31-32** |
@@ -66,17 +66,17 @@ weight: 2
 | **Ders Kodu** | **Ders Başlığı** | **Önkoşullar** | **Kredi** | **AKTS** |
 | [CMPE443](/courses/cmpe443)<sup>[[f]](#notes)</sup>  | Gömülü Sistem Tasarım Temelleri | CMPE240 | 4 | 6 |
 | [CMPE451](/courses/cmpe451)<sup>[[g]](#notes)</sup> | Yazılım Mühendisliğinde Proje Tasarımı | CMPE321, CMPE352 | 2 | 5 |
-| CC<sup>[[i]](#notes)</sup> | Tamamlayıcı Ders (Seçmeli) |  | 3-4 | 6 |
-| CC<sup>[[i]](#notes)</sup> | Tamamlayıcı Ders (Seçmeli) |  | 3-4 | 6 |
-| CC<sup>[[i]](#notes)</sup> | Tamamlayıcı Ders (Seçmeli) |  | 3-4 | 6 |
+| CC<sup>[[i]](#notes)</sup> | Tamamlayıcı Seçmeli |  | 3-4 | 6 |
+| CC<sup>[[i]](#notes)</sup> | Tamamlayıcı Seçmeli |  | 3-4 | 6 |
+| CC<sup>[[i]](#notes)</sup> | Tamamlayıcı Seçmeli |  | 3-4 | 6 |
 |||| **15-18** | **29** |
 | <h4>Sekizinci Dönem</h4>|
 | **Ders Kodu** | **Ders Başlığı** | **Önkoşullar** | **Kredi** | **AKTS** |
 | CMPE492 | Bilgisayar Mühendisliği Tasarım Projesi | SENIOR | 4 | 8 |
-| HSS<sup>[[j]](#notes)</sup> | Beşeri ve Sosyal Bilimler Dersi (Seçmeli) |  | 3 | 6 |
-| CC<sup>[[i]](#notes)</sup> | Tamamlayıcı Ders (Seçmeli) |  | 3-4 | 6 |
-| CC<sup>[[i]](#notes)</sup> | Tamamlayıcı Ders (Seçmeli) |  | 3-4 | 6 |
-| CC<sup>[[i]](#notes)</sup> | Tamamlayıcı Ders (Seçmeli) |  | 3-4 | 6 |
+| HSS<sup>[[j]](#notes)</sup> | Beşeri ve Sosyal Bilimler Seçmeli |  | 3 | 6 |
+| CC<sup>[[i]](#notes)</sup> | Tamamlayıcı Seçmeli |  | 3-4 | 6 |
+| CC<sup>[[i]](#notes)</sup> | Tamamlayıcı Seçmeli |  | 3-4 | 6 |
+| CC<sup>[[i]](#notes)</sup> | Tamamlayıcı Seçmeli |  | 3-4 | 6 |
 |||| **16-19** | **32** |
 {{< /table >}}
 <!-- prettier-ignore-end -->
