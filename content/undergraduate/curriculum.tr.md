@@ -41,7 +41,7 @@ weight: 2
 | EE212 | Elektronik Mühendisliğine Giriş | EE210 | 3 | 4 |
 | [CMPE222](/tr/courses/cmpe222) | Veri Tabanı Sistemlerine Giriş | CMPE250 | 3 | 6 |
 | [CMPE244](/tr/courses/cmpe244) | Bilgisayar Organizasyonu | CMPE142 | 4 | 5 |
-| | Bilim Seçmeli<sup>[[c]](#notes)</sup> | | 3 | 6 |
+| XSCI<sup>[[c]](#notes)</sup> | Bilim Seçmeli | | 3 | 6 |
 | TK222<sup>[[f1]](#notes)</sup> | Türkçe II | | 2 | 3 |
 | | | **Toplam** | **19** | **31** |
 | <h4>Beşinci Dönem</h4>|
@@ -64,19 +64,19 @@ weight: 2
 | | | **Toplam** | **19** | **30** |
 | <h4>Yedinci Dönem</h4>|
 | **Ders Kodu** |**Ders Başlığı** | **Önkoşullar** | **Kredi** | **AKTS** |
-| CMPE | Bölüm Seçmeli<sup>[[a]](#notes)</sup> |  | 3 | 6 |
-| CMPE | Bölüm Seçmeli<sup>[[a]](#notes)</sup> |  | 3 | 6 |
-| CC | Tamamlayıcı Seçmeli<sup>[[b]](#notes)</sup> | | 3 | 6 |
-| HSS | Beşeri ve Sosyal Bilimler Seçmeli Dersi<sup>[[d]](#notes)</sup> | | 4 | 6 |
-| | Tanımlanmış Seçmeli<sup>[[e]](#notes)</sup> |  | 3 | 5 |
+| CMPE<sup>[[a]](#notes)</sup> | Bölüm Seçmeli |  | 3 | 6 |
+| CMPE<sup>[[a]](#notes)</sup> | Bölüm Seçmeli |  | 3 | 6 |
+| CC<sup>[[b]](#notes)</sup> | Tamamlayıcı Seçmeli | | 3 | 6 |
+| HSS<sup>[[d]](#notes)</sup> | Beşeri ve Sosyal Bilimler Seçmeli | | 4 | 6 |
+| XSPX<sup>[[e]](#notes)</sup> | Tanımlanmış Seçmeli |  | 3 | 5 |
 | | | **Toplam** | **16** | **29** |
 | <h4>Sekizinci Dönem</h4>|
 | **Ders Kodu** |**Ders Başlığı** | **Önkoşullar** | **Kredi** | **AKTS** |
 | [CMPE492](/tr/courses/cmpe492) | Bilgisayar Mühendisliği Tasarım Projesi | SENIOR | 4 | 8 |
-| CMPE | Bölüm Seçmeli<sup>[[a]](#notes)</sup> | | 3 | 6 |
-| CC | Tamamlayıcı Seçmeli<sup>[[b]](#notes)</sup> | | 3 | 6 |
-| CC | Tamamlayıcı Seçmeli<sup>[[b]](#notes)</sup> | | 3 | 6 |
-| HSS | Beşeri ve Sosyal Bilimler Seçmeli<sup>[[d]](#notes)</sup> | | 3 | 5 |
+| CMPE<sup>[[a]](#notes)</sup> | Bölüm Seçmeli | | 3 | 6 |
+| CC<sup>[[b]](#notes)</sup> | Tamamlayıcı Seçmeli | | 3 | 6 |
+| CC<sup>[[b]](#notes)</sup> | Tamamlayıcı Seçmeli | | 3 | 6 |
+| HSS<sup>[[d]](#notes)</sup> | Beşeri ve Sosyal Bilimler Seçmeli | | 3 | 5 |
 | CMPE400 | Mühendislik Stajı | | 0 | 10 |
 | | | **Toplam** | **16** | **41** |
 {{< /table >}}
@@ -87,15 +87,15 @@ weight: 2
 <div>
   <sup>[a]</sup> Bölüm seçmeli dersleri, CMPE4XX veya CMPE5XX kodlu dersler arasından seçilmelidir. CMPE5XX dersleri için belirlenen uygunluk koşulları geçerlidir.
   <br/>
-  <sup>[b]</sup> Tamamlayıcı Dersler, <a href="https://cmpe.bogazici.edu.tr/docs/undergraduate/cc-electives/">Tamamlayıcı Dersler Listesi</a>
+  <sup>[b]</sup> Tamamlayıcı Seçmeli dersler, <a href="https://cmpe.bogazici.edu.tr/docs/undergraduate/cc-electives/">Tamamlayıcı Seçmeli Dersler Listesi</a>
   arasından seçilmelidir.
   <br/>
   <sup>[c]</sup> Bilim Seçmeli dersleri, <a href="https://cmpe.bogazici.edu.tr/docs/undergraduate/science-electives/">Bilim Seçmeli Dersleri Listesi</a>
   arasından seçilmelidir.
   <br/>
-  <sup>[d]</sup> Beşeri ve Sosyal Bilimler dersleri, üniversite tarafından her dönem ilan edilen listeden seçilmelidir.
+  <sup>[d]</sup> Beşeri ve Sosyal Bilimler Seçmeli dersleri, üniversite tarafından her dönem ilan edilen listeden seçilmelidir.
   <br/>
-  <sup>[e]</sup> Tamamlayıcı Dersler, Bilim Seçmeli veya Beşeri ve Sosyal Bilimler ders listelerinde yer alan herhangi bir ders, Tanımlanmış Seçmeli ders yükümlülüğünü karşılamak üzere sayılabilir.
+  <sup>[e]</sup> Tamamlayıcı Seçmeli, Bilim Seçmeli veya Beşeri ve Sosyal Bilimler Seçmeli ders listelerinde yer alan herhangi bir ders, Tanımlanmış Seçmeli ders yükümlülüğünü karşılamak üzere sayılabilir.
   <br/>
   <sup>[f1]</sup> Yabancı uyruklu öğrenciler, TK221/TK222 dersleri yerine <a href="https://turkishliterature.bogazici.edu.tr/en/yabancilara-turkce">TKF kodlu dersleri</a> almak zorundadır.
   <br/>

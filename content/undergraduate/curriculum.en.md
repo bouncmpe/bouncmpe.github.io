@@ -66,16 +66,16 @@ weight: 2
 | **Code** | **Course Title** | **Prerequisites** | **Credits** | **ECTS** |
 | CMPE<sup>[[a]](#notes)</sup> | Departmental Elective  |  | 3 | 6 |
 | CMPE<sup>[[a]](#notes)</sup> | Departmental Elective |  | 3 | 6 |
-| CC<sup>[[b]](#notes)</sup> | Complementary Course |  | 3 | 6 |
+| CC<sup>[[b]](#notes)</sup> | Complementary Course Elective |  | 3 | 6 |
 | HSS<sup>[[d]](#notes)</sup> | Humanities and Social Sciences Elective  |  | 4 | 6 |
-| XPSX<sup>[[e]](#notes)</sup> | Specified Elective |  | 3 | 5 |
+| XSPX<sup>[[e]](#notes)</sup> | Specified Elective |  | 3 | 5 |
 | | | **Total** | **16** | **29** |
 | <h4>Eighth Semester</h4>|
 | **Code** | **Course Title** | **Prerequisites** | **Credits** | **ECTS** |
 | [CMPE492](/courses/cmpe492) | Computer Engineering Design Project | SENIOR | 4 | 8 |
 | CMPE<sup>[[a]](#notes)</sup> | Departmental Elective | | 3 | 6 |
-| CC<sup>[[b]](#notes)</sup> | Complementary Course |  | 3 | 6 |
-| CC<sup>[[b]](#notes)</sup> | Complementary Course |   | 3 | 6 |
+| CC<sup>[[b]](#notes)</sup> | Complementary Course Elective |  | 3 | 6 |
+| CC<sup>[[b]](#notes)</sup> | Complementary Course Elective |   | 3 | 6 |
 | HSS<sup>[[d]](#notes)</sup> | Humanities and Social Sciences Elective |  | 3 | 5 |
 | CMPE400| Engineering Internship |  | 0 | 10 |
 | | | **Total** | **16** | **41** |
@@ -87,13 +87,13 @@ weight: 2
 <div>
   <sup>[a]</sup> Departmental elective courses must be selected from courses with codes CMPE4XX or CMPE5XX. Eligibility conditions for CMPE5XX courses apply.
   <br/>
-  <sup>[b]</sup> Complementary Courses must be selected from the <a href="https://cmpe.bogazici.edu.tr/docs/undergraduate/cc-electives/">List of Complementary Courses</a>.
+  <sup>[b]</sup> Complementary Course Electives must be selected from the <a href="https://cmpe.bogazici.edu.tr/docs/undergraduate/cc-electives/">List of Complementary Courses</a>.
   <br/>
   <sup>[c]</sup> Science Elective courses must be selected from the <a href="https://cmpe.bogazici.edu.tr/docs/undergraduate/science-electives/">List of Science Elective Courses</a>.
   <br/>
   <sup>[d]</sup> Humanities and Social Sciences courses must be selected from the list announced by the university each semester.
   <br/>
-  <sup>[e]</sup> Any course listed under Complementary Courses, Science Electives, or Humanities and Social Sciences electives is eligible to be counted as a Specified Elective (XSPX).
+  <sup>[e]</sup> Any course listed under Complementary Course Electives, Science Electives, or Humanities and Social Sciences Elective is eligible to be counted as a Specified Elective (XSPX).
   <br/>
   <sup>[f1]</sup> Foreign students must take <a href="https://turkishliterature.bogazici.edu.tr/en/yabancilara-turkce">TKF courses</a> in place of TK221/TK222.
   <br/>

@@ -22,7 +22,7 @@ weight: 2
 | **Code** |**Course Title** | **Prerequisites** | **Credits** | **ECTS** |
 | MATH102 | Calculus II | MATH101 | 4 | 6|
 | PHYS201 | Physics III | PHYS121 | 4 | 6|
-| HSS<sup>[[j]](#notes)</sup> | Humanities and Social Sciences (Elective)| --- |  3-4 |5-6|
+| HSS<sup>[[j]](#notes)</sup> | Humanities and Social Sciences Elective | --- |  3-4 |5-6|
 | [CMPE160](/courses/cmpe160) | Introduction to Object Oriented Programming | CMPE150 | 4 | 8 |
 | EC102 | Principles of Macroeconomics | EC101 |  3 | 6 |
 ||||  **18-19** |  **31-32**|
@@ -66,17 +66,17 @@ weight: 2
 | **Code** |**Course Title** | **Prerequisites** | **Credits** | **ECTS** |
 | [CMPE443](/courses/cmpe443)<sup>[[f]](#notes)</sup> | Principles of Embedded Systems Design | CMPE240 | 4 | 6|
 | [CMPE451](/courses/cmpe451)<sup>[[g]](#notes)</sup> | Project Development in Software Engineering | CMPE321, CMPE352 | 2 | 5|
-| CC<sup>[[i]](#notes)</sup> | Complemetary Course (Elective) || 3-4 |6|
-| CC<sup>[[i]](#notes)</sup> | Complemetary Course (Elective) || 3-4 |6|
-| CC<sup>[[i]](#notes)</sup> | Complemetary Course (Elective) || 3-4 |6|
+| CC<sup>[[i]](#notes)</sup> | Complemetary Course Elective || 3-4 |6|
+| CC<sup>[[i]](#notes)</sup> | Complemetary Course Elective || 3-4 |6|
+| CC<sup>[[i]](#notes)</sup> | Complemetary Course Elective || 3-4 |6|
 |||| **15-18** |**29**|
 | <h4>Eighth Semester</h4>|
 | **Code** |**Course Title** | **Prerequisites** | **Credits** | **ECTS** |
 | CMPE492 | Computer Engineering Design Project | SENIOR | 4 | 8|
-| HSS<sup>[[j]](#notes)</sup> | Humanities and Social Sciences (Elective) || 3 | 6|
-| CC<sup>[[i]](#notes)</sup> | Complemetary Course (Elective) || 3-4 |6|
-| CC<sup>[[i]](#notes)</sup> | Complemetary Course (Elective) || 3-4 |6|
-| CC<sup>[[i]](#notes)</sup> | Complemetary Course (Elective) || 3-4 |6|
+| HSS<sup>[[j]](#notes)</sup> | Humanities and Social Sciences Elective || 3 | 6|
+| CC<sup>[[i]](#notes)</sup> | Complemetary Course Elective || 3-4 |6|
+| CC<sup>[[i]](#notes)</sup> | Complemetary Course Elective || 3-4 |6|
+| CC<sup>[[i]](#notes)</sup> | Complemetary Course Elective || 3-4 |6|
 |||| **16-19** |**32**|
 {{< /table >}}
 <!-- prettier-ignore-end -->
@@ -100,9 +100,9 @@ weight: 2
   <br/>
   <sup>[h]</sup> Science Elective courses will replace PHYS202 starting from the Spring 2026 semester. These courses must be selected from the <a href="https://cmpe.bogazici.edu.tr/docs/undergraduate/science-electives/">List of Science Elective Courses</a>.
   <br/>
-  <sup>[i]</sup> Complementary Courses must be selected from the <a href="https://cmpe.bogazici.edu.tr/docs/undergraduate/cc-electives/">List of Complementary Courses</a>. At least three complementary courses must be from the CMPE department.
+  <sup>[i]</sup> Complementary Course Electives must be selected from the <a href="https://cmpe.bogazici.edu.tr/docs/undergraduate/cc-electives/">List of Complementary Courses</a>. At least three complementary courses must be from the CMPE department.
   <br/>
-  <sup>[j]</sup> Humanities and Social Sciences courses must be selected from the List announced by the university each semester.
+  <sup>[j]</sup> Humanities and Social Sciences Elective courses must be selected from the List announced by the university each semester.
   <br/>
   <sup>[k1]</sup> Foreign students must take <a href="https://turkishliterature.bogazici.edu.tr/en/yabancilara-turkce">TKF courses</a> in place of TK221/TK222.
   <br/>
