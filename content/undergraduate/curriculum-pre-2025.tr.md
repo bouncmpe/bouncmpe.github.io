@@ -100,7 +100,7 @@ weight: 2
   <br/>
   <sup>[h]</sup> Bilim Seçmeli dersleri, Bahar 2026 döneminden itibaren PHYS202 dersinin yerine geçecektir. Bu dersler, <a href="https://cmpe.bogazici.edu.tr/docs/undergraduate/science-electives/">Bilim Seçmeli Dersleri Listesi</a> arasından seçilmelidir.
   <br/>
-  <sup>[i]</sup> Tamamlayıcı Seçmeli dersler, <a href="https://cmpe.bogazici.edu.tr/docs/undergraduate/cc-electives/">Tamamlayıcı Seçmeli Dersler Listesi</a>'nden seçilmelidir. En az üç CC dersi CMPE bölümünden olmalıdır.
+  <sup>[i]</sup> Tamamlayıcı Seçmeli dersler, <a href="https://cmpe.bogazici.edu.tr/docs/undergraduate/cc-electives/">Tamamlayıcı Seçmeli Dersler Listesi</a>'nden seçilmelidir. En az üç Tamamlayıcı Seçmeli ders CMPE bölümünden olmalıdır.
   <br/>
   <sup>[j]</sup> Beşeri ve Sosyal Bilimler dersleri, üniversite tarafından her dönem ilan edilen listeden seçilmelidir.
   <br/>

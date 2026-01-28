@@ -93,7 +93,7 @@ weight: 2
   <br/>
   <sup>[d]</sup> Humanities and Social Sciences courses must be selected from the list announced by the university each semester.
   <br/>
-  <sup>[e]</sup> Any course listed under Complementary Course Electives, Science Electives, or Humanities and Social Sciences Elective is eligible to be counted as a Specified Elective (XSPX).
+  <sup>[e]</sup> Any course listed under Complementary Course Electives, Science Electives, or Humanities and Social Sciences Elective is eligible to be counted as a Specified Elective.
   <br/>
   <sup>[f1]</sup> Foreign students must take <a href="https://turkishliterature.bogazici.edu.tr/en/yabancilara-turkce">TKF courses</a> in place of TK221/TK222.
   <br/>
