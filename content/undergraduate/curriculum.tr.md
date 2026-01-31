@@ -61,7 +61,7 @@ weight: 2
 | [CMPE362](/tr/courses/cmpe362) | Bilgisayar Mühendisleri için Sinyal İşlemeye Giriş | MATH202 | 3 | 6 |
 | IE306 | Sistem Benzetimi | CMPE343 | 4 | 7 |
 | HTR312<sup>[[f2]](#notes)</sup> | Türkiye Cumhuriyeti Tarihi II | | 2 | 3 |
-| | | **Toplam** | **19** | **30** |
+| | | **Toplam** | **19** | **33** |
 | <h4>Yedinci Dönem</h4>|
 | **Ders Kodu** |**Ders Başlığı** | **Önkoşullar** | **Kredi** | **AKTS** |
 | CMPE<sup>[[a]](#notes)</sup> | Bölüm Seçmeli |  | 3 | 6 |

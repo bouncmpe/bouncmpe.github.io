@@ -61,7 +61,7 @@ weight: 2
 | [CMPE362](/courses/cmpe362) | Introduction to Signal Processing or Computer Engineers | MATH202 | 3 | 6 |
 | IE306 | System Simulation | CMPE343 | 4 | 7 |
 | HTR312<sup>[[f2]](#notes)</sup> | History of Turkish Republic II |   | 2 | 3 |
-| | | **Total** | **19** | **30** |
+| | | **Total** | **19** | **33** |
 | <h4>Seventh Semester</h4>|
 | **Code** | **Course Title** | **Prerequisites** | **Credits** | **ECTS** |
 | CMPE<sup>[[a]](#notes)</sup> | Departmental Elective  |  | 3 | 6 |
