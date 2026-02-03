@@ -4,9 +4,7 @@ description: The new curriculum of the Department of Computer Engineering is a c
 metadata: none
 toc: false
 weight: 2
-hasMermaid: true
 ---
-
 
 <!-- prettier-ignore-start -->
 {{< table class="table-hover table-sm" >}}
@@ -15,11 +13,11 @@ hasMermaid: true
 | <h4>First Semester</h4>|
 | **Code** | **Course Title** | **Prerequisites** | **Credits** | **ECTS** |
 | MATH101 | Calculus I | --- | 4 | 6 |
-| PHYS121 | Introductory Mechanics & Thermodynamics | --- | 4 | 6 |
+| PHYS121 | Introductory Mechanics & Thermodynamics | --- | 4 | 8 |
 | CHEM105 | Fundamentals of Chemistry | --- | 4 | 6 |
 | [CMPE101](/courses/cmpe101) | Introduction to Computer Engineering | --- | 4 | 6 |
 | EC101 | Principles of Microeconomics | --- | 3 | 6 |
-| | | **Total** | **19** | **30** |
+| | | **Total** | **19** | **32** |
 | <h4>Second Semester</h4>|
 | **Code** | **Course Title** | **Prerequisites** | **Credits** | **ECTS** |
 | MATH102 | Calculus II | MATH101 | 4 | 6 |
@@ -35,7 +33,7 @@ hasMermaid: true
 | [CMPE220](/courses/cmpe220) | Discrete Computational Structures | --- | 3 | 5 |
 | [CMPE230](/courses/cmpe230) | System Programming | CMPE160 | 3 | 6 |
 | [CMPE250](/courses/cmpe250) | Data Structures and Algorithms | CMPE160 | 3 | 6 |
-| TK221 | Turkish Language and Literature I |  | 2 | 3 |
+| TK221<sup>[[f1]](#notes)</sup> | Turkish Language and Literature I |  | 2 | 3 |
 | | | **Total** | **18** | **31** |
 | <h4>Fourth Semester</h4>|
 | **Code** | **Course Title** | **Prerequisites** | **Credits** | **ECTS** |
@@ -43,8 +41,8 @@ hasMermaid: true
 | EE212 | Introduction to Electronic Engineering | EE210 | 3 | 4 |
 | [CMPE222](/courses/cmpe222) | Introduction to Database Systems | CMPE250 | 3 | 6 |
 | [CMPE244](/courses/cmpe244) | Computer Organization | CMPE142 | 4 | 5 |
-| |  Science Elective  |  | 3 | 6 |
-| TK222 | Turkish Language and Literature II || 2 | 3 |
+| XSCI<sup>[[c]](#notes)</sup> | Science Elective |  | 3 | 6 |
+| TK222<sup>[[f1]](#notes)</sup> | Turkish Language and Literature II || 2 | 3 |
 | | | **Total** | **19** | **31** |
 | <h4>Fifth Semester</h4>|
 | **Code** | **Course Title** | **Prerequisites** | **Credits** | **ECTS** |
@@ -53,7 +51,7 @@ hasMermaid: true
 | [CMPE343](/courses/cmpe343) | Introduction to Probability and Statistics for Computer Engineers | MATH101 | 3 | 6 |
 | [CMPE346](/courses/cmpe346) | Principles of Embedded Systems Design | CMPE244 | 4 | 6 |
 | IE310 | Operations Research | MATH201 | 4 | 5 |
-| HTR311 | History of Turkish Republic I | | 2 | 3 |
+| HTR311<sup>[[f2]](#notes)</sup> | History of Turkish Republic I | | 2 | 3 |
 | | | **Total** | **19** | **31** |
 | <h4>Sixth Semester</h4>|
 | **Code** | **Course Title** | **Prerequisites** | **Credits** | **ECTS** |
@@ -62,34 +60,42 @@ hasMermaid: true
 | [CMPE354](/courses/cmpe354) | Software Engineering | CMPE222 | 4 | 7 |
 | [CMPE362](/courses/cmpe362) | Introduction to Signal Processing or Computer Engineers | MATH202 | 3 | 6 |
 | IE306 | System Simulation | CMPE343 | 4 | 7 |
-| HTR312 | History of Turkish Republic II |   | 2 | 3 |
-| | | **Total** | **19** | **30** |
+| HTR312<sup>[[f2]](#notes)</sup> | History of Turkish Republic II |   | 2 | 3 |
+| | | **Total** | **19** | **33** |
 | <h4>Seventh Semester</h4>|
 | **Code** | **Course Title** | **Prerequisites** | **Credits** | **ECTS** |
-| CMPE | Departmental Elective |  | 3 | 6 |
-| CMPE | Departmental Elective |  | 3 | 6 |
-| CC | Complementary Course (Elective)|  | 3 | 6 |
-| | Specified Elective |  | 3 | 5 |
-| HSS | Humanities and Social Sciences Elective  |  | 4 | 6 |
+| CMPE<sup>[[a]](#notes)</sup> | Departmental Elective  |  | 3 | 6 |
+| CMPE<sup>[[a]](#notes)</sup> | Departmental Elective |  | 3 | 6 |
+| CC<sup>[[b]](#notes)</sup> | Complementary Course Elective |  | 3 | 6 |
+| HSS<sup>[[d]](#notes)</sup> | Humanities and Social Sciences Elective  |  | 4 | 6 |
+| XSPX<sup>[[e]](#notes)</sup> | Specified Elective |  | 3 | 5 |
 | | | **Total** | **16** | **29** |
 | <h4>Eighth Semester</h4>|
 | **Code** | **Course Title** | **Prerequisites** | **Credits** | **ECTS** |
 | [CMPE492](/courses/cmpe492) | Computer Engineering Design Project | SENIOR | 4 | 8 |
-| CMPE | Departmental Elective | | 3 | 6 |
-| CC | Complementary Course (Elective) |  | 3 | 6 |
-| CC | Complementary Course (Elective) |   | 3 | 6 |
-| HSS | Humanities and Social Sciences Elective |  | 3 | 5 |
+| CMPE<sup>[[a]](#notes)</sup> | Departmental Elective | | 3 | 6 |
+| CC<sup>[[b]](#notes)</sup> | Complementary Course Elective |  | 3 | 6 |
+| CC<sup>[[b]](#notes)</sup> | Complementary Course Elective |   | 3 | 6 |
+| HSS<sup>[[d]](#notes)</sup> | Humanities and Social Sciences Elective |  | 3 | 5 |
 | CMPE400| Engineering Internship |  | 0 | 10 |
 | | | **Total** | **16** | **41** |
 {{< /table >}}
 <!-- prettier-ignore-end -->
-<!-- {{< callout title="Curriculum Notes" type="primary" >}}
-<ol class="ps-3 mb-0 small">
-  <li id="note-sci" class="mb-2"><strong>Science Elective</strong> is a basic science course in Physics, Chemistry, Biology or Mathematics (non-computational).</li>
-  <li id="note-hum" class="mb-2"><strong>HUM101</strong> can be taken interchangeably and repeated with each other.</li>
-  <li id="note-spec" class="mb-2"><strong>Specified Elective</strong> is a free elective restricted by the CMPE Department; it may overlap with other lists.</li>
-  <li id="note-cc" class="mb-2"><strong>Complementary Courses</strong> can be selected from the Departmental Elective list.</li>
-</ol>
-<hr class="border-secondary border-opacity-10 my-3">
-For details, see <a href="/undergraduate/electives/">the elective courses page</a>.
-{{< /callout >}} -->
+
+## Curriculum Notes {#notes}
+
+<div>
+  <sup>[a]</sup> Departmental Elective courses must be selected from courses with codes CMPE4XX or CMPE5XX. Eligibility conditions for CMPE5XX courses apply.
+  <br/>
+  <sup>[b]</sup> Complementary Course Elective courses must be selected from the <a href="https://cmpe.bogazici.edu.tr/docs/undergraduate/cc-electives/">List of Complementary Courses</a>.
+  <br/>
+  <sup>[c]</sup> Science Elective courses must be selected from the <a href="https://cmpe.bogazici.edu.tr/docs/undergraduate/science-electives/">List of Science Elective Courses</a>.
+  <br/>
+  <sup>[d]</sup> Humanities and Social Sciences Elective courses must be selected from the list announced by the university each semester.
+  <br/>
+  <sup>[e]</sup> Any course listed under Complementary Course Elective, Science Elective, or Humanities and Social Sciences Elective courses is eligible to be counted as a Specified Elective course.
+  <br/>
+  <sup>[f1]</sup> Foreign students must take <a href="https://turkishliterature.bogazici.edu.tr/en/yabancilara-turkce">TKF courses</a> in place of TK221/TK222.
+  <br/>
+  <sup>[f2]</sup> Foreign students must take HTR405/HTR406 in place of HTR311/HTR312.
+</div>
