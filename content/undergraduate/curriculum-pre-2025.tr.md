@@ -13,11 +13,11 @@ weight: 2
 | <h4>Birinci Dönem</h4>|
 | **Ders Kodu** | **Ders Başlığı** | **Önkoşullar** | **Kredi** | **AKTS** |
 | MATH101 | Analiz I | --- | 4 | 6 |
-| PHYS121 | Mekanik ve Termodinamiğe Giriş | --- | 4 | 6 |
+| PHYS121 | Mekanik ve Termodinamiğe Giriş | --- | 4 | 8 |
 | CHEM105 | Kimyanın Temelleri | --- | 4 | 6 |
 | [CMPE150](/courses/cmpe150)<sup>[[a]](#notes)</sup> | Bilgi İşleme Giriş | --- | 3 | 5 |
 | EC101 | Mikroekonominin İlkeleri | --- | 3 | 6 |
-|||| **18** | **31** |
+|||| **18** | **33** |
 | <h4>İkinci Dönem</h4>|
 | **Ders Kodu** | **Ders Başlığı** | **Önkoşullar** | **Kredi** | **AKTS** |
 | MATH102 | Analiz II | MATH101 | 4 | 6 |

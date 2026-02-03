@@ -13,11 +13,11 @@ weight: 2
 | <h4>First Semester</h4>|
 | **Code** | **Course Title** | **Prerequisites** | **Credits** | **ECTS** |
 | MATH101 | Calculus I | --- | 4 | 6 |
-| PHYS121 | Introductory Mechanics & Thermodynamics | --- | 4 | 6 |
+| PHYS121 | Introductory Mechanics & Thermodynamics | --- | 4 | 8 |
 | CHEM105 | Fundamentals of Chemistry | --- | 4 | 6 |
 | [CMPE101](/courses/cmpe101) | Introduction to Computer Engineering | --- | 4 | 6 |
 | EC101 | Principles of Microeconomics | --- | 3 | 6 |
-| | | **Total** | **19** | **30** |
+| | | **Total** | **19** | **32** |
 | <h4>Second Semester</h4>|
 | **Code** | **Course Title** | **Prerequisites** | **Credits** | **ECTS** |
 | MATH102 | Calculus II | MATH101 | 4 | 6 |
