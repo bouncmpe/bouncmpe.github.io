@@ -55,11 +55,11 @@ thesis-defender:
 add-calendar:
   other: "takvimime ekle"
 
-edit-this-content:
-  other: bu içeriği düzenle
-
 on-this-page:
   other: içindekiler
+
+edit-page:
+  other: "Bu sayfayı GitHub'da düzenle"
 
 more-news:
   other: diğer haberler

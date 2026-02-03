@@ -61,11 +61,11 @@ thesis-defender:
 more-actions:
   other: more actions
 
-edit-this-content:
-  other: edit this content
-
 on-this-page:
   other: "on this page"
+
+edit-page:
+  other: "Edit this page on GitHub"
 
 phd-thesis-defense:
   other: "PhD Thesis Defense"
