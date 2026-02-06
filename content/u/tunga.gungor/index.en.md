@@ -1,5 +1,5 @@
 ---
 title: Tunga Güngör
 type: redirect
-target: https://cmpe.boun.edu.tr/~gungort
+target:  https://sites.google.com/view/tungagungor/
 ---
