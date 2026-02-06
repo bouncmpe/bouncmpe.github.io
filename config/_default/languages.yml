@@ -1,6 +1,6 @@
 
 tr:
-  title: "Bilgisayar Mühendisliği"
+  title: "Boğaziçi Üniversitesi Bilgisayar Mühendisliği"
   languageName: Türkçe
   copyright: Telif hakkı © {year} Bilgisayar Mühendisliği Bölümü, Boğaziçi Üniversitesi. Tüm hakları saklıdır.
   weight: 1
@@ -9,7 +9,7 @@ tr:
       tagline: "Boğaziçi Üniversitesi"
 
 en:
-  title: "Computer Engineering"
+  title: "Boğaziçi University Computer Engineering"
   languageName: English
   copyright: Copyright © {year} Department of Computer Engineering, Boğaziçi University. All rights reserved.
   weight: 2
