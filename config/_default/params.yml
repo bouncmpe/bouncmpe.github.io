@@ -25,6 +25,7 @@ sharing:
 
 # Boğaziçi Dark Blue: "#1e4a8b"
 # Boğaziçi Light Blue: "#8cc8ea"
+
 style:
   primary: "#1e4a8b"
   fontSizeBase: "1.1rem"
@@ -64,101 +65,3 @@ mermaid:
 github:
   repo: "https://github.com/bouncmpe/bouncmpe.github.io"
   branch: "main"
-# sections:
-#   about:
-#     title:
-#     layout: card
-#     sort: weight
-#     style: rounded-1 px-4 pb-3 my-0
-#     header: none
-#     footer: none
-#     padding: 2
-#     cols: 3
-#     orientation: stacked
-#     fullCover: true
-#     reverse: false
-#     nested: false
-#   g:
-#     layout: card
-#     header: none
-#     footer: none
-#     cols: 4
-#     padding: 0
-#   u:
-#     layout: card
-#     header: none
-#     footer: none
-#     cols: 4
-#     padding: 0
-#   prospective:
-#     layout: card
-#     sort: weight
-#     style: rounded-0 px-4 pb-3 my-0
-#     header: none
-#     footer: none
-#     padding: 2
-#     cols: 3
-#     orientation: stacked
-#     fullCover: true
-#     reverse: false
-#     nested: false
-#   people:
-#     layout: card
-#     sort: weight
-#     style: border-0 px-4 pb-3 my-0 card-zoom
-#     header: none
-#     footer: none
-#     padding: 2
-#     cols: 2
-#     orientation: stacked
-#     fullCover: true
-#     reverse: false
-#     nested: false
-#   courses:
-#     sort: weight
-#     style: rounded-1 card-zoom
-#     header: none
-#     footer: none
-#     padding: 3
-#     cols: 4
-#     orientation: stacked
-#     color: body-tertiary
-#     reverse: false
-#     nested: false
-#     fullCover: true
-#   undergraduate:
-#     sort: weight
-#     style: rounded-1 card-zoom
-#     header: none
-#     footer: none
-#     padding: 3
-#     cols: 4
-#     orientation: stacked
-#     color: body-tertiary
-#     reverse: false
-#     nested: false
-#   graduate:
-#     sort: weight
-#     style: rounded-1 card-zoom
-#     header: none
-#     footer: none
-#     padding: 3
-#     cols: 3
-#     orientation: stacked
-#     color: body-tertiary
-#     reverse: false
-#     nested: false
-#   research:
-#     layout: card
-#     sort: weight
-#     style: rounded-1 card-zoom
-#     header: none
-#     footer: none
-#     padding: 3
-#     cols: 4
-#     orientation: stacked
-#     color: body-tertiary
-#     reverse: false
-#     nested: false
-#   docs:
-#     layout: card
