@@ -14,13 +14,14 @@ organizations.
 
 ## Regulations
 
-1. Each student must complete a total of **at least 60 working days** of
+1. Each student must complete a total of **at least 40 working days** of
    training as a partial requirement for an undergraduate degree in engineering.
 2. Each department determines the areas and minimum durations of training
    according to its own engineering formation and educational program, and
    announces them to the students. The duration of each training cannot be less
-   than 15 working days, and the total requirement should be completed in
-   **at least two different organizations**.
+   than 15 working days. The total requirement can be completed in one or more
+   organizations. If the requirement is split into two internships, planning
+   each internship as 20 working days is recommended.
 3. It is the responsibility of the department’s training coordinator to
    coordinate and guide training activities in conformity with these bylaws.
 4. Students who have successfully completed their undergraduate program, but

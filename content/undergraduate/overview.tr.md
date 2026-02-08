@@ -7,7 +7,7 @@ weight: 1
 
 Bilgisayar Mühendisliği lisans programı, öğrencilere bilgisayar donanımı, yazılımı ve bilgisayar uygulamaları alanlarında dengeli bir altyapı kazandırmak ve profesyonel kariyerlerinde hızla değişen teknolojilere uyum sağlamalarını mümkün kılmak üzere tasarlanmıştır. Alanın mühendislik yönlerine, özellikle hem donanım hem de yazılım sistemlerinin analizi ve tasarımına ağırlık verilmektedir.
 
-öğrenciler, Bilgisayar Mühendisliği alanındaki lisans derecelerini kazanmak için programda belirtilen toplamda en az 145 kredilik ders yükünü tamamlamak zorundadır. Programın ilk beş dönemi tüm öğrenciler için ortaktır. Öğrenciler, altıncı dönemden itibaren ilgi alanlarına göre uzmanlaşmak için teknik seçmeli dersler almaya başlarlar. Bunun yanında, öğrenciler, bu süre zarfında minimum 60 iş günlük endüstri stajlarını tamamlamış olmalılardır.
+öğrenciler, Bilgisayar Mühendisliği alanındaki lisans derecelerini kazanmak için programda belirtilen toplamda en az 145 kredilik ders yükünü tamamlamak zorundadır. Programın ilk beş dönemi tüm öğrenciler için ortaktır. Öğrenciler, altıncı dönemden itibaren ilgi alanlarına göre uzmanlaşmak için teknik seçmeli dersler almaya başlarlar. Bunun yanında, öğrenciler, bu süre zarfında minimum 40 iş günlük endüstri stajını tamamlamış olmalıdır.
 
 ## Eğitimsel Amaçlar ve Hedefler
 

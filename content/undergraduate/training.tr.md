@@ -11,8 +11,8 @@ weight: 7
 
 ## Kurallar
 
-1. Her öğrenci lisans derecesi alabilmek için **en az 60 iş günü** staj yapmalıdır.
-2. Her bölüm kendi branşına ve mühendislik formasyonuna uygun olarak öğrencilerinin yapacakları stajın alanlarını ve gerekli görülen en az süreleri belirler ve öğrencilere ilan eder. Bu süreler 15 işgününden az olamaz ve **en az iki işyerinde** tamamlanır.
+1. Her öğrenci lisans derecesi alabilmek için **en az 40 iş günü** staj yapmalıdır.
+2. Her bölüm kendi branşına ve mühendislik formasyonuna uygun olarak öğrencilerinin yapacakları stajın alanlarını ve gerekli görülen en az süreleri belirler ve öğrencilere ilan eder. Bu süre her bir staj için 15 iş gününden az olamaz. Toplam staj yükümlülüğü bir veya birden fazla işyerinde tamamlanabilir. Toplam staj iki parçaya bölünürse, her bir stajın 20 iş günü olacak şekilde planlanması tavsiye edilir.
 3. Staj faaliyetlerinin bu tüzüğe uygun olarak yönlendirilmesini ve koordinasyonunu Bölüm Staj Danışmanı yürütür.
 4. Programına ait bütün derslerini tamamladığı halde bir sonraki dönemin kayıt dönemine kadar stajını tamamlayamamış öğrenciler mali yükümlülüklerini yerine getirerek "T" dönemine kayıt yaptırırlar. Mezun olabilmek için son yarıyılda kayıtlı olma şartı aranır.
 5. Yapılan staj sonunda aşağıda açıklanan belgeler stajı takip eden yarıyıl başlangıcından itibaren en geç üç hafta içerisinde Bölüm Staj Danışmanı'na teslim edilir. Belgelerin tesliminde gecikilen gün sayısı kadar bir süre staj olarak kabul edilmez. Gecikmenin bir haftayı aşması durumunda staj geçersiz sayılır.
