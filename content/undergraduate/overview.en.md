@@ -17,7 +17,7 @@ total a minimum of 145 credit hours of formal course work. The first five
 semesters of the program are common to all students. Starting in the sixth
 semester, students take elective courses in order to specialize in the subject
 according to their interests. During their study students must complete an
-industrial training of a minimum of 60 work days.
+industrial training of a minimum of 40 work days.
 
 ## Educational goals and objectives
 
