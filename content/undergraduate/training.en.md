@@ -20,7 +20,8 @@ organizations.
    according to its own engineering formation and educational program, and
    announces them to the students. The duration of each training cannot be less
    than 15 working days. The total requirement can be completed in one or more
-   organizations.
+   organizations. If the requirement is split into two internships, planning
+   each internship as 20 working days is recommended.
 3. It is the responsibility of the department’s training coordinator to
    coordinate and guide training activities in conformity with these bylaws.
 4. Students who have successfully completed their undergraduate program, but
