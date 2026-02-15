@@ -29,21 +29,20 @@ aliases:
 <!-- prettier-ignore-end -->
 ## Catalog Description
 
-Introductory concepts in software engineering. The software life cycle and the phases in software development: feasibility study, analysis, specification, design, implementation and testing, documentation, and maintenance. Tools, techniques, environments, and methodologies. Management issues: planning, organization and control. Professional ethics.
+This course provides comprehensive coverage of software engineering principles and practices through both foundational study and practical application. Students learn the software development lifecycle from requirements elicitation through design, implementation, testing, and deployment, applying industry-standard tools and methodologies, including version control systems, containerization, issue tracking, continuous integration, and testing practices. Project management concepts, including planning, organization, and control, are integrated throughout, along with professional ethics considerations.
 
-There are numerous hands-on assignments to gain software engineering skills using commonly used tools and methods.
+The course centers on a semester-long team-based software development project that traverses the complete development lifecycle. Through this project, students apply software engineering methodologies in a realistic team environment, developing both technical competencies and essential collaborative skills such as communication, planning, and time management under constraints typical of professional software development.
 
-Management and implementation of a large software development as a group. Application of software engineering principles in a project setting.
+Success in this course is evaluated based on the quality of software engineering practices that include requirements analysis, design decisions, project planning, team collaboration, and communication—not solely on the volume or complexity of code produced. Students develop the professional competencies that distinguish software engineering from programming.
 
 ## Course Learning Outcomes
 
-- To experience the application of software development techniques and methodologies throughout various stages of the software development lifecycle including planning, requirements gathering, design, implementation, testing, deployment, and delivery.
-- To acquire team-based software development skills such as communication, planning, and
-time management.
-- To gain communication skills required to interact with customers and the project team members.
-- To develop skills in planning and managing software development projects.
-- To gain the ability to use software development tools, techniques, environments, and methodologies for effective and productive software development.
-- To apply various Computer Engineering knowledge and algorithms, as learned in earlier courses, to software development.
+- Apply software development techniques and methodologies throughout the complete software development lifecycle, demonstrating competence in planning, requirements engineering, design, implementation, testing, deployment, and delivery.
+- Demonstrate effective team-based software development through communication, collaborative planning, and time management in a semester-long project setting.
+- Communicate technical information effectively to diverse stakeholders, including customers, team members, and technical audiences, using appropriate documentation and presentation methods.
+- Plan and manage software development projects using established methodologies, including task decomposition, resource allocation, timeline estimation, and risk management.
+- Evaluate and utilize appropriate software development tools, techniques, and methodologies based on specific project requirements and development contexts.
+- Integrate algorithms, data structures, and computational concepts from prior Computer Engineering courses into practical software development solutions.
 
 ## Current Instructor
 
