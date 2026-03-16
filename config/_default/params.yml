@@ -51,12 +51,12 @@ social:
     url: "https://twitter.com/bogazici_cmpe"
     weight: 10
   - name: "GitHub"
-    icon: "git"
+    icon: "github"
     url: "https://github.com/bouncmpe"
     weight: 20
   - name: "YouTube"
     icon: "youtube"
-    url: "https://www.youtube.com/@baboruncmpe"
+    url: "https://www.youtube.com/@bogazici_cmpe"
     weight: 30
 
 contact:
