@@ -8,5 +8,10 @@
     "paralleldistributedcloud"
   ],
   "type": "person",
-  "thumbnail": "images/people/sonmez_cagatay.jpg"
+  "thumbnail": "images/people/sonmez_cagatay.jpg",
+  "research_areas": [
+    "Networking",
+    "Internet Architecture",
+    "Parallel Distributed Cloud"
+  ]
 }
