@@ -1,0 +1,99 @@
+{{/* Local fallback renderer for pages using content_blocks (hero + articles). */}}
+{{- $padding := partial "utilities/GetPadding.html" -}}
+
+{{- range $.Params.content_blocks -}}
+  {{- $block := . -}}
+  {{- $name := index $block "_bookshop_name" -}}
+
+  {{- if eq $name "hero" -}}
+    {{- $heading := index $block "heading" | default dict -}}
+    <div class="container-xxl py-{{ $padding.y }} px-{{ $padding.x }} px-xxl-0">
+      {{- partial "assets/section-title.html" (dict "heading" $heading "use-title" true) -}}
+    </div>
+  {{- end -}}
+
+  {{- if eq $name "articles" -}}
+    {{- $input := index $block "input" | default dict -}}
+    {{- $section := index $input "section" | default $.Section -}}
+    {{- $sort := index $input "sort" | default "date" -}}
+    {{- $reverse := index $input "reverse" | default false -}}
+
+    {{- $cols := index $block "cols" | default 3 -}}
+    {{- $class := index $block "class" | default "border-0 h-100" -}}
+      {{- $cardClass := printf "%s h-100" $class -}}
+      {{- $colClass := "" -}}
+      {{- if eq $section "about" -}}
+        {{- $colClass = "boun-about-card-col" -}}
+        {{- $cardClass = printf "%s w-100" $cardClass -}}
+      {{- end -}}
+    {{- $cardPadding := index $block "padding" | default 0 -}}
+    {{- $headerStyle := index $block "header-style" | default "full" -}}
+    {{- $bodyStyle := index $block "body-style" | default "full" -}}
+    {{- $footerStyle := index $block "footer-style" | default "none" -}}
+    {{- $iconStyle := index $block "icon-style" | default "" -}}
+    {{- $limit := index $block "limit" | default 0 -}}
+
+    {{- $pages := where site.RegularPages "Section" $section -}}
+    {{- $pages = where $pages "Lang" $.Lang -}}
+
+    {{- if eq $sort "title" -}}
+      {{- $pages = $pages.ByTitle -}}
+    {{- else if eq $sort "weight" -}}
+      {{- $pages = $pages.ByWeight -}}
+    {{- else -}}
+      {{- $pages = $pages.ByDate -}}
+    {{- end -}}
+
+    {{- if $reverse -}}
+      {{- $pages = $pages.Reverse -}}
+    {{- end -}}
+
+    {{- if gt $limit 0 -}}
+      {{- $pages = first $limit $pages -}}
+    {{- end -}}
+
+    {{- if gt (len $pages) 0 -}}
+      <div class="container-xxl py-{{ $padding.y }} px-{{ $padding.x }} px-xxl-0">
+        {{- if eq $section "about" -}}
+          <style>
+            .boun-about-card-col {
+              min-height: 180px;
+            }
+
+            .boun-about-card-col .card {
+              width: 100% !important;
+              min-height: 180px !important;
+            }
+
+            .boun-about-card-col .card-title {
+              min-height: 2.2em;
+              margin-bottom: 0.4rem;
+            }
+
+            .boun-about-card-col .card-text {
+              display: -webkit-box;
+              -webkit-line-clamp: 3;
+              -webkit-box-orient: vertical;
+              overflow: hidden;
+            }
+          </style>
+        {{- end -}}
+        <div class="row row-cols-1 row-cols-md-{{ $cols }} g-4">
+          {{- range $pages -}}
+            <div class="col d-flex {{ $colClass }}">
+              {{- partial "assets/card.html" (dict
+                  "path"         .RelPermalink
+                   "class"        $cardClass
+                  "padding"      $cardPadding
+                  "header-style" $headerStyle
+                  "body-style"   $bodyStyle
+                  "footer-style" $footerStyle
+                  "icon-style"   $iconStyle
+                ) -}}
+            </div>
+          {{- end -}}
+        </div>
+      </div>
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
