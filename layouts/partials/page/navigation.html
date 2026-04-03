@@ -38,7 +38,7 @@
 {{- else -}}
   {{/* Fallback to section page ordering. */}}
   {{- $pages := where .CurrentSection.RegularPages "Lang" .Lang -}}
-  {{- $pages = $pages.ByWeight.ByLinkTitle -}}
+  {{- $pages = $pages.ByWeight -}}
   {{- $index := -1 -}}
 
   {{- range $i, $p := $pages -}}

@@ -48,5 +48,4 @@ Temporary Items
 
 ## iCloud generated files
 *.icloud
-package.hugo.json
 .vscode/settings.json
