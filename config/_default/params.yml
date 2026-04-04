@@ -1,6 +1,8 @@
 main:
   endorse: false
   footerBelowFold: true
+  build:
+    transpiler: dartsass
   colorMode:
     enabled: false
     modes: ["light"]
