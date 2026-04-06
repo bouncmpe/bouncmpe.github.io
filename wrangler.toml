@@ -1,5 +1,5 @@
 [env.preview.vars]
-HUGO_VERSION = "0.146.4"
+HUGO_VERSION = "0.159.2"
 
 [env.production.vars]
-HUGO_VERSION = "0.146.4"
+HUGO_VERSION = "0.159.2"
