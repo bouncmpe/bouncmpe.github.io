@@ -2,7 +2,7 @@
 type: news
 title: CMPE Graduation Ceremony 2022!
 description: The CMPE Graduation Ceremony 2022 was held on July 6.
-featured: true
+featured: false
 date: 2022-07-06
 thumbnail: uploads/cmpe-graduation-2022.png
 ---

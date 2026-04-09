@@ -2,7 +2,7 @@
 type: news
 title: CMPE Graduation Ceremony 2023!
 description: The CMPE Graduation Ceremony 2023 was held on July 7.
-featured: true
+featured: false
 date: 2023-07-07
 thumbnail: uploads/cmpe-graduation-2023.png
 ---

@@ -2,7 +2,7 @@
 type: news
 title: CMPE Mezuniyet Töreni 2022!
 description: CMPE Mezuniyet Töreni 6 Temmuz 2022'de gerçekleştirildi.
-featured: true
+featured: false
 date: 2022-07-06
 thumbnail: uploads/cmpe-graduation-2022.png
 ---
