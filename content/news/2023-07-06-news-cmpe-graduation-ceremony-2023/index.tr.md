@@ -2,7 +2,7 @@
 type: news
 title: CMPE Mezuniyet Töreni 2023!
 description: CMPE Mezuniyet Töreni 7 Temmuz 2023'de gerçekleştirildi.
-featured: true
+featured: false
 date: 2023-07-07
 thumbnail: uploads/cmpe-graduation-2023.png
 ---

@@ -4,7 +4,7 @@ title: Doç. Dr. İnci Meliha Baytaş BAGEP 2026 Ödülüne Layık Görüldü
 date: 2026-04-05
 thumbnail: uploads/202_20260405193144.jpg
 description: Doç. Dr. İnci Meliha Baytaş, Bilim Akademisi tarafından verilen 2026 yılı Genç Bilim İnsanları Programı (BAGEP) ödülüne layık görülmüştür.
-featured: false
+featured: true
 ---
 
 Doç. Dr. İnci Meliha Baytaş, Bilim Akademisi tarafından verilen 2026 yılı Genç Bilim İnsanları Programı (BAGEP) ödülüne layık görülmüştür. BAGEP programı, genç araştırmacıları desteklemeyi ve farklı disiplinlerde üstün akademik başarıları teşvik etmeyi amaçlamaktadır.

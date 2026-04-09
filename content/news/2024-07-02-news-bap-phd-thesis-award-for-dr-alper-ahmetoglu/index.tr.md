@@ -2,7 +2,7 @@
 type: news
 title: Dr. Alper Ahmetoğlu'na BAP Doktora Tez Ödülü
 description: Doktora mezunumuz Dr. Alper Ahmetoğlu BAP Doktora Tez Ödülü'nü aldı.
-featured: true
+featured: false
 date: 2024-07-02
 thumbnail: uploads/alper-ahmetoglu-award.png
 ---
