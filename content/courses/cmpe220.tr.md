@@ -23,14 +23,12 @@ aliases:
 | AKTS | 5 |
 | Notlandırma Sistemi | Harf Notu |
 | Önkoşul dersleri | Yok |
-| Eşkoşul dersleri | None |
+| Eşkoşul dersleri | Yok |
 
 {{< /table >}}
 <!-- prettier-ignore-end -->
 
 ## Katalog Tanımı
-
-Propositional logic and proofs. Set theory. Functions and relations. Algebraic structures. Groups and semi-groups. Graphs, lattices and Boolean algebra.
 
 Önerme mantığı ve kanıtları. Küme teorisi. Fonksiyonlar ve ilişkiler. Cebirsel yapılar. Gruplar ve yarı gruplar. Grafikler, kafesler ve Boole cebiri.
 
