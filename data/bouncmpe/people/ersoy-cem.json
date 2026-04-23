@@ -16,5 +16,10 @@
     "paralleldistributedcloud"
   ],
   "type": "person",
-  "thumbnail": "images/people/ersoy_cem.jpg"
+  "thumbnail": "images/people/ersoy_cem.jpg",
+  "research_areas": [
+    "Networking",
+    "Internet Architecture",
+    "Parallel Distributed Cloud"
+  ]
 }
