@@ -27,7 +27,7 @@ weight: 7
 
 ## Mevcut CMPE Öğrencileri İçin
 
-CMPE öğrencisiyseniz, staj yükümlülüğüyle ilgili CMPE'ye özgü kurallar hakkında bilgi almak ve staj sürecinizi yürütmek için lütfen [CMPE INTERN web sitesini](https://intern.cmpe.boun.edu.tr/) kullanın. Ek sorularınızı nereye yönelteceğinize ilişkin bilgilendirmeler de yine bu sitede yer almaktadır.
+CMPE öğrencisiyseniz, staj yükümlülüğüyle ilgili CMPE'ye özgü kurallar hakkında bilgi almak ve staj sürecinizi yürütmek için lütfen [**CMPE INTERN web sitesini**](https://intern.cmpe.boun.edu.tr/) kullanın. Ek sorularınızı nereye yönelteceğinize ilişkin bilgilendirmeler de yine bu sitede yer almaktadır.
 
 ## Staj Danışmanı
 

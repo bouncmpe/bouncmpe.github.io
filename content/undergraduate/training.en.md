@@ -59,7 +59,7 @@ organizations.
 ## For Current CMPE Students
 
 If you are a current CMPE student, please use the
-[CMPE INTERN website](https://intern.cmpe.boun.edu.tr/) to find CMPE-specific
+[**CMPE INTERN website**](https://intern.cmpe.boun.edu.tr/) to find CMPE-specific
 rules and information about the training requirement, manage your internship
 process, and learn where to direct further questions.
 
