@@ -56,6 +56,13 @@ organizations.
    at the work place evaluates the trainee. This form must be signed by the
    supervisor and handed to the student in a closed and stamped envelope.
 
+## For Current CMPE Students
+
+If you are a current CMPE student, please use the
+[**CMPE INTERN website**](https://intern.cmpe.boun.edu.tr/) to find CMPE-specific
+rules and information about the training requirement, manage your internship
+process, and learn where to direct further questions.
+
 ## Training Coordinator
 
 {{< people tag="training" cols="1" >}}

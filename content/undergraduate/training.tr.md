@@ -25,6 +25,10 @@ weight: 7
    - Değerlendirme Yazısı: Öğrencinin yapılan stajın eğitimine katkısını ve çalışılan işyerinin şartlarını kısa biryazıyla değerlendirdiği bölüm.
 2. **Staj Sicili**: Çalışılan işyerindeki amirinin staj yapan oğrenciyi değerlendirdiği bir formdur. Bu form amir tarafından doldurulduktan sonra imzalanıp kapalı ve mühürlü bir zarf içerisinde öğrenciye verilir.
 
+## Mevcut CMPE Öğrencileri İçin
+
+CMPE öğrencisiyseniz, staj yükümlülüğüyle ilgili CMPE'ye özgü kurallar hakkında bilgi almak ve staj sürecinizi yürütmek için lütfen [**CMPE INTERN web sitesini**](https://intern.cmpe.boun.edu.tr/) kullanın. Ek sorularınızı nereye yönelteceğinize ilişkin bilgilendirmeler de yine bu sitede yer almaktadır.
+
 ## Staj Danışmanı
 
 {{< people tag="training" cols="1" >}}
