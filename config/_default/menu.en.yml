@@ -94,12 +94,12 @@ main:
     identifier: graduate
     weight: 400
   - name: PhD Program Overview
-    url: /graduate/phd-program
+    url: https://sites.google.com/view/ardayurdakul/ph-d-in-cmpe
     parent: graduate
     identifier: graduate-phd-program
     weight: 411
   - name: MS Program Overview
-    url: /graduate/ms-program
+    url: https://sites.google.com/view/ardayurdakul/m-sc-in-cmpe
     parent: graduate
     identifier: graduate-ms-program
     weight: 412
