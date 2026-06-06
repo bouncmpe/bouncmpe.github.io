@@ -130,7 +130,7 @@ thesis proposal is accepted, the student starts the M.Sc. thesis. {{< /card >}}
 
   - 5xx and 6xx courses from all departments of Boğaziçi University or exchange universities.
 
-  - At most two courses from another university. In this case, students have to directly apply to the Institute of Science and Engineering for approval. Note that BÜ does not allow a course to be taken from another university if it is offered at BÜ. Grades are transferred as P or F; ECTS credits are transferred as-is.
+  - At most two courses from another university. In this case, students have to directly apply to the Institute of Science and Engineering for approval. Note that BÜ does not allow a course to be taken from another university if it is offered at BÜ. Grades are transferred as P or F, ECTS credits are transferred as-is.
 
 - "CMPE599: Guided Research in M.Sc. - I" is a 4-credit course in which the student can start research for the domain of the M.Sc. thesis. The student has to register for the related section of their supervisor. This course is usually taken in the first or second semester. The supervisor may also approve the student taking a guided research course from another department provided that it is registered as a non-credit course. CMPE599 cannot be taken after the student gets a TP from CMPE690.
 

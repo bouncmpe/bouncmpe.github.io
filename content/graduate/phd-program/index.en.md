@@ -37,7 +37,7 @@ thesis proposal is accepted, the student starts the PhD thesis. {{< /card >}}
 
 - Some submissions require letters of reference written on the candidate's behalf. Such letters must be uploaded to an online reference system by the referees. Past experience has shown that referees too often forget or delay uploading these letters. It is the candidate's responsibility to remind referees to ensure letters are uploaded before evaluation.
 
-- Before finishing the application process, each candidate must identify a desired area of research and prepare a detailed [statement of purpose (SoP)](http://www.cmpe.boun.edu.tr/sites/default/files/sop.docx). The SoP is a key document in the decision process; it is very strongly advised that candidates get in contact with a full-time faculty member who has matching research interests and get a confirmation that the faculty member is willing to guide the candidate throughout the PhD research. This faculty member will act as both the academic advisor and the thesis supervisor. Please find the most recent list of the CmpE faculty, along with keywords of research interest, [here](/people/faculty/).
+- Before finishing the application process, each candidate must identify a desired area of research and prepare a detailed [statement of purpose (SoP)](http://www.cmpe.boun.edu.tr/sites/default/files/sop.docx). The SoP is a key document in the decision process, it is very strongly advised that candidates get in contact with a full-time faculty member who has matching research interests and get a confirmation that the faculty member is willing to guide the candidate throughout the PhD research. This faculty member will act as both the academic advisor and the thesis supervisor. Please find the most recent list of the CmpE faculty, along with keywords of research interest, [here](/people/faculty/).
 
 ## Pre-evaluation
 
@@ -135,7 +135,7 @@ thesis proposal is accepted, the student starts the PhD thesis. {{< /card >}}
 
   - 5xx and 6xx courses from all departments of Boğaziçi University or exchange universities.
 
-  - At most two courses from another university. In this case, students have to directly apply to the Institute of Science and Engineering for approval. Note that BÜ does not allow a course to be taken from another university if it is offered at BÜ. Grades are transferred as P or F; ECTS credits are transferred as-is.
+  - At most two courses from another university. In this case, students have to directly apply to the Institute of Science and Engineering for approval. Note that BÜ does not allow a course to be taken from another university if it is offered at BÜ. Grades are transferred as P or F, ECTS credits are transferred as-is.
 
 - The student is expected to complete 9 credits in the first semester, 18 credits at the end of the second semester and 24 credits (i.e., all course work) at the end of the third semester. The maximum course load per semester is five courses.
 
