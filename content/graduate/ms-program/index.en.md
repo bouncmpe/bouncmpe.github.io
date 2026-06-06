@@ -12,7 +12,7 @@ stages:
 
 {{< card-group padding="3" gutter="3" cols="3" >}}
 {{< card title="Courses" class="border-0 py-4" icon="fas chalkboard-user">}}
-This stage consists of seven technical elective courses and the M.Sc. seminar
+This stage consists of seven technical elective courses and the M.Sc. Seminar
 course. {{< /card >}}
 {{< card title="Thesis Stage" class="border-0 py-4" icon="fas book" >}} Once the
 thesis proposal is accepted, the student starts the M.Sc. thesis. {{< /card >}}

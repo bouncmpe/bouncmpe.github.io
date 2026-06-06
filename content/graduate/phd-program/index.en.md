@@ -141,7 +141,7 @@ thesis proposal is accepted, the student starts the PhD thesis. {{< /card >}}
 
 - Courses with F/CC/CB grades can be repeated with another course.
 
-- Courses and seminar have to be completed in four semesters with a GPA higher than 3.00 to continue to the program
+- Courses and seminar have to be completed in four semesters with a GPA higher than 3.00 to continue to the program.
 
 - "CMPE699: Guided Research in PhD - I" is a 4-credit course in which the student can start research for the domain of the PhD thesis. The student has to register for the related section of their advisor. This course is usually taken in the first or second semester. The advisor may ask the student to take at most four additional non-credit guided research courses, CmpE69A, 69B, 69C, and 69D, depending on the breadth of the thesis topic. The advisor may also approve the student taking a guided research course from another department. In this case, these guided research courses have to be registered as non-credit.
 
@@ -149,7 +149,7 @@ thesis proposal is accepted, the student starts the PhD thesis. {{< /card >}}
 
 **SEMESTER TYPE on OBIKAS:** QUALIFYING
 
-- The student has to register for the Qualifying Exam at no later than the fifth semester. The Qualifying Exam Commission manages the whole process.
+- The student has to register for the Qualifying Exam no later than the fifth semester. The Qualifying Exam Commission manages the whole process.
 
 - At the beginning of the Qualifying semester, an examination committee (QEC) on the research field of the candidate is formed. QEC consists of five full-time professors* as follows:
 
@@ -254,5 +254,7 @@ LIMITED CONDITION: Students who started the program before Spring 2019 (excluded
   - No conference paper is required for the students who had started the PhD program before Spring 2017 (inclusive).
 
   - Service as a teaching assistant in one of the CmpE courses is satisfactory for the students who had started the PhD program before Fall 2017 (inclusive).
+
+- **Note that these requirements will change after September 1, 2027.**
 
 *: A full-time professor is a faculty member with the title of Assistant Professor, Associate Professor or Professor.
