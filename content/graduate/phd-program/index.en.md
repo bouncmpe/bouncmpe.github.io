@@ -169,11 +169,11 @@ thesis proposal is accepted, the student starts the PhD thesis. {{< /card >}}
 
   - **Oral Exam:** Before the Oral Exam, the student must prepare a formal presentation that describes their focused research topic for the Ph.D. thesis. In the first ten minutes of the Oral Exam, the student makes the presentation to the QEC. Then, QEC directs questions to the student from both the presentation and the provided resources. QEC evaluates the student's performance to decide on the pass or fail grade.
 
-## Important Notes
+**Important Notes:**
 
-- A student passes the Qualifying Exam if they successfully fulfill both Depth Measurement and Oral exams.
+- A student passes the Qualifying Exam if they successfully fulfill both Written and Oral exams.
 
-- If a student passes the Depth Measurement but fails the Oral Exam, then they need not take the Depth Measurement Exam again.
+- If a student passes the Written Exam but fails the Oral Exam, then they need not take the Written Exam again.
 
 - If a student fails the Qualifying Exam once, they may ask for a change of advisor.
 
