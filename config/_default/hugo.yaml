@@ -18,3 +18,8 @@ pagination:
 timeout: 300s
 
 cleanDestinationDir: true
+ 
+markup:
+  goldmark:
+    extensions:
+      footnote: true

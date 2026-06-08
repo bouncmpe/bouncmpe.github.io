@@ -37,7 +37,7 @@ thesis proposal is accepted, the student starts the PhD thesis. {{< /card >}}
 
 - Some submissions require letters of reference written on the candidate's behalf. Such letters must be uploaded to an online reference system by the referees. Past experience has shown that referees too often forget or delay uploading these letters. It is the candidate's responsibility to remind referees to ensure letters are uploaded before evaluation.
 
-- Before finishing the application process, each candidate must identify a desired area of research and prepare a detailed [statement of purpose (SoP)](http://www.cmpe.boun.edu.tr/sites/default/files/sop.docx). The SoP is a key document in the decision process, it is very strongly advised that candidates get in contact with a full-time faculty member who has matching research interests and get a confirmation that the faculty member is willing to guide the candidate throughout the PhD research. This faculty member will act as both the academic advisor and the thesis supervisor. Please find the most recent list of the CmpE faculty, along with keywords of research interest, [here](/people/faculty/).
+- Before finishing the application process, each candidate must identify a desired area of research and prepare a detailed statement of purpose (SoP). The SoP is a key document in the decision process, it is very strongly advised that candidates get in contact with a full-time faculty member who has matching research interests and get a confirmation that the faculty member is willing to guide the candidate throughout the PhD research. This faculty member will act as both the academic advisor and the thesis supervisor. Please find the most recent list of the CmpE faculty, along with keywords of research interest, [here](/people/faculty/).
 
 ## Pre-evaluation
 
@@ -151,7 +151,7 @@ thesis proposal is accepted, the student starts the PhD thesis. {{< /card >}}
 
 - The student has to register for the Qualifying Exam no later than the fifth semester. The Qualifying Exam Commission manages the whole process.
 
-- At the beginning of the Qualifying semester, an examination committee (QEC) on the research field of the candidate is formed. QEC consists of five full-time professors* as follows:
+- At the beginning of the Qualifying semester, an examination committee (QEC) on the research field of the candidate is formed. QEC consists of five full-time professors[^1] as follows:
 
   - thesis advisor
 
@@ -183,15 +183,13 @@ thesis proposal is accepted, the student starts the PhD thesis. {{< /card >}}
 
 LIMITED CONDITION: Students who started the program before Spring 2019 (excluded) have to show that the weighted average of the **Remedial Courses** is above 2.50/4.00 before taking the Qualifying Exam.
 
-*: A full-time professor is a faculty member with the title of Assistant Professor, Associate Professor or Professor.
-
 ## Ph.D. Thesis
 
 **SEMESTER TYPE on OBIKAS:** THESIS
 
 ### Thesis Proposal
 
-- In at most six months following the qualifying exam, a Thesis Progress Committee (TPC) is formed with three full-time professors*. The Thesis Advisor is a natural member of TPC. One of these members should be from another department or university.
+- In at most six months following the qualifying exam, a Thesis Progress Committee (TPC) is formed with three full-time professors[^1]. The Thesis Advisor is a natural member of TPC. One of these members should be from another department or university.
 
 - If there is a Co-advisor, then TPC is formed with four members. The Co-advisor has no right to vote at any stage of the thesis work.
 
@@ -221,15 +219,15 @@ LIMITED CONDITION: Students who started the program before Spring 2019 (excluded
 
 - The student has to complete at least three progress periods before defending the thesis.
 
-- A thesis book has to be written under the guidance of the thesis advisor. The thesis book has to be evaluated by the advisor to check ethical and scientific correctness, and completeness of the work. If some parts of the thesis book get published, then it is the student’s responsibility to check the copyright policies of the publisher. The complete guideline for thesis book preparation is available [here](http://www.fbe.boun.edu.tr/fbe/?q=en/content/thesis-guidelines).
+- A thesis book has to be written under the guidance of the thesis advisor. The thesis book has to be evaluated by the advisor to check ethical and scientific correctness, and completeness of the work. If some parts of the thesis book get published, then it is the student’s responsibility to check the copyright policies of the publisher. The complete guideline for thesis book preparation is available [here](https://fbe.bogazici.edu.tr/tr/pages/tez-yazimi-ve-teslim/2896).
 
-- Before the defense, the thesis book has to be submitted to the Thesis Defense Jury (TDJ), which is formed of five full-time professors*:
+ - Before the defense, the thesis book has to be submitted to the Thesis Defense Jury (TDJ), which is formed of five full-time professors[^1]:
 
   - TPC is a subset of TDJ.
 
-  - TDJ must contain at least two full-time professors* from another university.
+  - TDJ must contain at least two full-time professors from another university.
 
-  - A majority of TDJ members must be full-time professors* of Boğaziçi University.
+  - A majority of TDJ members must be full-time professors of Boğaziçi University.
 
 - Thesis Defense has to take place within one month after the thesis book is given to TDJ. It has to be publicly announced at least fifteen days before the defense. The advisor also has to inform the Institute of Graduate Studies in Science and Engineering (FBE) about the defense time and place by dropping an e-mail to [fbe@bogazici.edu.tr](mailto:fbe@bogazici.edu.tr).
 
@@ -257,4 +255,4 @@ LIMITED CONDITION: Students who started the program before Spring 2019 (excluded
 
 - **Note that these requirements will change after September 1, 2027.**
 
-*: A full-time professor is a faculty member with the title of Assistant Professor, Associate Professor or Professor.
+[^1]: A full-time professor is a faculty member with the title of Assistant Professor, Associate Professor or Professor.

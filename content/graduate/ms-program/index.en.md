@@ -160,13 +160,13 @@ thesis proposal is accepted, the student starts the M.Sc. thesis. {{< /card >}}
 
 ### Thesis Defense
 
-- A thesis book has to be written under the guidance of the thesis advisor. The thesis book must be evaluated by the advisor to check ethical and scientific correctness and completeness of the work. If some parts of the thesis book are published, then it is the student’s responsibility to check the publisher's copyright policies. The complete guideline for thesis book preparation is available [here](http://www.fbe.boun.edu.tr/fbe/?q=en/content/thesis-guidelines).
+- A thesis book has to be written under the guidance of the thesis advisor. The thesis book must be evaluated by the advisor to check ethical and scientific correctness and completeness of the work. If some parts of the thesis book are published, then it is the student’s responsibility to check the publisher's copyright policies. The complete guideline for thesis book preparation is available [here](https://fbe.bogazici.edu.tr/tr/pages/tez-yazimi-ve-teslim/2896).
 
-- Before the defense, the thesis book has to be submitted to the Thesis Defense Jury (TDJ), which is formed of three or five full-time professors*:
+-- Before the defense, the thesis book has to be submitted to the Thesis Defense Jury (TDJ), which is formed of three or five full-time professors[^1]:
 
-  - One full-time professor* from another university
+  - One full-time professor from another university
 
-  - A majority of TDJ members must be full-time professors* of Boğaziçi University
+  - A majority of TDJ members must be full-time professors of Boğaziçi University
 
   - The Co-supervisor can appear and vote in a five-member TDJ provided that they are a full-time faculty member. In all other cases, they can appear in TDJ but cannot vote.
 
@@ -182,4 +182,4 @@ thesis proposal is accepted, the student starts the M.Sc. thesis. {{< /card >}}
 
 - **Note that these requirements will change after September 1, 2026.**
 
-*: A full-time professor is a faculty member with the title of Assistant Professor, Associate Professor or Professor.
+[^1]: A full-time professor is a faculty member with the title of Assistant Professor, Associate Professor or Professor.
