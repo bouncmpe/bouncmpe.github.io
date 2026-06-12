@@ -10,6 +10,9 @@ copyright:
 date:
   other: tarih
 
+postedOnDate:
+  other: "{{ . }} tarihinde yayımlandı"
+
 start-time:
   other: başlama vakti
 
@@ -78,6 +81,15 @@ special-event:
 
 read-full-text:
   other: "hepsini oku"
+
+minutesShort:
+  other: dk
+
+read:
+  other: okuma
+
+words:
+  other: kelime
 
 go-to-event-page:
   other: "etkinlik detayları"
@@ -189,3 +201,18 @@ phone:
 
 fax:
   other: Faks
+
+toggleMainNav:
+  other: "Ana menüyü aç/kapat"
+
+ui_search:
+  other: Ara
+
+ui_no_results:
+  other: Sonuç bulunamadı
+
+copiedToClipboard:
+  other: Panoya kopyalandı
+
+close:
+  other: Kapat
