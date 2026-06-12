@@ -1,5 +1,5 @@
 ---
 title: Şefik Şuayb Arslan
 type: redirect
-target: 
+target: https://www.suaybarslan.com.tr/
 ---

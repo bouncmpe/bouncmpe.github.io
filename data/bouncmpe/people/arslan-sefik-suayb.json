@@ -4,5 +4,7 @@
   "name": "Şefik Şuayb Arslan",
   "position": "full-professor",
   "tags": ["faculty", "cmpe140"],
-  "type": "person"
+  "type": "person",
+  "thumbnail": "images/people/arslan_sefik_suayb.jpg",
+  "github": "suaybarslan"
 }
