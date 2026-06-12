@@ -1,0 +1,12 @@
+{{- $src := .Get "src" | default (.Get 0) -}}
+{{- $alt := .Get "alt" | default "" -}}
+{{- $width := .Get "width" | default "40%" -}}
+
+{{- with resources.Get $src -}}
+{{- $image := .Fit "1200x1200 webp q90" -}}
+<div style="text-align: center;">
+  <img src="{{ $image.RelPermalink }}" alt="{{ $alt }}" style="width: {{ $width }}; max-width: 100%; height: auto;">
+</div>
+{{- else -}}
+{{- errorf "news-image shortcode: unable to find resource %q" $src -}}
+{{- end -}}

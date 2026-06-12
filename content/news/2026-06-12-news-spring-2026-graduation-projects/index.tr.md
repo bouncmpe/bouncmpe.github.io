@@ -1,5 +1,6 @@
 ---
 type: news
+layout: spring-2026-graduation-projects
 title: Bilgisayar Mühendisliği Son Sınıf Öğrencileri 2026 Bahar Dönemi Bitirme Projelerini Sergiledi
 date: 2026-06-11
 thumbnail: uploads/cmpe491-492.jpg

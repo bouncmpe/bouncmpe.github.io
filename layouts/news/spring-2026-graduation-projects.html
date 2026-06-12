@@ -1,0 +1,55 @@
+{{ define "main" }}
+<div class="container-xxl flex-fill p-4 px-xxl-0">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+        <div class="col col-lg-2 d-none d-lg-block sidebar-overflow sticky-top pt-5">
+        </div>
+        <div class="col-12 col-md-9 col-lg-8 mb-5 p-4">
+            <p class="display-4 mt-5">{{ .Title }}</p>
+
+            <small class="text-body-secondary text-uppercase">
+                {{ if eq .Site.Language.Lang "tr" }}
+                    {{ .Date | time.Format "2 January 2006" }} tarihinde yayımlandı
+                {{ else }}
+                    Posted on {{ .Date | time.Format "January 2, 2006" }}
+                {{ end }}
+                &bull;
+                {{ .ReadingTime }}&nbsp;{{ if eq .Site.Language.Lang "tr" }}dk okuma{{ else }}min read{{ end }} &bull;
+                {{ .WordCount }}&nbsp;{{ if eq .Site.Language.Lang "tr" }}kelime{{ else }}words{{ end }}
+            </small>
+
+            {{ with .Params.description }}
+                <p class="lead mb-5 mt-3">{{ . }}</p>
+            {{ end }}
+
+            {{- $thumbnail := "" -}}
+            {{- if reflect.IsMap .Params.thumbnail -}}
+                {{- $thumbnail = .Params.thumbnail.url -}}
+            {{- else -}}
+                {{- $thumbnail = .Params.thumbnail -}}
+            {{- end -}}
+
+            {{- with $thumbnail -}}
+                {{- with resources.Get . -}}
+                    {{- $image_1400 := .Resize "1400x webp q90" -}}
+                    {{- $image_992 := .Resize "992x webp q90" -}}
+                    {{- $image_768 := .Resize "768x webp q90" -}}
+                    <img
+                        class="img-fluid rounded mb-5"
+                        src="{{ $image_1400.RelPermalink }}"
+                        srcset="{{ $image_768.RelPermalink }} 768w, {{ $image_992.RelPermalink }} 992w, {{ $image_1400.RelPermalink }} 1400w"
+                        sizes="100vw"
+                        width="{{ $image_1400.Width }}"
+                        height="{{ $image_1400.Height }}"
+                        alt="{{ $.Title }}"
+                        fetchpriority="high"
+                    >
+                {{- else -}}
+                    <img class="img-fluid rounded mb-5" src="/{{ . | strings.TrimPrefix "/" }}" alt="{{ $.Title }}">
+                {{- end -}}
+            {{- end -}}
+
+            {{ .Content }}
+        </div>
+    </div>
+</div>
+{{ end }}
