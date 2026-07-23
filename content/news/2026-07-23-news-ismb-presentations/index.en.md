@@ -13,11 +13,11 @@ Gökçe Uludoğan presented “PUFFIN: Protein Unit Discovery with Functional Su
 {{< news-image src="uploads/ismb-gokce.png" alt="Gokce at ISMB" width="60%" >}}
 &nbsp;
 
-Buse Giledereli presented “Benchmarking Recent Single-Cell Synthetic Data Generation Methods on the OneK1K Dataset”, conducted with Amirreza Sattarzadeh and Başar Temiz as part of their participation in the CAMDA 2026 Health Privacy Challenge.  
+Buse Giledereli presented “Benchmarking Recent Single-Cell Synthetic Data Generation Methods on the OneK1K Dataset,” conducted with Amirreza Sattarzadeh and Başar Temiz as part of their participation in the CAMDA 2026 Health Privacy Challenge.  
 
 {{< news-image src="uploads/ismb-buse.png" alt="Buse at ISMB" width="60%" >}}
 &nbsp;
 
-Separately, the work of Ahmet Yiğit Doğan, Canberk Balcı, Ömer Coşkun, and Eren Kotar, Two-Stage Pipeline for Differentially Private Synthetic RNA-seq Generation, was selected for a short talk in the same challenge.  
+Separately, the work of Ahmet Yiğit Doğan, Canberk Balcı, Ömer Coşkun, and Eren Kotar, “Two-Stage Pipeline for Differentially Private Synthetic RNA-seq Generation,” was selected for a short talk in the same challenge.  
 
 We congratulate our students on their contributions and thank them for representing the department at one of the field's most significant international venues.
