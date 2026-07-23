@@ -1,5 +1,5 @@
 ---
 title: Arzucan Özgür
 type: redirect
-target: https://cmpe.boun.edu.tr/~ozgur
+target: https://tabilab.cmpe.bogazici.edu.tr/arzucan-ozgur/
 ---
