@@ -1,11 +1,11 @@
-<div class="container py-5">
+<div class="container py-3">
 <div class="card border-0 rounded-0 d-none d-xl-block">
-    <video class="rounded-5" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" style="width:100%;">
+    <video class="rounded-5" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" style="width:100%; height: 25rem; object-fit: cover;">
         <source src="/videos/south-campus.720.mp4" type="video/mp4">
     </video>
     <div class="card-img-overlay px-5 py-4" style="max-width: 36rem;">
     {{ with .GetPage "/prospective" }}
-        <h2 class="display-4 text-light" style="text-shadow: 2px 2px #000000;">{{ .Title }}</h2>
+        <h2 class="display-5 text-light" style="text-shadow: 2px 2px #000000;">{{ .Title }}</h2>
         <p class="card-text text-light" style="text-shadow: 1px 1px #000000;">{{ .Description }}</p>
         <div class="card-body p-0 lh-lg">
             {{ range .Params.card_links }}
@@ -18,7 +18,7 @@
 <div class="card border-5 rounded-5 d-xl-none text-center">
     <div class="px-5 py-4">
     {{ with .GetPage "/prospective" }}
-        <h2 class="display-4">{{ .Title }}</h2>
+        <h2 class="display-5">{{ .Title }}</h2>
         <p class="card-text">{{ .Description }}</p>
         <div class="card-body p-0 lh-lg">
             {{ range .Params.card_links }}
