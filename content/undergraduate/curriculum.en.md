@@ -58,7 +58,7 @@ weight: 2
 | [CMPE320](/courses/cmpe320) | Principles of Programming Languages | CMPE250 | 3 | 5 |
 | [CMPE350](/courses/cmpe350) | Formal Languages and Automata Theory | CMPE220 | 3 | 5 |
 | [CMPE354](/courses/cmpe354) | Software Engineering | CMPE222 | 4 | 7 |
-| [CMPE362](/courses/cmpe362) | Introduction to Signal Processing or Computer Engineers | MATH202 | 3 | 6 |
+| [CMPE362](/courses/cmpe362) | Introduction to Signal Processing for Computer Engineers | MATH202 | 3 | 6 |
 | IE306 | System Simulation | CMPE343 | 4 | 7 |
 | HTR312<sup>[[f2]](#notes)</sup> | History of Turkish Republic II |   | 2 | 3 |
 | | | **Total** | **19** | **33** |
