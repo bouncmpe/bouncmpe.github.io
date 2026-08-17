@@ -1,8 +1,11 @@
 main:
   endorse: false
   footerBelowFold: true
-  enableDarkMode: false
-  modes: ["light"]
+  build:
+    transpiler: dartsass
+  colorMode:
+    enabled: false
+    modes: ["light"]
   breakpoint: "md"
 
 favicon:
@@ -10,8 +13,9 @@ favicon:
 
 navigation:
   logo: ""
-  search: true
-  searchModal: true
+  search:
+    enabled: true
+    modal: true
   size: xl
   #color: primary
   # horizontal: true
