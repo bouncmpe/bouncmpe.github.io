@@ -34,19 +34,11 @@
         <p class="fs-6 opacity-75 mb-3">{{ i18n "social-networks-text" }}</p>
         <ul class="list-unstyled d-flex justify-content-start justify-content-md-end">
         {{ range site.Params.social }}
-            {{ $itemType := printf "%T" . }}
-            {{ if in $itemType "map[" }}
-            {{ $url := index . "url" }}
-            {{ $icon := index . "icon" }}
-            {{ $name := index . "name" }}
-            {{ if and $url $icon $name }}
             <li class="me-3">
-            <a href="{{ $url }}">
-                <img src="/icons/{{ $icon }}.svg" alt="{{ $name }}" width="24" height="24">
+            <a href="{{ .url }}">
+                <img src="/icons/{{ .icon }}.svg" alt="{{ .name }}" width="24" height="24">
             </a>
             </li>
-            {{ end }}
-            {{ end }}
         {{ end }}
         </ul>
     </div>
@@ -55,7 +47,4 @@
 <div class="d-flex flex-column flex-sm-row justify-content-between text-dark py-4 my-4 border-top">
     <p class="fs-6 opacity-75">{{ replace site.Copyright "{year}" now.Year }}</p>
 </div>
-{{ if .Params.hasMermaid }}
-    {{ partial "footer/optional-scripts.html" . }}
-{{ end }}
 </footer>

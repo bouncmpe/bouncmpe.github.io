@@ -12,6 +12,7 @@ content_blocks:
     hide-empty: false
     input:
       section: about
+      sort: weight
       reverse: false
     more:
       title: More Posts

@@ -1,0 +1,42 @@
+{{/*
+    Show the department logo alongside the navbar title.
+
+    Hinode renders `navigation.logo` *instead of* the brand text, so the logo is
+    attached as a ::before pseudo-element to keep both the mark and the title.
+    The image is resized through Hugo's asset pipeline (2x the 30px display size)
+    rather than linking the full-resolution original.
+*/}}
+{{- with resources.Get "images/logo.png" -}}
+    {{- $logo := .Resize "60x webp q90" -}}
+    <style>
+        .navbar-brand {
+            display: inline-flex !important;
+            align-items: center;
+            gap: 0.55rem;
+        }
+
+        .navbar-brand::before {
+            content: "";
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            flex: 0 0 30px;
+            background: url('{{ $logo.RelPermalink }}') center center / contain no-repeat;
+        }
+
+        .navbar-brand .navbar-title-center,
+        .navbar-brand .navbar-title-start {
+            display: inline-block;
+            width: auto !important;
+            padding: 0 !important;
+        }
+
+        @media (max-width: 768px) {
+            .navbar-brand::before {
+                width: 24px;
+                height: 24px;
+                flex-basis: 24px;
+            }
+        }
+    </style>
+{{- end -}}
