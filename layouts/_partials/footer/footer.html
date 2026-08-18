@@ -47,7 +47,4 @@
 <div class="d-flex flex-column flex-sm-row justify-content-between text-dark py-4 my-4 border-top">
     <p class="fs-6 opacity-75">{{ replace site.Copyright "{year}" now.Year }}</p>
 </div>
-{{ if .Params.hasMermaid }}
-    {{ partial "footer/optional-scripts.html" . }}
-{{ end }}
 </footer>

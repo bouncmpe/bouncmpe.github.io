@@ -1,0 +1,129 @@
+{{/* Local fallback renderer for pages using content_blocks (hero + articles).
+     Hinode dropped CloudCannon Bookshop in v2, so content_blocks are rendered here.
+     v3 invokes this partial as (dict "page" . "heading-level" 1). */}}
+{{- $page := .page -}}
+{{- $padding := partial "utilities/GetPadding.html" -}}
+
+{{- range $page.Params.content_blocks -}}
+  {{- $block := . -}}
+  {{- $name := index $block "_bookshop_name" -}}
+
+  {{- if eq $name "hero" -}}
+    {{- $heading := index $block "heading" | default dict -}}
+    <div class="container-xxl py-{{ $padding.y }} px-{{ $padding.x }} px-xxl-0">
+      {{- partial "assets/section-title.html" (dict "page" $page "heading" $heading "use-title" true) -}}
+    </div>
+  {{- end -}}
+
+  {{- if eq $name "articles" -}}
+    {{- $input := index $block "input" | default dict -}}
+    {{- $section := index $input "section" | default $page.Section -}}
+    {{- $sort := index $input "sort" | default "date" -}}
+    {{- $reverse := index $input "reverse" | default false -}}
+
+    {{- $cols := index $block "cols" | default 3 -}}
+    {{- $class := index $block "class" | default "border-0" -}}
+    {{- $cardClass := printf "%s h-100 w-100" $class -}}
+
+    {{/* Sections rendered as a uniform grid of equal-height cards. */}}
+    {{- $colClass := "" -}}
+    {{- $cardMinHeight := 0 -}}
+    {{- $lineClamp := 0 -}}
+    {{- if eq $section "about" -}}
+      {{- $cardMinHeight = 180 -}}
+      {{- $lineClamp = 3 -}}
+    {{- else if eq $section "courses" -}}
+      {{- $cardMinHeight = 170 -}}
+      {{- $lineClamp = 2 -}}
+    {{- end -}}
+    {{- $sectionColClass := printf "boun-%s-card-col" $section -}}
+    {{- if $cardMinHeight -}}
+      {{- $colClass = printf "%s boun-uniform-card-col" $sectionColClass -}}
+    {{- end -}}
+
+    {{- $cardPadding := index $block "padding" | default 0 -}}
+    {{- $headerStyle := index $block "header-style" | default "full" -}}
+    {{- $bodyStyle := index $block "body-style" | default "full" -}}
+    {{- $footerStyle := index $block "footer-style" | default "none" -}}
+    {{- $iconStyle := index $block "icon-style" | default "" -}}
+    {{- $limit := index $block "limit" | default 0 -}}
+    {{- $paginate := index $block "paginate" | default false -}}
+
+    {{- $pages := where site.RegularPages "Section" $section -}}
+    {{- $pages = where $pages "Lang" $page.Lang -}}
+
+    {{- if eq $sort "title" -}}
+      {{- $pages = $pages.ByTitle -}}
+    {{- else if eq $sort "weight" -}}
+      {{- $pages = $pages.ByWeight -}}
+    {{- else -}}
+      {{- $pages = $pages.ByDate -}}
+    {{- end -}}
+
+    {{- if $reverse -}}
+      {{- $pages = $pages.Reverse -}}
+    {{- end -}}
+
+    {{- if and (not $paginate) (gt $limit 0) -}}
+      {{- $pages = first $limit $pages -}}
+    {{- end -}}
+
+    {{- if gt (len $pages) 0 -}}
+      {{- $items := $pages -}}
+      {{- if $paginate -}}
+        {{- if gt $limit 0 -}}
+          {{- $items = ($page.Paginate $pages $limit).Pages -}}
+        {{- else -}}
+          {{- $items = ($page.Paginate $pages).Pages -}}
+        {{- end -}}
+      {{- end -}}
+      <div class="container-xxl py-{{ $padding.y }} px-{{ $padding.x }} px-xxl-0">
+        {{- if $cardMinHeight -}}
+          <style>
+            .boun-uniform-card-col .card {
+              width: 100% !important;
+            }
+
+            .{{ $sectionColClass }} {
+              min-height: {{ $cardMinHeight }}px;
+            }
+
+            .{{ $sectionColClass }} .card {
+              min-height: {{ $cardMinHeight }}px !important;
+            }
+
+            .{{ $sectionColClass }} .card-title {
+              min-height: 2.2em;
+              margin-bottom: 0.4rem;
+            }
+
+            .{{ $sectionColClass }} .card-text {
+              display: -webkit-box;
+              -webkit-line-clamp: {{ $lineClamp }};
+              -webkit-box-orient: vertical;
+              overflow: hidden;
+            }
+          </style>
+        {{- end -}}
+        <div class="row row-cols-1 row-cols-md-{{ $cols }} g-4">
+          {{- range $items -}}
+            <div class="col d-flex {{ $colClass }}">
+              {{- partial "assets/card.html" (dict
+                  "path"         .RelPermalink
+                  "class"        $cardClass
+                  "padding"      $cardPadding
+                  "header-style" $headerStyle
+                  "body-style"   $bodyStyle
+                  "footer-style" $footerStyle
+                  "icon-style"   $iconStyle
+                ) -}}
+            </div>
+          {{- end -}}
+        </div>
+        {{- if $paginate -}}
+          <div class="pt-4">{{ partial "assets/pagination.html" (dict "page" $page) }}</div>
+        {{- end -}}
+      </div>
+    {{- end -}}
+  {{- end -}}
+{{- end -}}

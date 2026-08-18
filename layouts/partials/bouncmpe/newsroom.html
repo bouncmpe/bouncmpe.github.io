@@ -13,8 +13,8 @@
     <section id="newsroom">
         <h1 class="display-6 my-4">{{ i18n "latest-stories" | title }}</h1>
         {{if $featured }}
-        <section id="newsroom-carousel" class="carousel slide carousel-fade mb-4 d-none d-md-block" >
-            <div class="carousel-inner">
+        <section id="newsroom-carousel" class="carousel slide carousel-fade mb-4 d-none d-md-block rounded-5 overflow-hidden" >
+            <div class="carousel-inner rounded-5 overflow-hidden">
             {{ range $index, $page := first 5 $featured }}
                 {{- $thumbnail := "" -}}
                 {{- $image_settings := site.Params.newsroom.image_settings.hero | default "1400x700 webp q90 Smart" -}}
@@ -41,9 +41,9 @@
                     {{ $thumbnail = $retouched.RelPermalink }}
                 {{ end }}
 
-                <div class="carousel-item rounded-5 {{if eq $index 0}}active{{ end }}">
+                <div class="carousel-item rounded-5 overflow-hidden {{if eq $index 0}}active{{ end }}">
                     <a href="{{ .RelPermalink }}" class="stretched-link">
-                        <img src="{{ $thumbnail }}" class="d-block w-100 rounded-5" alt="Carousel item">
+                        <img src="{{ $thumbnail }}" class="d-block w-100 rounded-5" style="height: clamp(240px, 30vw, 420px); object-fit: cover; object-position: center;" alt="Carousel item">
                     </a>
                     <div class="carousel-caption bg-body-secondary text-body rounded-5 px-3">
                         <h4 class="m-2">{{- title .Title -}}</h4>

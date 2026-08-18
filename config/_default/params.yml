@@ -1,8 +1,9 @@
 main:
   endorse: false
   footerBelowFold: true
-  enableDarkMode: false
-  modes: ["light"]
+  colorMode:
+    enabled: false
+    modes: ["light"]
   breakpoint: "md"
 
 favicon:
@@ -10,8 +11,6 @@ favicon:
 
 navigation:
   logo: ""
-  search: true
-  searchModal: true
   size: xl
   #color: primary
   # horizontal: true
@@ -70,8 +69,6 @@ contact:
   phone: "+90 212 359 45 23/24"
   fax: "+90 212 2872461"
 
-mermaid:
-  align: center
 
 github:
   repo: "https://github.com/bouncmpe/bouncmpe.github.io"

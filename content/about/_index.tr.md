@@ -12,6 +12,7 @@ content_blocks:
     hide-empty: false
     input:
       section: about
+      sort: weight
       reverse: false
     more:
       title: More Posts
@@ -21,5 +22,5 @@ content_blocks:
     paginate: false
     cover: false
     header-style: none
-    class: border-dark border-2 rounded-0
+    class: border-dark-subtle border-2 rounded-0
 ---

@@ -1,0 +1,9 @@
+{{/*
+    Overrides the theme's footer social list, which is rendered instead by
+    footer/footer.html from site.Params.social.
+
+    This partial is also the site's general injection point: baseof.html calls it
+    unconditionally on every page, unlike footer/optional-scripts.html which
+    footer.html only reaches for mermaid pages.
+*/}}
+{{ partial "bouncmpe/navbar-logo.html" . }}

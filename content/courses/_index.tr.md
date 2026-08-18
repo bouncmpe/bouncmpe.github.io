@@ -24,5 +24,5 @@ content_blocks:
     paginate: true
     cover: false
     header-style: tags
-    class: border-dark border-2 rounded-0
+    class: border-dark-subtle border-2 rounded-0
 ---
