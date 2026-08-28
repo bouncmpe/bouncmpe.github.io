@@ -1,0 +1,197 @@
+{{- $p := .Person -}}
+{{- $page := .Page -}}
+
+{{- $thumb := $p.thumbnail | default "images/person.png" -}}
+{{- with resources.Get $thumb -}}
+  {{- $thumb = (.Fill "350x350 webp q90 smart").RelPermalink -}}
+{{- end -}}
+
+{{- $scholar := or $p.google_scholar $p.scholar -}}
+{{- $legacy := or $page.Params.target $p.legacy_url -}}
+
+<div class="container my-5">
+
+  <div class="card border-0 shadow-sm p-4 mb-5">
+    <div class="row g-4 align-items-center">
+      
+      <div class="col-12 col-md-3 text-center">
+        <img src="{{ $thumb }}"
+             class="img-fluid rounded-4 shadow-sm"
+             style="width: 100%; max-width: 260px; height: auto; object-fit: cover;">
+      </div>
+
+      <div class="col-12 col-md-9">
+
+        {{ with $p.short_bio }}
+          <p class="mb-4">{{ . }}</p>
+        {{ end }}
+
+        <div class="row gy-3 small">
+          {{ with $p.email }}
+            <div class="col-12 col-sm-6">
+              <span class="fw-bold text-dark d-block">Email</span>
+              <a href="mailto:{{ . }}">{{ . }}</a>
+            </div>
+          {{ end }}
+          
+          {{ with $p.homepage }}
+            <div class="col-12 col-sm-6">
+              <span class="fw-bold text-dark d-block">Website</span>
+              <a href="{{ . }}">{{ . }}</a>
+            </div>
+          {{ end }}
+          
+          {{ with $p.office }}
+            <div class="col-12 col-sm-6">
+              <span class="fw-bold text-dark d-block">Office</span>
+              <span>{{ . }}</span>
+            </div>
+          {{ end }}
+
+          {{ with $p.phone }}
+            <div class="col-12 col-sm-6">
+              <span class="fw-bold text-dark d-block">Phone</span>
+              <span>{{ . }}</span>
+            </div>
+          {{ end }}
+        </div>
+
+        <div class="d-flex flex-wrap gap-3 small mt-3 align-items-center">
+          {{ with $p.github }}
+            <a href="https://github.com/{{ . }}">GitHub</a>
+          {{ end }}
+          {{ with $p.linkedin }}
+            <a href="https://www.linkedin.com/in/{{ . }}">LinkedIn</a>
+          {{ end }}
+          {{ with $scholar }}
+            <a href="{{ . }}">Google Scholar</a>
+          {{ end }}
+          {{ with $p.orcid }}
+            <a href="https://orcid.org/{{ . }}">ORCID</a>
+          {{ end }}
+          
+          {{ with $legacy }}
+            <div class="ms-auto">
+              <a href="{{ . }}" class="btn btn-outline-primary btn-sm">
+                Legacy personal page
+              </a>
+            </div>
+          {{ end }}
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="row g-5">
+
+    <div class="col-12 col-lg-8">
+
+      {{ with $p.research_areas }}
+        <section class="mb-5">
+          <h2 class="h4 mb-3 fw-bold">Research Areas</h2>
+          <ul>
+            {{ range . }}<li class="mb-1">{{ . }}</li>{{ end }}
+          </ul>
+        </section>
+      {{ end }}
+
+      {{ with $p.long_bio }}
+        <section class="mb-5">
+          <h2 class="h4 mb-3 fw-bold">Biography</h2>
+          <p>{{ . }}</p>
+        </section>
+      {{ end }}
+
+      {{ if or $p.publications $scholar }}
+        <section class="mb-5">
+          <h2 class="h4 mb-3 fw-bold">Selected Publications</h2>
+          {{ with $scholar }}
+            <p><a href="{{ . }}">Google Scholar Profile</a></p>
+          {{ end }}
+          {{ with $p.publications }}
+            {{ if (reflect.IsSlice .) }}
+              <ul class="small list-unstyled">
+                {{ range . }}<li class="mb-2">{{ . | safeHTML }}</li>{{ end }}
+              </ul>
+            {{ else }}
+              <p class="small">{{ . | safeHTML }}</p>
+            {{ end }}
+          {{ end }}
+        </section>
+      {{ end }}
+
+    </div>
+
+    <aside class="col-12 col-lg-4">
+
+      {{ with $p.education }}
+        <section class="mb-5">
+          <h2 class="h5 mb-3 fw-bold">Education</h2>
+          <ul class="list-unstyled mb-0">
+            {{ range . }}
+              <li class="mb-3">
+                <strong class="d-block">{{ .degree }}</strong>
+                <span class="text-muted">{{ .institution }}{{ with .year }}, {{ . }}{{ end }}</span>
+              </li>
+            {{ end }}
+          </ul>
+        </section>
+      {{ end }}
+
+      {{ with $p.awards }}
+        <section class="mb-5">
+          <h2 class="h5 mb-3 fw-bold">Awards &amp; Honors</h2>
+          <ul class="small mb-0">
+            {{ range . }}<li class="mb-1">{{ . }}</li>{{ end }}
+          </ul>
+        </section>
+      {{ end }}
+
+      {{ with $p.courses }}
+        <section class="mb-5">
+          <h2 class="h5 mb-3 fw-bold">Courses</h2>
+          <ul class="small mb-0">
+            {{ range . }}<li class="mb-1">{{ . }}</li>{{ end }}
+          </ul>
+        </section>
+      {{ end }}
+
+      {{ with $p.labs }}
+        <section class="mb-5">
+          <h2 class="h5 mb-3 fw-bold">Research Labs</h2>
+          <ul class="small mb-0 list-unstyled">
+            {{ range $i, $lab := . }}
+              <li class="mb-1">
+                {{ if (reflect.IsMap $lab) }}
+                  {{ with $lab.url }}
+                    <a href="{{ . }}">{{ $lab.name }}</a>
+                  {{ else }}
+                    {{ $lab.name }}
+                  {{ end }}
+                {{ else }}
+                  {{ $lab }}
+                {{ end }}
+              </li>
+            {{ end }}
+          </ul>
+        </section>
+      {{ end }}
+
+      {{ with $p.roles }}
+        <section class="mb-5">
+          <h2 class="h5 mb-3 fw-bold">Roles &amp; Memberships</h2>
+          {{ if (reflect.IsSlice .) }}
+            <ul class="small mb-0 list-unstyled">
+              {{ range . }}<li class="mb-1">{{ . }}</li>{{ end }}
+            </ul>
+          {{ else }}
+            <p class="small mb-0">{{ . }}</p>
+          {{ end }}
+        </section>
+      {{ end }}
+
+    </aside>
+
+  </div>
+</div>
