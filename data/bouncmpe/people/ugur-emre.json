@@ -16,5 +16,6 @@
     "advisor-x"
   ],
   "type": "person",
-  "thumbnail": "images/people/ugur_emre.jpg"
+  "thumbnail": "images/people/ugur_emre.jpg",
+  "research_areas": ["Artificial Intelligence", "Robotics Control"]
 }

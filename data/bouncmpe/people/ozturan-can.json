@@ -5,5 +5,6 @@
   "position": "full-professor",
   "tags": ["faculty", "double-major", "cmpe230", "cmpe425", "cmpe478", "computersystems", "paralleldistributedcloud", "theoryalgorithms"],
   "type": "person",
-  "thumbnail": "images/people/ozturan_can.jpg"
+  "thumbnail": "images/people/ozturan_can.jpg",
+  "research_areas": ["Computer Systems", "Parallel Distributed Cloud", "Theory Algorithms"]
 }

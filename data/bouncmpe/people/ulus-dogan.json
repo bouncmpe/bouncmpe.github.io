@@ -20,5 +20,6 @@
   "linkedin": "doganulus",
   "homepage": "/u/dogan.ulus",
   "type": "person",
-  "thumbnail": "images/people/ulus_dogan.jpg"
+  "thumbnail": "images/people/ulus_dogan.jpg",
+  "research_areas": ["Computer Systems", "Software Engineering", "Robotics Control", "Theory Algorithms"]
 }
