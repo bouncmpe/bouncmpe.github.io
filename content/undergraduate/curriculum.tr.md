@@ -25,7 +25,8 @@ weight: 2
 | [CMPE142](/tr/courses/cmpe142) | Sayısal Sistemler | --- | 4 | 6 |
 | [CMPE160](/tr/courses/cmpe160) | Nesne Tabanlı Programlamaya Giriş | CMPE101 | 4 | 6 |
 | EC102 | Makroekonominin İlkeleri | EC101 | 3 | 6 |
-| | | **Toplam** | **19** | **30** |
+| OHS101 | Occupational Health and Safety | --- | 2 | 3 |
+| | | **Toplam** | **21** | **33** |
 | <h4>Üçüncü Dönem</h4>|
 | **Ders Kodu** |**Ders Başlığı** | **Önkoşullar** | **Kredi** | **AKTS** |
 | MATH201 | Matris Kuramı | --- | 4 | 5 |

@@ -25,7 +25,8 @@ weight: 2
 | [CMPE142](/courses/cmpe142) | Digital Systems | --- | 4 | 6 |
 | [CMPE160](/courses/cmpe160) | Object Oriented Programming | CMPE101 | 4 | 6 |
 | EC102 | Principles of Macroeconomics | EC101 | 3 | 6 |
-| | | **Total** | **19** | **30** |
+| OHS101 | Occupational Health and Safety | --- | 2 | 3 |
+| | | **Total** | **21** | **33** |
 | <h4>Third Semester</h4>|
 | **Code** | **Course Title** | **Prerequisites** | **Credits** | **ECTS** |
 | MATH201 | Matrix Theory | --- | 4 | 5 |
