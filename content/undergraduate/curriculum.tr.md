@@ -67,9 +67,9 @@ weight: 2
 | CMPE<sup>[[a]](#notes)</sup> | Bölüm Seçmeli |  | 3 | 6 |
 | CMPE<sup>[[a]](#notes)</sup> | Bölüm Seçmeli |  | 3 | 6 |
 | CC<sup>[[b]](#notes)</sup> | Tamamlayıcı Seçmeli | | 3 | 6 |
-| HSS<sup>[[d]](#notes)</sup> | Beşeri ve Sosyal Bilimler Seçmeli | | 4 | 6 |
+| HSS<sup>[[d]](#notes)</sup> | Beşeri ve Sosyal Bilimler Seçmeli | | 3 | 6 |
 | XSPX<sup>[[e]](#notes)</sup> | Tanımlanmış Seçmeli |  | 3 | 5 |
-| | | **Toplam** | **16** | **29** |
+| | | **Toplam** | **15** | **29** |
 | <h4>Sekizinci Dönem</h4>|
 | **Ders Kodu** |**Ders Başlığı** | **Önkoşullar** | **Kredi** | **AKTS** |
 | [CMPE492](/tr/courses/cmpe492) | Bilgisayar Mühendisliği Tasarım Projesi | SENIOR | 4 | 8 |

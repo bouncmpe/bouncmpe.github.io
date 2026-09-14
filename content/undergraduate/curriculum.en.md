@@ -67,9 +67,9 @@ weight: 2
 | CMPE<sup>[[a]](#notes)</sup> | Departmental Elective  |  | 3 | 6 |
 | CMPE<sup>[[a]](#notes)</sup> | Departmental Elective |  | 3 | 6 |
 | CC<sup>[[b]](#notes)</sup> | Complementary Course Elective |  | 3 | 6 |
-| HSS<sup>[[d]](#notes)</sup> | Humanities and Social Sciences Elective  |  | 4 | 6 |
+| HSS<sup>[[d]](#notes)</sup> | Humanities and Social Sciences Elective  |  | 3 | 6 |
 | XSPX<sup>[[e]](#notes)</sup> | Specified Elective |  | 3 | 5 |
-| | | **Total** | **16** | **29** |
+| | | **Total** | **15** | **29** |
 | <h4>Eighth Semester</h4>|
 | **Code** | **Course Title** | **Prerequisites** | **Credits** | **ECTS** |
 | [CMPE492](/courses/cmpe492) | Computer Engineering Design Project | SENIOR | 4 | 8 |
