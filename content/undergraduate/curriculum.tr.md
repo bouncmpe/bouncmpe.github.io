@@ -23,9 +23,9 @@ weight: 2
 | MATH102 | Analiz II | MATH101 | 4 | 6 |
 | PHYS201 | Fizik III | PHYS121 | 4 | 6 |
 | [CMPE142](/tr/courses/cmpe142) | Sayısal Sistemler | --- | 4 | 6 |
-| [CMPE160](/tr/courses/cmpe160) | Nesne Tabanlı Programlamaya Giriş | CMPE101 | 4 | 8 |
+| [CMPE160](/tr/courses/cmpe160) | Nesne Tabanlı Programlamaya Giriş | CMPE101 | 4 | 6 |
 | EC102 | Makroekonominin İlkeleri | EC101 | 3 | 6 |
-| | | **Toplam** | **19** | **32** |
+| | | **Toplam** | **19** | **30** |
 | <h4>Üçüncü Dönem</h4>|
 | **Ders Kodu** |**Ders Başlığı** | **Önkoşullar** | **Kredi** | **AKTS** |
 | MATH201 | Matris Kuramı | --- | 4 | 5 |
@@ -58,18 +58,18 @@ weight: 2
 | [CMPE320](/tr/courses/cmpe320) | Programlama Dillerinin Prensipleri | CMPE250 | 3 | 5 |
 | [CMPE350](/tr/courses/cmpe350) | Biçimsel Diller ve Makineler Kuramı | CMPE220 | 3 | 5 |
 | [CMPE354](/tr/courses/cmpe354) | Yazılım Mühendisliği | CMPE222 | 4 | 7 |
-| [CMPE362](/tr/courses/cmpe362) | Bilgisayar Mühendisleri için Sinyal İşlemeye Giriş | MATH202 | 3 | 6 |
+| [CMPE362](/tr/courses/cmpe362) | Bilgisayar Mühendisleri için Sinyal İşlemeye Giriş | MATH202 | 3 | 5 |
 | IE306 | Sistem Benzetimi | CMPE343 | 4 | 7 |
 | HTR312<sup>[[f2]](#notes)</sup> | Türkiye Cumhuriyeti Tarihi II | | 2 | 3 |
-| | | **Toplam** | **19** | **33** |
+| | | **Toplam** | **19** | **32** |
 | <h4>Yedinci Dönem</h4>|
 | **Ders Kodu** |**Ders Başlığı** | **Önkoşullar** | **Kredi** | **AKTS** |
 | CMPE<sup>[[a]](#notes)</sup> | Bölüm Seçmeli |  | 3 | 6 |
 | CMPE<sup>[[a]](#notes)</sup> | Bölüm Seçmeli |  | 3 | 6 |
 | CC<sup>[[b]](#notes)</sup> | Tamamlayıcı Seçmeli | | 3 | 6 |
 | HSS<sup>[[d]](#notes)</sup> | Beşeri ve Sosyal Bilimler Seçmeli | | 3 | 6 |
-| XSPX<sup>[[e]](#notes)</sup> | Tanımlanmış Seçmeli |  | 3 | 5 |
-| | | **Toplam** | **15** | **29** |
+| XSPX<sup>[[e]](#notes)</sup> | Tanımlanmış Seçmeli |  | 3 | 4 |
+| | | **Toplam** | **15** | **28** |
 | <h4>Sekizinci Dönem</h4>|
 | **Ders Kodu** |**Ders Başlığı** | **Önkoşullar** | **Kredi** | **AKTS** |
 | [CMPE492](/tr/courses/cmpe492) | Bilgisayar Mühendisliği Tasarım Projesi | SENIOR | 4 | 8 |

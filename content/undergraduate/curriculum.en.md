@@ -23,9 +23,9 @@ weight: 2
 | MATH102 | Calculus II | MATH101 | 4 | 6 |
 | PHYS201 | Physics III | PHYS121 | 4 | 6 |
 | [CMPE142](/courses/cmpe142) | Digital Systems | --- | 4 | 6 |
-| [CMPE160](/courses/cmpe160) | Object Oriented Programming | CMPE101 | 4 | 8 |
+| [CMPE160](/courses/cmpe160) | Object Oriented Programming | CMPE101 | 4 | 6 |
 | EC102 | Principles of Macroeconomics | EC101 | 3 | 6 |
-| | | **Total** | **19** | **32** |
+| | | **Total** | **19** | **30** |
 | <h4>Third Semester</h4>|
 | **Code** | **Course Title** | **Prerequisites** | **Credits** | **ECTS** |
 | MATH201 | Matrix Theory | --- | 4 | 5 |
@@ -58,18 +58,18 @@ weight: 2
 | [CMPE320](/courses/cmpe320) | Principles of Programming Languages | CMPE250 | 3 | 5 |
 | [CMPE350](/courses/cmpe350) | Formal Languages and Automata Theory | CMPE220 | 3 | 5 |
 | [CMPE354](/courses/cmpe354) | Software Engineering | CMPE222 | 4 | 7 |
-| [CMPE362](/courses/cmpe362) | Introduction to Signal Processing for Computer Engineers | MATH202 | 3 | 6 |
+| [CMPE362](/courses/cmpe362) | Introduction to Signal Processing for Computer Engineers | MATH202 | 3 | 5 |
 | IE306 | System Simulation | CMPE343 | 4 | 7 |
 | HTR312<sup>[[f2]](#notes)</sup> | History of Turkish Republic II |   | 2 | 3 |
-| | | **Total** | **19** | **33** |
+| | | **Total** | **19** | **32** |
 | <h4>Seventh Semester</h4>|
 | **Code** | **Course Title** | **Prerequisites** | **Credits** | **ECTS** |
 | CMPE<sup>[[a]](#notes)</sup> | Departmental Elective  |  | 3 | 6 |
 | CMPE<sup>[[a]](#notes)</sup> | Departmental Elective |  | 3 | 6 |
 | CC<sup>[[b]](#notes)</sup> | Complementary Course Elective |  | 3 | 6 |
 | HSS<sup>[[d]](#notes)</sup> | Humanities and Social Sciences Elective  |  | 3 | 6 |
-| XSPX<sup>[[e]](#notes)</sup> | Specified Elective |  | 3 | 5 |
-| | | **Total** | **15** | **29** |
+| XSPX<sup>[[e]](#notes)</sup> | Specified Elective |  | 3 | 4 |
+| | | **Total** | **15** | **28** |
 | <h4>Eighth Semester</h4>|
 | **Code** | **Course Title** | **Prerequisites** | **Credits** | **ECTS** |
 | [CMPE492](/courses/cmpe492) | Computer Engineering Design Project | SENIOR | 4 | 8 |
