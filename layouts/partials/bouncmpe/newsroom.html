@@ -15,7 +15,7 @@
         {{if $featured }}
         <section id="newsroom-carousel" class="carousel slide carousel-fade mb-4 d-none d-md-block rounded-5 overflow-hidden" >
             <div class="carousel-inner rounded-5 overflow-hidden">
-            {{ range $index, $page := first 5 $featured }}
+            {{ range $index, $page := $featured }}
                 {{- $thumbnail := "" -}}
                 {{- $image_settings := site.Params.newsroom.image_settings.hero | default "1400x700 webp q90 Smart" -}}
 

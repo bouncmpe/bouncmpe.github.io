@@ -2,7 +2,7 @@
 type: news
 title: Lale Akarun has become the new president of IAPR
 date: 2026-08-19
-thumbnail: uploads/224_20260827201405.jpg
+thumbnail: uploads/lale-akarun-iapr.jpg
 description: Lale Akarun has become the new president of International Association of Pattern Recognition (IAPR). She will serve as the president between 2026-2028 and as the past president between 2028-2030.
 featured: true
 ---

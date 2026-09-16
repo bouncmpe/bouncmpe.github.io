@@ -3,7 +3,7 @@ type: news
 title: Fatih Alagöz'e Araştırmada Üstün Başarı Ödülü
 description: Boğaziçi Üniversitesi Vakfı (BÜVAK) tarafından her yıl verilen
   Boğaziçi Üniversitesi Araştırmada Üstün Başarı Ödülü sahiplerini buldu.
-featured: true
+featured: false
 date: 2024-09-01
 thumbnail: uploads/fatih-alagoz.jpg
 ---

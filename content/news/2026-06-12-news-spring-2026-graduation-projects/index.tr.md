@@ -5,7 +5,7 @@ title: Bilgisayar Mühendisliği Son Sınıf Öğrencileri 2026 Bahar Dönemi Bi
 date: 2026-06-11
 thumbnail: uploads/cmpe491-492.jpg
 description: Son sınıf Bilgisayar Mühendisliği öğrencilerimiz 60'ın üzerinde bitirme projesi sundu, dereceye giren üç proje jüri tarafından ödüle layık görüldü.
-featured: true
+featured: false
 ---
 
 2026 Bahar Dönemi Bilgisayar Mühendisliği son sınıf öğrencilerimiz, bölümümüzün en keyifli geleneklerinden biri olan bitirme projeleri etkinliğinde 60'ın üzerinde projenin poster ve demo sunumlarını başarıyla gerçekleştirdi.

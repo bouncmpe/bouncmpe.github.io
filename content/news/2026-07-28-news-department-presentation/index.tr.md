@@ -2,7 +2,7 @@
 type: news
 title: Bilgisayar Mühendisliği Bölüm Tanıtım Etkinliği
 description: Bölüm tanıtım etkinliğimiz, 29 Temmuz Çarşamba Kuzey Kampüs'te gerçekleşecektir.
-featured: true
+featured: false
 date: 2026-07-28
 thumbnail: uploads/news-tanitim.png
 ---

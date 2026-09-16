@@ -5,7 +5,7 @@ title: Computer Engineering Seniors Showcase 2026 Spring Graduation Projects
 date: 2026-06-11
 thumbnail: uploads/cmpe491-492.jpg
 description: Our senior Computer Engineering students presented over 60 graduation projects, with three standout projects recognized by the jury.
-featured: true
+featured: false
 ---
 
 Our 2026 Spring Computer Engineering senior students successfully presented the poster and demo sessions of more than 60 graduation projects, marking one of our department's most anticipated traditions.

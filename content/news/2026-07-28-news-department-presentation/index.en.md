@@ -2,7 +2,7 @@
 type: news
 title: Computer Engineering Department Open Day
 description: Our department open day will take place on Wednesday, 29 July at the North Campus.
-featured: true
+featured: false
 date: 2026-07-28
 thumbnail: uploads/news-tanitim.png
 ---

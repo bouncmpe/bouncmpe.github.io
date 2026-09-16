@@ -2,7 +2,7 @@
 type: news
 title: Graduate Students Present Their Work at ISMB 2026
 description: Our Graduate Students Present Their Research at ISMB 2026.
-featured: true
+featured: false
 date: 2026-07-23
 thumbnail: uploads/ismb.png
 ---

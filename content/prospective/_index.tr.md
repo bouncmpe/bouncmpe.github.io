@@ -1,5 +1,5 @@
 ---
-title: Yeni öğrencilerimizi bekliyoruz!
+title: Hoş Geldiniz!
 description: Boğaziçi Üniversitesi Bilgisayar Mühendisliği Bölümü'ne katılmak, Türkiye'nin en prestijli ve saygın akademik ailelerinden birinin parçası olmaktır.
 metadata: none
 card_links:
@@ -11,8 +11,22 @@ card_links:
     url: /prospective/presentations
   - title: "#hocalar"
     url: /people/faculty
+  - title: "#lisans-programı"
+    url: /undergraduate/curriculum/
   - title: "#araştırma"
     url: /research
+  - title: "#danışmanlar"
+    url: /about/academic-advisors/
+  - title: "#çap"
+    url: /undergraduate/double-major/
+  - title: "#yandal"
+    url: /undergraduate/minor-degree/
+  - title: "#seçmeli-ders"
+    url: /undergraduate/electives/
+  - title: "#exchange"
+    url: /undergraduate/exchange/
+  - title: "#staj"
+    url: /undergraduate/training/
   - title: "#yurtlar"
     url: https://tanitim.bogazici.edu.tr/yurtlar
   - title: "#kampüsler"
@@ -23,6 +37,8 @@ card_links:
     url: https://tanitim.bogazici.edu.tr/uluslararasi-programlar
   - title: "#mezunlar"
     url: /prospective/alumni
+  - title: "#buis"
+    url: https://registration.boun.edu.tr/buis/Login.aspx
 ---
 
 Boğaziçi Üniversitesi Bilgisayar Mühendisliği Bölümü'ne katılmak, Türkiye'nin en prestijli ve saygın akademik ailelerinden birinin parçası olmaktır. Bu bölüm, size sağlam bir teorik temel ve sektörde aranan pratik beceriler kazandırarak, bilgisayar mühendisliği alanında başarılı bir kariyere hazırlar.

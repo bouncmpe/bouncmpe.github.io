@@ -2,7 +2,7 @@
 type: news
 title: Lale Akarun IAPR'ın yeni başkanı oldu
 date: 2026-08-19
-thumbnail: uploads/224_20260827201405.jpg
+thumbnail: uploads/lale-akarun-iapr.jpg
 description: Lale Akarun International Association of Pattern Recognition'ın (IAPR) yeni başkanı oldu. Akarun 2026-2028 yılları arasında başkan olarak ve 2028-2030 yılları arasında geçmiş başkan olarak görev yapacaktır.
 featured: true
 ---

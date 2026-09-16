@@ -4,7 +4,7 @@ title: Fatih Alagöz received the Excellence in Research Award
 description: The Boğaziçi University Outstanding Achievement Award in Research,
   given annually by the Boğaziçi University Foundation (BÜVAK), has found its
   owners.
-featured: true
+featured: false
 date: 2024-09-01
 thumbnail: uploads/fatih-alagoz.jpg
 ---
