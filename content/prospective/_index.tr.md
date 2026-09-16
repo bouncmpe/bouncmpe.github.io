@@ -19,7 +19,7 @@ card_links:
     url: /about/academic-advisors/
   - title: "#çap"
     url: /undergraduate/double-major/
-  - title: "#yandal"
+  - title: "#yan-dal"
     url: /undergraduate/minor-degree/
   - title: "#seçmeli-ders"
     url: /undergraduate/electives/
@@ -33,7 +33,7 @@ card_links:
     url: https://tanitim.bogazici.edu.tr/guney-kampus
   - title: "#burslar"
     url: https://tanitim.bogazici.edu.tr/basari-burslari
-  - title: "#yurtdışı"
+  - title: "#yurt-dışı"
     url: https://tanitim.bogazici.edu.tr/uluslararasi-programlar
   - title: "#mezunlar"
     url: /prospective/alumni
