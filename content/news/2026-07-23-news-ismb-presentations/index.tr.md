@@ -2,7 +2,7 @@
 type: news
 title: Lisansüstü Öğrencilerimiz ISMB 2026'da Çalışmalarını Sundu
 description: Lisansüstü öğrencilerimiz ISMB 2026'da araştırmalarını sundu.
-featured: true
+featured: false
 date: 2026-07-23
 thumbnail: uploads/ismb.png
 ---

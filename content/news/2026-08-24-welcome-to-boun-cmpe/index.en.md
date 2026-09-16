@@ -2,7 +2,7 @@
 type: news
 title: Welcome to BOUN CmpE!
 description: We proudly congratulate the new students who earned a place in our department through YKS 2026.
-featured: true
+featured: false
 date: 2026-08-24
 thumbnail: uploads/welcome-26.jpg
 ---

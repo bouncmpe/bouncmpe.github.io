@@ -4,7 +4,7 @@
   "name": "Emre Uğur",
   "position": "associate-professor",
   "tags": [
-    "faculty",
+    "adjunct-faculty",
     "curriculum",
     "cmpe101",
     "cmpe150",
@@ -12,8 +12,7 @@
     "former-cmpe343",
     "former-cmpe462",
     "artificialintelligence",
-    "roboticscontrol",
-    "advisor-x"
+    "roboticscontrol"
   ],
   "type": "person",
   "thumbnail": "images/people/ugur_emre.jpg"
