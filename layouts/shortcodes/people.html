@@ -29,7 +29,7 @@
           <div class="col-4 mb-0 d d-none d-xl-block">
             <img src="{{ $thumbnail }}" alt="{{ .name | anchorize }}-thumbnail" class="img-fluid rounded-5 shadow" style="width: 100%; object-fit: cover; object-position: center;">
           </div>
-          <div class="col-8 align-middle" style="overflow-x: scroll; white-space: nowrap;">
+          <div class="col-8 align-middle">
             <div class="card-body align-middle">
               <h5 class="my-2">{{ .name | title }}</h5>
               {{ with .position }}
