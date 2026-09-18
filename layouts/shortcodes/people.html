@@ -12,7 +12,7 @@
 {{ end }}
 {{ $members := $ctx.Get "members" }}
 
-<div class="row row-cols-1 row-cols-xl-{{ $columns }} g-2 my-4">
+<div class="row row-cols-1 row-cols-md-{{ $columns }} row-cols-xl-{{ $columns }} g-2 my-4">
 {{ range $members }}
 <div class="col">
     {{ $thumbnail := .thumbnail | default "images/person.png" }}
@@ -26,7 +26,7 @@
     {{ end }}
     <div class="card mb-3 border-0 h-100" style="max-width: 540px;">
         <div class="row g-0">
-          <div class="col-4 mb-0 d d-none d-xl-block">
+          <div class="col-4 mb-0">
             <img src="{{ $thumbnail }}" alt="{{ .name | anchorize }}-thumbnail" class="img-fluid rounded-5 shadow" style="width: 100%; object-fit: cover; object-position: center;">
           </div>
           <div class="col-8 align-middle">

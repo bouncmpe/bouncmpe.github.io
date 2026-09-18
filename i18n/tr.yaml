@@ -37,6 +37,9 @@ past-events:
 latest-stories:
   other: en yeni haberler
 
+all-stories:
+  other: tüm haberler
+
 who:
   other: kim
 
