@@ -37,6 +37,24 @@
                 height: 24px;
                 flex-basis: 24px;
             }
+
+            /* Give the brand room to breathe: trim the navbar gutters, shrink the
+               title a touch, and keep it clear of the menu button. */
+            .navbar {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+
+            .navbar-brand {
+                font-size: 1.05rem;
+                gap: 0.45rem;
+            }
+
+            .navbar-brand .navbar-title-center,
+            .navbar-brand .navbar-title-start {
+                padding-right: 0.75rem !important;
+                line-height: 1.2;
+            }
         }
     </style>
 {{- end -}}

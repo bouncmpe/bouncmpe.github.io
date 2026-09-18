@@ -3,29 +3,43 @@
     <video class="rounded-5" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" style="width:100%; height: 25rem; object-fit: cover;">
         <source src="/videos/south-campus.720.mp4" type="video/mp4">
     </video>
-    <div class="card-img-overlay px-5 py-4" style="max-width: 36rem;">
+    {{/* Wide enough that the tag pills wrap inside the video, not past its edge. */}}
+    <div class="card-img-overlay px-5 py-4" style="max-width: 44rem;">
     {{ with .GetPage "/prospective" }}
         <h2 class="display-5 text-light" style="text-shadow: 2px 2px #000000;">{{ .Title }}</h2>
         <p class="card-text text-light" style="text-shadow: 1px 1px #000000;">{{ .Description }}</p>
-        <div class="card-body p-0 lh-lg">
+        <div class="card-body p-0 d-flex flex-wrap gap-2 mt-4">
             {{ range .Params.card_links }}
-                <a href="{{ relLangURL .url }}" class="my-5 px-2 py-1 me-2 text-bg-primary">{{ .title }}</a>
+                <a href="{{ relLangURL .url }}" class="boun-tag text-bg-primary">{{ .title }}</a>
             {{ end }}
           </div>
         </div>
-    {{ end }} 
+    {{ end }}
 </div>
-<div class="card border-5 rounded-5 d-xl-none text-center">
-    <div class="px-5 py-4">
-    {{ with .GetPage "/prospective" }}
-        <h2 class="display-5">{{ .Title }}</h2>
-        <p class="card-text">{{ .Description }}</p>
-        <div class="card-body p-0 lh-lg">
+
+{{/* Mobile and tablet opener: a still frame from the same campus video keeps the
+     desktop look without shipping a 15 MB autoplaying file over mobile data. */}}
+<div class="card border-0 rounded-5 overflow-hidden shadow-sm d-xl-none">
+{{ with .GetPage "/prospective" }}
+    <div class="position-relative">
+        {{ with resources.Get "images/south-campus-hero.jpg" }}
+            {{ $hero := .Fill "900x506 webp q80 Center" }}
+            <img src="{{ $hero.RelPermalink }}" alt="{{ site.Title }}" loading="eager"
+                 class="w-100 d-block" style="height: clamp(11rem, 38vw, 16rem); object-fit: cover; object-position: center;">
+        {{ end }}
+        <div class="position-absolute top-0 start-0 w-100 h-100"
+             style="background: linear-gradient(180deg, rgba(0,0,0,.10) 0%, rgba(0,0,0,.35) 55%, rgba(0,0,0,.80) 100%);"></div>
+        <h2 class="position-absolute bottom-0 start-0 w-100 mb-0 px-4 pb-3 text-light fw-semibold lh-sm"
+            style="font-size: clamp(1.6rem, 7vw, 2.4rem);">{{ .Title }}</h2>
+    </div>
+    <div class="card-body px-4 pt-4 pb-4 text-center">
+        <p class="card-text text-body-secondary mb-4" style="text-wrap: pretty;">{{ .Description }}</p>
+        <div class="d-flex flex-wrap justify-content-center gap-2">
             {{ range .Params.card_links }}
-                <a href="{{ relLangURL .url }}" class="my-5 px-2 py-1 me-2 text-bg-primary">{{ .title }}</a>
+                <a href="{{ relLangURL .url }}" class="boun-tag text-bg-primary">{{ .title }}</a>
             {{ end }}
-          </div>
         </div>
-    {{ end }} 
+    </div>
+{{ end }}
 </div>
 </div>

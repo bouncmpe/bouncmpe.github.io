@@ -25,6 +25,6 @@ content_blocks:
     paginate: false
     cover: false
     header-style: none
-    class: border-0 rounded-0 h1
+    class: border-0 rounded-4 shadow-sm boun-hover-lift h1
 ---
 

@@ -70,7 +70,7 @@
             </div>
         </section> -->
         <section id="tier2" class="row row-cols-1 row-cols-md-2 g-4 mb-4 text-center">
-            {{ range $index, $element := first 8 $news }}
+            {{ range $index, $element := first 6 $news }}
                 <div class=" col">
                     {{ partial "bouncmpe/newsroom-card.html" . }}
                 </div>
@@ -86,7 +86,7 @@
         {{ end }}
 
         <section class="row text-center px-2 d-none d-xl-block">
-            <div class="card rounded-4">
+            <div class="card rounded-4 border-0 shadow-sm boun-hover-lift">
                 <ul class="list-group list-group-flush">
                   <li class="list-group-item">
                     <a href="{{ if $storyIssueURL }}{{ $storyIssueURL }}{{ else }}/admin{{ end }}" 
