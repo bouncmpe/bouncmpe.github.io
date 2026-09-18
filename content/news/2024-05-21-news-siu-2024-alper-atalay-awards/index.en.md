@@ -1,6 +1,7 @@
 ---
 type: news
 title: SIU 2024 Alper Atalay Awards
+description: Our graduate students Merve Gül Kantarcı and Timoteos Onur Özçelik won the second and third Alper Atalay Best Student Paper Awards at SIU 2024.
 featured: false
 date: 2024-05-19
 thumbnail: uploads/siu-2024-awards.png

@@ -48,6 +48,9 @@ newsroom:
     hero: "1400x700 webp q90 Smart"
     quality: 90
 
+people:
+  image_settings: "500x500 webp q90 Top"
+
 social:
   - name: "Twitter"
     icon: "twitter"

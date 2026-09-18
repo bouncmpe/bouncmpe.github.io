@@ -37,6 +37,9 @@ past-events:
 latest-stories:
   other: en yeni haberler
 
+all-stories:
+  other: tüm haberler
+
 who:
   other: kim
 
@@ -216,3 +219,44 @@ copiedToClipboard:
 
 close:
   other: Kapat
+
+# Hinode ships no Turkish translation file, so these theme strings were falling
+# back to the "[i18n] <key>" placeholder on Turkish pages.
+lastModified:
+  other: "Son güncelleme: {{ . }}"
+
+code:
+  other: Kod
+
+image:
+  other: görsel
+
+lightboxLabel:
+  other: Büyütülmüş görünüm
+
+lightboxClose:
+  other: Kapat
+
+paginationNav:
+  other: Sayfa gezinmesi
+
+paginationPrevious:
+  other: Önceki sayfa
+
+paginationNext:
+  other: Sonraki sayfa
+
+paginationFirst:
+  other: İlk sayfa
+
+paginationLast:
+  other: Son sayfa
+
+pageNotFoundTitle:
+  other: Sayfa bulunamadı
+
+pageNotFound:
+  other: "Aradığınız sayfa mevcut değil veya bir hata oluştu. {{ . }} dönmeyi deneyebilirsiniz."
+
+pageNotFoundHome:
+  other: anasayfaya

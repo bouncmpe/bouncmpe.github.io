@@ -1,0 +1,78 @@
+// Boğaziçi CmpE — shared visual polish.
+//
+// Hinode reserves `scss/theme/theme.scss` for site-specific styles and includes
+// it last in its SCSS pipeline, so this file layers on top of the theme instead
+// of forking it. Keep the rule set small and class-based: every rule here is
+// opt-in through a class name used in our own layouts or in content front
+// matter, so upgrading Hinode stays a drop-in.
+
+// Pill-shaped tag links, used by the welcome banner on every screen size.
+.boun-tag {
+  display: inline-block;
+  padding: 0.35rem 0.85rem;
+  border-radius: 50rem;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  white-space: nowrap; // never break a tag mid-word
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+
+  &:hover,
+  &:focus-visible {
+    transform: translateY(-1px);
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
+  }
+}
+
+// Gentle lift on hover, shared by the news, event and section-index cards.
+.boun-hover-lift {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+
+  &:hover,
+  &:focus-within {
+    transform: translateY(-3px);
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.12) !important;
+  }
+}
+
+// Section-index cards (About, Courses, People, Research) lead with their title,
+// so give it a little more weight than the description below it.
+// (Hinode renders these titles as <p>; our own news and event cards use headings,
+// which already carry their own weight.)
+.boun-hover-lift p.card-title {
+  font-weight: 600;
+}
+
+// Hinode's own card grids (the news archive, related posts) wrap their thumbnail
+// in `.card-img-wrap`. Rounding it lines those cards up with the rounded cards
+// used on the home page, and a slight zoom on hover hints they are clickable.
+.card-img-wrap {
+  border-radius: 1rem;
+  overflow: hidden;
+
+  img {
+    transition: transform 0.3s ease;
+  }
+}
+
+.card:hover .card-img-wrap img {
+  transform: scale(1.03);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .boun-tag,
+  .boun-hover-lift,
+  .card-img-wrap img {
+    transition: none;
+
+    &:hover,
+    &:focus-visible,
+    &:focus-within {
+      transform: none;
+    }
+  }
+
+  .card:hover .card-img-wrap img {
+    transform: none;
+  }
+}

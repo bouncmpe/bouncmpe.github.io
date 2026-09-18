@@ -84,24 +84,32 @@
               width: 100% !important;
             }
 
-            .{{ $sectionColClass }} {
-              min-height: {{ $cardMinHeight }}px;
-            }
+            /* Equal-height cards only matter once the grid has more than one
+               column; on phones the reserved height is just empty space. */
+            @media (min-width: 768px) {
+              .{{ $sectionColClass }} {
+                min-height: {{ $cardMinHeight }}px;
+              }
 
-            .{{ $sectionColClass }} .card {
-              min-height: {{ $cardMinHeight }}px !important;
+              .{{ $sectionColClass }} .card {
+                min-height: {{ $cardMinHeight }}px !important;
+              }
+
+              .{{ $sectionColClass }} .card-title {
+                min-height: 2.2em;
+              }
+
+              /* Trim overlong descriptions so the grid rows stay even. */
+              .{{ $sectionColClass }} .card-text {
+                display: -webkit-box;
+                -webkit-line-clamp: {{ $lineClamp }};
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+              }
             }
 
             .{{ $sectionColClass }} .card-title {
-              min-height: 2.2em;
               margin-bottom: 0.4rem;
-            }
-
-            .{{ $sectionColClass }} .card-text {
-              display: -webkit-box;
-              -webkit-line-clamp: {{ $lineClamp }};
-              -webkit-box-orient: vertical;
-              overflow: hidden;
             }
           </style>
         {{- end -}}
