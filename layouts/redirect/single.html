@@ -1,1 +1,46 @@
-{{- template "alias.html" (dict "Permalink" .Params.target) -}}
+{{ define "main" }}
+
+{{ if eq .Section "u" }}
+
+  {{/* Find person in data by slugified title */}}
+  {{ $slug := .Title | urlize }}
+  {{ $person := dict }}
+  {{ range $k, $v := site.Data.bouncmpe.people }}
+    {{ if eq (urlize $v.name) $slug }}
+      {{ $person = $v }}
+    {{ end }}
+  {{ end }}
+
+  {{ if not $person.name }}
+    <meta http-equiv="refresh" content="0; url={{ .Params.target }}">
+    <div class="container my-5">
+      <p>If you are not redirected automatically, <a href="{{ .Params.target }}">click here</a>.</p>
+    </div>
+  {{ else }}
+
+    <!-- One centered column for header + card -->
+    <div class="container mt-5 pt-3 mb-0" style="max-width: 960px;">
+
+      <!-- PAGE HEADER (outside card, but same width / center) -->
+      <h1 class="mb-1">{{ $person.name }}</h1>
+      {{ with $person.position }}
+        <p class="text-muted mb-4">{{ . | title }}</p>
+      {{ end }}
+
+      {{ $variant := or .Params.person_layout "minimal" }}
+      {{ partial (printf "people/person-%s.html" $variant) (dict "Page" . "Person" $person) }}
+
+    </div>
+
+  {{ end }}
+
+{{ else }}
+
+  <meta http-equiv="refresh" content="0; url={{ .Params.target }}">
+  <div class="container my-5">
+    <p>If you are not redirected automatically, <a href="{{ .Params.target }}">click here</a>.</p>
+  </div>
+
+{{ end }}
+
+{{ end }}
