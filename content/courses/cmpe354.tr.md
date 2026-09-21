@@ -30,17 +30,7 @@ aliases:
 
 ## Katalog Tanımı
 
-Grup olarak büyük bir yazılım geliştirmenin yönetimi ve uygulanması. Yazılım mühendisliği ilkelerinin bir proje ortamında uygulanması.
-
-## Dersin Öğrenme Çıktıları
-
-- Yazılım geliştirme tekniklerinin ve metodolojilerinin, planlama, gereksinimler ve yazılım geliştirme yaşam döngüsünün çeşitli aşamalarında uygulanmasını deneyimlemek toplama, tasarım, uygulama, test etme, dağıtım ve teslimat.
-- İletişim, planlama ve koordinasyon gibi takım tabanlı yazılım geliştirme becerilerini edinmek.
-Zaman yönetimi.
-- Müşteriler ve proje ekibi üyeleri ile etkileşim için gerekli iletişim becerilerini kazanmak.
-- Yazılım geliştirme projelerini planlama ve yönetme becerilerini geliştirmek.
-- Etkin ve verimli yazılım geliştirme için yazılım geliştirme araçlarını, tekniklerini, ortamlarını ve metodolojilerini kullanma becerisi kazanmak.
-- Daha önceki derslerde öğrenilen çeşitli Bilgisayar Mühendisliği bilgilerini ve algoritmalarını uygulamak. kurslar, yazılım geliştirme.
+Yazılım mühendisliğinin temel ilke ve uygulamaları. Yazılım geliştirme yaşam döngüsü: gereksinim belirleme, tasarım, gerçekleştirim, test ve dağıtım. Sürüm kontrol sistemleri, uygulama kapsayıcıları (container teknolojileri), hata ve görev takibi, sürekli entegrasyon ve test uygulamaları. Proje yönetimi kavramları: planlama, organizasyon ve kontrol. Profesyonel etik. Yazılım mühendisliği metodolojilerinin dönem boyunca ekip tabanlı bir proje kapsamında uygulanması.
 
 ## Dersi Veren Öğretim Üyesi
 
