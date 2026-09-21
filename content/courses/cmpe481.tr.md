@@ -42,4 +42,4 @@ Bu dersi başarıyla tamamlayan öğrenciler:
 
 ## Dersi Veren Önceki Öğretim Üyeleri
 
-{{< people_alt tag="former-cmpe480" cols="3">}}
+{{< people_alt tag="former-cmpe481" cols="3">}}
