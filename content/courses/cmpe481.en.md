@@ -25,7 +25,9 @@ aliases:
 | Corequisites | None |
 
 {{< /table >}}
-<!-- prettier-ignore-end -->## Catalog Description
+<!-- prettier-ignore-end -->
+
+## Catalog Description
 
 This course provides fundamental concepts about data analysis and data visualization. Topics include data preprocessing & preparation, clustering, classification, regression, performance evaluation, feature selection, feature importance analysis, feature extraction and dimensionality reduction methods. Visualization concepts focus on high-dimensional data visualization techniques.
 
