@@ -12,8 +12,8 @@
   {{- end -}}
 {{- end -}}
 
-<a class="not-prose boun-card boun-index-card" href="{{ $href }}" style="align-items: center; text-align: center; max-width: 18rem;">
-  {{- with $src }}<img src="{{ . }}" alt="{{ $title }}" style="width: 6rem; height: 6rem; object-fit: contain; margin-bottom: 0.75rem;">{{ end }}
-  <h3 class="boun-card-title">{{ $title }}</h3>
-  {{- with .Inner }}<div class="boun-card-text">{{ . | markdownify }}</div>{{ end }}
+<a class="not-prose boun-persona" href="{{ $href }}"{{ if hasPrefix $href "http" }} target="_blank" rel="noopener"{{ end }}>
+  {{- with $src }}<img class="boun-persona-icon" src="{{ . }}" alt="{{ $title }}">{{ end }}
+  <span class="boun-persona-title">{{ $title }}</span>
+  {{- with .Inner }}<span class="boun-persona-text">{{ . | markdownify }}</span>{{ end }}
 </a>

@@ -393,20 +393,27 @@
   color: var(--boun-text-muted);
 }
 
+/* Buttons read as cards at rest — same surface, border and shadow as the
+   people cards — and fill with the department blue on hover. */
 .boun-btn {
   display: inline-block;
   padding: 0.55rem 1.4rem;
+  border: 1px solid var(--boun-border);
   border-radius: 50rem;
-  background: hsl(var(--primary-hue) var(--primary-saturation) var(--primary-lightness));
-  color: #fff;
-  font-weight: 500;
+  background: var(--boun-surface);
+  box-shadow: var(--boun-shadow);
+  color: var(--boun-text);
+  font-weight: 600;
   text-decoration: none;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  transition: transform 0.15s ease, box-shadow 0.15s ease,
+    background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
 }
 
 .boun-btn:hover,
 .boun-btn:focus-visible {
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  background: hsl(var(--primary-hue) var(--primary-saturation) var(--primary-lightness));
+  border-color: transparent;
   box-shadow: var(--boun-shadow-hover);
   color: #fff;
 }
@@ -542,6 +549,24 @@
 
 .boun-index-card .boun-card-title {
   font-size: 1.05rem;
+}
+
+/* Section card grids (Courses above all) read better as an even field of
+   cards: every row takes the height of the tallest card, and long descriptions
+   are trimmed so one wordy entry cannot stretch the whole grid. */
+/* Only once the grid actually has columns — on a phone it is a single column,
+   where equal rows would just pad every card to the wordiest one. */
+@media (min-width: 640px) {
+  .boun-grid-uniform {
+    grid-auto-rows: 1fr;
+  }
+}
+
+.boun-grid-uniform .boun-card-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 /* --- footer -------------------------------------------------------------- */
@@ -696,6 +721,137 @@
   padding-top: 1.5rem;
   border-bottom: 2px solid var(--boun-border);
   white-space: nowrap;
+}
+
+/* --- inline links in content --------------------------------------------- */
+
+/* The department navy reads well on white but is nearly black-on-black in dark
+   mode, where Hextra uses the same primary-600 for prose links. Lighten the
+   same hue there; light mode is untouched. */
+.dark .content :where(a):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+  color: hsl(var(--primary-hue) 70% 72%);
+  text-underline-offset: 2px;
+}
+
+.dark .content :where(a):not(:where([class~="not-prose"], [class~="not-prose"] *)):hover {
+  color: hsl(var(--primary-hue) 80% 82%);
+}
+
+/* --- persona card -------------------------------------------------------- */
+
+.boun-persona {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  max-width: 24rem;
+  margin: 2rem auto;
+  padding: 1.75rem 1.75rem 1.5rem;
+  border: 1px solid var(--boun-border);
+  border-radius: 1.25rem;
+  background: var(--boun-surface);
+  box-shadow: var(--boun-shadow);
+  text-align: center;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.boun-persona:hover,
+.boun-persona:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: var(--boun-shadow-hover);
+  border-color: hsl(var(--primary-hue) var(--primary-saturation) var(--primary-lightness));
+}
+
+.boun-persona-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  object-fit: contain;
+}
+
+.boun-persona-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--boun-text);
+}
+
+.boun-persona-text {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--boun-text-muted);
+  text-wrap: pretty;
+}
+
+/* The caption is written as a Markdown list; show it as tidy lines instead of
+   bullets squeezed into a narrow card. */
+.boun-persona-text ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.boun-persona-text p { margin: 0; }
+
+@media (prefers-reduced-motion: reduce) {
+  .boun-persona { transition: none; }
+  .boun-persona:hover { transform: none; }
+}
+
+/* --- pagination / prev-next links ---------------------------------------- */
+
+/* Hextra renders the paginator (news, courses) and the docs prev/next links as
+   plain text, which turns unreadable primary-blue on the dark background. They
+   reuse the button style above. The selector keys off the layout classes those
+   links share; if a future Hextra changes them, these rules simply stop
+   applying and the theme's own styling returns. */
+#content a[class*="max-w-[50%]"] {
+  gap: 0.4rem;
+  padding: 0.55rem 1.4rem;
+  border: 1px solid var(--boun-border);
+  border-radius: 50rem;
+  background: var(--boun-surface);
+  box-shadow: var(--boun-shadow);
+  color: var(--boun-text);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease,
+    background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+#content a[class*="max-w-[50%]"]:hover,
+#content a[class*="max-w-[50%]"]:focus-visible {
+  transform: translateY(-2px);
+  background: hsl(var(--primary-hue) var(--primary-saturation) var(--primary-lightness));
+  border-color: transparent;
+  box-shadow: var(--boun-shadow-hover);
+  color: #fff;
+}
+
+#content a[class*="max-w-[50%]"]:focus-visible {
+  outline: 2px solid hsl(var(--primary-hue) var(--primary-saturation) var(--primary-lightness));
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .boun-btn,
+  #content a[class*="max-w-[50%]"] { transition: none; }
+  .boun-btn:hover,
+  #content a[class*="max-w-[50%]"]:hover { transform: none; }
+}
+
+/* --- sidebar ------------------------------------------------------------- */
+
+/* In dark mode the active item is dark blue text on a dark blue box, which is
+   nearly unreadable. Keep the box, brighten the label to sit with the other
+   items, and let the weight mark it as current. */
+.dark .hextra-sidebar-active-item {
+  color: #f5f5f5;
+  font-weight: 700;
 }
 
 /* --- navbar -------------------------------------------------------------- */

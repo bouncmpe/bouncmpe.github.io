@@ -15,6 +15,5 @@ content_blocks:
       sort: title
       reverse: false
     cols: 4
-    limit: 16
-    paginate: true
+    paginate: false
 ---

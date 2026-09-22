@@ -59,7 +59,7 @@
       {{- with index $heading "title" }}
         <h2 class="boun-section-title" style="font-size: 1.75rem; margin-top: 2.5rem;">{{ . }}</h2>
       {{- end }}
-      <div class="boun-grid boun-grid-{{ $cols }}" style="margin-bottom: 3rem;">
+      <div class="boun-grid boun-grid-uniform boun-grid-{{ $cols }}" style="margin-bottom: 3rem;">
         {{- range $pages }}
           <a class="boun-card boun-index-card" href="{{ .RelPermalink }}">
             <h3 class="boun-card-title">{{ .Title }}</h3>

@@ -1,6 +1,6 @@
 ---
 type: news
-title: Arzucan Özgür received the Excellence in Research Award
+title: Arzucan Özgür Received the Excellence in Research Award
 description: >
   The Boğaziçi University Outstanding Achievement Award in Research, given
   annually by the Boğaziçi University Foundation (BÜVAK), has found its owners.

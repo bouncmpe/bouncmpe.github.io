@@ -37,7 +37,8 @@ search:
     index: content
     tokenize: forward
 
-displayUpdatedDate: true
+# No "Last updated on ..." line anywhere on the site.
+displayUpdatedDate: false
 dateFormat: "2 January 2006"
 
 highlight:
