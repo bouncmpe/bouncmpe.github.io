@@ -1,6 +1,7 @@
 ---
 type: news
 title: SIU 2024 Alper Atalay Ödülleri
+description: Yüksek lisans öğrencilerimiz Merve Gül Kantarcı ve Timoteos Onur Özçelik, SIU 2024'te Alper Atalay En İyi Öğrenci Makalesi ikincilik ve üçüncülük ödüllerini kazandılar.
 featured: false
 date: 2024-05-19
 thumbnail: uploads/siu-2024-awards.png
