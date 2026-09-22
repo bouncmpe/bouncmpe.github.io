@@ -1,127 +1,151 @@
+# Hextra, alt öğesi olan menü başlıkları için açılır menü üretir; Hinode'daki
+# menü yapısı olduğu gibi korunmuştur. Aynı alt öğeler mobil menüde ve bölüm
+# kenar çubuğunda da görünür.
 main:
   - name: Hakkında
-    url: /about/
+    pageRef: /about
     identifier: about
     weight: 100
+  - name: Amaçlar
+    pageRef: /about/mission-statement
+    parent: about
+    weight: 101
+  - name: Bölüm Tarihçesi
+    pageRef: /about/history
+    parent: about
+    weight: 102
+  - name: İstatistikler
+    pageRef: /about/statistics
+    parent: about
+    weight: 103
+  - name: Yönetim
+    pageRef: /about/administration
+    parent: about
+    weight: 104
+  - name: Akademik Danışmanlar
+    pageRef: /about/academic-advisors
+    parent: about
+    weight: 105
+  - name: Bölüm Danışma Kurulu
+    pageRef: /about/advisory-board
+    parent: about
+    weight: 106
+  - name: Cinsiyet Eşitliği
+    pageRef: /about/gender-equality
+    parent: about
+    weight: 107
+  - name: Akademik Ahlak
+    pageRef: /about/academic-integrity
+    parent: about
+    weight: 108
 
   - name: Kişiler
-    url: /people/
+    pageRef: /people
     identifier: people
     weight: 200
   - name: Öğretim Üyeleri
-    url: /people/faculty
+    pageRef: /people/faculty
     parent: people
-    identifier: faculty
     weight: 201
   - name: Akademik Personel
-    url: /people/academic-staff
+    pageRef: /people/academic-staff
     parent: people
-    identifier: academic-staff
     weight: 202
   - name: İdari ve Yardımcı Personel
-    url: /people/support-staff
+    pageRef: /people/support-staff
     parent: people
-    identifier: support-staff
     weight: 203
-  # - name: Öğrenciler
-  #   url: /people/students
-  #   parent: people
-  #   identifier: students
-  #   weight: 204
 
   - name: Lisans
-    url: /undergraduate/
+    pageRef: /undergraduate
     identifier: undergraduate
     weight: 300
   - name: Genel Bakış
-    url: /undergraduate/overview
+    pageRef: /undergraduate/overview
     parent: undergraduate
-    identifier: undergraduate-overview
     weight: 301
   - name: Öğretim Programı 2025
-    url: /undergraduate/curriculum
+    pageRef: /undergraduate/curriculum
     parent: undergraduate
-    identifier: undergraduate-curriculum
     weight: 302
   - name: Öğretim Programı (2025 Öncesi)
-    url: /undergraduate/curriculum-pre-2025
+    pageRef: /undergraduate/curriculum-pre-2025
     parent: undergraduate
-    identifier: undergraduate-curriculum-pre-2025 
     weight: 303
-  # - name: Temel Dersler
-  #   url: /undergraduate/courses
-  #   parent: undergraduate
-  #   identifier: undergraduate-courses
-  #   weight: 304
   - name: Seçmeli Dersler
-    url: /undergraduate/electives
+    pageRef: /undergraduate/electives
     parent: undergraduate
-    identifier: undergraduate-electives
-    weight: 305
+    weight: 304
   - name: Çift Ana Dal Programları
-    url: /undergraduate/double-major
+    pageRef: /undergraduate/double-major
     parent: undergraduate
-    identifier: undergraduate-double-major
     weight: 305
   - name: Yan Dal Programları
-    url: /undergraduate/minor-degree
+    pageRef: /undergraduate/minor-degree
     parent: undergraduate
-    identifier: undergraduate-minor-degree
     weight: 306
   - name: Değişim Programları
-    url: /undergraduate/exchange
+    pageRef: /undergraduate/exchange
     parent: undergraduate
-    identifier: undergraduate-exchange
     weight: 307
   - name: Endüstri Stajı
-    url: /undergraduate/training
+    pageRef: /undergraduate/training
     parent: undergraduate
-    identifier: undergraduate-training
     weight: 308
   - name: Bitirme Projeleri
-    url: /undergraduate/senior-projects
+    pageRef: /undergraduate/senior-projects
     parent: undergraduate
-    identifier: undergraduate-senior-projects
     weight: 309
   - name: Mezuniyet
-    url: /undergraduate/graduation
+    pageRef: /undergraduate/graduation
     parent: undergraduate
-    identifier: undergraduate-graduation
     weight: 310
 
-
   - name: Lisansüstü
-    url: /graduate/
+    pageRef: /graduate
     identifier: graduate
     weight: 400
   - name: Doktora Programı
-    url: /graduate/phd-program
+    pageRef: /graduate/phd-program
     parent: graduate
-    identifier: graduate-phd-program
-    weight: 411
+    weight: 401
   - name: Yüksek Lisans Programı
-    url: /graduate/ms-program
+    pageRef: /graduate/ms-program
     parent: graduate
-    identifier: graduate-ms-program
-    weight: 412
+    weight: 402
   - name: Diğer İlişkili Programlar
-    url: /graduate/affiliated-programs
+    pageRef: /graduate/affiliated-programs
     parent: graduate
-    identifier: graduate-affiliated
-    weight: 413
+    weight: 403
 
   - name: Dersler
-    url: /courses/
-    identifier: courses
+    pageRef: /courses
     weight: 500
 
   - name: Araştırma
-    url: /research/
-    identifier: research
+    pageRef: /research
     weight: 600
 
-  - name: Docs
-    url: /docs/
-    identifier: docs
+  - name: Haberler
+    pageRef: /news
     weight: 700
 
+  - name: Docs
+    url: https://cmpe.bogazici.edu.tr/docs
+    weight: 800
+
+  - name: Ara
+    weight: 900
+    params:
+      type: search
+
+  - name: Dil
+    weight: 910
+    params:
+      type: language-switch
+      label: true
+
+  - name: Tema
+    weight: 920
+    params:
+      type: theme-toggle

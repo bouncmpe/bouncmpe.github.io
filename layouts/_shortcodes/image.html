@@ -1,0 +1,14 @@
+{{/* Hinode's `image`: a processed local image. `ratio`, `wrapper` and `class`
+     are accepted; only the rounded styling is carried over. */}}
+{{- $src := .Get "src" | default (.Get 0) -}}
+{{- $alt := .Get "alt" | default "" -}}
+{{- with resources.Get $src -}}
+  {{- $img := .Fit "1600x1600 webp q85" -}}
+  <figure style="margin: 1.5rem 0;">
+    <img src="{{ $img.RelPermalink }}" alt="{{ $alt }}" loading="lazy"
+         style="width: 100%; height: auto; border-radius: 1rem; box-shadow: var(--boun-shadow);">
+    {{- with $.Get "caption" }}<figcaption class="boun-card-text" style="margin-top: 0.5rem; text-align: center;">{{ . }}</figcaption>{{ end }}
+  </figure>
+{{- else -}}
+  {{- warnf "image shortcode: unable to find resource %q" $src -}}
+{{- end -}}

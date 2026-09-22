@@ -1,0 +1,6 @@
+{{/* Hinode's `table` shortcode: wraps a Markdown table so wide tables scroll
+     instead of overflowing. The `class` argument is accepted and ignored — the
+     Bootstrap table classes it carried have no meaning under Hextra. */}}
+<div class="boun-table">
+  {{ .Inner | markdownify }}
+</div>

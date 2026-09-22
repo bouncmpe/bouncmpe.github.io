@@ -1,7 +1,6 @@
 ---
 title: Endüstri Stajı
 description: Mühendislik Fakültesi Endüstri Stajı Yönergesi
-metadata: none
 weight: 7
 ---
 

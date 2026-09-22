@@ -1,0 +1,19 @@
+{{/* Hinode's `persona`: a thumbnail linking somewhere, with a caption. */}}
+{{- $thumbnail := .Get "thumbnail" -}}
+{{- $href := .Get "href" -}}
+{{- $title := .Get "title" -}}
+{{- $src := "" -}}
+{{- with resources.Get $thumbnail -}}
+  {{/* SVG logos cannot go through Hugo's image processing. */}}
+  {{- if eq .MediaType.SubType "svg" -}}
+    {{- $src = .RelPermalink -}}
+  {{- else -}}
+    {{- $src = (.Fit "320x320 webp q90").RelPermalink -}}
+  {{- end -}}
+{{- end -}}
+
+<a class="not-prose boun-card boun-index-card" href="{{ $href }}" style="align-items: center; text-align: center; max-width: 18rem;">
+  {{- with $src }}<img src="{{ . }}" alt="{{ $title }}" style="width: 6rem; height: 6rem; object-fit: contain; margin-bottom: 0.75rem;">{{ end }}
+  <h3 class="boun-card-title">{{ $title }}</h3>
+  {{- with .Inner }}<div class="boun-card-text">{{ . | markdownify }}</div>{{ end }}
+</a>

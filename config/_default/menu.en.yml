@@ -1,125 +1,151 @@
+# Hextra renders navbar dropdowns for menu items that have children, so the
+# nested structure from the Hinode menu is kept as-is. The same children are
+# used by the mobile menu and shown again in each section's sidebar.
 main:
   - name: About
-    url: /about/
+    pageRef: /about
     identifier: about
     weight: 100
+  - name: Mission Statements
+    pageRef: /about/mission-statement
+    parent: about
+    weight: 101
+  - name: History
+    pageRef: /about/history
+    parent: about
+    weight: 102
+  - name: Department Statistics
+    pageRef: /about/statistics
+    parent: about
+    weight: 103
+  - name: Administration
+    pageRef: /about/administration
+    parent: about
+    weight: 104
+  - name: Academic Advisors
+    pageRef: /about/academic-advisors
+    parent: about
+    weight: 105
+  - name: Advisory Board
+    pageRef: /about/advisory-board
+    parent: about
+    weight: 106
+  - name: Gender Equality
+    pageRef: /about/gender-equality
+    parent: about
+    weight: 107
+  - name: Academic Integrity
+    pageRef: /about/academic-integrity
+    parent: about
+    weight: 108
 
   - name: People
-    url: /people/
+    pageRef: /people
     identifier: people
     weight: 200
   - name: Faculty
-    url: /people/faculty
+    pageRef: /people/faculty
     parent: people
-    identifier: faculty
     weight: 201
   - name: Academic Staff
-    url: /people/academic-staff
+    pageRef: /people/academic-staff
     parent: people
-    identifier: academic-staff
     weight: 202
   - name: Support Staff
-    url: /people/support-staff
+    pageRef: /people/support-staff
     parent: people
-    identifier: support-staff
     weight: 203
-  # - name: Students
-  #   url: /people/students
-  #   parent: people
-  #   identifier: students
-  #   weight: 204
 
   - name: Undergraduate
-    url: /undergraduate/
+    pageRef: /undergraduate
     identifier: undergraduate
     weight: 300
   - name: Program Overview
-    url: /undergraduate/overview
+    pageRef: /undergraduate/overview
     parent: undergraduate
-    identifier: undergraduate-overview
     weight: 301
   - name: Curriculum 2025
-    url: /undergraduate/curriculum
+    pageRef: /undergraduate/curriculum
     parent: undergraduate
-    identifier: undergraduate-curriculum
     weight: 302
   - name: Curriculum (Pre-2025)
-    url: /undergraduate/curriculum-pre-2025
+    pageRef: /undergraduate/curriculum-pre-2025
     parent: undergraduate
-    identifier: undergraduate-curriculum-pre-2025
     weight: 303
-  # - name: Course List
-  #   url: /undergraduate/courses
-  #   parent: undergraduate
-  #   identifier: undergraduate-courses
-  #   weight: 304
   - name: Elective Courses
-    url: /undergraduate/electives
+    pageRef: /undergraduate/electives
     parent: undergraduate
-    identifier: undergraduate-electives
-    weight: 305
+    weight: 304
   - name: Double Major Programs
-    url: /undergraduate/double-major
+    pageRef: /undergraduate/double-major
     parent: undergraduate
-    identifier: undergraduate-double-major
     weight: 305
   - name: Minor Degree Programs
-    url: /undergraduate/minor-degree
+    pageRef: /undergraduate/minor-degree
     parent: undergraduate
-    identifier: undergraduate-minor-degree
     weight: 306
   - name: Exchange Programs
-    url: /undergraduate/exchange
+    pageRef: /undergraduate/exchange
     parent: undergraduate
-    identifier: undergraduate-exchange
     weight: 307
   - name: Industrial Training
-    url: /undergraduate/training
+    pageRef: /undergraduate/training
     parent: undergraduate
-    identifier: undergraduate-training
     weight: 308
   - name: Senior Projects
-    url: /undergraduate/senior-projects
+    pageRef: /undergraduate/senior-projects
     parent: undergraduate
-    identifier: undergraduate-senior-projects
     weight: 309
   - name: Graduation
-    url: /undergraduate/graduation
+    pageRef: /undergraduate/graduation
     parent: undergraduate
-    identifier: undergraduate-graduation
     weight: 310
 
   - name: Graduate
-    url: /graduate/
+    pageRef: /graduate
     identifier: graduate
     weight: 400
   - name: PhD Program Overview
-    url: /graduate/phd-program
+    pageRef: /graduate/phd-program
     parent: graduate
-    identifier: graduate-phd-program
-    weight: 411
+    weight: 401
   - name: MS Program Overview
-    url: /graduate/ms-program
+    pageRef: /graduate/ms-program
     parent: graduate
-    identifier: graduate-ms-program
-    weight: 412
+    weight: 402
   - name: Other Affiliated Programs
-    url: /graduate/affiliated-programs
+    pageRef: /graduate/affiliated-programs
     parent: graduate
-    identifier: graduate-affiliated
-    weight: 413
+    weight: 403
 
   - name: Courses
-    url: /courses/
-    identifier: courses
+    pageRef: /courses
     weight: 500
 
   - name: Research
-    url: /research/
-    identifier: research
+    pageRef: /research
     weight: 600
 
-  - name: Docs
-    url: /docs/
-    identifier: docs
+  - name: News
+    pageRef: /news
     weight: 700
+
+  - name: Docs
+    url: https://cmpe.bogazici.edu.tr/docs
+    weight: 800
+
+  - name: Search
+    weight: 900
+    params:
+      type: search
+
+  - name: Language
+    weight: 910
+    params:
+      type: language-switch
+      label: true
+
+  - name: Theme
+    weight: 920
+    params:
+      type: theme-toggle

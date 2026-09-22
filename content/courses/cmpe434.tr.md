@@ -1,7 +1,6 @@
 ---
 title: CMPE434
 description: Robotbilime Giriş
-metadata: none
 # thumbnail: https://picsum.photos/seed/cmpe434/1400
 aliases:
   - undergraduate/courses/cmpe434

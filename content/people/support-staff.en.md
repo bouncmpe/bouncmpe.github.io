@@ -1,7 +1,6 @@
 ---
 title: Support Staff
 description: Computer Engineering Support Staff
-metadata: none
 weight: 23
 ---
 

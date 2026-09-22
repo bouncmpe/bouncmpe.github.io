@@ -1,7 +1,6 @@
 ---
 title: Değişim Programları
 description: Bilgisayar Mühendisliği Değişim Programları
-metadata: none
 weight: 6
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: Welcome to BOUN CMPE!
 description: Joining the Boğaziçi University Computer Engineering Department means becoming a part of one of the most prestigious and respected academic families in Turkey.
-metadata: none
 card_links:
   - title: "#türkçe-tanıtım"
     url: /tr

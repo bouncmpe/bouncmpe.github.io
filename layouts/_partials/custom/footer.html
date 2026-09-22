@@ -1,0 +1,56 @@
+{{/* Department footer, rendered through Hextra's `custom/footer.html` hook.
+
+     Keeps the Hinode structure: the grouped link columns from the footer menu,
+     then contact details and social links. */}}
+{{- $ctx := .context -}}
+
+<div style="padding-block: 3rem 1rem;">
+  <div class="boun-footer">
+    {{- range $ctx.Site.Menus.footer }}
+      <div>
+        <h3>{{ .Name }}</h3>
+        {{- if .HasChildren }}
+          <ul>
+            {{- range .Children }}
+              <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+            {{- end }}
+          </ul>
+        {{- end }}
+      </div>
+    {{- end }}
+  </div>
+
+  <div class="boun-footer-meta">
+    {{- with $ctx.Site.Params.contact }}
+      <div>
+        <h3>{{ i18n "contact-us" }}</h3>
+        <p style="margin: 0 0 0.5rem;">
+          {{- if eq $ctx.Site.Language.Lang "tr" }}{{ .address.tr }}{{ else }}{{ .address.en }}{{ end -}}
+        </p>
+        <p style="margin: 0;"><strong>{{ i18n "phone" }}:</strong> {{ .phone }}</p>
+        <p style="margin: 0;"><strong>{{ i18n "fax" }}:</strong> {{ .fax }}</p>
+      </div>
+    {{- end }}
+    <div class="boun-footer-social">
+      <h3>{{ i18n "connect-with-us" }}</h3>
+      <p style="margin: 0;">{{ i18n "social-networks-text" }}</p>
+      <ul>
+        {{- range $ctx.Site.Params.socialLinks }}
+          <li>
+            <a href="{{ .url }}" title="{{ .name }}" target="_blank" rel="noopener">
+              <img src="/icons/{{ .icon }}.svg" alt="{{ .name }}" width="22" height="22">
+            </a>
+          </li>
+        {{- end }}
+      </ul>
+    </div>
+  </div>
+
+  {{/* The `{year}` placeholder in the copyright notice was expanded by Hinode's
+       footer; Hugo leaves it alone, so substitute it here. */}}
+  {{- with $ctx.Site.Copyright }}
+    <p style="margin: 1.5rem 0 0; font-size: 0.8rem; color: var(--boun-text-muted);">
+      {{ replace . "{year}" now.Year | markdownify }}
+    </p>
+  {{- end }}
+</div>

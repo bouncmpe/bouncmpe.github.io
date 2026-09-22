@@ -1,7 +1,6 @@
 ---
 title: CMPE101
 description: Introduction to Computing
-metadata: none
 # thumbnail:
 #   url: https://picsum.photos/seed/cmpe101/1400
 aliases:

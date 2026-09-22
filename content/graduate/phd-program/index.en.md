@@ -1,7 +1,6 @@
 ---
 title: PhD in Computer Engineering
 description: Computer Engineering PhD Program
-metadata: none
 weight: 411
 ---
 

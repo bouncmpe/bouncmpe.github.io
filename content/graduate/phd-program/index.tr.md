@@ -1,7 +1,6 @@
 ---
 title: Doktora Programı
 description: Bilgisayar Mühendisliği Doktora Programı
-metadata: none
 weight: 411
 ---
 

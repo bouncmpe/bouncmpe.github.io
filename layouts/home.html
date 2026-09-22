@@ -1,0 +1,66 @@
+{{ define "main" }}
+  {{- $news := where site.RegularPages.ByDate.Reverse "Section" "news" -}}
+  {{- $events := sort (where site.RegularPages "Section" "events") "Params.datetime" -}}
+  {{- $upcoming := slice -}}
+  {{- $past := slice -}}
+  {{- range $events -}}
+    {{- if ge (time.AsTime .Params.datetime) now -}}
+      {{- $upcoming = $upcoming | append . -}}
+    {{- else -}}
+      {{- $past = $past | append . -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{/* Hextra's mobile menu lives inside the sidebar partial, and the hamburger
+       button toggles it. `disableSidebar` keeps it out of the way on desktop
+       while still rendering the menu for phones. */}}
+  {{ partial "sidebar.html" (dict "context" . "disableSidebar" true) }}
+
+  <main id="content" class="boun-wrap" style="padding-block: 2rem 3rem;">
+    {{- if site.Params.welcomeBanner.enabled }}
+      {{ partial "boun/banner.html" . }}
+    {{- end }}
+
+    <div class="boun-home">
+      <section class="boun-section" style="margin-top: 3rem;">
+        <h2 class="boun-section-title">{{ i18n "latest-stories" | title }}</h2>
+
+        <div class="boun-grid boun-grid-2">
+          {{- range first (site.Params.newsroom.grid_limit | default 8) $news }}
+            {{ partial "boun/news-card.html" (dict "page" . "showText" true) }}
+          {{- end }}
+        </div>
+
+        {{- with site.GetPage "/news" }}
+          <p style="margin-top: 2rem; text-align: center;">
+            <a class="boun-btn" href="{{ .RelPermalink }}">{{ i18n "all-stories" | title }}</a>
+          </p>
+        {{- end }}
+      </section>
+
+      {{- if site.Params.eventbar.enabled }}
+        <aside class="boun-section" style="margin-top: 3rem;">
+          <h2 class="boun-section-title">{{ i18n "upcoming-events" | title }}</h2>
+          {{- if $upcoming }}
+            <div class="boun-grid">
+              {{- range first (site.Params.eventbar.limit | default 6) $upcoming }}
+                {{ partial "boun/event-card.html" . }}
+              {{- end }}
+            </div>
+          {{- else }}
+            <p class="boun-card-text">{{ i18n "no-upcoming-events" }}</p>
+          {{- end }}
+
+          {{- if le (len $upcoming) 2 }}
+            <h2 class="boun-section-title" style="margin-top: 2.5rem;">{{ i18n "past-events" | title }}</h2>
+            <div class="boun-grid">
+              {{- range first 3 $past.Reverse }}
+                {{ partial "boun/event-card.html" . }}
+              {{- end }}
+            </div>
+          {{- end }}
+        </aside>
+      {{- end }}
+    </div>
+  </main>
+{{ end }}

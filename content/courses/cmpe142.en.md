@@ -1,7 +1,6 @@
 ---
 title: CMPE142
 description: Digital Systems
-metadata: none
 # thumbnail: https://picsum.photos/seed/cmpe142/1400
 aliases:
   - undergraduate/courses/cmpe142

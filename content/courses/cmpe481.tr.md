@@ -1,7 +1,6 @@
 ---
 title: CMPE481
 description: Veri Analizi ve Görselleştirmesi
-metadata: none
 # thumbnail: https://picsum.photos/seed/cmpe481/1400
 aliases:
   - undergraduate/courses/cmpe481

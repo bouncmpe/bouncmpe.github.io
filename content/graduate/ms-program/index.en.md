@@ -1,7 +1,6 @@
 ---
 title: M.Sc. in Computer Engineering
 description: Computer Engineering Master of Science Program
-metadata: none
 weight: 421
 ---
 

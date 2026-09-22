@@ -1,0 +1,589 @@
+/* ---------------------------------------------------------------------------
+   Boğaziçi CmpE components for the Hextra theme.
+
+   Hextra ships a *precompiled* Tailwind bundle that only contains the utility
+   classes the theme itself uses, so new Tailwind classes written in our own
+   templates would have no CSS behind them. Hextra concatenates this file after
+   its own bundle, which makes it the supported place for site components.
+   Everything here is plain CSS, namespaced `boun-`, and theme-aware through
+   Hextra's `.dark` class.
+   --------------------------------------------------------------------------- */
+
+:root {
+  /* Boğaziçi dark blue (#1e4a8b) drives Hextra's whole primary palette. */
+  --primary-hue: 216deg;
+  --primary-saturation: 64%;
+  --primary-lightness: 33%;
+
+  --boun-surface: #ffffff;
+  --boun-surface-muted: #f4f6f9;
+  --boun-border: rgba(15, 23, 42, 0.08);
+  --boun-text: #1f2937;
+  --boun-text-muted: #5b6676;
+  --boun-shadow: 0 1px 2px rgba(15, 23, 42, 0.06), 0 4px 12px rgba(15, 23, 42, 0.06);
+  --boun-shadow-hover: 0 8px 24px rgba(15, 23, 42, 0.14);
+  --boun-radius: 1rem;
+}
+
+.dark {
+  --boun-surface: #1b1b1f;
+  --boun-surface-muted: #232329;
+  --boun-border: rgba(255, 255, 255, 0.1);
+  --boun-text: #e8eaed;
+  --boun-text-muted: #a0a6b0;
+  --boun-shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 4px 12px rgba(0, 0, 0, 0.3);
+  --boun-shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+/* --- shared -------------------------------------------------------------- */
+
+.boun-wrap {
+  width: 100%;
+  max-width: 90rem;
+  margin-inline: auto;
+  padding-inline: max(env(safe-area-inset-left), 1.5rem);
+}
+
+.boun-section {
+  margin-block: 3.5rem;
+}
+
+.boun-section-title {
+  font-size: clamp(1.6rem, 3vw, 2.25rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0 0 1.5rem;
+  color: var(--boun-text);
+}
+
+.boun-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--boun-surface);
+  border: 1px solid var(--boun-border);
+  border-radius: var(--boun-radius);
+  box-shadow: var(--boun-shadow);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.boun-card:hover,
+.boun-card:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: var(--boun-shadow-hover);
+}
+
+.boun-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .boun-grid-2,
+  .boun-grid-3,
+  .boun-grid-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (min-width: 1024px) {
+  .boun-grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .boun-grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+/* --- welcome banner ------------------------------------------------------ */
+
+.boun-hero {
+  position: relative;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: var(--boun-shadow);
+  isolation: isolate;
+}
+
+.boun-hero-media {
+  display: block;
+  width: 100%;
+  height: clamp(12rem, 34vw, 25rem);
+  object-fit: cover;
+  object-position: center;
+}
+
+.boun-hero-body {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: clamp(1.25rem, 3vw, 2.5rem);
+  max-width: 44rem;
+  color: #fff;
+}
+
+.boun-hero-title {
+  margin: 0;
+  font-size: clamp(1.75rem, 4vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.75);
+}
+
+.boun-hero-text {
+  margin: 0;
+  max-width: 34rem;
+  line-height: 1.55;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.75);
+}
+
+.boun-hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.boun-tag {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: 50rem;
+  background: hsl(var(--primary-hue) var(--primary-saturation) var(--primary-lightness));
+  color: #fff;
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.boun-tag:hover,
+.boun-tag:focus-visible {
+  transform: translateY(-1px);
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
+  color: #fff;
+}
+
+/* Mobile opener: a still frame, with the copy below the image. */
+.boun-hero-mobile .boun-hero-body {
+  position: static;
+  max-width: none;
+  color: var(--boun-text);
+  text-align: center;
+  align-items: center;
+  background: var(--boun-surface);
+}
+
+.boun-hero-mobile .boun-hero-title,
+.boun-hero-mobile .boun-hero-text {
+  text-shadow: none;
+}
+
+.boun-hero-mobile {
+  background: var(--boun-surface);
+  border: 1px solid var(--boun-border);
+}
+
+.boun-hero-mobile .boun-hero-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1rem 1.25rem;
+  color: #fff;
+  font-size: clamp(1.5rem, 7vw, 2rem);
+  font-weight: 700;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.75));
+}
+
+.boun-hero-figure {
+  position: relative;
+}
+
+/* --- news ---------------------------------------------------------------- */
+
+.boun-news-thumb {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: var(--boun-surface-muted);
+}
+
+.boun-card-body {
+  padding: 1rem 1.15rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  flex: 1 1 auto;
+}
+
+.boun-card-title {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--boun-text);
+}
+
+.boun-card-meta {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--boun-text-muted);
+}
+
+.boun-card-text {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--boun-text-muted);
+}
+
+.boun-btn {
+  display: inline-block;
+  padding: 0.55rem 1.4rem;
+  border-radius: 50rem;
+  background: hsl(var(--primary-hue) var(--primary-saturation) var(--primary-lightness));
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.boun-btn:hover,
+.boun-btn:focus-visible {
+  transform: translateY(-1px);
+  box-shadow: var(--boun-shadow-hover);
+  color: #fff;
+}
+
+/* --- events -------------------------------------------------------------- */
+
+.boun-event {
+  display: block;
+  padding: 0;
+}
+
+.boun-event-head {
+  padding: 0.45rem 1rem;
+  background: var(--boun-surface-muted);
+  border-bottom: 1px solid var(--boun-border);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--boun-text-muted);
+  text-align: center;
+}
+
+.boun-event-body {
+  padding: 1rem 1.15rem 1.15rem;
+  text-align: center;
+}
+
+.boun-event-name {
+  margin: 0 0 0.2rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--boun-text);
+}
+
+.boun-event-title {
+  margin: 0 0 0.5rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--boun-text);
+}
+
+.boun-event-meta {
+  font-size: 0.86rem;
+  color: var(--boun-text-muted);
+  line-height: 1.5;
+}
+
+/* --- people -------------------------------------------------------------- */
+
+.boun-people {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  margin-block: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .boun-people-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+.boun-person {
+  display: flex;
+  /* .boun-card sets column; person cards put the photo beside the text. */
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.boun-person-photo {
+  flex: 0 0 7.5rem;
+  width: 7.5rem;
+  height: 7.5rem;
+  border-radius: 1.5rem;
+  object-fit: cover;
+  object-position: center;
+  box-shadow: var(--boun-shadow);
+  background: var(--boun-surface-muted);
+}
+
+.boun-person-name {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--boun-text);
+}
+
+.boun-person-role {
+  margin: 0.1rem 0 0.35rem;
+  font-size: 0.9rem;
+  color: var(--boun-text-muted);
+}
+
+.boun-person-links {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.boun-person-links a {
+  color: var(--boun-text-muted);
+  line-height: 0;
+  transition: color 0.15s ease;
+}
+
+.boun-person-links a:hover {
+  color: hsl(var(--primary-hue) var(--primary-saturation) var(--primary-lightness));
+}
+
+.boun-person-links svg {
+  width: 1.15rem;
+  height: 1.15rem;
+}
+
+/* Name-only cards (former members, advisory board, course assistants). */
+.boun-person-plain {
+  padding: 0.85rem 1.1rem;
+}
+
+/* Photo cards trade some padding for a larger portrait, so the face reads at a
+   glance without the card growing much. */
+.boun-card.boun-person {
+  padding: 0.55rem 0.8rem;
+  gap: 1rem;
+}
+
+/* --- section index cards (About, Courses, Research, People) --------------- */
+
+.boun-index-card {
+  padding: 1.1rem 1.25rem;
+  justify-content: flex-start;
+}
+
+.boun-index-card .boun-card-title {
+  font-size: 1.05rem;
+}
+
+/* --- footer -------------------------------------------------------------- */
+
+.boun-footer {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .boun-footer { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+.boun-footer h3 {
+  margin: 0 0 0.6rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--boun-text);
+}
+
+.boun-footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.boun-footer li { margin-bottom: 0.4rem; }
+
+.boun-footer a {
+  font-size: 0.9rem;
+  color: var(--boun-text-muted);
+  text-decoration: none;
+}
+
+.boun-footer a:hover {
+  color: hsl(var(--primary-hue) var(--primary-saturation) var(--primary-lightness));
+}
+
+.boun-footer-meta {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--boun-border);
+  font-size: 0.9rem;
+  color: var(--boun-text-muted);
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .boun-footer-meta { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .boun-footer-social { text-align: right; }
+}
+
+.boun-footer-social ul {
+  list-style: none;
+  display: flex;
+  gap: 0.9rem;
+  padding: 0;
+  margin: 0.5rem 0 0;
+}
+
+@media (min-width: 768px) {
+  .boun-footer-social ul { justify-content: flex-end; }
+}
+
+.boun-footer-social img {
+  width: 22px;
+  height: 22px;
+  opacity: 0.7;
+}
+
+.dark .boun-footer-social img { filter: invert(1); }
+
+.boun-footer-social img:hover { opacity: 1; }
+
+/* Responsive helpers used by the banner. */
+.boun-only-desktop { display: none; }
+
+@media (min-width: 1024px) {
+  .boun-only-desktop { display: block; }
+  .boun-only-mobile { display: none; }
+}
+
+/* --- home page ----------------------------------------------------------- */
+
+.boun-home {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+  align-items: start;
+}
+
+@media (min-width: 1024px) {
+  .boun-home {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+    gap: 3rem;
+  }
+}
+
+/* --- tables -------------------------------------------------------------- */
+
+/* Hextra's prose styling boxes every cell. The department's tables (the
+   curriculum above all) are long lists that read better as plain rows, which is
+   how they looked under Hinode, so the cell borders are traded for row rules. */
+
+.boun-table {
+  overflow-x: auto;
+  margin-block: 1.5rem;
+}
+
+.boun-table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+  display: table;
+}
+
+.boun-table th,
+.boun-table td {
+  border: 0;
+  border-bottom: 1px solid var(--boun-border);
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.boun-table thead {
+  background: transparent;
+}
+
+.boun-table thead th:empty { border-bottom: 0; }
+
+.boun-table tr { border-top: 0; }
+
+.boun-table tbody tr:hover { background: var(--boun-surface-muted); }
+
+/* Section rows ("First Semester", ...) written as headings inside a cell. */
+.boun-table td h4,
+.boun-table td h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--boun-text);
+}
+
+.boun-table td:has(h4),
+.boun-table td:has(h3) {
+  padding-top: 1.5rem;
+  border-bottom: 2px solid var(--boun-border);
+  white-space: nowrap;
+}
+
+/* --- navbar -------------------------------------------------------------- */
+
+/* "Bilgisayar Mühendisliği" next to the logo and the icon buttons is a tight
+   fit on a phone: the brand is a flex item, so it shrank and broke across two
+   lines. Keep it on one line and trim it slightly. */
+@media (max-width: 480px) {
+  .hextra-nav-container nav > a:first-child {
+    flex-shrink: 0;
+  }
+
+  .hextra-nav-container nav > a:first-child span {
+    font-size: 0.9rem;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+}
+
+/* The theme sets the site title in extrabold (800), which is heavy next to the
+   logo; semibold keeps it prominent without shouting. */
+.hextra-nav-container nav > a:first-child span {
+  font-weight: 600;
+}
+
+/* The language switcher shows the language code, so the globe icon beside it is
+   redundant. */
+.hextra-language-switcher svg {
+  display: none;
+}
+
+/* EN/TR is a utility control, not a nav destination: give it the same size and
+   muted grey as the nav links so it sits with them instead of competing with
+   the site title. It darkens on hover, like the links do. */
+.hextra-language-switcher {
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: var(--boun-text-muted);
+}
+
+.hextra-language-switcher:hover,
+.hextra-language-switcher:focus-visible {
+  color: var(--boun-text);
+}

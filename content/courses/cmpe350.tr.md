@@ -1,7 +1,6 @@
 ---
 title: CMPE350
 description: Biçimsel Diller ve Makineler Kuramı
-metadata: none
 # thumbnail: https://picsum.photos/seed/cmpe350/1400
 aliases:
   - undergraduate/courses/cmpe350

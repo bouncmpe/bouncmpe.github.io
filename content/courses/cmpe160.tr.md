@@ -1,7 +1,6 @@
 ---
 title: CMPE160
 description: Nesne Tabanlı Programlamaya Giriş
-metadata: none
 # thumbnail: https://picsum.photos/seed/cmpe160/1400
 aliases:
   - undergraduate/courses/cmpe160

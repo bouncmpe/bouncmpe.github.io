@@ -1,7 +1,6 @@
 ---
 title: CMPE475
 description: Computer Networks
-metadata: none
 # thumbnail: https://picsum.photos/seed/cmpe475/1400
 aliases:
   - undergraduate/courses/cmpe475

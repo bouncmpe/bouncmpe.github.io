@@ -1,7 +1,6 @@
 ---
 title: CMPE322
 description: İşletim Sistemleri
-metadata: none
 # thumbnail: https://picsum.photos/seed/cmpe322/1400
 aliases:
   - undergraduate/courses/cmpe322

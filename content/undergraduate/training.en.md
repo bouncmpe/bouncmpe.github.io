@@ -1,7 +1,6 @@
 ---
 title: Industrial Training
 description: Faculty of Engineering Industrial Training Bylaws
-metadata: none
 weight: 7
 ---
 

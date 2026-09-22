@@ -1,7 +1,6 @@
 ---
 title: CMPE462
 description: Yapay Öğrenme
-metadata: none
 # thumbnail: https://picsum.photos/seed/cmpe462/1400
 aliases:
   - undergraduate/courses/cmpe462

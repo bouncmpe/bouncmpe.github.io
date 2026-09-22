@@ -1,7 +1,6 @@
 ---
 title: CMPE101
 description: Bilgi İşleme Giriş
-metadata: none
 # thumbnail: https://picsum.photos/seed/cmpe101/1400
 aliases:
   - undergraduate/courses/cmpe101

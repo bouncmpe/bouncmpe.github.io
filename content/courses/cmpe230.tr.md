@@ -1,7 +1,6 @@
 ---
 title: CMPE230
 description: Sistem Programlama
-metadata: none
 # thumbnail: https://picsum.photos/seed/cmpe230/1400
 aliases:
   - undergraduate/courses/cmpe230

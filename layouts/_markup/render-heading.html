@@ -1,0 +1,10 @@
+{{/* Same as Hextra's heading hook, without the "#" permalink anchor that
+     appears on hover. The empty span is kept so the table of contents, the
+     sidebar and in-page links still have their anchor targets. */}}
+<h{{ .Level }} {{- with .Attributes.class }} class="{{ . }}" {{- end }}>
+  {{- .Text | safeHTML -}}
+  {{- if gt .Level 1 -}}
+    <span class="hx:absolute hx:-mt-20" id="{{ .Anchor | safeURL }}"></span>
+  {{- end -}}
+</h{{ .Level }}>
+{{- /* Drop trailing newlines */ -}}

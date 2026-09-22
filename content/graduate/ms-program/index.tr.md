@@ -1,7 +1,6 @@
 ---
 title: Yüksek Lisans Programı
 description: Bilgisayar Mühendisliği Yüksek Lisans Programı
-metadata: none
 weight: 421
 ---
 

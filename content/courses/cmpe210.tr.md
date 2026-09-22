@@ -1,7 +1,6 @@
 ---
 title: CMPE210
 description: Nesne Tabanlı Programlamanın Temelleri
-metadata: none
 # thumbnail: https://picsum.photos/seed/cmpe210/1400
 aliases:
   - undergraduate/courses/cmpe210

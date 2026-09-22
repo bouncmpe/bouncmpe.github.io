@@ -1,164 +1,64 @@
-homepage:
-  other: "home"
+# Department strings. Hextra's own UI strings come from the theme's i18n/en.yaml,
+# so only what this site adds is listed here.
 
-cmpe-long:
-  other: department of computer engineering
-
-copyright:
-  other: copyright
-
-date:
-  other: date
-
-start-time:
-  other: start time
-
-duration:
-  other: duration
-
-news:
-  other: news
-
-latest-news:
-  other: latest news
-
-more-news:
-  other: "more news"
-
-events:
-  other: events
-
-upcoming-events:
-  other: upcoming events
-
-past-events:
-  other: past events
-
+# Home page and news
 latest-stories:
   other: latest stories
+all-stories:
+  other: all stories
+upcoming-events:
+  other: upcoming events
+past-events:
+  other: past events
+no-upcoming-events:
+  other: No upcoming events are scheduled right now.
+minutesShort:
+  other: min
 
-upcoming:
-  other: upcoming
+# Footer
+contact-us:
+  other: Contact Us
+connect-with-us:
+  other: Connect with Us
+social-networks-text:
+  other: "We're on social networks, follow us to keep in touch."
+phone:
+  other: Phone
+fax:
+  other: Fax
 
-links:
-  other: links
-
-who:
-  other: who
-
-when:
-  other: when
-
-where:
-  other: where
-
-phd-candidate:
-  other: PhD Candidate
-
-thesis-defender:
-  other: thesis defender
-
-more-actions:
-  other: more actions
-
-edit-this-content:
-  other: edit this content
-
-on-this-page:
-  other: "on this page"
-
+# Event kinds (content/events/*/index.md `type`)
 phd-thesis-defense:
   other: "PhD Thesis Defense"
-
 ms-thesis-defense:
   other: "MS Thesis Defense"
-
 seminar:
   other: "Seminar"
-
 special-event:
   other: special event
 
-read-full-text:
-  other: "read full text"
-
-go-to-event-page:
-  other: "go to event page"
-
-add-calendar:
-  other: "add to my calendar"
-
+# Positions (data/bouncmpe/people/*.json `position`)
 full-professor:
   other: Professor
-
 associate-professor:
   other: Associate Professor
-
 assistant-professor:
   other: Assistant Professor
-
 teaching-assistant:
   other: Teaching Assistant
-
-research-assistant:
-  other: Research Assistant
-
 doctor:
   other: Ph.D.
-
-faculty-members:
-  other: Faculty Members
-
-emeritus-members:
-  other: Emeritus Faculty Members
-
-other-faculty-members:
-  other: Other Faculty Members
-
-former-faculty-members:
-  other: Former Faculty Members
-
-course-description:
-  other: description
-
-course-prerequisites:
-  other: prerequisites
-
-course-no-prerequsites:
-  other: no prerequisites
-
-course-hours:
-  other: catalogue hours
-
-course-credits:
-  other: credits
-
-course-ects:
-  other: ects
-
-building-staff:
-  other: building staff
-
-technical-staff:
-  other: technical staff
-
 building-head:
   other: head of building
-
-under-construction-warning:
-  other: The information on this page is under construction.
-
-contact-us:
-  other: Contact Us
-
-connect-with-us:
-  other: Connect with Us
-
-social-networks-text:
-  other: "We're on social networks, follow us to keep in touch."
-
-phone:
-  other: Phone
-
-fax:
-  other: Fax
+building-staff:
+  other: building staff
+technical-staff:
+  other: technical staff
+coordinator:
+  other: coordinator
+secretary:
+  other: secretary
+system-admin:
+  other: system administrator
+web-admin:
+  other: web administrator

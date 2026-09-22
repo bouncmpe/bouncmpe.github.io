@@ -1,7 +1,6 @@
 ---
 title: Mezunlarımız
 description: Boğaziçi Bilgisayar Mühendisliği mezunları, Türkiye ve dünyanın dört bir yanında, sektörün önde gelen firmalarında ve akademik kuruluşlarında çalışmaktadır.
-metadata: none
 weight: 2
 ---
 

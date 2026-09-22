@@ -2,7 +2,6 @@
 title: Akademik Ahlak
 description: Kopya Girişimlerine Karşı Uygulamalar
 weight: 8
-metadata: none
 ---
 
 ## Tanımlar

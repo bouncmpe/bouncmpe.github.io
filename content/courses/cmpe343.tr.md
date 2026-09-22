@@ -1,7 +1,6 @@
 ---
 title: CMPE343
 description: Bilgisayar Mühendisleri için Olasılık ve İstatistiğe Giriş
-metadata: none
 # thumbnail: https://picsum.photos/seed/cmpe343/1400
 aliases:
   - undergraduate/courses/cmpe343

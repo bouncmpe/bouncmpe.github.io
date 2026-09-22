@@ -1,7 +1,6 @@
 ---
 title: CMPE210
 description: Fundamentals of Object Oriented Programming
-metadata: none
 # thumbnail: https://picsum.photos/seed/cmpe210/1400
 aliases:
   - undergraduate/courses/cmpe210

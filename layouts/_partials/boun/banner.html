@@ -1,0 +1,41 @@
+{{/* Welcome banner for prospective students.
+
+     Desktop keeps the looping campus video from the Hinode site; phones and
+     tablets get a still frame instead, so the 15 MB file is never fetched over
+     mobile data. */}}
+{{- with .GetPage "/prospective" -}}
+  {{- $page := . -}}
+
+  <div class="boun-hero boun-only-desktop">
+    <video class="boun-hero-media" playsinline autoplay muted loop>
+      <source src="/videos/south-campus.720.mp4" type="video/mp4">
+    </video>
+    <div class="boun-hero-body">
+      <h2 class="boun-hero-title">{{ .Title }}</h2>
+      <p class="boun-hero-text">{{ .Description }}</p>
+      <div class="boun-hero-tags">
+        {{- range .Params.card_links }}
+          <a class="boun-tag" href="{{ relLangURL .url }}">{{ .title }}</a>
+        {{- end }}
+      </div>
+    </div>
+  </div>
+
+  <div class="boun-hero boun-hero-mobile boun-only-mobile">
+    <div class="boun-hero-figure">
+      {{- with resources.Get "images/south-campus-hero.jpg" }}
+        {{- $hero := .Fill "900x506 webp q80 Center" }}
+        <img class="boun-hero-media" src="{{ $hero.RelPermalink }}" alt="{{ site.Title }}">
+      {{- end }}
+      <div class="boun-hero-caption">{{ $page.Title }}</div>
+    </div>
+    <div class="boun-hero-body">
+      <p class="boun-hero-text">{{ .Description }}</p>
+      <div class="boun-hero-tags" style="justify-content: center;">
+        {{- range .Params.card_links }}
+          <a class="boun-tag" href="{{ relLangURL .url }}">{{ .title }}</a>
+        {{- end }}
+      </div>
+    </div>
+  </div>
+{{- end -}}

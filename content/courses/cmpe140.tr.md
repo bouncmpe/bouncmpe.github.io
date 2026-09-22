@@ -1,7 +1,6 @@
 ---
 title: CMPE140
 description: Ekonomi ve İşletme için Bilgi İşleme Giriş
-metadata: none
 # thumbnail: https://picsum.photos/seed/cmpe140/1400
 aliases:
   - undergraduate/courses/cmpe140

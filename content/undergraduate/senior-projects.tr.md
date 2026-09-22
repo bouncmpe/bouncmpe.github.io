@@ -1,7 +1,6 @@
 ---
 title: Bitirme Projeleri
 description: Bilgisayar Mühendisliği Son Sınıf Tasarım Projeleri
-metadata: none
 weight: 10
 ---
 

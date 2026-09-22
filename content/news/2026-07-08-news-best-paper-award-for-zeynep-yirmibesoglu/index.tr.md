@@ -1,6 +1,5 @@
 ---
 type: news
-layout: best-paper-award-for-zeynep-yirmibesoglu
 title: Öğrencimiz Zeynep Yirmibeşoğlu Balal ve doktora tez danışmanı Prof. Dr. Tunga Güngör'e EAMT 2026'da En İyi Bildiri Ödülü
 date: 2026-07-08
 thumbnail: uploads/eamt-best-paper-1.jpg
