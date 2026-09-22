@@ -1,6 +1,6 @@
 ---
 type: news
-title: Öğrencimiz Zeynep Yirmibeşoğlu Balal ve doktora tez danışmanı Prof. Dr. Tunga Güngör'e EAMT 2026'da En İyi Bildiri Ödülü
+title: Zeynep Yirmibeşoğlu Balal, EAMT 2026'da En İyi Bildiri Ödülünü Kazandı
 date: 2026-07-08
 thumbnail: uploads/eamt-best-paper-1.jpg
 description: Doktora öğrencimiz Zeynep Yirmibeşoğlu Balal ve danışmanı Prof. Dr. Tunga Güngör, "Diversity-Aware Literary Machine Translation with Multi-Reward Policy Optimization" başlıklı çalışmalarıyla EAMT 2026'da En İyi Bildiri Ödülü'nü kazandı.

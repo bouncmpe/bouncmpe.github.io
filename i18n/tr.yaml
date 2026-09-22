@@ -5,6 +5,8 @@
 # Ana sayfa ve haberler
 latest-stories:
   other: en yeni haberler
+featured-stories:
+  other: öne çıkan haberler
 all-stories:
   other: tüm haberler
 upcoming-events:

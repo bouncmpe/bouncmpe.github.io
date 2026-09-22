@@ -25,7 +25,10 @@
       <section class="boun-section" style="margin-top: 3rem;">
         <h2 class="boun-section-title">{{ i18n "latest-stories" | title }}</h2>
 
-        <div class="boun-grid boun-grid-2">
+        {{/* The featured carousel heads the stories column, as it did before. */}}
+        {{ partial "boun/carousel.html" . }}
+
+        <div class="boun-grid boun-grid-2" style="margin-top: 1.5rem;">
           {{- range first (site.Params.newsroom.grid_limit | default 8) $news }}
             {{ partial "boun/news-card.html" (dict "page" . "showText" true) }}
           {{- end }}

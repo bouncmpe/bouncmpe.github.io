@@ -59,7 +59,7 @@ eventbar:
   limit: 6
 
 newsroom:
-  grid_limit: 8
+  grid_limit: 6
   image_settings:
     hero: "1400x700 webp q90 Smart"
     card: "800x450 webp q85 Smart"

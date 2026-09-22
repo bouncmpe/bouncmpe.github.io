@@ -1,6 +1,6 @@
 ---
 type: news
-title: Gökberk Çelikmasat PROFES '25 Konferansında en iyi bildiri ödülünü aldı.
+title: Gökberk Çelikmasat PROFES '25 Konferansında En İyi Bildiri Ödülünü Aldı
 date: 2025-12-10
 thumbnail: uploads/inci-baytas.png
 description: Yüksek lisans öğrencimiz Gökberk Çelikmasat 1-3 Aralık 2025 tarihleri arası İtalya, Salerno'da düzenlenen PROFES '25 konferansında en iyi bildiri ödülü almıştır.

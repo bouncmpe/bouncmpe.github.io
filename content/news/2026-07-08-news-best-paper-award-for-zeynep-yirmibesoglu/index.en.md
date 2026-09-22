@@ -1,6 +1,6 @@
 ---
 type: news
-title: Best Paper Award for Our Student Zeynep Yirmibeşoğlu Balal and Her Advisor Prof. Dr. Tunga Güngör at EAMT 2026
+title: Best Paper Award for Zeynep Yirmibeşoğlu Balal at EAMT 2026
 date: 2026-07-08
 thumbnail: uploads/eamt-best-paper-1.jpg
 description: Our PhD student Zeynep Yirmibeşoğlu Balal and her advisor Prof. Dr. Tunga Güngör won the Best Paper Award at EAMT 2026 for their work on diversity-aware literary machine translation.

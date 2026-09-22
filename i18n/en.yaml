@@ -4,6 +4,8 @@
 # Home page and news
 latest-stories:
   other: latest stories
+featured-stories:
+  other: featured stories
 all-stories:
   other: all stories
 upcoming-events:
