@@ -463,9 +463,10 @@
 
 /* --- people -------------------------------------------------------------- */
 
+/* Borderless: a photo, the name, the title, the areas and the icons — no box. */
 .boun-people {
   display: grid;
-  gap: 1rem;
+  gap: 1.75rem 2rem;
   grid-template-columns: 1fr;
   margin-block: 1.5rem;
 }
@@ -476,41 +477,53 @@
 
 .boun-person {
   display: flex;
-  /* .boun-card sets column; person cards put the photo beside the text. */
   flex-direction: row;
+  /* Name, title and links sit level with the middle of the portrait. */
   align-items: center;
   gap: 1rem;
   min-width: 0;
 }
 
 .boun-person-photo {
-  flex: 0 0 7.5rem;
-  width: 7.5rem;
-  height: 7.5rem;
-  border-radius: 1.5rem;
+  flex: 0 0 8.5rem;
+  width: 8.5rem;
+  height: 8.5rem;
+  border-radius: 1.4rem;
   object-fit: cover;
   object-position: center;
-  box-shadow: var(--boun-shadow);
   background: var(--boun-surface-muted);
+}
+
+.boun-person-body {
+  min-width: 0;
 }
 
 .boun-person-name {
   margin: 0;
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-weight: 600;
   color: var(--boun-text);
 }
 
 .boun-person-role {
-  margin: 0.1rem 0 0.35rem;
+  margin: 0.1rem 0 0;
   font-size: 0.9rem;
   color: var(--boun-text-muted);
+}
+
+.boun-person-areas {
+  margin: 0.35rem 0 0;
+  font-size: 0.8rem;
+  line-height: 1.45;
+  color: var(--boun-text-muted);
+  text-wrap: pretty;
 }
 
 .boun-person-links {
   display: flex;
   gap: 0.6rem;
   align-items: center;
+  margin-top: 0.5rem;
 }
 
 .boun-person-links a {
@@ -523,6 +536,10 @@
   color: hsl(var(--primary-hue) var(--primary-saturation) var(--primary-lightness));
 }
 
+.dark .boun-person-links a:hover {
+  color: hsl(var(--primary-hue) 70% 72%);
+}
+
 .boun-person-links svg {
   width: 1.15rem;
   height: 1.15rem;
@@ -531,13 +548,6 @@
 /* Name-only cards (former members, advisory board, course assistants). */
 .boun-person-plain {
   padding: 0.85rem 1.1rem;
-}
-
-/* Photo cards trade some padding for a larger portrait, so the face reads at a
-   glance without the card growing much. */
-.boun-card.boun-person {
-  padding: 0.55rem 0.8rem;
-  gap: 1rem;
 }
 
 /* --- section index cards (About, Courses, Research, People) --------------- */
@@ -895,4 +905,78 @@
 .hextra-language-switcher:hover,
 .hextra-language-switcher:focus-visible {
   color: var(--boun-text);
+}
+
+/* --- people pages: one navigation rail ----------------------------------- */
+
+/* layouts/people/single.html builds a single left rail: the pages of the
+   section, with the current page's headings nested under it. Hextra's own
+   sidebar is still rendered for the phone menu, and is hidden here. */
+.boun-rail {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .boun-rail {
+    display: block;
+    position: sticky;
+    top: var(--navbar-height);
+    align-self: flex-start;
+    flex: 0 0 16rem;
+    width: 16rem;
+    max-height: calc(100vh - var(--navbar-height));
+    overflow-y: auto;
+    overflow-x: hidden;
+    overscroll-behavior: contain;
+    padding: 1.5rem 1rem 2rem;
+    font-size: 0.875rem;
+  }
+}
+
+.boun-rail ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.boun-rail > ul > li + li {
+  margin-top: 0.15rem;
+}
+
+.boun-rail a {
+  display: block;
+  padding: 0.35rem 0.6rem;
+  border-radius: 0.375rem;
+  color: var(--boun-text-muted);
+  text-decoration: none;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.boun-rail a:hover {
+  background: var(--boun-surface-muted);
+  color: var(--boun-text);
+}
+
+.boun-rail .boun-rail-active {
+  background: hsl(var(--primary-hue) var(--primary-saturation) var(--primary-lightness) / 0.1);
+  color: hsl(var(--primary-hue) var(--primary-saturation) calc(var(--primary-lightness) - 4%));
+  font-weight: 600;
+}
+
+.dark .boun-rail .boun-rail-active {
+  color: #f5f5f5;
+  font-weight: 700;
+}
+
+/* The page's own headings, indented under the page they belong to.
+   (Scoped through .boun-rail so it outranks the list reset above.) */
+.boun-rail .boun-rail-sub {
+  margin: 0.15rem 0 0.6rem 1.1rem;
+  padding-left: 0.5rem;
+  border-left: 1px solid var(--boun-border);
+}
+
+.boun-rail .boun-rail-sub a {
+  font-size: 0.825rem;
+  padding-block: 0.25rem;
 }

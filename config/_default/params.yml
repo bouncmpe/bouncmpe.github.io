@@ -67,6 +67,9 @@ newsroom:
 
 people:
   image_settings: "500x500 webp q90 Top"
+  # Research areas under each name on the people pages. The labels live in
+  # data/bouncmpe/research_areas.yml; set this to false to hide them.
+  showResearchAreas: false
 
 # Renamed from `social`: Hextra reserves `params.social` for its Open Graph
 # metadata (it expects a map, not a list of links).

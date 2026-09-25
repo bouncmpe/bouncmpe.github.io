@@ -1,10 +1,17 @@
-{{/* People cards with photo, position and contact links.
+{{/* People cards with photo, position, contact links and research areas.
 
-     Data comes from data/bouncmpe/people/*.json, selected by tag, exactly as
-     under Hinode. Icons are inline SVG so they follow the text colour in both
-     light and dark mode. */}}
+     Data comes from data/bouncmpe/people/*.json, selected by tag. Icons are
+     inline SVG so they follow the text colour in both light and dark mode.
+
+     Research areas are the person's tags that appear in
+     data/bouncmpe/research_areas.yml; that file is both the label source and
+     the filter, since the same tag list also holds courses and roles. Switch
+     them off with `people.showResearchAreas: false` in params.yml. */}}
 {{- $tag := .Get "tag" -}}
 {{- $columns := .Get "cols" | default "2" -}}
+{{- $showAreas := site.Params.people.showResearchAreas | default false -}}
+{{- $areas := site.Data.bouncmpe.research_areas -}}
+{{- $lang := site.Language.Lang -}}
 
 {{- $members := slice -}}
 {{- range $key, $value := site.Data.bouncmpe.people -}}
@@ -22,15 +29,26 @@
     {{- with resources.Get $thumbnail -}}
       {{- $thumbnail = (.Fill $settings).RelPermalink -}}
     {{- end }}
-    <div class="boun-card boun-person boun-person-plain">
+    <div class="boun-person">
       <img class="boun-person-photo" src="{{ $thumbnail }}" alt="{{ .name }}">
-      <div style="min-width: 0;">
+      <div class="boun-person-body">
         <p class="boun-person-name">{{ .name | title }}</p>
         {{- with .position }}
           {{- $label := . | i18n -}}
           {{- if or (not $label) (hasPrefix $label "[i18n]") }}{{ $label = . }}{{ end }}
           <p class="boun-person-role">{{ $label | title }}</p>
         {{- end }}
+
+        {{- if $showAreas }}
+          {{- $tags := slice -}}
+          {{- range .tags }}{{ with index $areas . }}{{ $tags = $tags | append (index . $lang | default .en) }}{{ end }}{{ end }}
+          {{- with $tags }}
+            <p class="boun-person-areas">
+              {{- range $i, $area := . }}{{ if $i }}<span aria-hidden="true"> · </span>{{ end }}{{ $area }}{{ end -}}
+            </p>
+          {{- end }}
+        {{- end }}
+
         <div class="boun-person-links">
           {{- with .email }}
             <a href="mailto:{{ . }}" title="{{ . }}">

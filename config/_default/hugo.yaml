@@ -30,7 +30,7 @@ markup:
 # (News keeps its own layouts in layouts/news/.)
 cascade:
   - _target:
-      path: '{/undergraduate/**,/graduate/**,/about/**,/people/**,/courses/**,/research/**}'
+      path: '{/undergraduate/**,/graduate/**,/about/**,/courses/**,/research/**}'
     type: docs
 
 outputs:
