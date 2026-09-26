@@ -1,7 +1,6 @@
 ---
 title: Çift Ana Dal Programları
 description: Boğaziçi Üniversitesi Çift Ana Dal Programları
-metadata: none
 weight: 4
 ---
 

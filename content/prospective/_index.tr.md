@@ -1,7 +1,6 @@
 ---
 title: Hoş Geldiniz!
 description: Boğaziçi Üniversitesi Bilgisayar Mühendisliği Bölümü'ne katılmak, Türkiye'nin en prestijli ve saygın akademik ailelerinden birinin parçası olmaktır.
-metadata: none
 card_links:
   - title: "#neden-bilgisayar"
     url: /prospective/#why-computer-eng

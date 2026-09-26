@@ -1,0 +1,77 @@
+{{/* Renders the `content_blocks` front matter used by the section landing pages
+     (About, Courses, People, Research).
+
+     These blocks are a leftover of the CloudCannon Bookshop setup that Hinode
+     dropped; keeping the renderer here means the content files did not have to
+     change for the move to Hextra. Two block types are used: `hero` (a heading
+     with optional intro text) and `articles` (a card grid of a section). */}}
+{{- $page := . -}}
+
+{{- range $page.Params.content_blocks -}}
+  {{- $block := . -}}
+  {{- $name := index $block "_bookshop_name" -}}
+
+  {{- if eq $name "hero" -}}
+    {{- $heading := index $block "heading" | default dict -}}
+    <header style="margin-bottom: 2.5rem;">
+      <h1 class="boun-section-title" style="font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 1rem;">
+        {{ index $heading "title" | default $page.Title }}
+      </h1>
+      {{- with index $heading "content" }}
+        <p class="boun-card-text" style="max-width: 60rem; font-size: 1rem;">{{ . }}</p>
+      {{- end }}
+    </header>
+  {{- end -}}
+
+  {{- if eq $name "articles" -}}
+    {{- $input := index $block "input" | default dict -}}
+    {{- $section := index $input "section" | default $page.Section -}}
+    {{- $sort := index $input "sort" | default "date" -}}
+    {{- $reverse := index $input "reverse" | default false -}}
+    {{- $cols := index $block "cols" | default 3 -}}
+    {{- $limit := index $block "limit" | default 0 -}}
+    {{- $heading := index $block "heading" | default dict -}}
+
+    {{- $pages := where site.RegularPages "Section" $section -}}
+    {{- $pages = where $pages "Lang" $page.Lang -}}
+
+    {{- if eq $sort "title" -}}
+      {{- $pages = $pages.ByTitle -}}
+    {{- else if eq $sort "weight" -}}
+      {{- $pages = $pages.ByWeight -}}
+    {{- else -}}
+      {{- $pages = $pages.ByDate -}}
+    {{- end -}}
+    {{- if $reverse }}{{ $pages = $pages.Reverse }}{{ end -}}
+
+    {{/* The courses index paginates (16 per page); everything else takes a
+         straight limit, if any. */}}
+    {{- $paginate := index $block "paginate" | default false -}}
+    {{- $paginator := "" -}}
+    {{- if $paginate -}}
+      {{- $paginator = cond (gt $limit 0) ($page.Paginate $pages $limit) ($page.Paginate $pages) -}}
+      {{- $pages = $paginator.Pages -}}
+    {{- else if gt $limit 0 -}}
+      {{- $pages = first $limit $pages -}}
+    {{- end -}}
+
+    {{- if $pages }}
+      {{- with index $heading "title" }}
+        <h2 class="boun-section-title" style="font-size: 1.75rem; margin-top: 2.5rem;">{{ . }}</h2>
+      {{- end }}
+      <div class="boun-grid boun-grid-uniform boun-grid-{{ $cols }}" style="margin-bottom: 3rem;">
+        {{- range $pages }}
+          <a class="boun-card boun-index-card" href="{{ .RelPermalink }}">
+            <h3 class="boun-card-title">{{ .Title }}</h3>
+            {{- with .Params.description }}<p class="boun-card-text">{{ . }}</p>{{ end }}
+          </a>
+        {{- end }}
+      </div>
+      {{- with $paginator }}
+        {{- if gt .TotalPages 1 }}
+          <div style="margin-bottom: 3rem;">{{ partial "components/blog-pager.html" . }}</div>
+        {{- end }}
+      {{- end }}
+    {{- end }}
+  {{- end -}}
+{{- end -}}

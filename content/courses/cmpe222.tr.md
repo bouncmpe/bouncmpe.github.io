@@ -1,7 +1,6 @@
 ---
 title: CMPE222
 description: Veritabanı Sistemlerine Giriş
-metadata: none
 # thumbnail: https://picsum.photos/seed/cmpe222/1400
 aliases:
   - undergraduate/courses/cmpe222

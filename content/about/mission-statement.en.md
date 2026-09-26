@@ -1,7 +1,6 @@
 ---
 title: Mission Statements
 description: University, Faculty, and Department Mission Statements
-metadata: none
 weight: 1
 ---
 

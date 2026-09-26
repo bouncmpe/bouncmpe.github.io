@@ -1,7 +1,6 @@
 ---
 title: CMPE476
 description: Distributed Systems
-metadata: none
 # thumbnail: https://picsum.photos/seed/cmpe476/1400
 aliases:
   - undergraduate/courses/cmpe476

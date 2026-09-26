@@ -1,7 +1,6 @@
 ---
 title: CMPE480
 description: Yapay Zekaya Giriş
-metadata: none
 # thumbnail: https://picsum.photos/seed/cmpe480/1400
 aliases:
   - undergraduate/courses/cmpe480

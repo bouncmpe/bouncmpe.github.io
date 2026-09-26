@@ -1,7 +1,6 @@
 ---
 title: CMPE470
 description: Computer Performance Evaluation
-metadata: none
 # thumbnail: https://picsum.photos/seed/cmpe470/1400
 aliases:
   - undergraduate/courses/cmpe470

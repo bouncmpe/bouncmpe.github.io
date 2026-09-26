@@ -1,0 +1,11 @@
+{{/* Hinode's `card`, used inside `card-group`. Overrides Hextra's own `card`
+     shortcode, which this site's content does not use. The `icon` argument
+     (Font Awesome under Hinode) is accepted and ignored. */}}
+{{- $title := .Get "title" -}}
+{{- $href := .Get "href" -}}
+{{- $tag := cond (ne $href nil) "a" "div" -}}
+<div class="boun-card boun-index-card">
+  {{- with $title }}<h3 class="boun-card-title" style="margin-bottom: 0.5rem;">{{ . }}</h3>{{ end }}
+  <div class="boun-card-text">{{ .Inner | markdownify }}</div>
+  {{- with $href }}<p style="margin: 0.75rem 0 0;"><a class="boun-tag" href="{{ . }}">→</a></p>{{ end }}
+</div>

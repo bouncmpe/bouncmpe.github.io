@@ -1,6 +1,5 @@
 ---
 type: news
-layout: spring-2026-graduation-projects
 title: Computer Engineering Seniors Showcase 2026 Spring Graduation Projects
 date: 2026-06-11
 thumbnail: uploads/cmpe491-492.jpg

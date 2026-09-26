@@ -1,7 +1,6 @@
 ---
 title: CMPE260
 description: Principles of Programming Languages
-metadata: none
 # thumbnail: https://picsum.photos/seed/cmpe260_/1400
 aliases:
   - undergraduate/courses/cmpe260

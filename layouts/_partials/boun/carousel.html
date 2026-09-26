@@ -1,0 +1,99 @@
+{{/* Featured news carousel.
+
+     Hextra ships no carousel component, so this is a small self-contained one:
+     a scroll-snap track (which works on its own if scripting is unavailable)
+     plus the arrows, dots and autoplay wired up by the inline script below.
+
+     Slides are the news posts with `featured: true` in their front matter. */}}
+{{- $featured := where (where site.RegularPages.ByDate.Reverse "Section" "news") "Params.featured" true -}}
+{{- with $featured }}
+  {{- $settings := site.Params.newsroom.image_settings.hero | default "1400x700 webp q90 Smart" -}}
+
+  <section class="boun-carousel" aria-roledescription="carousel" aria-label="{{ i18n "featured-stories" | title }}">
+    <div class="boun-carousel-track" tabindex="0">
+      {{- range $index, $page := . }}
+        {{- $thumbnail := "" -}}
+        {{- with $page.Params.thumbnail -}}
+          {{- if reflect.IsMap . -}}{{- $thumbnail = .url -}}{{- else -}}{{- $thumbnail = . -}}{{- end -}}
+        {{- end -}}
+        {{- $src := "" -}}
+        {{- if $thumbnail -}}
+          {{- if hasPrefix $thumbnail "http" -}}
+            {{- with try (resources.GetRemote $thumbnail) -}}
+              {{- with .Value -}}{{- $src = (.Fill $settings).RelPermalink -}}{{- end -}}
+            {{- end -}}
+          {{- else -}}
+            {{- with resources.Get $thumbnail -}}{{- $src = (.Fill $settings).RelPermalink -}}{{- end -}}
+          {{- end -}}
+        {{- end -}}
+
+        <a class="boun-carousel-slide" href="{{ $page.RelPermalink }}"
+           role="group" aria-roledescription="slide"
+           aria-label="{{ add $index 1 }} / {{ len $featured }}">
+          {{- with $src }}
+            <img src="{{ . }}" alt="{{ $page.Title }}"{{ if gt $index 0 }} loading="lazy"{{ end }}>
+          {{- end }}
+          <span class="boun-carousel-caption">{{ $page.Title }}</span>
+        </a>
+      {{- end }}
+    </div>
+
+    <button class="boun-carousel-arrow boun-carousel-prev" type="button" aria-label="{{ i18n "previous" | default "Previous" }}">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <button class="boun-carousel-arrow boun-carousel-next" type="button" aria-label="{{ i18n "next" | default "Next" }}">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+
+    <div class="boun-carousel-dots" role="tablist">
+      {{- range $index, $page := . }}
+        <button type="button" role="tab" aria-label="{{ add $index 1 }}"{{ if eq $index 0 }} aria-selected="true"{{ end }}></button>
+      {{- end }}
+    </div>
+  </section>
+
+  <script>
+    (function () {
+      var root = document.currentScript.previousElementSibling;
+      var track = root.querySelector(".boun-carousel-track");
+      var dots = Array.prototype.slice.call(root.querySelectorAll(".boun-carousel-dots button"));
+      var slides = track.children.length;
+      var calm = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+      function index() {
+        return Math.round(track.scrollLeft / track.clientWidth);
+      }
+      function go(i, smooth) {
+        track.scrollTo({
+          left: ((i % slides) + slides) % slides * track.clientWidth,
+          behavior: smooth && !calm.matches ? "smooth" : "auto"
+        });
+      }
+      function sync() {
+        var at = index();
+        dots.forEach(function (dot, i) {
+          if (i === at) { dot.setAttribute("aria-selected", "true"); }
+          else { dot.removeAttribute("aria-selected"); }
+        });
+      }
+
+      root.querySelector(".boun-carousel-prev").addEventListener("click", function () { go(index() - 1, true); });
+      root.querySelector(".boun-carousel-next").addEventListener("click", function () { go(index() + 1, true); });
+      dots.forEach(function (dot, i) { dot.addEventListener("click", function () { go(i, true); }); });
+      track.addEventListener("scroll", function () { window.requestAnimationFrame(sync); }, { passive: true });
+      window.addEventListener("resize", function () { go(index(), false); });
+
+      /* Advance on its own, but never while someone is looking at or using it. */
+      var timer = null;
+      function play() {
+        if (calm.matches || timer) return;
+        timer = setInterval(function () { go(index() + 1, true); }, 7000);
+      }
+      function pause() { clearInterval(timer); timer = null; }
+      ["pointerenter", "focusin"].forEach(function (e) { root.addEventListener(e, pause); });
+      ["pointerleave", "focusout"].forEach(function (e) { root.addEventListener(e, play); });
+      document.addEventListener("visibilitychange", function () { document.hidden ? pause() : play(); });
+      play();
+    })();
+  </script>
+{{- end -}}

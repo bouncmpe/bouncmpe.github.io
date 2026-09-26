@@ -1,7 +1,6 @@
 ---
 title: CMPE362
 description: Bilgisayar Mühendisleri için Sinyal İşlemeye Giriş
-metadata: none
 # thumbnail: https://picsum.photos/seed/cmpe362/1400
 aliases:
   - undergraduate/courses/cmpe362

@@ -1,7 +1,6 @@
 ---
 title: CMPE140
 description: Introduction to Computing for Economics and Management
-metadata: none
 # thumbnail:
 #   url: https://picsum.photos/seed/cmpe140/1400
 aliases:

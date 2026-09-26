@@ -2,7 +2,6 @@
 title: Academic Integrity
 description: Procedure against Cheating Behavior
 weight: 8
-metadata: none
 ---
 
 ## Definitions

@@ -2,7 +2,6 @@
 title: Akademik Danışmanlar
 description: Akademik Danışmanlar
 weight: 5
-metadata: none
 ---
 
 ## Hazırlık

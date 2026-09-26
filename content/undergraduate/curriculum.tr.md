@@ -1,7 +1,6 @@
 ---
 title: Öğretim Programı 2025
 description: Bilgisayar Mühendisliği Bölümü’nün 2025 yılında uygulamaya başladığı yeni öğretim programı, bilgisayar bilimi ve mühendisliğinin temel alanlarını güçlendirmeyi, güncel teknolojik gelişmeleri müfredata yansıtmayı ve öğrencilere ileri düzey teorik bilgi ile uygulamalı yetkinlikler kazandırmayı amaçlayan kapsamlı ve ileriye dönük bir akademik programdır.
-metadata: none
 toc: false
 weight: 2
 ---

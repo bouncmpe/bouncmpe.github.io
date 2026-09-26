@@ -1,218 +1,103 @@
-homepage:
-  other: "anasayfa"
+# Bölüm metinleri ve Hextra arayüz metinlerinin Türkçesi.
+# (Hextra Türkçe bir çeviri dosyasıyla gelmiyor; aşağıdaki ikinci bölüm onu
+# tamamlar. Karşılığı yazılmayan anahtarlar temanın İngilizce metnine düşer.)
 
-cmpe-long:
-  other: bilgisayar mühendisliği bölümü
-
-copyright:
-  other: telif hakkı
-
-date:
-  other: tarih
-
-postedOnDate:
-  other: "{{ . }} tarihinde yayımlandı"
-
-start-time:
-  other: başlama vakti
-
-duration:
-  other: süre
-
-news:
-  other: haberler
-
-upcoming:
-  other: "yakında"
-
-latest-news:
-  other: en yeni haberler
-
-upcoming-events:
-  other: gelecek etkinlikler
-
-past-events:
-  other: geçmiş etkinlikler
-
+# Ana sayfa ve haberler
 latest-stories:
   other: en yeni haberler
-
-who:
-  other: kim
-
-when:
-  other: ne zaman
-
-where:
-  other: nerede
-
-links:
-  other: bağlantılar
-
-phd-candidate:
-  other: doktora adayı
-
-thesis-defender:
-  other: tez sahibi
-
-add-calendar:
-  other: "takvimime ekle"
-
-edit-this-content:
-  other: bu içeriği düzenle
-
-on-this-page:
-  other: içindekiler
-
-more-news:
-  other: diğer haberler
-
-phd-thesis-defense:
-  other: doktora tez savunması
-
-ms-thesis-defense:
-  other: YL tez savunması
-
-seminar:
-  other: seminer
-
-special-event:
-  other: özel etkinlik
-
-read-full-text:
-  other: "hepsini oku"
-
+featured-stories:
+  other: öne çıkan haberler
+all-stories:
+  other: tüm haberler
+upcoming-events:
+  other: gelecek etkinlikler
+past-events:
+  other: geçmiş etkinlikler
+no-upcoming-events:
+  other: Şu anda planlanmış bir etkinlik bulunmuyor.
 minutesShort:
   other: dk
 
-read:
-  other: okuma
-
-words:
-  other: kelime
-
-go-to-event-page:
-  other: "etkinlik detayları"
-
-full-professor:
-  other: "profesör"
-
-associate-professor:
-  other: "doçent"
-
-assistant-professor:
-  other: "doktor öğretim üyesi"
-
-teaching-assistant:
-  other: öğretim görevlisi
-
-research-assistant:
-  other: araştırma görevlisi
-
-doctor:
-  other: doktor
-
-faculty-members:
-  other: tam zamanlı öğretim üyeleri
-
-emeritus-members:
-  other: emeritus öğretim üyeleri
-
-other-faculty-members:
-  other: diğer öğretim üyeleri
-
-former-faculty-members:
-  other: geçmiş öğretim üyeleri
-
-building-staff:
-  other: bina görevlisi
-
-technical-staff:
-  other: teknik görevli
-
-building-head:
-  other: bina amiri
-
-under-construction-warning:
-  other: Bu sayfa yapım aşamasındadır. Sayfadaki bilgilerde hatalar olabilir.
-
-course-description:
-  other: ders tanımı
-
-course-prerequisites:
-  other: önkoşul dersleri
-
-course-no-prerequsites:
-  other: önkoşul yok
-
-course-hours:
-  other: katalog saatleri
-
-course-credits:
-  other: ders kredisi
-
-course-ects:
-  other: AKTS kredisi
-
-home:
-  other: Anasayfa
-
-long_month_1:
-  other: ocak
-long_month_2:
-  other: şubat
-long_month_3:
-  other: mart
-long_month_4:
-  other: nisan
-long_month_5:
-  other: mayıs
-long_month_6:
-  other: haziran
-long_month_7:
-  other: temmuz
-long_month_8:
-  other: ağustos
-long_month_9:
-  other: eylül
-long_month_10:
-  other: ekim
-long_month_11:
-  other: kasım
-long_month_12:
-  other: aralık
-
-languageSwitcherLabel:
-  other: Dil Seçimi
-toc:
-  other: İçindekiler
-
+# Alt bilgi
 contact-us:
   other: İletişim
-
 connect-with-us:
   other: Bizi Takip Edin
-
 social-networks-text:
   other: "Sosyal ağlarda bizi takip edin ve iletişimde kalın."
-
 phone:
   other: Telefon
-
 fax:
   other: Faks
 
-toggleMainNav:
-  other: "Ana menüyü aç/kapat"
+# Etkinlik türleri (content/events/*/index.md `type`)
+phd-thesis-defense:
+  other: doktora tez savunması
+ms-thesis-defense:
+  other: YL tez savunması
+seminar:
+  other: seminer
+special-event:
+  other: özel etkinlik
 
-ui_search:
-  other: Ara
+# Unvanlar (data/bouncmpe/people/*.json `position`)
+full-professor:
+  other: profesör
+associate-professor:
+  other: doçent
+assistant-professor:
+  other: doktor öğretim üyesi
+teaching-assistant:
+  other: öğretim görevlisi
+doctor:
+  other: doktor
+building-head:
+  other: bina amiri
+building-staff:
+  other: bina görevlisi
+technical-staff:
+  other: teknik görevli
+coordinator:
+  other: koordinatör
+secretary:
+  other: sekreter
+system-admin:
+  other: sistem yöneticisi
+web-admin:
+  other: web yöneticisi
 
-ui_no_results:
-  other: Sonuç bulunamadı
-
-copiedToClipboard:
-  other: Panoya kopyalandı
-
-close:
-  other: Kapat
+# Hextra arayüz metinleri
+backToTop: "Yukarı çık"
+changeLanguage: "Dili değiştir"
+changeTheme: "Temayı değiştir"
+closeBanner: "Duyuruyu kapat"
+copied: "Kopyalandı!"
+copy: "Kopyala"
+copyAsMarkdown: "Markdown olarak kopyala"
+copyCode: "Kodu kopyala"
+copyPage: "Sayfayı kopyala"
+dark: "Koyu"
+editThisPage: "Bu sayfayı GitHub'da düzenle →"
+lastUpdated: "Son güncelleme"
+light: "Açık"
+menu: "Menü"
+mermaidDiagram: "Diyagram"
+next: "Sonraki"
+noResultsFound: "Sonuç bulunamadı."
+onThisPage: "Bu sayfada"
+pdfViewer: "PDF görüntüleyici"
+permalinkLabel: "Bu bölüme kalıcı bağlantı"
+playbackTime: "Oynatma süresi"
+previous: "Önceki"
+readMore: "Devamını oku →"
+resultsFound: "%d sonuç bulundu"
+searchPlaceholder: "Ara..."
+searchResults: "Arama sonuçları"
+skipToContent: "İçeriğe geç"
+system: "Sistem"
+tableOfContents: "İçindekiler"
+tags: "Etiketler"
+terminalRecording: "Terminal kaydı"
+togglePageContextMenu: "Sayfa menüsünü aç/kapat"
+toggleSection: "Bölümü aç/kapat"
+viewAsMarkdown: "Markdown olarak görüntüle"

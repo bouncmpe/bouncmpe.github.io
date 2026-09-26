@@ -1,7 +1,6 @@
 ---
 title: CMPE443
 description: Principles of Embedded Systems Design
-metadata: none
 # thumbnail: https://picsum.photos/seed/cmpe443/1400
 aliases:
   - undergraduate/courses/cmpe443

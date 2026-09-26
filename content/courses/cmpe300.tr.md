@@ -1,7 +1,6 @@
 ---
 title: CMPE300
 description: Algoritma Analizi
-metadata: none
 # thumbnail: https://picsum.photos/seed/cmpe300/1400
 aliases:
   - undergraduate/courses/cmpe300

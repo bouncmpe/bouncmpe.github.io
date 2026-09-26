@@ -1,54 +1,79 @@
-main:
-  endorse: false
-  footerBelowFold: true
-  colorMode:
-    enabled: false
-    modes: ["light"]
-  breakpoint: "md"
+# ---------------------------------------------------------------------------
+# Hextra theme parameters
+# ---------------------------------------------------------------------------
 
-favicon:
-  logo: /images/logo.png
+navbar:
+  displayTitle: true
+  displayLogo: true
+  logo:
+    # Served from static/ (Hextra links the logo directly, it does not run it
+    # through Hugo's asset pipeline).
+    path: images/logo.png
+    width: 28
+    height: 28
+  width: wide
 
-navigation:
-  logo: ""
-  size: xl
-  #color: primary
-  # horizontal: true
-  toc: true
-  sidebar: true
-  breadcrumb: false
+page:
+  width: wide
 
-sharing:
-  enabled: false
-  webshare: false
+footer:
+  enable: true
+  # The copyright line is rendered by layouts/_partials/custom/footer.html from
+  # site.Copyright, which is where the `{year}` placeholder gets expanded.
+  displayCopyright: false
+  displayPoweredBy: false
+  width: wide
 
-# Boğaziçi Dark Blue: "#1e4a8b"
-# Boğaziçi Light Blue: "#8cc8ea"
+theme:
+  # The site was light-only under Hinode; Hextra ships a dark mode, so the
+  # toggle is offered but the site still opens light.
+  default: light
+  displayToggle: true
 
-style:
-  primary: "#1e4a8b"
-  fontSizeBase: "1.1rem"
-  themeFont: "Open Sans"
-  themeFontPath: "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400..800;1,400..800&display=swap"
+search:
+  enable: true
+  type: flexsearch
+  flexsearch:
+    index: content
+    tokenize: forward
 
-banner:
+# No "Last updated on ..." line anywhere on the site.
+displayUpdatedDate: false
+dateFormat: "2 January 2006"
+
+highlight:
+  copy:
+    enable: true
+    display: hover
+
+# ---------------------------------------------------------------------------
+# Department parameters (carried over from the Hinode setup)
+# ---------------------------------------------------------------------------
+
+# Named `welcomeBanner` because Hextra uses `params.banner` for its own
+# site-wide announcement bar.
+welcomeBanner:
   enabled: true
-  partial: prospective
 
 eventbar:
   enabled: true
-  limit: 3
-  layout: card
+  limit: 6
 
 newsroom:
-  enabled: true
-  limit: 3
-  layout: card
+  grid_limit: 6
   image_settings:
     hero: "1400x700 webp q90 Smart"
-    quality: 90
+    card: "800x450 webp q85 Smart"
 
-social:
+people:
+  image_settings: "500x500 webp q90 Top"
+  # Research areas under each name on the people pages. The labels live in
+  # data/bouncmpe/research_areas.yml; set this to false to hide them.
+  showResearchAreas: false
+
+# Renamed from `social`: Hextra reserves `params.social` for its Open Graph
+# metadata (it expects a map, not a list of links).
+socialLinks:
   - name: "Twitter"
     icon: "twitter"
     url: "https://twitter.com/bogazici_cmpe"
@@ -68,8 +93,3 @@ contact:
     tr: "Bilgisayar Mühendisliği Bölümü, Boğaziçi Üniversitesi, 34342 Bebek, İstanbul, Türkiye"
   phone: "+90 212 359 45 23/24"
   fax: "+90 212 2872461"
-
-
-github:
-  repo: "https://github.com/bouncmpe/bouncmpe.github.io"
-  branch: "main"

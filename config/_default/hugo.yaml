@@ -5,21 +5,35 @@ defaultContentLanguage: en
 defaultContentLanguageInSubdir: false
 
 enableRobotsTXT: true
-enableInlineShortcodes: true
 enableGitInfo: true
-enableMissingTranslationPlaceholders: true
 
-externalLinks:
-  cue: true
-  tab: true
-
-pagination: 
-  pagerSize: 16
-timeout: 300s
+pagination:
+  pagerSize: 12
 
 cleanDestinationDir: true
- 
+
+# Hextra renders its components from raw HTML in shortcodes and partials.
 markup:
   goldmark:
+    renderer:
+      unsafe: true
     extensions:
       footnote: true
+  highlight:
+    noClasses: false
+  tableOfContents:
+    startLevel: 2
+    endLevel: 3
+
+# Hextra shows nested navigation in a sidebar rather than in navbar dropdowns,
+# so the deeper sections opt into the docs layout here instead of in content.
+# (News keeps its own layouts in layouts/news/.)
+cascade:
+  - _target:
+      path: '{/undergraduate/**,/graduate/**,/about/**,/courses/**,/research/**}'
+    type: docs
+
+outputs:
+  home: [HTML, RSS]
+  section: [HTML, RSS]
+  page: [HTML]

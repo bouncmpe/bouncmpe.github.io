@@ -1,7 +1,6 @@
 ---
 title: CMPE150
 description: Bilgi İşleme Giriş
-metadata: none
 # thumbnail: https://picsum.photos/seed/cmpe150/1400
 aliases:
   - undergraduate/courses/cmpe150

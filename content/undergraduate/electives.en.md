@@ -1,7 +1,6 @@
 ---
 title: Elective Courses
 description:
-metadata: none
 weight: 3
 ---
 
