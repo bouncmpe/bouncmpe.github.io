@@ -18,7 +18,7 @@ kabul edildikten sonra öğrenci, yüksek lisans tezine başlar. {{< /card >}}
 
 ## Başvuru
 
-- Boğaziçi Üniversitesi'ndeki lisansüstü programlara (yüksek lisans veya doktora) başvurular elektronik ortamda alınır; başka bir başvuru kanalı bulunmamaktadır. Tüm adayların şu bağlantı üzerinden başvurmaları gerekir: [http://adaylar.boun.edu.tr/tr-TR/Page/Admissions/Graduate/All](http://adaylar.boun.edu.tr/tr-TR/Page/Admissions/Graduate/All)
+- Boğaziçi Üniversitesi'ndeki lisansüstü programlara (yüksek lisans veya doktora) başvurular elektronik ortamda alınır; başka bir başvuru kanalı bulunmamaktadır. Tüm adayların şu bağlantı üzerinden başvurmaları gerekir: [https://adaylar.bogazici.edu.tr/tr-TR/Sayfa/Basvuru/Lisansustu/Tum](https://adaylar.bogazici.edu.tr/tr-TR/Sayfa/Basvuru/Lisansustu/Tum)
 
 - Gerekli belge ve sertifikalar, kontenjanlar ve önemli tarihler gibi başvuru sürecine dair en güncel bilgiler yukarıdaki sayfada düzenli olarak duyurulur. Adayın durumuna göre farklılıklar olabileceğinden, adayların bu bilgileri dikkatle incelemeleri ve kendi durumlarına özgü koşulları belirlemeleri önerilir. Zorunlu sertifikaları (doktora için GRE, TOEFL, ÜDS, YDS gibi) zamanında edinebilmek için önceki başvuru dönemlerini inceleyip planlamanızı erkenden yapmanız önemlidir. Pek çok sınav için kaydın haftalar öncesinden yapılması gerektiğini ve sonuçların bir gecikmeyle açıklandığını unutmayın.
 
@@ -62,7 +62,7 @@ kabul edildikten sonra öğrenci, yüksek lisans tezine başlar. {{< /card >}}
 
 ## Kayıt
 
-- Kayıt süreci ve **ek** olarak istenen belgeler şu adreste duyurulur: [http://ogrenciler.boun.edu.tr/Home/Content/universityregistration](http://ogrenciler.boun.edu.tr/Home/Content/universityregistration)
+- Kayıt süreci ve **ek** olarak istenen belgeler şu adreste duyurulur: [https://ogrenciler.bogazici.edu.tr/tr/pages/universiteye-kayit/7900](https://ogrenciler.bogazici.edu.tr/tr/pages/universiteye-kayit/7900)
 
 - Kayıt tarihleri Fen Bilimleri Enstitüsü tarafından resmî olarak duyurulur; ayrıca akademik takvimde ve üniversitenin kayıt sayfalarında yer alır.
 
@@ -72,11 +72,11 @@ kabul edildikten sonra öğrenci, yüksek lisans tezine başlar. {{< /card >}}
 
 - Boğaziçi Üniversitesi'nde şartlı kayıt mümkün değildir; tüm belgelerin Kayıt İşleri'ne teslim edilmesi gerekir:
 
-  - [http://adaylar.boun.edu.tr/tr-TR/Page/ApplicationDocuments/Graduate](http://adaylar.boun.edu.tr/tr-TR/Page/ApplicationDocuments/Graduate)
+  - [https://adaylar.bogazici.edu.tr/tr-TR/Sayfa/BasvuruBelge/Lisansustu](https://adaylar.bogazici.edu.tr/tr-TR/Sayfa/BasvuruBelge/Lisansustu)
 
 - Üniversiteye kayıt yaptırıldıktan sonra, öğrenciyi kabul eden öğretim üyesi akademik danışman ve tez danışmanı olarak atanır.
 
-- Öğrencinin her akademik dönemin başında kayıt yaptırması gerekir. Kayıt işlemi OBIKAS kayıt sistemi üzerinden çevrim içi yapılır. Yeni başlıyorsanız bu [kılavuzu](https://registration.boun.edu.tr/ann/User_Guide/Student_Course_List_Preparation_EN.pdf) izleyebilirsiniz.
+- Öğrencinin her akademik dönemin başında kayıt yaptırması gerekir. Kayıt işlemi OBIKAS kayıt sistemi üzerinden çevrim içi yapılır. Yeni başlıyorsanız bu [kılavuzu](https://registration.boun.edu.tr/ann/User_Guide/Student_Course_List_Preparation_TR.pdf) izleyebilirsiniz.
 
 - Dönem kaydının tamamlanmasında doğru dönem türünün seçilmesi çok önemlidir. Bu seçim NORMAL, REMEDIAL, THESIS gibi seçenekler arasından yapılır.
 

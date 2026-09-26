@@ -62,7 +62,7 @@ thesis proposal is accepted, the student starts the PhD thesis. {{< /card >}}
 
 ## Registration
 
-- Registration process and **additional** required documents are announced on this website: [http://ogrenciler.boun.edu.tr/Home/Content/universityregistration](http://ogrenciler.boun.edu.tr/Home/Content/universityregistration)
+- Registration process and **additional** required documents are announced on this website: [https://ogrenciler.bogazici.edu.tr/en/pages/university-registration/8075](https://ogrenciler.bogazici.edu.tr/en/pages/university-registration/8075)
 
 - Registration dates are officially announced by the Institute of Graduate Studies in Science and Engineering and also in the academic calendar and the registration pages of the university.
 
