@@ -1,0 +1,29 @@
+{{ define "main" }}
+  {{- $pages := .RegularPagesRecursive.ByDate.Reverse -}}
+  {{- $paginator := .Paginate $pages -}}
+
+  {{/* Hextra's mobile menu lives inside the sidebar partial, and the hamburger
+       button toggles it. `disableSidebar` keeps it out of the way on desktop
+       while still rendering the menu for phones. */}}
+  {{ partial "sidebar.html" (dict "context" . "disableSidebar" true) }}
+
+  <main id="content" class="boun-wrap" style="padding-block: 2.5rem 3rem;">
+    {{- if .Title }}
+      <h1 class="boun-section-title" style="font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 2rem;">{{ .Title }}</h1>
+    {{- end }}
+    {{- with .Content }}<div class="content">{{ . }}</div>{{ end }}
+
+    <div class="boun-grid boun-grid-3">
+      {{- range $index, $page := $paginator.Pages }}
+        {{/* The first row is above the fold on most screens. */}}
+        {{ partial "boun/news-card.html" (dict "page" $page "showText" true "showDate" true "lazy" (ge $index 3)) }}
+      {{- end }}
+    </div>
+
+    {{- if gt $paginator.TotalPages 1 }}
+      <div style="margin-top: 2.5rem;">
+        {{ partial "components/blog-pager.html" $paginator }}
+      </div>
+    {{- end }}
+  </main>
+{{ end }}

@@ -2,7 +2,6 @@
 title: Bölüm Tarihçesi
 description: Kuruluşundan Bugüne Bilgisayar Mühendisliği Bölümü
 weight: 2
-metadata: none
 ---
 
 1976

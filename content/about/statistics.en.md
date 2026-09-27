@@ -2,7 +2,6 @@
 title: Department Statistics
 description: Enrollment and Graduation Statistics
 weight: 3
-metadata: none
 ---
 
 ## Latest Enrollment Data

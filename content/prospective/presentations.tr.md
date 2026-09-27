@@ -1,7 +1,6 @@
 ---
 title: Tanıtım Günleri
 description: Üniversitemizde her yıl Temmuz ayında Tanıtım Günleri düzenlenmektedir. Bölüm Tanıtım Programları ile ilgili ayrıntılı bilgi için üniversitemiz tanıtım sayfasını ziyaret edebilirsiniz.
-metadata: none
 weight: 1
 ---
 

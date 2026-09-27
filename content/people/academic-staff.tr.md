@@ -1,7 +1,6 @@
 ---
 title: Akademik Personel
 description: Bilgisayar Mühendisliği Asistanları
-metadata: none
 weight: 22
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: CMPE491-492
 description: Proje
-metadata: none
 # thumbnail: https://picsum.photos/seed/cmpe492/1400
 aliases:
   - undergraduate/courses/cmpe492

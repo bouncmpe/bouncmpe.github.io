@@ -1,7 +1,6 @@
 ---
 title: CMPE462
 description: Machine Learning
-metadata: none
 # thumbnail: https://picsum.photos/seed/cmpe462/1400
 aliases:
   - undergraduate/courses/cmpe462

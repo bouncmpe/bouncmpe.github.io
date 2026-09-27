@@ -1,7 +1,6 @@
 ---
 title: CMPE320
 description: Programlama Dillerinin Prensipleri
-metadata: none
 # thumbnail: https://picsum.photos/seed/cmpe320_/1400
 aliases:
   - undergraduate/courses/cmpe320

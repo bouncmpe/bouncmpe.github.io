@@ -1,7 +1,6 @@
 ---
 title: CMPE478
 description: Paralel İşlem Görme
-metadata: none
 # thumbnail: https://picsum.photos/seed/cmpe478/1400
 aliases:
   - undergraduate/courses/cmpe478

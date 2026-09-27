@@ -1,7 +1,6 @@
 ---
 title: CMPE321
 description: Veritabanı Sistemlerine Giriş
-metadata: none
 # thumbnail: https://picsum.photos/seed/cmpe321/1400
 aliases:
   - undergraduate/courses/cmpe321

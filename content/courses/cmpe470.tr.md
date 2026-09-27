@@ -1,7 +1,6 @@
 ---
 title: CMPE470
 description: Bilgisayar Performansı Değerlendirmesi
-metadata: none
 # thumbnail: https://picsum.photos/seed/cmpe470/1400
 aliases:
   - undergraduate/courses/cmpe470

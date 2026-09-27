@@ -1,7 +1,6 @@
 ---
 title: Senior Projects
 description: Computer Engineering Senior Projects
-metadata: none
 weight: 10
 ---
 

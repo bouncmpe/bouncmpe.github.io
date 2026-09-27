@@ -1,7 +1,6 @@
 ---
 title: Overview
 description: Computer Engineering Undergraduate Program
-metadata: none
 weight: 1
 ---
 

@@ -2,7 +2,6 @@
 title: İstatistikler
 description: Kayıt ve Mezuniyet İstatistikleri
 weight: 3
-metadata: none
 ---
 
 ## Güncel Kayıt Sayıları

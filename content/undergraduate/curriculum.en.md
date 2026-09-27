@@ -1,7 +1,6 @@
 ---
 title: Curriculum 2025
 description: The new curriculum of the Department of Computer Engineering is a comprehensive and forward-looking academic framework designed to reinforce the foundational areas of computer science and engineering, incorporate current technological advancements, and equip students with advanced theoretical knowledge and practical competencies.
-metadata: none
 toc: false
 weight: 2
 ---

@@ -1,0 +1,26 @@
+{{/* Name-only people cards: former members, advisory board, past course
+     assistants. Same data source as the `people` shortcode, without photos. */}}
+{{- $tag := .Get "tag" -}}
+{{- $columns := .Get "cols" | default "2" -}}
+
+{{- $members := slice -}}
+{{- range $key, $value := site.Data.bouncmpe.people -}}
+  {{- if intersect $value.tags (slice $tag) -}}
+    {{- $members = $members | append $value -}}
+  {{- end -}}
+{{- end -}}
+
+<div class="not-prose boun-grid boun-grid-{{ $columns }}" style="margin-block: 1.5rem;">
+  {{- range $members }}
+    <div class="boun-card boun-person-plain">
+      <p class="boun-person-name">{{ .name | title }}</p>
+      {{- with .position }}
+        {{/* Some entries carry a free-text title rather than a translation key,
+             and some carry none at all. */}}
+        {{- $label := . | i18n -}}
+        {{- if or (not $label) (hasPrefix $label "[i18n]") }}{{ $label = . }}{{ end }}
+        <p class="boun-person-role" style="margin-bottom: 0;">{{ $label | title }}</p>
+      {{- end }}
+    </div>
+  {{- end }}
+</div>

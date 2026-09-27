@@ -1,7 +1,6 @@
 ---
 title: Amaçlar
 description: Üniversite, Fakülte ve Bölüm Amaçları
-metadata: none
 weight: 1
 ---
 

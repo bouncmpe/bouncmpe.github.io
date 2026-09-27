@@ -1,7 +1,6 @@
 ---
 title: CMPE343
 description: Introduction to Probability and Statistics for Computer Engineers
-metadata: none
 # thumbnail: https://picsum.photos/seed/cmpe343/1400
 aliases:
   - undergraduate/courses/cmpe343

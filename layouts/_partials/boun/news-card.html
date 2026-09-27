@@ -1,0 +1,44 @@
+{{/* News card: thumbnail + title, optionally the description.
+
+     Thumbnails come from page front matter and may be a string, a map with a
+     `url` key, or a remote URL — all three shapes exist in content/news. */}}
+{{- $page := .page -}}
+{{- $showText := .showText | default false -}}
+{{- $showDate := .showDate | default false -}}
+{{- $lazy := .lazy | default false -}}
+
+{{- $thumbnail := "" -}}
+{{- with $page.Params.thumbnail -}}
+  {{- if reflect.IsMap . -}}
+    {{- $thumbnail = .url -}}
+  {{- else -}}
+    {{- $thumbnail = . -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $settings := site.Params.newsroom.image_settings.card | default "800x450 webp q85 Smart" -}}
+{{- $src := "" -}}
+{{- if $thumbnail -}}
+  {{- if hasPrefix $thumbnail "http" -}}
+    {{- with try (resources.GetRemote $thumbnail) -}}
+      {{- with .Value -}}{{- $src = (.Fill $settings).RelPermalink -}}{{- end -}}
+    {{- end -}}
+  {{- else -}}
+    {{- with resources.Get $thumbnail -}}{{- $src = (.Fill $settings).RelPermalink -}}{{- end -}}
+  {{- end -}}
+{{- end -}}
+
+<a class="boun-card" href="{{ $page.RelPermalink }}">
+  {{- with $src }}
+    <img class="boun-news-thumb" src="{{ . }}" alt="{{ $page.Title }}"{{ if $lazy }} loading="lazy"{{ end }}>
+  {{- end }}
+  <div class="boun-card-body">
+    {{- if $showDate }}
+      <span class="boun-card-meta">{{ partial "utils/format-date" $page.Date }}</span>
+    {{- end }}
+    <h3 class="boun-card-title">{{ $page.Title }}</h3>
+    {{- if $showText }}
+      {{- with $page.Params.description }}<p class="boun-card-text">{{ . }}</p>{{ end }}
+    {{- end }}
+  </div>
+</a>

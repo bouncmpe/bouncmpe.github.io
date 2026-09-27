@@ -1,0 +1,21 @@
+{{/* Event card for the home page rail. Mirrors the Hinode event card: kind of
+     event in the header, then speaker, title, time and place. */}}
+{{- $start := .Params.datetime | time.AsTime -}}
+
+<div class="boun-card boun-event">
+  <div class="boun-event-head">{{ i18n .Type | default .Type | upper }}</div>
+  <div class="boun-event-body">
+    {{- with .Params.name }}<p class="boun-event-name">{{ . }}</p>{{ end }}
+    <p class="boun-event-title">
+      {{- if .Content -}}
+        <a href="{{ .RelPermalink }}" style="color: inherit; text-decoration: none;">{{ title .Title }}</a>
+      {{- else -}}
+        {{ title .Title }}
+      {{- end -}}
+    </p>
+    <div class="boun-event-meta">
+      <div>{{ $start | time.Format ":date_long" }} {{ $start | time.Format ":time_short" }}</div>
+      {{- with .Params.location }}<div>{{ . }}</div>{{ end }}
+    </div>
+  </div>
+</div>

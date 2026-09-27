@@ -1,7 +1,6 @@
 ---
 title: CMPE352
 description: Yazılım Mühendisliğinin Temelleri
-metadata: none
 # thumbnail: https://picsum.photos/seed/cmpe352/1400
 aliases:
   - undergraduate/courses/cmpe352

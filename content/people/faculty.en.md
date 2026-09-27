@@ -1,7 +1,6 @@
 ---
 title: Faculty
 description: Computer Engineering Faculty Members
-metadata: none
 weight: 21
 ---
 

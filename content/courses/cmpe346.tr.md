@@ -1,7 +1,6 @@
 ---
 title: CMPE346
 description: Gömülü Sistem Tasarım Temelleri
-metadata: none
 # thumbnail: https://picsum.photos/seed/cmpe346/1400
 aliases:
   - undergraduate/courses/cmpe346

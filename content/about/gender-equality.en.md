@@ -2,7 +2,6 @@
 title: Gender Equality
 description: Boğaziçi University Gender Equality Plan
 weight: 7
-metadata: none
 ---
 
 Boğaziçi University aims to advance gender equality in research, academia, and

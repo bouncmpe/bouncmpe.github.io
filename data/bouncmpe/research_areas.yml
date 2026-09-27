@@ -1,0 +1,49 @@
+# Research areas shown on the faculty cards.
+#
+# A person's areas come from their `tags` in data/bouncmpe/people/*.json — the
+# same tags also carry courses, roles and groups, so only the keys listed here
+# are treated as research areas. Adding an area is a matter of adding its key
+# and labels below; removing one hides it everywhere.
+#
+# The whole feature is switched off with `people.showResearchAreas: false`
+# in config/_default/params.yml.
+
+artificialintelligence:
+  en: Artificial Intelligence
+  tr: Yapay Zekâ
+bioinformatics:
+  en: Bioinformatics
+  tr: Biyoenformatik
+computationlanguage:
+  en: Computation and Language
+  tr: Hesaplama ve Dil
+computersociety:
+  en: Computers and Society
+  tr: Bilgisayar ve Toplum
+computersystems:
+  en: Computer Systems
+  tr: Bilgisayar Sistemleri
+computervisionpatternrecognition:
+  en: Computer Vision and Pattern Recognition
+  tr: Bilgisayarlı Görü ve Örüntü Tanıma
+machinelearning:
+  en: Machine Learning
+  tr: Makine Öğrenmesi
+networkinginternetarchitecture:
+  en: Networking and Internet Architecture
+  tr: Ağlar ve İnternet Mimarisi
+paralleldistributedcloud:
+  en: Parallel, Distributed and Cloud Computing
+  tr: Paralel, Dağıtık ve Bulut Bilişim
+roboticscontrol:
+  en: Robotics and Control
+  tr: Robotik ve Kontrol
+softwareengineering:
+  en: Software Engineering
+  tr: Yazılım Mühendisliği
+theoryalgorithms:
+  en: Theory and Algorithms
+  tr: Kuram ve Algoritmalar
+web:
+  en: Web Technologies
+  tr: Web Teknolojileri

@@ -1,7 +1,6 @@
 ---
 title: CMPE220
 description: Ayrık Hesaplama Yapıları
-metadata: none
 # thumbnail: https://picsum.photos/seed/cmpe220/1400
 aliases:
   - undergraduate/courses/cmpe220

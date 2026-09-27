@@ -1,6 +1,6 @@
 ---
 type: news
-title: Gökberk Çelikmasat received the best paper award in PROFES '25 Conference.
+title: Gökberk Çelikmasat Received the Best Paper Award in PROFES '25 Conference
 date: 2025-12-10
 thumbnail: uploads/inci-baytas.png
 description: Our master's student, Gökberk Çelikmasat, received the best paper award at the PROFES '25 conference held in Salerno, Italy, from December 1-3, 2025.

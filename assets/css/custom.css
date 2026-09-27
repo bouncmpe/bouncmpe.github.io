@@ -1,0 +1,982 @@
+/* ---------------------------------------------------------------------------
+   Boğaziçi CmpE components for the Hextra theme.
+
+   Hextra ships a *precompiled* Tailwind bundle that only contains the utility
+   classes the theme itself uses, so new Tailwind classes written in our own
+   templates would have no CSS behind them. Hextra concatenates this file after
+   its own bundle, which makes it the supported place for site components.
+   Everything here is plain CSS, namespaced `boun-`, and theme-aware through
+   Hextra's `.dark` class.
+   --------------------------------------------------------------------------- */
+
+:root {
+  /* Boğaziçi dark blue (#1e4a8b) drives Hextra's whole primary palette. */
+  --primary-hue: 216deg;
+  --primary-saturation: 64%;
+  --primary-lightness: 33%;
+
+  --boun-surface: #ffffff;
+  --boun-surface-muted: #f4f6f9;
+  --boun-border: rgba(15, 23, 42, 0.08);
+  --boun-text: #1f2937;
+  --boun-text-muted: #5b6676;
+  --boun-shadow: 0 1px 2px rgba(15, 23, 42, 0.06), 0 4px 12px rgba(15, 23, 42, 0.06);
+  --boun-shadow-hover: 0 8px 24px rgba(15, 23, 42, 0.14);
+  --boun-radius: 1rem;
+}
+
+.dark {
+  --boun-surface: #1b1b1f;
+  --boun-surface-muted: #232329;
+  --boun-border: rgba(255, 255, 255, 0.1);
+  --boun-text: #e8eaed;
+  --boun-text-muted: #a0a6b0;
+  --boun-shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 4px 12px rgba(0, 0, 0, 0.3);
+  --boun-shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+/* --- shared -------------------------------------------------------------- */
+
+.boun-wrap {
+  width: 100%;
+  max-width: 90rem;
+  margin-inline: auto;
+  padding-inline: max(env(safe-area-inset-left), 1.5rem);
+}
+
+.boun-section {
+  margin-block: 3.5rem;
+}
+
+.boun-section-title {
+  font-size: clamp(1.6rem, 3vw, 2.25rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0 0 1.5rem;
+  color: var(--boun-text);
+}
+
+.boun-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--boun-surface);
+  border: 1px solid var(--boun-border);
+  border-radius: var(--boun-radius);
+  box-shadow: var(--boun-shadow);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.boun-card:hover,
+.boun-card:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: var(--boun-shadow-hover);
+}
+
+.boun-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .boun-grid-2,
+  .boun-grid-3,
+  .boun-grid-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (min-width: 1024px) {
+  .boun-grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .boun-grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+/* --- welcome banner ------------------------------------------------------ */
+
+.boun-hero {
+  position: relative;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: var(--boun-shadow);
+  isolation: isolate;
+}
+
+.boun-hero-media {
+  display: block;
+  width: 100%;
+  height: clamp(12rem, 34vw, 25rem);
+  object-fit: cover;
+  object-position: center;
+}
+
+.boun-hero-body {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: clamp(1.25rem, 3vw, 2.5rem);
+  max-width: 44rem;
+  color: #fff;
+}
+
+.boun-hero-title {
+  margin: 0;
+  font-size: clamp(1.75rem, 4vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.75);
+}
+
+.boun-hero-text {
+  margin: 0;
+  max-width: 34rem;
+  line-height: 1.55;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.75);
+}
+
+.boun-hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.boun-tag {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: 50rem;
+  background: hsl(var(--primary-hue) var(--primary-saturation) var(--primary-lightness));
+  color: #fff;
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.boun-tag:hover,
+.boun-tag:focus-visible {
+  transform: translateY(-1px);
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
+  color: #fff;
+}
+
+/* Mobile opener: a still frame, with the copy below the image. */
+.boun-hero-mobile .boun-hero-body {
+  position: static;
+  max-width: none;
+  color: var(--boun-text);
+  text-align: center;
+  align-items: center;
+  background: var(--boun-surface);
+}
+
+.boun-hero-mobile .boun-hero-title,
+.boun-hero-mobile .boun-hero-text {
+  text-shadow: none;
+}
+
+.boun-hero-mobile {
+  background: var(--boun-surface);
+  border: 1px solid var(--boun-border);
+}
+
+.boun-hero-mobile .boun-hero-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1rem 1.25rem;
+  color: #fff;
+  font-size: clamp(1.5rem, 7vw, 2rem);
+  font-weight: 700;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.75));
+}
+
+.boun-hero-figure {
+  position: relative;
+}
+
+/* --- featured carousel --------------------------------------------------- */
+
+.boun-carousel {
+  position: relative;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: var(--boun-shadow);
+  background: var(--boun-surface-muted);
+}
+
+.boun-carousel-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.boun-carousel-track::-webkit-scrollbar { display: none; }
+
+.boun-carousel-slide {
+  position: relative;
+  flex: 0 0 100%;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+  display: block;
+  text-decoration: none;
+}
+
+.boun-carousel-slide img {
+  display: block;
+  width: 100%;
+  height: clamp(13rem, 36vw, 26rem);
+  object-fit: cover;
+  object-position: center;
+}
+
+.boun-carousel-caption {
+  position: absolute;
+  left: 50%;
+  bottom: clamp(0.75rem, 2vw, 1.5rem);
+  transform: translateX(-50%);
+  width: min(calc(100% - 5.5rem), 40rem);
+  padding: 0.85rem 1.25rem;
+  border-radius: 1.25rem;
+  /* Frosted rather than solid, so the photo carries through the caption. */
+  background: rgba(255, 255, 255, 0.62);
+  backdrop-filter: blur(12px) saturate(1.3);
+  -webkit-backdrop-filter: blur(12px) saturate(1.3);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  color: #14181f;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.18);
+  font-size: clamp(0.95rem, 1.6vw, 1.35rem);
+  font-weight: 600;
+  line-height: 1.3;
+  text-align: center;
+  text-wrap: balance;
+}
+
+.boun-carousel-arrow {
+  position: absolute;
+  top: calc(50% - 1.25rem);
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.75);
+  color: #1f2937;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s ease, background-color 0.2s ease;
+}
+
+.boun-carousel-arrow svg { width: 1.25rem; height: 1.25rem; }
+.boun-carousel-prev { left: 0.75rem; }
+.boun-carousel-next { right: 0.75rem; }
+
+.boun-carousel:hover .boun-carousel-arrow,
+.boun-carousel:focus-within .boun-carousel-arrow { opacity: 1; }
+
+.boun-carousel-arrow:hover { background: #fff; }
+
+.boun-carousel-arrow:focus-visible {
+  opacity: 1;
+  outline: 2px solid hsl(var(--primary-hue) var(--primary-saturation) var(--primary-lightness));
+  outline-offset: 2px;
+}
+
+.dark .boun-carousel-caption {
+  background: rgba(18, 18, 22, 0.55);
+  border-color: rgba(255, 255, 255, 0.14);
+  color: #f3f4f6;
+}
+
+/* Browsers without backdrop-filter get a more opaque panel instead. */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .boun-carousel-caption { background: rgba(255, 255, 255, 0.88); }
+  .dark .boun-carousel-caption { background: rgba(18, 18, 22, 0.82); }
+}
+
+/* On a phone the caption covers a good part of a shorter image, so it is
+   trimmed a little. */
+@media (max-width: 640px) {
+  .boun-carousel-caption {
+    width: calc(100% - 5rem);
+    padding: 0.6rem 0.9rem;
+    bottom: 0.65rem;
+    border-radius: 1rem;
+    /* Long headlines run to three or four lines on a phone. */
+    font-size: 0.875rem;
+    line-height: 1.25;
+  }
+
+  .boun-carousel-arrow {
+    width: 2.1rem;
+    height: 2.1rem;
+  }
+}
+
+/* Touch devices have no hover, so the arrows stay visible there. */
+@media (hover: none) {
+  .boun-carousel-arrow { opacity: 1; }
+}
+
+.boun-carousel-dots {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0.4rem;
+  display: flex;
+  gap: 0.4rem;
+}
+
+.boun-carousel-dots button {
+  width: 0.45rem;
+  height: 0.45rem;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.55);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: background-color 0.2s ease, width 0.2s ease;
+}
+
+.boun-carousel-dots button[aria-selected] {
+  width: 1.1rem;
+  border-radius: 50rem;
+  background: #fff;
+}
+
+/* --- news ---------------------------------------------------------------- */
+
+.boun-news-thumb {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: var(--boun-surface-muted);
+}
+
+.boun-card-body {
+  padding: 1rem 1.15rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  flex: 1 1 auto;
+}
+
+.boun-card-title {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--boun-text);
+}
+
+.boun-card-meta {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--boun-text-muted);
+}
+
+.boun-card-text {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--boun-text-muted);
+}
+
+/* Buttons read as cards at rest — same surface, border and shadow as the
+   people cards — and fill with the department blue on hover. */
+.boun-btn {
+  display: inline-block;
+  padding: 0.55rem 1.4rem;
+  border: 1px solid var(--boun-border);
+  border-radius: 50rem;
+  background: var(--boun-surface);
+  box-shadow: var(--boun-shadow);
+  color: var(--boun-text);
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease,
+    background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.boun-btn:hover,
+.boun-btn:focus-visible {
+  transform: translateY(-2px);
+  background: hsl(var(--primary-hue) var(--primary-saturation) var(--primary-lightness));
+  border-color: transparent;
+  box-shadow: var(--boun-shadow-hover);
+  color: #fff;
+}
+
+/* --- events -------------------------------------------------------------- */
+
+.boun-event {
+  display: block;
+  padding: 0;
+}
+
+.boun-event-head {
+  padding: 0.45rem 1rem;
+  background: var(--boun-surface-muted);
+  border-bottom: 1px solid var(--boun-border);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--boun-text-muted);
+  text-align: center;
+}
+
+.boun-event-body {
+  padding: 1rem 1.15rem 1.15rem;
+  text-align: center;
+}
+
+.boun-event-name {
+  margin: 0 0 0.2rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--boun-text);
+}
+
+.boun-event-title {
+  margin: 0 0 0.5rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--boun-text);
+}
+
+.boun-event-meta {
+  font-size: 0.86rem;
+  color: var(--boun-text-muted);
+  line-height: 1.5;
+}
+
+/* --- people -------------------------------------------------------------- */
+
+/* Borderless: a photo, the name, the title, the areas and the icons — no box. */
+.boun-people {
+  display: grid;
+  gap: 1.75rem 2rem;
+  grid-template-columns: 1fr;
+  margin-block: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .boun-people-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+.boun-person {
+  display: flex;
+  flex-direction: row;
+  /* Name, title and links sit level with the middle of the portrait. */
+  align-items: center;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.boun-person-photo {
+  flex: 0 0 8.5rem;
+  width: 8.5rem;
+  height: 8.5rem;
+  border-radius: 1.4rem;
+  object-fit: cover;
+  object-position: center;
+  background: var(--boun-surface-muted);
+}
+
+.boun-person-body {
+  min-width: 0;
+}
+
+.boun-person-name {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--boun-text);
+}
+
+.boun-person-role {
+  margin: 0.1rem 0 0;
+  font-size: 0.9rem;
+  color: var(--boun-text-muted);
+}
+
+.boun-person-areas {
+  margin: 0.35rem 0 0;
+  font-size: 0.8rem;
+  line-height: 1.45;
+  color: var(--boun-text-muted);
+  text-wrap: pretty;
+}
+
+.boun-person-links {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.boun-person-links a {
+  color: var(--boun-text-muted);
+  line-height: 0;
+  transition: color 0.15s ease;
+}
+
+.boun-person-links a:hover {
+  color: hsl(var(--primary-hue) var(--primary-saturation) var(--primary-lightness));
+}
+
+.dark .boun-person-links a:hover {
+  color: hsl(var(--primary-hue) 70% 72%);
+}
+
+.boun-person-links svg {
+  width: 1.15rem;
+  height: 1.15rem;
+}
+
+/* Name-only cards (former members, advisory board, course assistants). */
+.boun-person-plain {
+  padding: 0.85rem 1.1rem;
+}
+
+/* --- section index cards (About, Courses, Research, People) --------------- */
+
+.boun-index-card {
+  padding: 1.1rem 1.25rem;
+  justify-content: flex-start;
+}
+
+.boun-index-card .boun-card-title {
+  font-size: 1.05rem;
+}
+
+/* Section card grids (Courses above all) read better as an even field of
+   cards: every row takes the height of the tallest card, and long descriptions
+   are trimmed so one wordy entry cannot stretch the whole grid. */
+/* Only once the grid actually has columns — on a phone it is a single column,
+   where equal rows would just pad every card to the wordiest one. */
+@media (min-width: 640px) {
+  .boun-grid-uniform {
+    grid-auto-rows: 1fr;
+  }
+}
+
+.boun-grid-uniform .boun-card-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* --- footer -------------------------------------------------------------- */
+
+.boun-footer {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .boun-footer { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+.boun-footer h3 {
+  margin: 0 0 0.6rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--boun-text);
+}
+
+.boun-footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.boun-footer li { margin-bottom: 0.4rem; }
+
+.boun-footer a {
+  font-size: 0.9rem;
+  color: var(--boun-text-muted);
+  text-decoration: none;
+}
+
+.boun-footer a:hover {
+  color: hsl(var(--primary-hue) var(--primary-saturation) var(--primary-lightness));
+}
+
+.boun-footer-meta {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--boun-border);
+  font-size: 0.9rem;
+  color: var(--boun-text-muted);
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .boun-footer-meta { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .boun-footer-social { text-align: right; }
+}
+
+.boun-footer-social ul {
+  list-style: none;
+  display: flex;
+  gap: 0.9rem;
+  padding: 0;
+  margin: 0.5rem 0 0;
+}
+
+@media (min-width: 768px) {
+  .boun-footer-social ul { justify-content: flex-end; }
+}
+
+.boun-footer-social img {
+  width: 22px;
+  height: 22px;
+  opacity: 0.7;
+}
+
+.dark .boun-footer-social img { filter: invert(1); }
+
+.boun-footer-social img:hover { opacity: 1; }
+
+/* Responsive helpers used by the banner. */
+.boun-only-desktop { display: none; }
+
+@media (min-width: 1024px) {
+  .boun-only-desktop { display: block; }
+  .boun-only-mobile { display: none; }
+}
+
+/* --- home page ----------------------------------------------------------- */
+
+.boun-home {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+  align-items: start;
+}
+
+@media (min-width: 1024px) {
+  .boun-home {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+    gap: 3rem;
+  }
+}
+
+/* --- tables -------------------------------------------------------------- */
+
+/* Hextra's prose styling boxes every cell. The department's tables (the
+   curriculum above all) are long lists that read better as plain rows, which is
+   how they looked under Hinode, so the cell borders are traded for row rules. */
+
+.boun-table {
+  overflow-x: auto;
+  margin-block: 1.5rem;
+}
+
+.boun-table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+  display: table;
+}
+
+.boun-table th,
+.boun-table td {
+  border: 0;
+  border-bottom: 1px solid var(--boun-border);
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.boun-table thead {
+  background: transparent;
+}
+
+.boun-table thead th:empty { border-bottom: 0; }
+
+.boun-table tr { border-top: 0; }
+
+.boun-table tbody tr:hover { background: var(--boun-surface-muted); }
+
+/* Section rows ("First Semester", ...) written as headings inside a cell. */
+.boun-table td h4,
+.boun-table td h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--boun-text);
+}
+
+.boun-table td:has(h4),
+.boun-table td:has(h3) {
+  padding-top: 1.5rem;
+  border-bottom: 2px solid var(--boun-border);
+  white-space: nowrap;
+}
+
+/* --- inline links in content --------------------------------------------- */
+
+/* The department navy reads well on white but is nearly black-on-black in dark
+   mode, where Hextra uses the same primary-600 for prose links. Lighten the
+   same hue there; light mode is untouched. */
+.dark .content :where(a):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+  color: hsl(var(--primary-hue) 70% 72%);
+  text-underline-offset: 2px;
+}
+
+.dark .content :where(a):not(:where([class~="not-prose"], [class~="not-prose"] *)):hover {
+  color: hsl(var(--primary-hue) 80% 82%);
+}
+
+/* --- persona card -------------------------------------------------------- */
+
+.boun-persona {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  max-width: 24rem;
+  margin: 2rem auto;
+  padding: 1.75rem 1.75rem 1.5rem;
+  border: 1px solid var(--boun-border);
+  border-radius: 1.25rem;
+  background: var(--boun-surface);
+  box-shadow: var(--boun-shadow);
+  text-align: center;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.boun-persona:hover,
+.boun-persona:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: var(--boun-shadow-hover);
+  border-color: hsl(var(--primary-hue) var(--primary-saturation) var(--primary-lightness));
+}
+
+.boun-persona-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  object-fit: contain;
+}
+
+.boun-persona-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--boun-text);
+}
+
+.boun-persona-text {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--boun-text-muted);
+  text-wrap: pretty;
+}
+
+/* The caption is written as a Markdown list; show it as tidy lines instead of
+   bullets squeezed into a narrow card. */
+.boun-persona-text ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.boun-persona-text p { margin: 0; }
+
+@media (prefers-reduced-motion: reduce) {
+  .boun-persona { transition: none; }
+  .boun-persona:hover { transform: none; }
+}
+
+/* --- pagination / prev-next links ---------------------------------------- */
+
+/* Hextra renders the paginator (news, courses) and the docs prev/next links as
+   plain text, which turns unreadable primary-blue on the dark background. They
+   reuse the button style above. The selector keys off the layout classes those
+   links share; if a future Hextra changes them, these rules simply stop
+   applying and the theme's own styling returns. */
+#content a[class*="max-w-[50%]"] {
+  gap: 0.4rem;
+  padding: 0.55rem 1.4rem;
+  border: 1px solid var(--boun-border);
+  border-radius: 50rem;
+  background: var(--boun-surface);
+  box-shadow: var(--boun-shadow);
+  color: var(--boun-text);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease,
+    background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+#content a[class*="max-w-[50%]"]:hover,
+#content a[class*="max-w-[50%]"]:focus-visible {
+  transform: translateY(-2px);
+  background: hsl(var(--primary-hue) var(--primary-saturation) var(--primary-lightness));
+  border-color: transparent;
+  box-shadow: var(--boun-shadow-hover);
+  color: #fff;
+}
+
+#content a[class*="max-w-[50%]"]:focus-visible {
+  outline: 2px solid hsl(var(--primary-hue) var(--primary-saturation) var(--primary-lightness));
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .boun-btn,
+  #content a[class*="max-w-[50%]"] { transition: none; }
+  .boun-btn:hover,
+  #content a[class*="max-w-[50%]"]:hover { transform: none; }
+}
+
+/* --- sidebar ------------------------------------------------------------- */
+
+/* In dark mode the active item is dark blue text on a dark blue box, which is
+   nearly unreadable. Keep the box, brighten the label to sit with the other
+   items, and let the weight mark it as current. */
+.dark .hextra-sidebar-active-item {
+  color: #f5f5f5;
+  font-weight: 700;
+}
+
+/* --- navbar -------------------------------------------------------------- */
+
+/* "Bilgisayar Mühendisliği" next to the logo and the icon buttons is a tight
+   fit on a phone: the brand is a flex item, so it shrank and broke across two
+   lines. Keep it on one line and trim it slightly. */
+@media (max-width: 480px) {
+  .hextra-nav-container nav > a:first-child {
+    flex-shrink: 0;
+  }
+
+  .hextra-nav-container nav > a:first-child span {
+    font-size: 0.9rem;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+}
+
+/* The theme sets the site title in extrabold (800), which is heavy next to the
+   logo; semibold keeps it prominent without shouting. */
+.hextra-nav-container nav > a:first-child span {
+  font-weight: 600;
+}
+
+/* The language switcher shows the language code, so the globe icon beside it is
+   redundant. */
+.hextra-language-switcher svg {
+  display: none;
+}
+
+/* EN/TR is a utility control, not a nav destination: give it the same size and
+   muted grey as the nav links so it sits with them instead of competing with
+   the site title. It darkens on hover, like the links do. */
+.hextra-language-switcher {
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: var(--boun-text-muted);
+}
+
+.hextra-language-switcher:hover,
+.hextra-language-switcher:focus-visible {
+  color: var(--boun-text);
+}
+
+/* --- people pages: one navigation rail ----------------------------------- */
+
+/* layouts/people/single.html builds a single left rail: the pages of the
+   section, with the current page's headings nested under it. Hextra's own
+   sidebar is still rendered for the phone menu, and is hidden here. */
+.boun-rail {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .boun-rail {
+    display: block;
+    position: sticky;
+    top: var(--navbar-height);
+    align-self: flex-start;
+    flex: 0 0 16rem;
+    width: 16rem;
+    max-height: calc(100vh - var(--navbar-height));
+    overflow-y: auto;
+    overflow-x: hidden;
+    overscroll-behavior: contain;
+    padding: 1.5rem 1rem 2rem;
+    font-size: 0.875rem;
+  }
+}
+
+.boun-rail ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.boun-rail > ul > li + li {
+  margin-top: 0.15rem;
+}
+
+.boun-rail a {
+  display: block;
+  padding: 0.35rem 0.6rem;
+  border-radius: 0.375rem;
+  color: var(--boun-text-muted);
+  text-decoration: none;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.boun-rail a:hover {
+  background: var(--boun-surface-muted);
+  color: var(--boun-text);
+}
+
+.boun-rail .boun-rail-active {
+  background: hsl(var(--primary-hue) var(--primary-saturation) var(--primary-lightness) / 0.1);
+  color: hsl(var(--primary-hue) var(--primary-saturation) calc(var(--primary-lightness) - 4%));
+  font-weight: 600;
+}
+
+.dark .boun-rail .boun-rail-active {
+  color: #f5f5f5;
+  font-weight: 700;
+}
+
+/* The page's own headings, indented under the page they belong to.
+   (Scoped through .boun-rail so it outranks the list reset above.) */
+.boun-rail .boun-rail-sub {
+  margin: 0.15rem 0 0.6rem 1.1rem;
+  padding-left: 0.5rem;
+  border-left: 1px solid var(--boun-border);
+}
+
+.boun-rail .boun-rail-sub a {
+  font-size: 0.825rem;
+  padding-block: 0.25rem;
+}

@@ -1,7 +1,6 @@
 ---
 title: CMPE344
 description: Computer Organization
-metadata: none
 # thumbnail: https://picsum.photos/seed/cmpe344/1400
 aliases:
   - undergraduate/courses/cmpe344

@@ -2,7 +2,6 @@
 title: History
 description: Computer Engineering Department History
 weight: 2
-metadata: none
 ---
 
 Founded in 1982, the Department of Computer Engineering has played a leading role in shaping technological advancement in Turkey. The department's undergraduate program, designed to meet the rigorous standards of the IEEE/ACM Joint Curriculum Committee, graduated its first graduates in 1986. That same year, the department expanded its offerings with the launch of MS and PhD programs in Computer Engineering.

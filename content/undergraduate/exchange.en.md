@@ -1,7 +1,6 @@
 ---
 title: Exchange Programs
 description: Computer Engineering Exchange Programs
-metadata: none
 weight: 6
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: Yan Dal Programları
 description: Boğaziçi Üniversitesi Yan Dal Programları
-metadata: none
 weight: 5
 ---
 

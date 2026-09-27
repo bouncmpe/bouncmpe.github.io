@@ -1,7 +1,6 @@
 ---
 title: CMPE320
 description: Principles of Programming Languages
-metadata: none
 # thumbnail: https://picsum.photos/seed/cmpe320_/1400
 aliases:
   - undergraduate/courses/cmpe320

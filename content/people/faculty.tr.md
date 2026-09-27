@@ -1,7 +1,6 @@
 ---
 title: Öğretim Üyeleri
 description: Bilgisayar Mühendisliği Öğretim Üyeleri
-metadata: none
 weight: 21
 ---
 

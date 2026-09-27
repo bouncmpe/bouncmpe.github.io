@@ -1,7 +1,6 @@
 ---
 title: Academic Staff
 description: Computer Engineering Teaching Assistants
-metadata: none
 weight: 22
 ---
 

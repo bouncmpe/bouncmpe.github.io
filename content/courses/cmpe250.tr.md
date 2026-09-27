@@ -1,7 +1,6 @@
 ---
 title: CMPE250
 description: Veri Yapıları ve Algoritmalar
-metadata: none
 # thumbnail: https://picsum.photos/seed/cmpe250/1400
 aliases:
   - undergraduate/courses/cmpe250

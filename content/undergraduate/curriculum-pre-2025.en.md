@@ -1,7 +1,6 @@
 ---
 title: Curriculum (Pre-2025)
 description: This curriculum applies to students admitted prior to Autumn 2025.
-metadata: none
 toc: false
 weight: 2
 ---

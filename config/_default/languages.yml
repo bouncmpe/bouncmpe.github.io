@@ -1,7 +1,7 @@
 
 tr:
   title: "Bilgisayar Mühendisliği"
-  languageName: Türkçe
+  languageName: TR
   copyright: Telif hakkı © {year} Bilgisayar Mühendisliği Bölümü, Boğaziçi Üniversitesi. Tüm hakları saklıdır.
   weight: 1
   params:
@@ -10,7 +10,7 @@ tr:
 
 en:
   title: "Computer Engineering"
-  languageName: English
+  languageName: EN
   copyright: Copyright © {year} Department of Computer Engineering, Boğaziçi University. All rights reserved.
   weight: 2
   params:

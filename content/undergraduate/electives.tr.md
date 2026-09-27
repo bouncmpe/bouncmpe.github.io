@@ -1,7 +1,6 @@
 ---
 title: Seçmeli Dersler
 description:
-metadata: none
 weight: 3
 ---
 

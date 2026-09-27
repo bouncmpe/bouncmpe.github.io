@@ -1,0 +1,5 @@
+{{/* Hinode's `card-group`: a responsive grid of `card` shortcodes. */}}
+{{- $cols := .Get "cols" | default "3" -}}
+<div class="not-prose boun-grid boun-grid-{{ $cols }}" style="margin-block: 1.5rem;">
+  {{ .Inner }}
+</div>

@@ -1,7 +1,6 @@
 ---
 title: CMPE480
 description: Introduction to Artificial Intelligence
-metadata: none
 # thumbnail: https://picsum.photos/seed/cmpe480/1400
 aliases:
   - undergraduate/courses/cmpe480

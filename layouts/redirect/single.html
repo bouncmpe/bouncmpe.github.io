@@ -1,1 +1,16 @@
-{{- template "alias.html" (dict "Permalink" .Params.target) -}}
+{{/* Client-side redirect page (used by content/docs and content/u/*). Hinode
+     supplied an `alias.html` template for this; Hextra does not, so the meta
+     refresh is written out here. */}}
+<!DOCTYPE html>
+<html lang="{{ site.Language.Lang }}">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ .Title }}</title>
+    <link rel="canonical" href="{{ .Params.target }}">
+    <meta http-equiv="refresh" content="0; url={{ .Params.target }}">
+    <meta name="robots" content="noindex">
+  </head>
+  <body>
+    <p>{{ .Title }} → <a href="{{ .Params.target }}">{{ .Params.target }}</a></p>
+  </body>
+</html>

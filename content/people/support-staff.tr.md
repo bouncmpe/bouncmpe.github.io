@@ -1,7 +1,6 @@
 ---
 title: İdari ve Yardımcı Personel
 description: Bilgisayar Mühendisliği İdari ve Yardımcı Personeli
-metadata: none
 weight: 23
 ---
 

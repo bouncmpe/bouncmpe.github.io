@@ -1,7 +1,6 @@
 ---
 title: CMPE244
 description: Bilgisayar Organizasyonu
-metadata: none
 # thumbnail: https://picsum.photos/seed/cmpe244/1400
 aliases:
   - undergraduate/courses/cmpe244

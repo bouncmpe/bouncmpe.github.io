@@ -1,7 +1,6 @@
 ---
 title: Genel Bakış
 description: Bilgisayar Mühendisliği Lisans Programı
-metadata: none
 weight: 1
 ---
 

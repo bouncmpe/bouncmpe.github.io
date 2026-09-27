@@ -1,0 +1,28 @@
+{{ define "main" }}
+  {{/* Section landing pages that are not part of the docs tree: About, Courses,
+       People, Research (all driven by `content_blocks` front matter), plus any
+       other section index, which falls back to a card per child page. */}}
+  {{ partial "sidebar.html" (dict "context" . "disableSidebar" true) }}
+
+  <main id="content" class="boun-wrap" style="padding-block: 2.5rem 3rem;">
+    {{- if .Params.content_blocks }}
+      {{ partial "boun/content-blocks.html" . }}
+      {{- with .Content }}<div class="content">{{ . }}</div>{{ end }}
+    {{- else }}
+      {{- with .Title }}
+        <h1 class="boun-section-title" style="font-size: clamp(2rem, 5vw, 3rem);">{{ . }}</h1>
+      {{- end }}
+      {{- with .Content }}<div class="content">{{ . }}</div>{{ end }}
+      {{- with .Pages }}
+        <div class="boun-grid boun-grid-3" style="margin-top: 2rem;">
+          {{- range . }}
+            <a class="boun-card boun-index-card" href="{{ .RelPermalink }}">
+              <h3 class="boun-card-title">{{ .Title }}</h3>
+              {{- with .Params.description }}<p class="boun-card-text">{{ . }}</p>{{ end }}
+            </a>
+          {{- end }}
+        </div>
+      {{- end }}
+    {{- end }}
+  </main>
+{{ end }}
