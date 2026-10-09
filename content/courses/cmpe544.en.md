@@ -11,7 +11,7 @@ aliases:
 {{< table class="table-hover table-sm" >}}
 |||
 | :-- | :-- |
-| Faculty | Faculty of Engineering |
+| Institute | Institute of Science and Engineering |
 | Course Code | CMPE544 |
 | Course Title | Pattern Recognition |
 | Language of Instruction | English |

@@ -31,7 +31,7 @@ aliases:
 
 CMPE 140, R programlama dili ve istatistiksel hesaplama ile grafikler için ortam kullanarak keşifsel veri analizinin ve programlamanın temel kavramlarını tanıtmaktadır.
 
-Ders konuları, temel veri yapıları (vektör, matris, listeler, veri çerçeveleri vb.), program kontrol ifadeleri (koşullu yürütme, for ve while döngüleri vb.), veri görselleştirme ve girdi/çıktı işlemlerine bir girişi içermektedir.## Dersin Öğrenme Çıktıları
+Ders konuları, temel veri yapıları (vektör, matris, listeler, veri çerçeveleri vb.), program kontrol ifadeleri (koşullu yürütme, for ve while döngüleri vb.), veri görselleştirme ve girdi/çıktı işlemlerine bir girişi içermektedir.
 
 ## Dersi Veren Öğretim Üyesi
 

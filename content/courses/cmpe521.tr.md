@@ -11,7 +11,7 @@ aliases:
 {{< table class="table-hover table-sm" >}}
 |||
 | :-- | :-- |
-| Fakülte | Mühendislik Fakültesi |
+| Enstitü | Fen Bilimleri Enstitüsü |
 | Ders Kodu | CMPE521 |
 | Ders Başlığı | Veri Tabanı Sistemlerinin Prensipleri |
 | Öğretim Dili | İngilizce |

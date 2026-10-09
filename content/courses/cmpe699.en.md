@@ -11,7 +11,7 @@ aliases:
 {{< table class="table-hover table-sm" >}}
 |||
 | :-- | :-- |
-| Faculty | Faculty of Engineering |
+| Institute | Institute of Science and Engineering |
 | Course Code | CMPE699 |
 | Course Title | Guided Research in Ph.D.-I |
 | Language of Instruction | English |

@@ -11,7 +11,7 @@ aliases:
 {{< table class="table-hover table-sm" >}}
 |||
 | :-- | :-- |
-| Faculty | Faculty of Engineering |
+| Institute | Institute of Science and Engineering |
 | Course Code | CMPE529 |
 | Course Title | Concurrency Control and Recovery in Databases |
 | Language of Instruction | English |

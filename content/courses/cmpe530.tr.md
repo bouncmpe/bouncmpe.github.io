@@ -11,7 +11,7 @@ aliases:
 {{< table class="table-hover table-sm" >}}
 |||
 | :-- | :-- |
-| Fakülte | Mühendislik Fakültesi |
+| Enstitü | Fen Bilimleri Enstitüsü |
 | Ders Kodu | CMPE530 |
 | Ders Başlığı | Yapay Zekanın Matematiksel Temelleri |
 | Öğretim Dili | İngilizce |

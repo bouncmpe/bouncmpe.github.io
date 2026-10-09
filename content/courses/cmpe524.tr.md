@@ -11,7 +11,7 @@ aliases:
 {{< table class="table-hover table-sm" >}}
 |||
 | :-- | :-- |
-| Fakülte | Mühendislik Fakültesi |
+| Enstitü | Fen Bilimleri Enstitüsü |
 | Ders Kodu | CMPE524 |
 | Ders Başlığı | Bilgisayar Ağı Tasarımı |
 | Öğretim Dili | İngilizce |

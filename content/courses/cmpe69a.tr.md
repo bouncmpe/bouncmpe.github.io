@@ -11,7 +11,7 @@ aliases:
 {{< table class="table-hover table-sm" >}}
 |||
 | :-- | :-- |
-| Fakülte | Mühendislik Fakültesi |
+| Enstitü | Fen Bilimleri Enstitüsü |
 | Ders Kodu | CMPE69A |
 | Ders Başlığı | Doktorada Yönlendirilmiş Çalışmalar-II |
 | Öğretim Dili | İngilizce |

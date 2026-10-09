@@ -11,7 +11,7 @@ aliases:
 {{< table class="table-hover table-sm" >}}
 |||
 | :-- | :-- |
-| Fakülte | Mühendislik Fakültesi |
+| Enstitü | Fen Bilimleri Enstitüsü |
 | Ders Kodu | CMPE599 |
 | Ders Başlığı | Yüksek Lisansta Yönlendirilmiş Çalışmalar-I |
 | Öğretim Dili | İngilizce |
