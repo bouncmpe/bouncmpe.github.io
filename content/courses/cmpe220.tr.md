@@ -6,7 +6,7 @@ aliases:
   - undergraduate/courses/cmpe220
 ---
 
-## Course Information
+## Ders Bilgileri
 
 <!-- prettier-ignore-start -->
 {{< table class="table-hover table-sm" >}}

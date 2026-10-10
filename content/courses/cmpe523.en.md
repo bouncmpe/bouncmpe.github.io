@@ -1,0 +1,39 @@
+---
+title: CMPE523
+description: Performance Evaluation of Computer Networks
+# thumbnail: https://picsum.photos/seed/cmpe523/1400
+aliases:
+  - graduate/courses/cmpe523
+---
+## Course Information
+
+<!-- prettier-ignore-start -->
+{{< table class="table-hover table-sm" >}}
+|||
+| :-- | :-- |
+| Institute | Institute of Science and Engineering |
+| Course Code | CMPE523 |
+| Course Title | Performance Evaluation of Computer Networks |
+| Language of Instruction | English |
+| Course Semester | Spring |
+| Course Hours | Lecture: 3, PS:0, Labs: 0 |
+| Course Credits | 3 |
+| ECTS | 10 |
+| Grading Mode | Letter Grade |
+| Prerequisites | Consent of the instructor |
+| Corequisites | None |
+
+{{< /table >}}
+<!-- prettier-ignore-end -->
+
+## Catalog Description
+
+Introduction for computer networks performance evaluation. Modeling of traffic flows. Delay and loss models for computer networks. Networks of queues. Performance evaluation of multiple access methods and local area networks. Measurement and simulation of computer networks.
+
+## Current Instructor
+
+{{< people tag="cmpe523" cols="2" >}}
+
+## Previous Instructors
+
+{{< people_alt tag="former-cmpe523" cols="3" >}}
