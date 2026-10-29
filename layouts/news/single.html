@@ -1,19 +1,6 @@
 {{ define "main" }}
-  {{- $thumbnail := "" -}}
-  {{- with .Params.thumbnail -}}
-    {{- if reflect.IsMap . -}}{{- $thumbnail = .url -}}{{- else -}}{{- $thumbnail = . -}}{{- end -}}
-  {{- end -}}
   {{- $settings := site.Params.newsroom.image_settings.hero | default "1400x700 webp q90 Smart" -}}
-  {{- $hero := "" -}}
-  {{- if $thumbnail -}}
-    {{- if hasPrefix $thumbnail "http" -}}
-      {{- with try (resources.GetRemote $thumbnail) -}}
-        {{- with .Value -}}{{- $hero = (.Fill $settings).RelPermalink -}}{{- end -}}
-      {{- end -}}
-    {{- else -}}
-      {{- with resources.Get $thumbnail -}}{{- $hero = (.Fill $settings).RelPermalink -}}{{- end -}}
-    {{- end -}}
-  {{- end -}}
+  {{- $thumb := partial "boun/thumbnail.html" (dict "page" . "settings" $settings) -}}
 
   <div class="hx:mx-auto hx:flex hextra-max-page-width">
     {{ partial "sidebar.html" (dict "context" . "disableSidebar" true "displayPlaceholder" true) }}
@@ -33,9 +20,10 @@
           <p class="boun-card-text" style="font-size: 1.05rem; margin-top: 1rem;">{{ . }}</p>
         {{- end }}
 
-        {{- with $hero }}
+        {{- with $thumb.src }}
           <img src="{{ . }}" alt="{{ $.Title }}" class="not-prose"
-               style="width: 100%; height: auto; border-radius: 1rem; margin: 1.75rem 0; box-shadow: var(--boun-shadow);">
+               style="width: 100%; height: auto; border-radius: 1rem; margin: 1.75rem 0; box-shadow: var(--boun-shadow);
+                      {{- with $thumb.position }} aspect-ratio: 2 / 1; object-fit: cover; object-position: {{ . | safeCSS }};{{ end }}">
         {{- end }}
 
         <div class="content">{{ .Content }}</div>
