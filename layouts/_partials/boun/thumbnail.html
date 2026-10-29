@@ -1,0 +1,50 @@
+{{/* Resolves a news page's thumbnail to an image URL.
+
+     Thumbnails come from page front matter and may be a string, a map with a
+     `url` key, or a remote URL — all three shapes exist in content/news.
+
+     The map shape may also set `position`, a CSS object-position such as
+     "center 60%". The image is then only resized, not cropped, and the
+     caller crops it in CSS around that point instead of the anchor in the
+     image settings.
+
+     Takes (dict "page" $page "settings" "1400x700 webp q90 Smart") and
+     returns (dict "src" $url "position" $position). */}}
+{{- $thumbnail := "" -}}
+{{- $position := "" -}}
+{{- with .page.Params.thumbnail -}}
+  {{- if reflect.IsMap . -}}
+    {{- $thumbnail = .url -}}
+    {{- $position = .position | default "" -}}
+  {{- else -}}
+    {{- $thumbnail = . -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $settings := .settings -}}
+{{- if $position -}}
+  {{- $settings = replaceRE `^(\d+)x\d+` "${1}x" $settings -}}
+  {{- $settings = replaceRE `(?i)\s*\b(smart|center|top(left|right)?|bottom(left|right)?|left|right)\b` "" $settings -}}
+{{- end -}}
+
+{{- $image := false -}}
+{{- if $thumbnail -}}
+  {{- if hasPrefix $thumbnail "http" -}}
+    {{- with try (resources.GetRemote $thumbnail) -}}
+      {{- with .Value -}}{{- $image = . -}}{{- end -}}
+    {{- end -}}
+  {{- else -}}
+    {{- $image = resources.Get $thumbnail -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $src := "" -}}
+{{- with $image -}}
+  {{- if $position -}}
+    {{- $src = (.Resize $settings).RelPermalink -}}
+  {{- else -}}
+    {{- $src = (.Fill $settings).RelPermalink -}}
+  {{- end -}}
+{{- end -}}
+
+{{- return (dict "src" $src "position" $position) -}}

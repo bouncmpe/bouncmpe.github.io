@@ -12,26 +12,13 @@
   <section class="boun-carousel" aria-roledescription="carousel" aria-label="{{ i18n "featured-stories" | title }}">
     <div class="boun-carousel-track" tabindex="0">
       {{- range $index, $page := . }}
-        {{- $thumbnail := "" -}}
-        {{- with $page.Params.thumbnail -}}
-          {{- if reflect.IsMap . -}}{{- $thumbnail = .url -}}{{- else -}}{{- $thumbnail = . -}}{{- end -}}
-        {{- end -}}
-        {{- $src := "" -}}
-        {{- if $thumbnail -}}
-          {{- if hasPrefix $thumbnail "http" -}}
-            {{- with try (resources.GetRemote $thumbnail) -}}
-              {{- with .Value -}}{{- $src = (.Fill $settings).RelPermalink -}}{{- end -}}
-            {{- end -}}
-          {{- else -}}
-            {{- with resources.Get $thumbnail -}}{{- $src = (.Fill $settings).RelPermalink -}}{{- end -}}
-          {{- end -}}
-        {{- end -}}
+        {{- $thumb := partial "boun/thumbnail.html" (dict "page" $page "settings" $settings) -}}
 
         <a class="boun-carousel-slide" href="{{ $page.RelPermalink }}"
            role="group" aria-roledescription="slide"
            aria-label="{{ add $index 1 }} / {{ len $featured }}">
-          {{- with $src }}
-            <img src="{{ . }}" alt="{{ $page.Title }}"{{ if gt $index 0 }} loading="lazy"{{ end }}>
+          {{- with $thumb.src }}
+            <img src="{{ . }}" alt="{{ $page.Title }}"{{ with $thumb.position }} style="object-position: {{ . | safeCSS }};"{{ end }}{{ if gt $index 0 }} loading="lazy"{{ end }}>
           {{- end }}
           <span class="boun-carousel-caption">{{ $page.Title }}</span>
         </a>
