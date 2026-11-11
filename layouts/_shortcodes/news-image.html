@@ -1,9 +1,24 @@
 {{- $src := .Get "src" | default (.Get 0) -}}
 {{- $alt := .Get "alt" | default "" -}}
 {{- $width := .Get "width" | default "40%" -}}
+{{- $ratio := .Get "ratio" | default "" -}}
 
 {{- with resources.Get $src -}}
-  {{- $image := .Fit "1200x1200 webp q90" -}}
+  {{- $image := . -}}
+  {{- /* Optional "W:H" ratio, e.g. ratio="4:5": the largest centered crop of that shape. */ -}}
+  {{- with $ratio -}}
+    {{- $parts := split . ":" -}}
+    {{- $rw := float (index $parts 0) -}}
+    {{- $rh := float (index $parts 1) -}}
+    {{- $w := $image.Width -}}
+    {{- $h := int (math.Round (div (mul $w $rh) $rw)) -}}
+    {{- if gt $h $image.Height -}}
+      {{- $h = $image.Height -}}
+      {{- $w = int (math.Round (div (mul $h $rw) $rh)) -}}
+    {{- end -}}
+    {{- $image = $image.Crop (printf "%dx%d Center" $w $h) -}}
+  {{- end -}}
+  {{- $image = $image.Fit "1200x1200 webp q90" -}}
   <div style="text-align: center;">
     <img src="{{ $image.RelPermalink }}" alt="{{ $alt }}" style="width: {{ $width }}; max-width: 100%; height: auto; border-radius: 0.75rem;">
   </div>
